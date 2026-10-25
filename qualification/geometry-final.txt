@@ -1,0 +1,4 @@
+ORACLE atoms / point group: 3 Cs
+LINK converged: True
+Accepted steps: 4
+Final energy / hartree: -5.070544262513159

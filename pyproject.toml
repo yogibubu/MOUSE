@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel>=0.41"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mouse-platform"
+version = "0.1.0"
+description = "MOUSE tight-binding platform with analytic derivatives and integrated geometry optimization"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "BSD-3-Clause"
+authors = [{name = "Vincenzo Barone", email = "vincebarone52@gmail.com"}]
+dependencies = [
+  "matrix-apoc==0.1.0rc8",
+  "matrix-chem==0.1.0rc8",
+  "matrix-core==0.1.0rc8",
+  "matrix-engines==0.1.0rc8",
+  "matrix-epoc==0.1.0rc8",
+  "matrix-fragments==0.1.0rc8",
+  "matrix-gaussian==0.1.0rc8",
+  "matrix-gf==0.1.0rc8",
+  "matrix-gfn2[solvation]==0.1.0rc8",
+  "matrix-link==0.1.0rc8",
+  "matrix-numerics==0.1.0rc8",
+  "matrix-oracle==0.1.0rc8",
+  "matrix-pyscf==0.1.0rc8",
+  "matrix-qm==0.1.0rc8",
+  "matrix-rovib==0.1.0rc8",
+  "matrix-smith==0.1.0rc8",
+  "matrix-switch==0.1.0rc8",
+  "matrix-zaff==0.1.0rc8",
+]
+
+[project.urls]
+Repository = "https://github.com/yogibubu/MOUSE"
+Releases = "https://github.com/yogibubu/MOUSE/releases"
+
+[tool.setuptools]
+packages = []

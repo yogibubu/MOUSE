@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite MOUSE and its accompanying methodological manuscript when using this software."
+type: software
+title: "MOUSE Molecular Orbital Utility for Semiempirical Explorations"
+version: "0.1.0"
+date-released: "2026-10-25"
+authors:
+  - family-names: Barone
+    given-names: Vincenzo
+    affiliation: "Consorzio Interuniversitario Nazionale per la Scienza e Tecnologia dei Materiali"
+repository-code: "https://github.com/yogibubu/MOUSE"
+license: BSD-3-Clause

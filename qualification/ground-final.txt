@@ -1,0 +1,7 @@
+/tmp/mouse-standalone-work/final-install/lib/python3.13/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+GFN2-ALPB water energy / hartree: -5.084832428710769
+Gradient / hartree per bohr: [[ 1.17792935e-03  1.44302938e-03 -2.52916871e-18]
+ [-5.95073306e-03  3.42563561e-03  2.04904397e-17]
+ [ 4.77280371e-03 -4.86866498e-03 -1.79612709e-17]]
+Analytic Hessian shape: (9, 9)
