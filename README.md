@@ -77,6 +77,17 @@ The complete optimization and vibrational applications in the manuscript
 reach 149 atoms. The chlorophyll infrared example demonstrates feasibility.
 The hydrated CT controls concern intramolecular chromophore excitations.
 
+## Connected exploration and spectroscopy tools
+
+SEEKER, TRINITY and SATI are separate packages and are not included in this
+standalone distribution. The MOUSE examples cover electronic derivatives
+and geometry optimization. Reproducing the connected vibrational and vibronic
+workflows also requires TRINITY/SATI.
+
+The accompanying manuscript cites the exploration method in
+[Digital Discovery 2022](https://doi.org/10.1039/D2DD00070A) and the
+[TRINITY framework](https://github.com/yogibubu/TRINITY-coupled-oscillators).
+
 ## Build a release locally
 
 ```bash
