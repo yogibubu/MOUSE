@@ -19,15 +19,17 @@ def run(name,sid,scale):
   old_ci=[o.cache['ci'].copy() for o in objects]
   eigenvalues,eigenvectors=np.linalg.eigh(h);projected=eigenvectors.T@g
   step=-eigenvectors@(projected/eigenvalues)
-  if np.linalg.norm(step)>.08:
+  history[-1]['unrestricted_newton_norm']=float(np.linalg.norm(step));history[-1]['minimum_absolute_curvature']=float(np.min(abs(eigenvalues)))
+  radius=.3
+  if np.linalg.norm(step)>radius:
    # Minimize the linearized residual in a fixed trust ball. Soft modes
    # no longer shrink every stiff component through uniform clipping.
    square=eigenvalues**2;low=0.;high=max(1.,float(np.max(square)))
    def trial_step(mu):return -eigenvectors@(eigenvalues*projected/(square+mu))
-   while np.linalg.norm(trial_step(high))>.08:high*=2
+   while np.linalg.norm(trial_step(high))>radius:high*=2
    for unused in range(60):
     middle=.5*(low+high)
-    if np.linalg.norm(trial_step(middle))>.08:low=middle
+    if np.linalg.norm(trial_step(middle))>radius:low=middle
     else:high=middle
    step=trial_step(high)
   history[-1]['step_type']='spectral_residual_trust_newton';accepted=False

@@ -62,7 +62,15 @@ def optimize_parent(obj,c,out):
   def fr(point,step):v=np.zeros(obj.dimension);v[free]=step;return retract(point,v)
   solved=generalized_mode_following(frozen,fr,c,saddle_index=0,gradient_tolerance=1e-9,maximum_iterations=80,maximum_step=.08,trial_guard=guard);c=solved.point
  e,g,h=obj.evaluate(c,True);index=int(np.count_nonzero(np.linalg.eigvalsh(h)<-1e-7))
- solved=generalized_mode_following(obj.evaluate,retract,c,saddle_index=index,gradient_tolerance=1e-9,maximum_iterations=150,maximum_step=.08,trial_guard=guard,checkpoint=checkpoint)
+ # The initial curvature count need not identify the final local branch.
+ # Reassess only at bounded phase boundaries; state guards stay unchanged.
+ phases=[]
+ for phase in range(3):
+  solved=generalized_mode_following(obj.evaluate,retract,c,saddle_index=index,gradient_tolerance=1e-9,maximum_iterations=50,maximum_step=.08,trial_guard=guard,checkpoint=checkpoint)
+  phases.append(dict(phase=phase,target_index=index,history=list(solved.history)))
+  write(out/'solver_phases.json',phases)
+  if solved.converged:break
+  c=solved.point;e,g,h=obj.evaluate(c,True);index=int(np.count_nonzero(np.linalg.eigvalsh(h)<-1e-7))
  assert solved.converged,'Multi-CSF parent unresolved; checkpoint retained'
  np.savez_compressed(out/'converged.npz',coefficients=solved.point);return solved.point
 

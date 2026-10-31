@@ -126,3 +126,21 @@ six while its observed local index stabilized at four. Its finite checkpoint
 and original history were verified and saved before resuming the identical
 solver, which re-estimates the local index from that checkpoint. Reference,
 Hamiltonian, rank, state thresholds and reference labels are unchanged.
+
+The production `RelativeActiveFrame.polish` now uses the same spectral residual
+trust step, at most 64 iterations, a guarded rotation ball of 0.3, and a smaller
+0.03 fallback if the full trial direction is blocked. It preserves the full
+active Gram matrix, identity margins and step overlaps. The energy and analytic
+response expressions are unchanged. All 46 existing core/LINK/APOC regressions
+pass on Oracle; `qualify_frame_solver.py` separately reproduces independently
+archived off-anchor gradients. Parent mode following is divided into three
+bounded 50-iteration phases (same total 150-iteration ceiling), with local index
+reassessment only between phases. This addresses stale-index oscillations,
+without reference-energy-dependent root selection.
+
+`csf_rank_convergence.py` tests systematic CSF enlargement on both furofuran
+states after their fixed-candidate score became available. This is explicitly
+post-holdout development, not an additional blind validation. It reuses all
+state-independent calibration and reference checkpoints; weights, lambda and
+offset stay 0.5/0.5, 0.9 and zero. A larger expansion is not declared successful
+without a qualified stationary solution and a comparison to retained controls.

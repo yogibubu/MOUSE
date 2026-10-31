@@ -61,15 +61,38 @@ class RelativeActiveFrame:
         hh=t.T@h@t+rawmap.T@extra@rawmap
         return sum(.5*r[0] for r in rows),t.T@g,.5*(hh+hh.T),t,rawmap,v
     def polish(self,point):
+        """Solve frame stationarity with a safeguarded residual trust step.
+
+        Uniformly clipping a soft-mode Newton step also suppresses stiff-mode
+        corrections. The spectral trust solve minimizes the predicted residual
+        in a rotation ball instead. State and full-frame certificates are kept.
+        """
         target=point[0][:,self.active].T@self.s@point[1][:,self.active]
-        for iteration in range(16):
+        for iteration in range(64):
             e,g,h,t,rawmap,v=self.evaluate(point)
             if np.max(abs(g))<1e-10:return point
-            old_ci=[o.cache['ci'].copy() for o in self.objects];step=np.linalg.solve(h,-g);step*=min(1.,.08/max(np.linalg.norm(step),1e-300));accepted=False
-            for fraction in [1.,.5,.25,.125]:
-                trial=self.retract(point,fraction*step,rawmap,v);_,gg,_,_,_,_=self.evaluate(trial)
-                guard=all(o.fidelity(c)[0]**2>.5 and o.cache['coefficient_margin']>=.05 and abs(o.signed_overlap(old,ci,c,o.cache['ci']))>=.9 for o,old,ci,c in zip(self.objects,point,old_ci,trial))
-                if guard and np.linalg.norm(gg)<np.linalg.norm(g):point=trial;accepted=True;break
+            old_ci=[o.cache['ci'].copy() for o in self.objects]
+            values,vectors=np.linalg.eigh(h);projected=vectors.T@g
+            step=-vectors@np.divide(projected,values,out=np.zeros_like(projected),where=abs(values)>1e-14)
+            def residual_step(radius):
+                square=values**2
+                def trial(mu):return -vectors@(values*projected/(square+mu))
+                low=0.;high=max(1.,float(np.max(square)))
+                while np.linalg.norm(trial(high))>radius:high*=2
+                for unused in range(60):
+                    middle=.5*(low+high)
+                    if np.linalg.norm(trial(middle))>radius:low=middle
+                    else:high=middle
+                return trial(high)
+            if np.linalg.norm(step)>.3:step=residual_step(.3)
+            accepted=False
+            for safeguard in [False,True]:
+                direction=residual_step(.03) if safeguard else step
+                for fraction in [1.,.5,.25,.125,.0625,.03125]:
+                    trial=self.retract(point,fraction*direction,rawmap,v);_,gg,_,_,_,_=self.evaluate(trial)
+                    guard=all(o.fidelity(c)[0]**2>.5 and o.cache['coefficient_margin']>=.05 and abs(o.signed_overlap(old,ci,c,o.cache['ci']))>=.9 for o,old,ci,c in zip(self.objects,point,old_ci,trial))
+                    if guard and np.linalg.norm(gg)<np.linalg.norm(g):point=trial;accepted=True;break
+                if accepted:break
             if not accepted:raise RuntimeError('frame continuation blocked; checkpoint not accepted')
             assert np.max(abs(point[0][:,self.active].T@self.s@point[1][:,self.active]-target))<1e-10
         raise RuntimeError('frame continuation budget exceeded')
