@@ -1,0 +1,52 @@
+{
+  "id": "I004",
+  "molecule": "Benzoxadiazole",
+  "parents": [
+    {
+      "success": true,
+      "energy_hartree": -19.666273006946717,
+      "ground_overlap_squared": 2.717015823772376e-25,
+      "fidelity": 1.0000000000000002,
+      "kkt_max": 3.410151154514818e-11,
+      "multiplier": 0.0,
+      "qualified": true,
+      "iterations": 0,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+      "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+      "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+      "host": "oracle.sns.it",
+      "threads": 2,
+      "checkpoint_resumed": false,
+      "gap_ev": 4.876894758401977
+    },
+    {
+      "success": true,
+      "energy_hartree": -24.54932370352782,
+      "ground_overlap_squared": 3.612601796846941e-28,
+      "fidelity": 1.0000000000000002,
+      "kkt_max": 3.273339932441388e-11,
+      "multiplier": 0.0,
+      "qualified": true,
+      "iterations": 0,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+      "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+      "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+      "host": "oracle.sns.it",
+      "threads": 2,
+      "checkpoint_resumed": false,
+      "gap_ev": 4.105421485549032
+    }
+  ],
+  "excitation_ev": 4.491158121975504,
+  "qualified": true,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

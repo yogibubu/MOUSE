@@ -1,0 +1,52 @@
+{
+  "id": "I002",
+  "molecule": "Criegee_Intermediate",
+  "parents": [
+    {
+      "success": true,
+      "energy_hartree": -9.450353361187354,
+      "ground_overlap_squared": 3.8030053648757705e-23,
+      "fidelity": 0.9995246628898432,
+      "kkt_max": 2.9801223621180856e-11,
+      "multiplier": 0.09690861444917537,
+      "qualified": true,
+      "iterations": 7,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+      "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+      "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+      "host": "oracle.sns.it",
+      "threads": 2,
+      "checkpoint_resumed": true,
+      "gap_ev": 4.918068531250274
+    },
+    {
+      "success": true,
+      "energy_hartree": -10.949080337521542,
+      "ground_overlap_squared": 7.950418964730774e-29,
+      "fidelity": 0.9998053086830481,
+      "kkt_max": 2.187833247901949e-14,
+      "multiplier": 0.09867303314262328,
+      "qualified": true,
+      "iterations": 7,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+      "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+      "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+      "host": "oracle.sns.it",
+      "threads": 2,
+      "checkpoint_resumed": true,
+      "gap_ev": 4.782380217746229
+    }
+  ],
+  "excitation_ev": 4.850224374498252,
+  "qualified": true,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

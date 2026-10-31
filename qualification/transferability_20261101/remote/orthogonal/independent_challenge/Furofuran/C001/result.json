@@ -1,0 +1,40 @@
+{
+  "id": "C001",
+  "molecule": "Furofuran",
+  "parents": [
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 24,
+      "energy_hartree": -19.20680640005631,
+      "ground_overlap_squared": 6.065451150672969e-33,
+      "fidelity": 1.0,
+      "kkt_max": 6.967062170237787e-11,
+      "multiplier": 6.4763779523428796e-12,
+      "qualified": true,
+      "gap_ev": 6.115043716470024
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 88,
+      "energy_hartree": -22.969968938635816,
+      "ground_overlap_squared": 5.325139544504807e-32,
+      "fidelity": 0.1858943625383369,
+      "kkt_max": 1.9265516313294908e-08,
+      "multiplier": 1.3478703553610524e-08,
+      "qualified": false,
+      "gap_ev": 0.566353266244488
+    }
+  ],
+  "excitation_ev": 3.340698491357256,
+  "qualified": false,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "C002",
+  "molecule": "Furofuran",
+  "parents": [
+    {
+      "success": true,
+      "energy_hartree": -19.141381460565757,
+      "ground_overlap_squared": 9.580333488215647e-21,
+      "fidelity": 0.9985237433157956,
+      "kkt_max": 1.0374969751933545e-10,
+      "multiplier": -0.01785762227259061,
+      "qualified": true,
+      "iterations": 3,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+      "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+      "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+      "host": "oracle.sns.it",
+      "threads": 2,
+      "checkpoint_resumed": true,
+      "gap_ev": 7.8953470150678084
+    },
+    {
+      "success": true,
+      "energy_hartree": -22.76288437113903,
+      "ground_overlap_squared": 5.901595323997769e-24,
+      "fidelity": 0.999098174840528,
+      "kkt_max": 2.64885368240256e-12,
+      "multiplier": -0.014074825903307149,
+      "qualified": true,
+      "iterations": 3,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+      "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+      "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+      "host": "oracle.sns.it",
+      "threads": 2,
+      "checkpoint_resumed": true,
+      "gap_ev": 6.201411417982893
+    }
+  ],
+  "excitation_ev": 7.048379216525351,
+  "qualified": true,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

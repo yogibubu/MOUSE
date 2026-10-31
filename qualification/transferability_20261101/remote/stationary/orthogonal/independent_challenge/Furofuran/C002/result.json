@@ -1,0 +1,42 @@
+{
+  "id": "C002",
+  "molecule": "Furofuran",
+  "parents": [
+    {
+      "success": true,
+      "energy_hartree": -19.14138146056577,
+      "ground_overlap_squared": 9.580354685080019e-21,
+      "fidelity": 0.9985237433157956,
+      "kkt_max": 1.037495596155214e-10,
+      "multiplier": -0.01785762227259058,
+      "qualified": true,
+      "iterations": 3,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "central difference of analytic overlap gradient; diagnostic only",
+      "gap_ev": 7.895347015067421
+    },
+    {
+      "success": true,
+      "energy_hartree": -22.76288437113903,
+      "ground_overlap_squared": 5.900866228703089e-24,
+      "fidelity": 0.999098174840528,
+      "kkt_max": 2.6485405420883436e-12,
+      "multiplier": -0.014074825903307293,
+      "qualified": true,
+      "iterations": 3,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "central difference of analytic overlap gradient; diagnostic only",
+      "gap_ev": 6.201411417982893
+    }
+  ],
+  "excitation_ev": 7.0483792165251575,
+  "qualified": true,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "I001",
+  "molecule": "Criegee_Intermediate",
+  "parents": [
+    {
+      "success": true,
+      "energy_hartree": -9.56128571867344,
+      "ground_overlap_squared": 3.5688453494608814e-31,
+      "fidelity": 1.0,
+      "kkt_max": 2.2440382885235977e-14,
+      "multiplier": 0.0,
+      "qualified": true,
+      "iterations": 0,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "central difference of analytic overlap gradient; diagnostic only",
+      "gap_ev": 1.8994453045183421
+    },
+    {
+      "success": true,
+      "energy_hartree": -11.03935318965831,
+      "ground_overlap_squared": 3.2481250343867167e-29,
+      "fidelity": 1.0000000000000002,
+      "kkt_max": 1.5092094240998222e-13,
+      "multiplier": 0.0,
+      "qualified": true,
+      "iterations": 0,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "central difference of analytic overlap gradient; diagnostic only",
+      "gap_ev": 2.325930770725649
+    }
+  ],
+  "excitation_ev": 2.1126880376219956,
+  "qualified": true,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

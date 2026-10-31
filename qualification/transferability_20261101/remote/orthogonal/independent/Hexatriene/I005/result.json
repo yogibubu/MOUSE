@@ -1,0 +1,40 @@
+{
+  "id": "I005",
+  "molecule": "Hexatriene",
+  "parents": [
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 2,
+      "energy_hartree": -12.796205310304497,
+      "ground_overlap_squared": 1.3913856548911513e-33,
+      "fidelity": 1.0000000000000002,
+      "kkt_max": 4.4983490887359475e-10,
+      "multiplier": -5.330469745077859e-14,
+      "qualified": true,
+      "gap_ev": 5.289311110958873
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 66,
+      "energy_hartree": -16.771560702689047,
+      "ground_overlap_squared": 3.116903619134441e-33,
+      "fidelity": 0.019465843533817504,
+      "kkt_max": 1.708550664058231e-08,
+      "multiplier": -8.532253686662721e-11,
+      "qualified": false,
+      "gap_ev": 1.7490821563795638
+    }
+  ],
+  "excitation_ev": 3.5191966336692184,
+  "qualified": false,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

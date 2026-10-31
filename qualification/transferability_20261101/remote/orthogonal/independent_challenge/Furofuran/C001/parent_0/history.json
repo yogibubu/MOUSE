@@ -1,0 +1,146 @@
+[
+  {
+    "iteration": 0,
+    "energy": -19.20680640005631,
+    "overlap": -5.0838862909665026e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 1,
+    "energy": -19.20680640005631,
+    "overlap": 6.097425309496591e-17,
+    "fidelity": 0.9999999999999999
+  },
+  {
+    "iteration": 2,
+    "energy": -19.206806400056298,
+    "overlap": 8.814931495763329e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 3,
+    "energy": -19.2068064000563,
+    "overlap": -8.588664900221023e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 4,
+    "energy": -19.206806400056305,
+    "overlap": -1.352452981705703e-16,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 5,
+    "energy": -19.206806400056298,
+    "overlap": -1.9678490044504243e-16,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 6,
+    "energy": -19.206806400056312,
+    "overlap": 4.705196652118737e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 7,
+    "energy": -19.206806400056305,
+    "overlap": 3.3137569419023364e-17,
+    "fidelity": 1.0000000000000002
+  },
+  {
+    "iteration": 8,
+    "energy": -19.20680640005631,
+    "overlap": 8.416741064160008e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 9,
+    "energy": -19.206806400056305,
+    "overlap": -7.405825528171566e-17,
+    "fidelity": 1.0000000000000002
+  },
+  {
+    "iteration": 10,
+    "energy": -19.20680640005631,
+    "overlap": 6.948604425786772e-18,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 11,
+    "energy": -19.206806400056305,
+    "overlap": 4.920405280562761e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 12,
+    "energy": -19.206806400056305,
+    "overlap": -9.727015203291523e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 13,
+    "energy": -19.20680640005631,
+    "overlap": 4.0013071546473185e-17,
+    "fidelity": 0.9999999999999999
+  },
+  {
+    "iteration": 14,
+    "energy": -19.206806400056305,
+    "overlap": -1.1758702599757277e-16,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 15,
+    "energy": -19.206806400056312,
+    "overlap": -8.137608617302521e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 16,
+    "energy": -19.2068064000563,
+    "overlap": -4.0744185096252483e-17,
+    "fidelity": 1.0000000000000002
+  },
+  {
+    "iteration": 17,
+    "energy": -19.20680640005631,
+    "overlap": 9.464398964527442e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 18,
+    "energy": -19.20680640005631,
+    "overlap": 2.0401874527769297e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 19,
+    "energy": -19.206806400056312,
+    "overlap": 5.3991921377956736e-18,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 20,
+    "energy": -19.206806400056298,
+    "overlap": 8.747657670785267e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 21,
+    "energy": -19.206806399185915,
+    "overlap": -6.947772832047797e-11,
+    "fidelity": 0.9999999984057667
+  },
+  {
+    "iteration": 22,
+    "energy": -19.20680640005631,
+    "overlap": 7.788100635375078e-17,
+    "fidelity": 1.0
+  },
+  {
+    "iteration": 23,
+    "energy": -19.20680640005631,
+    "overlap": 7.788100635375078e-17,
+    "fidelity": 1.0
+  }
+]

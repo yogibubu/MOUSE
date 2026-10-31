@@ -1,0 +1,31 @@
+{
+  "id": "I005",
+  "molecule": "Hexatriene",
+  "parents": [
+    {
+      "ground_singlet_overlap_squared": 3.610708328189575e-26,
+      "exact_gap_ev": 5.289311110959018,
+      "quadratic_gap_ev": 5.289311113559266,
+      "mixed_remainder_ev": -2.6002960195777626e-09,
+      "triplet_remainder_ev": -2.60034435670983e-09,
+      "density_change_norms": [
+        1.480326246236467,
+        1.4803262462364668
+      ]
+    },
+    {
+      "ground_singlet_overlap_squared": 1.7408547214144477e-30,
+      "exact_gap_ev": 4.534710778488332,
+      "quadratic_gap_ev": 4.534710434149105,
+      "mixed_remainder_ev": 3.4433922771012376e-07,
+      "triplet_remainder_ev": 3.4433922771012376e-07,
+      "density_change_norms": [
+        1.4831523387217056,
+        1.4831523387217056
+      ]
+    }
+  ],
+  "energy_labels_used": false,
+  "source_sha256": "e15bb5f55a908a5ff5122ccacd65b104bfe25b4b03bbec61d768d590f2582972",
+  "scope": "frozen orbital decomposition, not an optimized replacement surface"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "I001",
+  "molecule": "Criegee_Intermediate",
+  "parents": [
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1,
+      "energy_hartree": -9.56128571867344,
+      "ground_overlap_squared": 3.5688453494608814e-31,
+      "fidelity": 1.0,
+      "kkt_max": 2.2440382885235977e-14,
+      "multiplier": 1.538377592176192e-17,
+      "qualified": true,
+      "gap_ev": 1.8994453045183421
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 27,
+      "energy_hartree": -11.039353189658316,
+      "ground_overlap_squared": 2.2452740754138975e-51,
+      "fidelity": 1.0,
+      "kkt_max": 8.387981498616926e-12,
+      "multiplier": 2.677773212006155e-15,
+      "qualified": true,
+      "gap_ev": 2.325930770725504
+    }
+  ],
+  "excitation_ev": 2.112688037621923,
+  "qualified": true,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

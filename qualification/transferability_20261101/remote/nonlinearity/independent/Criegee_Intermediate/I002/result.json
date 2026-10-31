@@ -1,0 +1,31 @@
+{
+  "id": "I002",
+  "molecule": "Criegee_Intermediate",
+  "parents": [
+    {
+      "ground_singlet_overlap_squared": 0.43559828774767545,
+      "exact_gap_ev": 1.7293030478776015,
+      "quadratic_gap_ev": 1.7313978752356485,
+      "mixed_remainder_ev": -0.0020948273580468435,
+      "triplet_remainder_ev": -0.0020948273580468435,
+      "density_change_norms": [
+        1.6319189595958268,
+        1.6389150982702805
+      ]
+    },
+    {
+      "ground_singlet_overlap_squared": 0.4259666154555654,
+      "exact_gap_ev": 1.9722981758071843,
+      "quadratic_gap_ev": 1.9753765588482473,
+      "mixed_remainder_ev": -0.0030783830410630957,
+      "triplet_remainder_ev": -0.0030783830410630957,
+      "density_change_norms": [
+        1.6402567618054087,
+        1.6481680393002962
+      ]
+    }
+  ],
+  "energy_labels_used": false,
+  "source_sha256": "e15bb5f55a908a5ff5122ccacd65b104bfe25b4b03bbec61d768d590f2582972",
+  "scope": "frozen orbital decomposition, not an optimized replacement surface"
+}

@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "energy_hartree": -9.56128571867344,
+  "ground_overlap_squared": 3.5688453494608814e-31,
+  "fidelity": 1.0,
+  "kkt_max": 2.2440382885235977e-14,
+  "multiplier": 0.0,
+  "qualified": true,
+  "iterations": 0,
+  "solver": "KKT stationary point, residual merit, state-overlap guarded",
+  "constraint_orbital_curvature": "central difference of analytic overlap gradient; diagnostic only"
+}

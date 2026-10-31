@@ -1,0 +1,40 @@
+{
+  "id": "I004",
+  "molecule": "Benzoxadiazole",
+  "parents": [
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 5,
+      "energy_hartree": -19.666273006946724,
+      "ground_overlap_squared": 4.928383660583378e-34,
+      "fidelity": 1.0,
+      "kkt_max": 6.90397566111319e-11,
+      "multiplier": 1.2782127990244504e-13,
+      "qualified": true,
+      "gap_ev": 4.876894758401783
+    },
+    {
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 29,
+      "energy_hartree": -24.54932370352783,
+      "ground_overlap_squared": 3.7548911829656e-32,
+      "fidelity": 1.0000000000000002,
+      "kkt_max": 8.972489315113773e-11,
+      "multiplier": 1.6728678579227653e-12,
+      "qualified": true,
+      "gap_ev": 4.105421485548741
+    }
+  ],
+  "excitation_ev": 4.491158121975262,
+  "qualified": true,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

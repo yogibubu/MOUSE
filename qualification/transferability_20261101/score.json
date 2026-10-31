@@ -1,0 +1,139 @@
+{
+  "schema": "mouse.transferability.development.score.v1",
+  "host_for_electronic_work": "oracle.sns.it",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "cohorts": {
+    "independent": {
+      "n_prespecified": 6,
+      "n_matched": 4,
+      "rows": [
+        {
+          "id": "I001",
+          "molecule": "Criegee_Intermediate",
+          "family": "n_pi",
+          "status": "matched_development_candidate",
+          "reference_ev": 2.403,
+          "baseline_ev": 2.1126880376219956,
+          "candidate_ev": 2.1126880376219956,
+          "baseline_error_ev": -0.2903119623780044,
+          "candidate_error_ev": -0.2903119623780044,
+          "result_sha256": "7fbf2beff370facdfcfaf687d0d34a5bc93d4927c59c3494d2f445b72b1aafe3",
+          "maximum_kkt_residual": 1.5092094240998222e-13,
+          "maximum_ground_overlap_squared": 3.2481250343867167e-29,
+          "minimum_state_fidelity": 1.0
+        },
+        {
+          "id": "I002",
+          "molecule": "Criegee_Intermediate",
+          "family": "pi_pi",
+          "status": "matched_development_candidate",
+          "reference_ev": 3.715,
+          "baseline_ev": 1.850800611842393,
+          "candidate_ev": 4.850224374498252,
+          "baseline_error_ev": -1.8641993881576069,
+          "candidate_error_ev": 1.135224374498252,
+          "result_sha256": "50ae878cdda6d4e0a778f5f79dd3ea67b0dd37232be05e706abbedde428842df",
+          "maximum_kkt_residual": 2.9801223621180856e-11,
+          "maximum_ground_overlap_squared": 3.8030053648757705e-23,
+          "minimum_state_fidelity": 0.9995246628898432
+        },
+        {
+          "id": "I003",
+          "molecule": "Cyclobutadiene",
+          "family": "pi_pi",
+          "status": "not_representable",
+          "reference_ev": 3.138
+        },
+        {
+          "id": "I004",
+          "molecule": "Benzoxadiazole",
+          "family": "pi_pi",
+          "status": "matched_development_candidate",
+          "reference_ev": 4.606,
+          "baseline_ev": 4.491158121975504,
+          "candidate_ev": 4.491158121975504,
+          "baseline_error_ev": -0.11484187802449597,
+          "candidate_error_ev": -0.11484187802449597,
+          "result_sha256": "9109bd7f0383c7ea78fcbc4b9c14fc3b87896416a1bf4598d3b091995dcea082",
+          "maximum_kkt_residual": 3.410151154514818e-11,
+          "maximum_ground_overlap_squared": 2.717015823772376e-25,
+          "minimum_state_fidelity": 1.0000000000000002
+        },
+        {
+          "id": "I005",
+          "molecule": "Hexatriene",
+          "family": "pi_pi",
+          "status": "matched_development_candidate",
+          "reference_ev": 5.341000000000001,
+          "baseline_ev": 4.912010944723675,
+          "candidate_ev": 4.912010944723675,
+          "baseline_error_ev": -0.42898905527632625,
+          "candidate_error_ev": -0.42898905527632625,
+          "result_sha256": "4435736677f25b6faf9e9af0efc4a9f7b3268860fccec58f90413a037153a7b1",
+          "maximum_kkt_residual": 9.6976386990133e-10,
+          "maximum_ground_overlap_squared": 3.6107083281895753e-26,
+          "minimum_state_fidelity": 0.9999999999999999
+        },
+        {
+          "id": "I006",
+          "molecule": "Ammonia",
+          "family": "Rydberg",
+          "status": "not_representable",
+          "reference_ev": 6.588
+        }
+      ],
+      "baseline_mae_ev": 0.6745855709591084,
+      "candidate_mae_ev": 0.49234181754426964
+    },
+    "independent_challenge": {
+      "n_prespecified": 2,
+      "n_matched": 2,
+      "rows": [
+        {
+          "id": "C001",
+          "molecule": "Furofuran",
+          "family": "pi_pi",
+          "status": "matched_development_candidate",
+          "reference_ev": 5.489000000000001,
+          "baseline_ev": 5.522605508310233,
+          "candidate_ev": 5.509973118157285,
+          "baseline_error_ev": 0.03360550831023179,
+          "candidate_error_ev": 0.02097311815728453,
+          "result_sha256": "ee000a539d76ab4aacf4fa2dc339066295f676d1394807f3ef706eef874c6377",
+          "maximum_kkt_residual": 1.261389975110161e-09,
+          "maximum_ground_overlap_squared": 2.661625316530468e-19,
+          "minimum_state_fidelity": 0.9958841936284398
+        },
+        {
+          "id": "C002",
+          "molecule": "Furofuran",
+          "family": "pi_pi",
+          "status": "matched_development_candidate",
+          "reference_ev": 6.026999999999999,
+          "baseline_ev": 7.067333815979192,
+          "candidate_ev": 7.048379216525351,
+          "baseline_error_ev": 1.040333815979193,
+          "candidate_error_ev": 1.021379216525352,
+          "result_sha256": "1ddfe6cfb55443e2073e60871603ef4715135c618e3906ff4a35a8e124378f33",
+          "maximum_kkt_residual": 1.0374969751933545e-10,
+          "maximum_ground_overlap_squared": 9.580333488215647e-21,
+          "minimum_state_fidelity": 0.9985237433157956
+        }
+      ],
+      "baseline_mae_ev": 0.5369696621447124,
+      "candidate_mae_ev": 0.5211761673413182
+    }
+  },
+  "assessment": "Numerical state-collapse safeguard demonstrated; accuracy and representation transferability remain unresolved",
+  "limitations": [
+    "All target labels were exposed before this development campaign",
+    "Separately optimized parents; not yet the production relative-parent manifold",
+    "New ground-orthogonality nuclear response not implemented",
+    "Compact-basis failures and higher-rank cases unchanged; none silently removed"
+  ]
+}

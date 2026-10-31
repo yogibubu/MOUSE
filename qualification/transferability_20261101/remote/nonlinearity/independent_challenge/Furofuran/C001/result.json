@@ -1,0 +1,31 @@
+{
+  "id": "C001",
+  "molecule": "Furofuran",
+  "parents": [
+    {
+      "ground_singlet_overlap_squared": 6.569573136060564e-21,
+      "exact_gap_ev": 6.115043716469927,
+      "quadratic_gap_ev": 6.114916767018256,
+      "mixed_remainder_ev": 0.000126949451671551,
+      "triplet_remainder_ev": 0.000126949451671551,
+      "density_change_norms": [
+        1.6401885409355679,
+        1.6401885409355679
+      ]
+    },
+    {
+      "ground_singlet_overlap_squared": 0.001965340435357272,
+      "exact_gap_ev": 4.930167300150537,
+      "quadratic_gap_ev": 4.930630130389134,
+      "mixed_remainder_ev": -0.0004628302386936478,
+      "triplet_remainder_ev": -0.00046283023879032205,
+      "density_change_norms": [
+        2.1512236291298974,
+        2.1514024647634717
+      ]
+    }
+  ],
+  "energy_labels_used": false,
+  "source_sha256": "e15bb5f55a908a5ff5122ccacd65b104bfe25b4b03bbec61d768d590f2582972",
+  "scope": "frozen orbital decomposition, not an optimized replacement surface"
+}

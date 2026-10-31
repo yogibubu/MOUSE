@@ -1,0 +1,42 @@
+{
+  "id": "I002",
+  "molecule": "Criegee_Intermediate",
+  "parents": [
+    {
+      "success": true,
+      "energy_hartree": -9.450353361187357,
+      "ground_overlap_squared": 3.8029615054683235e-23,
+      "fidelity": 0.9995246628898432,
+      "kkt_max": 2.9800703720295425e-11,
+      "multiplier": 0.09690861444917559,
+      "qualified": true,
+      "iterations": 7,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "central difference of analytic overlap gradient; diagnostic only",
+      "gap_ev": 4.918068531250177
+    },
+    {
+      "success": true,
+      "energy_hartree": -10.949080337521545,
+      "ground_overlap_squared": 7.981750634731796e-29,
+      "fidelity": 0.999805308683048,
+      "kkt_max": 2.186792413816363e-14,
+      "multiplier": 0.09867303314262293,
+      "qualified": true,
+      "iterations": 7,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "central difference of analytic overlap gradient; diagnostic only",
+      "gap_ev": 4.782380217746132
+    }
+  ],
+  "excitation_ev": 4.850224374498154,
+  "qualified": true,
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "scope": "separately optimized orthogonal parents; relative-parent frame and nuclear response not yet integrated"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "mouse.transferability.pair_diagnostic.v1",
+  "stage": "development; all previous validation labels exposed",
+  "frozen_before_molecular_diagnostic": true,
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "excitation_offset_ev": 0,
+  "ground_rule": "one common S0 per molecule and parent, CAS(2,2) in canonical HOMO/LUMO of retained ground",
+  "excited_rule": "retained rank-one OO pair, frozen orbitals, singlet CAS(2,2) closure from same functional",
+  "root_rule": "among roots 1 and 2 choose maximum open-singlet weight; qualified if weight > 0.5 and margin against all other roots > 0.05",
+  "rank_gt_one": "outside this bounded diagnostic; retained in cohort accounting",
+  "absent_basis_states": "unchanged; no fabricated energies",
+  "numerical_work_host": "oracle.sns.it only",
+  "reuse": "all completed references, calibrated responses, stationary grounds and excited checkpoints",
+  "claims_excluded": ["new blind validation", "fully optimized CAS surface", "analytic derivatives of new closure", "universal transferability"]
+}

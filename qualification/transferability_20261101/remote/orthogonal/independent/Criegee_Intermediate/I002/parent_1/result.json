@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "message": "Optimization terminated successfully",
+  "iterations": 5,
+  "energy_hartree": -10.94908033752154,
+  "ground_overlap_squared": 1.1121664813729377e-31,
+  "fidelity": 0.9998053081806668,
+  "kkt_max": 2.370466741386662e-08,
+  "multiplier": 0.0986730507358254,
+  "qualified": true
+}

@@ -1,0 +1,31 @@
+{
+  "id": "I004",
+  "molecule": "Benzoxadiazole",
+  "parents": [
+    {
+      "ground_singlet_overlap_squared": 2.717015823772376e-25,
+      "exact_gap_ev": 4.876894758401977,
+      "quadratic_gap_ev": 4.876885331372265,
+      "mixed_remainder_ev": 9.427029711150139e-06,
+      "triplet_remainder_ev": 9.427029711150139e-06,
+      "density_change_norms": [
+        1.547838257618581,
+        1.547838257618581
+      ]
+    },
+    {
+      "ground_singlet_overlap_squared": 3.612601796846941e-28,
+      "exact_gap_ev": 4.105421485549032,
+      "quadratic_gap_ev": 4.105174589204248,
+      "mixed_remainder_ev": 0.00024689634478374764,
+      "triplet_remainder_ev": 0.00024689634478374764,
+      "density_change_norms": [
+        1.6539613429155158,
+        1.653961342915516
+      ]
+    }
+  ],
+  "energy_labels_used": false,
+  "source_sha256": "e15bb5f55a908a5ff5122ccacd65b104bfe25b4b03bbec61d768d590f2582972",
+  "scope": "frozen orbital decomposition, not an optimized replacement surface"
+}
