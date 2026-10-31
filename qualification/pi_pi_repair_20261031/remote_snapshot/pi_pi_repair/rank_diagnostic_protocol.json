@@ -1,0 +1,33 @@
+{
+  "schema": "mouse.pi_pi.rank_diagnostic.v1",
+  "host": "oracle.sns.it",
+  "states": [
+    "B016",
+    "B022",
+    "B024",
+    "B014",
+    "B015",
+    "B005",
+    "B029"
+  ],
+  "reason": "Test whether missing coherent single-excitation pairs cause the pi-pi bias; no empirical energy correction",
+  "model_and_weights_unchanged": true,
+  "lambda_exchange": 0.9,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "energy_offset_ev": 0.0,
+  "source_sha256": "2c7c92aadd10dbebd20159cde803e4d52d8f9e573bcb8f2dd6e0077cf9d49e95",
+  "orbitals": "corrected parent ground orbitals, rotated into assigned NTO basis; no state optimization in this diagnostic",
+  "offdiagonal": "projection of the already corrected true-TDA A operator between distinct NTO pairs",
+  "diagonal": "unmodified spin-polarized common-orbital ROKS 2 E_M - E_T",
+  "ranks": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "production_claim": false,
+  "accuracy_labels_already_exposed": true
+}

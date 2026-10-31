@@ -1,0 +1,34 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Benzoquinone",
+  "state": "B039",
+  "profile": 1,
+  "status": "unresolved",
+  "reason": "iteration budget",
+  "rank": 2,
+  "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+  "retained_weight": 0.9795729204167869,
+  "excitation_ev": 7.506665669202157,
+  "residual": 0.1165467255513077,
+  "orbital_index": 23,
+  "minimum_absolute_curvature": 4.916560697848831e-06,
+  "fidelity": 0.9585542799802331,
+  "raw_transition": 0.9487135339809003,
+  "projection_norm": 0.7043342004162009,
+  "ci": [
+    0.9989235952794724,
+    0.04638589003062351
+  ],
+  "seconds": 30.73964727798011,
+  "evaluations": 120,
+  "model_fingerprint": "f8241a4bcd90a929fb87b783e5fd290afd5ae6fa41cbdc3b6ad54352f4fe04bf",
+  "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "nuclear_derivatives_available": false,
+  "accuracy_labels_already_exposed": true
+}

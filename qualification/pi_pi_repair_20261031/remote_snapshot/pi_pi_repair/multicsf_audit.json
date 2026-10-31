@@ -1,0 +1,333 @@
+{
+  "host": "oracle.sns.it",
+  "rows": [
+    {
+      "molecule": "Adenine",
+      "state": "B014",
+      "profile": 0,
+      "attempt": "0",
+      "target_root": 2,
+      "overlap_margin": 0.849321426058863,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 2,
+          "projected_overlap": 0.849321426058863,
+          "projection_norm": 0.8912770416040745
+        }
+      ]
+    },
+    {
+      "molecule": "Adenine",
+      "state": "B014",
+      "profile": 1,
+      "attempt": "1_retained_v1",
+      "target_root": 2,
+      "overlap_margin": 0.7917499169626002,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 2,
+          "projected_overlap": 0.7917499169626002,
+          "projection_norm": 0.8912770416040745
+        }
+      ]
+    },
+    {
+      "molecule": "Aza-naphthalene",
+      "state": "B011",
+      "profile": 0,
+      "attempt": "0",
+      "target_root": 1,
+      "overlap_margin": 0.8046514752616686,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 1,
+          "projected_overlap": 0.8046514752616686,
+          "projection_norm": 0.917094200773671
+        }
+      ]
+    },
+    {
+      "molecule": "Aza-naphthalene",
+      "state": "B011",
+      "profile": 1,
+      "attempt": "1",
+      "target_root": 1,
+      "overlap_margin": 0.8015159304437325,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 1,
+          "projected_overlap": 0.8015159304437325,
+          "projection_norm": 0.917094200773671
+        }
+      ]
+    },
+    {
+      "molecule": "Benzoquinone",
+      "state": "B039",
+      "profile": 1,
+      "attempt": "1_fr_v2",
+      "target_root": 2,
+      "overlap_margin": 0.5496064763020669,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 1,
+          "projected_overlap": 0.10185085856470896,
+          "projection_norm": 0.9501089524130611
+        },
+        {
+          "root": 2,
+          "projected_overlap": 0.6514573348667759,
+          "projection_norm": 0.7043342004162
+        }
+      ]
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "profile": 0,
+      "attempt": "0",
+      "target_root": 8,
+      "overlap_margin": 0.6498752143672176,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 8,
+          "projected_overlap": 0.8352543684337856,
+          "projection_norm": 0.8400923667768415
+        },
+        {
+          "root": 14,
+          "projected_overlap": 0.12798882682870918,
+          "projection_norm": 0.20441624277204862
+        },
+        {
+          "root": 20,
+          "projected_overlap": 0.18537915406656805,
+          "projection_norm": 0.5569951468206314
+        },
+        {
+          "root": 24,
+          "projected_overlap": 0.09730739430451263,
+          "projection_norm": 0.31078030800272016
+        },
+        {
+          "root": 35,
+          "projected_overlap": 0.00037239835759052915,
+          "projection_norm": 0.37445445331061233
+        },
+        {
+          "root": 38,
+          "projected_overlap": 0.015680588104982626,
+          "projection_norm": 0.37428095936602024
+        },
+        {
+          "root": 39,
+          "projected_overlap": 0.14180123148132806,
+          "projection_norm": 0.413269649344708
+        }
+      ]
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "profile": 1,
+      "attempt": "1",
+      "target_root": 8,
+      "overlap_margin": 0.6822710719232171,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 8,
+          "projected_overlap": 0.8378042555092965,
+          "projection_norm": 0.8400923667768415
+        },
+        {
+          "root": 14,
+          "projected_overlap": 0.11532647339811575,
+          "projection_norm": 0.20441624277204862
+        },
+        {
+          "root": 20,
+          "projected_overlap": 0.1401744587688215,
+          "projection_norm": 0.5569951468206314
+        },
+        {
+          "root": 24,
+          "projected_overlap": 0.09559697694216031,
+          "projection_norm": 0.31078030800272016
+        },
+        {
+          "root": 35,
+          "projected_overlap": 0.0023200432918242205,
+          "projection_norm": 0.37445445331061233
+        },
+        {
+          "root": 38,
+          "projected_overlap": 0.024097059596376636,
+          "projection_norm": 0.37428095936602024
+        },
+        {
+          "root": 39,
+          "projected_overlap": 0.15553318358607934,
+          "projection_norm": 0.413269649344708
+        }
+      ]
+    },
+    {
+      "molecule": "Furan",
+      "state": "B022",
+      "profile": 0,
+      "attempt": "0",
+      "target_root": 5,
+      "overlap_margin": 0.5443288518365741,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 5,
+          "projected_overlap": 0.8373598514431508,
+          "projection_norm": 0.8468448362569544
+        },
+        {
+          "root": 13,
+          "projected_overlap": 0.010695168267652828,
+          "projection_norm": 0.19998113214226892
+        },
+        {
+          "root": 16,
+          "projected_overlap": 0.14340925948093883,
+          "projection_norm": 0.5783921791844143
+        },
+        {
+          "root": 19,
+          "projected_overlap": 0.12209735767162257,
+          "projection_norm": 0.1739260768054754
+        },
+        {
+          "root": 32,
+          "projected_overlap": 0.052476897113913554,
+          "projection_norm": 0.33746995973111543
+        },
+        {
+          "root": 35,
+          "projected_overlap": 0.2930309996065767,
+          "projection_norm": 0.3195158209308461
+        },
+        {
+          "root": 38,
+          "projected_overlap": 0.012693196488038601,
+          "projection_norm": 0.5302181323206521
+        }
+      ]
+    },
+    {
+      "molecule": "Furan",
+      "state": "B022",
+      "profile": 1,
+      "attempt": "1",
+      "target_root": 5,
+      "overlap_margin": 0.5422528614515572,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 5,
+          "projected_overlap": 0.8445138251707478,
+          "projection_norm": 0.8468448362569544
+        },
+        {
+          "root": 13,
+          "projected_overlap": 0.008418845653213535,
+          "projection_norm": 0.19998113214226892
+        },
+        {
+          "root": 16,
+          "projected_overlap": 0.08342752218739159,
+          "projection_norm": 0.5783921791844143
+        },
+        {
+          "root": 19,
+          "projected_overlap": 0.10979463678502033,
+          "projection_norm": 0.1739260768054754
+        },
+        {
+          "root": 32,
+          "projected_overlap": 0.05265303413377443,
+          "projection_norm": 0.33746995973111543
+        },
+        {
+          "root": 35,
+          "projected_overlap": 0.3022609637191906,
+          "projection_norm": 0.3195158209308461
+        },
+        {
+          "root": 38,
+          "projected_overlap": 0.04407120864554987,
+          "projection_norm": 0.5302181323206521
+        }
+      ]
+    },
+    {
+      "molecule": "Phthalimide",
+      "state": "B024",
+      "profile": 0,
+      "attempt": "0_fr_v1",
+      "target_root": 2,
+      "overlap_margin": 0.907956710481631,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 2,
+          "projected_overlap": 0.907956710481631,
+          "projection_norm": 0.9317996223962522
+        }
+      ]
+    },
+    {
+      "molecule": "Phthalimide",
+      "state": "B024",
+      "profile": 1,
+      "attempt": "1_gmf_polish_v1",
+      "target_root": 2,
+      "overlap_margin": 0.7887255316455275,
+      "matched": true,
+      "reference_coverage_complete": false,
+      "candidates": [
+        {
+          "root": 2,
+          "projected_overlap": 0.7887255316455275,
+          "projection_norm": 0.9317996223962522
+        }
+      ]
+    }
+  ],
+  "actual_molecular_orbital_jet_checks": [
+    {
+      "gradient_error": 2.3803208838770275e-09,
+      "hessian_directional_error": 2.094070872260545e-08
+    },
+    {
+      "gradient_error": 9.620748526813243e-09,
+      "hessian_directional_error": 4.4179517821874015e-09
+    },
+    {
+      "gradient_error": 5.773154082636325e-10,
+      "hessian_directional_error": 9.347138618664985e-09
+    }
+  ],
+  "nuclear_derivatives_tested": false,
+  "scope": "available same-symmetry root audit; not proof of complete spectrum"
+}

@@ -1,0 +1,34 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Adenine",
+  "state": "B014",
+  "profile": 1,
+  "status": "unresolved",
+  "reason": "Newton step blocked or no residual reduction",
+  "rank": 2,
+  "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+  "retained_weight": 0.9874107131672426,
+  "excitation_ev": 4.740288988689173,
+  "residual": 0.0034115215915684225,
+  "orbital_index": 4,
+  "minimum_absolute_curvature": 0.005576405213586187,
+  "fidelity": 0.7076705945434787,
+  "raw_transition": 0.7032019516923368,
+  "projection_norm": 0.8912770416040757,
+  "ci": [
+    0.8032430963639511,
+    0.5956513478064599
+  ],
+  "seconds": 55.95125304401154,
+  "evaluations": 80,
+  "model_fingerprint": "30cca390a11e7bbaf650c07f08d4eab4a1eb0180bc1e8ae5ec3566ed7e3246a4",
+  "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "nuclear_derivatives_available": false,
+  "accuracy_labels_already_exposed": true
+}

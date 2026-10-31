@@ -1,0 +1,34 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Phthalimide",
+  "state": "B024",
+  "profile": 1,
+  "status": "stationary_candidate",
+  "reason": null,
+  "rank": 2,
+  "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+  "retained_weight": 0.9966165012611798,
+  "excitation_ev": 4.7718230220313,
+  "residual": 3.2886475660742764e-12,
+  "orbital_index": 7,
+  "minimum_absolute_curvature": 9.029906378999501e-05,
+  "fidelity": 0.8478896472694718,
+  "raw_transition": 0.8464540150995231,
+  "projection_norm": 0.9317996223962527,
+  "ci": [
+    0.999192019153656,
+    0.04019090518562812
+  ],
+  "seconds": 4.844509112008382,
+  "evaluations": 3,
+  "model_fingerprint": "39c6dc3059f8c5f3ae3798362ec0f332e8a17c386216d54c5e255ce283e3a606",
+  "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "nuclear_derivatives_available": false,
+  "accuracy_labels_already_exposed": true
+}

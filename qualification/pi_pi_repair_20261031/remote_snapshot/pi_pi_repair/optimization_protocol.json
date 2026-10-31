@@ -1,0 +1,15 @@
+{
+  "states": [
+    "B022",
+    "B016",
+    "B024",
+    "B014"
+  ],
+  "rank_weight": 0.95,
+  "source_sha256": "08ea0b5c3a4f158b25a54502e9ffb82a955856a142b3a6f32b841ee699d0b02e",
+  "objective_sha256": "37b69afd6f3886843bc8ae4602a6831d636ed72d9a0bc44bcd6b3e88947046ba",
+  "coupling": "full projected Slater-Condon, no fitted scale",
+  "old_results_preserved": true,
+  "accuracy_labels_exposed": true,
+  "nuclear_derivatives_qualified": false
+}

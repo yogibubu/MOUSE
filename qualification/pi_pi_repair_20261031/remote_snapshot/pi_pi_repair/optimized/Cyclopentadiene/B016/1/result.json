@@ -1,0 +1,34 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Cyclopentadiene",
+  "state": "B016",
+  "profile": 1,
+  "status": "stationary_candidate",
+  "reason": null,
+  "rank": 2,
+  "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+  "retained_weight": 0.9989827930295683,
+  "excitation_ev": 5.890593475464821,
+  "residual": 5.879324804780595e-14,
+  "orbital_index": 0,
+  "minimum_absolute_curvature": 0.008789665201104767,
+  "fidelity": 0.9977839630266796,
+  "raw_transition": 0.9972763575077802,
+  "projection_norm": 0.8400923667768415,
+  "ci": [
+    0.7275899441028103,
+    0.6860122981699885
+  ],
+  "seconds": 1.253616989008151,
+  "evaluations": 11,
+  "model_fingerprint": "e09546921081f413366667a83e0d4db50ac3df9f1966612a8846fcadb1394af1",
+  "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "nuclear_derivatives_available": false,
+  "accuracy_labels_already_exposed": true
+}

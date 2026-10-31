@@ -1,0 +1,9 @@
+{
+  "states": [
+    "B011",
+    "B039"
+  ],
+  "reason": "same rank-95-percent rule changes two non-pi targets in the original frozen cohort; mandatory regression, no added molecules",
+  "model_or_weights_changed": false,
+  "accuracy_labels_already_exposed": true
+}

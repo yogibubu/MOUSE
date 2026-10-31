@@ -1,0 +1,5 @@
+{
+  "source": "/home/enzo/MOUSE-orbital-performance-20261031/pi_pi_repair/optimized/Phthalimide/B024/1_fr_v1/latest_released.npz",
+  "reason": "GMF index resolved with residual below 1e-6; preserve checkpoint and switch to analytic Newton polish",
+  "original_checkpoint_preserved": true
+}

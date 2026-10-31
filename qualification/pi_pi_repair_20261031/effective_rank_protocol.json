@@ -1,0 +1,15 @@
+{
+  "schema": "mouse.multicsf.effective_rank.v1",
+  "scope": "Exposed-label development proposal; not a blind validation or production default",
+  "rule": "w_i = sigma_i^2 / sum sigma_j^2; participation = 1 / sum w_i^2; rank = floor(participation + 0.5)",
+  "reason": "Use the effective number of transition pairs rather than admitting arbitrarily weak configurations to reach a cumulative norm cutoff",
+  "energy_inputs_to_rank_selection": false,
+  "family_inputs_to_rank_selection": false,
+  "energy_offset_ev": 0,
+  "weights": [0.5, 0.5],
+  "diagonal_lambda_exchange": 0.9,
+  "offdiagonal": "Unscaled bare projected Slater-Condon, unchanged from the 95 percent trial",
+  "maximum_supported_rank": 4,
+  "reuse": "Identical existing single-CSF functional for rank one; already converged same-rank parent checkpoints otherwise",
+  "limitation": "Choice of participation-based rank was proposed after examining the 95 percent trial; fresh independent validation and rank-boundary sensitivity remain required"
+}

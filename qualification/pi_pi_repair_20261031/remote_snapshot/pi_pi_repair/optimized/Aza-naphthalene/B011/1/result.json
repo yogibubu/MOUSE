@@ -1,0 +1,35 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Aza-naphthalene",
+  "state": "B011",
+  "profile": 1,
+  "status": "stationary_candidate",
+  "reason": null,
+  "rank": 3,
+  "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+  "retained_weight": 0.9748960005498006,
+  "excitation_ev": 3.1824965112720425,
+  "residual": 7.676151381197371e-15,
+  "orbital_index": 0,
+  "minimum_absolute_curvature": 0.017562127723853658,
+  "fidelity": 0.8851544702252048,
+  "raw_transition": 0.8739733931013454,
+  "projection_norm": 0.9170942007736714,
+  "ci": [
+    0.7416742175952701,
+    0.5348287318030809,
+    0.40481796228965977
+  ],
+  "seconds": 11.907720999966841,
+  "evaluations": 11,
+  "model_fingerprint": "b044f583d93c121bce1fc531dd31fe93ac71ef6228d863c7c7a7ec2c8b4523b1",
+  "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "nuclear_derivatives_available": false,
+  "accuracy_labels_already_exposed": true
+}

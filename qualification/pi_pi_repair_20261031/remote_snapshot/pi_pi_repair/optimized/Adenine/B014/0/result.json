@@ -1,0 +1,34 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Adenine",
+  "state": "B014",
+  "profile": 0,
+  "status": "stationary_candidate",
+  "reason": null,
+  "rank": 2,
+  "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+  "retained_weight": 0.9874107131672426,
+  "excitation_ev": 5.302496073634924,
+  "residual": 9.090894270008532e-14,
+  "orbital_index": 4,
+  "minimum_absolute_curvature": 0.002086542265666963,
+  "fidelity": 0.9581149806824397,
+  "raw_transition": 0.9520547853350558,
+  "projection_norm": 0.8880766021300899,
+  "ci": [
+    0.9541646707403793,
+    0.29928210957373297
+  ],
+  "seconds": 42.22632797801634,
+  "evaluations": 55,
+  "model_fingerprint": "f3eac1dde483473e0e3c59e8548bd8fa58b89f6bc05c67a1f809f719eaff4c42",
+  "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "nuclear_derivatives_available": false,
+  "accuracy_labels_already_exposed": true
+}

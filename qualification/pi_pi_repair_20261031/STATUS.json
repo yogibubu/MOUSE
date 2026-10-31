@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-31",
+  "compute_host": "oracle.sns.it",
+  "production_default_changed": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "completed": [
+    "14-state original prediction lock and true-TDA scoring",
+    "independent fermionic HF-limit and spin-purity check",
+    "analytic orbital and CI response",
+    "analytic metric/local-frame nuclear jets",
+    "single-parent Furan two nuclear Hessian columns",
+    "full-frame constrained Furan parent mean Hessian: two columns",
+    "Furan excited total Hessian including three ground terms: two columns",
+    "31 core solver regression tests",
+    "effective-rank vertical development scores from identical stationary points",
+    "off-anchor Furan full-frame analytic response, BCH and spectator-gauge terms: two nuclear Hessian columns within 2.3e-8 Ha/bohr^2"
+  ],
+  "rejected_or_unqualified": [
+    "95 percent cumulative rank prescription: aza-naphthalene overcorrelation",
+    "naive individual-cosine multi-CSF constraints: singular with nonzero second-order obstruction",
+    "Benzoquinone rank-two attempt: unresolved curvature",
+    "native-screened couplings: fixed-orbital diagnostics only"
+  ],
+  "pending": [
+    "complete molecular Hessian-column checks beyond the sampled Furan columns",
+    "public LINK/APOC integration of the multi-CSF candidate",
+    "rank and anchor sensitivity, especially phthalimide",
+    "new frozen independent validation",
+    "excited structure/frequency comparisons and full cost/memory benchmark",
+    "qualified TD-DFTB and DeltaDFTB direct comparison"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Furan",
+  "state": "B022",
+  "profile": 1,
+  "status": "stationary_candidate",
+  "reason": null,
+  "rank": 2,
+  "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+  "retained_weight": 0.9949221180645568,
+  "excitation_ev": 5.921000844176464,
+  "residual": 1.1794384913166311e-14,
+  "orbital_index": 1,
+  "minimum_absolute_curvature": 0.002842447739763193,
+  "fidelity": 0.9997890525668233,
+  "raw_transition": 0.9972474165438505,
+  "projection_norm": 0.8468448362569552,
+  "ci": [
+    0.7304177055083709,
+    0.6830007141137459
+  ],
+  "seconds": 1.153532076976262,
+  "evaluations": 13,
+  "model_fingerprint": "29281974ea8dbf6f5e7a228cbadbe0409597f6a9aca65fca36dfdb83c35a7cb7",
+  "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "nuclear_derivatives_available": false,
+  "accuracy_labels_already_exposed": true
+}

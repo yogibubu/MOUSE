@@ -1,0 +1,29 @@
+{
+  "host": "oracle.sns.it",
+  "scope": "constrained excited parent total-energy 50/50 mean only; full excitation PES ground terms not yet qualified",
+  "target_overlaps": [
+    0.9975876727752095,
+    0.9996242215665593,
+    0.9996291900154132,
+    0.9996242215665532
+  ],
+  "relative_manifold": "full active cross-overlap matrix preserved exactly",
+  "constraint_gradient_error": 9.670425397956262e-11,
+  "constraint_hessian_error": 2.133488469224787e-08,
+  "analytic_seconds": 0.3542200869997032,
+  "maximum_response_residual": 4.440892098500626e-16,
+  "minimum_absolute_curvature": 0.021697950368154948,
+  "dimension": 303,
+  "checks": [
+    {
+      "coordinate": 0,
+      "energy_gradient_error": 1.3321420516808766e-11,
+      "hessian_column_max_error": 1.2193463252985204e-08
+    },
+    {
+      "coordinate": 8,
+      "energy_gradient_error": 6.63868830741432e-09,
+      "hessian_column_max_error": 2.322391601250473e-08
+    }
+  ]
+}

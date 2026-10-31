@@ -1,0 +1,6 @@
+{
+  "source_sha256": "ef859b84d0d171fa0e9c575a2163ba120058e652106258e83f1ac46fffd4c723",
+  "functional_unchanged": true,
+  "reason": "Reuse independently certified one-pair parents; rotate spectator subspaces only to place the second NTO; try before frozen/released alternative",
+  "old_attempts_preserved": true
+}

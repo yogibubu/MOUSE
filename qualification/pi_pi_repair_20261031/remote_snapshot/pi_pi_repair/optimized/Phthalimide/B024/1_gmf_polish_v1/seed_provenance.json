@@ -1,0 +1,5 @@
+{
+  "source": "/home/enzo/MOUSE-orbital-performance-20261031/pi_pi_repair/retained_gmf_seed/B024_1.npz",
+  "source_sha256": "e9d3f937e1d5f019244a44fe99c8031c0c3471b70e1f2971b6fe4a520a8c3a08",
+  "reason": "resume resolved-index GMF checkpoint with full analytic Newton step; no reset"
+}

@@ -1,0 +1,6 @@
+{
+  "source_sha256": "8cff9a0b22711f1a1e3841b40ef3ea3914290801147e599c7e9008d29eb40021",
+  "functional_unchanged": true,
+  "reason": "Newton path reaches fixed identity boundary; freeze/release spectator relaxation before automatic index search",
+  "existing_attempts_preserved": true
+}
