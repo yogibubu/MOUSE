@@ -72,6 +72,15 @@ def generalized_mode_following(evaluate, retract, initial, *, saddle_index,
         reflected = vectors.T @ g
         reflected[:saddle_index] *= -1
         step = -vectors @ (reflected/np.maximum(abs(values), curvature_floor))
+        # Once the index is resolved, a full Newton step already inside the
+        # trust radius needs no curvature floor. Flooring a resolved soft
+        # mode otherwise produces slow linear convergence arbitrarily close
+        # to the saddle. Existing trial guards and growth checks still apply.
+        if observed == saddle_index and not flat:
+            newton = -vectors @ (reflected/abs(values))
+            if np.linalg.norm(newton) <= trust:
+                step = newton
+                row['step_type'] = 'trusted_newton'
         if error <= gradient_tolerance and observed != saddle_index:
             # An exactly stationary point with the wrong index cannot be
             # accepted; leave along a mode whose required sign is incorrect.

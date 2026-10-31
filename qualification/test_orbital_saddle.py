@@ -36,3 +36,16 @@ def test_wrong_index_escape_does_not_exhaust_trust_before_reaching_the_barrier()
     assert result.converged and result.observed_index==1
     assert abs(result.point[0])<1e-8
     assert max(row['residual'] for row in result.history)>result.history[0]['residual']
+
+
+def test_resolved_soft_saddle_uses_a_full_step_inside_the_trust_radius():
+    # A curvature floor of 1e-3 damps this certified mode by a factor 100,
+    # causing linear convergence despite an exactly quadratic local surface.
+    h=np.diag([-1e-5, 2.])
+    def evaluate(x,curvature=True):
+        return float(.5*x@h@x),h@x,h if curvature else None
+    result=generalized_mode_following(evaluate,lambda x,p:x+p,
+        np.array([.05,0.]),saddle_index=1,maximum_iterations=3)
+    assert result.converged and result.observed_index==1
+    assert result.iterations==1
+    assert np.max(abs(result.point))<1e-12
