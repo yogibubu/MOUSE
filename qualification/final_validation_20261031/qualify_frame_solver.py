@@ -2,7 +2,7 @@
 from common import *
 import fcntl
 from matrix_gfn2 import multicsf_frame
-lock=(P/'blind/references/compute.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX)
+from science_slots import science_locks;locks=science_locks()
 rows=[]
 with threadpool_limits():
  for name,sid in [('Furan','B022'),('Cyclopentadiene','B016')]:

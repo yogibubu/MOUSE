@@ -7,7 +7,14 @@ An SVD removes energy-gauge redundancy from this explicit parameterization;
 no singular cosine constraint or second-order condition is dropped.
 """
 import numpy as np
-from scipy.linalg import block_diag,expm
+from scipy.linalg import block_diag,expm,svd as scipy_svd
+
+def _stable_svd(matrix):
+    try:return np.linalg.svd(matrix,full_matrices=False)
+    except np.linalg.LinAlgError:
+        if not np.all(np.isfinite(matrix)):raise ValueError("nonfinite orbital-frame tangent map")
+        return scipy_svd(matrix,full_matrices=False,lapack_driver="gesvd")
+
 
 class RelativeActiveFrame:
     def __init__(self,objects):
@@ -25,7 +32,7 @@ class RelativeActiveFrame:
             # offset[0]=ng; offset[1]=ng+np0, offset[2]=total.
             start=self.ng if side==0 else self.offset[1]
             m[self.private[side],start+np.arange(len(self.private[side]))]=1;raw.append(m)
-        joined=np.concatenate(raw,axis=0);u,sv,vt=np.linalg.svd(joined,full_matrices=False);keep=sv>1e-9
+        joined=np.concatenate(raw,axis=0);u,sv,vt=_stable_svd(joined);keep=sv>1e-9
         return u[:,keep],vt[keep].T/sv[keep],v
     def retract(self,point,step,rawmap,v):
         raw=rawmap@step;common=expm(np.einsum('a,aij->ij',raw[:self.ng],self.generators));result=[]
@@ -65,7 +72,7 @@ class RelativeActiveFrame:
 
         Uniformly clipping a soft-mode Newton step also suppresses stiff-mode
         corrections. The spectral trust solve minimizes the predicted residual
-        in a rotation ball instead. State and full-frame certificates are kept.
+        in a ball of actual common/private rotation coordinates instead. State and full-frame certificates are kept.
         """
         target=point[0][:,self.active].T@self.s@point[1][:,self.active]
         for iteration in range(64):
@@ -74,17 +81,25 @@ class RelativeActiveFrame:
             old_ci=[o.cache['ci'].copy() for o in self.objects]
             values,vectors=np.linalg.eigh(h);projected=vectors.T@g
             step=-vectors@np.divide(projected,values,out=np.zeros_like(projected),where=abs(values)>1e-14)
+            # The tangent SVD can contain nearly redundant common/private
+            # generators. Bound the actual retraction coordinates, rather than
+            # only the normalized energy tangent, to avoid huge cancelling
+            # rotations when the relative frames are almost shared.
+            scale=np.linalg.norm(rawmap,axis=0)
+            trust_svd=None
             def residual_step(radius):
-                square=values**2
-                def trial(mu):return -vectors@(values*projected/(square+mu))
+                nonlocal trust_svd
+                if trust_svd is None:trust_svd=_stable_svd(h/scale[None,:])
+                u,singular,vt=trust_svd;rhs=u.T@g;square=singular**2
+                def trial(mu):return -vt.T@(singular*rhs/(square+mu))
                 low=0.;high=max(1.,float(np.max(square)))
                 while np.linalg.norm(trial(high))>radius:high*=2
                 for unused in range(60):
                     middle=.5*(low+high)
                     if np.linalg.norm(trial(middle))>radius:low=middle
                     else:high=middle
-                return trial(high)
-            if np.linalg.norm(step)>.3:step=residual_step(.3)
+                return trial(high)/scale
+            if np.linalg.norm(rawmap@step)>.3:step=residual_step(.3)
             accepted=False
             for safeguard in [False,True]:
                 direction=residual_step(.03) if safeguard else step

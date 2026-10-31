@@ -144,3 +144,26 @@ post-holdout development, not an additional blind validation. It reuses all
 state-independent calibration and reference checkpoints; weights, lambda and
 offset stay 0.5/0.5, 0.9 and zero. A larger expansion is not declared successful
 without a qualified stationary solution and a comparison to retained controls.
+
+The final trust metric bounds the actual common/private exponential coordinates,
+not just the normalized quotient tangent. Columns of the SVD map are orthogonal;
+whitening by their norms converts the residual trust problem to a standard SVD
+least-squares ball. A fallback `gesvd` driver retries finite tangent maps if the
+first `gesdd` solve fails, with unchanged singular-value rank cutoff. Nonfinite
+maps are rejected. Final energy, state, full-Gram and response-curvature gates
+are unchanged.
+
+`parent_homotopy.py` changes only the numerical path to the Q endpoint. It
+interpolates the frozen one-body F/Q operators with initial step 1/8 and adaptive
+subdivision while retaining their exactly identical nonlinear response. It
+starts from the qualified F CSF, checkpoints accepted intermediate states, and
+certifies the original Q Hamiltonian at t=1. This t is neither lambda nor a
+parent mixing weight. The physical candidate remains 50/50 with lambda .9.
+
+Oracle's 128 available CPUs and about 900 GiB available memory permit three
+independent two-thread science jobs. `science_slots.py` bounds that concurrency
+and holds a SHARED global compute lock; every property timing and regression
+retains an EXCLUSIVE global lock. Thus science can finish in parallel while
+no cost measurement overlaps electronic work from this campaign. External
+server load is not controlled and remains a timing limitation. This is a finite
+campaign, not a scheduled automation.

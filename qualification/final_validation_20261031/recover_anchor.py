@@ -21,17 +21,15 @@ def run(name,sid,scale):
   step=-eigenvectors@(projected/eigenvalues)
   history[-1]['unrestricted_newton_norm']=float(np.linalg.norm(step));history[-1]['minimum_absolute_curvature']=float(np.min(abs(eigenvalues)))
   radius=.3
-  if np.linalg.norm(step)>radius:
-   # Minimize the linearized residual in a fixed trust ball. Soft modes
-   # no longer shrink every stiff component through uniform clipping.
-   square=eigenvalues**2;low=0.;high=max(1.,float(np.max(square)))
-   def trial_step(mu):return -eigenvectors@(eigenvalues*projected/(square+mu))
+  if np.linalg.norm(rawmap@step)>radius:
+   scale=np.linalg.norm(rawmap,axis=0);u,singular,vt=np.linalg.svd(h/scale[None,:],full_matrices=False);rhs=u.T@g;square=singular**2;low=0.;high=max(1.,float(np.max(square)))
+   def trial_step(mu):return -vt.T@(singular*rhs/(square+mu))
    while np.linalg.norm(trial_step(high))>radius:high*=2
    for unused in range(60):
     middle=.5*(low+high)
     if np.linalg.norm(trial_step(middle))>radius:low=middle
     else:high=middle
-   step=trial_step(high)
+   step=trial_step(high)/scale
   history[-1]['step_type']='spectral_residual_trust_newton';accepted=False
   for fraction in [1.,.5,.25,.125,.0625,.03125]:
    trial=frame.retract(point,fraction*step,rawmap,v);_,gg,*_=frame.evaluate(trial)
@@ -51,5 +49,5 @@ def run(name,sid,scale):
  write(out/'continuation_certificate.json',dict(original_fingerprint=model.fingerprint,polished_fingerprint=polished.fingerprint,relative_frame_max_change=float(np.max(abs(polished.target-model.target))),residual=residual,source_sha256=sha(__file__),energy_model_changed=False))
  return original.run(name,sid,scale)
 if __name__=='__main__':
- a=argparse.ArgumentParser();a.add_argument('name');a.add_argument('sid');a.add_argument('scale',type=float);args=a.parse_args();lock=(P/'blind/references/compute.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX)
+ a=argparse.ArgumentParser();a.add_argument('name');a.add_argument('sid');a.add_argument('scale',type=float);args=a.parse_args();from science_slots import science_locks;locks=science_locks()
  with threadpool_limits():run(args.name,args.sid,args.scale)

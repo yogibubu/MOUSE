@@ -1,0 +1,16 @@
+\subsection{Continuation in soft orbital directions}
+The full relative-frame parameterization contains common rotations and independent spectator rotations. Nearly redundant combinations can make a unit-normalized energy tangent correspond to much larger matrix-exponential coordinates. We therefore bound the actual common/private rotation coordinates rather than the energy-tangent norm alone. If $M$ maps a quotient tangent step to these coordinates, its SVD construction gives orthogonal columns; define $D_{jj}=\|M_{:j}\|$. For the local residual $g+H\delta$, a safeguarded step solves
+\begin{equation}
+ \min_{\|D\delta\|\leq r}\|g+H\delta\|^2.
+\end{equation}
+Writing $HD^{-1}=U\Sigma V^\mathsf{T}$ gives
+\begin{equation}
+ \delta=-D^{-1}V\,\mathrm{diag}\!\left(\frac{\sigma_j}{\sigma_j^2+\mu}\right)U^\mathsf{T}g,
+\end{equation}
+where $\mu\geq0$ enforces the radius. A full Newton step is retained when it fits the radius. Backtracking must decrease the residual norm and preserve the existing fixed-transition fidelity, CI margin, coherent step overlap and full active Gram matrix. The final stationarity and response-curvature certificates are unchanged. A finite-matrix SVD failure is retried with the independent LAPACK \texttt{gesvd} driver at the same rank threshold. These are numerical changes to the solver, without changes to the energy or derivative expressions.
+
+For a difficult independent Q parent, we also follow a stationary F parent through
+\begin{equation}
+ v(\tau)=(1-\tau)v_F+\tau v_Q,\qquad 0\leq\tau\leq1.
+\end{equation}
+Only the frozen one-body operator changes along this numerical path; the common charge/spin response, bare projected integrals, active rank and final Q Hamiltonian are retained. The initial increment is $1/8$ and is subdivided if the state/stationarity gates fail. Accepted orbital checkpoints are reused. The effective exchange remains $0.25\times0.9$; $\tau$ is not an exchange parameter or a physical parent weight. Local electronic curvature is reassessed between bounded mode-following phases, while state identity remains controlled by the same projected transition. The endpoint is used only after certification with the original Q operator. Reference excitation energies do not select the continuation path.

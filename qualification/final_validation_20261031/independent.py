@@ -106,7 +106,13 @@ def predict(name):
     c0=g.coefficients[0];q=c0[:,:no].T@s.overlap@s.coefficients[:,:no]@amp@s.coefficients[:,no:].T@s.overlap@c0[:,no:];q/=np.linalg.norm(q);refs.append(c0);amps.append(q);u,sv,vh=np.linalg.svd(q,full_matrices=True);c=np.column_stack([c0[:,:no]@u,c0[:,no:]@vh.T])
     context=prepare_gfn2_deltascf(calc,xyz,orbital_reference=s,spin_reference=response)
     if rank>=2:
-     obj=MultiCSFObjective(context,eri,no,rank,c0,q);parents.append(optimize_parent(obj,c,dest/f'parent_{i}'))
+     obj=MultiCSFObjective(context,eri,no,rank,c0,q)
+     if i==1:
+      from parent_homotopy import follow_parent
+      c=follow_parent(calc,xyz,s,responses,eri,no,rank,c0,q,parents[0],dest/'homotopy_Q')
+      (dest/f'parent_{i}').mkdir(exist_ok=True);np.savez_compressed(dest/f'parent_{i}/converged.npz',coefficients=c)
+      parents.append(c)
+     else:parents.append(optimize_parent(obj,c,dest/f'parent_{i}'))
     else:
      # Keep the original single-CSF energy and relative-pair manifold.
      occ=np.array([s.alpha_occupations,s.beta_occupations]);occ[0,0]=0;occ[0,no]=1;trip=np.array([np.maximum(*occ),np.minimum(*occ)])
@@ -139,6 +145,6 @@ def predict(name):
    write(dest/'result.json',dict(id=row['id'],molecule=name,family=row['family'],status='nonconverged',rank=rank,reason='See retained stationary-search failure record',labels_read=False))
  write(out/'pass_complete.json',dict(status='attempt_pass_complete',molecule=name,labels_read=False))
 if __name__=='__main__':
- a=argparse.ArgumentParser();a.add_argument('name');args=a.parse_args();lock=(P/'blind/references/compute.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX)
+ a=argparse.ArgumentParser();a.add_argument('name');args=a.parse_args();from science_slots import science_locks;locks=science_locks()
  write(OUT/os.environ.get('MOUSE_HOLDOUT_DIRECTORY','independent')/f'executions/{args.name}.json',dict(script_sha256=sha(__file__),common_sha256=sha(Path(__file__).parent/'common.py'),protocol_sha256=sha(OUT/'protocol.json'),manifest_sha256=sha(OUT/os.environ.get('MOUSE_HOLDOUT_DIRECTORY','independent')/'manifest.json'),labels_read=False))
  with threadpool_limits():predict(args.name)

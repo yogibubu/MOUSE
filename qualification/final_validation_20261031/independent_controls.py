@@ -42,5 +42,5 @@ def run(name):
   results.append(dict(id=row['id'],molecule=name,family=row['family'],status='matched' if all(r['status']=='matched' for r in matches) else 'completed_unassigned',parents=matches,weights=[.5,.5],lambda_exchange=.9,energy_offset_ev=0))
  write(dest/'result.json',dict(molecule=name,rows=results,labels_read=False,operator='true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction',assignment='maximum coherent projected DFT transition overlap, score>=.7 and margin>=.05; no reference excitation energy used'))
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('name');args=p.parse_args();lock=(P/'blind/references/compute.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX)
+ p=argparse.ArgumentParser();p.add_argument('name');args=p.parse_args();from science_slots import science_locks;locks=science_locks()
  with threadpool_limits():run(args.name)

@@ -152,6 +152,8 @@ Once the requested electronic index is resolved and no curvature is classified a
 
 The orbital Jacobian is evaluated by forming the alpha and beta density perturbations for all active rotations together. Their common charge response is applied once; spin response and full AO-pair contractions are evaluated in batches with matrix products. The scalar response remains available as a fallback. This is an algebraic reorganization of the analytic derivative, with unchanged energy, orbital tolerance, and nuclear-response equations.
 
+\input{final_solver_discussion.tex}
+
 \subsection{Tracking, certification, and restart}
 The APOC state-following machinery monitors each parent CSF and its original active-pair character. Accepted steps require overlap and character measures of at least 0.7, positive parent excitation gaps, joint orbital stationarity, and a resolved projected orbital index. Curvatures smaller than $10^{-7}$~\Eh\ in absolute value are treated as unresolved for certification. An orbital-index check complements overlap tracking, since an apparent character match alone does not certify the desired stationary branch.
 
