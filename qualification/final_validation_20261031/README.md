@@ -1,9 +1,10 @@
 # Four-gate final validation
 
 The frozen candidate uses equal F/Q weights, lambda 0.9, zero excited-state offset,
-and the previously declared effective-transition-rank rule. Rank one retains the
-original relative-pair single-CSF energy; ranks two through four use the public
-full-active-frame multi-CSF surface. No validation score may select a new parameter.
+and the previously declared effective-transition-rank rule. Rank one uses one singlet CSF per parent; ranks two through four enlarge the
+CSF space. The public multi-CSF surface preserves the full active cross-parent
+Gram matrix. Away from the anchor this is a stricter manifold than the original
+individual-cosine relative-pair surface. No validation score may select a new parameter.
 
 Electronic work runs only on verified `oracle.sns.it`, with two threads and the
 shared publication compute lock. The laptop performs orchestration, source and
