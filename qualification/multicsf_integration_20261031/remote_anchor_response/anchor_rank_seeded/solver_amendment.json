@@ -1,0 +1,5 @@
+{
+  "reason": "Default 20-vector Davidson blocks for two roots; use request-sized blocks and save Ritz checkpoints, same operator and tolerances",
+  "completed_ground_preserved": true,
+  "completed_response_points_restarted": 0
+}

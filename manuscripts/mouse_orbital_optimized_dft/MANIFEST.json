@@ -1,19 +1,19 @@
 {
   "date": "2026-10-31",
-  "revision": "Automatic opt-in multi-CSF integration, coherent state tracking, complete furan analytic Hessian and response/rank sensitivity",
+  "revision": "Complete two-molecule analytic Hessian qualification and six actual displaced-reference rank tests",
   "implementation_commit": "5620e2d063f510e9378a0bb438d54eb01a88493f",
   "electronic_compute_host": "oracle.sns.it",
   "new_accuracy_labels_opened": true,
   "reduced_snapshot": "14 of 14 original OO predictions and matched true-TDA controls locked before label opening; new multicsf work uses exposed labels",
   "references": 25,
-  "figures": 11,
-  "main_pages": 25,
-  "supporting_information_pages": 12,
-  "visual_review": "Main pages 21-22 and SI page 12 rendered and inspected: Figure 11 and all 33 CPD table rows legible. Final builds have no undefined references or overfull boxes.",
+  "figures": 12,
+  "main_pages": 26,
+  "supporting_information_pages": 13,
+  "visual_review": "Main pages 21-23 and SI pages 12-13 rendered and inspected; figures 11-12 and full tables S8-S9 legible. Final builds have no undefined references or overfull boxes.",
   "standalone_asset_rebuild": "New extension tables and figure rebuilt successfully from a temporary manuscript-only copy without qualification archives; all three generated table sources match exactly.",
   "sha256": {
     ".gitignore": "950b8b8c4500045cfc77d319b1f24bdbb3217778710d2bd79439219f89fc7b06",
-    "README.md": "9a03deca19632a7c1cf55aa613332c00f3989666abe9e83b5faf4ffab0618101",
+    "README.md": "afce165dde12f2e36e4ef4b2c0ad9fee6fccbc273bb7f9e09894f60534e438c5",
     "build_assets.py": "6f18dfe0ce771817ea13f42045319d13962273ea2e25997821b3b3b580f05d08",
     "build_dftb_audit.py": "b18cd0ea833856daef50175ff92992e0faaee21bcdc25d0ea5be57a019792144",
     "build_reduced_extension.py": "b1e9a89c6d673eeb539ec330ac4c4293227b30e0f152ddba16015ff995c02a98",
@@ -122,8 +122,8 @@
     "figures/vertical_validation.png": "0607aa8013be3fde3f7d2f028a25e1ada033e80df832030b6eda04b34ef6e2ce",
     "figures/vertical_validation.svg": "87bf8b074dbf9e47f719e97d1e14f3ef6419fe24c18e7070380487ea4a3960d8",
     "literature_metadata.json": "63e1338fd93331f64f868c3aba11ebd7940c7555a71a9d1af9b5ef18887f559a",
-    "main.pdf": "4261e62a68eb651eda8e1d68a1bfbbbbd1e05af20860dd9a1370304fa1cdd20a",
-    "main.tex": "e8b02e923ffdf48fc233fcd09da1a3ad024cea6300400b16cbaeb4ebd95e8ed6",
+    "main.pdf": "ff89cda8892328af1c55e08c46abc2ea659f7c65363b23aa3dda28b4f46aaaf3",
+    "main.tex": "06c7420508615eb055a3c512558bcb6b23478229a1bd60b6e2fc4edc256019c5",
     "make_integration_assets.py": "f5d85e6a9aa28cd532bc7230daaddf0bc4046eeedb9adfcc78ae81e1a9f1b543",
     "make_multicsf_development_figure.py": "f58d3980b26f7e505a4f51a93ac27cdaa200c832d2607bf29e0978e0f4e466c0",
     "make_publication_figures.py": "e43292407e499306255803fd14af1730322eaabaf510e2b2646c999af2dc625c",
@@ -131,11 +131,11 @@
     "make_solver_figure.py": "e42f9cbb56fdbba463ce2aa4b64bbff416253dc5df9ea0ac86166e6038e80653",
     "make_structures_jmol.py": "efecf3deb63684a48970ddb621b1296b87f91dd2b4949009deb1de316496f7bc",
     "positioning_references.json": "9cfa97c820fbac988e319f96ab7b7d003ee7b39aae88fb3905990e77876b8ff9",
-    "reduced_extension_discussion.tex": "458bda469558411c101d2aaf461f1bbf45426c5ce2d2f098729b2a70cf24493c",
+    "reduced_extension_discussion.tex": "92cb1060513c0fdaee349481cd3d5db5fc33b655cfa221f963b445e62a984573",
     "reference_provenance.json": "c0b12f362c22040fe7bca7e368005fcd50f7add3d70e8b35989b45d5344e53aa",
     "references.bib": "792221304604a335278e3893d88dde2d2aa3ff4aad8e48ab525b6affd7099fb4",
-    "supporting_information.pdf": "ea0185aec60e102ecd6ddea844ca95d85b8478eb71b02de039cf8da244d9bc6a",
-    "supporting_information.tex": "873f7863c86d2d4baa9d782cfcba7ad7b60186584ed3b876567280c338d27de9",
+    "supporting_information.pdf": "dc62914e1246a7f4ac8649cad2d771f38df2713d63e5d88100cd9c412d327ef2",
+    "supporting_information.tex": "18c11916b07a59673c2db0479a03da581b8d19876b11a1ec752697a2b5e86b5a",
     "tables/all_stda.tex": "3965c9048506d38d090906bf0c7b80955beed283ef6ee8c30ff72b03e6404eab",
     "tables/all_vertical.tex": "d93c2573b983a4bb8f7624dd4a44b6b6d5a2479db7fa51d77f16debd5ebf4504",
     "tables/cpd_complete_columns.tex": "c098502d9e036c0ede79f4a617de7af290ccb383f552782bd7458c3babc3251a",
@@ -153,7 +153,13 @@
     "tables/reduced_extension_all.tex": "8b4b36615618c9abf595d96d409068fe45e8053ccc7408d2ed0d5ed4acad18ec",
     "tables/statistics.tex": "f9da56caa94969531a9f8c00ae6c25b1fd5f3d380113a41b016d359219207110",
     "tables/tbe_methods.tex": "63d2e6ab2df4d7d575421aec5c78dbb506ea3ab703f9c00d4388190b9bfe32f0",
-    "tables/weight_anchor.tex": "848aa4ae1055cbb6fa3f4f6d61fcf6f6708b592b3c0ae88033f4a1e2b243c68e"
+    "tables/weight_anchor.tex": "848aa4ae1055cbb6fa3f4f6d61fcf6f6708b592b3c0ae88033f4a1e2b243c68e",
+    "make_anchor_rank_assets.py": "b4c8b26d447d4e90768d64f3edca7a3ab5ab316844acc5db0acb70804fe6ed78",
+    "data/multicsf_integration/anchor_rank_actual.json": "ca8aad1cb92d1af95d010fe887b80d8069c3bdf8a0c62b47d16d71eacfdb366a",
+    "data/multicsf_integration/anchor_projection_audit.json": "69ee7daea609eb92a1e67ce25bbd3bb802e058673bda1be1245754044e996bc6",
+    "figures/actual_anchor_rank.pdf": "c95a0d3f6781d7b7f8cc5af65a24d216877e40e7c21d73edd125eb5edecf6678",
+    "figures/actual_anchor_rank.png": "cedc3c78102fba6f0af7010945aee2dab3cf6a89d2b36a62c5d99c7839241c4c",
+    "tables/actual_anchor_rank.tex": "af980a4682e49ef64097e21c23dc28f54f9c9e1c1e25c8cfbda6cf7664e8b02b"
   },
   "structure_plate": "28 archived anchor geometries rendered by Jmol 14.31.10: 18 original cohort + 10 reduced extension; no optimization",
   "implementation_commits": [
@@ -178,5 +184,14 @@
     "Furan": 27,
     "Cyclopentadiene": 33
   },
-  "standalone_second_hessian_asset_rebuild": "Temporary manuscript-only copy reproduces the full CPD table; no qualification archives or electronic calculations required."
+  "standalone_second_hessian_asset_rebuild": "Temporary manuscript-only copy reproduces the full CPD table; no qualification archives or electronic calculations required.",
+  "actual_anchor_rank_tests": {
+    "completed": 6,
+    "all_rank_two": true,
+    "transferred_artifacts": 185,
+    "full_energy_model_recalibration": false,
+    "independent_accuracy_validation": false
+  },
+  "delta_recovery_artifacts": 112,
+  "standalone_anchor_asset_rebuild": "Temporary manuscript-only copy reproduces table S9 exactly without qualification archives or electronic calculations."
 }

@@ -77,8 +77,8 @@ share the existing compute lock and reuse finished checkpoints. No calculation
 from these additional tests runs on the laptop. The cyclopentadiene check is complete: 33/33 columns, maximum error
 1.2964e-7 Ha/bohr². All reported errors were independently reproduced by
 lightweight reduction of the transferred checkpoints. Both stored molecular
-Hessians pass acoustic and rotational-covariance checks. The anchor/rank gate
-remains in progress.
+Hessians pass acoustic and rotational-covariance checks. All six actual DFT/native projection rank checks are now complete and retain
+rank two. The full F/Q anchor-energy sensitivity gate remains open.
 
 The unseeded first DFT response was interrupted after more than nine minutes
 without a completed spectrum; its converged ground checkpoint and log are
@@ -87,3 +87,29 @@ two-root response with the transported original transition plus conventional
 guesses. It changes no Hamiltonian, root-identity rule or tolerance.
 `audit_anchor_projection.py` separately reproduces the original compact
 projection and distinguishes transported-anchor from relaxed-native subspaces.
+
+## Completed actual reference/rank test
+
+`anchor_rank_symmetry.py` is the final executed driver. Its exact irrep pair
+block removes forbidden-sector null-space components from restarted Ritz
+vectors. Two-vector Davidson increments, a 1e-20 linear-dependence threshold
+and positive-root checkpoints preserve the original 1e-7 response-residual
+criterion. A separate full-operator response action certifies both roots.
+Earlier unfinished/uncertified solver attempts remain in the archive and are
+not accepted predictions. Ground checkpoints are preserved and reused.
+
+All six +/-2% Cartesian-dilation points pass identity and compact-projection
+gates. Effective native pair numbers are 1.5924--1.5982 (phthalimide),
+2.0071--2.0135 (furan) and 1.9850--1.9927 (cyclopentadiene); rank remains two.
+The minimum transition overlap is 0.9962, margin 0.9724 and compact norm 0.8256.
+The largest atom shift is 0.06883 A. Reprojection of the original three
+transitions reproduces them within 5e-16; co-rotating transported original
+subspaces and freshly relaxed native S0 differ by at most 1.33e-4 in effective
+pair number. These tests concern one local geometry direction, not fully
+recalibrated OO energy models or an independent validation set.
+
+The final archive verifies 185 artifacts and eight executed Python sources
+against their local copies. The shared native-extension hash is unchanged.
+All new electronic work finished on Oracle. Python 3.11.15, NumPy 2.3.5 and
+PySCF 2.14.0 identify the reference runtime. Complete SCF backend checkpoints
+remain on Oracle with hashes in the transfer manifest.

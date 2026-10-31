@@ -1,0 +1,33 @@
+{
+  "host": "oracle.sns.it",
+  "source_sha256": "ed0fbdad7e7b5ff679eb2e230caa44c2c9c0f04bb9bb335f45cca03692859ee3",
+  "jobs": [
+    "cyclopentadienone",
+    "uracil"
+  ],
+  "solver_trials": [
+    {
+      "name": "anderson",
+      "maximum_scc_iterations": 2000,
+      "mixer": "Mixer = Anderson { MixingParameter = 0.01\n InitMixingParameter = 0.01\n Generations = 4 }"
+    },
+    {
+      "name": "simple_002",
+      "maximum_scc_iterations": 20000,
+      "mixer": "Mixer = Simple { MixingParameter = 0.02 }"
+    },
+    {
+      "name": "simple_0005",
+      "maximum_scc_iterations": 50000,
+      "mixer": "Mixer = Simple { MixingParameter = 0.005 }"
+    }
+  ],
+  "timeout_per_trial_seconds": 60,
+  "scf_tolerance": 1e-10,
+  "threads": 2,
+  "unchanged_hamiltonian": true,
+  "energy_inputs_to_solver_choice": false,
+  "ground_charge_restart": "atomic InitialCharges from completed TD ground output; binary charge restart is explicitly unsupported by Delta DFTB",
+  "failed_prior_attempts_retained": true,
+  "method": "same spin-purified HOMO-LUMO NonAufbau, no smearing or empirical change"
+}

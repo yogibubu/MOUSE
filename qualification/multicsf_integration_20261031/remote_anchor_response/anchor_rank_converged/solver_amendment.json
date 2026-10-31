@@ -1,0 +1,7 @@
+{
+  "reason": "Full-space restart Ritz selection admitted forbidden-irrep null-space components; exact symmetry-block response and positive-root checkpoint exclude them structurally",
+  "completed_ground_preserved": true,
+  "uncertified_ritz_retained_but_not_reused": true,
+  "electronic_operator_unchanged": true,
+  "root_residual_tolerance_unchanged": true
+}

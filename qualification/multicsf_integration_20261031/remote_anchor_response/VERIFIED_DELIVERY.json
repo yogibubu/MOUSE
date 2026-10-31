@@ -1,0 +1,16 @@
+{
+  "transferred_files_verified": 185,
+  "all_file_hashes_match": true,
+  "executed_source_matches_local": {
+    "anchor_rank.py": true,
+    "anchor_rank_seeded.py": true,
+    "anchor_rank_targeted.py": true,
+    "anchor_rank_converged.py": true,
+    "anchor_rank_symmetry.py": true,
+    "qualify_cpd_hessian.py": true,
+    "audit_anchor_projection.py": true,
+    "rigid_body_audit.py": true
+  },
+  "native_extension_matches_original_integration": true,
+  "scope": "six complete actual reference/rank tests plus full second-molecule derivative qualification; no independent energy validation or full F/Q recalibration"
+}

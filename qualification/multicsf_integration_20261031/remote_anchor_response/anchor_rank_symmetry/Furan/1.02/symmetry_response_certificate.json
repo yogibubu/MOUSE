@@ -1,0 +1,11 @@
+{
+  "symmetry": "A1",
+  "full_pair_dimension": 2394,
+  "allowed_pair_dimension": 763,
+  "independently_recomputed_residuals": [
+    1.8689641813826607e-08,
+    8.920218660623476e-08
+  ],
+  "forbidden_components_exactly_zero": true,
+  "request_sha256": "142a1a1002ebf3b0d765d070525c456bfeafd17c170ad186d2bf95608c50b925"
+}

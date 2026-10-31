@@ -1,0 +1,8 @@
+{
+  "reason": "Default lindep=1e-12 discards small preconditioned requested-root corrections before reaching a 1e-7 residual; retain them with lindep=1e-20 and resume saved Ritz vectors",
+  "pid": 961292,
+  "completed_ground_preserved": true,
+  "ritz_checkpoint_preserved": true,
+  "electronic_operator_unchanged": true,
+  "root_residual_tolerance_unchanged": true
+}

@@ -1,0 +1,7 @@
+{
+  "reason": "Unseeded two-root DFT response unfinished after >9 minutes; resume completed DFT ground with transported transition initial guess",
+  "pid": 916782,
+  "completed_ground_preserved": true,
+  "completed_tda_displacements_restarted": 0,
+  "new_directory": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_seeded"
+}

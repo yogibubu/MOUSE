@@ -1,0 +1,27 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "uracil",
+  "method": "delta",
+  "returncode": 1,
+  "wall_seconds": 1.1178646740154363,
+  "variant": "anderson",
+  "protocol_sha256": "8a2723a1303981759ffda1ec382469eb31dd2ed5c5e91cb7160b908118efcc3c",
+  "geometry_sha256": "92ae29c6355c58dd71f0bce076b3763cc56b263a50aae91339204f863c458eed",
+  "input_sha256": "eaa0f536c2598807d05a42910ee7d123cfc52e6a058f8d23b65d2af4528e6fc4",
+  "initial_ground_charge_sha256": "db9cbc53eeb83baa1873b694e7af6d25d57ad44a8ef5b4d30c5e93992a528c2c",
+  "initial_atomic_charges": [
+    0.04332376916666665,
+    -0.28506219083333334,
+    0.5090887991666666,
+    0.5791969691666667,
+    -0.18542454083333335,
+    -0.27182419083333337,
+    -0.4920608808333333,
+    -0.5471669808333333,
+    0.08656749916666666,
+    0.11969586916666665,
+    0.22712011916666666,
+    0.21654575916666666
+  ],
+  "prior_checkpoint_retained": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_04/uracil/delta/charges.bin"
+}

@@ -1,0 +1,70 @@
+New geometry
+   1 C      0.000000000000   1.070199680200  -0.306419015978 AA    0.000000000000   2.022384294175  -0.579048019557 Bohr
+   2 C      0.000000000000  -1.070199680200  -0.306419015978 AA    0.000000000000  -2.022384294175  -0.579048019557 Bohr
+   3 C      0.000000000000   0.701908869200   0.971331306822 AA    0.000000000000   1.326415527191   1.835550146110 Bohr
+   4 C      0.000000000000  -0.701908869200   0.971331306822 AA    0.000000000000  -1.326415527191   1.835550146110 Bohr
+   5 O      0.000000000000   0.000000000000  -1.104503664178 AA    0.000000000000   0.000000000000  -2.087209428875 Bohr
+   6 H      0.000000000000   2.003519908600  -0.792416000178 AA    0.000000000000   3.786103912368  -1.497449217059 Bohr
+   7 H      0.000000000000  -2.003519908600  -0.792416000178 AA    0.000000000000  -3.786103912368  -1.497449217059 Bohr
+   8 H      0.000000000000   1.344032387600   1.805393646422 AA    0.000000000000   2.539853115109   3.411699538768 Bohr
+   9 H      0.000000000000  -1.344032387600   1.805393646422 AA    0.000000000000  -2.539853115109   3.411699538768 Bohr
+
+
+******** <class 'pyscf.dft.rks_symm.SymAdaptedRKS'> ********
+method = SymAdaptedRKS
+initial guess = minao
+damping factor = 0
+level_shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+diis_start_cycle = 1
+diis_space = 8
+diis_damp = 0
+SCF conv_tol = 1e-10
+SCF conv_tol_grad = None
+SCF max_cycles = 150
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/0.98/backend.chk
+max_memory 24000 MB (current use 310 MB)
+XC library pyscf.dft.libxc version 7.0.0
+    S. Lehtola, C. Steigemann, M. J.T. Oliveira, and M. A.L. Marques.,  SoftwareX 7, 1–5 (2018)
+XC functionals = PBE0
+    C. Adamo and V. Barone.,  J. Chem. Phys. 110, 6158 (1999)
+    M. Ernzerhof and G. E. Scuseria.,  J. Chem. Phys. 110, 5029 (1999)
+radial grids: 
+    Treutler-Ahlrichs [JCP 102, 346 (1995); DOI:10.1063/1.469408] (M4) radial grids
+    
+becke partition: Becke, JCP 88, 2547 (1988); DOI:10.1063/1.454033
+pruning grids: <function nwchem_prune at 0x1527e0b09620>
+grids dens level: 3
+symmetrized grids: True
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x1527e0b09580>
+small_rho_cutoff = 0
+Freeze 0 electrons in irreps []
+    36 free electrons in irreps A1 A2 B1 B2
+Set gradient conv threshold to 1e-05
+tot grids = 109792
+init E= -226.181259542307
+HOMO (A2) = -0.40179024702651  LUMO (B1) = -0.131007096824784  gap/eV = 7.36838
+cycle= 1 E= -229.620758314462  delta_E= -3.44  |g|= 0.851  |ddm|= 8.49
+HOMO (A2) = -0.138847248972081  LUMO (A1) = 0.0107991540542893  gap/eV = 4.07209
+cycle= 2 E= -229.502906867553  delta_E= 0.118  |g|= 1.12  |ddm|= 3.33
+HOMO (A2) = -0.24226483444645  LUMO (A1) = 0.00468768230519157  gap/eV = 6.71992
+cycle= 3 E= -229.772152205933  delta_E= -0.269  |g|= 0.212  |ddm|= 1.38
+HOMO (A2) = -0.252293882219956  LUMO (A1) = 0.0036617042116025  gap/eV = 6.96491
+cycle= 4 E= -229.780949374743  delta_E= -0.0088  |g|= 0.0461  |ddm|= 0.279
+HOMO (A2) = -0.246840917155829  LUMO (A1) = 0.00457211694838477  gap/eV = 6.84130
+cycle= 5 E= -229.781422826722  delta_E= -0.000473  |g|= 0.0144  |ddm|= 0.118
+HOMO (A2) = -0.246452338517386  LUMO (A1) = 0.00454090011758046  gap/eV = 6.82987
+cycle= 6 E= -229.781467384202  delta_E= -4.46e-05  |g|= 0.00448  |ddm|= 0.036
+HOMO (A2) = -0.246921203747038  LUMO (A1) = 0.00454451281398116  gap/eV = 6.84273
+cycle= 7 E= -229.781472698248  delta_E= -5.31e-06  |g|= 0.000165  |ddm|= 0.0105
+HOMO (A2) = -0.246928056262226  LUMO (A1) = 0.00454514554504604  gap/eV = 6.84293
+cycle= 8 E= -229.781472705451  delta_E= -7.2e-09  |g|= 3.47e-05  |ddm|= 0.000646
+HOMO (A2) = -0.246930372048777  LUMO (A1) = 0.00454502817074243  gap/eV = 6.84299
+cycle= 9 E= -229.781472705728  delta_E= -2.77e-10  |g|= 4.72e-06  |ddm|= 7.14e-05
+HOMO (A2) = -0.24692957987779  LUMO (A1) = 0.00454523749010161  gap/eV = 6.84298
+cycle= 10 E= -229.781472705733  delta_E= -5.57e-12  |g|= 8.3e-07  |ddm|= 1.46e-05
+HOMO (A2) = -0.246929545520551  LUMO (A1) = 0.00454523260210271  gap/eV = 6.84298
+Extra cycle  E= -229.781472705732  delta_E= 6.82e-13  |g|= 1.27e-06  |ddm|= 2.64e-06
+converged SCF energy = -229.781472705732

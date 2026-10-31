@@ -1,0 +1,8 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "cyclopentadienone",
+  "method": "delta",
+  "returncode": 1,
+  "status": "bounded_solver_recoveries_incomplete",
+  "protocol_sha256": "d7b100f7514a0b30656cb163c6fe3cc191a8e0a15f3efc5d2494988c3ce9a942"
+}

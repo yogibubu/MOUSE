@@ -26,7 +26,8 @@
     "vertical weights 0.4/0.5/0.6 and fixed-NTO rank sensitivity quantified",
     "all 33 Cyclopentadiene total-excited analytic Hessian columns through public surface: maximum error 1.2964e-7 Ha/bohr^2",
     "Furan/Cyclopentadiene stored analytic Hessians pass translational and nonstationary rotational covariance",
-    "same-geometry original-cohort TD-DFTB (19) and Delta-DFTB (15) spatial symmetry/ordinal audit; transition-overlap qualification remains open"
+    "same-geometry original-cohort TD-DFTB (19) and Delta-DFTB (15) spatial symmetry/ordinal audit; transition-overlap qualification remains open",
+    "six actual +/-2% DFT reference/native-S0 compact-rank tests: all pass identity and remain rank two; original projections reproduced within 5e-16"
   ],
   "rejected_or_unqualified": [
     "95 percent cumulative rank prescription: aza-naphthalene overcorrelation",
@@ -35,7 +36,7 @@
     "native-screened couplings: fixed-orbital diagnostics only"
   ],
   "pending": [
-    "actual rank/energy sensitivity with DFT recalibrated at displaced anchors",
+    "full F/Q model recalibration at displaced anchors, with OO energies compared at a common target geometry",
     "new frozen independent validation",
     "excited structure/frequency comparisons and full size-dependent cost/memory benchmark",
     "cross-model transition-overlap qualification of TD-DFTB/DeltaDFTB states sharing an irrep"

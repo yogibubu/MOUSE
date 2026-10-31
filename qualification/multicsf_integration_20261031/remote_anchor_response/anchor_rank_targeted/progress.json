@@ -1,0 +1,8 @@
+{
+  "status": "running",
+  "molecule": "Phthalimide",
+  "state": "B024",
+  "scale": 0.98,
+  "completed": 0,
+  "host": "oracle.sns.it"
+}

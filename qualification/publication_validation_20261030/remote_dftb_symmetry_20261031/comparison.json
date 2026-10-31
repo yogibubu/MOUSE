@@ -215,12 +215,45 @@
     "td_dftb": {
       "count": 19,
       "mae_ev": 0.5454704913315788,
-      "oo_same_subset_mae_ev": 0.18252674846249115
+      "oo_same_subset_mae_ev": 0.18252674846249115,
+      "regression": {
+        "count": 15,
+        "mae_ev": 0.4087020247066665,
+        "oo_same_subset_mae_ev": 0.15023305016212393
+      },
+      "prospective": {
+        "count": 4,
+        "mae_ev": 1.0583522411749997,
+        "oo_same_subset_mae_ev": 0.30362811708886817
+      }
     },
     "delta_dftb": {
       "count": 15,
       "mae_ev": 0.3135307627421257,
-      "oo_same_subset_mae_ev": 0.171742513712367
+      "oo_same_subset_mae_ev": 0.171742513712367,
+      "regression": {
+        "count": 12,
+        "mae_ev": 0.3334624107156557,
+        "oo_same_subset_mae_ev": 0.15804018429886335
+      },
+      "prospective": {
+        "count": 3,
+        "mae_ev": 0.23380417084800595,
+        "oo_same_subset_mae_ev": 0.22655183136638168
+      }
     }
-  }
+  },
+  "source_sha256": "c1b6ce578d57a942f0988ed528669792c6729be97da447c9d1527384bd9c9505",
+  "input_sha256": {
+    "manuscripts/mouse_orbital_optimized_dft/data/vertical_energies.csv": "81f3036cf96507c99c90b33f251219707f96f47b71830c70054c0af91794cc14",
+    "qualification/publication_validation_20261030/remote_dftb_symmetry_20261031/report.json": "de011d987f487d469a7129b23a9510a6a21136304a3827d6a7fbed6950c089ca",
+    "qualification/publication_validation_20261030/remote_dftb_symmetry_20261031/delta_report.json": "d9dd7bfdb3f987fadee928a1c3c98909a89726e3629352b84da9b469242417dc"
+  },
+  "additional_reference_targets_not_in_original_cohort": [
+    {
+      "molecule": "pyridazine",
+      "state": "pi_pi",
+      "reason": "not in the unchanged original 19-state cohort"
+    }
+  ]
 }

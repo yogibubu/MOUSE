@@ -120,3 +120,18 @@ energy/gradient calls total 465.47 s (median 7.05 s), a 1.86 ratio to the analyt
 call for this prepared model. Neither includes DFT/reference preparation, and
 this is not a TDA or a size-scaling comparison. `make_second_hessian_assets.py`
 rebuilds Figure 11 and Supporting Table S8 from copied standalone JSON.
+
+## Actual reference/rank sensitivity
+
+Figure 12 and Supporting Table S9 show all six recomputed DFT/native-S0
+projection points at +/-2% internal Cartesian scale. Every point passes the
+fixed transition-identity and projection thresholds and retains rank two.
+The final exact-irrep response solves certify both roots against the full
+operator at the unchanged 1e-7 residual threshold. Earlier uncertified restart
+vectors are retained in the archive and enter no accepted result.
+
+This closes the specified local rank diagnostic, with all 185 new artifacts
+hash verified. It does not close full F/Q recalibration with energies evaluated
+at a common target geometry, independent molecular validation, physical
+structure/frequency accuracy, or a complete TDA/OO workflow cost and size study.
+`make_anchor_rank_assets.py` rebuilds the plot and table from standalone JSON.

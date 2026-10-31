@@ -1,0 +1,13 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "cyclopentadienone",
+  "method": "delta",
+  "returncode": 1,
+  "wall_seconds": 0.03269104199716821,
+  "variant": "simple_002",
+  "protocol_sha256": "d7b100f7514a0b30656cb163c6fe3cc191a8e0a15f3efc5d2494988c3ce9a942",
+  "geometry_sha256": "15af95359b6cd2e6444e53cbbc443efe6acfea6b631564469fff512919e48de7",
+  "input_sha256": "1395604529b7a3ecadf116c9b4d07a459677da15bcd44ed6968f20ffc60c7c28",
+  "initial_ground_charge_sha256": "5a0ead925551ecca6a89cf7312b4a9c6598022b4dab6ed8930832bf0a50e0e62",
+  "prior_checkpoint_retained": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_04/cyclopentadienone/delta/charges.bin"
+}

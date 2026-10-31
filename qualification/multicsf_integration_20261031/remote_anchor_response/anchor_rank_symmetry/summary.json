@@ -1,0 +1,675 @@
+{
+  "protocol": {
+    "schema": "mouse.anchor.rank.v5",
+    "host": "oracle.sns.it",
+    "states": [
+      [
+        "Phthalimide",
+        "B024"
+      ],
+      [
+        "Furan",
+        "B022"
+      ],
+      [
+        "Cyclopentadiene",
+        "B016"
+      ]
+    ],
+    "scales": [
+      0.98,
+      1.02
+    ],
+    "displacement": "uniform internal Cartesian dilation about geometric center; same point group",
+    "xc": "PBE0",
+    "basis": "aug-cc-pVDZ",
+    "grid": 3,
+    "scf_tolerance": 1e-10,
+    "tda_tolerance": 1e-07,
+    "same_symmetry_roots": 2,
+    "tda_linear_dependence_threshold": 1e-20,
+    "minimum_overlap": 0.7,
+    "minimum_margin": 0.05,
+    "assignment": "maximum coherent transition overlap with original fixed DFT state; require first ordinal unchanged",
+    "native": "restricted GFN2 direct S0 minimization, freshly projected DFT transition",
+    "rank": "floor(inverse normalized NTO-weight purity + .5)",
+    "production_lambda": 0.9,
+    "production_weights": [
+      0.5,
+      0.5
+    ],
+    "threads": 2,
+    "solver_amendment": "exact occupied/virtual irrep block excludes forbidden null-space ghosts; two-vector Davidson, lindep=1e-20, positive-root Ritz checkpoint and neighboring-root transport; independent full-operator residual check; same Hamiltonian and 1e-7 tolerance",
+    "independent_accuracy_validation": false,
+    "source_sha256": "1c448683d101cd7db04e51f815847068c795db5e51af3dcd5eaf9ca6859bda29"
+  },
+  "rows": [
+    {
+      "request": {
+        "protocol_sha256": "7935c0343ce460918c449b24280c2f8479ba94b55acb2891a349a3d3b6f8ad59",
+        "model_fingerprint": "2d8e35091f65871435cfb88f1e96b918400ee7b6d8539151395b1147d81ead96",
+        "scale": 0.98,
+        "reference_sha256": "c74a5f706297602136924e12d5c369a77fab7b8f549a08728049506a06093106",
+        "spectrum_sha256": "36be9e16e1a8664aa3923c180ddf9dc247f74c4c01103344ea52e05d8876a65d"
+      },
+      "host": "oracle.sns.it",
+      "molecule": "Phthalimide",
+      "state": "B024",
+      "scale": 0.98,
+      "maximum_displacement_angstrom": 0.06882628744778876,
+      "point_group": "C2v",
+      "state_symmetry": "A1",
+      "root": 1,
+      "coherent_reference_overlaps": [
+        0.996214062349311,
+        0.003141483488490843
+      ],
+      "competitor_margin": 0.9930725788608201,
+      "reference_tda_ev": 5.001117650605287,
+      "dft_transition": {
+        "weights": [
+          0.7417907717314859,
+          0.2526776972201064,
+          0.0008989273273863877,
+          0.0008196397946935985,
+          0.0007428511818525975,
+          0.0006319386356876158,
+          0.0005749069639215432,
+          0.0005262206293512958,
+          0.00023322042349849608,
+          0.00016471510607845002,
+          0.0001528882454778984,
+          0.00014266422716367757,
+          0.00011418428889035913,
+          9.58321379818824e-05,
+          9.070172016393433e-05,
+          8.714317698015014e-05,
+          6.290866439561584e-05,
+          5.40123260750096e-05,
+          4.1165165757271044e-05,
+          2.236547735589559e-05,
+          2.1969787846311335e-05,
+          2.187442012685278e-05,
+          1.2477958770158332e-05,
+          7.391492317667641e-06,
+          4.602425327053865e-06,
+          3.6932503499559585e-06,
+          2.8308967462572165e-06,
+          1.1697437558975925e-07,
+          1.0690337090895625e-07,
+          7.429626896349587e-08,
+          4.666692504110499e-08,
+          3.511016731112643e-08,
+          1.7963772487971583e-08,
+          3.3148987420189526e-09,
+          3.2532820537511727e-09,
+          5.524409633082061e-10,
+          1.4640734688960346e-10,
+          1.4230244828608988e-10
+        ],
+        "effective_pairs": 1.6283919125026314,
+        "rank": 2
+      },
+      "compact_transition": {
+        "weights": [
+          0.7545444675660873,
+          0.24214964937262176,
+          0.0006877153286812763,
+          0.0006289936501847972,
+          0.0005762292429673399,
+          0.00048563776229452706,
+          0.0002877433389244595,
+          0.0001925598170093354,
+          0.00012690437262191138,
+          8.47979661141115e-05,
+          7.240967754293458e-05,
+          4.3188196135265703e-05,
+          3.920100685406284e-05,
+          2.602167246503916e-05,
+          1.7978728447238307e-05,
+          1.7177431344751457e-05,
+          1.0296707630287904e-05,
+          5.7104647277959495e-06,
+          2.470414838146452e-06,
+          7.984746774227031e-07,
+          4.880783033348221e-08,
+          6.686902094087736e-35
+        ],
+        "effective_pairs": 1.5924190763614179,
+        "rank": 2
+      },
+      "original_compact_transition": {
+        "weights": [
+          0.7536169736964589,
+          0.24299952756472049,
+          0.0007187363154920116,
+          0.0006684352141632747,
+          0.0005900545779532036,
+          0.0004667083966366858,
+          0.00028493126498325033,
+          0.00019494351495083918,
+          0.00013134836464163383,
+          9.114192638325055e-05,
+          7.18915399807873e-05,
+          4.4680399153215084e-05,
+          4.138819499280898e-05,
+          2.6977313532814955e-05,
+          1.92195221856888e-05,
+          1.50300278930371e-05,
+          9.029956728226335e-06,
+          5.768515435683164e-06,
+          2.5241491702484284e-06,
+          6.328644320495826e-07,
+          5.668011175260843e-08,
+          1.812719433115813e-36
+        ],
+        "effective_pairs": 1.594924318261687,
+        "rank": 2
+      },
+      "compact_projection_norm": 0.9318209846092893,
+      "source_sha256": {
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/0.98/reference.npz": "6c7b927dedcb8011990c5a2a0693d845abc055f4c2c8dcd3c913303c94f5db73",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/0.98/tda.npz": "68a1fcdb033e03851d53d4af5c5a438f4f8cc11c8f80acc7de9b8ea371d37879",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/0.98/native.npz": "466cf3fa206973116d95a2ea4beb9f3ae45c3d2dbe5e4cc7d5d8828aa3f1efd2"
+      },
+      "seconds_current_run": 209.40917584800627,
+      "scope": "Actual DFT and native-ground reoptimization plus compact projection; no OO-response recalibration or excitation-energy prediction"
+    },
+    {
+      "request": {
+        "protocol_sha256": "7935c0343ce460918c449b24280c2f8479ba94b55acb2891a349a3d3b6f8ad59",
+        "model_fingerprint": "2d8e35091f65871435cfb88f1e96b918400ee7b6d8539151395b1147d81ead96",
+        "scale": 1.02,
+        "reference_sha256": "c74a5f706297602136924e12d5c369a77fab7b8f549a08728049506a06093106",
+        "spectrum_sha256": "36be9e16e1a8664aa3923c180ddf9dc247f74c4c01103344ea52e05d8876a65d"
+      },
+      "host": "oracle.sns.it",
+      "molecule": "Phthalimide",
+      "state": "B024",
+      "scale": 1.02,
+      "maximum_displacement_angstrom": 0.06882628744778876,
+      "point_group": "C2v",
+      "state_symmetry": "A1",
+      "root": 1,
+      "coherent_reference_overlaps": [
+        0.9962421220308073,
+        0.004340255497785849
+      ],
+      "competitor_margin": 0.9919018665330215,
+      "reference_tda_ev": 4.565570566814124,
+      "dft_transition": {
+        "weights": [
+          0.7412190048069272,
+          0.25340609895603516,
+          0.0009022713933492178,
+          0.0008088827685394288,
+          0.0007132772929564606,
+          0.0006332976584933666,
+          0.0005586310067086648,
+          0.0004937238806051025,
+          0.0002036824050541545,
+          0.00017250792053862912,
+          0.0001432766537726078,
+          0.00013461016802988955,
+          0.00011605395635383785,
+          9.051316697911037e-05,
+          7.845130125711157e-05,
+          7.761574295255987e-05,
+          5.687878595824009e-05,
+          5.2656614394617144e-05,
+          4.401026079042405e-05,
+          2.2299484200269328e-05,
+          2.158444026836801e-05,
+          2.1365104391454112e-05,
+          1.167125561545701e-05,
+          6.798911931259474e-06,
+          4.713882183931434e-06,
+          3.51791985165108e-06,
+          2.2736262928681446e-06,
+          9.540097194193208e-08,
+          8.61749928006887e-08,
+          6.116336635187348e-08,
+          3.994740051989932e-08,
+          2.6681699491078942e-08,
+          1.5340469933771134e-08,
+          2.6187329520776604e-09,
+          2.549046275512482e-09,
+          5.002205686413239e-10,
+          1.3061951314015953e-10,
+          1.280486666100074e-10
+        ],
+        "effective_pairs": 1.6296641867507389,
+        "rank": 2
+      },
+      "compact_transition": {
+        "weights": [
+          0.7524035255588549,
+          0.24412370999817393,
+          0.0007551092272341524,
+          0.0007108154596450258,
+          0.0006016804915008571,
+          0.0004511614383473734,
+          0.00028133280216089155,
+          0.00019805512529639366,
+          0.0001362304027495972,
+          9.830615439523396e-05,
+          7.177986317644995e-05,
+          4.672685622072174e-05,
+          4.29755737843274e-05,
+          2.7961703324240704e-05,
+          2.0703852863939815e-05,
+          1.301027377881257e-05,
+          7.959563415028353e-06,
+          5.805700967508837e-06,
+          2.6017814745147467e-06,
+          4.827261499023248e-07,
+          6.544648610972874e-08,
+          3.219972666302306e-35
+        ],
+        "effective_pairs": 1.5981863797977585,
+        "rank": 2
+      },
+      "original_compact_transition": {
+        "weights": [
+          0.7536169736964589,
+          0.24299952756472049,
+          0.0007187363154920116,
+          0.0006684352141632747,
+          0.0005900545779532036,
+          0.0004667083966366858,
+          0.00028493126498325033,
+          0.00019494351495083918,
+          0.00013134836464163383,
+          9.114192638325055e-05,
+          7.18915399807873e-05,
+          4.4680399153215084e-05,
+          4.138819499280898e-05,
+          2.6977313532814955e-05,
+          1.92195221856888e-05,
+          1.50300278930371e-05,
+          9.029956728226335e-06,
+          5.768515435683164e-06,
+          2.5241491702484284e-06,
+          6.328644320495826e-07,
+          5.668011175260843e-08,
+          1.812719433115813e-36
+        ],
+        "effective_pairs": 1.594924318261687,
+        "rank": 2
+      },
+      "compact_projection_norm": 0.9316533880312583,
+      "source_sha256": {
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/1.02/reference.npz": "d5c9e3003d08871c9e05f4ce20321b14dca10b864d2721dd4675316ee5ebc2ea",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/1.02/tda.npz": "3cf7915e177021a7fa7860864cec7c56219082ea10397e3a026c9bb0b3d8f10f",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/1.02/native.npz": "9b83896819a539d93d34378ada8d7aa4963ac2f239c2568367a9f786bc39751f"
+      },
+      "seconds_current_run": 253.59530647000065,
+      "scope": "Actual DFT and native-ground reoptimization plus compact projection; no OO-response recalibration or excitation-energy prediction"
+    },
+    {
+      "request": {
+        "protocol_sha256": "7935c0343ce460918c449b24280c2f8479ba94b55acb2891a349a3d3b6f8ad59",
+        "model_fingerprint": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+        "scale": 0.98,
+        "reference_sha256": "10e5294488785fc7ca482b35b81a8b77637459c73e77e9de8c8e9c8af79a7a4c",
+        "spectrum_sha256": "bbf73496f3dbf6a43f4b0ab3982517f8ffa135194469bc257888800f8b9d7333"
+      },
+      "host": "oracle.sns.it",
+      "molecule": "Furan",
+      "state": "B022",
+      "scale": 0.98,
+      "maximum_displacement_angstrom": 0.04609272472231386,
+      "point_group": "C2v",
+      "state_symmetry": "A1",
+      "root": 1,
+      "coherent_reference_overlaps": [
+        0.9983785199474194,
+        0.0019470260895593488
+      ],
+      "competitor_margin": 0.9964314938578601,
+      "reference_tda_ev": 7.127784319476773,
+      "dft_transition": {
+        "weights": [
+          0.5114468448116041,
+          0.4820526460111028,
+          0.0023693016729894557,
+          0.0017959120579825517,
+          0.0008234315607790394,
+          0.0003374078702610583,
+          0.000326250160954647,
+          0.0002977803418073672,
+          0.00019488698646013183,
+          0.0001447817036822109,
+          0.00010596463744026538,
+          6.533802070208098e-05,
+          3.919178056857528e-05,
+          9.074179808012119e-08,
+          5.799517836256082e-08,
+          5.7907989239344126e-08,
+          4.840451688860864e-08,
+          7.334183244543739e-09
+        ],
+        "effective_pairs": 2.0244450506708267,
+        "rank": 2
+      },
+      "compact_transition": {
+        "weights": [
+          0.5219915737966795,
+          0.4734623977883664,
+          0.0023048374656907135,
+          0.0015259801615423376,
+          0.00030545009668473663,
+          0.00019521571845517385,
+          9.595070003581592e-05,
+          5.9273127728184596e-05,
+          3.474739313442854e-05,
+          2.457375168249434e-05,
+          5.351595307271045e-35
+        ],
+        "effective_pairs": 2.0134918772439105,
+        "rank": 2
+      },
+      "original_compact_transition": {
+        "weights": [
+          0.5324776620410617,
+          0.46244445602349527,
+          0.0025459444289020272,
+          0.0018726006250790615,
+          0.00026635396797281745,
+          0.00019933724567003415,
+          8.331747546413276e-05,
+          5.85315490800765e-05,
+          3.08549445007354e-05,
+          2.0941698774058075e-05,
+          2.939841223505689e-31
+        ],
+        "effective_pairs": 2.010464684268499,
+        "rank": 2
+      },
+      "compact_projection_norm": 0.8319908812434874,
+      "source_sha256": {
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/0.98/reference.npz": "490325f3fb905bcb65945e3fddd87fda6b1e1fbdc92ee0f99d0f656a872ddfc3",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/0.98/tda.npz": "7e9bc304c0ce438ca43d3a928eeb1c653423ea9677288400f3374b6b257971c5",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/0.98/native.npz": "0dc85235733978389b13b3231608c84edd1a36e4bd9ab2b290cbc24180cfba28"
+      },
+      "seconds_current_run": 26.276256242010277,
+      "scope": "Actual DFT and native-ground reoptimization plus compact projection; no OO-response recalibration or excitation-energy prediction"
+    },
+    {
+      "request": {
+        "protocol_sha256": "7935c0343ce460918c449b24280c2f8479ba94b55acb2891a349a3d3b6f8ad59",
+        "model_fingerprint": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+        "scale": 1.02,
+        "reference_sha256": "10e5294488785fc7ca482b35b81a8b77637459c73e77e9de8c8e9c8af79a7a4c",
+        "spectrum_sha256": "bbf73496f3dbf6a43f4b0ab3982517f8ffa135194469bc257888800f8b9d7333"
+      },
+      "host": "oracle.sns.it",
+      "molecule": "Furan",
+      "state": "B022",
+      "scale": 1.02,
+      "maximum_displacement_angstrom": 0.04609272472231402,
+      "point_group": "C2v",
+      "state_symmetry": "A1",
+      "root": 1,
+      "coherent_reference_overlaps": [
+        0.9986003146920339,
+        0.007266334877920702
+      ],
+      "competitor_margin": 0.9913339798141132,
+      "reference_tda_ev": 6.584640831783421,
+      "dft_transition": {
+        "weights": [
+          0.5107209463644212,
+          0.4822427577541207,
+          0.0027481765878457453,
+          0.0022934076883146326,
+          0.0006388530493911434,
+          0.0003044025503977573,
+          0.0002835719676896332,
+          0.00022220145199233006,
+          0.00021509292322866505,
+          0.0001303003968411016,
+          0.00011350185974941235,
+          5.311377162548678e-05,
+          3.344663223511933e-05,
+          7.8491128800395e-08,
+          5.0151438184217666e-08,
+          4.776381560734247e-08,
+          4.326185619329612e-08,
+          7.3339084100198566e-09
+        ],
+        "effective_pairs": 2.0267223943497736,
+        "rank": 2
+      },
+      "compact_transition": {
+        "weights": [
+          0.5411112073474449,
+          0.4532280576429966,
+          0.002783225298118654,
+          0.0022613953674661953,
+          0.00023358900158891826,
+          0.00020498070113786975,
+          7.227106829329391e-05,
+          6.069371769889082e-05,
+          2.664147508608487e-05,
+          1.7938380168702518e-05,
+          5.888095905896177e-36
+        ],
+        "effective_pairs": 2.007105241980298,
+        "rank": 2
+      },
+      "original_compact_transition": {
+        "weights": [
+          0.5324776620410617,
+          0.46244445602349527,
+          0.0025459444289020272,
+          0.0018726006250790615,
+          0.00026635396797281745,
+          0.00019933724567003415,
+          8.331747546413276e-05,
+          5.85315490800765e-05,
+          3.08549445007354e-05,
+          2.0941698774058075e-05,
+          2.939841223505689e-31
+        ],
+        "effective_pairs": 2.010464684268499,
+        "rank": 2
+      },
+      "compact_projection_norm": 0.8585107931817717,
+      "source_sha256": {
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/1.02/reference.npz": "142a1a1002ebf3b0d765d070525c456bfeafd17c170ad186d2bf95608c50b925",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/1.02/tda.npz": "ee0632e131381d92898fe6ec50757dcdad4d20a69b1290a4497af039f77bb56b",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/1.02/native.npz": "f083422c07ab98a4916da9b63726e4de10e0a335046e46b1eb2923022fc5ce9d"
+      },
+      "seconds_current_run": 25.1882955749752,
+      "scope": "Actual DFT and native-ground reoptimization plus compact projection; no OO-response recalibration or excitation-energy prediction"
+    },
+    {
+      "request": {
+        "protocol_sha256": "7935c0343ce460918c449b24280c2f8479ba94b55acb2891a349a3d3b6f8ad59",
+        "model_fingerprint": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+        "scale": 0.98,
+        "reference_sha256": "b9f2b5ad1ee084f878726d55741392cd8fa7d9c3c22ddf7a0450558d0bd0e6c0",
+        "spectrum_sha256": "c207dc73fc82f7edef730506361d05263206373bfa64771f4b01f4d8c3e300aa"
+      },
+      "host": "oracle.sns.it",
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "scale": 0.98,
+      "maximum_displacement_angstrom": 0.04769210033989299,
+      "point_group": "C2v",
+      "state_symmetry": "A1",
+      "root": 1,
+      "coherent_reference_overlaps": [
+        0.9982288166176396,
+        0.025779993399296885
+      ],
+      "competitor_margin": 0.9724488232183427,
+      "reference_tda_ev": 6.885439502163821,
+      "dft_transition": {
+        "weights": [
+          0.5495963530037424,
+          0.44828790619760495,
+          0.0006407980023276305,
+          0.0003920871836572182,
+          0.000321666921702636,
+          0.00017894690931511778,
+          0.0001477765796883201,
+          0.00013204438506412796,
+          0.00012802947698007636,
+          9.424887181756964e-05,
+          3.399778165344771e-05,
+          3.15869510278559e-05,
+          1.4299913495125702e-05,
+          8.761354178006055e-08,
+          5.9593271081810684e-08,
+          4.0008631882116896e-08,
+          3.9737170511669166e-08,
+          3.086930816721133e-08
+        ],
+        "effective_pairs": 1.9879966162658234,
+        "rank": 2
+      },
+      "compact_transition": {
+        "weights": [
+          0.5372436101643923,
+          0.46173096874099984,
+          0.0002836872591858939,
+          0.00027998639019793193,
+          0.0001764751145233741,
+          0.00013421355160838427,
+          8.875163234221085e-05,
+          3.3641540212556524e-05,
+          1.6602555185197228e-05,
+          9.838467994990122e-06,
+          1.2879448556474751e-06,
+          9.36638501680868e-07,
+          9.682553051740985e-37
+        ],
+        "effective_pairs": 1.9927209825452408,
+        "rank": 2
+      },
+      "original_compact_transition": {
+        "weights": [
+          0.5440295112596555,
+          0.4549532817699124,
+          0.000311308951150957,
+          0.00024642554526491995,
+          0.00017747182744217512,
+          0.00013920667904692924,
+          8.819729913389761e-05,
+          2.388979790649406e-05,
+          2.1157143512636417e-05,
+          6.539867007483045e-06,
+          1.7097837318757288e-06,
+          1.3000762348703952e-06,
+          5.786048879744186e-32
+        ],
+        "effective_pairs": 1.988265989499343,
+        "rank": 2
+      },
+      "compact_projection_norm": 0.8256308483757206,
+      "source_sha256": {
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/0.98/reference.npz": "a713d10b911ebfb8762693fc14f13950592766eb6a8aaaedf2e51b676afd5d3e",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/0.98/tda.npz": "660bbfe75510eb9c7fd0970fbbe1d20d806dde833f26de535581cd2807911ccc",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/0.98/native.npz": "4dfd356801a6cad2ea07a03ab9236495176e77acd0244f76bb4ed1683dd0d1ba"
+      },
+      "seconds_current_run": 37.103873103973456,
+      "scope": "Actual DFT and native-ground reoptimization plus compact projection; no OO-response recalibration or excitation-energy prediction"
+    },
+    {
+      "request": {
+        "protocol_sha256": "7935c0343ce460918c449b24280c2f8479ba94b55acb2891a349a3d3b6f8ad59",
+        "model_fingerprint": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+        "scale": 1.02,
+        "reference_sha256": "b9f2b5ad1ee084f878726d55741392cd8fa7d9c3c22ddf7a0450558d0bd0e6c0",
+        "spectrum_sha256": "c207dc73fc82f7edef730506361d05263206373bfa64771f4b01f4d8c3e300aa"
+      },
+      "host": "oracle.sns.it",
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "scale": 1.02,
+      "maximum_displacement_angstrom": 0.04769210033989299,
+      "point_group": "C2v",
+      "state_symmetry": "A1",
+      "root": 1,
+      "coherent_reference_overlaps": [
+        0.9985185154818278,
+        0.021697074151596482
+      ],
+      "competitor_margin": 0.9768214413302313,
+      "reference_tda_ev": 6.394862822111057,
+      "dft_transition": {
+        "weights": [
+          0.512371356609111,
+          0.48567570355576173,
+          0.0005106432272992195,
+          0.0003728282251287029,
+          0.00036760136608400703,
+          0.0001862020463523064,
+          0.0001431457953660957,
+          0.00012556496168290393,
+          9.268848924478611e-05,
+          7.978365692164508e-05,
+          3.328979119864365e-05,
+          2.9637034805560558e-05,
+          1.1341484386284555e-05,
+          7.35174181482101e-08,
+          5.3917878939790196e-08,
+          3.452031304020874e-08,
+          2.8022005907766195e-08,
+          2.377904098335165e-08
+        ],
+        "effective_pairs": 2.0063967178277875,
+        "rank": 2
+      },
+      "compact_transition": {
+        "weights": [
+          0.5485308499672956,
+          0.4504472241756658,
+          0.0003308375293995648,
+          0.00022403638144671362,
+          0.00017915784860242842,
+          0.00015019943277109243,
+          8.592297474291553e-05,
+          2.5547431586172746e-05,
+          1.8304174785496138e-05,
+          4.203608327596014e-06,
+          2.3540549445893097e-06,
+          1.362420431979728e-06,
+          2.343816761016144e-36
+        ],
+        "effective_pairs": 1.9849579181045824,
+        "rank": 2
+      },
+      "original_compact_transition": {
+        "weights": [
+          0.5440295112596555,
+          0.4549532817699124,
+          0.000311308951150957,
+          0.00024642554526491995,
+          0.00017747182744217512,
+          0.00013920667904692924,
+          8.819729913389761e-05,
+          2.388979790649406e-05,
+          2.1157143512636417e-05,
+          6.539867007483045e-06,
+          1.7097837318757288e-06,
+          1.3000762348703952e-06,
+          5.786048879744186e-32
+        ],
+        "effective_pairs": 1.988265989499343,
+        "rank": 2
+      },
+      "compact_projection_norm": 0.85105416857036,
+      "source_sha256": {
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/1.02/reference.npz": "9ea089fca5f6bdce47f07d8d576f2605c543e0a7e835a8bfa4da44d889852465",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/1.02/tda.npz": "a84dd2f234b532371df901c600831a5a24d1d702a08ea47fa639bcff2db0a9bf",
+        "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/1.02/native.npz": "48df8be6b8d34b50abe8d11d3478818e1d1138f23dde011a068beb1d9d7fb51d"
+      },
+      "seconds_current_run": 35.62291087699123,
+      "scope": "Actual DFT and native-ground reoptimization plus compact projection; no OO-response recalibration or excitation-energy prediction"
+    }
+  ],
+  "complete": true
+}

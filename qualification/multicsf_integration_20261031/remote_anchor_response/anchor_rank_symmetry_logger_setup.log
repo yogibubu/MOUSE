@@ -1,0 +1,21 @@
+
+WARN: Mole.unit (Angstrom) is changed to Bohr
+
+output file: /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/0.98/pyscf.log
+Traceback (most recent call last):
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry.py", line 240, in <module>
+    with threadpool_limits(limits=2): main()
+                                      ^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry.py", line 231, in main
+    try: rows.append(run(name,sid,scale))
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry.py", line 154, in run
+    td.converged,td.e,compressed_roots=_lr_eig.eigh(saved_vind,initial,td.get_precond(hdiag[allowed]),
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/pyscf/tdscf/_lr_eig.py", line 74, in eigh
+    log = logger.new_logger(verbose)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/pyscf/lib/logger.py", line 245, in new_logger
+    log = Logger(rec.stdout, rec.verbose)
+                 ^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'stdout'

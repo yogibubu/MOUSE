@@ -1,0 +1,8 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "uracil",
+  "method": "delta",
+  "returncode": 1,
+  "status": "bounded_solver_recoveries_incomplete",
+  "protocol_sha256": "8a2723a1303981759ffda1ec382469eb31dd2ed5c5e91cb7160b908118efcc3c"
+}

@@ -1,0 +1,43 @@
+{
+  "host": "oracle.sns.it",
+  "source_sha256": "9d8ecd2034c071e4b69b323edc58be02d492cb7c9c7883f62e67d5025404591b",
+  "rows": [
+    {
+      "molecule": "Furan",
+      "source": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/link_validation/accepted_run/multicsf_accepted/10b922a70d7642ba97da314935f019a1/point.npz",
+      "source_sha256": "54b25f0f4cc715e2259f457f3332dc3604f1afa57c883da817cdc3c1c8b134a2",
+      "hessian_symmetry_error": 0.0,
+      "translation_residuals": [
+        1.9637069748057456e-15,
+        1.6410484082740595e-15,
+        1.2823943296158546e-15
+      ],
+      "gradient_net_force": 7.19910242530375e-17,
+      "rotation_covariance_residuals": [
+        1.89964016739097e-12,
+        2.4762830674873726e-12,
+        4.570392675429247e-12
+      ],
+      "gradient_net_torque": 1.2576745200831851e-15
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "source": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/cpd_hessian/anchor/point.npz",
+      "source_sha256": "9244c2ae4b61c699ecb2eb7e4afa0fc3d4edfdf58e1b62e169b637d228c892a8",
+      "hessian_symmetry_error": 0.0,
+      "translation_residuals": [
+        1.1587952819525071e-15,
+        1.6792123247455493e-15,
+        1.846396299742814e-15
+      ],
+      "gradient_net_force": 7.276107949359614e-17,
+      "rotation_covariance_residuals": [
+        1.2672467242236252e-12,
+        3.7452502904544716e-11,
+        1.3502237522500238e-11
+      ],
+      "gradient_net_torque": 2.717728490460234e-15
+    }
+  ],
+  "scope": "Read-only Euclidean covariance identities on stored nonstationary-geometry analytic derivatives; H(rotation*R)=rotation*gradient, not zero rotational modes at a nonminimum"
+}

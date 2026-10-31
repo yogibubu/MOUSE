@@ -1,0 +1,10 @@
+{
+  "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_targeted/Phthalimide/0.98/reference.npz": {
+    "source": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_seeded/Phthalimide/0.98/reference.npz",
+    "sha256": "6c7b927dedcb8011990c5a2a0693d845abc055f4c2c8dcd3c913303c94f5db73"
+  },
+  "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_targeted/Phthalimide/0.98/backend.chk": {
+    "source": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_seeded/Phthalimide/0.98/backend.chk",
+    "sha256": "2ffc0129ecdf41d7c3473e986e959a5cbef9f497b1294248311d75db0d041ebe"
+  }
+}

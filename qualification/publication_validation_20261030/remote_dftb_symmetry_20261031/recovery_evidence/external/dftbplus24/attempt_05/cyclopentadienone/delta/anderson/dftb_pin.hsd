@@ -1,0 +1,114 @@
+Geometry = xyzFormat {
+10
+cyclopentadienone; frozen vertical anchor; Angstrom
+C   0.0000000000  0.0000000000  0.7685384696
+C   0.0000000000  1.1997422794 -0.1344805199
+C   0.0000000000 -1.1997422794 -0.1344805199
+C   0.0000000000  0.7490904496 -1.3962477393
+C   0.0000000000 -0.7490904496 -1.3962477393
+O   0.0000000000  0.0000000000  1.9814442591
+H   0.0000000000  2.2141660590  0.2230539099
+H   0.0000000000 -2.2141660590  0.2230539099
+H   0.0000000000  1.3428443894 -2.2958418189
+H   0.0000000000 -1.3428443894 -2.2958418189
+}
+Hamiltonian = DFTB {
+  SCC = Yes
+  ReadInitialCharges = Yes
+  SCCTolerance = 1e-10
+  MaxSCCIterations = 2000
+  Mixer = Anderson {
+    MixingParameter = 0.01
+    InitMixingParameter = 0.01
+    Generations = 4
+    DynMixingParameters = {}
+    DiagonalRescaling = 1.0000000000000000E-002
+  }
+  MaxAngularMomentum = {
+    H = "s"
+    C = "p"
+    O = "p"
+  }
+  SlaterKosterFiles = Type2FileNames {
+    Prefix = "/local/scratch/home/enzo/MOUSE-publication-validation-20261030/software/mio-1-1/skfiles/"
+    Separator = "-"
+    Suffix = ".skf"
+    LowerCaseTypeName = No
+  }
+  NonAufbau = {
+    GroundGuess = Yes
+    SpinPurify = Yes
+  }
+  SpinConstants = {
+    ShellResolvedSpin = Yes
+    H = {
+-0.0717
+    }
+    C = {
+-0.0306 -0.0251 -0.0251 -0.0227
+    }
+    O = {
+-0.0352 -0.0296 -0.0296 -0.0278
+    }
+  }
+  PolynomialRepulsive = {}
+  ShellResolvedSCC = No
+  OldSKInterpolation = No
+  ConvergentSCCOnly = Yes
+  HCorrection = None {}
+  ElectricField = {}
+  Solver = RelativelyRobust {}
+  Charge = 0.0000000000000000
+  OnSiteCorrection = {}
+  Dispersion = {}
+  Solvation = {}
+  Electrostatics = GammaFunctional {}
+  ThirdOrder = No
+  ThirdOrderFull = No
+  Differentiation = FiniteDiff {
+    Delta = 1.2207031250000000E-004
+  }
+  ForceEvaluation = "Traditional"
+  Filling = Fermi {
+    Temperature = 0.0000000000000000
+  }
+}
+Options = {
+  WriteResultsTag = Yes
+  WriteDetailedOut = Yes
+  WriteAutotestTag = No
+  WriteDetailedXML = No
+  RestartFrequency = 20
+  RandomSeed = 0
+  WriteHS = No
+  WriteRealHS = No
+  MinimiseMemoryUsage = No
+  ShowFoldedCoords = No
+  TimingVerbosity = 1
+  ReadChargesAsText = No
+  WriteCharges = Yes
+  WriteChargesAsText = No
+  SkipChargeTest = No
+  BinaryAccessTypes = {
+ "stream"
+  }
+}
+Analysis = {
+  WriteEigenvectors = Yes
+  EigenvectorsAsText = Yes
+  ProjectStates = {}
+  WriteBandOut = Yes
+  MullikenAnalysis = Yes
+  WriteNetCharges = No
+  AtomResolvedEnergies = No
+  PrintForces = No
+}
+ParserOptions = {
+  ParserVersion = 14
+  WriteHSDInput = Yes
+  StopAfterParsing = No
+  IgnoreUnprocessedNodes = No
+}
+Reks = None {}
+Driver = {}
+ExcitedState = {}

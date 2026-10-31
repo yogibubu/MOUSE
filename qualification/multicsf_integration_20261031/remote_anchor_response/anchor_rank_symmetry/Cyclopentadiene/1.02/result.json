@@ -1,0 +1,93 @@
+{
+  "request": {
+    "protocol_sha256": "7935c0343ce460918c449b24280c2f8479ba94b55acb2891a349a3d3b6f8ad59",
+    "model_fingerprint": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+    "scale": 1.02,
+    "reference_sha256": "b9f2b5ad1ee084f878726d55741392cd8fa7d9c3c22ddf7a0450558d0bd0e6c0",
+    "spectrum_sha256": "c207dc73fc82f7edef730506361d05263206373bfa64771f4b01f4d8c3e300aa"
+  },
+  "host": "oracle.sns.it",
+  "molecule": "Cyclopentadiene",
+  "state": "B016",
+  "scale": 1.02,
+  "maximum_displacement_angstrom": 0.04769210033989299,
+  "point_group": "C2v",
+  "state_symmetry": "A1",
+  "root": 1,
+  "coherent_reference_overlaps": [
+    0.9985185154818278,
+    0.021697074151596482
+  ],
+  "competitor_margin": 0.9768214413302313,
+  "reference_tda_ev": 6.394862822111057,
+  "dft_transition": {
+    "weights": [
+      0.512371356609111,
+      0.48567570355576173,
+      0.0005106432272992195,
+      0.0003728282251287029,
+      0.00036760136608400703,
+      0.0001862020463523064,
+      0.0001431457953660957,
+      0.00012556496168290393,
+      9.268848924478611e-05,
+      7.978365692164508e-05,
+      3.328979119864365e-05,
+      2.9637034805560558e-05,
+      1.1341484386284555e-05,
+      7.35174181482101e-08,
+      5.3917878939790196e-08,
+      3.452031304020874e-08,
+      2.8022005907766195e-08,
+      2.377904098335165e-08
+    ],
+    "effective_pairs": 2.0063967178277875,
+    "rank": 2
+  },
+  "compact_transition": {
+    "weights": [
+      0.5485308499672956,
+      0.4504472241756658,
+      0.0003308375293995648,
+      0.00022403638144671362,
+      0.00017915784860242842,
+      0.00015019943277109243,
+      8.592297474291553e-05,
+      2.5547431586172746e-05,
+      1.8304174785496138e-05,
+      4.203608327596014e-06,
+      2.3540549445893097e-06,
+      1.362420431979728e-06,
+      2.343816761016144e-36
+    ],
+    "effective_pairs": 1.9849579181045824,
+    "rank": 2
+  },
+  "original_compact_transition": {
+    "weights": [
+      0.5440295112596555,
+      0.4549532817699124,
+      0.000311308951150957,
+      0.00024642554526491995,
+      0.00017747182744217512,
+      0.00013920667904692924,
+      8.819729913389761e-05,
+      2.388979790649406e-05,
+      2.1157143512636417e-05,
+      6.539867007483045e-06,
+      1.7097837318757288e-06,
+      1.3000762348703952e-06,
+      5.786048879744186e-32
+    ],
+    "effective_pairs": 1.988265989499343,
+    "rank": 2
+  },
+  "compact_projection_norm": 0.85105416857036,
+  "source_sha256": {
+    "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/1.02/reference.npz": "9ea089fca5f6bdce47f07d8d576f2605c543e0a7e835a8bfa4da44d889852465",
+    "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/1.02/tda.npz": "a84dd2f234b532371df901c600831a5a24d1d702a08ea47fa639bcff2db0a9bf",
+    "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/1.02/native.npz": "48df8be6b8d34b50abe8d11d3478818e1d1138f23dde011a068beb1d9d7fb51d"
+  },
+  "seconds_current_run": 35.62291087699123,
+  "scope": "Actual DFT and native-ground reoptimization plus compact projection; no OO-response recalibration or excitation-energy prediction"
+}

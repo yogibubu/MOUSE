@@ -36,7 +36,7 @@ with threadpool_limits(limits=2):
         small,t=source_molecule(model.anchor)
         cross=t.T@gto.intor_cross('int1e_ovlp',small,oldmol)@cd
         ov=model.anchor.coefficients.T@cross
-        projected=ov[:nc,:no]@x@ov[nc:,no:].T;projected/=np.linalg.norm(projected)
+        projected=ov[:nc,:no]@x@ov[nc:,no:].T;baseline_norm=float(np.linalg.norm(projected));projected/=baseline_norm
         transition=next(Path(p) for p in model.manifest['provenance']['input_sha256'] if p.endswith('/transition.npz'))
         with np.load(transition) as a:original=a['amplitude'].copy()
         error=float(min(np.max(abs(projected-original)),np.max(abs(projected+original))))
@@ -63,7 +63,7 @@ with threadpool_limits(limits=2):
                              projection_norm=float(np.linalg.norm(px)),
                              relaxed_native_compact=row['compact_transition']))
         audits.append(dict(molecule=name,state=sid,original_projection_max_error=error,
-                           original_compact=participation(original),
+                           original_compact=participation(original),original_projection_norm=baseline_norm,
                            original_relaxed_native_compact=participation(rx),rows=rows))
     out=dict(host=socket.getfqdn(),rows=audits,source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
              scope='Reproduced original compact projection; co-rotating Lowdin transport of fixed anchor orbitals separates DFT-transition changes from native occupied-subspace relaxation; no full response-model recalibration')

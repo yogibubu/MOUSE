@@ -1,0 +1,44 @@
+{
+  "schema": "mouse.anchor.rank.v5",
+  "host": "oracle.sns.it",
+  "states": [
+    [
+      "Phthalimide",
+      "B024"
+    ],
+    [
+      "Furan",
+      "B022"
+    ],
+    [
+      "Cyclopentadiene",
+      "B016"
+    ]
+  ],
+  "scales": [
+    0.98,
+    1.02
+  ],
+  "displacement": "uniform internal Cartesian dilation about geometric center; same point group",
+  "xc": "PBE0",
+  "basis": "aug-cc-pVDZ",
+  "grid": 3,
+  "scf_tolerance": 1e-10,
+  "tda_tolerance": 1e-07,
+  "same_symmetry_roots": 2,
+  "tda_linear_dependence_threshold": 1e-20,
+  "minimum_overlap": 0.7,
+  "minimum_margin": 0.05,
+  "assignment": "maximum coherent transition overlap with original fixed DFT state; require first ordinal unchanged",
+  "native": "restricted GFN2 direct S0 minimization, freshly projected DFT transition",
+  "rank": "floor(inverse normalized NTO-weight purity + .5)",
+  "production_lambda": 0.9,
+  "production_weights": [
+    0.5,
+    0.5
+  ],
+  "threads": 2,
+  "solver_amendment": "exact occupied/virtual irrep block excludes forbidden null-space ghosts; two-vector Davidson, lindep=1e-20, positive-root Ritz checkpoint and neighboring-root transport; independent full-operator residual check; same Hamiltonian and 1e-7 tolerance",
+  "independent_accuracy_validation": false,
+  "source_sha256": "9eccfcc0a37bb6814733a7cfc87388a72f402730a14e842c40a6a04762dce182"
+}

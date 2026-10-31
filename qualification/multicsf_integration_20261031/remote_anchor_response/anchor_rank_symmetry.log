@@ -1,0 +1,141 @@
+
+WARN: Mole.unit (Angstrom) is changed to Bohr
+
+overwrite output file: /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/0.98/pyscf.log
+Set max_space 3106, space_inc 2
+davidson 0 2 |r|= 0.341  e= [0.18960678 0.34494145]  max|de|= 0.345  lindep= 0.0744
+davidson 1 4 |r|= 0.0533  e= [0.18396114 0.24889863]  max|de|= -0.096  lindep= 0.0297
+davidson 2 6 |r|= 0.0213  e= [0.18380776 0.24514488]  max|de|= -0.00375  lindep= 0.00798
+davidson 3 8 |r|= 0.013  e= [0.18379011 0.24426807]  max|de|= -0.000877  lindep= 0.00308
+davidson 4 10 |r|= 0.00507  e= [0.18378788 0.24396659]  max|de|= -0.000301  lindep= 0.000659
+davidson 5 12 |r|= 0.00588  e= [0.18378769 0.24387785]  max|de|= -8.87e-05  lindep= 9.33e-05
+davidson 6 14 |r|= 0.0118  e= [0.18378768 0.24363591]  max|de|= -0.000242  lindep= 1.18e-05
+davidson 7 16 |r|= 0.014  e= [0.18378768 0.2430374 ]  max|de|= -0.000599  lindep= 3.43e-06
+davidson 8 18 |r|= 0.00819  e= [0.18378768 0.24259294]  max|de|= -0.000444  lindep= 6.37e-07
+root 0 converged  |r|= 7.12e-08  e= 0.18378768378045152  max|de|= -2.4e-13
+davidson 9 20 |r|= 0.0034  e= [0.18378768 0.24248342]  max|de|= -0.00011  lindep= 0.00427
+davidson 10 22 |r|= 0.00112  e= [0.18378768 0.24246902]  max|de|= -1.44e-05  lindep= 0.00169
+davidson 11 24 |r|= 0.000416  e= [0.18378768 0.24246693]  max|de|= -2.09e-06  lindep= 0.000547
+davidson 12 26 |r|= 0.000118  e= [0.18378768 0.2424667 ]  max|de|= -2.33e-07  lindep= 0.000172
+davidson 13 28 |r|= 4.19e-05  e= [0.18378768 0.24246668]  max|de|= -1.88e-08  lindep= 5.37e-05
+davidson 14 30 |r|= 1.4e-05  e= [0.18378768 0.24246668]  max|de|= -2.22e-09  lindep= 1.55e-05
+davidson 15 32 |r|= 3.6e-06  e= [0.18378768 0.24246668]  max|de|= -2.06e-10  lindep= 4.19e-06
+davidson 16 34 |r|= 9.06e-07  e= [0.18378768 0.24246668]  max|de|= -1.37e-11  lindep= 1.03e-06
+davidson 17 36 |r|= 2.11e-07  e= [0.18378768 0.24246668]  max|de|= -8.22e-13  lindep= 2.36e-07
+root 1 converged  |r|= 4.68e-08  e= 0.24246667767290628  max|de|= -4.54e-14
+converged 18 38  |r|= 5.02e-08  e= [0.18378768 0.24246668]  max|de|= -4.54e-14
+Phthalimide 0.98 1.5924190763614179
+
+WARN: Mole.unit (Angstrom) is changed to Bohr
+
+output file: /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/1.02/pyscf.log
+Set max_space 3120, space_inc 2
+davidson 0 2 |r|= 0.246  e= [0.19236455 0.24194465]  max|de|= 0.242  lindep= 0.593
+davidson 1 4 |r|= 0.097  e= [0.17502385 0.22916102]  max|de|= -0.0173  lindep= 0.12
+davidson 2 6 |r|= 0.0177  e= [0.16813786 0.22683833]  max|de|= -0.00689  lindep= 0.0242
+davidson 3 8 |r|= 0.0124  e= [0.16781162 0.22659864]  max|de|= -0.000326  lindep= 0.0102
+davidson 4 10 |r|= 0.0176  e= [0.1677838  0.22611244]  max|de|= -0.000486  lindep= 0.00226
+davidson 5 12 |r|= 0.00924  e= [0.16778169 0.22559977]  max|de|= -0.000513  lindep= 0.000336
+davidson 6 14 |r|= 0.00421  e= [0.16778163 0.22543791]  max|de|= -0.000162  lindep= 7.79e-05
+davidson 7 16 |r|= 0.00121  e= [0.16778162 0.22542018]  max|de|= -1.77e-05  lindep= 1.9e-05
+davidson 8 18 |r|= 0.000518  e= [0.16778162 0.22541796]  max|de|= -2.22e-06  lindep= 2.85e-06
+davidson 9 20 |r|= 0.000177  e= [0.16778162 0.22541752]  max|de|= -4.42e-07  lindep= 4.65e-07
+root 0 converged  |r|= 5.91e-08  e= 0.16778162367554073  max|de|= -1.43e-13
+davidson 10 22 |r|= 4.79e-05  e= [0.16778162 0.22541748]  max|de|= -3.76e-08  lindep= 5.13e-05
+davidson 11 24 |r|= 9.97e-06  e= [0.16778162 0.22541748]  max|de|= -2.09e-09  lindep= 1.49e-05
+davidson 12 26 |r|= 3.68e-06  e= [0.16778162 0.22541748]  max|de|= -1.54e-10  lindep= 4.46e-06
+davidson 13 28 |r|= 9.62e-07  e= [0.16778162 0.22541748]  max|de|= -1.7e-11  lindep= 1.06e-06
+davidson 14 30 |r|= 2.09e-07  e= [0.16778162 0.22541748]  max|de|= -8.86e-13  lindep= 2.5e-07
+root 1 converged  |r|= 5.32e-08  e= 0.2254174826187873  max|de|= -4.64e-14
+converged 15 32  |r|= 5.32e-08  e= [0.16778162 0.22541748]  max|de|= -4.64e-14
+Phthalimide 1.02 1.5981863797977585
+
+WARN: Mole.unit (Angstrom) is changed to Bohr
+
+output file: /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/0.98/pyscf.log
+Set max_space 763, space_inc 2
+davidson 0 2 |r|= 0.308  e= [0.26314449 0.41386501]  max|de|= 0.414  lindep= 0.0361
+davidson 1 4 |r|= 0.0632  e= [0.26196743 0.32226212]  max|de|= -0.0916  lindep= 0.00995
+davidson 2 6 |r|= 0.0263  e= [0.26194448 0.31710771]  max|de|= -0.00515  lindep= 0.00257
+davidson 3 8 |r|= 0.0161  e= [0.26194143 0.31572836]  max|de|= -0.00138  lindep= 0.000678
+davidson 4 10 |r|= 0.042  e= [0.26194125 0.31295498]  max|de|= -0.00277  lindep= 0.00017
+davidson 5 12 |r|= 0.037  e= [0.26194124 0.3069818 ]  max|de|= -0.00597  lindep= 5.13e-05
+davidson 6 14 |r|= 0.0136  e= [0.26194124 0.30497733]  max|de|= -0.002  lindep= 6.77e-06
+davidson 7 16 |r|= 0.00309  e= [0.26194124 0.30478214]  max|de|= -0.000195  lindep= 6.8e-07
+root 0 converged  |r|= 6.83e-08  e= 0.2619412423550358  max|de|= -2.93e-13
+davidson 8 18 |r|= 0.000873  e= [0.26194124 0.30477275]  max|de|= -9.4e-06  lindep= 0.00106
+davidson 9 20 |r|= 0.00027  e= [0.26194124 0.30477189]  max|de|= -8.59e-07  lindep= 0.000265
+davidson 10 22 |r|= 5.85e-05  e= [0.26194124 0.30477183]  max|de|= -5.59e-08  lindep= 5.87e-05
+davidson 11 24 |r|= 1.29e-05  e= [0.26194124 0.30477183]  max|de|= -2.74e-09  lindep= 1.22e-05
+davidson 12 26 |r|= 2.29e-06  e= [0.26194124 0.30477183]  max|de|= -1.15e-10  lindep= 1.79e-06
+davidson 13 28 |r|= 2.66e-07  e= [0.26194124 0.30477183]  max|de|= -2.85e-12  lindep= 3.39e-07
+root 1 converged  |r|= 5.97e-08  e= 0.3047718274499889  max|de|= -7.48e-14
+converged 14 30  |r|= 6.81e-08  e= [0.26194124 0.30477183]  max|de|= -7.48e-14
+Furan 0.98 2.0134918772439105
+
+WARN: Mole.unit (Angstrom) is changed to Bohr
+
+output file: /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/1.02/pyscf.log
+Set max_space 763, space_inc 2
+davidson 0 2 |r|= 0.136  e= [0.246651   0.30254717]  max|de|= 0.303  lindep= 0.0472
+davidson 1 4 |r|= 0.0108  e= [0.24208521 0.30166722]  max|de|= -0.00457  lindep= 0.0236
+davidson 2 6 |r|= 0.00906  e= [0.24201204 0.30155488]  max|de|= -0.000112  lindep= 0.00954
+davidson 3 8 |r|= 0.0133  e= [0.24198267 0.30126254]  max|de|= -0.000292  lindep= 0.00223
+davidson 4 10 |r|= 0.0133  e= [0.24198118 0.30086142]  max|de|= -0.000401  lindep= 0.00039
+davidson 5 12 |r|= 0.00574  e= [0.24198109 0.30068011]  max|de|= -0.000181  lindep= 7.08e-05
+davidson 6 14 |r|= 0.00177  e= [0.24198109 0.30065167]  max|de|= -2.84e-05  lindep= 9.54e-06
+davidson 7 16 |r|= 0.0004  e= [0.24198109 0.30064875]  max|de|= -2.91e-06  lindep= 1.28e-06
+davidson 8 18 |r|= 9.43e-05  e= [0.24198109 0.30064855]  max|de|= -2.08e-07  lindep= 1.85e-07
+root 0 converged  |r|= 2.36e-08  e= 0.2419810873381819  max|de|= -2.38e-14
+davidson 9 20 |r|= 2.97e-05  e= [0.24198109 0.30064853]  max|de|= -1.43e-08  lindep= 2.75e-05
+davidson 10 22 |r|= 5.86e-06  e= [0.24198109 0.30064853]  max|de|= -6.84e-10  lindep= 5.94e-06
+davidson 11 24 |r|= 1.31e-06  e= [0.24198109 0.30064853]  max|de|= -2.85e-11  lindep= 1.38e-06
+davidson 12 26 |r|= 3.49e-07  e= [0.24198109 0.30064853]  max|de|= -1.53e-12  lindep= 3.37e-07
+root 1 converged  |r|= 8.92e-08  e= 0.3006485313002666  max|de|= -9.47e-14
+converged 13 28  |r|= 8.92e-08  e= [0.24198109 0.30064853]  max|de|= -9.47e-14
+Furan 1.02 2.007105241980298
+
+WARN: Mole.unit (Angstrom) is changed to Bohr
+
+output file: /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/0.98/pyscf.log
+Set max_space 854, space_inc 2
+davidson 0 2 |r|= 0.245  e= [0.25384339 0.39150372]  max|de|= 0.392  lindep= 0.0328
+davidson 1 4 |r|= 0.0514  e= [0.25304446 0.31464945]  max|de|= -0.0769  lindep= 0.0047
+davidson 2 6 |r|= 0.0301  e= [0.25303619 0.30735364]  max|de|= -0.0073  lindep= 0.00207
+davidson 3 8 |r|= 0.0376  e= [0.2530354  0.30251616]  max|de|= -0.00484  lindep= 0.000654
+davidson 4 10 |r|= 0.0327  e= [0.25303525 0.29446699]  max|de|= -0.00805  lindep= 0.000169
+davidson 5 12 |r|= 0.0092  e= [0.25303523 0.29266484]  max|de|= -0.0018  lindep= 2.58e-05
+davidson 6 14 |r|= 0.0042  e= [0.25303523 0.29249877]  max|de|= -0.000166  lindep= 5.27e-06
+davidson 7 16 |r|= 0.00163  e= [0.25303523 0.29247323]  max|de|= -2.55e-05  lindep= 9.88e-07
+root 0 converged  |r|= 9.56e-08  e= 0.2530352345860096  max|de|= -5.02e-13
+davidson 8 18 |r|= 0.000378  e= [0.25303523 0.2924699 ]  max|de|= -3.33e-06  lindep= 0.000696
+davidson 9 20 |r|= 0.000126  e= [0.25303523 0.29246965]  max|de|= -2.49e-07  lindep= 0.000196
+davidson 10 22 |r|= 3.26e-05  e= [0.25303523 0.29246963]  max|de|= -2.37e-08  lindep= 5.15e-05
+davidson 11 24 |r|= 9.12e-06  e= [0.25303523 0.29246962]  max|de|= -1.59e-09  lindep= 1.29e-05
+davidson 12 26 |r|= 2.58e-06  e= [0.25303523 0.29246962]  max|de|= -1.09e-10  lindep= 2.65e-06
+davidson 13 28 |r|= 4.36e-07  e= [0.25303523 0.29246962]  max|de|= -5.38e-12  lindep= 5.39e-07
+root 1 converged  |r|= 8.79e-08  e= 0.29246962336272836  max|de|= -1.79e-13
+converged 14 30  |r|= 8.79e-08  e= [0.25303523 0.29246962]  max|de|= -1.79e-13
+Cyclopentadiene 0.98 1.9927209825452408
+
+WARN: Mole.unit (Angstrom) is changed to Bohr
+
+output file: /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/1.02/pyscf.log
+Set max_space 854, space_inc 2
+davidson 0 2 |r|= 0.0679  e= [0.23804973 0.29004144]  max|de|= 0.29  lindep= 0.0482
+davidson 1 4 |r|= 0.0108  e= [0.23509631 0.28911939]  max|de|= -0.00295  lindep= 0.0262
+davidson 2 6 |r|= 0.00665  e= [0.2350239  0.28899092]  max|de|= -0.000128  lindep= 0.00669
+davidson 3 8 |r|= 0.00651  e= [0.23500723 0.28882613]  max|de|= -0.000165  lindep= 0.00103
+davidson 4 10 |r|= 0.00271  e= [0.23500689 0.28877903]  max|de|= -4.71e-05  lindep= 0.000208
+davidson 5 12 |r|= 0.000997  e= [0.23500687 0.28876887]  max|de|= -1.02e-05  lindep= 4.08e-05
+davidson 6 14 |r|= 0.000994  e= [0.23500687 0.28876541]  max|de|= -3.46e-06  lindep= 5.51e-06
+davidson 7 16 |r|= 0.000374  e= [0.23500687 0.28876386]  max|de|= -1.55e-06  lindep= 7.63e-07
+root 0 converged  |r|= 5.28e-08  e= 0.23500687411887802  max|de|= -3.44e-13
+davidson 8 18 |r|= 8.27e-05  e= [0.23500687 0.28876373]  max|de|= -1.28e-07  lindep= 9.71e-05
+davidson 9 20 |r|= 1.65e-05  e= [0.23500687 0.28876372]  max|de|= -8.02e-09  lindep= 2.42e-05
+davidson 10 22 |r|= 4.45e-06  e= [0.23500687 0.28876372]  max|de|= -4.16e-10  lindep= 6.37e-06
+davidson 11 24 |r|= 1.48e-06  e= [0.23500687 0.28876372]  max|de|= -2.58e-11  lindep= 1.81e-06
+davidson 12 26 |r|= 4.01e-07  e= [0.23500687 0.28876372]  max|de|= -2.33e-12  lindep= 4.91e-07
+root 1 converged  |r|= 8.96e-08  e= 0.2887637208236814  max|de|= -1.97e-13
+converged 13 28  |r|= 8.96e-08  e= [0.23500687 0.28876372]  max|de|= -1.97e-13
+Cyclopentadiene 1.02 1.9849579181045824
