@@ -1,6 +1,7 @@
 """Read-only accounting of preparation and whole-worker resource measurements."""
 from pathlib import Path
 import json,re,socket,hashlib
+import numpy as np
 assert socket.getfqdn()=='oracle.sns.it'
 R=Path(__file__).resolve().parent;rows=[]
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
@@ -23,7 +24,10 @@ for subset in ['independent','independent_challenge']:
   resources=R/f'tasks/independent_{name}/resources.txt'
   if name=='Ammonia':resources=R/'independent_ammonia_recovery.resources'
   if subset=='independent_challenge':resources=R/'challenge.resources'
-  row=dict(molecule=name,subset=subset,complete=final.exists(),whole_process_resources=resource(resources),df_t_ground_cost=load(reference/'ground_cost.json'),reference_tda_costs=[load(p) for p in reference.glob('*_cost.json') if p.name!='ground_cost.json'],full_response_calibration=load(calibration),reference_labels_used=False)
+  native=out/'native_ground.npz';compact_nao=None
+  if native.exists():
+   with np.load(native) as a:compact_nao=int(a['state_overlap'].shape[0])
+  row=dict(molecule=name,subset=subset,compact_nao=compact_nao,complete=final.exists(),whole_process_resources=resource(resources),df_t_ground_cost=load(reference/'ground_cost.json'),reference_tda_costs=[load(p) for p in reference.glob('*_cost.json') if p.name!='ground_cost.json'],full_response_calibration=load(calibration),reference_labels_used=False)
   if execution.exists() and final.exists():
    row['wall_after_lock_and_import_seconds']=final.stat().st_mtime-execution.stat().st_mtime
    row['clock_scope']='filesystem timestamps of execution record immediately after compute-lock acquisition and final prediction ledger; excludes import and queue time'

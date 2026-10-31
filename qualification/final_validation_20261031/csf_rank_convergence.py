@@ -6,7 +6,7 @@ import argparse,fcntl,traceback
 
 def run(name,rank):
  root=OUT/'independent_challenge';rows=[r for r in json.loads((root/'manifest.json').read_text())['states'] if r['molecule']==name];src=root/'predictions'/name;refdir=root/'references'/name
- raw=loadpoint(src/'native_ground.npz');s=canonical_state(raw);xyz=s.coordinates_bohr/ANGSTROM_TO_BOHR;calc=calculator(s);ctx=prepare_gfn2_deltascf(calc,xyz,orbital_reference=s);no=s.electron_count//2
+ raw=loadpoint(src/'native_ground.npz');s=canonical_state(raw);raw=replace(raw,reference_state=s);xyz=s.coordinates_bohr/ANGSTROM_TO_BOHR;calc=calculator(s);ctx=prepare_gfn2_deltascf(calc,xyz,orbital_reference=s);no=s.electron_count//2
  data=[]
  for profile in ['full_response','qualified_spectral_response']:
   f=src/profile/'anchor/model.npz'
@@ -33,9 +33,9 @@ def run(name,rank):
      c=follow_parent(calc,xyz,s,data,eri,no,rank,c0,q,parents[0],out/'homotopy_Q');(out/f'parent_{i}').mkdir(exist_ok=True);np.savez_compressed(out/f'parent_{i}/converged.npz',coefficients=c);parents.append(c)
     else:parents.append(optimize_parent(obj,c,out/f'parent_{i}'))
    bundle=out/'portable_model'
-   if not (bundle/'model.json').exists():write_multicsf_model(bundle,template=raw,responses=data,eri=eri,initial_coefficients=parents,reference_coefficients=refs,reference_transitions=amps,transition_weights=weights,grounds=allgrounds,provenance=dict(source_sha256=sha(__file__),purpose='CSF expansion convergence, no reference excitation energies used',rank=rank,weights=[.5,.5],lambda_exchange=.9,offset=0))
-   model=MultiCSFModel(bundle/'model.json');point=evaluate_multicsf_surface(calc,xyz,model,compute_hessian=False);save_multicsf_result(out/'accepted',point,model)
-   write(out/'result.json',dict(status='matched',id=row['id'],molecule=name,rank=rank,excitation_ev=.5*sum(point.parent_gaps_hartree)*EV,parent_gaps_ev=np.array(point.parent_gaps_hartree)*EV,residual=point.orbital_residual,fidelity=point.fidelity,nto_captured_weight=float(sum(weights[:rank])),seconds=time.monotonic()-started,energy_reference_labels_used=False,scope='post-holdout model-truncation development; not an independent accuracy validation'))
+   if not (bundle/'model.json').exists():write_multicsf_model(bundle,template=raw,responses=data,eri=eri,initial_coefficients=parents,reference_coefficients=refs,reference_transitions=amps,transition_weights=weights,grounds=allgrounds,active_rank=rank,provenance=dict(source_sha256=sha(__file__),purpose='CSF expansion convergence, no reference excitation energies used',rank=rank,weights=[.5,.5],lambda_exchange=.9,offset=0))
+   model=MultiCSFModel(bundle/'model.json');assert model.rank==rank and model.manifest['rank_policy']=='explicit_fixed_rank';point=evaluate_multicsf_surface(calc,xyz,model,compute_hessian=False);save_multicsf_result(out/'accepted',point,model)
+   write(out/'result.json',dict(status='matched',id=row['id'],molecule=name,rank=rank,model_rank=model.rank,rank_policy=model.manifest['rank_policy'],excitation_ev=.5*sum(point.parent_gaps_hartree)*EV,parent_gaps_ev=np.array(point.parent_gaps_hartree)*EV,residual=point.orbital_residual,fidelity=point.fidelity,nto_captured_weight=float(sum(weights[:rank])),seconds=time.monotonic()-started,energy_reference_labels_used=False,scope='post-holdout model-truncation development; not an independent accuracy validation'))
   except Exception:write(out/'attempt_closed.json',dict(status='unresolved',traceback=traceback.format_exc(),checkpoints_retained=True))
 if __name__=='__main__':
  a=argparse.ArgumentParser();a.add_argument('name');a.add_argument('rank',type=int);args=a.parse_args();assert 2<=args.rank<=4;from science_slots import science_locks;locks=science_locks()

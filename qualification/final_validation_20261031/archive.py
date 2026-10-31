@@ -15,6 +15,6 @@ with tarfile.open(out,'w:gz') as tar:
    omitted.append(dict(path=str(p.relative_to(R)),sha256=h.hexdigest(),size=size,retained_remotely=True));continue
   if p.suffix not in ['.json','.py','.npz','.txt','.log','.resources','.xyz']:continue
   data=p.read_bytes();name=str(p.relative_to(R));info=tarfile.TarInfo(name);info.size=len(data);tar.addfile(info,io.BytesIO(data));entries.append(dict(path=name,sha256=hashlib.sha256(data).hexdigest(),size=len(data)))
- manifest=dict(host=socket.getfqdn(),snapshot_utc=now,in_progress_snapshot=True,archived=entries,large_files_retained_remotely=omitted,numerical_reference_labels_included=False)
+ manifest=dict(host=socket.getfqdn(),snapshot_utc=now,in_progress_snapshot=not all(json.loads((R/'final_results.json').read_text())['operational_closure'].values()),archived=entries,large_files_retained_remotely=omitted,numerical_reference_labels_included=False)
  data=(json.dumps(manifest,indent=2)+'\n').encode();info=tarfile.TarInfo('TRANSFER.json');info.size=len(data);tar.addfile(info,io.BytesIO(data))
 print(json.dumps(dict(archive=str(out),sha256=hashlib.sha256(out.read_bytes()).hexdigest(),files=len(entries),remote_large_files=len(omitted))))

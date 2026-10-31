@@ -1,13 +1,28 @@
 """Native/corrected GFN2-orbital TDA controls with coherent state assignment."""
 from common import *
 from tda_operator import complete_tda_A
-import fcntl,argparse
+import fcntl,argparse,shutil
 
 def run(name):
  root=OUT/os.environ.get('MOUSE_HOLDOUT_DIRECTORY','independent');manifest=json.loads((root/'manifest.json').read_text());rows=[r for r in manifest['states'] if r['molecule']==name];out=root/'predictions'/name;dest=root/'tda'/name;dest.mkdir(parents=True,exist_ok=True)
  if (dest/'result.json').exists():return
  if not (out/'full_response/anchor/model.npz').exists():
   write(dest/'result.json',dict(molecule=name,rows=[dict(id=r['id'],status='not_representable',reason='same fixed compact projection gate; no qualified compact model') for r in rows]));return
+ # State-independent all-root spectra may be shared across frozen cohorts
+ # only when native, response and stationary-ground checkpoints are identical.
+ for other in ['independent','independent_challenge','independent_state_challenge']:
+  source=OUT/other/'predictions'/name;cached=OUT/other/'tda'/name
+  if source==out or not (cached/'result.json').exists():continue
+  paths=['native_ground.npz','full_response/anchor/model.npz','qualified_spectral_response/anchor/model.npz','grounds/0/stationary.npz','grounds/1/stationary.npz']
+  if not all((source/p).exists() and (out/p).exists() and sha(source/p)==sha(out/p) for p in paths):continue
+  used=[]
+  for i in range(2):
+   a=cached/f'parent_{i}.npz';b=dest/a.name
+   if a.exists() and not b.exists():
+    with np.load(a) as z:assert str(z['operator'])=='true_singlet_TDA_A'
+    shutil.copy2(a,b);used.append(dict(source=str(a),sha256=sha(a)))
+  if used:write(dest/'spectra_reuse.json',dict(files=used,identical_checkpoint_hashes={p:sha(out/p) for p in paths},no_new_electronic_solve=True))
+  break
  raw=loadpoint(out/'native_ground.npz');s=canonical_state(raw);xyz=s.coordinates_bohr/ANGSTROM_TO_BOHR;calc=calculator(s);ctx=prepare_gfn2_deltascf(calc,xyz,orbital_reference=s);spectra=[]
  for index,profile in enumerate(['full_response','qualified_spectral_response']):
   cp=dest/f'parent_{index}.npz'
@@ -42,5 +57,8 @@ def run(name):
   results.append(dict(id=row['id'],molecule=name,family=row['family'],status='matched' if all(r['status']=='matched' for r in matches) else 'completed_unassigned',parents=matches,weights=[.5,.5],lambda_exchange=.9,energy_offset_ev=0))
  write(dest/'result.json',dict(molecule=name,rows=results,labels_read=False,operator='true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction',assignment='maximum coherent projected DFT transition overlap, score>=.7 and margin>=.05; no reference excitation energy used'))
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('name');args=p.parse_args();from science_slots import science_locks;locks=science_locks()
+ p=argparse.ArgumentParser();p.add_argument('name');args=p.parse_args();root=OUT/os.environ.get('MOUSE_HOLDOUT_DIRECTORY','independent')
+ if (root/'tda'/args.name/'result.json').exists():raise SystemExit(0)
+ if (root/'predictions'/args.name/'full_response/anchor/model.npz').exists():
+  from science_slots import science_locks;locks=science_locks()
  with threadpool_limits():run(args.name)

@@ -52,7 +52,9 @@ class MultiCSFModel:
         if any(abs(r.response_exchange_scale-.9)>1e-12 for r in self.responses):raise ValueError('model diagonal lambda differs from 0.9')
         with np.load(self.root/'arrays.npz',allow_pickle=False) as a:self.arrays={k:a[k].copy() for k in a.files}
         a=self.arrays;n=len(self.anchor.overlap);rank,number=effective_transition_rank(a['transition_weights'])
-        if rank!=self.rank or not 1<=rank<=min(self.no,n-self.no) or self.no!=self.anchor.electron_count//2:raise ValueError('model rank/electron count disagrees with frozen transition')
+        policy=m.get('rank_policy','effective_pairs_nearest')
+        if policy not in ('effective_pairs_nearest','explicit_fixed_rank'):raise ValueError('unsupported active rank policy')
+        if (policy=='effective_pairs_nearest' and rank!=self.rank) or isinstance(self.rank,bool) or not isinstance(self.rank,int) or not 1<=self.rank<=min(4,self.no,n-self.no) or self.no!=self.anchor.electron_count//2:raise ValueError('model rank/electron count disagrees with frozen transition')
         for key,shape in [('eri',(n,n,n,n)),('initial_coefficients',(2,n,n)),('reference_coefficients',(2,n,n)),('reference_transitions',(2,self.no,n-self.no))]:
             if key not in a or a[key].shape!=shape or not np.all(np.isfinite(a[key])):raise ValueError(f'invalid model array: {key}')
         for c in np.concatenate([a['initial_coefficients'],a['reference_coefficients']]):
@@ -71,21 +73,30 @@ class MultiCSFModel:
             p=(self.root/name).resolve()
             if not p.is_relative_to(self.root) or _sha(p)!=digest:raise ValueError('multi-CSF model input checksum mismatch')
 
-    def objectives(self,calculator,xyz,reference=None):
+    def objectives(self,calculator,xyz,reference=None,*,follow_previous_csf=False):
         contexts=[prepare_gfn2_deltascf(calculator,xyz,orbital_reference=self.anchor,spin_reference=r) for r in self.responses]
         state=contexts[0].state;t,_=self.eri.chart(state);transport=metric_power(state.overlap,-.5)@t.u@metric_power(self.anchor.overlap,.5)
         eri=self.eri.ao_eri(state);objects=[]
-        for i,ctx in enumerate(contexts):objects.append(MultiCSFObjective(ctx,eri,self.no,self.rank,transport@self.arrays['reference_coefficients'][i],self.arrays['reference_transitions'][i]))
         if reference is None:point=[transport@c for c in self.arrays['initial_coefficients']]
         else:
             if reference.model_fingerprint!=self.fingerprint:raise ValueError('retained state has a different multi-CSF model')
             previous=reference.reference_state;old,_=self.eri.chart(previous);mapping=metric_power(state.overlap,-.5)@t.u@old.u.T@metric_power(previous.overlap,.5);point=[mapping@c for c in reference.coefficients]
+        for i,ctx in enumerate(contexts):
+            if follow_previous_csf and reference is not None:
+                cr=point[i];q=np.zeros((self.no,len(state.overlap)-self.no));q[np.arange(self.rank),np.arange(self.rank)]=reference.ci_coefficients[i]
+            else:cr=transport@self.arrays['reference_coefficients'][i];q=self.arrays['reference_transitions'][i]
+            objects.append(MultiCSFObjective(ctx,eri,self.no,self.rank,cr,q))
         return objects,point
 
 
-def write_multicsf_model(directory,*,template,responses,eri,initial_coefficients,reference_coefficients,reference_transitions,transition_weights,grounds,state_id=1,provenance=None):
+def write_multicsf_model(directory,*,template,responses,eri,initial_coefficients,reference_coefficients,reference_transitions,transition_weights,grounds,state_id=1,provenance=None,active_rank=None):
     root=Path(directory);root.mkdir(parents=True,exist_ok=False)
-    rank,number=effective_transition_rank(transition_weights);xyz=template.reference_state.coordinates_bohr/ANGSTROM_TO_BOHR
+    rank,number=effective_transition_rank(transition_weights);policy='effective_pairs_nearest'
+    if active_rank is not None:
+        no=int(template.reference_state.electron_count)//2;n=len(template.reference_state.overlap)
+        if isinstance(active_rank,bool) or not isinstance(active_rank,int) or not 1<=active_rank<=min(4,no,n-no):raise ValueError('invalid explicit active rank')
+        rank=active_rank;policy='explicit_fixed_rank'
+    xyz=template.reference_state.coordinates_bohr/ANGSTROM_TO_BOHR
     if len(responses)!=2 or len(grounds)!=3:raise ValueError('model requires two responses and three certified ground seeds')
     save_derivative_point(root/'template.npz',template,request_hash='multicsf:model:template',coordinates_angstrom=xyz)
     for i,r in enumerate(responses):save_response_reference(root/f'response_{i}.npz',r)
@@ -94,7 +105,7 @@ def write_multicsf_model(directory,*,template,responses,eri,initial_coefficients
     for i,g in enumerate(grounds):
         path=root/f'ground_{i}.npz';save_derivative_point(path,g.reference,request_hash=f'multicsf:model:ground:{i}',coordinates_angstrom=xyz)
         rows.append(dict(path=path.name,minimum_curvature=g.minimum_orbital_curvature_hartree,index=g.orbital_saddle_index))
-    manifest=dict(schema='mouse.multicsf.model.v1',experimental=True,rank=rank,effective_pairs=number,noccupied=int(template.reference_state.electron_count)//2,state_id=state_id,weights=[.5,.5],diagonal_lambda_exchange=.9,energy_offset_ev=0,offdiagonal='bare projected Slater-Condon',orbital_manifold='fixed full active cross-overlap matrix',grounds=rows,provenance=provenance or {},sha256={p.name:_sha(p) for p in root.glob('*.npz')})
+    manifest=dict(schema='mouse.multicsf.model.v1',experimental=True,rank=rank,rank_policy=policy,effective_pairs=number,noccupied=int(template.reference_state.electron_count)//2,state_id=state_id,weights=[.5,.5],diagonal_lambda_exchange=.9,energy_offset_ev=0,offdiagonal='bare projected Slater-Condon',orbital_manifold='fixed full active cross-overlap matrix',grounds=rows,provenance=provenance or {},sha256={p.name:_sha(p) for p in root.glob('*.npz')})
     path=root/'model.json';path.write_text(json.dumps(manifest,indent=2)+'\n');MultiCSFModel(path);return path
 
 
@@ -115,8 +126,10 @@ class MultiCSFSurfaceResult:
     fidelity: tuple
     active_cross_overlap: np.ndarray
     selected_states: tuple
+    state_following: str = "fixed_transition"
 
     def __post_init__(self):
+        if self.state_following not in ('fixed_transition','local_csf'):raise ValueError('invalid state-following policy')
         for name in ('coefficients','ci_coefficients','gradient_hartree_per_bohr','hessian_hartree_per_bohr2','active_cross_overlap'):
             value=getattr(self,name)
             if value is None:continue
@@ -135,14 +148,16 @@ def _apoc_expansion(obj,c,state_id,energy,calculator):
     return SingletCSFExpansion(state_id,tuple(csfs),obj.cache['ci']*phase,energy)
 
 
-def evaluate_multicsf_surface(calculator,coordinates_angstrom,model,*,reference_result=None,compute_hessian=False,minimum_overlap=.9):
+def evaluate_multicsf_surface(calculator,coordinates_angstrom,model,*,reference_result=None,compute_hessian=False,minimum_overlap=.9,follow_previous_csf=False):
     """Analytic excited total energy, gradient and optional Hessian, no SCC/TDA."""
     model.validate_files();xyz=np.asarray(coordinates_angstrom,dtype=float)
+    policy='local_csf' if follow_previous_csf else 'fixed_transition'
+    if reference_result is not None and reference_result.state_following!=policy:raise ValueError('retained state has a different state-following policy')
     if (reference_result is not None and reference_result.model_fingerprint==model.fingerprint
             and np.allclose(xyz*ANGSTROM_TO_BOHR,reference_result.reference_state.coordinates_bohr,atol=1e-12,rtol=0)
             and (not compute_hessian or reference_result.hessian_hartree_per_bohr2 is not None)):
         return reference_result
-    objects,point=model.objectives(calculator,xyz,reference_result);frame=RelativeActiveFrame(objects)
+    objects,point=model.objectives(calculator,xyz,reference_result,follow_previous_csf=follow_previous_csf);frame=RelativeActiveFrame(objects)
     point=frame.polish(point);e,g,h,*_=frame.evaluate(point);values=np.linalg.eigvalsh(h);residual=float(np.max(abs(g)))
     if residual>1e-9 or np.min(abs(values))<1e-7:raise ValueError('multi-CSF frame stationarity/curvature is unresolved')
     gram=point[0][:,frame.active].T@frame.s@point[1][:,frame.active]
@@ -169,7 +184,7 @@ def evaluate_multicsf_surface(calculator,coordinates_angstrom,model,*,reference_
         if compute_hessian:hh+=weight*restricted_ground_analytic_hessian(calculator,xyz,reference_result=ground,spin_reference=ref).hessian_hartree_per_bohr2
     gaps=tuple(ee-gg.energy_hartree for ee,gg in zip(parent_e,grounds[1:]))
     if min(gaps)<=0:raise ValueError('multi-CSF parent has a nonpositive gap')
-    return MultiCSFSurfaceResult(model.fingerprint,objects[0].context.state,np.array(point),np.array([o.cache['ci'].copy() for o in objects]),tuple(grounds),float(total),gradient,hh,residual,int(np.count_nonzero(values< -1e-7)),float(np.min(abs(values))),gaps,fidelities,gram,selected)
+    return MultiCSFSurfaceResult(model.fingerprint,objects[0].context.state,np.array(point),np.array([o.cache['ci'].copy() for o in objects]),tuple(grounds),float(total),gradient,hh,residual,int(np.count_nonzero(values< -1e-7)),float(np.min(abs(values))),gaps,fidelities,gram,selected,policy)
 
 
 def save_multicsf_result(directory,result,model):
@@ -182,7 +197,7 @@ def save_multicsf_result(directory,result,model):
     for i,g in enumerate(result.grounds):
         p=root/f'ground_{i}.npz';save_derivative_point(p,g.reference,request_hash=f'multicsf:accepted:ground:{i}',coordinates_angstrom=xyz)
         grounds.append(dict(path=p.name,minimum_curvature=g.minimum_orbital_curvature_hartree,index=g.orbital_saddle_index))
-    metadata=dict(schema='mouse.multicsf.result.v1',model_fingerprint=model.fingerprint,orbital_residual=result.orbital_residual,orbital_saddle_index=result.orbital_saddle_index,minimum_absolute_curvature=result.minimum_absolute_curvature,grounds=grounds,sha256={p.name:_sha(p) for p in root.glob('*.npz')})
+    metadata=dict(schema='mouse.multicsf.result.v1',model_fingerprint=model.fingerprint,state_following=result.state_following,orbital_residual=result.orbital_residual,orbital_saddle_index=result.orbital_saddle_index,minimum_absolute_curvature=result.minimum_absolute_curvature,grounds=grounds,sha256={p.name:_sha(p) for p in root.glob('*.npz')})
     path=root/'result.json';path.write_text(json.dumps(metadata,indent=2)+'\n');return path
 
 
@@ -193,7 +208,13 @@ def load_multicsf_result(path,model,calculator):
     for name,digest in m['sha256'].items():
         if (root/name).resolve().parent!=root.resolve() or _sha(root/name)!=digest:raise ValueError('retained multi-CSF checkpoint checksum mismatch')
     with np.load(root/'point.npz',allow_pickle=False) as a:d={k:a[k].copy() for k in a.files}
-    objects,_=model.objectives(calculator,d['coordinates_angstrom']);point=d['coefficients'];frame=RelativeActiveFrame(objects);_,g,h,*_=frame.evaluate(point);values=np.linalg.eigvalsh(h)
+    policy=m.get('state_following','fixed_transition')
+    if policy not in ('fixed_transition','local_csf'):raise ValueError('invalid retained state-following policy')
+    objects,_=model.objectives(calculator,d['coordinates_angstrom']);point=d['coefficients']
+    if policy=='local_csf':
+        for i,o in enumerate(objects):
+            o.reference_coefficients=point[i];o.reference_transition=np.zeros((model.no,len(model.anchor.overlap)-model.no));o.reference_transition[np.arange(model.rank),np.arange(model.rank)]=d['ci_coefficients'][i];o.rank_cap=1.
+    frame=RelativeActiveFrame(objects);_,g,h,*_=frame.evaluate(point);values=np.linalg.eigvalsh(h)
     gram=point[0][:,frame.active].T@frame.s@point[1][:,frame.active]
     if np.max(abs(g))>1e-9 or np.min(abs(values))<1e-7 or not np.allclose(gram,model.target,atol=1e-9,rtol=0):raise ValueError('retained multi-CSF state fails stationarity/frame certificate')
     selected=tuple(_apoc_expansion(o,c,model.state_id,o.evaluate(c,False)[0],calculator) for o,c in zip(objects,point));grounds=[]
@@ -205,4 +226,4 @@ def load_multicsf_result(path,model,calculator):
     ci=np.array([o.cache['ci'] for o in objects]);fidelity=tuple(o.fidelity(c)[0] for o,c in zip(objects,point))
     gaps=tuple(o.evaluate(c,False)[0]-gg.energy_hartree for o,c,gg in zip(objects,point,grounds[1:]));energy=sum(.5*o.evaluate(c,False)[0] for o,c in zip(objects,point))+grounds[0].energy_hartree-.5*sum(gg.energy_hartree for gg in grounds[1:])
     if min(gaps)<=0 or min(fidelity)**2<=.5 or abs(energy-float(d['energy']))>1e-10 or not np.allclose(ci,d['ci_coefficients'],atol=1e-9,rtol=0):raise ValueError('retained multi-CSF energy/identity mismatch')
-    return MultiCSFSurfaceResult(model.fingerprint,objects[0].context.state,point,ci,tuple(grounds),float(d['energy']),d['gradient'],d.get('hessian'),float(np.max(abs(g))),int(np.count_nonzero(values< -1e-7)),float(np.min(abs(values))),gaps,fidelity,gram,selected)
+    return MultiCSFSurfaceResult(model.fingerprint,objects[0].context.state,point,ci,tuple(grounds),float(d['energy']),d['gradient'],d.get('hessian'),float(np.max(abs(g))),int(np.count_nonzero(values< -1e-7)),float(np.min(abs(values))),gaps,fidelity,gram,selected,policy)

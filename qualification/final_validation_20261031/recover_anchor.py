@@ -20,6 +20,18 @@ def run(name,sid,scale):
   eigenvalues,eigenvectors=np.linalg.eigh(h);projected=eigenvectors.T@g
   step=-eigenvectors@(projected/eigenvalues)
   history[-1]['unrestricted_newton_norm']=float(np.linalg.norm(step));history[-1]['minimum_absolute_curvature']=float(np.min(abs(eigenvalues)))
+  # A guarded larger Newton trial resolves otherwise slow flat modes.
+  # Bound actual matrix-exponential coordinates and accept only a lower
+  # residual with the unchanged full-CSF identity guards.
+  full=step*min(1.,1./max(np.linalg.norm(rawmap@step),1e-300));old_ci=[o.cache['ci'].copy() for o in objects];large_accepted=False
+  for fraction in [1.,.5,.25,.125]:
+   trial=frame.retract(point,fraction*full,rawmap,v);_,gg,*_=frame.evaluate(trial)
+   guard=all(o.fidelity(c)[0]**2>.5 and o.cache['coefficient_margin']>=.05 and abs(o.signed_overlap(old,ci,c,o.cache['ci']))>=.9 for o,old,ci,c in zip(objects,point,old_ci,trial))
+   if guard and np.linalg.norm(gg)<np.linalg.norm(g):
+    point=trial;large_accepted=True;history[-1]['step_type']='guarded_full_newton_raw_radius_one';break
+  if large_accepted:
+   assert np.max(abs(point[0][:,frame.active].T@frame.s@point[1][:,frame.active]-target))<1e-10
+   continue
   radius=.3
   if np.linalg.norm(rawmap@step)>radius:
    scale=np.linalg.norm(rawmap,axis=0);u,singular,vt=np.linalg.svd(h/scale[None,:],full_matrices=False);rhs=u.T@g;square=singular**2;low=0.;high=max(1.,float(np.max(square)))

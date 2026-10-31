@@ -31,6 +31,8 @@ def tda(calc,xyz,s,responses,grounds,eri):
 def run(name,prop,repeat):
  out=OUT/f'cost/{name}/{prop}/{repeat}';out.mkdir(parents=True,exist_ok=True)
  if (out/'result.json').exists():return
+ if name in ['Furan','Cyclopentadiene','Phthalimide'] and repeat>0:
+  write(out/'result.json',dict(status='not_repeated_due_to_prespecified_budget',molecule=name,property=prop,repeat=repeat,reason='Closing budget fixed before any large-cohort measurement; one complete measurement per property and size',budget_protocol_sha256=sha(OUT/'closing_cost_budget.json')));return
  if name=='Phthalimide' and prop=='hessian' and repeat>0:
   first=OUT/f'cost/{name}/{prop}/0/result.json'
   if first.exists():

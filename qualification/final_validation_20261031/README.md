@@ -112,13 +112,15 @@ artifact contains 34 molecules. Geometry hashes and renderer provenance are save
 
 `collect_final.py` reports each of the four operational gates separately and never
 opens segregated labels. Numerical closure of attempts is distinguished from a
-scientific accuracy or speed claim. `escape_nuclear_saddle.py` follows negative
-nuclear curvature with a fixed 0.08-bohr initial displacement and checkpointed
-BFGS descent on the SAME electronic model. It allows at most three descendants
-and 60 accepted steps per descendant, retains state-following guards, and
-certifies a minimum only after an analytic Hessian removes negative vibrational
-curvature. It records an unresolved attempt if this bounded continuation fails;
-no imaginary frequency is discarded.
+scientific accuracy or speed claim. `escape_nuclear_saddle.py` follows negative nuclear curvature with qualified
+initial kicks of 0.01 to 0.00125 bohr and bounded, checkpointed BFGS descent on
+the SAME electronic model. It allows at most three descendants and 100 accepted
+steps per descendant. A closing Furan continuation retains at most 160 total
+accepted points and resets poorly conditioned descent directions. State guards
+remain active. A minimum requires a fresh analytic Hessian with positive
+vibrational curvatures. Cyclopentadiene reaches a certified minimum with 27
+positive modes; Furan's further optional descent closes at 104 accepted points
+without a minimum assignment. Accepted coordinates and inverse BFGS are retained.
 
 For the separate benzoxadiazole state challenge, the first rank-two parent
 converged. The second parent oscillated with initial requested electronic index
@@ -167,3 +169,15 @@ retains an EXCLUSIVE global lock. Thus science can finish in parallel while
 no cost measurement overlaps electronic work from this campaign. External
 server load is not controlled and remains a timing limitation. This is a finite
 campaign, not a scheduled automation.
+
+The final scope freezes all six sizes and four properties. Before any larger-case
+measurement, repetition is reduced to one per property for Furan, cyclopentadiene
+and phthalimide; small cases retain three. The 72-entry ledger comprises 48
+measured attempts and 24 explicit prespecified omitted repeats. A 600-second
+largest-system Hessian limit is retained. The optional rank-three development
+continuation is closed at its accepted homotopy checkpoint without an endpoint
+energy. Fixed-rank two results remain valid.
+
+Final qualification: 46 core/LINK/APOC regressions pass in 12.87 seconds; two
+additional contracts pass for fixed rank and explicit local-CSF restart policy.
+The local policy changes eigenroot following, not the Hamiltonian or energy.

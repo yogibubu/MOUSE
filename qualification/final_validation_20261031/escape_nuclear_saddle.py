@@ -8,18 +8,18 @@ def run(name,sid):
  calc.evaluate=lambda *a,**k:(_ for _ in ()).throw(AssertionError('Unexpected SCC in fixed surface'))
  source=OUT/f'geometry/{name}';out=OUT/f'geometry_escape/{name}';out.mkdir(parents=True,exist_ok=True)
  if (out/'result.json').exists():return
- reference=load_multicsf_result(source/'analytic_stationary/result.json',model,calc);initial_energy=reference.energy_hartree;start=time.monotonic()
+ reference=replace(load_multicsf_result(source/'analytic_stationary/result.json',model,calc),state_following='local_csf');initial_energy=reference.energy_hartree;start=time.monotonic()
  for stage in range(3):
   dest=out/f'stage_{stage}';dest.mkdir(exist_ok=True);accepted=dest/'accepted.json';history=json.loads((dest/'history.json').read_text()) if (dest/'history.json').exists() else []
   eigenvalues,eigenvectors=eigh(reference.hessian_hartree_per_bohr2);inverse=(eigenvectors/np.maximum(abs(eigenvalues),.02))@eigenvectors.T
   if accepted.exists():
-   reference=load_multicsf_result(dest/json.loads(accepted.read_text())['path']/'result.json',model,calc)
+   reference=replace(load_multicsf_result(dest/json.loads(accepted.read_text())['path']/'result.json',model,calc),state_following='local_csf')
    if (dest/'inverse_bfgs.npz').exists():
     with np.load(dest/'inverse_bfgs.npz') as a:inverse=a['inverse'].copy()
   else:
    freq,modes,masses=vibrations(reference);direction=modes[:,0]/np.repeat(np.sqrt(masses),3);direction/=np.linalg.norm(direction);origin=reference.reference_state.coordinates_bohr.ravel()
    for amplitude in [.01,.005,.0025,.00125]:
-    try:point=evaluate_multicsf_surface(calc,(origin+amplitude*direction).reshape(-1,3)/ANGSTROM_TO_BOHR,model,reference_result=reference,compute_hessian=False)
+    try:point=evaluate_multicsf_surface(calc,(origin+amplitude*direction).reshape(-1,3)/ANGSTROM_TO_BOHR,model,reference_result=reference,compute_hessian=False,follow_previous_csf=True)
     except (RuntimeError,ValueError,np.linalg.LinAlgError):continue
     if point.energy_hartree<reference.energy_hartree:break
    else:raise RuntimeError('No qualified downhill symmetry-breaking seed; original stationary checkpoint retained')
@@ -32,7 +32,7 @@ def run(name,sid):
    direction*=min(1.,.04/max(np.linalg.norm(direction),1e-300));accepted_trial=False
    for fraction in [1.,.5,.25,.125,.0625,.03125,.015625,.0078125]:
     trial_x=x+fraction*direction
-    try:point=evaluate_multicsf_surface(calc,trial_x.reshape(-1,3)/ANGSTROM_TO_BOHR,model,reference_result=reference,compute_hessian=False)
+    try:point=evaluate_multicsf_surface(calc,trial_x.reshape(-1,3)/ANGSTROM_TO_BOHR,model,reference_result=reference,compute_hessian=False,follow_previous_csf=True)
     except (RuntimeError,ValueError,np.linalg.LinAlgError):continue
     if point.energy_hartree<=reference.energy_hartree+1e-4*fraction*(g@direction):accepted_trial=True;break
    if not accepted_trial:raise RuntimeError('Bounded nuclear line search reached state/continuation boundary; accepted point retained')
@@ -44,7 +44,7 @@ def run(name,sid):
   if np.max(abs(reference.gradient_hartree_per_bohr))>=3e-5:raise RuntimeError('Bounded descent budget exhausted; accepted coordinates and inverse BFGS retained')
   folder=dest/'analytic_stationary'
   if (folder/'result.json').exists():reference=load_multicsf_result(folder/'result.json',model,calc)
-  else:reference=evaluate_multicsf_surface(calc,reference.reference_state.coordinates_bohr/ANGSTROM_TO_BOHR,model,reference_result=reference,compute_hessian=True);save_multicsf_result(folder,reference,model)
+  else:reference=evaluate_multicsf_surface(calc,reference.reference_state.coordinates_bohr/ANGSTROM_TO_BOHR,model,reference_result=reference,compute_hessian=True,follow_previous_csf=True);save_multicsf_result(folder,reference,model)
   freq,modes,masses=vibrations(reference);np.savez_compressed(dest/'vibrations.npz',frequencies_cm1=freq,mass_weighted_modes=modes,masses_amu=masses,coordinates_angstrom=reference.reference_state.coordinates_bohr/ANGSTROM_TO_BOHR)
   write(dest/'result.json',dict(max_gradient=float(np.max(abs(reference.gradient_hartree_per_bohr))),frequencies_cm1=freq,nuclear_minimum=bool(np.all(freq>=-20)),energy_hartree=reference.energy_hartree))
   if np.all(freq>=-20):
