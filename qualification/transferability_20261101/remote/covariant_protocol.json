@@ -1,0 +1,14 @@
+{
+  "stage": "exposed development, frozen before covariant molecular predictions",
+  "targets": ["Criegee_Intermediate I002", "Furofuran C002"],
+  "definition": "SO(2) group average D(theta) H(C R(theta)) D(theta)^T over a pi period",
+  "free_fitted_parameters": 0,
+  "parent_weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "orbital_point": "retained ground occupied/virtual spaces, NTO rotation toward retained target transition",
+  "quadrature": "fixed 32 nodes; 8/16 also evaluated; 16-to-32 matrix difference < 1e-7 eV required",
+  "covariance_check": "rotate active pair by 0.371 radians; transported matrix agreement < 1e-7 eV",
+  "target_assignment_check": "first excited root open-singlet weight > 0.5 reported separately from matrix qualification",
+  "limitations": ["new approximate closure", "vertical diagnostic only", "state-specific active pair", "no new blind validation", "no nuclear derivative claims"]
+}

@@ -1,0 +1,27 @@
+{
+  "qualified": false,
+  "optimizer_success": false,
+  "message": "Desired error not necessarily achieved due to precision loss.",
+  "gap_ev": 0.1851153195940472,
+  "energies": [
+    -9.637273140953415,
+    -9.630470278434004,
+    -8.865336497573022
+  ],
+  "orbital_residual": 2.4199887534853692e-08,
+  "open_singlet_weight": 0.3817132694247225,
+  "transition_character": 0.9648280796407817,
+  "iterations": 22,
+  "ci_orthogonality_error": 6.661338147750939e-16,
+  "active_pair": [
+    0,
+    9
+  ],
+  "average_weights": [
+    0.5,
+    0.5
+  ],
+  "source_sha256": "137a441926c4fadfaede0c6cf3665d4069da3e3743cd121cfd923fe18f5bfc0e",
+  "response_source_sha256": "e452214ded3dc740c9b64933b81e0e9a1c0d00f987ef536cb7d2177e1f09dbfa",
+  "energy_labels_used": false
+}

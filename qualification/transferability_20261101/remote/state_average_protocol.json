@@ -1,0 +1,13 @@
+{
+  "stage": "exposed development diagnostic, frozen before balanced molecular runs",
+  "targets": ["Criegee_Intermediate I002", "Furofuran C002"],
+  "functional": "same F/Q density-functional pair closure, no new electronic parameters",
+  "orbital_objective": "equal average of lowest two spin-singlet CAS(2,2) eigenvalues",
+  "gap": "difference of lowest two eigenvalues at their common optimized orbitals",
+  "initial_orbitals": "retained ground occupied/virtual spaces rotated toward retained OO transition",
+  "parent_weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "acceptance": "orbital residual < 1e-7, target root open-singlet weight > 0.5, projected transition character >= 0.7",
+  "limitations": ["state-specific active pair", "general density-functional closure approximate", "no new nuclear derivative claims", "no blind validation claim"]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "C002",
+  "molecule": "Furofuran",
+  "parents": [
+    {
+      "qualified": true,
+      "optimizer_success": false,
+      "message": "Desired error not necessarily achieved due to precision loss.",
+      "gap_ev": 7.916497834844923,
+      "energies": [
+        -19.43192433171118,
+        -19.14099840227559,
+        -18.844905320881097
+      ],
+      "orbital_residual": 5.969510661935247e-08,
+      "open_singlet_weight": 0.9502389263586029,
+      "transition_character": 0.9344186596707761,
+      "iterations": 35,
+      "ci_orthogonality_error": 4.440892098500626e-16,
+      "active_pair": [
+        0,
+        20
+      ],
+      "average_weights": [
+        0.5,
+        0.5
+      ],
+      "source_sha256": "137a441926c4fadfaede0c6cf3665d4069da3e3743cd121cfd923fe18f5bfc0e",
+      "response_source_sha256": "e452214ded3dc740c9b64933b81e0e9a1c0d00f987ef536cb7d2177e1f09dbfa",
+      "energy_labels_used": false
+    },
+    {
+      "qualified": true,
+      "optimizer_success": false,
+      "message": "Desired error not necessarily achieved due to precision loss.",
+      "gap_ev": 6.0702053560912645,
+      "energies": [
+        -22.994972572539673,
+        -22.77189664023629,
+        -22.3197398345516
+      ],
+      "orbital_residual": 1.9681032536328358e-08,
+      "open_singlet_weight": 0.6928104627100391,
+      "transition_character": 0.8786584275534274,
+      "iterations": 43,
+      "ci_orthogonality_error": 4.440892098500626e-16,
+      "active_pair": [
+        0,
+        20
+      ],
+      "average_weights": [
+        0.5,
+        0.5
+      ],
+      "source_sha256": "137a441926c4fadfaede0c6cf3665d4069da3e3743cd121cfd923fe18f5bfc0e",
+      "response_source_sha256": "e452214ded3dc740c9b64933b81e0e9a1c0d00f987ef536cb7d2177e1f09dbfa",
+      "energy_labels_used": false
+    }
+  ],
+  "qualified": true,
+  "excitation_ev": 6.993351595468093,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "energy_labels_used": false,
+  "scope": "state-specific active-pair, two-state averaged orbital optimization; diagnostic only"
+}

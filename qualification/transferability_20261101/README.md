@@ -98,3 +98,55 @@ pullback, and analytic overlap curvature at singular/regular points.
 
 All research scripts and the converged checkpoints are retained. Production
 code and the previously consolidated paper remain unchanged.
+
+## Follow-up: balanced roots and active-orbital covariance
+
+The subsequent bounded test implements an analytic orbital gradient of the
+pair-CAS closure (`pair_cas_response.py`) and optimizes the equal average of
+its lowest two singlet eigenvalues at common orbitals. This is distinct from
+the F/Q 0.5/0.5 mixture; neither mixture uses fitted weights. Only Criegee I002
+and Furofuran C002 are tested, with protocols saved before the calculations.
+All reference and ground checkpoints are reused on Oracle.
+
+The state-averaged pair gives 0.733537 eV for Criegee I002 and fails the frozen
+open-singlet assignment gate. Furofuran C002 gives 6.993352 eV, retaining the
+assignment, but remains 0.966352 eV above its reference. These values do not
+replace the previously qualified ground-orthogonal model or its scores.
+
+An internal active-orbital rotation audit reveals a structural defect of this
+**new pair-CAS closure**, not a new numerical-Hessian defect of the production
+ROKS surface. With the active and inactive projectors unchanged, its full
+three-singlet spectrum changes by 4.64–5.41 eV for Criegee and 1.90–1.95 eV
+for Furofuran. The HF CAS limit is invariant, but the approximate general
+density-functional matrix is not. Optimizing its active orbital gauge can
+therefore change energies without changing the physical active space.
+
+`covariant_pair.py` implements a parameter-free SO(2) group projection of the
+matrix, transforming each rotated matrix back into the same singlet basis
+before averaging. This is a separate functional closure, not an empirical
+excitation shift. Tests independently verify preservation of the exact HF
+matrix and covariance of a deliberately nonlinear test functional.
+
+For both molecules the 32-node projected matrix agrees with 16 nodes and
+with a further active rotation to within 3e-13 eV. This resolves that matrix
+covariance defect. Its **unoptimized vertical** gaps at ground NTO orbitals
+are 6.308568 eV (Criegee) and 8.997747 eV (Furofuran). They establish neither
+spectroscopic improvement nor a useful optimized surface. They must not be
+compared as optimized energies with the earlier orbital-optimized results.
+No new closure is promoted to production and no accuracy limit is declared
+resolved.
+
+Seven remote tests now pass, including the new independent energy-difference
+check of the pair-matrix analytic orbital gradient and both covariance tests.
+The raw state-average and covariance-audit results are retained under
+`remote/state_average`, `remote/rotation_audit`, and `remote/covariant_vertical`.
+Assignment qualification and numerical covariance qualification are separate
+fields; passing the latter does not imply accurate excitation energies.
+
+The remaining development priority is a physically consistent multistate
+functional and anchor construction, rather than additional molecular fitting.
+The existing full calibration uses PBE0 first/second derivatives at the DFT
+embedding of the native GFN2 density; its F/Q corrected ground can differ from
+that density. A future consistently stationary embedded-DFT anchor would be
+a distinct candidate and requires its own derivative, accuracy and cost tests.
+It has not been calculated or validated in this campaign.

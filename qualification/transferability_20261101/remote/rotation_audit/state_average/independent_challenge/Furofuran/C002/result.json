@@ -1,0 +1,28 @@
+{
+  "id": "C002",
+  "molecule": "Furofuran",
+  "parents": [
+    {
+      "gap_ev": 8.417101612464439,
+      "qualified": false,
+      "interpretation": "Gauge audit only; this return value is not a candidate prediction"
+    },
+    {
+      "gap_ev": 6.792192919947282,
+      "qualified": false,
+      "interpretation": "Gauge audit only; this return value is not a candidate prediction"
+    }
+  ],
+  "qualified": false,
+  "excitation_ev": 7.604647266205861,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "energy_labels_used": false,
+  "scope": "state-specific active-pair, two-state averaged orbital optimization; diagnostic only"
+}

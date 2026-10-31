@@ -1,0 +1,154 @@
+[
+  {
+    "iteration": 0,
+    "average_energy": -11.09945226303595,
+    "gap_ev": 1.9866101057554997,
+    "orbital_residual": 0.12281332586792547,
+    "open_singlet_weight": 0.6147741352218582,
+    "transition_character": 0.9996592343633826
+  },
+  {
+    "iteration": 1,
+    "average_energy": -11.112905813627123,
+    "gap_ev": 0.943367497714692,
+    "orbital_residual": 0.10411950057950348,
+    "open_singlet_weight": 0.5619589786323455,
+    "transition_character": 0.9935719533795726
+  },
+  {
+    "iteration": 2,
+    "average_energy": -11.124674830770696,
+    "gap_ev": 1.6173374897991806,
+    "orbital_residual": 0.08996163314420216,
+    "open_singlet_weight": 0.15794244181170167,
+    "transition_character": 0.955287058323579
+  },
+  {
+    "iteration": 3,
+    "average_energy": -11.127633941160877,
+    "gap_ev": 1.603318351190068,
+    "orbital_residual": 0.04227362770325446,
+    "open_singlet_weight": 0.16462474312832187,
+    "transition_character": 0.9428217242740417
+  },
+  {
+    "iteration": 4,
+    "average_energy": -11.128894724718343,
+    "gap_ev": 1.4425374274299385,
+    "orbital_residual": 0.0224385272951695,
+    "open_singlet_weight": 0.18743188257656412,
+    "transition_character": 0.9421591090905754
+  },
+  {
+    "iteration": 5,
+    "average_energy": -11.12922174634146,
+    "gap_ev": 1.2314347298121406,
+    "orbital_residual": 0.009813297538715798,
+    "open_singlet_weight": 0.19477259076815803,
+    "transition_character": 0.9448025210820714
+  },
+  {
+    "iteration": 6,
+    "average_energy": -11.129287963195708,
+    "gap_ev": 1.226166339674966,
+    "orbital_residual": 0.005601061870562887,
+    "open_singlet_weight": 0.19912809691633748,
+    "transition_character": 0.9458036021487563
+  },
+  {
+    "iteration": 7,
+    "average_energy": -11.129302259521413,
+    "gap_ev": 1.2594631653585484,
+    "orbital_residual": 0.004422136329317606,
+    "open_singlet_weight": 0.20114500823091636,
+    "transition_character": 0.9457864362509493
+  },
+  {
+    "iteration": 8,
+    "average_energy": -11.129306808460662,
+    "gap_ev": 1.2828713554399884,
+    "orbital_residual": 0.0010332248057249027,
+    "open_singlet_weight": 0.20215632761655886,
+    "transition_character": 0.9455507294342543
+  },
+  {
+    "iteration": 9,
+    "average_energy": -11.129307568965508,
+    "gap_ev": 1.2887951251171037,
+    "orbital_residual": 0.0005988465115644107,
+    "open_singlet_weight": 0.20244757075483488,
+    "transition_character": 0.9453589203300169
+  },
+  {
+    "iteration": 10,
+    "average_energy": -11.129307679054218,
+    "gap_ev": 1.2852609866249711,
+    "orbital_residual": 0.00018041321162535345,
+    "open_singlet_weight": 0.20239469693651263,
+    "transition_character": 0.9453002330367457
+  },
+  {
+    "iteration": 11,
+    "average_energy": -11.12930769599711,
+    "gap_ev": 1.2841891462404629,
+    "orbital_residual": 6.486046120401934e-05,
+    "open_singlet_weight": 0.2024182581139639,
+    "transition_character": 0.9452880743992707
+  },
+  {
+    "iteration": 12,
+    "average_energy": -11.129307699416334,
+    "gap_ev": 1.2823619247456712,
+    "orbital_residual": 2.437373674130149e-05,
+    "open_singlet_weight": 0.20238418498895167,
+    "transition_character": 0.9452903550547043
+  },
+  {
+    "iteration": 13,
+    "average_energy": -11.12930769990689,
+    "gap_ev": 1.282061397848847,
+    "orbital_residual": 9.238091551011518e-06,
+    "open_singlet_weight": 0.20238340368609284,
+    "transition_character": 0.9452928670275241
+  },
+  {
+    "iteration": 14,
+    "average_energy": -11.129307699978991,
+    "gap_ev": 1.2819256527471319,
+    "orbital_residual": 4.565690023619617e-06,
+    "open_singlet_weight": 0.20237969194848207,
+    "transition_character": 0.9452941385916378
+  },
+  {
+    "iteration": 15,
+    "average_energy": -11.129307699987915,
+    "gap_ev": 1.2819431037035467,
+    "orbital_residual": 2.2249149686653924e-06,
+    "open_singlet_weight": 0.2023796965575542,
+    "transition_character": 0.9452945970259278
+  },
+  {
+    "iteration": 16,
+    "average_energy": -11.129307699990449,
+    "gap_ev": 1.2819543207735091,
+    "orbital_residual": 6.624197610854976e-07,
+    "open_singlet_weight": 0.2023795744018382,
+    "transition_character": 0.9452948317398326
+  },
+  {
+    "iteration": 17,
+    "average_energy": -11.12930769999068,
+    "gap_ev": 1.2819581046032407,
+    "orbital_residual": 1.3280479921329302e-07,
+    "open_singlet_weight": 0.20237959330469235,
+    "transition_character": 0.9452948552592968
+  },
+  {
+    "iteration": 18,
+    "average_energy": -11.129307699990699,
+    "gap_ev": 1.2819590193782446,
+    "orbital_residual": 4.251318019149464e-08,
+    "open_singlet_weight": 0.20237960853223327,
+    "transition_character": 0.9452948547586805
+  }
+]

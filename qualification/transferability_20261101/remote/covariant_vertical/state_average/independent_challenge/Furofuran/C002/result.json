@@ -1,0 +1,122 @@
+{
+  "id": "C002",
+  "molecule": "Furofuran",
+  "parents": [
+    {
+      "gap_ev": 9.79074779717449,
+      "qualified": true,
+      "target_assignment_qualified": true,
+      "open_singlet_weight": 0.9982640749198631,
+      "eigenvalues": [
+        -19.437227886969648,
+        -19.0774245418307,
+        -18.79188550384044
+      ],
+      "ci": [
+        [
+          -0.997347505139958,
+          0.0037431857297805927,
+          0.07269073222697855
+        ],
+        [
+          -0.0007136544212591883,
+          -0.9991316604531473,
+          0.04165832182773632
+        ],
+        [
+          0.07278354682528843,
+          0.04149594728077188,
+          0.9964841402003359
+        ]
+      ],
+      "matrix": [
+        [
+          -19.433812893528252,
+          0.000608567714112233,
+          0.046801367128527754
+        ],
+        [
+          0.000608567714112233,
+          -19.07692919612787,
+          0.011871944728738374
+        ],
+        [
+          0.046801367128527754,
+          0.011871944728738374,
+          -18.79579584298467
+        ]
+      ],
+      "nodes": 32,
+      "matrix_convergence_16_to_32_ev": 1.9334852827049075e-13,
+      "covariance_error_ev": 1.9334852827049075e-13,
+      "energy_labels_used": false,
+      "source_sha256": "8b76308682cee6047002fa5c7b1676e2655f75e2afc2b5612d8d08a30f89fc3f",
+      "closure_source_sha256": "d1f1ab5f188be692ffaf4e5acc13b18513b5404bf2dec5679e37b75a51e6a7ee",
+      "scope": "vertical group-projected closure at ground NTO orbitals, not an optimized molecular surface"
+    },
+    {
+      "gap_ev": 8.20474561503792,
+      "qualified": true,
+      "target_assignment_qualified": true,
+      "open_singlet_weight": 0.9941095685276822,
+      "eigenvalues": [
+        -22.99725892211763,
+        -22.69574008214131,
+        -22.470121102181828
+      ],
+      "ci": [
+        [
+          -0.9958721353196037,
+          0.006896465802755543,
+          0.09050485541342068
+        ],
+        [
+          7.033358462500694e-05,
+          -0.9970504342949168,
+          0.07674911416755448
+        ],
+        [
+          0.09076720303699806,
+          0.0764386697408379,
+          0.992934259969456
+        ]
+      ],
+      "matrix": [
+        [
+          -22.99292672770095,
+          0.0015883065832859625,
+          0.04753038375882959
+        ],
+        [
+          0.0015883065832859625,
+          -22.69441109160867,
+          0.017191781204126625
+        ],
+        [
+          0.04753038375882959,
+          0.017191781204126625,
+          -22.475782287131167
+        ]
+      ],
+      "nodes": 32,
+      "matrix_convergence_16_to_32_ev": 2.9002279240573614e-13,
+      "covariance_error_ev": 1.9334852827049075e-13,
+      "energy_labels_used": false,
+      "source_sha256": "8b76308682cee6047002fa5c7b1676e2655f75e2afc2b5612d8d08a30f89fc3f",
+      "closure_source_sha256": "d1f1ab5f188be692ffaf4e5acc13b18513b5404bf2dec5679e37b75a51e6a7ee",
+      "scope": "vertical group-projected closure at ground NTO orbitals, not an optimized molecular surface"
+    }
+  ],
+  "qualified": true,
+  "excitation_ev": 8.997746706106206,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "energy_labels_used": false,
+  "scope": "state-specific active-pair, two-state averaged orbital optimization; diagnostic only"
+}
