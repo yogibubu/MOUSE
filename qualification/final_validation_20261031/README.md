@@ -107,3 +107,22 @@ included in that snapshot.
 The new molecular geometries are rendered by actual Jmol in the manuscript's
 independent-cohort plate. Combined with the existing plate, the two-page structure
 artifact contains 34 molecules. Geometry hashes and renderer provenance are saved.
+
+## Closing pass
+
+`collect_final.py` reports each of the four operational gates separately and never
+opens segregated labels. Numerical closure of attempts is distinguished from a
+scientific accuracy or speed claim. `escape_nuclear_saddle.py` follows negative
+nuclear curvature with a fixed 0.08-bohr initial displacement and checkpointed
+BFGS descent on the SAME electronic model. It allows at most three descendants
+and 60 accepted steps per descendant, retains state-following guards, and
+certifies a minimum only after an analytic Hessian removes negative vibrational
+curvature. It records an unresolved attempt if this bounded continuation fails;
+no imaginary frequency is discarded.
+
+For the separate benzoxadiazole state challenge, the first rank-two parent
+converged. The second parent oscillated with initial requested electronic index
+six while its observed local index stabilized at four. Its finite checkpoint
+and original history were verified and saved before resuming the identical
+solver, which re-estimates the local index from that checkpoint. Reference,
+Hamiltonian, rank, state thresholds and reference labels are unchanged.
