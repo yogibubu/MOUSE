@@ -623,3 +623,13 @@ Numerical continuation can interpolate F to the original Q endpoint; it does
 not alter lambda or the final 50/50 energy. Executed source hashes, 46 final
 core/LINK/APOC regressions, two surface contract tests, and the four-gate
 campaign are retained in `qualification/final_validation_20261031`.
+
+Nuclear response now contracts the feature field before differentiating the
+transported operators. Charge/spin moments are differentiated through a pulled
+back density matrix, and the second frame jet is contracted with its adjoint.
+Global and covalent local frames retain the same derivatives. This avoids
+coordinate-by-feature-by-AO-pair tensors. Kernel applications are batched, and
+multi-CSF nuclear response reuses its independently assembled orbital/CI Hessian
+instead of rebuilding an unused orbital block. No numerical Hessian, response
+term omission, energy-model change or relaxed tolerance is introduced. A complete
+48-by-48 Phthalimide analytic Hessian is retained in the final qualification.

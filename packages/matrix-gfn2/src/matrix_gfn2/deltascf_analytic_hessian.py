@@ -101,8 +101,23 @@ def _spin_geometry(polarization,spin_density,ds,d2s):
     return np.array([dpotential,-dpotential]).transpose(1,0,2,3),h
 
 
-def _response_blocks(coefficients, components, ds, d2s, explicit_components, kernels, polarization, *, orbital_pairs=None):
-    """Analytic Hessian in a local symmetric-metric/exponential-orbital chart."""
+def _add_charge_response(base,charge):
+    """Preserve batched response when adding the frozen AO-pair kernel."""
+    def kernel(dp):return base(dp)+charge.response(dp)
+    def batch(dp):
+        native=(base.response_batch(dp) if hasattr(base,'response_batch')
+                else np.asarray([base(p) for p in dp]))
+        return native+charge.response_batch(dp)
+    kernel.response_batch=batch
+    return kernel
+
+
+def _response_blocks(coefficients, components, ds, d2s, explicit_components, kernels, polarization, *, orbital_pairs=None, compute_orbital_hessian=True):
+    """Analytic blocks in the metric/exponential chart; omitted Hkk is None.
+
+    A caller with an independently assembled orbital/CI Hessian may skip
+    duplicate Hkk work while retaining complete RR and KR response blocks.
+    """
     n = coefficients[0].shape[0];nr = len(ds)
     shared = len(coefficients) == 1
     cs = coefficients*2 if shared else coefficients
@@ -129,9 +144,10 @@ def _response_blocks(coefficients, components, ds, d2s, explicit_components, ker
     # Coefficient derivatives; chart C(R,k)=C0 (C0.T S(R) C0)^-1/2 exp(k).
     metric = [np.array([c.T @ d @ c for d in ds]) for c in cs]
     cr = [np.array([-.5*c @ m for m in mm]) for c,mm in zip(cs,metric)]
-    ck = [[c @ g if affected(sector,spin) else np.zeros_like(c)
-           for sector,g in generators] for spin,c in enumerate(cs)]
-    hrr = np.zeros((nr,nr));hkk = np.zeros((nk,nk));hkr = np.zeros((nk,nr))
+    ck = ([[c @ g if affected(sector,spin) else np.zeros_like(c)
+            for sector,g in generators] for spin,c in enumerate(cs)]
+          if compute_orbital_hessian else None)
+    hrr = np.zeros((nr,nr));hkk = np.zeros((nk,nk)) if compute_orbital_hessian else None;hkr = np.zeros((nk,nr))
     for index,(weight,occ,fock) in enumerate(components):
         ps = np.array([_density(c,o) for c,o in zip(cs,occ)])
         kernel = kernels[index]
@@ -139,13 +155,18 @@ def _response_blocks(coefficients, components, ds, d2s, explicit_components, ker
         f_explicit = explicit_components[index][0][:,None]+spin_fr
         explicit_rr = explicit_components[index][1]+spin_rr
         pr = np.array([[_density_first(cs[s],occ[s],cr[s][r]) for s in range(2)] for r in range(nr)])
-        pk = np.array([[_density_first(cs[s],occ[s],ck[s][k]) for s in range(2)] for k in range(nk)])
-        def density_kernel(dp):
-            common = kernel(np.sum(dp,axis=0))
-            spin_fock,_,_ = polarization.evaluate(dp)
-            return common[None]+spin_fock
-        kr = np.array([density_kernel(p) for p in pr])
-        kk = np.array([density_kernel(p) for p in pk])
+        def density_kernel_batch(dp):
+            if not len(dp):return np.empty_like(dp)
+            total=np.sum(dp,axis=1)
+            common=(kernel.response_batch(total) if hasattr(kernel,'response_batch')
+                    else np.asarray([kernel(p) for p in total]))
+            spin=(polarization.response_batch(dp) if hasattr(polarization,'response_batch')
+                  else np.asarray([polarization.evaluate(p)[0] for p in dp]))
+            return common[:,None]+spin
+        kr=density_kernel_batch(pr)
+        if compute_orbital_hessian:
+            pk=np.array([[_density_first(cs[s],occ[s],ck[s][k]) for s in range(2)] for k in range(nk)])
+            kk=density_kernel_batch(pk)
         for a in range(nr):
             for b in range(nr):
                 value = explicit_rr[a,b] + np.sum(f_explicit[a]*pr[b])+np.sum(f_explicit[b]*pr[a])+np.sum(pr[a]*kr[b])
@@ -158,8 +179,9 @@ def _response_blocks(coefficients, components, ds, d2s, explicit_components, ker
         # Contract all density-kernel bilinears at once. The previous literal
         # pair loop formed dense second coefficient derivatives for every
         # orbital pair, needlessly costing O(nk**2*n**3).
-        orbital_block = pk.reshape(nk,2*n*n) @ kk.reshape(nk,2*n*n).T
-        one_body = np.zeros_like(orbital_block)
+        if compute_orbital_hessian:
+            orbital_block = pk.reshape(nk,2*n*n) @ kk.reshape(nk,2*n*n).T
+            one_body = np.zeros_like(orbital_block)
         for spin,c in enumerate(cs):
             indices = [a for a,(sector,_) in enumerate(generators) if affected(sector,spin)]
             pairs = [np.argwhere(generators[a][1] == 1.)[0] for a in indices]
@@ -168,15 +190,16 @@ def _response_blocks(coefficients, components, ds, d2s, explicit_components, ker
             il,jl = np.asarray(pairs).T
             factors = 2*(occ[spin,jl]-occ[spin,il])
             fmo = c.T @ fock[spin] @ c
-            moving = np.array([g.T @ fmo+fmo @ g for _,g in (generators[a] for a in indices)])
-            one_body[np.ix_(indices,indices)] += (moving[:,il,jl]*factors).T
+            if compute_orbital_hessian:
+                moving = np.array([g.T @ fmo+fmo @ g for _,g in (generators[a] for a in indices)])
+                one_body[np.ix_(indices,indices)] += (moving[:,il,jl]*factors).T
             nuclear_fmo = (cr[spin].transpose(0,2,1) @ fock[spin] @ c
                 + c.T @ fock[spin] @ cr[spin]
                 + c.T @ (f_explicit[:,spin]+kr[:,spin]) @ c)
             hkr[indices] += weight*(nuclear_fmo[:,il,jl]*factors).T
         # Symmetric local exponential-chart curvature is the symmetric part
         # of the moving-frame residual derivative, including off stationarity.
-        hkk += weight*(orbital_block+.5*(one_body+one_body.T))
+        if compute_orbital_hessian:hkk += weight*(orbital_block+.5*(one_body+one_body.T))
     return hrr,hkk,hkr
 
 
@@ -230,8 +253,7 @@ def evaluate_gfn2_deltascf_analytic_hessian(calculator,coordinates_angstrom,
             charge=context.charge_correction
             dfield,efield=charge.geometry(np.sum(spin_density,axis=0),ds,d2s)
             df=df+dfield;err=err+efield
-            base=kernel
-            kernel=lambda dp,base=base:base(dp)+charge.response(dp)
+            kernel=_add_charge_response(kernel,charge)
         kernels.append(kernel);explicit.append((df,err))
     hrr,a,b = _response_blocks(coefficients,components,ds,d2s,explicit,kernels,context.polarization)
     a = .5*(a+a.T)

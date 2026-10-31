@@ -8,7 +8,7 @@ relative constraints or the ground-reference subtraction.
 import numpy as np
 from scipy.linalg import solve_sylvester
 from .nonlocal_response import TransportedOperators,rotation_jet
-from .deltascf_analytic_hessian import _fixed_density_geometry,_response_blocks
+from .deltascf_analytic_hessian import _fixed_density_geometry,_response_blocks,_add_charge_response
 from .multicsf import quartic_jet
 
 
@@ -70,15 +70,14 @@ class FrozenLowdinERI:
 def nuclear_response(obj,c,eri_transport):
     """Return parent total E gradient, frozen/relaxed nuclear Hessian and KR."""
     e,g,h=obj.evaluate(c,True);cache=obj.cache;ci=cache['ci'].copy();rank=obj.rank;ctx=obj.context;nr=ctx.state.coordinates_bohr.size;nk=len(g)
-    gradient_matrix=np.zeros((rank,rank,nr));rr=np.zeros((nr,nr));kr=np.zeros((nk,nr));orbital_check=np.zeros((nk,nk));ds=d2s=None
+    gradient_matrix=np.zeros((rank,rank,nr));rr=np.zeros((nr,nr));kr=np.zeros((nk,nr));ds=d2s=None
     for i,(occ,triplet,focks) in enumerate(zip(obj.occupations,obj.triplets,cache['diagonal'])):
         pm=np.array([(c*x)@c.T for x in occ]);total=pm.sum(0)
         kernel,ds,df,d2s,explicit=_fixed_density_geometry(ctx,pm)
         if ctx.charge_correction is not None:
-            charge=ctx.charge_correction;dfield,efield=charge.geometry(total,ds,d2s);df=df+dfield;explicit=explicit+efield;base=kernel
-            kernel=lambda p,base=base,charge=charge:base(p)+charge.response(p)
-        rri,kki,kri=_response_blocks([c],[(2.,occ,focks[0]),(-1.,triplet,focks[1])],ds,d2s,[(df,explicit)]*2,[kernel]*2,ctx.polarization,orbital_pairs=(obj.left,obj.right))
-        rr+=ci[i]**2*rri;kr+=ci[i]**2*kri;orbital_check+=ci[i]**2*kki
+            charge=ctx.charge_correction;dfield,efield=charge.geometry(total,ds,d2s);df=df+dfield;explicit=explicit+efield;kernel=_add_charge_response(kernel,charge)
+        rri,_,kri=_response_blocks([c],[(2.,occ,focks[0]),(-1.,triplet,focks[1])],ds,d2s,[(df,explicit)]*2,[kernel]*2,ctx.polarization,orbital_pairs=(obj.left,obj.right),compute_orbital_hessian=False)
+        rr+=ci[i]**2*rri;kr+=ci[i]**2*kri
         q=sum(2*(c.T@f@c)*o[None,:] for f,o in zip(focks[0],occ))-sum((c.T@f@c)*o[None,:] for f,o in zip(focks[1],triplet))
         weighted=c@(.5*(q+q.T))@c.T
         pt=np.array([(c*x)@c.T for x in triplet])

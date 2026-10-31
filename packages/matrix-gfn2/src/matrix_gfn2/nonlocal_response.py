@@ -55,25 +55,38 @@ class TransportedOperators:
         r,_,_=rotation_jet(state.coordinates_bohr,anchor,second=False)
         self.u=self.lift(r,identity=True)
         self.a=self.u@operators@self.u.T
-        self._first=None;self._second=None
+        self._first=None;self._second=None;self._du=None
 
     def lift(self,r,identity=False):
         n=self.original.shape[-1];u=np.eye(n) if identity else np.zeros((n,n))
         for ids in self.groups:u[np.ix_(ids,ids)]=r
         return u
 
+    def frame_jet(self,*,second=False):
+        """Small AO rotation jets, without a coordinate/operator tensor."""
+        if second and self._second is None:
+            _,dr,d2r=rotation_jet(self.state.coordinates_bohr,self.anchor)
+            self._du=np.array([self.lift(r) for r in dr])
+            self._second=(self._du,d2r)
+        if self._du is None:
+            _,dr,_=rotation_jet(self.state.coordinates_bohr,self.anchor,second=False)
+            self._du=np.array([self.lift(r) for r in dr])
+        return self._du,None if not second else self._second[1]
+
+    def frame_curvature(self,adjoint):
+        """Contract the AO rotation's second jet before lifting features."""
+        _,d2r=self.frame_jet(second=True)
+        reduced=sum((adjoint[np.ix_(ids,ids)] for ids in self.groups),np.zeros((3,3)))
+        return np.einsum('rsij,ij->rs',d2r,reduced)
+
     def first(self):
         if self._first is None:
-            _,dr,_=rotation_jet(self.state.coordinates_bohr,self.anchor,second=False)
-            du=np.array([self.lift(r) for r in dr])
+            du,_=self.frame_jet()
             self._first=np.array([z@self.original@self.u.T+self.u@self.original@z.T for z in du])
         return self._first
 
     def second(self,i,j):
-        if self._second is None:
-            _,dr,d2r=rotation_jet(self.state.coordinates_bohr,self.anchor)
-            self._second=(np.array([self.lift(r) for r in dr]),d2r)
-        du,d2r=self._second;z=self.lift(d2r[i,j])
+        du,d2r=self.frame_jet(second=True);z=self.lift(d2r[i,j])
         return (z@self.original@self.u.T+self.u@self.original@z.T
                 +du[i]@self.original@du[j].T+du[j]@self.original@du[i].T)
 
@@ -100,11 +113,56 @@ class PairTerm:
     def metric_potential(self,p):
         a=np.einsum('a,aij->ij',self.field(p),self.a)
         return .5*(p@a+a@p)
+    def _weighted_transport(self,p):
+        """Contract the feature index before taking frame derivatives."""
+        field=self.field(p);transport=self.transport;u=transport.u
+        original=(field@transport.original.reshape(len(field),-1)).reshape(self.s.shape)
+        current=u@original@u.T
+        return field,original,current
+
     def explicit_gradient(self,p):
-        # Remaining coordinate dependence after dS is contracted by native integrals.
-        da=self.transport.first();db=self.metric(self.s,da)
-        return np.einsum('a,raij,ij->r',self.field(p),db,p).reshape(-1,3)
+        # Native integrals contract dS separately. Only the molecular rotation
+        # is explicit here; never allocate (coordinates, features, AOs, AOs).
+        if not hasattr(self.transport,'frame_jet'):
+            da=self.transport.first();db=self.metric(self.s,da)
+            return np.einsum('a,raij,ij->r',self.field(p),db,p).reshape(-1,3)
+        _,original,_=self._weighted_transport(p);u=self.transport.u
+        du,_=self.transport.frame_jet();density=self.metric(self.s.T,p)
+        adjoint=density@u@original.T+density.T@u@original
+        return np.einsum('rij,ij->r',du,adjoint).reshape(-1,3)
+
     def geometry(self,p,ds,d2s):
+        """Exact fixed-density F_R and E_RR with early feature contraction.
+
+        q_a = A_a^0 : [U.T sym(S.T P) U]. Differentiate this small
+        density-like matrix, rather than every transported feature operator.
+        The second derivative contracts the frozen field first and lifts only
+        the 3x3 rotation adjoint. All overlap/frame/cross terms are retained.
+        """
+        transport=self.transport
+        if not hasattr(transport,'frame_jet') or len(ds)!=transport.state.coordinates_bohr.size:
+            return self._operator_geometry(p,ds,d2s)
+        u=transport.u;du,_=transport.frame_jet(second=True)
+        field,original,current=self._weighted_transport(p)
+        density=self.metric(self.s.T,p);density_r=self.metric(ds.transpose(0,2,1),p)
+        pulled_r=(du.transpose(0,2,1)@density@u+u.T@density_r@u
+                  +u.T@density@du)
+        dq=pulled_r.reshape(len(ds),-1)@transport.original.reshape(len(field),-1).T
+        current_r=du@original@u.T+u@original@du.transpose(0,2,1)
+        df=(self.metric(ds,current)+self.metric(self.s,current_r)
+            +((dq@self.k.T)@self.b.reshape(len(field),-1)).reshape(ds.shape))
+        rr=dq@self.k@dq.T
+        rr+=np.einsum('rsij,ij->rs',d2s,self.metric(p,current.T))
+        cross=current_r.reshape(len(ds),-1)@density_r.reshape(len(ds),-1).T
+        rr+=cross+cross.T
+        adjoint=density@u@original.T+density.T@u@original
+        rr+=transport.frame_curvature(adjoint)
+        cross=(density.T@du@original).reshape(len(ds),-1)@du.reshape(len(ds),-1).T
+        rr+=cross+cross.T
+        return df,rr
+
+    def _operator_geometry(self,p,ds,d2s):
+        """Generic operator-jet fallback, including contracted test charts."""
         da=self.transport.first();db=self.metric(ds[:,None],self.a)+self.metric(self.s,da)
         dq=np.einsum('raij,ij->ra',db,p);v=self.field(p)
         df=np.einsum('a,raij->rij',v,db)+np.einsum('ra,aij->rij',dq@self.k.T,self.b)

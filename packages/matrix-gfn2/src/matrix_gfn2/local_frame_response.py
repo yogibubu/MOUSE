@@ -59,6 +59,19 @@ class LocalTransportedOperators:
    self.u[np.ix_(ids,ids)]=r
    for k,coordinate in enumerate(coordinates):self.du[coordinate][np.ix_(ids,ids)]=dr[k]
   self.a=self.u@operators@self.u.T;self._first=None
+ def frame_jet(self,*,second=False):
+  """Small local AO rotation jets; feature operators are not differentiated."""
+  if second:
+   for jet in self.jets.values():
+    if jet['d2'] is None:
+     cluster=jet['cluster'];_,_,jet['d2']=rotation_jet(self.state.coordinates_bohr[cluster],self.anchor[cluster])
+  return self.du,None
+ def frame_curvature(self,adjoint):
+  self.frame_jet(second=True);nr=self.state.coordinates_bohr.size;value=np.zeros((nr,nr))
+  for atom,ids in self.blocks:
+   jet=self.jets[atom];coords=jet['coordinates']
+   value[np.ix_(coords,coords)]+=np.einsum('rsij,ij->rs',jet['d2'],adjoint[np.ix_(ids,ids)])
+  return value
  def first(self):
   if self._first is None:self._first=self.du[:,None]@self.original@self.u.T+self.u@self.original@self.du[:,None].transpose(0,1,3,2)
   return self._first

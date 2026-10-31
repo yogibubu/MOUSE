@@ -98,7 +98,7 @@ def restricted_ground_analytic_hessian(calculator, coordinates_angstrom, *,
                                      reference_result, spin_reference=None):
     """Relaxed analytic Hessian on the restricted common-orbital manifold."""
     from .deltascf_analytic_hessian import (_fixed_density_geometry,
-        _response_blocks, AnalyticDeltaSCFHessian)
+        _response_blocks, _add_charge_response, AnalyticDeltaSCFHessian)
     from .calculator import ANGSTROM_TO_BOHR
     from .spin_reference import validate_spin_reference
     if not isinstance(reference_result, RestrictedGroundResult):
@@ -116,8 +116,7 @@ def restricted_ground_analytic_hessian(calculator, coordinates_angstrom, *,
         charge = context.charge_correction
         dfield, efield = charge.geometry(r.density_ao, ds, d2s)
         df, err = df+dfield, err+efield
-        base = kernel
-        kernel = lambda dp: base(dp)+charge.response(dp)
+        kernel = _add_charge_response(kernel,charge)
     rr, kk, kr = _response_blocks([r.coefficients[0]],
         [(1., r.occupations, r.fock)], ds, d2s, [(df, err)], [kernel], context.polarization)
     kk = .5*(kk+kk.T)
