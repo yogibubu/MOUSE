@@ -113,3 +113,11 @@ __all__ = [
 ]
 
 __all__ += list(_state_reuse.__all__) + list(_scf_adapters.__all__)
+
+from .deltascf import (
+    DeterminantOrbitals, DeltaSCFState, determinant_overlap, match_deltascf_states, follow_deltascf_state,
+)
+__all__ += ["DeterminantOrbitals", "DeltaSCFState", "determinant_overlap", "match_deltascf_states", "follow_deltascf_state"]
+
+from .deltascf import SpinAdaptedSinglet, singlet_csf_overlap, follow_spin_adapted_singlet
+__all__ += ['SpinAdaptedSinglet', 'singlet_csf_overlap', 'follow_spin_adapted_singlet']

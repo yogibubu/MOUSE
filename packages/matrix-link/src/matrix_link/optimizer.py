@@ -1462,6 +1462,10 @@ def _prepare_resident_oniom_component(
             linear_scaling_threshold=spec.matrix_gfn2_linear_scaling_threshold,
             alpb_solvent=spec.matrix_gfn2_alpb_solvent,
         )
+        if spec.native_excited_method != 'tda':
+            # The orbital-optimized component has an integer-occupation,
+            # zero-temperature functional; set it before the first SCC call.
+            calculator._calculator.temperature_kelvin = 0.
         return CappedQMComponent(spec, calculator, topology_directory)
     if name in {"gfnff", "gfnff_reference"}:
         calculator = _prepare_gfnff_session(
@@ -1698,6 +1702,7 @@ class GeometryEvaluationService:
 
         self._apoc_state_history = APOCStateHistory(maximum_history=4)
         self._matrix_gfn2_session = None
+        self._orbital_component = None
         self._gfn2_zaff_session = None
         self._gfnff_session = None
         self._capped_subtractive_session = None
@@ -1713,6 +1718,8 @@ class GeometryEvaluationService:
             self.backend is not None
             and _normalized_backend_name(self.backend.name) == "matrix_gfn2"
         ):
+            if self.backend.native_excited_method not in {'tda','roks_50_50'}:
+                raise NotImplementedError('use DeltaSCF/ROKS through capped_subtractive components or CappedQMComponent')
             from .resident_calculators import create_resident_calculator
 
             symmetry_contract = None
@@ -1752,6 +1759,10 @@ class GeometryEvaluationService:
                     2.0e-5, 0.01 * self.settings.max_force_tolerance,
                 ),
             )
+        if self._matrix_gfn2_session is not None and self.backend.native_excited_method == 'roks_50_50':
+            from .qmqm_component import CappedQMComponent
+            self._matrix_gfn2_session._calculator.temperature_kelvin=0.
+            self._orbital_component=CappedQMComponent(self.backend,self._matrix_gfn2_session,self.run_dir/'roks_50_50')
         if (
             self.backend is not None
             and _normalized_backend_name(self.backend.name) == "gfn2_zaff_composite"
@@ -5356,6 +5367,9 @@ class GeometryEvaluationService:
         backend_override: QMScanBackend | None = None,
     ) -> OptimizerEvaluation:
         vector = np.asarray(q, dtype=float).reshape(-1)
+        if getattr(self,'_orbital_component',None) is not None:
+            from .composite_roks_component import _models
+            _models(self._orbital_component.backend)  # validate bytes before cache hits too
         if use_cache:
             with self._lock:
                 cached = self.cache.lookup(
@@ -5363,7 +5377,8 @@ class GeometryEvaluationService:
                     requested_properties=requested_properties,
                 )
             if (cached is not None
-                and getattr(self, "_capped_subtractive_session", None) is not None
+                and (getattr(self, "_capped_subtractive_session", None) is not None
+                     or getattr(self, "_orbital_component", None) is not None)
                 and cached.result.scf_state is None):
                 # Disk cache records omit the in-process component references.
                 # Reevaluate before permitting this point to advance APOC.
@@ -5813,6 +5828,10 @@ class GeometryEvaluationService:
             self._capped_subtractive_session.accept(evaluation.result.scf_state)
             return
 
+        if getattr(self, "_orbital_component", None) is not None:
+            self._orbital_component.accept(evaluation.result)
+            return
+
         if getattr(self, "_std2_session", None) is not None:
             self._std2_session.accept(evaluation.result)
             return
@@ -6204,7 +6223,8 @@ class GeometryEvaluationService:
     ) -> PointEvaluationResult:
         backend = self.backend if backend_override is None else backend_override
         assert backend is not None
-        if _normalized_backend_name(backend.name) == "capped_subtractive":
+        if (_normalized_backend_name(backend.name) == "capped_subtractive"
+            or getattr(self,'_orbital_component',None) is not None):
             from matrix_apoc import StateContinuityError
             try:
                 return self._evaluate_builtin_backend(
@@ -6406,6 +6426,15 @@ class GeometryEvaluationService:
         backend = self.backend if backend_override is None else backend_override
         if backend is not None and requested_properties:
             backend = replace(backend, properties=tuple(requested_properties))
+        if getattr(self,'_orbital_component',None) is not None:
+            from .composite_roks_component import _contract
+            if _contract(backend)!=_contract(self.backend):
+                raise ValueError('ROKS 50/50 backend override changes the accepted-state contract')
+            requested=set(backend.properties or ('energy','gradient'))
+            if requested-{'energy','gradient','hessian'}:raise ValueError('unsupported ROKS 50/50 properties')
+            result=self._orbital_component.evaluate(point.coordinates_angstrom,compute_hessian='hessian' in requested)
+            return replace(result,point_index=point.index,displacement=point.displacement,
+                gradient_hartree_per_bohr=result.gradient_hartree_per_bohr if 'gradient' in requested else None)
         if (
             backend is not None
             and _normalized_backend_name(backend.name) == "capped_subtractive"
@@ -7972,6 +8001,8 @@ def _restart_identity_value(value: object) -> object:
             item.name: _restart_identity_value(getattr(value, item.name))
             for item in fields(value)
             if item.name != "resume_completed_composite_terms"
+            and not (item.name in {"native_roks_anchor_path","native_roks_anchor_sha256","native_roks_response_path","native_roks_response_sha256","native_roks_composite_response_paths","native_roks_composite_response_sha256","native_roks_composite_saddle_indices","native_roks_composite_following","native_roks_composite_ground_recovery","native_roks_composite_reference_policy","native_roks_composite_component_tracking"}
+                     and getattr(value,item.name) is None)
         }
     if isinstance(value, Mapping):
         return {
@@ -8018,10 +8049,13 @@ def _electronic_restart_artifact_identity(backend: object | None) -> object:
         }
 
     payload: dict[str, object] = {}
-    for name in ("restart_artifact", "initial_scf_density_artifact"):
+    for name in ("restart_artifact", "initial_scf_density_artifact", "native_roks_anchor_path", "native_roks_response_path"):
         value = getattr(backend, name, None)
         if value is not None:
             payload[name] = record(value)
+    composite_paths=getattr(backend,'native_roks_composite_response_paths',None)
+    if composite_paths is not None:
+        payload['native_roks_composite_response_paths']=[record(p) for p in composite_paths]
     history = tuple(getattr(backend, "restart_history_artifacts", ()) or ())
     if history:
         payload["restart_history_artifacts"] = [record(value) for value in history]
@@ -9674,6 +9708,8 @@ def _native_sycart_matrix_gfn2_is_eligible(
     if str(effective_kind).strip().lower().replace("-", "_") != "sycart":
         return False
     if backend is None or _normalized_backend_name(backend.name) != "matrix_gfn2":
+        return False
+    if backend.native_excited_method != 'tda':
         return False
     if backend.matrix_gfn2_alpb_solvent is not None:
         # The compiled SYCART loop has a gas-phase-only SCC kernel.
@@ -14829,6 +14865,12 @@ def _write_final_matrix_gfn2_scaling_observables(
     session = getattr(service, "_matrix_gfn2_session", None)
     if backend_name != "matrix_gfn2" or session is None:
         return None
+    if (backend.electronic_state > 0
+            and backend.native_excited_method in {"deltascf","roks","roks_50_50"}):
+        # These SCC/Mayer descriptors describe S0 and require a fresh S0 solve.
+        # They do not describe the optimized determinant/CSF (or the two
+        # separate 50/50 states), and must not abort its completed optimizer.
+        return None
     target = root / "gfn2_scaling_observables.json"
     if target.is_file():
         try:
@@ -14869,6 +14911,7 @@ def _evaluate_final_cartesian_hessian(
     } or (backend_name == "pyscf" and getattr(service, "_pyscf_session", None) is not None)
     gradient_only_backend = gradient_only_backend or (
         backend_name == "matrix_gfn2" and int(backend.electronic_state) > 0
+        and getattr(backend,'native_excited_method','tda') == 'tda'
     )
     if backend_name == "capped_subtractive":
         gradient_only_backend = any(
@@ -14920,7 +14963,7 @@ def _finite_difference_final_cartesian_hessian(
     hessian = np.zeros((ncart, ncart), dtype=float)
     backend = getattr(service, "backend", None)
     backend_name = _normalized_backend_name(backend.name) if backend is not None else ""
-    direct_matrix_gfn2 = backend_name == "matrix_gfn2" and not bool(
+    direct_matrix_gfn2 = backend_name == "matrix_gfn2" and int(backend.electronic_state)==0 and not bool(
         getattr(getattr(service, "settings", None), "include_cv_exponential_field", False)
     )
     center_gradient = current.gradient_hartree_per_bohr

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import argparse
-from dataclasses import replace
+from dataclasses import fields, replace
 import json
 from pathlib import Path
 from typing import Sequence
@@ -28,6 +28,8 @@ from .state import (
     natural_orbitals,
     recanonicalize_orbitals,
 )
+from .deltascf import (DeltaSCFState, match_deltascf_states,
+                       SpinAdaptedSinglet, follow_spin_adapted_singlet)
 from .trexio_adapter import read_electronic_state_trexio, write_electronic_state_trexio
 
 
@@ -123,8 +125,9 @@ def _parser(prog: str = "apoc") -> argparse.ArgumentParser:
     orbitals.add_argument("--overwrite", action="store_true")
     track = state_sub.add_parser(
         "track",
-        help="Match TD states by transition-density overlap rather than energy order",
+        help="Match TD transition densities or DeltaSCF determinants rather than energy order",
     )
+    track.add_argument("--mode", choices=("td", "deltascf", "roks"), default="td")
     track.add_argument("reference", type=Path)
     track.add_argument("candidate", type=Path)
     track.add_argument(
@@ -292,21 +295,42 @@ def _state_command(args: argparse.Namespace) -> int:
         and np.allclose(reference.coordinates_bohr, candidate.coordinates_bohr)
         and np.array_equal(reference.atomic_numbers, candidate.atomic_numbers)
     ):
+        if args.mode in {"deltascf", "roks"} and (
+            reference.basis is None or candidate.basis is None
+            or not np.allclose(reference.overlap_ao, candidate.overlap_ao, atol=1e-10, rtol=0)
+            or any(not np.array_equal(getattr(reference.basis, f.name),
+                                      getattr(candidate.basis, f.name))
+                   for f in fields(reference.basis))
+        ):
+            raise ValueError("DeltaSCF tracking requires --cross-overlap unless the stored AO bases agree")
         cross = reference.overlap_ao
     else:
         raise ValueError(
             "state tracking at different geometries requires --cross-overlap; "
             "the producing backend or APOC basis engine must evaluate S_AB"
         )
-    matches = match_excited_states(
-        reference.excited_states,
-        candidate.excited_states,
-        cross,
-        overlap_reference=reference.overlap_ao,
-        overlap_candidate=candidate.overlap_ao,
-        minimum_overlap=args.minimum_overlap,
-        ambiguity_margin=args.ambiguity_margin,
-    )
+    if args.mode == "roks":
+        _, match = follow_spin_adapted_singlet(
+            SpinAdaptedSinglet(1,DeltaSCFState(1,reference),reference.total_energy_hartree),
+            (SpinAdaptedSinglet(1,DeltaSCFState(1,candidate),candidate.total_energy_hartree),),cross,
+            minimum_overlap=args.minimum_overlap,ambiguity_margin=args.ambiguity_margin,strict=False,
+        )
+        matches = (match,)
+    elif args.mode == "deltascf":
+        matches = match_deltascf_states(
+            (DeltaSCFState(1, reference),), (DeltaSCFState(1, candidate),), cross,
+            minimum_overlap=args.minimum_overlap, ambiguity_margin=args.ambiguity_margin,
+        )
+    else:
+        matches = match_excited_states(
+            reference.excited_states,
+            candidate.excited_states,
+            cross,
+            overlap_reference=reference.overlap_ao,
+            overlap_candidate=candidate.overlap_ao,
+            minimum_overlap=args.minimum_overlap,
+            ambiguity_margin=args.ambiguity_margin,
+        )
     print(
         json.dumps(
             [

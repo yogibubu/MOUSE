@@ -94,12 +94,30 @@ class CappedQMComponent:
             ):
                 raise ValueError('native QM/QM response requires closed-shell singlet or explicit spin-flip')
 
+        if self.native and backend.native_excited_method == 'roks_50_50':
+            self.calculator._calculator.temperature_kelvin=0.
+            from .composite_roks_component import restore_accepted,initialize_from_seeds
+            restore_accepted(self)
+            initialize_from_seeds(self)
+
     def evaluate(self, coordinates_angstrom, *, compute_hessian=False):
         if self.native:
             from matrix_gfn2.response_reference import stationary_response_reference
             from .scan import PointEvaluationResult
             calc = self.calculator._calculator
-            ground, diagnostics = stationary_response_reference(calc, coordinates_angstrom)
+            if self.backend.native_roks_composite_reference_policy=='geometry_only':
+                return self._native_excited(coordinates_angstrom,compute_hessian,None,
+                    dict(reference_policy='geometry_only',ground_scc_evaluations=0))
+            try:
+                ground, diagnostics = stationary_response_reference(calc, coordinates_angstrom)
+            except RuntimeError as exc:
+                if (self.backend.native_roks_composite_ground_recovery!='accepted_retry'
+                        or self.reference is None):
+                    raise
+                ground, diagnostics = stationary_response_reference(calc,coordinates_angstrom,
+                    seed_state=self.reference[0].components[0].reference_state)
+                diagnostics=dict(diagnostics,independent_reference_failure=str(exc),
+                    recovery_source='last accepted checkpoint; identical residual gates')
             if self.backend.electronic_state > 0:
                 return self._native_excited(coordinates_angstrom, compute_hessian, ground, diagnostics)
             hessian = (calc.ground_state_hessian(ground.orbital_state).hessian_hartree_per_bohr2
@@ -144,6 +162,9 @@ class CappedQMComponent:
             'state_gradient_root_recalculated': selected != spec.electronic_state})
 
     def _native_excited(self, coordinates, compute_hessian, ground, diagnostics):
+        if self.backend.native_excited_method != 'tda':
+            from .deltascf_component import evaluate_component
+            return evaluate_component(self, coordinates, compute_hessian, ground, diagnostics)
         from matrix_apoc import ExcitedState, follow_excited_state
         from matrix_gfn2.stda import grimme_xtb_stda, freeze_closed_shell_stda_selection, compact_xtb_tda
         from matrix_gfn2.sf_tda import grimme_xtb_sf_tda, SFTDASelectionPolicy
@@ -244,7 +265,11 @@ class CappedQMComponent:
         if selected != int(result.execution['gradient_electronic_state']):
             raise ValueError('accepted QM/QM component has derivatives of another root')
         if self.native:
-            if result.scf_state is None or result.scf_state[1].state_id != selected:
+            if self.backend.native_excited_method == 'roks_50_50':
+                if (result.scf_state is None or len(result.scf_state[1])!=2
+                    or any(s.state_id!=selected for s in result.scf_state[1])):
+                    raise ValueError('accepted 50/50 component lacks both selected CSFs')
+            elif result.scf_state is None or result.scf_state[1].state_id != selected:
                 raise ValueError('accepted native QM/QM component lacks its selected state')
         elif not any(x.state_id == selected for x in self.tracker._state_fingerprints(result)):
             raise ValueError('accepted external QM/QM component lacks its selected state')
@@ -254,6 +279,9 @@ class CappedQMComponent:
         if self.backend.electronic_state <= 0:
             return
         if self.native:
+            if self.backend.native_excited_method == 'roks_50_50':
+                from .composite_roks_component import persist_accepted
+                persist_accepted(self,result.scf_state)
             if self.anchor is None:
                 self.anchor = result.scf_state
             self.reference = result.scf_state

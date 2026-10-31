@@ -300,6 +300,24 @@ class QMScanBackend:
     tda_spectral_range_ev: float = 7.0
     tda_virtual_count: int | None = None
     tda_shift_model: str = "grimme_diagonal"
+    native_excited_method: str = "tda"
+    deltascf_promotion: tuple[int, int] | None = None
+    orbital_saddle_index: int | None = None
+    native_roks_anchor_path: Path | None = None
+    native_roks_anchor_sha256: str | None = None
+    native_roks_response_path: Path | None = None
+    native_roks_response_sha256: str | None = None
+    native_roks_composite_response_paths: tuple[Path, Path] | None = None
+    native_roks_composite_response_sha256: tuple[str, str] | None = None
+    native_roks_composite_saddle_indices: tuple[int, int] | None = None
+    native_roks_composite_seed_paths: tuple[Path, Path] | None = None
+    native_roks_composite_seed_sha256: tuple[str, str] | None = None
+    native_roks_composite_following: str | None = None
+    native_roks_composite_ground_recovery: str | None = None
+    native_roks_composite_reference_policy: str | None = None
+    native_roks_composite_component_tracking: str | None = None
+    native_roks_composite_ground_surface: str | None = None
+    native_roks_composite_orbital_coupling: str | None = None
     two_photon_spectral_range_ev: float = 20.0
     restart_artifact: Path | None = None
     initial_scf_density_artifact: Path | None = None
@@ -322,6 +340,120 @@ class QMScanBackend:
     std2_hessian_step_bohr: float = 0.01
 
     def __post_init__(self) -> None:
+        if self.native_excited_method not in {"tda", "deltascf", "roks", "roks_50_50"}:
+            raise ValueError("native excited method must be tda, deltascf, roks or roks_50_50")
+        if self.native_excited_method != "tda":
+            if (_normalized_backend_name(self.name) != "matrix_gfn2"
+                    or self.electronic_state < 1 or self.multiplicity != 1
+                    or self.state_spin != "singlet" or self.state_tracking != "apoc"):
+                raise ValueError("DeltaSCF/ROKS requires an explicit native singlet with APOC tracking")
+            pair = self.deltascf_promotion
+            if (not isinstance(pair, (tuple, list)) or len(pair) != 2 or pair[0] == pair[1]
+                    or any(isinstance(i, (bool, np.bool_)) or not isinstance(i, (int, np.integer)) or i < 0 for i in pair)):
+                raise ValueError("DeltaSCF/ROKS requires explicit zero-based (hole, particle) orbital indices")
+            object.__setattr__(self, 'deltascf_promotion', tuple(int(i) for i in pair))
+            if self.tda_virtual_count is not None:
+                raise ValueError("TDA virtual truncation is incompatible with DeltaSCF/ROKS")
+        elif self.deltascf_promotion is not None:
+            raise ValueError("orbital promotion requires native DeltaSCF or ROKS")
+        if self.native_roks_composite_reference_policy not in {None,'geometry_only'}:
+            raise ValueError('unknown composite reference policy')
+        if self.native_roks_composite_component_tracking not in {None,'active_pair'}:
+            raise ValueError('unknown composite component tracking')
+        if self.native_roks_composite_ground_surface not in {None,'native_plus_gaps'}:
+            raise ValueError('unknown composite ground surface')
+        if self.native_roks_composite_orbital_coupling not in {None,'shared_active_pair','shared_active_hole','relative_active_pair'}:
+            raise ValueError('unknown composite orbital coupling')
+        if self.native_roks_composite_orbital_coupling is not None and (
+                self.native_roks_composite_reference_policy!='geometry_only'
+                or self.native_roks_composite_ground_surface!='native_plus_gaps'
+                or self.native_roks_composite_following!='character_newton_index'):
+            raise ValueError('shared active pair requires geometry-only native-plus-gaps stationary-root following')
+        if self.native_roks_composite_ground_surface is not None and self.native_roks_composite_reference_policy!='geometry_only':
+            raise ValueError('native-plus-gaps requires direct geometry-only orbital references')
+        if self.native_roks_composite_reference_policy is not None and self.native_roks_composite_ground_recovery is not None:
+            raise ValueError('a geometry-only reference does not use ground SCC recovery')
+        if self.native_roks_composite_ground_recovery not in {None,'accepted_retry'}:
+            raise ValueError('unknown ROKS 50/50 ground-reference recovery policy')
+        if self.native_roks_composite_following not in {None, 'character', 'character_adaptive_index','character_newton_index','local_csf','local_csf_adaptive_index'}:
+            raise ValueError('unknown ROKS 50/50 following policy')
+        if self.native_excited_method == 'roks_50_50':
+            if any(v is not None for v in (self.native_roks_anchor_path,self.native_roks_response_path,self.orbital_saddle_index)):
+                raise ValueError('ROKS 50/50 requires two no-offset responses and separate saddle indices')
+            paths=self.native_roks_composite_response_paths
+            indices=self.native_roks_composite_saddle_indices
+            if not isinstance(paths,(tuple,list)) or len(paths)!=2:
+                raise ValueError('ROKS 50/50 requires ordered raw, spectral response paths')
+            if (not isinstance(indices,(tuple,list)) or len(indices)!=2 or
+                any(isinstance(i,(bool,np.bool_)) or not isinstance(i,(int,np.integer)) or i<0 for i in indices)):
+                raise ValueError('ROKS 50/50 requires two nonnegative orbital saddle indices')
+            from matrix_gfn2 import load_response_reference,FrozenNonlocalResponseReference
+            paths=tuple(Path(p).expanduser().resolve() for p in paths)
+            refs=tuple(load_response_reference(p) for p in paths)
+            if not all(isinstance(r,FrozenNonlocalResponseReference) for r in refs):
+                raise ValueError('ROKS 50/50 requires frozen nonlocal full/spectral responses')
+            a,b=refs
+            for field in ('atomic_numbers','orbital_shell','anchor_coordinates_bohr','operators','pair_charge_hartree','pair_spin_hartree','pair_reference_moments'):
+                if not np.array_equal(getattr(a,field),getattr(b,field)):
+                    raise ValueError('ROKS 50/50 responses must share atoms, anchor and charge/spin response')
+            if paths[0]==paths[1] or a.fingerprint==b.fingerprint:
+                raise ValueError('ROKS 50/50 requires distinct raw and spectral models')
+            actual=tuple(hashlib.sha256(p.read_bytes()).hexdigest() for p in paths)
+            if self.native_roks_composite_response_sha256 is not None and tuple(self.native_roks_composite_response_sha256)!=actual:
+                raise ValueError('ROKS 50/50 response checksums differ from the backend contract')
+            object.__setattr__(self,'native_roks_composite_response_paths',paths)
+            object.__setattr__(self,'native_roks_composite_response_sha256',actual)
+            object.__setattr__(self,'native_roks_composite_saddle_indices',tuple(int(i) for i in indices))
+            if self.native_roks_composite_seed_paths is not None:
+                seeds=self.native_roks_composite_seed_paths
+                if not isinstance(seeds,(tuple,list)) or len(seeds)!=2:raise ValueError('provide ordered full/spectral ROKS seed checkpoints')
+                seeds=tuple(Path(p).expanduser().resolve() for p in seeds)
+                checksums=tuple(hashlib.sha256(p.read_bytes()).hexdigest() for p in seeds)
+                if self.native_roks_composite_seed_sha256 is not None and tuple(self.native_roks_composite_seed_sha256)!=checksums:
+                    raise ValueError('ROKS seed checksums differ from the backend contract')
+                object.__setattr__(self,'native_roks_composite_seed_paths',seeds)
+                object.__setattr__(self,'native_roks_composite_seed_sha256',checksums)
+            elif self.native_roks_composite_seed_sha256 is not None:raise ValueError('ROKS seed checksums require checkpoint paths')
+
+        elif any(v is not None for v in (self.native_roks_composite_seed_paths,self.native_roks_composite_seed_sha256,self.native_roks_composite_response_paths,self.native_roks_composite_response_sha256,self.native_roks_composite_saddle_indices,self.native_roks_composite_following,self.native_roks_composite_ground_recovery,self.native_roks_composite_reference_policy,self.native_roks_composite_component_tracking,self.native_roks_composite_ground_surface,self.native_roks_composite_orbital_coupling)):
+            raise ValueError('composite ROKS options require native_excited_method=roks_50_50')
+        if self.orbital_saddle_index is not None:
+            if (self.native_excited_method != 'roks'
+                    or isinstance(self.orbital_saddle_index, (bool, np.bool_))
+                    or not isinstance(self.orbital_saddle_index, (int, np.integer))
+                    or self.orbital_saddle_index < 0):
+                raise ValueError('an orbital saddle index requires ROKS and a nonnegative integer')
+        if self.native_roks_anchor_path is not None and self.native_roks_response_path is not None:
+            raise ValueError('choose an energy anchor or a no-offset response model')
+        if self.native_roks_response_path is not None:
+            if self.native_excited_method!='roks':
+                raise ValueError('a no-offset ROKS response requires native_excited_method=roks')
+            from matrix_gfn2 import load_response_reference
+            path=Path(self.native_roks_response_path).expanduser().resolve()
+            load_response_reference(path)
+            actual=hashlib.sha256(path.read_bytes()).hexdigest()
+            if self.native_roks_response_sha256 is not None and self.native_roks_response_sha256!=actual:
+                raise ValueError('no-offset ROKS response file checksum differs from the backend contract')
+            object.__setattr__(self,'native_roks_response_path',path)
+            object.__setattr__(self,'native_roks_response_sha256',actual)
+        elif self.native_roks_response_sha256 is not None:
+            raise ValueError('a no-offset ROKS response checksum requires its file path')
+        # Every finite-difference scan is governed by the packaged, frozen
+        # contract.  This prevents ad-hoc scripts (including KEYMAKER jobs)
+        # from silently changing frames, units, or stencil conventions.
+        if self.native_roks_anchor_path is not None:
+            if self.native_excited_method!='roks':
+                raise ValueError('a frozen ROKS anchor requires native_excited_method=roks')
+            from matrix_gfn2 import load_frozen_roks_anchor
+            path=Path(self.native_roks_anchor_path).expanduser().resolve()
+            load_frozen_roks_anchor(path)
+            actual=hashlib.sha256(path.read_bytes()).hexdigest()
+            if self.native_roks_anchor_sha256 is not None and self.native_roks_anchor_sha256!=actual:
+                raise ValueError('frozen ROKS anchor file checksum differs from the backend contract')
+            object.__setattr__(self,'native_roks_anchor_path',path)
+            object.__setattr__(self,'native_roks_anchor_sha256',actual)
+        elif self.native_roks_anchor_sha256 is not None:
+            raise ValueError('a frozen ROKS anchor checksum requires its file path')
         # Every finite-difference scan is governed by the packaged, frozen
         # contract.  This prevents ad-hoc scripts (including KEYMAKER jobs)
         # from silently changing frames, units, or stencil conventions.
@@ -962,6 +1094,10 @@ def run_qm_scan_points(
         reuse_center_state and name in {"gaussian", "gdv"}
     )
     evaluation_points = prepared_points
+    if name=='matrix_gfn2' and spec.native_excited_method=='roks_50_50':
+        centers=[p for p in prepared_points if abs(float(p.displacement))<=1e-14]
+        if len(centers)!=1:raise ValueError('ROKS 50/50 scans require one undisplaced reference point')
+        center=centers[0];evaluation_points=(center,)+tuple(p for p in prepared_points if p is not center)
     active_spec = spec
     if center_state_reuse_active:
         centers = tuple(
@@ -1736,7 +1872,7 @@ def _run_qm_scan_point(
     if name == "xtb":
         return _run_xtb_scan_point(spec, atoms, point, point_dir)
     if name == "matrix_gfn2":
-        return _run_matrix_gfn2_scan_point(spec, atoms, point, matrix_gfn2_session)
+        return _run_matrix_gfn2_scan_point(spec, atoms, point, matrix_gfn2_session, run_dir=point_dir.parent/"roks_50_50")
     if name in {"gfnff", "gfnff_reference"}:
         return _run_gfnff_scan_point(spec, atoms, point, gfnff_session)
     if name == "openmm":
@@ -2117,6 +2253,8 @@ def _composite_restart_json_value(value: object) -> object:
             item.name: _composite_restart_json_value(getattr(value, item.name))
             for item in fields(value)
             if item.name != "resume_completed_composite_terms"
+            and not (item.name in {"native_roks_anchor_path","native_roks_anchor_sha256","native_roks_response_path","native_roks_response_sha256","native_roks_composite_response_paths","native_roks_composite_response_sha256","native_roks_composite_seed_paths","native_roks_composite_seed_sha256","native_roks_composite_saddle_indices","native_roks_composite_following","native_roks_composite_ground_recovery","native_roks_composite_reference_policy","native_roks_composite_component_tracking","native_roks_composite_ground_surface","native_roks_composite_orbital_coupling"}
+                     and getattr(value,item.name) is None)
         }
     if isinstance(value, Mapping):
         return {
@@ -4273,7 +4411,27 @@ def _run_matrix_gfn2_scan_point(
     atoms: tuple[str, ...],
     point: ScanPoint,
     session: object | None,
+    *, run_dir: Path | None = None,
 ) -> PointEvaluationResult:
+    if spec.native_excited_method == 'roks_50_50':
+        if session is None or run_dir is None:raise ValueError('ROKS 50/50 requires a resident scan session and restart directory')
+        from .qmqm_component import CappedQMComponent
+        from .composite_roks_component import _contract
+        session._calculator.temperature_kelvin=0.
+        component=getattr(session,'_link_roks_component',None)
+        if component is None or component.run_dir.resolve()!=Path(run_dir).resolve():
+            component=CappedQMComponent(spec,session,run_dir);session._link_roks_component=component
+        elif _contract(component.backend)!=_contract(spec):raise ValueError('ROKS 50/50 scan contract changed')
+        requested=set(spec.properties or ('energy','gradient'))
+        if requested-{'energy','gradient','hessian'}:raise ValueError('unsupported ROKS 50/50 properties')
+        if abs(float(point.displacement))>1e-14 and component.reference is None:
+            raise ValueError('ROKS 50/50 displacements require an accepted central state')
+        result=component.evaluate(point.coordinates_angstrom,compute_hessian='hessian' in requested)
+        if abs(float(point.displacement))<=1e-14:component.accept(result)
+        return replace(result,point_index=point.index,displacement=point.displacement,
+            gradient_hartree_per_bohr=result.gradient_hartree_per_bohr if 'gradient' in requested else None)
+    if spec.native_excited_method != 'tda':
+        raise NotImplementedError('DeltaSCF/ROKS scan points require CappedQMComponent with an explicit accepted state')
     requested_mode = str(spec.gradient_mode).strip().casefold()
     requested = (
         {str(item).strip().casefold() for item in spec.properties}
