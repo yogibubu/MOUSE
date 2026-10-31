@@ -1,0 +1,225 @@
+{
+  "original_results_preserved": true,
+  "rows": [
+    {
+      "id": "B001",
+      "molecule": "Diazirine",
+      "status": "matched"
+    },
+    {
+      "id": "B002",
+      "molecule": "Diketopyrrolopyrrole",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B003",
+      "molecule": "Azobenzene",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B004",
+      "molecule": "Nitropyridine_N-oxide",
+      "status": "matched"
+    },
+    {
+      "id": "B005",
+      "molecule": "Phthalimide",
+      "status": "matched"
+    },
+    {
+      "id": "B006",
+      "molecule": "HCN",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B007",
+      "molecule": "Adenine",
+      "status": "matched"
+    },
+    {
+      "id": "B008",
+      "molecule": "Guanine",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B009",
+      "molecule": "Coumarin",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B010",
+      "molecule": "Phenazine",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B011",
+      "molecule": "Aza-naphthalene",
+      "status": "matched"
+    },
+    {
+      "id": "B012",
+      "molecule": "Carbon_monoxide",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B013",
+      "molecule": "Triazapentalene",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B014",
+      "molecule": "Adenine",
+      "status": "matched"
+    },
+    {
+      "id": "B015",
+      "molecule": "Bimane_Syn",
+      "status": "matched"
+    },
+    {
+      "id": "B016",
+      "molecule": "Cyclopentadiene",
+      "status": "matched"
+    },
+    {
+      "id": "B017",
+      "molecule": "Cyclazine",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B018",
+      "molecule": "Dimethylaniline",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B019",
+      "molecule": "Carbonic_acid",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B020",
+      "molecule": "Octatetraene",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B021",
+      "molecule": "HCN",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B022",
+      "molecule": "Furan",
+      "status": "matched"
+    },
+    {
+      "id": "B023",
+      "molecule": "Nitrous_oxide",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B024",
+      "molecule": "Phthalimide",
+      "status": "matched"
+    },
+    {
+      "id": "B025",
+      "molecule": "Quinoxaline",
+      "status": "matched"
+    },
+    {
+      "id": "B026",
+      "molecule": "Aminobenzonitrile",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B027",
+      "molecule": "Phthalazine",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B028",
+      "molecule": "Azulene",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B029",
+      "molecule": "Nitropyridine_N-oxide",
+      "status": "matched"
+    },
+    {
+      "id": "B030",
+      "molecule": "Quinoxaline",
+      "status": "matched"
+    },
+    {
+      "id": "B031",
+      "molecule": "Phthalazine",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B032",
+      "molecule": "Azulene",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B033",
+      "molecule": "Dimethylaniline",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B034",
+      "molecule": "Naphthalene",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B035",
+      "molecule": "Adenine",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B036",
+      "molecule": "Hydrogen_peroxide",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B037",
+      "molecule": "Triazapentalene",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B038",
+      "molecule": "Butadiene",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B039",
+      "molecule": "Benzoquinone",
+      "status": "matched"
+    },
+    {
+      "id": "B040",
+      "molecule": "Furan",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B041",
+      "molecule": "Guanine",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B042",
+      "molecule": "Phthalazine",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B043",
+      "molecule": "Isobutene",
+      "status": "deferred_user_scope_reduction"
+    },
+    {
+      "id": "B044",
+      "molecule": "Diazirine",
+      "status": "deferred_user_scope_reduction"
+    }
+  ]
+}

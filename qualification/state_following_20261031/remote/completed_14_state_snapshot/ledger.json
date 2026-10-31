@@ -1,0 +1,2669 @@
+{
+  "host": "oracle.sns.it",
+  "expected_states": 14,
+  "recorded_states": 14,
+  "matched_states": 14,
+  "closed": true,
+  "rows": [
+    {
+      "molecule": "Diazirine",
+      "state_label": "^1B_1",
+      "family": "n_pi",
+      "source_metadata": "data/json/MAIN/Diazirine.json",
+      "metadata_index": 0,
+      "geometry_source": "geometries/xyz/diazirine.xyz",
+      "geometry_sha256": "8485fa764e0aa958683e79240d3567f0ad84c37d55c3d1eb9b658940e097f80f",
+      "n_atoms": 5,
+      "n_heavy": 3,
+      "transition_type": "npi",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B001",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Diazirine",
+        "state": "B001",
+        "status": "matched",
+        "excitation_ev": 4.241949435486163,
+        "endpoint_energy_check_hartree": 0.0,
+        "joint_residual": 1.97758476261356e-15,
+        "joint_index": 1,
+        "minimum_curvature": 0.015597866492192202,
+        "final_guard": {
+          "local_csf": 1.0,
+          "anchor_active": 0.9514343885905125,
+          "transition": 0.9999003311641771,
+          "raw_transition": 0.9998016412863656,
+          "transition_metric": "rank_one",
+          "rank_one_limit": 0.9999013002849029,
+          "rank_one_margin": 0.9879801514335991,
+          "sector_norm": 0.9144893968483642,
+          "accepted": true
+        },
+        "seconds_current_run": 2.66959871200379,
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset": 0.0,
+        "baseline_untouched": true,
+        "exploratory_solver_recovery": true,
+        "reference_labels_read": false,
+        "baseline_result": {
+          "status": "prediction_pass_complete",
+          "host": "oracle.sns.it",
+          "molecule": "Diazirine",
+          "rows": [
+            {
+              "id": "B044",
+              "status": "not_representable",
+              "reason": "fixed reference root fails symmetry or compact projection"
+            },
+            {
+              "id": "B001",
+              "molecule": "Diazirine",
+              "family": "n_pi",
+              "status": "matched",
+              "excitation_ev": 4.241949435486163,
+              "parent_gaps_ev": [
+                4.959835231914228,
+                3.5240636390581455
+              ],
+              "joint_residual": 2.0660556598883772e-15,
+              "joint_index": 1,
+              "minimum_curvature_hartree": 0.015597866491867979,
+              "identity": [
+                {
+                  "profile": "full_response",
+                  "transition_overlap": 0.9844823260661573,
+                  "hole_norm": 0.9886975650337715,
+                  "particle_norm": 0.9999999999999998
+                },
+                {
+                  "profile": "qualified_spectral_response",
+                  "transition_overlap": 0.9998016412863644,
+                  "hole_norm": 0.9144893968506769,
+                  "particle_norm": 0.9999999999999999
+                }
+              ],
+              "weights": [
+                0.5,
+                0.5
+              ],
+              "lambda_exchange": 0.9,
+              "energy_offset": 0.0,
+              "reference_root": 1,
+              "numerical_reference_labels_read": false
+            }
+          ],
+          "numerical_reference_labels_read": false
+        },
+        "adopted_completed_exploratory_result": true,
+        "adopted_source_sha256": "d86431894b479c6217d6bdc9285a89751bbc98bcf4510454099ca7d03a28d9e2",
+        "selected_profile": "original_qualified_spectral",
+        "assignment_audit": {
+          "molecule": "Diazirine",
+          "state": "B001",
+          "target_root": 1,
+          "symmetry": "B1",
+          "target_parent_fidelities": [
+            0.9845795037558192,
+            0.9999003311632059
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9845795037558192,
+            0.9999003311632059
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.7104154608224579,
+            0.7179740174474434
+          ],
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 1,
+              "converged": true,
+              "projection_norm": 0.9350349314600543,
+              "rank_one_limit": 0.9999013002849029,
+              "parent_fidelities": [
+                0.9845795037558192,
+                0.9999003311632059
+              ],
+              "parent_projected_overlaps": [
+                0.9205253642517992,
+                0.9348494591329387
+              ],
+              "representable_single_pair": true
+            },
+            {
+              "root": 8,
+              "converged": true,
+              "projection_norm": 0.37227262506453007,
+              "rank_one_limit": 0.9994212616772684,
+              "parent_fidelities": [
+                0.014810945512622154,
+                0.013400306190031935
+              ],
+              "parent_projected_overlaps": [
+                0.0055105185706455055,
+                0.004985680087039472
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 16,
+              "converged": true,
+              "projection_norm": 0.2917995903915542,
+              "rank_one_limit": 0.9937809516196857,
+              "parent_fidelities": [
+                0.017394681906015418,
+                0.00012831699067788823
+              ],
+              "parent_projected_overlaps": [
+                0.005044194651597681,
+                3.720998645354243e-05
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 21,
+              "converged": true,
+              "projection_norm": 0.22323564375924798,
+              "rank_one_limit": 0.9776591220756438,
+              "parent_fidelities": [
+                0.9627100981009065,
+                0.9937093603535676
+              ],
+              "parent_projected_overlaps": [
+                0.21010990342934135,
+                0.21687544168549536
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 23,
+              "converged": true,
+              "projection_norm": 0.2792004198631256,
+              "rank_one_limit": 0.9879197753509452,
+              "parent_fidelities": [
+                0.12048097619811439,
+                0.13485212553886108
+              ],
+              "parent_projected_overlaps": [
+                0.03323198044640009,
+                0.03719594030923082
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 27,
+              "converged": true,
+              "projection_norm": 0.2741822286007126,
+              "rank_one_limit": 0.9841306835391225,
+              "parent_fidelities": [
+                0.002451891110629644,
+                0.0244079539002602
+              ],
+              "parent_projected_overlaps": [
+                0.0006615965834601097,
+                0.0065860261247560675
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 31,
+              "converged": true,
+              "projection_norm": 0.3253426586544244,
+              "rank_one_limit": 0.9975412278978588,
+              "parent_fidelities": [
+                0.02942401502471408,
+                0.02070956833230192
+              ],
+              "parent_projected_overlaps": [
+                0.009549349728255984,
+                0.006721139537220169
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 33,
+              "converged": true,
+              "projection_norm": 0.3873506523498938,
+              "rank_one_limit": 0.9988543820096807,
+              "parent_fidelities": [
+                0.002941497912655295,
+                9.944178766094311e-06
+              ],
+              "parent_projected_overlaps": [
+                0.0011380858283702089,
+                3.847471344372199e-06
+              ],
+              "representable_single_pair": false
+            }
+          ],
+          "numerical_reference_energies_used": false
+        },
+        "identity_policy_reaudit": {
+          "attainable_single_pair_fidelities": [
+            0.9845795037558192,
+            0.9999003311632059
+          ],
+          "projected_margins": [
+            0.7104154608224579,
+            0.7179740174474434
+          ],
+          "passed": true,
+          "reference_coverage_complete": false
+        }
+      }
+    },
+    {
+      "molecule": "Nitropyridine_N-oxide",
+      "state_label": "^1B_1",
+      "family": "n_pi",
+      "source_metadata": "data/json/MAIN/Nitropyridine_N-oxide.json",
+      "metadata_index": 4,
+      "geometry_source": "geometries/xyz/nitropyridine_n-oxide.xyz",
+      "geometry_sha256": "96a9d4d943f5db870385cf78024f29e62b86eb0f4c2fdea7e30c49051f573a78",
+      "n_atoms": 14,
+      "n_heavy": 10,
+      "transition_type": "npi",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B004",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Nitropyridine_N-oxide",
+        "state": "B004",
+        "status": "matched",
+        "excitation_ev": 4.263470323618237,
+        "joint_residual": 5.218048215738236e-15,
+        "joint_index": 6,
+        "minimum_curvature_hartree": 0.009869092507216824,
+        "guards": [
+          {
+            "local_csf": 1.0,
+            "anchor_active": 1.000000000000002,
+            "transition": 0.9938733344933626,
+            "raw_transition": 0.9934432994151152,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9995673139993573,
+            "rank_one_margin": 0.9747759382543755,
+            "sector_norm": 0.9967433549382951,
+            "accepted": true
+          },
+          {
+            "local_csf": 0.9999999999999942,
+            "anchor_active": 0.9578812694259399,
+            "transition": 0.9695871416934485,
+            "raw_transition": 0.9691676149108346,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9995673139993573,
+            "rank_one_margin": 0.9747759382543755,
+            "sector_norm": 0.9919403855843828,
+            "accepted": true
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0.0,
+        "reference_labels_read": false,
+        "baseline_preserved": true,
+        "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+        "parent_reports": [
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Nitropyridine_N-oxide",
+            "state": "B004",
+            "profile": "full",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "retained_full",
+            "residual": 3.248974440178687e-15,
+            "index": 3,
+            "energy_hartree": -25.95941396684067,
+            "guard": {
+              "local_csf": 1.0,
+              "anchor_active": 0.990149115351524,
+              "transition": 0.9938733344933627,
+              "raw_transition": 0.9934432994151153,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.9995673139993573,
+              "rank_one_margin": 0.9747759382543755,
+              "sector_norm": 0.9967433549382936,
+              "accepted": true
+            },
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Nitropyridine_N-oxide/B004/full/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 1.0127082769759,
+            "attempts": [],
+            "model_sha256": "ea42595a692d691b1b58ec2c7d9c4fe100079da55b7a7b8393ac07c08d9221d5",
+            "reference_labels_read": false
+          },
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Nitropyridine_N-oxide",
+            "state": "B004",
+            "profile": "spectral",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "assigned_nto",
+            "residual": 9.610368056911511e-16,
+            "index": 4,
+            "energy_hartree": -30.468145225373554,
+            "guard": {
+              "local_csf": 0.9999999999999865,
+              "anchor_active": 0.9614376818204582,
+              "transition": 0.9695871416934485,
+              "raw_transition": 0.9691676149108346,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.9995673139993573,
+              "rank_one_margin": 0.9747759382543755,
+              "sector_norm": 0.9919403855843818,
+              "accepted": true
+            },
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Nitropyridine_N-oxide/B004/spectral/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 4.5623102089739405,
+            "attempts": [],
+            "model_sha256": "7e1b1db7dd3b98b0f91752218c4721342136d49a19ad9d9dac3fdea09848a8a6",
+            "reference_labels_read": false
+          }
+        ],
+        "seconds_current_run": 8.096838986035436,
+        "component_gaps_ev": [
+          4.061080342708059,
+          4.465860304528511
+        ],
+        "ground_certificates": [
+          {
+            "residual": 8.025240338741414e-16,
+            "index": 0,
+            "minimum_curvature": 0.35480028297745353
+          },
+          {
+            "residual": 3.884133687434028e-14,
+            "index": 0,
+            "minimum_curvature": 0.5293658628517908
+          },
+          {
+            "residual": 8.174756735993631e-16,
+            "index": 0,
+            "minimum_curvature": 0.2556359732935078
+          }
+        ],
+        "assignment_audit": {
+          "molecule": "Nitropyridine_N-oxide",
+          "state": "B004",
+          "target_root": 2,
+          "symmetry": "B1",
+          "target_parent_fidelities": [
+            0.9938733344933625,
+            0.9695871416934484
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9938733344933625,
+            0.9695871416934484
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.9467512621281348,
+            0.9236165397368485
+          ],
+          "target_raw_overlaps": [
+            0.9934432994151152,
+            0.9691676149108346
+          ],
+          "attainable_single_pair_fidelity_squared_gt_half": true,
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 2,
+              "converged": true,
+              "projection_norm": 0.9529997964509196,
+              "rank_one_limit": 0.9995673139993574,
+              "parent_fidelities": [
+                0.9938733344933625,
+                0.9695871416934484
+              ],
+              "parent_projected_overlaps": [
+                0.9467512621281348,
+                0.9236165397368485
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        }
+      }
+    },
+    {
+      "molecule": "Phthalimide",
+      "state_label": "^1B_1",
+      "family": "n_pi",
+      "source_metadata": "data/json/CHROM/Phthalimide.json",
+      "metadata_index": 0,
+      "geometry_source": "geometries/xyz/phthalimide.xyz",
+      "geometry_sha256": "305717ae0036d643df96c6864a0acac55c1a9e5e3dce8c6b05eed1e4a685da05",
+      "n_atoms": 16,
+      "n_heavy": 11,
+      "transition_type": "npi",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B005",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Phthalimide",
+        "state": "B005",
+        "status": "matched",
+        "excitation_ev": 4.0698708353162205,
+        "joint_residual": 3.292822248592356e-11,
+        "joint_index": 0,
+        "minimum_curvature_hartree": 0.01272880370444458,
+        "guards": [
+          {
+            "local_csf": 1.0,
+            "anchor_active": 0.9999999999999998,
+            "transition": 0.9930652546109946,
+            "raw_transition": 0.9834980067634183,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9903659424160157,
+            "rank_one_margin": 0.8638804151238443,
+            "sector_norm": 0.998211642698687,
+            "accepted": true
+          },
+          {
+            "local_csf": 0.9999999999999948,
+            "anchor_active": 0.915967757062164,
+            "transition": 0.9290308820839769,
+            "raw_transition": 0.9200805450686801,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9903659424160157,
+            "rank_one_margin": 0.8638804151238443,
+            "sector_norm": 0.9983552963773006,
+            "accepted": true
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0.0,
+        "reference_labels_read": false,
+        "baseline_preserved": true,
+        "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+        "parent_reports": [
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Phthalimide",
+            "state": "B005",
+            "profile": "full",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "assigned_nto",
+            "residual": 6.58590918346108e-11,
+            "index": 0,
+            "energy_hartree": -24.56275097214628,
+            "guard": {
+              "local_csf": 0.9999999999999961,
+              "anchor_active": 0.9909947811661056,
+              "transition": 0.9930652546109948,
+              "raw_transition": 0.9834980067634185,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.9903659424160157,
+              "rank_one_margin": 0.8638804151238443,
+              "sector_norm": 0.9982116426986881,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Phthalimide/B005/full/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 5.970943150983658,
+            "attempts": [],
+            "model_sha256": "9cd37deff85c216ed57f8ad148ea0ce2d53e4a94861c7ec1c0851e19d9ab5068",
+            "reference_labels_read": false
+          },
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Phthalimide",
+            "state": "B005",
+            "profile": "spectral",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "native_stationary",
+            "residual": 1.1282641487753153e-14,
+            "index": 1,
+            "energy_hartree": -30.712289224799424,
+            "guard": {
+              "local_csf": 0.9999999999999808,
+              "anchor_active": 0.926749978711894,
+              "transition": 0.929030882083977,
+              "raw_transition": 0.9200805450686802,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.9903659424160157,
+              "rank_one_margin": 0.8638804151238443,
+              "sector_norm": 0.9983552963773016,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Phthalimide/B005/spectral/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 19.575470453011803,
+            "attempts": [
+              {
+                "seed": "assigned_nto",
+                "solver": "newton",
+                "status": "unresolved",
+                "reason": "ROKS orbital stationarity failed: residual=4.215e-02; orbital index=None, target=None",
+                "guard": {
+                  "local_csf": 0.9999968456523558,
+                  "anchor_active": 0.7063500982340942,
+                  "transition": 0.7063229655783414,
+                  "raw_transition": 0.6995182094550692,
+                  "transition_metric": "rank_one",
+                  "rank_one_limit": 0.9903659424160157,
+                  "rank_one_margin": 0.8638804151238443,
+                  "sector_norm": 0.9978134523138942,
+                  "accepted": false
+                },
+                "seconds": 13.081140915979631
+              }
+            ],
+            "model_sha256": "c9be8779d816ef40bf2a27cb0688c92545a15b5d0137e95ad54b689f2e9ee6b1",
+            "reference_labels_read": false
+          }
+        ],
+        "seconds_current_run": 12.179075984982774,
+        "component_gaps_ev": [
+          4.111027177807261,
+          4.028714492825373
+        ],
+        "ground_certificates": [
+          {
+            "residual": 6.38378239159465e-16,
+            "index": 0,
+            "minimum_curvature": 0.41226103083224847
+          },
+          {
+            "residual": 6.218649806519924e-13,
+            "index": 0,
+            "minimum_curvature": 0.6281908136911151
+          },
+          {
+            "residual": 1.1250844345851358e-15,
+            "index": 0,
+            "minimum_curvature": 0.49724947468029923
+          }
+        ],
+        "assignment_audit": {
+          "molecule": "Phthalimide",
+          "state": "B005",
+          "target_root": 1,
+          "symmetry": "B1",
+          "target_parent_fidelities": [
+            0.9930652546109944,
+            0.9290308820839767
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9930652546109944,
+            0.9290308820839767
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.9376355339245406,
+            0.8771753549029591
+          ],
+          "target_raw_overlaps": [
+            0.9834980067634183,
+            0.9200805450686801
+          ],
+          "attainable_single_pair_fidelity_squared_gt_half": true,
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 1,
+              "converged": true,
+              "projection_norm": 0.9533680063167531,
+              "rank_one_limit": 0.9903659424160159,
+              "parent_fidelities": [
+                0.9930652546109944,
+                0.9290308820839767
+              ],
+              "parent_projected_overlaps": [
+                0.9376355339245406,
+                0.8771753549029591
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        }
+      }
+    },
+    {
+      "molecule": "Adenine",
+      "state_label": "^1A''",
+      "family": "n_pi",
+      "source_metadata": "data/json/BIO/Adenine.json",
+      "metadata_index": 2,
+      "geometry_source": "geometries/xyz/adenine.xyz",
+      "geometry_sha256": "eb85ddaa431cbb64499d2e6bd22dce2f562efc7fced2eec04158f2fec02d25c2",
+      "n_atoms": 15,
+      "n_heavy": 10,
+      "transition_type": "npi",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B007",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Adenine",
+        "state": "B007",
+        "status": "matched",
+        "excitation_ev": 4.804639403721859,
+        "joint_residual": 5.440092820663267e-15,
+        "joint_index": 1,
+        "minimum_curvature_hartree": 0.015125591812544442,
+        "guards": [
+          {
+            "local_csf": 1.0,
+            "anchor_active": 1.0000000000000018,
+            "transition": 0.9828141759710542,
+            "raw_transition": 0.9794885468180672,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9966162177608995,
+            "rank_one_margin": 0.9311993513196689,
+            "sector_norm": 0.9979987061895256,
+            "accepted": true
+          },
+          {
+            "local_csf": 1.0,
+            "anchor_active": 0.9590724802248378,
+            "transition": 0.9482950541992557,
+            "raw_transition": 0.9450862302374294,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9966162177608995,
+            "rank_one_margin": 0.9311993513196689,
+            "sector_norm": 0.9904785194138087,
+            "accepted": true
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0.0,
+        "reference_labels_read": false,
+        "baseline_preserved": true,
+        "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+        "parent_reports": [
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Adenine",
+            "state": "B007",
+            "profile": "full",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "native_stationary",
+            "residual": 4.2555256193899105e-12,
+            "index": 0,
+            "energy_hartree": -21.778585716766994,
+            "guard": {
+              "local_csf": 1.0,
+              "anchor_active": 0.9801023928562917,
+              "transition": 0.9828141758632533,
+              "raw_transition": 0.979488546710631,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.9966162177608995,
+              "rank_one_margin": 0.9311993513196689,
+              "sector_norm": 0.9979987061858994,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Adenine/B007/full/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 14.343615572026465,
+            "attempts": [
+              {
+                "seed": "assigned_nto",
+                "solver": "newton",
+                "status": "unresolved",
+                "reason": "ROKS orbital stationarity failed: residual=1.247e-01; orbital index=None, target=None",
+                "guard": {
+                  "local_csf": 0.999996859671592,
+                  "anchor_active": 0.6985279061884718,
+                  "transition": 0.7068565129408989,
+                  "raw_transition": 0.704464664426817,
+                  "transition_metric": "rank_one",
+                  "rank_one_limit": 0.9966162177608995,
+                  "rank_one_margin": 0.9311993513196689,
+                  "sector_norm": 0.989063239968535,
+                  "accepted": false
+                },
+                "seconds": 9.655899746052455
+              }
+            ],
+            "model_sha256": "e6ef0925b1421146abb6b5842adf0f797d753a8fabc0d93853f6f9a8a8989dc0",
+            "reference_labels_read": false
+          },
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Adenine",
+            "state": "B007",
+            "profile": "spectral",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "native_stationary",
+            "residual": 3.0098609021811384e-10,
+            "index": 1,
+            "energy_hartree": -27.02318670580716,
+            "guard": {
+              "local_csf": 1.0,
+              "anchor_active": 0.9379806313237417,
+              "transition": 0.9482950542470979,
+              "raw_transition": 0.9450862302851097,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.9966162177608995,
+              "rank_one_margin": 0.9311993513196689,
+              "sector_norm": 0.9904785194088861,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Adenine/B007/spectral/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 13.053593862976413,
+            "attempts": [
+              {
+                "seed": "assigned_nto",
+                "solver": "newton",
+                "status": "unresolved",
+                "reason": "ROKS orbital stationarity failed: residual=1.248e-01; orbital index=None, target=None",
+                "guard": {
+                  "local_csf": 0.9999968520006531,
+                  "anchor_active": 0.6956955662469396,
+                  "transition": 0.7067868315983724,
+                  "raw_transition": 0.7043952188707797,
+                  "transition_metric": "rank_one",
+                  "rank_one_limit": 0.9966162177608995,
+                  "rank_one_margin": 0.9311993513196689,
+                  "sector_norm": 0.9858010768152374,
+                  "accepted": false
+                },
+                "seconds": 7.912081891961861
+              }
+            ],
+            "model_sha256": "b33928f60e4cf18c559cceaf4831ee973d649d178f2f604d8bc25e0689707030",
+            "reference_labels_read": false
+          }
+        ],
+        "seconds_current_run": 10.383365602989215,
+        "component_gaps_ev": [
+          4.379259631296308,
+          5.230019176147315
+        ],
+        "ground_certificates": [
+          {
+            "residual": 5.842077586302797e-16,
+            "index": 0,
+            "minimum_curvature": 0.46905675822425563
+          },
+          {
+            "residual": 4.211870889214252e-13,
+            "index": 0,
+            "minimum_curvature": 0.641817934483605
+          },
+          {
+            "residual": 7.840594192648729e-16,
+            "index": 0,
+            "minimum_curvature": 0.6727199399435023
+          }
+        ],
+        "assignment_audit": {
+          "molecule": "Adenine",
+          "state": "B007",
+          "target_root": 1,
+          "symmetry": "A\"",
+          "target_parent_fidelities": [
+            0.9828141759710544,
+            0.9482950541992559
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9828141759710544,
+            0.9482950541992559
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.8761412041217957,
+            0.8476731018895489
+          ],
+          "target_raw_overlaps": [
+            0.9794885468180672,
+            0.9450862302374294
+          ],
+          "attainable_single_pair_fidelity_squared_gt_half": true,
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 1,
+              "converged": true,
+              "projection_norm": 0.9064549628078139,
+              "rank_one_limit": 0.9966162177608994,
+              "parent_fidelities": [
+                0.9828141759710544,
+                0.9482950541992559
+              ],
+              "parent_projected_overlaps": [
+                0.8878622542766508,
+                0.8566781036800462
+              ],
+              "representable_single_pair": true
+            },
+            {
+              "root": 3,
+              "converged": true,
+              "projection_norm": 0.396107759425095,
+              "rank_one_limit": 0.9936916262966945,
+              "parent_fidelities": [
+                0.029778412681734447,
+                0.022878040446411143
+              ],
+              "parent_projected_overlaps": [
+                0.011721050154854975,
+                0.009005001790497283
+              ],
+              "representable_single_pair": false
+            }
+          ],
+          "numerical_reference_energies_used": false
+        }
+      }
+    },
+    {
+      "molecule": "Aza-naphthalene",
+      "state_label": "^1A_u",
+      "family": "n_pi",
+      "source_metadata": "data/json/MAIN/Aza-naphthalene.json",
+      "metadata_index": 6,
+      "geometry_source": "geometries/xyz/azanaphthalene.xyz",
+      "geometry_sha256": "e2e9c208e2cc69f03f31a06f5a1f808cac15abb373ee43bfd2a5db7da9d73490",
+      "n_atoms": 14,
+      "n_heavy": 10,
+      "transition_type": "npi",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B011",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Aza-naphthalene",
+        "state": "B011",
+        "status": "matched",
+        "excitation_ev": 5.278554329461959,
+        "endpoint_energy_check_hartree": 0.0,
+        "joint_residual": 7.095582801874833e-13,
+        "joint_index": 8,
+        "minimum_curvature": 0.0011176208577442191,
+        "final_guard": {
+          "local_csf": 0.9999999999999913,
+          "anchor_active": 0.990817930901284,
+          "transition": 0.9965862978185464,
+          "raw_transition": 0.9512314443640572,
+          "transition_metric": "rank_one",
+          "rank_one_limit": 0.9544897882363348,
+          "rank_one_margin": 0.7948784631903452,
+          "sector_norm": 0.9983068282853855,
+          "accepted": true
+        },
+        "seconds_current_run": 462.5486740540364,
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset": 0.0,
+        "baseline_untouched": true,
+        "exploratory_solver_recovery": true,
+        "reference_labels_read": false,
+        "baseline_result": null,
+        "adopted_completed_exploratory_result": true,
+        "adopted_source_sha256": "ff1454f9fa9df3a9bd139a794a6318088f4620e6f0ab970be11a71acded1b8a5",
+        "selected_profile": "original_qualified_spectral",
+        "assignment_audit": {
+          "molecule": "Aza-naphthalene",
+          "state": "B011",
+          "target_root": 1,
+          "symmetry": "Au",
+          "target_parent_fidelities": [
+            0.9979923143527403,
+            0.9965862978185464
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9979923143527403,
+            0.9965862978185464
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.8735996077047448,
+            0.8723688412198397
+          ],
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 1,
+              "converged": true,
+              "projection_norm": 0.917094200773671,
+              "rank_one_limit": 0.9544897882363348,
+              "parent_fidelities": [
+                0.9979923143527403,
+                0.9965862978185464
+              ],
+              "parent_projected_overlaps": [
+                0.8735996077047448,
+                0.8723688412198397
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        },
+        "identity_policy_reaudit": {
+          "attainable_single_pair_fidelities": [
+            0.9979923143527403,
+            0.9965862978185464
+          ],
+          "projected_margins": [
+            0.8735996077047448,
+            0.8723688412198397
+          ],
+          "passed": true,
+          "reference_coverage_complete": false
+        }
+      }
+    },
+    {
+      "molecule": "Adenine",
+      "state_label": "^1A'",
+      "family": "pi_pi",
+      "source_metadata": "data/json/BIO/Adenine.json",
+      "metadata_index": 0,
+      "geometry_source": "geometries/xyz/adenine.xyz",
+      "geometry_sha256": "eb85ddaa431cbb64499d2e6bd22dce2f562efc7fced2eec04158f2fec02d25c2",
+      "n_atoms": 15,
+      "n_heavy": 10,
+      "transition_type": "ppi",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B014",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Adenine",
+        "state": "B014",
+        "status": "matched",
+        "excitation_ev": 5.448970972580705,
+        "joint_residual": 3.3692059558942944e-13,
+        "joint_index": 7,
+        "minimum_curvature_hartree": 0.0025287901628629136,
+        "guards": [
+          {
+            "local_csf": 1.0,
+            "anchor_active": 1.0,
+            "transition": 0.9503172912679729,
+            "raw_transition": 0.9022342126403239,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.949403131912402,
+            "rank_one_margin": 0.6910340208240954,
+            "sector_norm": 0.9938262731109591,
+            "accepted": true
+          },
+          {
+            "local_csf": 1.0,
+            "anchor_active": 0.9192281486710084,
+            "transition": 0.9528259414290116,
+            "raw_transition": 0.9046159329600865,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.949403131912402,
+            "rank_one_margin": 0.6910340208240954,
+            "sector_norm": 0.9900513457386143,
+            "accepted": true
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0.0,
+        "reference_labels_read": false,
+        "baseline_preserved": true,
+        "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+        "parent_reports": [
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Adenine",
+            "state": "B014",
+            "profile": "full",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "assigned_nto",
+            "residual": 4.5428938388880624e-14,
+            "index": 3,
+            "energy_hartree": -21.72664220358734,
+            "guard": {
+              "local_csf": 1.0,
+              "anchor_active": 0.9315600321088299,
+              "transition": 0.9503172912679728,
+              "raw_transition": 0.9022342126403238,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.949403131912402,
+              "rank_one_margin": 0.6910340208240954,
+              "sector_norm": 0.9938262731109575,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Adenine/B014/full/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 11.227686116006225,
+            "attempts": [],
+            "model_sha256": "e6ef0925b1421146abb6b5842adf0f797d753a8fabc0d93853f6f9a8a8989dc0",
+            "reference_labels_read": false
+          },
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Adenine",
+            "state": "B014",
+            "profile": "spectral",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "assigned_nto",
+            "residual": 6.729716610365255e-13,
+            "index": 4,
+            "energy_hartree": -27.02777272216287,
+            "guard": {
+              "local_csf": 1.0,
+              "anchor_active": 0.9426338816798473,
+              "transition": 0.9528259414290113,
+              "raw_transition": 0.9046159329600862,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.949403131912402,
+              "rank_one_margin": 0.6910340208240954,
+              "sector_norm": 0.9900513457386131,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Adenine/B014/spectral/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 9.884063993988093,
+            "attempts": [],
+            "model_sha256": "b33928f60e4cf18c559cceaf4831ee973d649d178f2f604d8bc25e0689707030",
+            "reference_labels_read": false
+          }
+        ],
+        "seconds_current_run": 8.051433222019114,
+        "component_gaps_ev": [
+          5.79271463140127,
+          5.105227313760237
+        ],
+        "ground_certificates": [
+          {
+            "residual": 5.842077586302797e-16,
+            "index": 0,
+            "minimum_curvature": 0.46905675822425563
+          },
+          {
+            "residual": 4.211870889214252e-13,
+            "index": 0,
+            "minimum_curvature": 0.641817934483605
+          },
+          {
+            "residual": 7.840594192648729e-16,
+            "index": 0,
+            "minimum_curvature": 0.6727199399435023
+          }
+        ],
+        "assignment_audit": {
+          "molecule": "Adenine",
+          "state": "B014",
+          "target_root": 2,
+          "symmetry": "A'",
+          "target_parent_fidelities": [
+            0.9503172912679726,
+            0.9528259414290112
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9503172912679726,
+            0.9528259414290112
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.8041406398760491,
+            0.8062634125165754
+          ],
+          "target_raw_overlaps": [
+            0.9022342126403237,
+            0.9046159329600862
+          ],
+          "attainable_single_pair_fidelity_squared_gt_half": true,
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 2,
+              "converged": true,
+              "projection_norm": 0.8912770416040745,
+              "rank_one_limit": 0.9494031319124021,
+              "parent_fidelities": [
+                0.9503172912679726,
+                0.9528259414290112
+              ],
+              "parent_projected_overlaps": [
+                0.8041406398760491,
+                0.8062634125165754
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        }
+      }
+    },
+    {
+      "molecule": "Bimane_Syn",
+      "state_label": "^1A''",
+      "family": "pi_pi",
+      "source_metadata": "data/json/CHROM/Bimane_Syn.json",
+      "metadata_index": 0,
+      "geometry_source": "geometries/xyz/bimane_syn.xyz",
+      "geometry_sha256": "f0497aef88886f3704e161048abf42dcf042beb03fb1e6e4e22db93448d1199d",
+      "n_atoms": 14,
+      "n_heavy": 10,
+      "transition_type": "ppi",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B015",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Bimane_Syn",
+        "state": "B015",
+        "status": "matched",
+        "excitation_ev": 3.9114552088659638,
+        "joint_residual": 5.10702591327572e-15,
+        "joint_index": 2,
+        "minimum_curvature_hartree": 0.00019120017681898834,
+        "guards": [
+          {
+            "local_csf": 0.9999999999999801,
+            "anchor_active": 0.9999999999999972,
+            "transition": 0.9356773352793663,
+            "raw_transition": 0.9166606410579133,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9796760127616267,
+            "rank_one_margin": 0.8615486352140735,
+            "sector_norm": 0.990906641609638,
+            "accepted": true
+          },
+          {
+            "local_csf": 1.0,
+            "anchor_active": 0.9985600635843905,
+            "transition": 0.9491536334910737,
+            "raw_transition": 0.9298630471567455,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9796760127616267,
+            "rank_one_margin": 0.8615486352140735,
+            "sector_norm": 0.9883761379108567,
+            "accepted": true
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0.0,
+        "reference_labels_read": false,
+        "baseline_preserved": true,
+        "exploratory_model_revision": "complete projected DFT ground Fock",
+        "component_gaps_ev": [
+          3.9930084360250335,
+          3.829901981706701
+        ],
+        "ground_certificates": [
+          {
+            "residual": 1.4469808182168802e-11,
+            "index": 0,
+            "minimum_curvature": 0.4043107634035655
+          },
+          {
+            "residual": 4.449805385416691e-14,
+            "index": 0,
+            "minimum_curvature": 0.6280691149234583
+          },
+          {
+            "residual": 1.0148872766631096e-15,
+            "index": 0,
+            "minimum_curvature": 0.6393167937254896
+          }
+        ],
+        "assignment_audit": {
+          "molecule": "Bimane_Syn",
+          "state": "B015",
+          "target_root": 1,
+          "symmetry": "A\"",
+          "target_parent_fidelities": [
+            0.9356773352793664,
+            0.9491536334910737
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9356773352793664,
+            0.9491536334910737
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.847422134775316,
+            0.8596273180888824
+          ],
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 1,
+              "converged": true,
+              "projection_norm": 0.9244665875446673,
+              "rank_one_limit": 0.9796760127616264,
+              "parent_fidelities": [
+                0.9356773352793664,
+                0.9491536334910737
+              ],
+              "parent_projected_overlaps": [
+                0.847422134775316,
+                0.8596273180888824
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        },
+        "adopted_completed_exploratory_result": true,
+        "adopted_source_sha256": "956344f8c23786268713a09eeef0de88f54413afb3e2784044d8bcdcfbac3e05",
+        "selected_profile": "complete_projected_ground_fock",
+        "identity_policy_reaudit": {
+          "attainable_single_pair_fidelities": [
+            0.9356773352793664,
+            0.9491536334910737
+          ],
+          "projected_margins": [
+            0.847422134775316,
+            0.8596273180888824
+          ],
+          "passed": true,
+          "reference_coverage_complete": false
+        }
+      }
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "state_label": "^1A_1",
+      "family": "pi_pi",
+      "source_metadata": "data/json/MAIN/Cyclopentadiene.json",
+      "metadata_index": 5,
+      "geometry_source": "geometries/xyz/cyclopentadiene.xyz",
+      "geometry_sha256": "0a0f04c43efea6cff33c9bd5ffd018c9adb119e5c7d5fd1cad07d3757fa980e9",
+      "n_atoms": 11,
+      "n_heavy": 5,
+      "transition_type": "ppi",
+      "special": "PD",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B016",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Cyclopentadiene",
+        "state": "B016",
+        "status": "matched",
+        "excitation_ev": 8.197277888879146,
+        "endpoint_energy_check_hartree": 0.0,
+        "joint_residual": 2.1771174273099714e-11,
+        "joint_index": 4,
+        "minimum_curvature": 0.004889725349883006,
+        "final_guard": {
+          "local_csf": 1.0,
+          "anchor_active": 0.9733071129141698,
+          "transition": 0.9459385808410278,
+          "raw_transition": 0.697708748099667,
+          "transition_metric": "rank_one",
+          "rank_one_limit": 0.7375835622217023,
+          "rank_one_margin": 0.08552429587122368,
+          "sector_norm": 0.9762472762290889,
+          "accepted": true
+        },
+        "seconds_current_run": 15.433482552994974,
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset": 0.0,
+        "baseline_untouched": true,
+        "exploratory_solver_recovery": true,
+        "reference_labels_read": false,
+        "baseline_result": {
+          "status": "prediction_pass_complete",
+          "host": "oracle.sns.it",
+          "molecule": "Cyclopentadiene",
+          "rows": [
+            {
+              "id": "B016",
+              "molecule": "Cyclopentadiene",
+              "status": "nonconverged",
+              "reason": "Assigned transition lost in qualified_spectral_response",
+              "traceback": "Traceback (most recent call last):\n  File \"/local/scratch/home/enzo/MOUSE-publication-validation-20261030/blind_mouse.py\", line 132, in worker\n    if min(score,np.linalg.norm(h),np.linalg.norm(p))<.7:raise RuntimeError('Assigned transition lost in '+profile)\n                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Assigned transition lost in qualified_spectral_response\n"
+            }
+          ],
+          "numerical_reference_labels_read": false
+        },
+        "adopted_completed_exploratory_result": true,
+        "adopted_source_sha256": "0c229e12773a243951e1387970e59ad49dc4f1f308648bec86945263bde09e5e",
+        "selected_profile": "original_qualified_spectral",
+        "assignment_audit": {
+          "molecule": "Cyclopentadiene",
+          "state": "B016",
+          "target_root": 8,
+          "symmetry": "A1",
+          "target_parent_fidelities": [
+            0.9732014333919,
+            0.9459385808410282
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9732014333919,
+            0.9459385808410282
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.16427165807208455,
+            0.14857386272230522
+          ],
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 8,
+              "converged": true,
+              "projection_norm": 0.8400923667768415,
+              "rank_one_limit": 0.7375835622217021,
+              "parent_fidelities": [
+                0.9732014333919,
+                0.9459385808410282
+              ],
+              "parent_projected_overlaps": [
+                0.6030329016781414,
+                0.5861397935119564
+              ],
+              "representable_single_pair": true
+            },
+            {
+              "root": 14,
+              "converged": true,
+              "projection_norm": 0.20441624277204862,
+              "rank_one_limit": 0.8895364468759177,
+              "parent_fidelities": [
+                0.9502956124611928,
+                0.9140357367096814
+              ],
+              "parent_projected_overlaps": [
+                0.17279766626351548,
+                0.16620432643672337
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 20,
+              "converged": true,
+              "projection_norm": 0.5569951468206314,
+              "rank_one_limit": 0.8410122911517253,
+              "parent_fidelities": [
+                0.9366438905799211,
+                0.9340922011061275
+              ],
+              "parent_projected_overlaps": [
+                0.43876124360605684,
+                0.4375659307896512
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 24,
+              "converged": true,
+              "projection_norm": 0.31078030800272016,
+              "rank_one_limit": 0.9232701590448819,
+              "parent_fidelities": [
+                0.64309475796848,
+                0.7037076704447565
+              ],
+              "parent_projected_overlaps": [
+                0.1845258698681149,
+                0.20191778647346378
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 35,
+              "converged": true,
+              "projection_norm": 0.37445445331061233,
+              "rank_one_limit": 0.9904081422309765,
+              "parent_fidelities": [
+                0.025539281058489783,
+                0.021917042769771217
+              ],
+              "parent_projected_overlaps": [
+                0.00947156773702388,
+                0.00812821452231643
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 38,
+              "converged": true,
+              "projection_norm": 0.37428095936602024,
+              "rank_one_limit": 0.8803567380962704,
+              "parent_fidelities": [
+                0.12072643255825419,
+                0.11946066928955801
+              ],
+              "parent_projected_overlaps": [
+                0.03977945182559773,
+                0.03936238186086226
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 39,
+              "converged": true,
+              "projection_norm": 0.413269649344708,
+              "rank_one_limit": 0.71671678901947,
+              "parent_fidelities": [
+                0.1962844433830205,
+                0.2722857208095958
+              ],
+              "parent_projected_overlaps": [
+                0.058138921392135945,
+                0.08065029426432663
+              ],
+              "representable_single_pair": false
+            }
+          ],
+          "numerical_reference_energies_used": false
+        },
+        "identity_policy_reaudit": {
+          "attainable_single_pair_fidelities": [
+            0.9732014333919,
+            0.9459385808410282
+          ],
+          "projected_margins": [
+            0.16427165807208455,
+            0.14857386272230522
+          ],
+          "passed": true,
+          "reference_coverage_complete": false
+        }
+      }
+    },
+    {
+      "molecule": "Furan",
+      "state_label": "^1A_1",
+      "family": "pi_pi",
+      "source_metadata": "data/json/MAIN/Furan.json",
+      "metadata_index": 2,
+      "geometry_source": "geometries/xyz/furan.xyz",
+      "geometry_sha256": "81569196e1f0a100f68aaefd07672141d6835be944bfb27faac44d3194e3dc92",
+      "n_atoms": 9,
+      "n_heavy": 5,
+      "transition_type": "ppi",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B022",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Furan",
+        "state": "B022",
+        "status": "matched",
+        "excitation_ev": 7.973905034751296,
+        "endpoint_energy_check_hartree": 0.0,
+        "joint_residual": 1.9205470547234427e-13,
+        "joint_index": 3,
+        "minimum_curvature": 0.03451273151680415,
+        "final_guard": {
+          "local_csf": 1.0,
+          "anchor_active": 0.9955909655237881,
+          "transition": 0.970992725252687,
+          "raw_transition": 0.7085437521952329,
+          "transition_metric": "rank_one",
+          "rank_one_limit": 0.729710670088537,
+          "rank_one_margin": 0.06807901358435609,
+          "sector_norm": 0.9653757408811657,
+          "accepted": true
+        },
+        "seconds_current_run": 10.914319225004874,
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset": 0.0,
+        "baseline_untouched": true,
+        "exploratory_solver_recovery": true,
+        "reference_labels_read": false,
+        "baseline_result": {
+          "status": "prediction_pass_complete",
+          "host": "oracle.sns.it",
+          "molecule": "Furan",
+          "rows": [
+            {
+              "id": "B040",
+              "status": "not_representable",
+              "reason": "fixed reference root fails symmetry or compact projection"
+            },
+            {
+              "id": "B022",
+              "molecule": "Furan",
+              "family": "pi_pi",
+              "status": "matched",
+              "excitation_ev": 7.9739050347511995,
+              "parent_gaps_ev": [
+                8.491743119872105,
+                7.456066949630295
+              ],
+              "joint_residual": 4.4104234153685695e-12,
+              "joint_index": 3,
+              "minimum_curvature_hartree": 0.034512731516794126,
+              "identity": [
+                {
+                  "profile": "full_response",
+                  "transition_overlap": 0.7051355698173553,
+                  "hole_norm": 0.9832859617242385,
+                  "particle_norm": 0.974313347032791
+                },
+                {
+                  "profile": "qualified_spectral_response",
+                  "transition_overlap": 0.7085437521909738,
+                  "hole_norm": 0.9742250443771375,
+                  "particle_norm": 0.9653757408791623
+                }
+              ],
+              "weights": [
+                0.5,
+                0.5
+              ],
+              "lambda_exchange": 0.9,
+              "energy_offset": 0.0,
+              "reference_root": 5,
+              "numerical_reference_labels_read": false
+            }
+          ],
+          "numerical_reference_labels_read": false
+        },
+        "adopted_completed_exploratory_result": true,
+        "adopted_source_sha256": "81dd4dd93cd22b1345efd2a9cda25b72349317079b774a702fc1c8b2a68a58be",
+        "selected_profile": "original_qualified_spectral",
+        "assignment_audit": {
+          "molecule": "Furan",
+          "state": "B022",
+          "target_root": 5,
+          "symmetry": "A1",
+          "target_parent_fidelities": [
+            0.9663221311150626,
+            0.9709927252526869
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9663221311150626,
+            0.9709927252526869
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.16992543301282398,
+            0.17161736203475297
+          ],
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 5,
+              "converged": true,
+              "projection_norm": 0.8468448362569544,
+              "rank_one_limit": 0.7297106700885369,
+              "parent_fidelities": [
+                0.9663221311150626,
+                0.9709927252526869
+              ],
+              "parent_projected_overlaps": [
+                0.5971404161609325,
+                0.6000266178086598
+              ],
+              "representable_single_pair": true
+            },
+            {
+              "root": 13,
+              "converged": true,
+              "projection_norm": 0.19998113214226892,
+              "rank_one_limit": 0.6893694923080069,
+              "parent_fidelities": [
+                0.8120336552840683,
+                0.816881111306681
+              ],
+              "parent_projected_overlaps": [
+                0.11194768367477681,
+                0.1126159582837362
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 16,
+              "converged": true,
+              "projection_norm": 0.5783921791844143,
+              "rank_one_limit": 0.7477865613033963,
+              "parent_fidelities": [
+                0.9877485657126629,
+                0.9905098009682936
+              ],
+              "parent_projected_overlaps": [
+                0.4272149831481085,
+                0.42840925577390687
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 19,
+              "converged": true,
+              "projection_norm": 0.1739260768054754,
+              "rank_one_limit": 0.9273476113588682,
+              "parent_fidelities": [
+                0.9794852877678873,
+                0.9831033299918501
+              ],
+              "parent_projected_overlaps": [
+                0.1579811153401506,
+                0.15856466912398737
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 32,
+              "converged": true,
+              "projection_norm": 0.33746995973111543,
+              "rank_one_limit": 0.9833067686802509,
+              "parent_fidelities": [
+                0.11495615812657389,
+                0.11513149998756882
+              ],
+              "parent_projected_overlaps": [
+                0.038146648663794046,
+                0.03820483349248382
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 35,
+              "converged": true,
+              "projection_norm": 0.3195158209308461,
+              "rank_one_limit": 0.7866157588581106,
+              "parent_fidelities": [
+                0.6873114001174022,
+                0.6906696605377016
+              ],
+              "parent_projected_overlaps": [
+                0.17274622174069323,
+                0.17359027408600416
+              ],
+              "representable_single_pair": false
+            },
+            {
+              "root": 38,
+              "converged": true,
+              "projection_norm": 0.5302181323206521,
+              "rank_one_limit": 0.7018715805635244,
+              "parent_fidelities": [
+                0.8147385293394673,
+                0.8129519758211858
+              ],
+              "parent_projected_overlaps": [
+                0.30320090142984857,
+                0.3025360444018708
+              ],
+              "representable_single_pair": false
+            }
+          ],
+          "numerical_reference_energies_used": false
+        },
+        "identity_policy_reaudit": {
+          "attainable_single_pair_fidelities": [
+            0.9663221311150626,
+            0.9709927252526869
+          ],
+          "projected_margins": [
+            0.16992543301282398,
+            0.17161736203475297
+          ],
+          "passed": true,
+          "reference_coverage_complete": false
+        }
+      }
+    },
+    {
+      "molecule": "Phthalimide",
+      "state_label": "^1A_1",
+      "family": "pi_pi",
+      "source_metadata": "data/json/CHROM/Phthalimide.json",
+      "metadata_index": 1,
+      "geometry_source": "geometries/xyz/phthalimide.xyz",
+      "geometry_sha256": "305717ae0036d643df96c6864a0acac55c1a9e5e3dce8c6b05eed1e4a685da05",
+      "n_atoms": 16,
+      "n_heavy": 11,
+      "transition_type": "ppi",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B024",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Phthalimide",
+        "state": "B024",
+        "status": "matched",
+        "excitation_ev": 5.868844110096675,
+        "joint_residual": 2.457416214962649e-12,
+        "joint_index": 12,
+        "minimum_curvature_hartree": 0.014178535171263773,
+        "guards": [
+          {
+            "local_csf": 1.0,
+            "anchor_active": 0.9999999999999989,
+            "transition": 0.9638110363439839,
+            "raw_transition": 0.8366951098867447,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.8681111528464884,
+            "rank_one_margin": 0.43215817358587116,
+            "sector_norm": 0.9374793645365582,
+            "accepted": true
+          },
+          {
+            "local_csf": 1.0,
+            "anchor_active": 0.9081407747043156,
+            "transition": 0.9247038633324103,
+            "raw_transition": 0.8027457368391003,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.8681111528464884,
+            "rank_one_margin": 0.43215817358587116,
+            "sector_norm": 0.9447605662059603,
+            "accepted": true
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0.0,
+        "reference_labels_read": false,
+        "baseline_preserved": true,
+        "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+        "parent_reports": [
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Phthalimide",
+            "state": "B024",
+            "profile": "full",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "assigned_nto",
+            "residual": 4.912577289406528e-12,
+            "index": 6,
+            "energy_hartree": -24.488834054465226,
+            "guard": {
+              "local_csf": 1.0,
+              "anchor_active": 0.7457784974893424,
+              "transition": 0.9638110363439845,
+              "raw_transition": 0.8366951098867451,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.8681111528464884,
+              "rank_one_margin": 0.43215817358587116,
+              "sector_norm": 0.9374793645365579,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Phthalimide/B024/full/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 9.943648274987936,
+            "attempts": [],
+            "model_sha256": "9cd37deff85c216ed57f8ad148ea0ce2d53e4a94861c7ec1c0851e19d9ab5068",
+            "reference_labels_read": false
+          },
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Phthalimide",
+            "state": "B024",
+            "profile": "spectral",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "assigned_nto",
+            "residual": 2.510574213798744e-13,
+            "index": 7,
+            "energy_hartree": -30.653984045559934,
+            "guard": {
+              "local_csf": 1.0,
+              "anchor_active": 0.7284410396114689,
+              "transition": 0.9247038633324112,
+              "raw_transition": 0.8027457368391011,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.8681111528464884,
+              "rank_one_margin": 0.43215817358587116,
+              "sector_norm": 0.9447605662059592,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Phthalimide/B024/spectral/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 12.387285472999793,
+            "attempts": [],
+            "model_sha256": "c9be8779d816ef40bf2a27cb0688c92545a15b5d0137e95ad54b689f2e9ee6b1",
+            "reference_labels_read": false
+          }
+        ],
+        "seconds_current_run": 5.114127981010824,
+        "component_gaps_ev": [
+          6.122408974940081,
+          5.615279245253076
+        ],
+        "ground_certificates": [
+          {
+            "residual": 6.38378239159465e-16,
+            "index": 0,
+            "minimum_curvature": 0.41226103083224847
+          },
+          {
+            "residual": 6.218649806519924e-13,
+            "index": 0,
+            "minimum_curvature": 0.6281908136911151
+          },
+          {
+            "residual": 1.1250844345851358e-15,
+            "index": 0,
+            "minimum_curvature": 0.49724947468029923
+          }
+        ],
+        "assignment_audit": {
+          "molecule": "Phthalimide",
+          "state": "B024",
+          "target_root": 2,
+          "symmetry": "A1",
+          "target_parent_fidelities": [
+            0.9638110363439842,
+            0.9247038633324105
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9638110363439842,
+            0.9247038633324105
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.7796321874532595,
+            0.747998174466875
+          ],
+          "target_raw_overlaps": [
+            0.8366951098867447,
+            0.8027457368391003
+          ],
+          "attainable_single_pair_fidelity_squared_gt_half": true,
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 2,
+              "converged": true,
+              "projection_norm": 0.9317996223962522,
+              "rank_one_limit": 0.8681111528464882,
+              "parent_fidelities": [
+                0.9638110363439842,
+                0.9247038633324105
+              ],
+              "parent_projected_overlaps": [
+                0.7796321874532595,
+                0.747998174466875
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        }
+      }
+    },
+    {
+      "molecule": "Quinoxaline",
+      "state_label": "^1B_1",
+      "family": "CT",
+      "source_metadata": "data/json/MAIN/Quinoxaline.json",
+      "metadata_index": 6,
+      "geometry_source": "geometries/xyz/quinoxaline.xyz",
+      "geometry_sha256": "ec8f434daebd28eb959944fd3fa54ef20db4ce2592fd31910aa3f72cea348c15",
+      "n_atoms": 16,
+      "n_heavy": 10,
+      "transition_type": "npi",
+      "special": "wCT",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B025",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Quinoxaline",
+        "state": "B025",
+        "status": "matched",
+        "excitation_ev": 6.249660071260889,
+        "joint_residual": 6.401961046790389e-11,
+        "joint_index": 5,
+        "minimum_curvature_hartree": 0.004598966086197771,
+        "guards": [
+          {
+            "local_csf": 1.0,
+            "anchor_active": 0.9999999999999984,
+            "transition": 0.9904404447178802,
+            "raw_transition": 0.9857031502782786,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9952169820357538,
+            "rank_one_margin": 0.92894984862064,
+            "sector_norm": 0.9984413573855031,
+            "accepted": true
+          },
+          {
+            "local_csf": 1.0,
+            "anchor_active": 0.9775854904039938,
+            "transition": 0.9836095559185996,
+            "raw_transition": 0.9789049337428367,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.9952169820357538,
+            "rank_one_margin": 0.92894984862064,
+            "sector_norm": 0.9979260813357009,
+            "accepted": true
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0.0,
+        "reference_labels_read": false,
+        "baseline_preserved": true,
+        "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+        "parent_reports": [
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Quinoxaline",
+            "state": "B025",
+            "profile": "full",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "assigned_nto",
+            "residual": 6.652499731640837e-13,
+            "index": 2,
+            "energy_hartree": -19.737130968974835,
+            "guard": {
+              "local_csf": 0.9999999999999866,
+              "anchor_active": 0.987793923734831,
+              "transition": 0.99044044471788,
+              "raw_transition": 0.9857031502782784,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.9952169820357538,
+              "rank_one_margin": 0.92894984862064,
+              "sector_norm": 0.9984413573855033,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Quinoxaline/B025/full/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 5.756674406002276,
+            "attempts": [],
+            "model_sha256": "87ff9b9cfbd4c10d90d73e44096da251f5267fe17b007c244f57f94e4582383a",
+            "reference_labels_read": false
+          },
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Quinoxaline",
+            "state": "B025",
+            "profile": "spectral",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "assigned_nto",
+            "residual": 1.2803866972742328e-10,
+            "index": 4,
+            "energy_hartree": -25.780878869131534,
+            "guard": {
+              "local_csf": 0.9999999999999957,
+              "anchor_active": 0.9793893848924147,
+              "transition": 0.9836095559185993,
+              "raw_transition": 0.9789049337428365,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.9952169820357538,
+              "rank_one_margin": 0.92894984862064,
+              "sector_norm": 0.9979260813357009,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Quinoxaline/B025/spectral/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 7.703480713011231,
+            "attempts": [],
+            "model_sha256": "d21e3a36bfc10681e409ea33fa7cd3a3eaa8c4301ae1e778faca7481ac2e2006",
+            "reference_labels_read": false
+          }
+        ],
+        "seconds_current_run": 9.078261825023219,
+        "component_gaps_ev": [
+          6.244276278739558,
+          6.255043863781931
+        ],
+        "ground_certificates": [
+          {
+            "residual": 1.9319154324558285e-14,
+            "index": 0,
+            "minimum_curvature": 0.28779625943534065
+          },
+          {
+            "residual": 8.745613128571555e-16,
+            "index": 0,
+            "minimum_curvature": 0.5214345747711937
+          },
+          {
+            "residual": 1.4319403453584212e-14,
+            "index": 0,
+            "minimum_curvature": 0.5995985022404373
+          }
+        ],
+        "assignment_audit": {
+          "molecule": "Quinoxaline",
+          "state": "B025",
+          "target_root": 3,
+          "symmetry": "B1",
+          "target_parent_fidelities": [
+            0.9904404447178802,
+            0.9836095559185994
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9255583140905308,
+            0.8494344399368725
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.8003964388533052,
+            0.7306611976585266
+          ],
+          "target_raw_overlaps": [
+            0.9857031502782786,
+            0.9789049337428366
+          ],
+          "attainable_single_pair_fidelity_squared_gt_half": true,
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 1,
+              "converged": true,
+              "projection_norm": 0.9223942706834826,
+              "rank_one_limit": 0.9982409828662093,
+              "parent_fidelities": [
+                0.06488213062734935,
+                0.13417511598172696
+              ],
+              "parent_projected_overlaps": [
+                0.05974163382811924,
+                0.12354465814115692
+              ],
+              "representable_single_pair": true
+            },
+            {
+              "root": 3,
+              "converged": true,
+              "projection_norm": 0.872613699609862,
+              "rank_one_limit": 0.9952169820357538,
+              "parent_fidelities": [
+                0.9904404447178802,
+                0.9836095559185994
+              ],
+              "parent_projected_overlaps": [
+                0.8601380726814245,
+                0.8542058557996834
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        }
+      }
+    },
+    {
+      "molecule": "Nitropyridine_N-oxide",
+      "state_label": "^1A_1",
+      "family": "CT",
+      "source_metadata": "data/json/MAIN/Nitropyridine_N-oxide.json",
+      "metadata_index": 3,
+      "geometry_source": "geometries/xyz/nitropyridine_n-oxide.xyz",
+      "geometry_sha256": "96a9d4d943f5db870385cf78024f29e62b86eb0f4c2fdea7e30c49051f573a78",
+      "n_atoms": 14,
+      "n_heavy": 10,
+      "transition_type": "ppi",
+      "special": "sCT",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B029",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Nitropyridine_N-oxide",
+        "state": "B029",
+        "status": "matched",
+        "excitation_ev": 4.153172126825745,
+        "joint_residual": 2.557572209571646e-13,
+        "joint_index": 8,
+        "minimum_curvature_hartree": 0.0011715534811939485,
+        "guards": [
+          {
+            "local_csf": 0.9999999999999886,
+            "anchor_active": 1.0000000000000004,
+            "transition": 0.8229653528412182,
+            "raw_transition": 0.8229653528412182,
+            "transition_metric": "raw",
+            "rank_one_limit": 0.9789956944635118,
+            "rank_one_margin": 0.8333433975959027,
+            "sector_norm": 0.9548756710434261,
+            "accepted": true
+          },
+          {
+            "local_csf": 1.0,
+            "anchor_active": 0.8217520455559346,
+            "transition": 0.8373987284578265,
+            "raw_transition": 0.8373987284578265,
+            "transition_metric": "raw",
+            "rank_one_limit": 0.9789956944635118,
+            "rank_one_margin": 0.8333433975959027,
+            "sector_norm": 0.9835261010940906,
+            "accepted": true
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0.0,
+        "reference_labels_read": false,
+        "baseline_preserved": true,
+        "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+        "parent_reports": [
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Nitropyridine_N-oxide",
+            "state": "B029",
+            "profile": "full",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "retained_full",
+            "residual": 5.041765616109473e-13,
+            "index": 3,
+            "energy_hartree": -25.956897356584797,
+            "guard": {
+              "local_csf": 0.9999999999999606,
+              "anchor_active": 0.8044135728075528,
+              "transition": 0.822965352841218,
+              "raw_transition": 0.822965352841218,
+              "transition_metric": "raw",
+              "rank_one_limit": 0.9789956944635118,
+              "rank_one_margin": 0.8333433975959027,
+              "sector_norm": 0.9548756710434241,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "raw_target_weight_gt_half_and_competing_root_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Nitropyridine_N-oxide/B029/full/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 1.278922452009283,
+            "attempts": [],
+            "model_sha256": "ea42595a692d691b1b58ec2c7d9c4fe100079da55b7a7b8393ac07c08d9221d5",
+            "reference_labels_read": false
+          },
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Nitropyridine_N-oxide",
+            "state": "B029",
+            "profile": "spectral",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "native_stationary",
+            "residual": 9.362356809955452e-16,
+            "index": 6,
+            "energy_hartree": -30.478768603568074,
+            "guard": {
+              "local_csf": 1.0,
+              "anchor_active": 0.8377011823254239,
+              "transition": 0.837398728457826,
+              "raw_transition": 0.837398728457826,
+              "transition_metric": "raw",
+              "rank_one_limit": 0.9789956944635118,
+              "rank_one_margin": 0.8333433975959027,
+              "sector_norm": 0.9835261010940889,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "raw_target_weight_gt_half_and_competing_root_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Nitropyridine_N-oxide/B029/spectral/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 7.9001671859878115,
+            "attempts": [],
+            "model_sha256": "7e1b1db7dd3b98b0f91752218c4721342136d49a19ad9d9dac3fdea09848a8a6",
+            "reference_labels_read": false
+          }
+        ],
+        "seconds_current_run": 14.044053160003386,
+        "component_gaps_ev": [
+          4.129560796410204,
+          4.176783457241188
+        ],
+        "ground_certificates": [
+          {
+            "residual": 8.025240338741414e-16,
+            "index": 0,
+            "minimum_curvature": 0.35480028297745353
+          },
+          {
+            "residual": 3.884133687434028e-14,
+            "index": 0,
+            "minimum_curvature": 0.5293658628517908
+          },
+          {
+            "residual": 8.174756735993631e-16,
+            "index": 0,
+            "minimum_curvature": 0.2556359732935078
+          }
+        ],
+        "assignment_audit": {
+          "molecule": "Nitropyridine_N-oxide",
+          "state": "B029",
+          "target_root": 1,
+          "symmetry": "A1",
+          "target_parent_fidelities": [
+            0.8406220349030257,
+            0.8553650778992645
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.8406220349030257,
+            0.8553650778992645
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.7683442778881717,
+            0.7818196952035483
+          ],
+          "target_raw_overlaps": [
+            0.8229653528412181,
+            0.8373987284578263
+          ],
+          "attainable_single_pair_fidelity_squared_gt_half": true,
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 1,
+              "converged": true,
+              "projection_norm": 0.9336289495487609,
+              "rank_one_limit": 0.9789956944635118,
+              "parent_fidelities": [
+                0.8406220349030257,
+                0.8553650778992645
+              ],
+              "parent_projected_overlaps": [
+                0.7683442778881717,
+                0.7818196952035483
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        }
+      }
+    },
+    {
+      "molecule": "Quinoxaline",
+      "state_label": "^1B_2",
+      "family": "CT",
+      "source_metadata": "data/json/MAIN/Quinoxaline.json",
+      "metadata_index": 2,
+      "geometry_source": "geometries/xyz/quinoxaline.xyz",
+      "geometry_sha256": "ec8f434daebd28eb959944fd3fa54ef20db4ce2592fd31910aa3f72cea348c15",
+      "n_atoms": 16,
+      "n_heavy": 10,
+      "transition_type": "ppi",
+      "special": "wCT",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B030",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Quinoxaline",
+        "state": "B030",
+        "status": "matched",
+        "excitation_ev": 5.107924340398762,
+        "joint_residual": 9.93276572103241e-11,
+        "joint_index": 5,
+        "minimum_curvature_hartree": 0.0031331165196817816,
+        "guards": [
+          {
+            "local_csf": 1.0,
+            "anchor_active": 1.000000000000001,
+            "transition": 0.9139510549700985,
+            "raw_transition": 0.8937521994927948,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.977899412263423,
+            "rank_one_margin": 0.8112052792077142,
+            "sector_norm": 0.9922347349550661,
+            "accepted": true
+          },
+          {
+            "local_csf": 0.9999999999999951,
+            "anchor_active": 0.9500260822891922,
+            "transition": 0.9904363960887717,
+            "raw_transition": 0.9685471696195127,
+            "transition_metric": "rank_one",
+            "rank_one_limit": 0.977899412263423,
+            "rank_one_margin": 0.8112052792077142,
+            "sector_norm": 0.9794082657806836,
+            "accepted": true
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0.0,
+        "reference_labels_read": false,
+        "baseline_preserved": true,
+        "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+        "parent_reports": [
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Quinoxaline",
+            "state": "B030",
+            "profile": "full",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "native_stationary",
+            "residual": 1.3253287356462806e-15,
+            "index": 3,
+            "energy_hartree": -19.755597261799824,
+            "guard": {
+              "local_csf": 0.9999999999999933,
+              "anchor_active": 0.898269784185419,
+              "transition": 0.9139510549700984,
+              "raw_transition": 0.8937521994927947,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.977899412263423,
+              "rank_one_margin": 0.8112052792077142,
+              "sector_norm": 0.9922347349550649,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Quinoxaline/B030/full/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 19.216563588008285,
+            "attempts": [
+              {
+                "seed": "assigned_nto",
+                "solver": "newton",
+                "status": "unresolved",
+                "reason": "ROKS orbital stationarity failed: residual=9.582e-02; orbital index=None, target=None",
+                "guard": {
+                  "local_csf": 0.9999968048227531,
+                  "anchor_active": 0.6851301725915876,
+                  "transition": 0.7065668960316634,
+                  "raw_transition": 0.6909513523541548,
+                  "transition_metric": "rank_one",
+                  "rank_one_limit": 0.977899412263423,
+                  "rank_one_margin": 0.8112052792077142,
+                  "sector_norm": 0.9948943949132883,
+                  "accepted": false
+                },
+                "seconds": 12.007395459047984
+              }
+            ],
+            "model_sha256": "87ff9b9cfbd4c10d90d73e44096da251f5267fe17b007c244f57f94e4582383a",
+            "reference_labels_read": false
+          },
+          {
+            "host": "oracle.sns.it",
+            "molecule": "Quinoxaline",
+            "state": "B030",
+            "profile": "spectral",
+            "qualified": true,
+            "solver": "newton",
+            "seed": "assigned_nto",
+            "residual": 1.9865248335193542e-10,
+            "index": 2,
+            "energy_hartree": -25.846328604732378,
+            "guard": {
+              "local_csf": 0.9999999999999901,
+              "anchor_active": 0.9641189759272188,
+              "transition": 0.9904363960887715,
+              "raw_transition": 0.9685471696195126,
+              "transition_metric": "rank_one",
+              "rank_one_limit": 0.977899412263423,
+              "rank_one_margin": 0.8112052792077142,
+              "sector_norm": 0.9794082657806829,
+              "accepted": true
+            },
+            "initialization_search": false,
+            "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+            "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Quinoxaline/B030/spectral/majority_v1/stationary.npz",
+            "request_hash": "assigned_nto_parent_v1",
+            "seconds": 6.616335041006096,
+            "attempts": [],
+            "model_sha256": "d21e3a36bfc10681e409ea33fa7cd3a3eaa8c4301ae1e778faca7481ac2e2006",
+            "reference_labels_read": false
+          }
+        ],
+        "seconds_current_run": 8.140276713005733,
+        "component_gaps_ev": [
+          5.741782852147453,
+          4.474065828649975
+        ],
+        "ground_certificates": [
+          {
+            "residual": 1.9319154324558285e-14,
+            "index": 0,
+            "minimum_curvature": 0.28779625943534065
+          },
+          {
+            "residual": 8.745613128571555e-16,
+            "index": 0,
+            "minimum_curvature": 0.5214345747711937
+          },
+          {
+            "residual": 1.4319403453584212e-14,
+            "index": 0,
+            "minimum_curvature": 0.5995985022404373
+          }
+        ],
+        "assignment_audit": {
+          "molecule": "Quinoxaline",
+          "state": "B030",
+          "target_root": 2,
+          "symmetry": "B2",
+          "target_parent_fidelities": [
+            0.9139510549700987,
+            0.9904363960887718
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.9139510549700987,
+            0.9904363960887718
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.8225429082983763,
+            0.8913786239352548
+          ],
+          "target_raw_overlaps": [
+            0.8937521994927947,
+            0.9685471696195126
+          ],
+          "attainable_single_pair_fidelity_squared_gt_half": true,
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 2,
+              "converged": true,
+              "projection_norm": 0.9203254646703753,
+              "rank_one_limit": 0.9778994122634228,
+              "parent_fidelities": [
+                0.9139510549700987,
+                0.9904363960887718
+              ],
+              "parent_projected_overlaps": [
+                0.8225429082983763,
+                0.8913786239352548
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        }
+      }
+    },
+    {
+      "molecule": "Benzoquinone",
+      "state_label": "^1B_{3g}",
+      "family": "Rydberg",
+      "source_metadata": "data/json/MAIN/Benzoquinone.json",
+      "metadata_index": 11,
+      "geometry_source": "geometries/xyz/benzoquinone.xyz",
+      "geometry_sha256": "40a19534ee5914ffec10b3e97f83d057402a1342011fb84d7d0b210a1be5ca44",
+      "n_atoms": 12,
+      "n_heavy": 8,
+      "transition_type": "n3s",
+      "special": "",
+      "reference_basis": "aug-cc-pVTZ",
+      "id": "B039",
+      "result": {
+        "host": "oracle.sns.it",
+        "molecule": "Benzoquinone",
+        "state": "B039",
+        "status": "matched",
+        "excitation_ev": 7.681227290483868,
+        "endpoint_energy_check_hartree": 0.0,
+        "joint_residual": 4.710962522858075e-12,
+        "joint_index": 6,
+        "minimum_curvature": 0.011409340456674077,
+        "final_guard": {
+          "local_csf": 1.0,
+          "anchor_active": 0.995450879121597,
+          "transition": 0.9924783097397202,
+          "raw_transition": 0.9333569916602826,
+          "transition_metric": "rank_one",
+          "rank_one_limit": 0.9404306194913798,
+          "rank_one_margin": 0.6719744365649034,
+          "sector_norm": 0.9858582781648151,
+          "accepted": true
+        },
+        "seconds_current_run": 76.61668577603996,
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset": 0.0,
+        "baseline_untouched": true,
+        "exploratory_solver_recovery": true,
+        "reference_labels_read": false,
+        "baseline_result": {
+          "status": "prediction_pass_complete",
+          "host": "oracle.sns.it",
+          "molecule": "Benzoquinone",
+          "rows": [
+            {
+              "id": "B039",
+              "molecule": "Benzoquinone",
+              "status": "nonconverged",
+              "reason": "No qualified qualified_spectral_response stationary parent",
+              "traceback": "Traceback (most recent call last):\n  File \"/local/scratch/home/enzo/MOUSE-publication-validation-20261030/blind_mouse.py\", line 125, in worker\n    if not report.get('qualified'):raise RuntimeError('No qualified '+profile+' stationary parent')\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: No qualified qualified_spectral_response stationary parent\n"
+            }
+          ],
+          "numerical_reference_labels_read": false
+        },
+        "adopted_completed_exploratory_result": true,
+        "adopted_source_sha256": "3b370477ade789dc3b48cdba29656f86b8e80b73087329eafabed36f47ec51b4",
+        "selected_profile": "original_qualified_spectral",
+        "assignment_audit": {
+          "molecule": "Benzoquinone",
+          "state": "B039",
+          "target_root": 2,
+          "symmetry": "B3g",
+          "target_parent_fidelities": [
+            0.9995306522635299,
+            0.9924783097397213
+          ],
+          "margins_against_other_converged_representable_same_symmetry_roots": [
+            0.8958665510014623,
+            0.8844085472848325
+          ],
+          "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+            0.5644934109184685,
+            0.5556752987083082
+          ],
+          "uniquely_assigned": true,
+          "reference_coverage_complete": false,
+          "available_same_symmetry_candidates": [
+            {
+              "root": 1,
+              "converged": true,
+              "projection_norm": 0.9501089524130611,
+              "rank_one_limit": 0.9906689200935003,
+              "parent_fidelities": [
+                0.10366410126206754,
+                0.10806976245488877
+              ],
+              "parent_projected_overlaps": [
+                0.09757315215179564,
+                0.10171995171560672
+              ],
+              "representable_single_pair": true
+            },
+            {
+              "root": 2,
+              "converged": true,
+              "projection_norm": 0.7043342004162,
+              "rank_one_limit": 0.9404306194913788,
+              "parent_fidelities": [
+                0.9995306522635299,
+                0.9924783097397213
+              ],
+              "parent_projected_overlaps": [
+                0.6620665630702641,
+                0.657395250423915
+              ],
+              "representable_single_pair": true
+            }
+          ],
+          "numerical_reference_energies_used": false
+        },
+        "identity_policy_reaudit": {
+          "attainable_single_pair_fidelities": [
+            0.9995306522635299,
+            0.9924783097397213
+          ],
+          "projected_margins": [
+            0.5644934109184685,
+            0.5556752987083082
+          ],
+          "passed": true,
+          "reference_coverage_complete": false
+        }
+      }
+    }
+  ],
+  "accuracy_scoring_performed": false
+}

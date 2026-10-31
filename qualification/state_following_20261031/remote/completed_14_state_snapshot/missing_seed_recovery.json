@@ -1,0 +1,71 @@
+{
+  "host": "oracle.sns.it",
+  "state": "B024",
+  "reason": "original preparation rejected absolute native CSF overlap; completed stationary point reused only as seed for independently certified corrected parents",
+  "original_exclusions": [
+    {
+      "state": "B024",
+      "error": "no stationary native seed passes fixed identity rules"
+    }
+  ],
+  "case_sha256_before": "78e9fa52666409b2b66fcf5b4f29fa65552168653eb6ac08bd0f50ccc0586bf3",
+  "candidates": [
+    {
+      "checkpoint": "/home/enzo/MOUSE-state-following-20261031/reduced_validation/prepared/Phthalimide/B024/index_4/converged.npz",
+      "request_hash": "cb8789e1a34ed5f463dbb9e14c45892bf996fab730d2b63bd3c52c0572f35b5f",
+      "stationary_residual": 3.317523781729004e-10,
+      "index": 4,
+      "passes_current_single_pair_guard": true,
+      "guard": {
+        "local_csf": 1.0,
+        "anchor_active": 0.685128047018301,
+        "transition": 0.989622866259998,
+        "raw_transition": 0.8591026473122131,
+        "transition_metric": "rank_one",
+        "rank_one_limit": 0.8681111528464884,
+        "rank_one_margin": 0.43215817358587116,
+        "sector_norm": 0.9187183361723252,
+        "accepted": true
+      }
+    },
+    {
+      "checkpoint": "/home/enzo/MOUSE-state-following-20261031/reduced_validation/prepared/Phthalimide/B024/index_5/converged.npz",
+      "request_hash": "f4443693e5ab3491e620672962e8f719b52aa42998eebe54dc77e43a6d15a81f",
+      "stationary_residual": 9.740472317609772e-16,
+      "index": 5,
+      "passes_current_single_pair_guard": true,
+      "guard": {
+        "local_csf": 1.0,
+        "anchor_active": 0.7018136351123853,
+        "transition": 0.9838036650263682,
+        "raw_transition": 0.854050933820641,
+        "transition_metric": "rank_one",
+        "rank_one_limit": 0.8681111528464884,
+        "rank_one_margin": 0.43215817358587116,
+        "sector_norm": 0.9243341074081605,
+        "accepted": true
+      }
+    }
+  ],
+  "chosen": {
+    "checkpoint": "/home/enzo/MOUSE-state-following-20261031/reduced_validation/prepared/Phthalimide/B024/index_4/converged.npz",
+    "request_hash": "cb8789e1a34ed5f463dbb9e14c45892bf996fab730d2b63bd3c52c0572f35b5f",
+    "stationary_residual": 3.317523781729004e-10,
+    "index": 4,
+    "passes_current_single_pair_guard": true,
+    "guard": {
+      "local_csf": 1.0,
+      "anchor_active": 0.685128047018301,
+      "transition": 0.989622866259998,
+      "raw_transition": 0.8591026473122131,
+      "transition_metric": "rank_one",
+      "rank_one_limit": 0.8681111528464884,
+      "rank_one_margin": 0.43215817358587116,
+      "sector_norm": 0.9187183361723252,
+      "accepted": true
+    }
+  },
+  "model_changed": false,
+  "identity_thresholds_changed": false,
+  "labels_read": false
+}

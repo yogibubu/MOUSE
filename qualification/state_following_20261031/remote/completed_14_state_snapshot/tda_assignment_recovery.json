@@ -1,0 +1,37 @@
+{
+  "host": "oracle.sns.it",
+  "source_sha256": "b5634d6c34e7de740a6a8d9748e389adb4a8e5868d8ae4f7f43713639c58533e",
+  "records": [
+    {
+      "profile": 0,
+      "row": {
+        "eigen_residual_hartree": 2.7769805769142786e-16,
+        "state": "B024",
+        "status": "matched",
+        "excitation_ev": 5.670007579283709,
+        "root": 4,
+        "overlap": 0.9937988311745104,
+        "margin": 0.9289203545199671,
+        "projection_norm": 0.931152775908374
+      },
+      "spectrum_sha256": "483daabfa91af1fd8a820180d628ce9de6b64b1851feef18ca58ff2effeb5d85",
+      "spectrum_recomputed": false
+    },
+    {
+      "profile": 1,
+      "row": {
+        "eigen_residual_hartree": 4.173697304795378e-16,
+        "state": "B024",
+        "status": "matched",
+        "excitation_ev": 4.926773373179722,
+        "root": 9,
+        "overlap": 0.9652954212125137,
+        "margin": 0.7250626366404564,
+        "projection_norm": 0.9317996223962529
+      },
+      "spectrum_sha256": "f46ac4e6759fea8ed5709c131f489a463544725a87151584e71c8a4c8faaef30",
+      "spectrum_recomputed": false
+    }
+  ],
+  "reference_labels_read": false
+}

@@ -1,0 +1,29 @@
+{
+  "protocol_sha256": "19c68dd392f54b2fc46bbd00299af8ae83e0c8a27a91cb3f87e53af1223d6b33",
+  "files_sha256": {
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Diazirine/B001/result.json": "f01b28f63b3331a424af6598024c9c24ffeef5432e2646423be2f5369d6e853e",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Nitropyridine_N-oxide/B004/result.json": "eca5ab149bf8aab80aeb255dce0e36016bc42639088fc7d9d9c7350b8c18fd7a",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Phthalimide/B005/result.json": "3c2872ac06a3f6ebd93fc8fedd4aede4aa86d19bfee303ce6d121a89f8dbc262",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Adenine/B007/result.json": "f09ac0ab71f80670cbc59647021bfc2f48fbc375c3baefb2f90e3e9cba00ebae",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Aza-naphthalene/B011/result.json": "17e2d69d4984d9eb3339d4357e09743511687f0c82e3c72ffc604f3d17c14b55",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Adenine/B014/result.json": "3d201d1515d9191cd1d2e27e02ec941f9dd44c8eb965b1216c55387990e1b63c",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Bimane_Syn/B015/result.json": "dcd56d09ba18f15629c1aea1dc584807e5793056ac32bfeaca148f46bde1cbd2",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Cyclopentadiene/B016/result.json": "be87e8b6c9ccbd3058646b2850161d3a61a35a0046154e500298fef638faa34c",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Furan/B022/result.json": "d4d8cacd23aa047b2dead4f141e3511556dc456351531ca6881fb37549433554",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Phthalimide/B024/result.json": "2b8cf78db29c4c2c2eb395f1c1c8611b14535ddc2af2d96a2d69a2fd4df78da9",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Quinoxaline/B025/result.json": "b2499e861fd62346e8026e9f2a0a9c2cf28b12aede660412386b6e8f00ac3416",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Nitropyridine_N-oxide/B029/result.json": "868e6c6834c18e5eb2d1850b4e90f13510d1f589f17b962ca6d737aedcd69be1",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Quinoxaline/B030/result.json": "9d7856d434ef8948055a1fcee58ca6a55797e9a4133fcb57f3d42c1a0ac10a62",
+    "/home/enzo/MOUSE-orbital-performance-20261031/results/Benzoquinone/B039/result.json": "3c715d01eaf6c78b3dfa1f2fab90396562f289d38c701bb641aa5fc4e9cab255",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Adenine/result.json": "b7e22ad0e576aad3b3bd1ef379e28403def2cdb167f2d621fc5f251593acaede",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Aza-naphthalene/result.json": "da16a9a131549378f4d2b6cd842bb21e1f5b512a82df79354c504499d78fe958",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Benzoquinone/result.json": "b5a3a4e9ba1b1162fff9111e7dfdd7e86874aa9ac999793f9dafe4e4e152a1e1",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Bimane_Syn/result.json": "5aeacc5bdab1591917a01477ab6be4d5021e153cfd6706c7e9453af9fbb05e08",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Cyclopentadiene/result.json": "38eb7306ac0626bffe5adb4f7d62de0f47cebc7d1f52b2de9b8a122f3a480da8",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Diazirine/result.json": "fa9862c108135a18ff8dc67c5de6dce388b1a45e62f956f55e63be5848c54470",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Furan/result.json": "3295f6c162f25df5f26b7dcb54aad2981dab7d6146e8a3c1f9bbe697a23d8e52",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Nitropyridine_N-oxide/result.json": "d7eb82d95223cacb9ef7514a8e9388abb8a3c45dbe706e7c8b1ca6af322e112e",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Phthalimide/result.json": "088854946f3a0c5e55f2d2b54e58a2edc59c606ce44fe22617cf85d08b30e299",
+    "/home/enzo/MOUSE-orbital-performance-20261031/tda/Quinoxaline/result.json": "b0717c412aecbb66d8c9215eac847d7300dce49487b5eb94291cfe0005cc0395"
+  }
+}

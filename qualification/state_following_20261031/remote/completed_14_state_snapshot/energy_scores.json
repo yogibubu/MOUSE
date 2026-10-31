@@ -1,0 +1,744 @@
+{
+  "host": "oracle.sns.it",
+  "rows": [
+    {
+      "state": "B001",
+      "molecule": "Diazirine",
+      "family": "n_pi",
+      "cohort": "solver_development",
+      "reference_ev": 4.092999999999999,
+      "oo_ev": 4.241949435486163,
+      "oo_error_ev": 0.14894943548616357,
+      "tda_status": "matched",
+      "tda_full_ev": 5.247310180732944,
+      "tda_selected_ev": 4.230029951300314,
+      "tda_parent_mean_ev": 4.738670066016629
+    },
+    {
+      "state": "B004",
+      "molecule": "Nitropyridine_N-oxide",
+      "family": "n_pi",
+      "cohort": "solver_repair",
+      "reference_ev": 4.395,
+      "oo_ev": 4.263470323618237,
+      "oo_error_ev": -0.1315296763817626,
+      "tda_status": "matched",
+      "tda_full_ev": 4.095567969563543,
+      "tda_selected_ev": 4.5150767568571935,
+      "tda_parent_mean_ev": 4.305322363210369
+    },
+    {
+      "state": "B005",
+      "molecule": "Phthalimide",
+      "family": "n_pi",
+      "cohort": "remaining_molecules",
+      "reference_ev": 4.186,
+      "oo_ev": 4.0698708353162205,
+      "oo_error_ev": -0.11612916468377943,
+      "tda_status": "matched",
+      "tda_full_ev": 4.02880503271253,
+      "tda_selected_ev": 4.003911455206155,
+      "tda_parent_mean_ev": 4.016358243959342
+    },
+    {
+      "state": "B007",
+      "molecule": "Adenine",
+      "family": "n_pi",
+      "cohort": "remaining_molecules",
+      "reference_ev": 5.304,
+      "oo_ev": 4.804639403721859,
+      "oo_error_ev": -0.4993605962781409,
+      "tda_status": "matched",
+      "tda_full_ev": 4.245142137835928,
+      "tda_selected_ev": 5.191953521162577,
+      "tda_parent_mean_ev": 4.718547829499252
+    },
+    {
+      "state": "B011",
+      "molecule": "Aza-naphthalene",
+      "family": "n_pi",
+      "cohort": "solver_development",
+      "reference_ev": 5.346,
+      "oo_ev": 5.278554329461959,
+      "oo_error_ev": -0.06744567053804129,
+      "tda_status": "matched",
+      "tda_full_ev": 5.054430357784354,
+      "tda_selected_ev": 5.507144181037204,
+      "tda_parent_mean_ev": 5.280787269410779
+    },
+    {
+      "state": "B014",
+      "molecule": "Adenine",
+      "family": "pi_pi",
+      "cohort": "remaining_molecules",
+      "reference_ev": 5.191000000000001,
+      "oo_ev": 5.448970972580705,
+      "oo_error_ev": 0.2579709725807042,
+      "tda_status": "matched",
+      "tda_full_ev": 6.19221845155197,
+      "tda_selected_ev": 5.493737615494242,
+      "tda_parent_mean_ev": 5.842978033523106
+    },
+    {
+      "state": "B015",
+      "molecule": "Bimane_Syn",
+      "family": "pi_pi",
+      "cohort": "solver_development",
+      "reference_ev": 3.9640000000000004,
+      "oo_ev": 3.9114552088659638,
+      "oo_error_ev": -0.05254479113403665,
+      "tda_status": "matched",
+      "tda_full_ev": 5.188997561977221,
+      "tda_selected_ev": 4.947085335467682,
+      "tda_parent_mean_ev": 5.068041448722451
+    },
+    {
+      "state": "B016",
+      "molecule": "Cyclopentadiene",
+      "family": "pi_pi",
+      "cohort": "solver_development",
+      "reference_ev": 6.451,
+      "oo_ev": 8.197277888879146,
+      "oo_error_ev": 1.7462778888791464,
+      "tda_status": "matched",
+      "tda_full_ev": 8.282436392494354,
+      "tda_selected_ev": 6.6239363501840325,
+      "tda_parent_mean_ev": 7.453186371339193
+    },
+    {
+      "state": "B022",
+      "molecule": "Furan",
+      "family": "pi_pi",
+      "cohort": "solver_development",
+      "reference_ev": 6.530000000000001,
+      "oo_ev": 7.973905034751296,
+      "oo_error_ev": 1.4439050347512952,
+      "tda_status": "matched",
+      "tda_full_ev": 8.447683637746673,
+      "tda_selected_ev": 6.829087905698784,
+      "tda_parent_mean_ev": 7.638385771722728
+    },
+    {
+      "state": "B024",
+      "molecule": "Phthalimide",
+      "family": "pi_pi",
+      "cohort": "remaining_molecules",
+      "reference_ev": 4.6,
+      "oo_ev": 5.868844110096675,
+      "oo_error_ev": 1.2688441100966754,
+      "tda_status": "matched",
+      "tda_full_ev": 5.670007579283709,
+      "tda_selected_ev": 4.926773373179722,
+      "tda_parent_mean_ev": 5.298390476231715
+    },
+    {
+      "state": "B025",
+      "molecule": "Quinoxaline",
+      "family": "CT",
+      "cohort": "remaining_molecules",
+      "reference_ev": 6.225,
+      "oo_ev": 6.249660071260889,
+      "oo_error_ev": 0.024660071260889538,
+      "tda_status": "matched",
+      "tda_full_ev": 5.718014592474733,
+      "tda_selected_ev": 5.932791114301864,
+      "tda_parent_mean_ev": 5.825402853388299
+    },
+    {
+      "state": "B029",
+      "molecule": "Nitropyridine_N-oxide",
+      "family": "CT",
+      "cohort": "solver_repair",
+      "reference_ev": 4.078,
+      "oo_ev": 4.153172126825745,
+      "oo_error_ev": 0.07517212682574481,
+      "tda_status": "matched",
+      "tda_full_ev": 4.7652985551908,
+      "tda_selected_ev": 4.432504817531936,
+      "tda_parent_mean_ev": 4.598901686361367
+    },
+    {
+      "state": "B030",
+      "molecule": "Quinoxaline",
+      "family": "CT",
+      "cohort": "remaining_molecules",
+      "reference_ev": 4.647,
+      "oo_ev": 5.107924340398762,
+      "oo_error_ev": 0.46092434039876196,
+      "tda_status": "matched",
+      "tda_full_ev": 6.123059401809838,
+      "tda_selected_ev": 4.562376851959462,
+      "tda_parent_mean_ev": 5.34271812688465
+    },
+    {
+      "state": "B039",
+      "molecule": "Benzoquinone",
+      "family": "Rydberg",
+      "cohort": "solver_development",
+      "reference_ev": 7.083,
+      "oo_ev": 7.681227290483868,
+      "oo_error_ev": 0.5982272904838677,
+      "tda_status": "matched",
+      "tda_full_ev": 8.581911979708753,
+      "tda_selected_ev": 7.211790857952799,
+      "tda_parent_mean_ev": 7.896851418830776
+    }
+  ],
+  "statistics": {
+    "all_selected": {
+      "oo_ev": {
+        "qualified": 14,
+        "requested": 14,
+        "mae_ev": 0.4922815121270721,
+        "rmse_ev": 0.741479773881893,
+        "signed_mean_ev": 0.36842295512482054,
+        "maximum_absolute_ev": 1.7462778888791464
+      },
+      "tda_full_ev": {
+        "qualified": 14,
+        "requested": 14,
+        "mae_ev": 1.0125688321517978,
+        "rmse_ev": 1.1491468896843617,
+        "signed_mean_ev": 0.6819917022048106,
+        "maximum_absolute_ev": 1.9176836377466717
+      },
+      "tda_selected_ev": {
+        "qualified": 14,
+        "requested": 14,
+        "mae_ev": 0.26122387157670357,
+        "rmse_ev": 0.3405803690724036,
+        "signed_mean_ev": 0.16537143480956892,
+        "maximum_absolute_ev": 0.9830853354676812
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 14,
+        "requested": 14,
+        "mae_ev": 0.6107646314403266,
+        "rmse_ev": 0.6939915679058077,
+        "signed_mean_ev": 0.4236815685071897,
+        "maximum_absolute_ev": 1.1083857717227268
+      }
+    },
+    "solver_development": {
+      "oo_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.6762250185454252,
+        "rmse_ev": 0.9593157208421453,
+        "signed_mean_ev": 0.6362281979880658,
+        "maximum_absolute_ev": 1.7462778888791464
+      },
+      "tda_full_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 1.319818232479265,
+        "rmse_ev": 1.4257437119859044,
+        "signed_mean_ev": 1.2226283517407164,
+        "maximum_absolute_ev": 1.9176836377466717
+      },
+      "tda_selected_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.3136790969401358,
+        "rmse_ev": 0.43725451647936076,
+        "signed_mean_ev": 0.3136790969401358,
+        "maximum_absolute_ev": 0.9830853354676812
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.7898913012034997,
+        "rmse_ev": 0.8694155823182088,
+        "signed_mean_ev": 0.7681537243404261,
+        "maximum_absolute_ev": 1.1083857717227268
+      }
+    },
+    "remaining_molecules": {
+      "oo_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.43798154254982524,
+        "rmse_ev": 0.5989464017635882,
+        "signed_mean_ev": 0.2328182888958518,
+        "maximum_absolute_ev": 1.2688441100966754
+      },
+      "tda_full_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.8783872782703875,
+        "rmse_ev": 0.9771583289121797,
+        "signed_mean_ev": 0.30404119927811796,
+        "maximum_absolute_ev": 1.476059401809838
+      },
+      "tda_selected_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.2167463410073176,
+        "rmse_ev": 0.23688557817528524,
+        "signed_mean_ev": -0.006909344782663289,
+        "maximum_absolute_ev": 0.326773373179722
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.533462951632096,
+        "rmse_ev": 0.5668713514370656,
+        "signed_mean_ev": 0.14856592724772724,
+        "maximum_absolute_ev": 0.6983904762317152
+      }
+    },
+    "solver_repair": {
+      "oo_ev": {
+        "qualified": 2,
+        "requested": 2,
+        "mae_ev": 0.10335090160375371,
+        "rmse_ev": 0.1071235371442641,
+        "signed_mean_ev": -0.028178774778008897,
+        "maximum_absolute_ev": 0.1315296763817626
+      },
+      "tda_full_ev": {
+        "qualified": 2,
+        "requested": 2,
+        "mae_ev": 0.49336529281362784,
+        "rmse_ev": 0.5301126506784474,
+        "signed_mean_ev": 0.19393326237717146,
+        "maximum_absolute_ev": 0.6872985551907993
+      },
+      "tda_selected_ev": {
+        "qualified": 2,
+        "requested": 2,
+        "mae_ev": 0.23729078719456487,
+        "rmse_ev": 0.2646621366862786,
+        "signed_mean_ev": 0.23729078719456487,
+        "maximum_absolute_ev": 0.35450481753193586
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 2,
+        "requested": 2,
+        "mae_ev": 0.30528966157549897,
+        "rmse_ev": 0.37375168587866536,
+        "signed_mean_ev": 0.21561202478586816,
+        "maximum_absolute_ev": 0.5209016863613671
+      }
+    },
+    "pi_pi": {
+      "oo_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.9539085594883716,
+        "rmse_ev": 1.1673580057604374,
+        "signed_mean_ev": 0.9328906430347569,
+        "maximum_absolute_ev": 1.7462778888791464
+      },
+      "tda_full_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 1.409068724610785,
+        "rmse_ev": 1.4614816747764499,
+        "signed_mean_ev": 1.409068724610785,
+        "maximum_absolute_ev": 1.9176836377466717
+      },
+      "tda_selected_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.41692411600489193,
+        "rmse_ev": 0.5068033611996381,
+        "signed_mean_ev": 0.41692411600489193,
+        "maximum_absolute_ev": 0.9830853354676812
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.9129964203078382,
+        "rmse_ev": 0.934304947631167,
+        "signed_mean_ev": 0.9129964203078382,
+        "maximum_absolute_ev": 1.1083857717227268
+      }
+    },
+    "n_pi": {
+      "oo_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.19268290867357757,
+        "rmse_ev": 0.24774256662127195,
+        "signed_mean_ev": -0.13310313447911212,
+        "maximum_absolute_ev": 0.4993605962781409
+      },
+      "tda_full_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.5922729365673179,
+        "rmse_ev": 0.7284222155404049,
+        "signed_mean_ev": -0.13054886427414,
+        "maximum_absolute_ev": 1.1543101807329448
+      },
+      "tda_selected_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.14247718256519626,
+        "rmse_ev": 0.1448266092524884,
+        "signed_mean_ev": 0.024823173112688935,
+        "maximum_absolute_ev": 0.18208854479384495
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.3111308719873776,
+        "rmse_ev": 0.400179255398775,
+        "signed_mean_ev": -0.052862845580725445,
+        "maximum_absolute_ev": 0.6456700660166304
+      }
+    },
+    "Rydberg": {
+      "oo_ev": {
+        "qualified": 1,
+        "requested": 1,
+        "mae_ev": 0.5982272904838677,
+        "rmse_ev": 0.5982272904838677,
+        "signed_mean_ev": 0.5982272904838677,
+        "maximum_absolute_ev": 0.5982272904838677
+      },
+      "tda_full_ev": {
+        "qualified": 1,
+        "requested": 1,
+        "mae_ev": 1.498911979708753,
+        "rmse_ev": 1.498911979708753,
+        "signed_mean_ev": 1.498911979708753,
+        "maximum_absolute_ev": 1.498911979708753
+      },
+      "tda_selected_ev": {
+        "qualified": 1,
+        "requested": 1,
+        "mae_ev": 0.128790857952799,
+        "rmse_ev": 0.128790857952799,
+        "signed_mean_ev": 0.128790857952799,
+        "maximum_absolute_ev": 0.128790857952799
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 1,
+        "requested": 1,
+        "mae_ev": 0.8138514188307759,
+        "rmse_ev": 0.8138514188307759,
+        "signed_mean_ev": 0.8138514188307759,
+        "maximum_absolute_ev": 0.8138514188307759
+      }
+    },
+    "CT": {
+      "oo_ev": {
+        "qualified": 3,
+        "requested": 3,
+        "mae_ev": 0.18691884616179877,
+        "rmse_ev": 0.27000630569064604,
+        "signed_mean_ev": 0.18691884616179877,
+        "maximum_absolute_ev": 0.46092434039876196
+      },
+      "tda_full_ev": {
+        "qualified": 3,
+        "requested": 3,
+        "mae_ev": 0.8901144548419678,
+        "rmse_ev": 0.984575181670101,
+        "signed_mean_ev": 0.552124183158457,
+        "maximum_absolute_ev": 1.476059401809838
+      },
+      "tda_selected_ev": {
+        "qualified": 3,
+        "requested": 3,
+        "mae_ev": 0.24377895042353673,
+        "rmse_ev": 0.2697040203127546,
+        "signed_mean_ev": -0.007442405402246166,
+        "maximum_absolute_ev": 0.35450481753193586
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 3,
+        "requested": 3,
+        "mae_ev": 0.5387389866192391,
+        "rmse_ev": 0.5522801699953308,
+        "signed_mean_ev": 0.2723408888781054,
+        "maximum_absolute_ev": 0.6957181268846497
+      }
+    }
+  },
+  "paired_comparison": {
+    "all_selected": {
+      "oo_ev": {
+        "qualified": 14,
+        "requested": 14,
+        "mae_ev": 0.4922815121270721,
+        "rmse_ev": 0.741479773881893,
+        "signed_mean_ev": 0.36842295512482054,
+        "maximum_absolute_ev": 1.7462778888791464
+      },
+      "tda_full_ev": {
+        "qualified": 14,
+        "requested": 14,
+        "mae_ev": 1.0125688321517978,
+        "rmse_ev": 1.1491468896843617,
+        "signed_mean_ev": 0.6819917022048106,
+        "maximum_absolute_ev": 1.9176836377466717
+      },
+      "tda_selected_ev": {
+        "qualified": 14,
+        "requested": 14,
+        "mae_ev": 0.26122387157670357,
+        "rmse_ev": 0.3405803690724036,
+        "signed_mean_ev": 0.16537143480956892,
+        "maximum_absolute_ev": 0.9830853354676812
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 14,
+        "requested": 14,
+        "mae_ev": 0.6107646314403266,
+        "rmse_ev": 0.6939915679058077,
+        "signed_mean_ev": 0.4236815685071897,
+        "maximum_absolute_ev": 1.1083857717227268
+      }
+    },
+    "solver_development": {
+      "oo_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.6762250185454252,
+        "rmse_ev": 0.9593157208421453,
+        "signed_mean_ev": 0.6362281979880658,
+        "maximum_absolute_ev": 1.7462778888791464
+      },
+      "tda_full_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 1.319818232479265,
+        "rmse_ev": 1.4257437119859044,
+        "signed_mean_ev": 1.2226283517407164,
+        "maximum_absolute_ev": 1.9176836377466717
+      },
+      "tda_selected_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.3136790969401358,
+        "rmse_ev": 0.43725451647936076,
+        "signed_mean_ev": 0.3136790969401358,
+        "maximum_absolute_ev": 0.9830853354676812
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.7898913012034997,
+        "rmse_ev": 0.8694155823182088,
+        "signed_mean_ev": 0.7681537243404261,
+        "maximum_absolute_ev": 1.1083857717227268
+      }
+    },
+    "remaining_molecules": {
+      "oo_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.43798154254982524,
+        "rmse_ev": 0.5989464017635882,
+        "signed_mean_ev": 0.2328182888958518,
+        "maximum_absolute_ev": 1.2688441100966754
+      },
+      "tda_full_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.8783872782703875,
+        "rmse_ev": 0.9771583289121797,
+        "signed_mean_ev": 0.30404119927811796,
+        "maximum_absolute_ev": 1.476059401809838
+      },
+      "tda_selected_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.2167463410073176,
+        "rmse_ev": 0.23688557817528524,
+        "signed_mean_ev": -0.006909344782663289,
+        "maximum_absolute_ev": 0.326773373179722
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 6,
+        "requested": 6,
+        "mae_ev": 0.533462951632096,
+        "rmse_ev": 0.5668713514370656,
+        "signed_mean_ev": 0.14856592724772724,
+        "maximum_absolute_ev": 0.6983904762317152
+      }
+    },
+    "solver_repair": {
+      "oo_ev": {
+        "qualified": 2,
+        "requested": 2,
+        "mae_ev": 0.10335090160375371,
+        "rmse_ev": 0.1071235371442641,
+        "signed_mean_ev": -0.028178774778008897,
+        "maximum_absolute_ev": 0.1315296763817626
+      },
+      "tda_full_ev": {
+        "qualified": 2,
+        "requested": 2,
+        "mae_ev": 0.49336529281362784,
+        "rmse_ev": 0.5301126506784474,
+        "signed_mean_ev": 0.19393326237717146,
+        "maximum_absolute_ev": 0.6872985551907993
+      },
+      "tda_selected_ev": {
+        "qualified": 2,
+        "requested": 2,
+        "mae_ev": 0.23729078719456487,
+        "rmse_ev": 0.2646621366862786,
+        "signed_mean_ev": 0.23729078719456487,
+        "maximum_absolute_ev": 0.35450481753193586
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 2,
+        "requested": 2,
+        "mae_ev": 0.30528966157549897,
+        "rmse_ev": 0.37375168587866536,
+        "signed_mean_ev": 0.21561202478586816,
+        "maximum_absolute_ev": 0.5209016863613671
+      }
+    },
+    "pi_pi": {
+      "oo_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.9539085594883716,
+        "rmse_ev": 1.1673580057604374,
+        "signed_mean_ev": 0.9328906430347569,
+        "maximum_absolute_ev": 1.7462778888791464
+      },
+      "tda_full_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 1.409068724610785,
+        "rmse_ev": 1.4614816747764499,
+        "signed_mean_ev": 1.409068724610785,
+        "maximum_absolute_ev": 1.9176836377466717
+      },
+      "tda_selected_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.41692411600489193,
+        "rmse_ev": 0.5068033611996381,
+        "signed_mean_ev": 0.41692411600489193,
+        "maximum_absolute_ev": 0.9830853354676812
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.9129964203078382,
+        "rmse_ev": 0.934304947631167,
+        "signed_mean_ev": 0.9129964203078382,
+        "maximum_absolute_ev": 1.1083857717227268
+      }
+    },
+    "n_pi": {
+      "oo_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.19268290867357757,
+        "rmse_ev": 0.24774256662127195,
+        "signed_mean_ev": -0.13310313447911212,
+        "maximum_absolute_ev": 0.4993605962781409
+      },
+      "tda_full_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.5922729365673179,
+        "rmse_ev": 0.7284222155404049,
+        "signed_mean_ev": -0.13054886427414,
+        "maximum_absolute_ev": 1.1543101807329448
+      },
+      "tda_selected_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.14247718256519626,
+        "rmse_ev": 0.1448266092524884,
+        "signed_mean_ev": 0.024823173112688935,
+        "maximum_absolute_ev": 0.18208854479384495
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 5,
+        "requested": 5,
+        "mae_ev": 0.3111308719873776,
+        "rmse_ev": 0.400179255398775,
+        "signed_mean_ev": -0.052862845580725445,
+        "maximum_absolute_ev": 0.6456700660166304
+      }
+    },
+    "Rydberg": {
+      "oo_ev": {
+        "qualified": 1,
+        "requested": 1,
+        "mae_ev": 0.5982272904838677,
+        "rmse_ev": 0.5982272904838677,
+        "signed_mean_ev": 0.5982272904838677,
+        "maximum_absolute_ev": 0.5982272904838677
+      },
+      "tda_full_ev": {
+        "qualified": 1,
+        "requested": 1,
+        "mae_ev": 1.498911979708753,
+        "rmse_ev": 1.498911979708753,
+        "signed_mean_ev": 1.498911979708753,
+        "maximum_absolute_ev": 1.498911979708753
+      },
+      "tda_selected_ev": {
+        "qualified": 1,
+        "requested": 1,
+        "mae_ev": 0.128790857952799,
+        "rmse_ev": 0.128790857952799,
+        "signed_mean_ev": 0.128790857952799,
+        "maximum_absolute_ev": 0.128790857952799
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 1,
+        "requested": 1,
+        "mae_ev": 0.8138514188307759,
+        "rmse_ev": 0.8138514188307759,
+        "signed_mean_ev": 0.8138514188307759,
+        "maximum_absolute_ev": 0.8138514188307759
+      }
+    },
+    "CT": {
+      "oo_ev": {
+        "qualified": 3,
+        "requested": 3,
+        "mae_ev": 0.18691884616179877,
+        "rmse_ev": 0.27000630569064604,
+        "signed_mean_ev": 0.18691884616179877,
+        "maximum_absolute_ev": 0.46092434039876196
+      },
+      "tda_full_ev": {
+        "qualified": 3,
+        "requested": 3,
+        "mae_ev": 0.8901144548419678,
+        "rmse_ev": 0.984575181670101,
+        "signed_mean_ev": 0.552124183158457,
+        "maximum_absolute_ev": 1.476059401809838
+      },
+      "tda_selected_ev": {
+        "qualified": 3,
+        "requested": 3,
+        "mae_ev": 0.24377895042353673,
+        "rmse_ev": 0.2697040203127546,
+        "signed_mean_ev": -0.007442405402246166,
+        "maximum_absolute_ev": 0.35450481753193586
+      },
+      "tda_parent_mean_ev": {
+        "qualified": 3,
+        "requested": 3,
+        "mae_ev": 0.5387389866192391,
+        "rmse_ev": 0.5522801699953308,
+        "signed_mean_ev": 0.2723408888781054,
+        "maximum_absolute_ev": 0.6957181268846497
+      }
+    }
+  },
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "post_score_fitting": false,
+  "scope": "14 selected states on 10 molecules; scope reduced after seeing baseline convergence, all prior failures retained separately",
+  "tda_mean_is_arithmetic_parent_average": true
+}

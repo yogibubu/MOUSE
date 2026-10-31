@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "decision": "Recommend at most two additional molecules; assessment only, no expanded production campaign activated",
+  "decision": "Additional molecules suspended by explicit user instruction; pi-pi accuracy repair takes priority",
   "selection_basis": "Chemical coverage and application relevance, not prediction error; existing sealed accuracy labels were not opened",
   "candidates": [
     {
@@ -57,6 +57,6 @@
     "accuracy_labels_opened_only_after_14_OO_predictions_and_14_true_TDA_controls_complete": true,
     "post_score_fitting_performed": false,
     "remote_report": "/home/enzo/MOUSE-orbital-performance-20261031/energy_scores.json",
-    "full_artifact_transfer": "Pending; SSH reset connection after successful completion and inspection of scores"
+    "full_artifact_transfer": "Completed scores, prediction locks, ledger and seed-recovery audits archived locally in remote/completed_14_state_snapshot"
   }
 }
