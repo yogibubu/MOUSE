@@ -1,0 +1,19 @@
+{
+  "host": "oracle.sns.it",
+  "protocol_sha256": "1bddf1278299a79d83a865bccb6564c2ae1d1c9f76eba49fcd14054dbf981f72",
+  "source_sha256": {
+    "common.py": "a83daf9481fd20d59c624e7dedf95635c989c5c9e2e22edaab1a9f8342d35c0f",
+    "anchor_energy.py": "393b741946d695453c54097f1b43583b72edc774d734eb588e95bcaecd99d78c",
+    "freeze_independent.py": "0c02e0b012445e3f3b6c7f85998a4acf49b633d140ecfd3b650802c0036d82a1",
+    "geometry.py": "b3c19b040eb70431bab801a7c28a06ebf0efc5b3043af5c246e49b071203937a",
+    "independent.py": "63790cb981358422f3d7904227cca2058520a16f5044cf491b820b05e5a98d3c",
+    "cost.py": "30fe524444bdbaacd617785f2d423edf951dc5437bd7be25835dce967cb373f6",
+    "controller.py": "50c4a45087defb8f2896fc1d82742b8db3b30a59ab103b5ed382e41cd7372a5b",
+    "collect.py": "0e87adbf584475ff0d8fde23f627851a1a5a72cdd79ba8a24e056e291a078630",
+    "archive.py": "298b3d199840213c96507b8ef91c1db31a60f0686e09aebe075c2799fd34db2c"
+  },
+  "independent_manifest_sha256": "5a4952d2b8e5ea9b591fecd6a8646b8df8fd58e20e89be6b4a9f3f389815046f",
+  "started_utc": "2026-10-31T21:11:03.967469+00:00",
+  "shared_lock": "parent process dispatches children serially; each child holds campaign compute.lock",
+  "sealed_labels_read": false
+}

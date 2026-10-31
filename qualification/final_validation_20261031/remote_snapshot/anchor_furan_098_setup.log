@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy.py", line 42, in <module>
+    with threadpool_limits():run(args.name,args.sid,args.scale)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy.py", line 9, in run
+    start=time.monotonic();raw=loadpoint(src/'native.npz');s=canonical_state(raw);raw=replace(raw,reference_state=s)
+                                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/common.py", line 43, in canonical_state
+    return replace(s,coefficients=c,fock=f,orbital_energies_hartree=np.diag(c.T@f@c))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/.local/share/mamba/envs/et-2.5/lib/python3.11/dataclasses.py", line 1503, in replace
+    return obj.__class__(**changes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 19, in __init__
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/electronic_state.py", line 152, in __post_init__
+    raise ValueError("orbital state does not satisfy the generalized eigenproblem")
+ValueError: orbital state does not satisfy the generalized eigenproblem

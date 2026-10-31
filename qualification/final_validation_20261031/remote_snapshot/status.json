@@ -1,0 +1,701 @@
+{
+  "updated_utc": "2026-10-31T21:13:51.060502+00:00",
+  "host": "oracle.sns.it",
+  "protocol_sha256": "1bddf1278299a79d83a865bccb6564c2ae1d1c9f76eba49fcd14054dbf981f72",
+  "anchor_energy": {
+    "complete": false,
+    "rows": [
+      {
+        "status": "complete",
+        "host": "oracle.sns.it",
+        "molecule": "Cyclopentadiene",
+        "state": "B016",
+        "scale": 0.98,
+        "common_coordinates_angstrom": [
+          [
+            0.0,
+            0.0,
+            -1.2335806499603708
+          ],
+          [
+            0.0,
+            1.1758794099622243,
+            -0.30094924999033185
+          ],
+          [
+            0.0,
+            -1.1758794099622243,
+            -0.30094924999033185
+          ],
+          [
+            0.0,
+            0.7329866199764524,
+            0.9724840399687585
+          ],
+          [
+            0.0,
+            -0.7329866199764524,
+            0.9724840399687585
+          ],
+          [
+            0.8791244199717577,
+            0.0,
+            -1.8860624999394093
+          ],
+          [
+            -0.8791244199717577,
+            0.0,
+            -1.8860624999394093
+          ],
+          [
+            0.0,
+            2.2042889399291865,
+            -0.6250460099799202
+          ],
+          [
+            0.0,
+            -2.2042889399291865,
+            -0.6250460099799202
+          ],
+          [
+            0.0,
+            1.3468326399567323,
+            1.85927557994027
+          ],
+          [
+            0.0,
+            -1.3468326399567323,
+            1.85927557994027
+          ]
+        ],
+        "excitation_ev": 6.708802274690936,
+        "baseline_ev": 6.720139395451143,
+        "change_ev": -0.011337120760206432,
+        "parent_gaps_ev": [
+          7.619735886018309,
+          5.797868663363564
+        ],
+        "residual": 4.522656556905434e-15,
+        "fidelity": [
+          0.9939113051144914,
+          0.9974083206601075
+        ],
+        "rank": 2,
+        "seconds": 24.379484118020628,
+        "peak_rss_kib": 1640968,
+        "model_fingerprint": "7de690195cfba4195be37a5f1bdeb7b1af19b9472fa002bab2b84ea1506e4973",
+        "numerical_accuracy_labels_read": false
+      },
+      {
+        "status": "complete",
+        "host": "oracle.sns.it",
+        "molecule": "Cyclopentadiene",
+        "state": "B016",
+        "scale": 1.02,
+        "common_coordinates_angstrom": [
+          [
+            0.0,
+            0.0,
+            -1.2335806499603708
+          ],
+          [
+            0.0,
+            1.1758794099622243,
+            -0.30094924999033185
+          ],
+          [
+            0.0,
+            -1.1758794099622243,
+            -0.30094924999033185
+          ],
+          [
+            0.0,
+            0.7329866199764524,
+            0.9724840399687585
+          ],
+          [
+            0.0,
+            -0.7329866199764524,
+            0.9724840399687585
+          ],
+          [
+            0.8791244199717577,
+            0.0,
+            -1.8860624999394093
+          ],
+          [
+            -0.8791244199717577,
+            0.0,
+            -1.8860624999394093
+          ],
+          [
+            0.0,
+            2.2042889399291865,
+            -0.6250460099799202
+          ],
+          [
+            0.0,
+            -2.2042889399291865,
+            -0.6250460099799202
+          ],
+          [
+            0.0,
+            1.3468326399567323,
+            1.85927557994027
+          ],
+          [
+            0.0,
+            -1.3468326399567323,
+            1.85927557994027
+          ]
+        ],
+        "excitation_ev": 6.7281710691755725,
+        "baseline_ev": 6.720139395451143,
+        "change_ev": 0.008031673724429922,
+        "parent_gaps_ev": [
+          7.48456811826931,
+          5.971774020081835
+        ],
+        "residual": 5.758888457677126e-15,
+        "fidelity": [
+          0.9951782430850721,
+          0.9977120966251508
+        ],
+        "rank": 2,
+        "seconds": 22.039712111989502,
+        "peak_rss_kib": 1640284,
+        "model_fingerprint": "4d8954ba409c5971713dbe7836d95c7588c0041d1329165a5dfeb919fa23aad4",
+        "numerical_accuracy_labels_read": false
+      },
+      {
+        "status": "complete",
+        "host": "oracle.sns.it",
+        "molecule": "Furan",
+        "state": "B022",
+        "scale": 0.98,
+        "common_coordinates_angstrom": [
+          [
+            0.0,
+            1.0920404899649176,
+            -0.31777739998979126
+          ],
+          [
+            0.0,
+            -1.0920404899649176,
+            -0.31777739998979126
+          ],
+          [
+            0.0,
+            0.7162335399769906,
+            0.9860494599683227
+          ],
+          [
+            0.0,
+            -0.7162335399769906,
+            0.9860494599683227
+          ],
+          [
+            0.0,
+            0.0,
+            -1.132149489963629
+          ],
+          [
+            0.0,
+            2.044408069934322,
+            -0.8136926899738597
+          ],
+          [
+            0.0,
+            -2.044408069934322,
+            -0.8136926899738597
+          ],
+          [
+            0.0,
+            1.3714616199559413,
+            1.8371334799409813
+          ],
+          [
+            0.0,
+            -1.3714616199559413,
+            1.8371334799409813
+          ]
+        ],
+        "excitation_ev": 6.603975266927988,
+        "baseline_ev": 6.673604679027626,
+        "change_ev": -0.06962941209963791,
+        "parent_gaps_ev": [
+          7.4448426619906165,
+          5.763107871865361
+        ],
+        "residual": 1.2428897472806433e-14,
+        "fidelity": [
+          0.9898977197237169,
+          0.9997130140510058
+        ],
+        "rank": 2,
+        "seconds": 6.168578349985182,
+        "peak_rss_kib": 522500,
+        "model_fingerprint": "d048e04a38d490200d178e771ba6f257ebe607a73daa48f226cc3352aba4e3ba",
+        "numerical_accuracy_labels_read": false
+      },
+      {
+        "status": "complete",
+        "host": "oracle.sns.it",
+        "molecule": "Furan",
+        "state": "B022",
+        "scale": 1.02,
+        "common_coordinates_angstrom": [
+          [
+            0.0,
+            1.0920404899649176,
+            -0.31777739998979126
+          ],
+          [
+            0.0,
+            -1.0920404899649176,
+            -0.31777739998979126
+          ],
+          [
+            0.0,
+            0.7162335399769906,
+            0.9860494599683227
+          ],
+          [
+            0.0,
+            -0.7162335399769906,
+            0.9860494599683227
+          ],
+          [
+            0.0,
+            0.0,
+            -1.132149489963629
+          ],
+          [
+            0.0,
+            2.044408069934322,
+            -0.8136926899738597
+          ],
+          [
+            0.0,
+            -2.044408069934322,
+            -0.8136926899738597
+          ],
+          [
+            0.0,
+            1.3714616199559413,
+            1.8371334799409813
+          ],
+          [
+            0.0,
+            -1.3714616199559413,
+            1.8371334799409813
+          ]
+        ],
+        "excitation_ev": 6.696085515086989,
+        "baseline_ev": 6.673604679027626,
+        "change_ev": 0.022480836059362908,
+        "parent_gaps_ev": [
+          7.36790900124643,
+          6.024262028927549
+        ],
+        "residual": 1.2656848291149295e-14,
+        "fidelity": [
+          0.9913054833979174,
+          0.9996216552257963
+        ],
+        "rank": 2,
+        "seconds": 14.438087549002375,
+        "peak_rss_kib": 1277608,
+        "model_fingerprint": "1a998cbd8a3812ad58cbb5596cdfecdae3307e32f7f574822ed50d5d03715565",
+        "numerical_accuracy_labels_read": false
+      }
+    ],
+    "maximum_absolute_change_ev": 0.06962941209963791
+  },
+  "independent": {
+    "manifest_sha256": "5a4952d2b8e5ea9b591fecd6a8646b8df8fd58e20e89be6b4a9f3f389815046f",
+    "labels_read": false,
+    "all_attempts_closed": false,
+    "rows": [
+      {
+        "id": "I001",
+        "molecule": "Criegee_Intermediate",
+        "family": "n_pi",
+        "status": "matched",
+        "rank": 1,
+        "excitation_ev": 2.1126880376219956,
+        "residual": 7.546047120499111e-14,
+        "projection_norm": 0.9250907440809996,
+        "seconds": 1.032197337015532,
+        "labels_read": false
+      },
+      {
+        "id": "I002",
+        "molecule": "Criegee_Intermediate",
+        "family": "pi_pi",
+        "status": "matched",
+        "rank": 1,
+        "excitation_ev": 1.850800611842393,
+        "residual": 1.3917469607327426e-14,
+        "projection_norm": 0.8256439907363329,
+        "seconds": 0.3301511120516807,
+        "labels_read": false
+      },
+      {
+        "id": "I003",
+        "molecule": "Cyclobutadiene",
+        "family": "pi_pi",
+        "status": "not_representable",
+        "reason": "compact projection below .7 or effective rank exceeds four",
+        "projection_norm": 0.3159821967104605,
+        "rank": 1
+      },
+      {
+        "id": "I004",
+        "molecule": "Benzoxadiazole",
+        "family": "pi_pi",
+        "status": "pending"
+      },
+      {
+        "id": "I005",
+        "molecule": "Hexatriene",
+        "family": "pi_pi",
+        "status": "matched",
+        "rank": 1,
+        "excitation_ev": 4.912010944723675,
+        "residual": 2.6646978894262485e-15,
+        "projection_norm": 0.8446415967423895,
+        "seconds": 11.402196298004128,
+        "labels_read": false
+      },
+      {
+        "id": "I006",
+        "molecule": "Ammonia",
+        "family": "Rydberg",
+        "status": "not_representable",
+        "reason": "compact projection below .7 or effective rank exceeds four",
+        "projection_norm": 0.4726743807733241,
+        "rank": 1
+      }
+    ]
+  },
+  "structure_frequency": {
+    "completed": 1,
+    "rows": [
+      {
+        "status": "stationary_characterized",
+        "host": "oracle.sns.it",
+        "molecule": "Furan",
+        "state": "B022",
+        "max_gradient": 2.748800029958717e-05,
+        "frequencies_cm1": [
+          -951.9266666728103,
+          -510.3253823022542,
+          -489.9138680861635,
+          -307.73165061508666,
+          -179.4294197655771,
+          417.8271851205396,
+          736.2075821917265,
+          754.4393671991089,
+          971.5459010133927,
+          991.0515862184607,
+          1038.554173944801,
+          1094.563529022545,
+          1096.7843059392899,
+          1134.789673756128,
+          1279.9447253983617,
+          1424.2613432965254,
+          1440.133502610218,
+          3199.5697777817195,
+          3200.1747290116195,
+          3230.3476346069892,
+          3236.9857637530035
+        ],
+        "imaginary_below_minus20": 5,
+        "nuclear_minimum": false,
+        "electronic_orbital_index": 0,
+        "model_fingerprint": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+        "frozen_rank": 2,
+        "analytic_hessian": true,
+        "seconds_current_run": 129.1381281170179,
+        "peak_rss_kib": 703672,
+        "physical_reference_comparison": "separate required step; an imaginary nuclear mode is retained, never clipped"
+      }
+    ],
+    "physical_reference_comparison": "pending until comparison certificate exists"
+  },
+  "cost": {
+    "completed": 12,
+    "expected": 72,
+    "rows": [
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "energy",
+        "repeat": 0,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.2986907689482905,
+        "cpu_seconds": 0.29668432600000005,
+        "process_peak_rss_kib": 144556,
+        "model_loading_and_ground_setup_seconds": 0.052193474024534225,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "energy_hartree": -7.297538817459815,
+        "residual": 1.878705524482882e-15
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "energy",
+        "repeat": 1,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.2853344500181265,
+        "cpu_seconds": 0.283866112,
+        "process_peak_rss_kib": 146528,
+        "model_loading_and_ground_setup_seconds": 0.04978782602120191,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "energy_hartree": -7.297538817459815,
+        "residual": 1.878705524482882e-15
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "energy",
+        "repeat": 2,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.28560805902816355,
+        "cpu_seconds": 0.28404018099999995,
+        "process_peak_rss_kib": 146984,
+        "model_loading_and_ground_setup_seconds": 0.05130025802645832,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "energy_hartree": -7.297538817459815,
+        "residual": 1.878705524482882e-15
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "gradient",
+        "repeat": 0,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.3430229149525985,
+        "cpu_seconds": 0.3409872019999999,
+        "process_peak_rss_kib": 147304,
+        "model_loading_and_ground_setup_seconds": 0.054036604007706046,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "energy_hartree": -7.297538817459815,
+        "residual": 1.878705524482882e-15,
+        "gradient_max": 0.04896977593999072
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "gradient",
+        "repeat": 1,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.31635070499032736,
+        "cpu_seconds": 0.31408738999999997,
+        "process_peak_rss_kib": 147332,
+        "model_loading_and_ground_setup_seconds": 0.051168338977731764,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "energy_hartree": -7.297538817459815,
+        "residual": 1.878705524482882e-15,
+        "gradient_max": 0.04896977593999072
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "gradient",
+        "repeat": 2,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.31926766998367384,
+        "cpu_seconds": 0.3172401129999999,
+        "process_peak_rss_kib": 147340,
+        "model_loading_and_ground_setup_seconds": 0.05118856899207458,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "energy_hartree": -7.297538817459815,
+        "residual": 1.878705524482882e-15,
+        "gradient_max": 0.04896977593999072
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "hessian",
+        "repeat": 0,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.8853405240224674,
+        "cpu_seconds": 0.8797702740000001,
+        "process_peak_rss_kib": 147592,
+        "model_loading_and_ground_setup_seconds": 0.05120609904406592,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "energy_hartree": -7.297538817459815,
+        "residual": 1.878705524482882e-15,
+        "hessian_max": 0.8166935807437838
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "hessian",
+        "repeat": 1,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.8661927350331098,
+        "cpu_seconds": 0.862099789,
+        "process_peak_rss_kib": 148384,
+        "model_loading_and_ground_setup_seconds": 0.05062950198771432,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "energy_hartree": -7.297538817459815,
+        "residual": 1.878705524482882e-15,
+        "hessian_max": 0.8166935807437838
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "hessian",
+        "repeat": 2,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.873675025999546,
+        "cpu_seconds": 0.869544787,
+        "process_peak_rss_kib": 145964,
+        "model_loading_and_ground_setup_seconds": 0.050522001984063536,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "energy_hartree": -7.297538817459815,
+        "residual": 1.878705524482882e-15,
+        "hessian_max": 0.8166935807437838
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "tda",
+        "repeat": 0,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.010985802044160664,
+        "cpu_seconds": 0.02188127799999995,
+        "process_peak_rss_kib": 127548,
+        "model_loading_and_ground_setup_seconds": 0.09300228802021593,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "roots_per_parent": [
+          18,
+          18
+        ],
+        "pair_dimensions": [
+          18,
+          18
+        ],
+        "lowest_ev": [
+          3.44976628757784,
+          3.417051225251042
+        ],
+        "orbitals": "own stationary corrected GFN2 orbitals, never DFT orbitals"
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "tda",
+        "repeat": 1,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.011316400021314621,
+        "cpu_seconds": 0.011259143999999943,
+        "process_peak_rss_kib": 122944,
+        "model_loading_and_ground_setup_seconds": 0.05072217102861032,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "roots_per_parent": [
+          18,
+          18
+        ],
+        "pair_dimensions": [
+          18,
+          18
+        ],
+        "lowest_ev": [
+          3.44976628757784,
+          3.417051225251042
+        ],
+        "orbitals": "own stationary corrected GFN2 orbitals, never DFT orbitals"
+      },
+      {
+        "status": "complete",
+        "molecule": "nitroxyl",
+        "property": "tda",
+        "repeat": 2,
+        "host": "oracle.sns.it",
+        "threads": 2,
+        "natoms": 3,
+        "nao": 9,
+        "rank": 1,
+        "wall_seconds": 0.011709237995091826,
+        "cpu_seconds": 0.011615333999999922,
+        "process_peak_rss_kib": 124696,
+        "model_loading_and_ground_setup_seconds": 0.0542680419748649,
+        "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+        "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+        "roots_per_parent": [
+          18,
+          18
+        ],
+        "pair_dimensions": [
+          18,
+          18
+        ],
+        "lowest_ev": [
+          3.44976628757784,
+          3.417051225251042
+        ],
+        "orbitals": "own stationary corrected GFN2 orbitals, never DFT orbitals"
+      }
+    ],
+    "full_preparation_cost_coverage": "requires separate timing-source audit; not inferred from property-only measurements"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "reference_ready",
+  "molecule": "Hexatriene",
+  "states": [
+    "I005"
+  ],
+  "reference_sha256": "d1ae77cfda7fcea3c255b1f0c9c5b0966d6e5e09005df782bb35cb195e92a6c7",
+  "numerical_labels_read": false
+}

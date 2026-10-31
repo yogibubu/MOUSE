@@ -1,0 +1,7 @@
+{
+  "source_group": "C3v",
+  "source_irrep": "A1",
+  "working_group": "Cs",
+  "working_irrep": "A'",
+  "reason": "exact group-subgroup correlation before response evaluation"
+}

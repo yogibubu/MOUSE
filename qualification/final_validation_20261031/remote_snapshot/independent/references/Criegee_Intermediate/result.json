@@ -1,0 +1,10 @@
+{
+  "status": "reference_ready",
+  "molecule": "Criegee_Intermediate",
+  "states": [
+    "I001",
+    "I002"
+  ],
+  "reference_sha256": "7aea1c162ee8a73f1742587b0617f0a83c0dca7839d9cc889899d0e57a9cd339",
+  "numerical_labels_read": false
+}

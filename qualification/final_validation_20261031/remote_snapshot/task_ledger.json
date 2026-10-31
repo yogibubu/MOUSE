@@ -1,0 +1,128 @@
+[
+  {
+    "tag": "anchor_Cyclopentadiene_0.98",
+    "exit_code": 0,
+    "seconds": 25.18602645897772,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "anchor_Cyclopentadiene_1.02",
+    "exit_code": 0,
+    "seconds": 22.812020764977206,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "independent_Ammonia",
+    "exit_code": 1,
+    "seconds": 1.2166867200285196,
+    "output_exists": false,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_tda_0",
+    "exit_code": 0,
+    "seconds": 0.7650241099763662,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_tda_1",
+    "exit_code": 0,
+    "seconds": 0.7155525329872034,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_tda_2",
+    "exit_code": 0,
+    "seconds": 0.7660007959930226,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_energy_0",
+    "exit_code": 0,
+    "seconds": 1.0675935889594257,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_energy_1",
+    "exit_code": 0,
+    "seconds": 1.017552854027599,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_energy_2",
+    "exit_code": 0,
+    "seconds": 1.017315074976068,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_gradient_0",
+    "exit_code": 0,
+    "seconds": 1.1164916109992191,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_gradient_1",
+    "exit_code": 0,
+    "seconds": 1.0653503019711934,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_gradient_2",
+    "exit_code": 0,
+    "seconds": 1.0653950010309927,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_hessian_0",
+    "exit_code": 0,
+    "seconds": 1.616183634963818,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_hessian_1",
+    "exit_code": 0,
+    "seconds": 1.619068600004539,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_hessian_2",
+    "exit_code": 0,
+    "seconds": 1.616748041997198,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "independent_Criegee_Intermediate",
+    "exit_code": 0,
+    "seconds": 14.340530104993377,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "independent_Cyclobutadiene",
+    "exit_code": 0,
+    "seconds": 15.39449728600448,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "independent_Hexatriene",
+    "exit_code": 0,
+    "seconds": 116.30378787900554,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  }
+]

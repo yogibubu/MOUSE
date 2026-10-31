@@ -1,0 +1,48 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 2,
+  "effective_pairs": 2.007105241980299,
+  "noccupied": 13,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.8518661469303774,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 1.1614902980351722,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.9022755932794504,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "anchor_source": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Furan/1.02",
+    "original_model": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+    "relative_frame": "metric-polar transported original full active Gram matrix",
+    "source_sha256": "393b741946d695453c54097f1b43583b72edc774d734eb588e95bcaecd99d78c"
+  },
+  "sha256": {
+    "template.npz": "1bef72c9cf66500c3e27244791d5726de4a5d9e201a3e6bd794314e1f25a20e1",
+    "response_0.npz": "d7657f79c75a94e62e1951725e6b9dc959e7231644886948572a2bd8875b1834",
+    "response_1.npz": "57612eb54d1c96d02c970d5ac20955923872b4dfbe74f0ea095104e5a327d4d9",
+    "arrays.npz": "c32e6c1587b855ea86cf8dde35d5958edd82c359458ef508f194ab31d24ddbda",
+    "ground_0.npz": "827e35f42a308b4f75f98b8458d2a8870fbcf538e1f737e98cd2ba4327b444d7",
+    "ground_1.npz": "fb73f9fca73425fd44a81fb862e87ec22052e8e04cd765847f644852dff62f8d",
+    "ground_2.npz": "751a0753acfa6013a3f383b2d4a72e1f0ffbd12136482b93b7ed246a1d8c4922"
+  }
+}

@@ -1,0 +1,24 @@
+output file: /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/independent/references/Ammonia/pyscf.log
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/independent.py", line 130, in <module>
+    with threadpool_limits():predict(args.name)
+                             ^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/independent.py", line 65, in predict
+    root=OUT/'independent';rows=[r for r in json.loads((root/'manifest.json').read_text())['states'] if r['molecule']==name];refdir=reference(name);out=root/'predictions'/name;out.mkdir(parents=True,exist_ok=True)
+                                                                                                                                    ^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/independent.py", line 33, in reference
+    td=mf.TDA();td.wfnsym=symmetry;td.nstates=max(2,row['ordinal_same_symmetry']+1);td.conv_tol=1e-7;td.max_cycle=150;td.lindep=1e-20;started=time.monotonic();td.kernel()
+                                                                                                                                                               ^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/pyscf/tdscf/rhf.py", line 1023, in kernel
+    vind, hdiag = self.gen_vind(self._scf)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/pyscf/tdscf/rhf.py", line 951, in gen_vind
+    return _gen_tda_operation(self, singlet=self.singlet, wfnsym=self.wfnsym)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/pyscf/tdscf/rhf.py", line 79, in _gen_tda_operation
+    wfnsym = symm.irrep_name2id(mol.groupname, wfnsym)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/pyscf/symm/addons.py", line 480, in irrep_name2id
+    return param.IRREP_ID_TABLE[gpname][symb]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'A1'

@@ -1,0 +1,58 @@
+{
+  "doi": "10.1063/1.1578051",
+  "source": "https://files.isu.ru/ru/about/others/lab_kvant_himii/docs/furan_surf.pdf",
+  "title": "Theoretical study of the low-lying excited singlet states of furan",
+  "authors": "Gromov, Trofimov, Vitkovskaya, Schirmer, Koppel",
+  "year": 2003,
+  "state": "1A1 valence V-prime at C2v stationary geometry",
+  "method": "EOM-CCSD; paper cc-pVDZ+ basis: C/O aug-cc-pVDZ plus one diffuse s and p, H cc-pVDZ; pure 5d, 155 orbitals",
+  "table_V_angstrom": {
+    "O-Calpha": 1.378,
+    "Calpha-Cbeta": 1.46,
+    "Cbeta-Cbeta": 1.464,
+    "Calpha-H": 1.085,
+    "Cbeta-H": 1.088
+  },
+  "table_V_degrees": {
+    "Calpha-O-Calpha": 109.6,
+    "O-Calpha-Cbeta": 109.6,
+    "Calpha-Cbeta-Cbeta": 105.6,
+    "O-Calpha-H": 116.6,
+    "Calpha-Cbeta-H": 126.5
+  },
+  "table_VI_cm1": {
+    "a1": [
+      3332,
+      3303,
+      1446,
+      1407,
+      1079,
+      1066,
+      974,
+      769
+    ],
+    "b2": [
+      3451,
+      3305,
+      2914,
+      1404,
+      1261,
+      1053,
+      863
+    ]
+  },
+  "transcription_check": "Visually checked original PDF pages 742-743, tables V and VI on 2026-10-31",
+  "missing": "a2 and b1 harmonic frequencies for this C2v state are blank in table VI and must not be imputed",
+  "stationary_point": "paper reports out-of-plane instability; symmetric stationary geometry is not a full-dimensional minimum",
+  "comparison": "fixed atom correspondence and symmetry-block mode ordering; numerical mode-overlap correspondence unavailable from the published table",
+  "extra_exponents": {
+    "C": {
+      "s": 0.01,
+      "p": 0.02
+    },
+    "O": {
+      "s": 0.02,
+      "p": 0.04
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "I005",
+  "molecule": "Hexatriene",
+  "family": "pi_pi",
+  "status": "matched",
+  "rank": 1,
+  "excitation_ev": 4.912010944723675,
+  "residual": 2.6646978894262485e-15,
+  "projection_norm": 0.8446415967423895,
+  "seconds": 11.402196298004128,
+  "labels_read": false
+}

@@ -1,0 +1,9 @@
+{
+  "status": "reference_ready",
+  "molecule": "Cyclobutadiene",
+  "states": [
+    "I003"
+  ],
+  "reference_sha256": "afcc56177f9123bb8f032637169a4972fa8efc25b7076a46a3dfe720e38084e4",
+  "numerical_labels_read": false
+}

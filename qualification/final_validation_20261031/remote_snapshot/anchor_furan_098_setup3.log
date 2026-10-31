@@ -1,0 +1,27 @@
+tot grids = 109792
+FULL BLOCK anchor 1
+FULL BLOCK anchor 2
+FULL BLOCK anchor 3
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy.py", line 42, in <module>
+    with threadpool_limits():run(args.name,args.sid,args.scale)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy.py", line 11, in run
+    data,erifile=calibrate(out,src,s,ctx)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/common.py", line 64, in calibrate
+    qdata,qrequest=env['calibrate'](case,s,ctx)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-roks-independent-20261030/qualified_spectral_response.py", line 34, in calibrate
+    request=key(dict(profile=digest(p),model=digest(source),reference=digest(rfile)))
+                                             ^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/common.py", line 26, in <lambda>
+    sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/.local/share/mamba/envs/et-2.5/lib/python3.11/pathlib.py", line 1050, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/.local/share/mamba/envs/et-2.5/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy/Furan/0.98/results/full_response/anchor/model.npz'

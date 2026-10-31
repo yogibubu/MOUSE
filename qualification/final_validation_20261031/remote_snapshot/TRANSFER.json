@@ -1,0 +1,2374 @@
+{
+  "host": "oracle.sns.it",
+  "snapshot_utc": "20261031T211514Z",
+  "in_progress_snapshot": true,
+  "archived": [
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/common_target/ground_0.npz",
+      "sha256": "b8403ade12da1167d44230f59c459e044db6f2c530c45ffc987c01c7d4bce488",
+      "size": 30018
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/common_target/ground_1.npz",
+      "sha256": "8d69824ef1d2ba190b6217b257ef5624d6600bfc0d5e3807a6c99b0f014c7ad2",
+      "size": 30689
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/common_target/ground_2.npz",
+      "sha256": "3dfcf2fca803df90ca43eb6456eeb4d4e28d3a5b0474be6e4ca5d4868ebac6f1",
+      "size": 30309
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/common_target/point.npz",
+      "sha256": "a9a88295e2869dc92af3c2c59b564c52959d77f11e3c49ddd60532786fc18dee",
+      "size": 11553
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/common_target/result.json",
+      "sha256": "d29b0ba2b451cfa72a8bc991cf077cd41ebd3358b459a4b94ac04e9e2471052f",
+      "size": 969
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/full_response/anchor/calibration.json",
+      "sha256": "bddef2e2603c9f1e978568763e570dd4aba3b3d08b1fd02cd5bfc1d1d6626ba3",
+      "size": 359
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/grounds/0/certificate.json",
+      "sha256": "cc4c2ac1a90a6adbce247051b1399b5e8a7c428476a7bb062d6bbdd96850866d",
+      "size": 60
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/grounds/0/stationary.npz",
+      "sha256": "5094e987b1caa80cd0bd1d9ed477026b0e1586ee98021c66fe95bd68b2688ca8",
+      "size": 30542
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/grounds/1/certificate.json",
+      "sha256": "7bfbf9ab5ad23e0f4bc76a18b2a63298415e131b63dcae411970b9d29a90ada1",
+      "size": 60
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/grounds/1/stationary.npz",
+      "sha256": "4649e8c083d14b3eb7753b3ead08585e891c41d8b9ab8e0efff93e86bba046b2",
+      "size": 30297
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/portable_model/model.json",
+      "sha256": "7de690195cfba4195be37a5f1bdeb7b1af19b9472fa002bab2b84ea1506e4973",
+      "size": 1759
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/qualified_spectral_response/anchor/mapping.json",
+      "sha256": "3ed325334edb0a4591c4b2c8ec3202cf9a355363612b6a23d03fc55a5f5c87c5",
+      "size": 2663
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/result.json",
+      "sha256": "6574b0159abc7a1b581568e7512103960bc31c9069637cec8c584ab0028dbc85",
+      "size": 1478
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/spectral_protocol.json",
+      "sha256": "ca0ef1355b915d1224f53e3a6d30f17b867b59668e32c006d229c94a10f1b735",
+      "size": 126
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/common_target/ground_0.npz",
+      "sha256": "3351c62ee9cda51b9e890c4f102f5e8b74e699afa1166ff52721712a0d34b142",
+      "size": 30018
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/common_target/ground_1.npz",
+      "sha256": "7dca3315716b940e8cb43df4177fcc60341df02876bef91bcd7f77659bc0514a",
+      "size": 30670
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/common_target/ground_2.npz",
+      "sha256": "894de9142c9f1e7b44aa36575c36450aa6f97f79e4735130f4baa39f72a515ea",
+      "size": 30346
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/common_target/point.npz",
+      "sha256": "efee966b964a375103d81e7bb6c61ff62736aab93ab22abda516abb4b1141e79",
+      "size": 11552
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/common_target/result.json",
+      "sha256": "6715c55c1d300ddda18a404144fa580e8b1107f85a053943cbc2cb9949d0a9e4",
+      "size": 968
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/full_response/anchor/calibration.json",
+      "sha256": "853f8d28f19d06501f4e70ce98369d58a2fcd5f23aa5e47665af2738f7112abe",
+      "size": 359
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/grounds/0/certificate.json",
+      "sha256": "bbe32daf7bc45158f04043a9c6fa3930946b7ba85996d7dbfe5f959707eeb6de",
+      "size": 60
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/grounds/0/stationary.npz",
+      "sha256": "388e42d7b1235bcff5304085c7ef372a22ecda0926196fba1b487f48cb372555",
+      "size": 30468
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/grounds/1/certificate.json",
+      "sha256": "8d4c0408f82ed8b68fafea6e85086a2571b6291dd3d6db3d54c581ef4d935efa",
+      "size": 60
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/grounds/1/stationary.npz",
+      "sha256": "e7332a586ffc4984e5336044e56378cbb535cc11cf639134f9f836a4091deefb",
+      "size": 30254
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/portable_model/model.json",
+      "sha256": "4d8954ba409c5971713dbe7836d95c7588c0041d1329165a5dfeb919fa23aad4",
+      "size": 1759
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/qualified_spectral_response/anchor/mapping.json",
+      "sha256": "8ab81f1307def1040761e294f80d143fb4c3f7b6432b4a4fdd2f23311ce340ce",
+      "size": 2656
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/result.json",
+      "sha256": "d07736905e59e4a6ab4e6288971d12aee80a1cae5889bdab15869acc203f58db",
+      "size": 1477
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/spectral_protocol.json",
+      "sha256": "ca0ef1355b915d1224f53e3a6d30f17b867b59668e32c006d229c94a10f1b735",
+      "size": 126
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/baseline/ground_0.npz",
+      "sha256": "ba7e2d40113ec0f5d5416649a9ab8eac49172d8a3e0b0c3e60262400d833868b",
+      "size": 30069
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/baseline/ground_1.npz",
+      "sha256": "2bbd00246a66044ab3d4cea6ec6a23c2fb9bcaa560a44942c81bcf4a4a7d9a24",
+      "size": 30560
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/baseline/ground_2.npz",
+      "sha256": "7abfc6c53c3d41f7f0592aa8539310a00cff1630325c90f9bb117ed2a3b28122",
+      "size": 30324
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/baseline/point.npz",
+      "sha256": "fc345ae9386fcd3a6472bf77dc15abcd2f9693b17ac805e4dde927ee10328d60",
+      "size": 11548
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/baseline/result.json",
+      "sha256": "4140e6c58541c533686aae7c854e7e7133c1bbd00ba59fb1e8578925c8b1d6ac",
+      "size": 968
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/common_target/ground_0.npz",
+      "sha256": "297e399dac2693f65daaf638e0f3a450aa14eb38afa488117aa837d377c5fcb1",
+      "size": 27134
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/common_target/ground_1.npz",
+      "sha256": "c4ed0a63825aadc15b47cd4c1f5927ce6e2ecd4a8fecbed56e9682ae32bd3bc2",
+      "size": 27744
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/common_target/ground_2.npz",
+      "sha256": "6fb374c867a95904eedbdabb140ca6d045cf987741738df06eeafb2bbd02cabc",
+      "size": 27576
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/common_target/point.npz",
+      "sha256": "c006a6123d258fd83631b138a043a63caa71a06244e5ae25e761e5b89e011f06",
+      "size": 9913
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/common_target/result.json",
+      "sha256": "fa9bcc3016a7f61a037d2deacb41256f0138bc1b402384bc9ad6a0874e5dbd87",
+      "size": 969
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/full_response/anchor/calibration.json",
+      "sha256": "d46a1814215e180670a5ee9f97dcb41773f30f86d54dcaed39b2e5f7a676d622",
+      "size": 360
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/grounds/0/certificate.json",
+      "sha256": "88a497766860302d17c1bc230a1881af178017d7add8ca234ab0ef95cb2d0deb",
+      "size": 60
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/grounds/0/stationary.npz",
+      "sha256": "b2087c88088a59821bc3dd510ec6ae34adeefefc402dc31daa1667a281cea401",
+      "size": 27723
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/grounds/1/certificate.json",
+      "sha256": "5c9d8a9d075dadfe4b368795c0466984d0eee4535296c1490b5c0f0d00c4f518",
+      "size": 60
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/grounds/1/stationary.npz",
+      "sha256": "88f5e464441a9069b5aa78565a808effaeae172a35aeab28fa8c4ae6c49d52fe",
+      "size": 27631
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/portable_model/model.json",
+      "sha256": "d048e04a38d490200d178e771ba6f257ebe607a73daa48f226cc3352aba4e3ba",
+      "size": 1749
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/qualified_spectral_response/anchor/mapping.json",
+      "sha256": "657cb6e9c8f5ad6612c2a2df712778256019ea238362f0ac52507a5b360cd874",
+      "size": 2479
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/result.json",
+      "sha256": "c265487e116de5685130af75c0eb41eaa8d243d21c31c5dcf66e516d2fd8c017",
+      "size": 1315
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/spectral_protocol.json",
+      "sha256": "ca0ef1355b915d1224f53e3a6d30f17b867b59668e32c006d229c94a10f1b735",
+      "size": 126
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/common_target/ground_0.npz",
+      "sha256": "e63429dde8a4dd59cfdd528cdc4a20dad660f6025fa36d379cb35909146e84e8",
+      "size": 27168
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/common_target/ground_1.npz",
+      "sha256": "a29cf1643a7424f2614b03f1b1499a0edcab89d4084fd64962ce7afa7a557833",
+      "size": 27757
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/common_target/ground_2.npz",
+      "sha256": "d06932d255384bd6032a600f807a797efa8a5e590fc8a35bb7bff509ac9cd074",
+      "size": 27579
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/common_target/point.npz",
+      "sha256": "1c87a1347fe53adca8a639b4bb3431660ce834b963ebb24c02642b0d1fd4aec3",
+      "size": 9925
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/common_target/result.json",
+      "sha256": "d82d76dc3141505b631c2467d17c919cbb393ee45961335dacfc745e4b264e42",
+      "size": 970
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/full_response/anchor/calibration.json",
+      "sha256": "8eb7dff3a64afdfe3dab2899f5ad6c53db1a7d45e5cca24c41cdf39fa928a8ca",
+      "size": 360
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/grounds/0/certificate.json",
+      "sha256": "86b1ee6f0ebc0bffd378f43a39e3db5da8cccb6b963d8fd28946ac8c5a469c59",
+      "size": 60
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/grounds/0/stationary.npz",
+      "sha256": "f179beae68613484edc93a22dd850727c5f2659c6022bad7b6b9418c17e8fb56",
+      "size": 27642
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/grounds/1/certificate.json",
+      "sha256": "be6c77c7d7f51df49ffe2408716000a4a5c07dbb34c948e8bcbf87f9c4333b10",
+      "size": 60
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/grounds/1/stationary.npz",
+      "sha256": "4418fb7acc78cbc9321e9d637e9f8dccfdc9939a8552272d03a0aac176c02789",
+      "size": 27543
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/portable_model/model.json",
+      "sha256": "1a998cbd8a3812ad58cbb5596cdfecdae3307e32f7f574822ed50d5d03715565",
+      "size": 1748
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/qualified_spectral_response/anchor/mapping.json",
+      "sha256": "3550686388211bf417eb2e54ae170feef4992af905fe11c54eaa450ec9955b11",
+      "size": 2492
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/result.json",
+      "sha256": "9831c6364b59fda29738a356a5b664203b53a637976d9c15a0e6954a0f6dcb8d",
+      "size": 1315
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/spectral_protocol.json",
+      "sha256": "ca0ef1355b915d1224f53e3a6d30f17b867b59668e32c006d229c94a10f1b735",
+      "size": 126
+    },
+    {
+      "path": "anchor_energy/Furan/baseline/ground_0.npz",
+      "sha256": "c97ed5139487a388ec59448a8cd28b7962f65acb21939272511c3aa80a7c5af9",
+      "size": 27140
+    },
+    {
+      "path": "anchor_energy/Furan/baseline/ground_1.npz",
+      "sha256": "638da673e6b1cc7bf4fb1a56bae39c0c10c6e17a0741791d72e536b6e4a2d769",
+      "size": 27712
+    },
+    {
+      "path": "anchor_energy/Furan/baseline/ground_2.npz",
+      "sha256": "ea5a28f0d7f8d73a576714aba1fc19353e3bfa7c6989908ebde20ad8d07c2dca",
+      "size": 27670
+    },
+    {
+      "path": "anchor_energy/Furan/baseline/point.npz",
+      "sha256": "d838ce570372a2ca598a8f54946959d516e9a2257d2b642210e57d2ab1ac27f6",
+      "size": 9913
+    },
+    {
+      "path": "anchor_energy/Furan/baseline/result.json",
+      "sha256": "5bbb93c8375cf8af945557933932daf0a96e60224f7e5c020b977d3a902e3488",
+      "size": 970
+    },
+    {
+      "path": "anchor_energy.py",
+      "sha256": "393b741946d695453c54097f1b43583b72edc774d734eb588e95bcaecd99d78c",
+      "size": 4187
+    },
+    {
+      "path": "anchor_furan_098.log",
+      "sha256": "c6c9aa91e471a28abe2bb9deae5714244db4be22e372e5db7a0b52111d25bc13",
+      "size": 46
+    },
+    {
+      "path": "anchor_furan_098.resources",
+      "sha256": "b751ead806e82b489da93a34604ce9a6ba87142d96df480186ee5d00e044ab6e",
+      "size": 806
+    },
+    {
+      "path": "anchor_furan_098_setup.log",
+      "sha256": "5dee7ae5a9747b935bd59cb3a8b2b9df4b7ce870fcb49569ea3019bd910116bb",
+      "size": 1506
+    },
+    {
+      "path": "anchor_furan_098_setup2.log",
+      "sha256": "35e132d42127cd4b8b1f3eea67346f75c92ed181aa01a51ab2470476f9367176",
+      "size": 1399
+    },
+    {
+      "path": "anchor_furan_098_setup3.log",
+      "sha256": "a626692121dcf435a67cc61899bf12bfdb159f81f833617abba67d96725dec3e",
+      "size": 1969
+    },
+    {
+      "path": "anchor_furan_102.log",
+      "sha256": "56d095a513c4658ae9691b1356ca67324a7ea1ae6dac51ddb4f1b72248c28d72",
+      "size": 125
+    },
+    {
+      "path": "anchor_furan_102.resources",
+      "sha256": "607228d8e6eea74a55dd0a83f5108ae3139c05794e880bede978242cafc1435e",
+      "size": 807
+    },
+    {
+      "path": "archive.py",
+      "sha256": "298b3d199840213c96507b8ef91c1db31a60f0686e09aebe075c2799fd34db2c",
+      "size": 1797
+    },
+    {
+      "path": "collect.py",
+      "sha256": "0e87adbf584475ff0d8fde23f627851a1a5a72cdd79ba8a24e056e291a078630",
+      "size": 1868
+    },
+    {
+      "path": "common.py",
+      "sha256": "a83daf9481fd20d59c624e7dedf95635c989c5c9e2e22edaab1a9f8342d35c0f",
+      "size": 5459
+    },
+    {
+      "path": "compare_furan.py",
+      "sha256": "89779f69645840e48b3c5dae86572b969ca97bcb005bb0557e8c3f21519d7d21",
+      "size": 3583
+    },
+    {
+      "path": "controller.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "controller.py",
+      "sha256": "50c4a45087defb8f2896fc1d82742b8db3b30a59ab103b5ed382e41cd7372a5b",
+      "size": 4649
+    },
+    {
+      "path": "controller_v2.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "cost/nitroxyl/energy/0/result.json",
+      "sha256": "46f7df56e050b06e837184b5ba3ab15fe8d703b42ad059188eba4f516bc6e57f",
+      "size": 661
+    },
+    {
+      "path": "cost/nitroxyl/energy/1/result.json",
+      "sha256": "1f1e2d636db2ddf203bc9d13eec74b76096511c88a6af09672834f0fbf42a568",
+      "size": 652
+    },
+    {
+      "path": "cost/nitroxyl/energy/2/result.json",
+      "sha256": "5471721d0f35cdc5d028744b42f01fcad4418b508a97d0104f2e43eeae4d875f",
+      "size": 661
+    },
+    {
+      "path": "cost/nitroxyl/gradient/0/result.json",
+      "sha256": "366be975a7f4a2f18c7f90ad87c3c2eaf350d318b1165eb6289bdd7050ed3d7c",
+      "size": 701
+    },
+    {
+      "path": "cost/nitroxyl/gradient/1/result.json",
+      "sha256": "864945254bf284da726c50e740b3de94987eda9c2d3249ae1207b6b240df7dde",
+      "size": 703
+    },
+    {
+      "path": "cost/nitroxyl/gradient/2/result.json",
+      "sha256": "1282f57890852361dad7b99d45f57d19467b84cc372355c7a9c4f500163eafc1",
+      "size": 701
+    },
+    {
+      "path": "cost/nitroxyl/hessian/0/result.json",
+      "sha256": "a9df120dc3963608930723fc7ece148a66cc3fcd77908f64d028b16e064dd491",
+      "size": 697
+    },
+    {
+      "path": "cost/nitroxyl/hessian/1/result.json",
+      "sha256": "77cd3b8eda6d96db9247ef8f22994c0b81f2583a7cf0e811d910691860ffbe12",
+      "size": 690
+    },
+    {
+      "path": "cost/nitroxyl/hessian/2/result.json",
+      "sha256": "d815bf6dcc93691eaa1a695d32d5dbeab47c03ccf8fde68a0173e9081f29100a",
+      "size": 690
+    },
+    {
+      "path": "cost/nitroxyl/tda/0/result.json",
+      "sha256": "1ded307e2c34fb505ac33887e341e5ebf6fe86f469cc9d319eb419d38bd67c6c",
+      "size": 811
+    },
+    {
+      "path": "cost/nitroxyl/tda/1/result.json",
+      "sha256": "0770f1af27414dce795ad4805d803ef7dec21420c82cd613d459c66f4419e483",
+      "size": 812
+    },
+    {
+      "path": "cost/nitroxyl/tda/2/result.json",
+      "sha256": "d24194960145c0c8e074499bde1ac30e7fb66d03717a1090a494ac9deb76075e",
+      "size": 811
+    },
+    {
+      "path": "cost.py",
+      "sha256": "30fe524444bdbaacd617785f2d423edf951dc5437bd7be25835dce967cb373f6",
+      "size": 5749
+    },
+    {
+      "path": "cost_executions/nitroxyl/energy/0.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/energy/1.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/energy/2.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/gradient/0.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/gradient/1.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/gradient/2.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/hessian/0.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/hessian/1.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/hessian/2.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/tda/0.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/tda/1.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_executions/nitroxyl/tda/2.json",
+      "sha256": "5b56d80f047e81df0fda3e7b4c4fe9cd755f2c26459c34df79e2e9db1d2e7c59",
+      "size": 266
+    },
+    {
+      "path": "cost_preparation/nitroxyl/0/certificate.json",
+      "sha256": "7976546d4461bd535cefa8ba8c7953b2832459686baa1e39713bd622ae529567",
+      "size": 61
+    },
+    {
+      "path": "cost_preparation/nitroxyl/0/stationary.npz",
+      "sha256": "6ac3e906ab6c27f209627eb0e537793ee71af0fae1bd7923bb0369c43e1d3438",
+      "size": 11659
+    },
+    {
+      "path": "cost_preparation/nitroxyl/1/certificate.json",
+      "sha256": "9db7fdc6a7b45f50f5a9a7cb7d866af246562a3655db6c6371ce1f617f1a7bc1",
+      "size": 61
+    },
+    {
+      "path": "cost_preparation/nitroxyl/1/stationary.npz",
+      "sha256": "c1977977aab66ee95f276257786df83388116a3f6c28895ea33ec4e9146ba064",
+      "size": 11992
+    },
+    {
+      "path": "cost_preparation/nitroxyl/2/certificate.json",
+      "sha256": "0de9685b67879945368b633bb37f04ba3da280c02bf113cd0a9ad863e621c1b1",
+      "size": 61
+    },
+    {
+      "path": "cost_preparation/nitroxyl/2/stationary.npz",
+      "sha256": "0c4b9849425c53e230cfba688442eae65a50be39611753fec2eac2df85a8df86",
+      "size": 11998
+    },
+    {
+      "path": "freeze_independent.py",
+      "sha256": "0c02e0b012445e3f3b6c7f85998a4acf49b633d140ecfd3b650802c0036d82a1",
+      "size": 3587
+    },
+    {
+      "path": "furan_eom_ccsd_reference.json",
+      "sha256": "ac93c9a67278ebcc1cc3bf35155bd073049f05f71f5a8e6a3e7e050f0ed6d8f0",
+      "size": 1650
+    },
+    {
+      "path": "geometry/Furan/accepted.json",
+      "sha256": "e326f4d67ab35564e670159f8efe61922ce17a794f2917e9dd4d78d458d1f46f",
+      "size": 29
+    },
+    {
+      "path": "geometry/Furan/accepted_000/ground_0.npz",
+      "sha256": "111d5c88e17d2aa343d4dd1568bdfcf00d483939a00b32f506987af47db5b143",
+      "size": 29928
+    },
+    {
+      "path": "geometry/Furan/accepted_000/ground_1.npz",
+      "sha256": "329988d92e59bcbb4f219e8d3811e231d087ae462ccfa9fe8323abd2bf1a11d6",
+      "size": 30503
+    },
+    {
+      "path": "geometry/Furan/accepted_000/ground_2.npz",
+      "sha256": "9e83cc25dafb9946ed458b8ca9295b4c261021a912125d764dd646705874a64c",
+      "size": 30404
+    },
+    {
+      "path": "geometry/Furan/accepted_000/point.npz",
+      "sha256": "d1856f03ee26f96629011ae695fdab78a0f125963ce580282ea48dcd6f44a40d",
+      "size": 9990
+    },
+    {
+      "path": "geometry/Furan/accepted_000/result.json",
+      "sha256": "f6affa61073b4ac28ddfbfaa4ea7aa04f9c5972b188a5d81950d90b148c4dc44",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/accepted_001/ground_0.npz",
+      "sha256": "3e9045280b545c539b6d51ce8119bc508f250d20238464152153f60104d11d16",
+      "size": 29991
+    },
+    {
+      "path": "geometry/Furan/accepted_001/ground_1.npz",
+      "sha256": "d9effe7650fa39033afe064922d1be8fad5e1d8597c50714b7669d061e315f3b",
+      "size": 30508
+    },
+    {
+      "path": "geometry/Furan/accepted_001/ground_2.npz",
+      "sha256": "6090c69172f4801af139cb4fb0694399cfa411913fe254ff3b39cff2fd81c47b",
+      "size": 30462
+    },
+    {
+      "path": "geometry/Furan/accepted_001/point.npz",
+      "sha256": "a477d70055ba9ad7f354eec8e0050e8b5adef9925f2e0b32b791b9c24c8c8397",
+      "size": 10022
+    },
+    {
+      "path": "geometry/Furan/accepted_001/result.json",
+      "sha256": "39484801a32a667bb78589da39ccb9937e93986f39740089172d97e1a14df114",
+      "size": 967
+    },
+    {
+      "path": "geometry/Furan/accepted_002/ground_0.npz",
+      "sha256": "2aea34d0a2a2a70bb7f38cc8ca56afdf55149974f951b7f719ddde1b47bed1fe",
+      "size": 30170
+    },
+    {
+      "path": "geometry/Furan/accepted_002/ground_1.npz",
+      "sha256": "afcec78cfd716b5b2138175b7701d9f9a8812c4cd51057c5f9b5cd3f6a5d4725",
+      "size": 30681
+    },
+    {
+      "path": "geometry/Furan/accepted_002/ground_2.npz",
+      "sha256": "dd1c9f137067e525152e99f3e64a5da23d699dc0fbb16466d4cd63f7c2bffcb2",
+      "size": 30613
+    },
+    {
+      "path": "geometry/Furan/accepted_002/point.npz",
+      "sha256": "08da82163aeb3998a33d420629759ca9a49eabaf81557c77107bef25760c8313",
+      "size": 10015
+    },
+    {
+      "path": "geometry/Furan/accepted_002/result.json",
+      "sha256": "2c574d45b8bcaf66053277fdc2029592d2174987935481e25aea345bf26071b3",
+      "size": 964
+    },
+    {
+      "path": "geometry/Furan/accepted_003/ground_0.npz",
+      "sha256": "15e51de8e019211346f9d396eb9433c14234410119939cfb473abf9a835cd373",
+      "size": 30054
+    },
+    {
+      "path": "geometry/Furan/accepted_003/ground_1.npz",
+      "sha256": "11e4a0964f1903b842ed02dfd18b4760e3f3c9e2e6b523137fd95cbfd1da229c",
+      "size": 30570
+    },
+    {
+      "path": "geometry/Furan/accepted_003/ground_2.npz",
+      "sha256": "b37e88bbefe238c65bcf597d8a7a0fd117163eccea17725de30a343d4c29c77f",
+      "size": 30512
+    },
+    {
+      "path": "geometry/Furan/accepted_003/point.npz",
+      "sha256": "d9f99f1f5d6c5fcaa2e12c67ad91adb34835f1a573ee81df428a421c3b277382",
+      "size": 10031
+    },
+    {
+      "path": "geometry/Furan/accepted_003/result.json",
+      "sha256": "134a111d75eb8f9f179882bff9216cc661fedbb0218a09030a519f832cd7690e",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/accepted_004/ground_0.npz",
+      "sha256": "4a271f8639ea47a127e0d09200e959a039373150d1a0cfadfa10f41c522a0684",
+      "size": 30240
+    },
+    {
+      "path": "geometry/Furan/accepted_004/ground_1.npz",
+      "sha256": "d2cba59da99b53f772d496cb552f289e5d7eebbb0a907b0b0b99dfda19dbf814",
+      "size": 30728
+    },
+    {
+      "path": "geometry/Furan/accepted_004/ground_2.npz",
+      "sha256": "a5ba2e032ec3405bbd34be432d658410ea8ce01a6004eab3209f68229ea903ec",
+      "size": 30680
+    },
+    {
+      "path": "geometry/Furan/accepted_004/point.npz",
+      "sha256": "23e0c0d260d0eecab9359ffe47035a77a05e4d8aa048a0fa4d9b9d64269e84fe",
+      "size": 10036
+    },
+    {
+      "path": "geometry/Furan/accepted_004/result.json",
+      "sha256": "30971ca4aa5db650b169da8398f1f17c801db898a50ee879e7eeee19ef4fc9e1",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/accepted_005/ground_0.npz",
+      "sha256": "5caebd57e0d21cfaad064352ce014f9dbcdb32a865cf5bda7a0ff23297309716",
+      "size": 30162
+    },
+    {
+      "path": "geometry/Furan/accepted_005/ground_1.npz",
+      "sha256": "2a876ec2398446389ec94c50967e806a040a96a0c96d8970fda554a5de742588",
+      "size": 30623
+    },
+    {
+      "path": "geometry/Furan/accepted_005/ground_2.npz",
+      "sha256": "8bb7e374e718278b96ce3f7c70a3d03a69ac8f5a35e3bbdcfde9a71098116347",
+      "size": 30582
+    },
+    {
+      "path": "geometry/Furan/accepted_005/point.npz",
+      "sha256": "16c34b3c21478a45c82e9d81afa90d5e38f3194f5ebd67a4679875d5a6647dc3",
+      "size": 10016
+    },
+    {
+      "path": "geometry/Furan/accepted_005/result.json",
+      "sha256": "ae194810ae3b40e10c379e6b8f54e04f37b0200a7d7812b35ac9f03d22c59350",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/accepted_006/ground_0.npz",
+      "sha256": "a26bffc5d9e3158feeb2f3e7ac257a925ec0c0e28ab50d053c65b3a06adfaaf9",
+      "size": 30303
+    },
+    {
+      "path": "geometry/Furan/accepted_006/ground_1.npz",
+      "sha256": "0265a48170b9bb418aa23ce2f0226217cf20094e614c8e8916e26e62a01e6102",
+      "size": 30741
+    },
+    {
+      "path": "geometry/Furan/accepted_006/ground_2.npz",
+      "sha256": "2fab139196dab8065e5a345674c8e09a2527142bca9f637da8efe2a6aa1e78ff",
+      "size": 30714
+    },
+    {
+      "path": "geometry/Furan/accepted_006/point.npz",
+      "sha256": "51fe46eb79794c3dbe961e62f4353e7186198efae1cf2989bf8704cc9618554f",
+      "size": 10033
+    },
+    {
+      "path": "geometry/Furan/accepted_006/result.json",
+      "sha256": "84fe449fcee4fb181b8760fba9b01afdc43e452537db26cfac891ba1b7ac89af",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/accepted_007/ground_0.npz",
+      "sha256": "48a8a53228e761b31cee7ba0a96ecfba809ba3e7f8f2793d299f43c653102770",
+      "size": 30332
+    },
+    {
+      "path": "geometry/Furan/accepted_007/ground_1.npz",
+      "sha256": "fc429da6afabeb7072400ad6d29a23312a84dd1fcf6db67b8cdcf9a028403886",
+      "size": 30758
+    },
+    {
+      "path": "geometry/Furan/accepted_007/ground_2.npz",
+      "sha256": "1c739fdec3e3f8a3ee366ddc2855e990a35d26e65d6fea31503f59f936c720fb",
+      "size": 30733
+    },
+    {
+      "path": "geometry/Furan/accepted_007/point.npz",
+      "sha256": "b9b3d4bf0e208de9612b9c33191a87e899af0d46a2c6a104c90b84e7f7ec4100",
+      "size": 10045
+    },
+    {
+      "path": "geometry/Furan/accepted_007/result.json",
+      "sha256": "e607edbf4a6e9e248c6c6eadbc9bc1f603d63e0734bdb9534db1a89b17d4fb99",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/accepted_008/ground_0.npz",
+      "sha256": "757b6e0c862a717c819d5ed66ca956e6f0a1b73c365ee64bbbe62ab0f8a62b3d",
+      "size": 30389
+    },
+    {
+      "path": "geometry/Furan/accepted_008/ground_1.npz",
+      "sha256": "8f78bb13ce5eff1b691d12b6868d27ca07fedbd004a9e4ecb425d7b7eacd2e08",
+      "size": 30796
+    },
+    {
+      "path": "geometry/Furan/accepted_008/ground_2.npz",
+      "sha256": "763bc570af5061c06fecc533bece3bfc50cbeee4e2f7da5f4b3ec1a095edafbe",
+      "size": 30758
+    },
+    {
+      "path": "geometry/Furan/accepted_008/point.npz",
+      "sha256": "9e38a762f868f8e7f2100491c55bf1be48db6f0013a60c73118aeb1f75fad61f",
+      "size": 10024
+    },
+    {
+      "path": "geometry/Furan/accepted_008/result.json",
+      "sha256": "127a3ba6f1a72ad7f5e506152be1df6885140aefe6bc31b10c124e6599ada708",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/accepted_009/ground_0.npz",
+      "sha256": "2db8e853280ba2deaeb1c7c6d9ec83d042d8b04d85e95baff41359562cd4ccce",
+      "size": 30478
+    },
+    {
+      "path": "geometry/Furan/accepted_009/ground_1.npz",
+      "sha256": "6ce898771b2940ce4578390f3521517c1a2bf9b0815f0e37616244854ad4c33d",
+      "size": 30891
+    },
+    {
+      "path": "geometry/Furan/accepted_009/ground_2.npz",
+      "sha256": "6aee7ceb354018b9e0351a5908d2f7948326aeec6001fbf3d5406260f418637c",
+      "size": 30849
+    },
+    {
+      "path": "geometry/Furan/accepted_009/point.npz",
+      "sha256": "6ad5a90997f2349022a4f3e54c814ffac3490ba7e788f89c1f92aa35010129cc",
+      "size": 10028
+    },
+    {
+      "path": "geometry/Furan/accepted_009/result.json",
+      "sha256": "ef57422b290bfb780500bc2414a7ba641e2b12b5e7fede2319db4bbbb18133db",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/accepted_010/ground_0.npz",
+      "sha256": "df1234db73f2adf7124f645e6fadf8fc7782125e7c80003e77e58dd67bbdf6a3",
+      "size": 30518
+    },
+    {
+      "path": "geometry/Furan/accepted_010/ground_1.npz",
+      "sha256": "6998bc7a74ec4765a5fe9e14d0beeb984182bac71c18b1a823a7996b194d33f9",
+      "size": 30897
+    },
+    {
+      "path": "geometry/Furan/accepted_010/ground_2.npz",
+      "sha256": "209bcfb66233851b107136fdde11d4097067096dc601a19825e8aff7e2301487",
+      "size": 30888
+    },
+    {
+      "path": "geometry/Furan/accepted_010/point.npz",
+      "sha256": "1a162582cb78f6cb1a5e1ab27219ca3f951835b964b074d0bf5e9fa796645d37",
+      "size": 10030
+    },
+    {
+      "path": "geometry/Furan/accepted_010/result.json",
+      "sha256": "07f03fd41aa548ed3c0c1d402776ec576155fa5e592f762c3210c8f8bef77d6f",
+      "size": 970
+    },
+    {
+      "path": "geometry/Furan/accepted_011/ground_0.npz",
+      "sha256": "2a43701719b7765ab21c26435d3d3fb0cb04bdc4923f5a0d5c844f180037ea58",
+      "size": 30413
+    },
+    {
+      "path": "geometry/Furan/accepted_011/ground_1.npz",
+      "sha256": "1bfefcea9e6c5de9dcc7baab8b8c22fb08737638cd47110d1bc54a28a7bd9c97",
+      "size": 30807
+    },
+    {
+      "path": "geometry/Furan/accepted_011/ground_2.npz",
+      "sha256": "4b2827a1790ec01b4ed4bb9309bf5d83df38724ff8d18c22e19b6b242d827298",
+      "size": 30766
+    },
+    {
+      "path": "geometry/Furan/accepted_011/point.npz",
+      "sha256": "321d4464d197a8c55daa8683c441fe6f94a2564a725e12af2ac26451ccdb7f06",
+      "size": 10024
+    },
+    {
+      "path": "geometry/Furan/accepted_011/result.json",
+      "sha256": "56c9fd6858950ee4c4250a5a20f45736c3a5ed2b1ba61cad1accb8a897af9aab",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/accepted_012/ground_0.npz",
+      "sha256": "367ea12356d11df8588ccd81605656147821b9f4ef081424e102cd7382a1e163",
+      "size": 30494
+    },
+    {
+      "path": "geometry/Furan/accepted_012/ground_1.npz",
+      "sha256": "52fee66d5680dd036671e6cadd45360fdc9e1a6fcae07cdb55d5d2adcfa26c9e",
+      "size": 30882
+    },
+    {
+      "path": "geometry/Furan/accepted_012/ground_2.npz",
+      "sha256": "34c0a7aca2ecfee9df7629d1798a9fb2986dc4e097674c671a1c32dbb118de61",
+      "size": 30861
+    },
+    {
+      "path": "geometry/Furan/accepted_012/point.npz",
+      "sha256": "7de195599eccfcb2deadd8c72611ce5c7a2753e9a27f100fcead24ce0ceea9e7",
+      "size": 10036
+    },
+    {
+      "path": "geometry/Furan/accepted_012/result.json",
+      "sha256": "2a24b32f9b3137e4b4e94696dde85ded3ebc7b3510433347eaf0aec1db1f14b6",
+      "size": 967
+    },
+    {
+      "path": "geometry/Furan/accepted_013/ground_0.npz",
+      "sha256": "7010eddf40f234f4137b05c8c736e16fdc24f527006208b8b70aea2085cf2d94",
+      "size": 30519
+    },
+    {
+      "path": "geometry/Furan/accepted_013/ground_1.npz",
+      "sha256": "0a4f299939aca9b9740815e5a416c2b03ad4c1576fcd304ea44f6b96caafee52",
+      "size": 30891
+    },
+    {
+      "path": "geometry/Furan/accepted_013/ground_2.npz",
+      "sha256": "163af7c64503fcc38e29ddf8ad5077fa557c596378cc59a6cabd491c3ef5fbe6",
+      "size": 30878
+    },
+    {
+      "path": "geometry/Furan/accepted_013/point.npz",
+      "sha256": "dc3efbeb3aaefcd224c3b97628f314dd223c2809c8d8360be129613176fdb0b3",
+      "size": 10028
+    },
+    {
+      "path": "geometry/Furan/accepted_013/result.json",
+      "sha256": "8fbfe83f85102ffbaa121382c1a95caea64add58ee9755708b7981628f479976",
+      "size": 970
+    },
+    {
+      "path": "geometry/Furan/accepted_014/ground_0.npz",
+      "sha256": "98baaca56040acad6d79a84b1fc7f26baf63cb6d506dbc97e6ace7de3005faaa",
+      "size": 30437
+    },
+    {
+      "path": "geometry/Furan/accepted_014/ground_1.npz",
+      "sha256": "aa801eb2f0d21e7d43b7cebd7559922665f65550f1ae3e183a2175fb7660519b",
+      "size": 30793
+    },
+    {
+      "path": "geometry/Furan/accepted_014/ground_2.npz",
+      "sha256": "fd2947e81a1288b28ec94752cba5f2cd2e22ed88decb33f0a67ef28e69f18312",
+      "size": 30818
+    },
+    {
+      "path": "geometry/Furan/accepted_014/point.npz",
+      "sha256": "3c419bcfc014644e84f81d8874f587a45af1d0bb19f4a1c7833104bfd2130771",
+      "size": 10046
+    },
+    {
+      "path": "geometry/Furan/accepted_014/result.json",
+      "sha256": "a9853aa0ecd6661766bacbd1dba5472327b5a668dc3eb8ccb7a7c925cf0abc69",
+      "size": 970
+    },
+    {
+      "path": "geometry/Furan/analytic_stationary/ground_0.npz",
+      "sha256": "98baaca56040acad6d79a84b1fc7f26baf63cb6d506dbc97e6ace7de3005faaa",
+      "size": 30437
+    },
+    {
+      "path": "geometry/Furan/analytic_stationary/ground_1.npz",
+      "sha256": "aa801eb2f0d21e7d43b7cebd7559922665f65550f1ae3e183a2175fb7660519b",
+      "size": 30793
+    },
+    {
+      "path": "geometry/Furan/analytic_stationary/ground_2.npz",
+      "sha256": "fd2947e81a1288b28ec94752cba5f2cd2e22ed88decb33f0a67ef28e69f18312",
+      "size": 30818
+    },
+    {
+      "path": "geometry/Furan/analytic_stationary/point.npz",
+      "sha256": "15723b9bed2bdb7185fcb47cbe495ab19877cdb477f2022e00cc883a39564237",
+      "size": 13678
+    },
+    {
+      "path": "geometry/Furan/analytic_stationary/result.json",
+      "sha256": "74fc4712248c7107d784193c158db58bb15cf5818c4935c44f3ae6c2dfde7a3e",
+      "size": 969
+    },
+    {
+      "path": "geometry/Furan/history.json",
+      "sha256": "78574bbfb79dd0ed90f02fc9ed01d7b4f2d9109faa91be53473e4c0baa419dc3",
+      "size": 3174
+    },
+    {
+      "path": "geometry/Furan/reference_comparison.json",
+      "sha256": "90275f9ee1a68c68c74e4c43f5fa49c0fd23a172073b6737aa72e7089a048276",
+      "size": 9290
+    },
+    {
+      "path": "geometry/Furan/result.json",
+      "sha256": "ee41cfbd8f48f2ff1e5ab24d94b49b2866c255a2c524eb496b2c9d8e0debfc54",
+      "size": 1093
+    },
+    {
+      "path": "geometry/Furan/vibrations.npz",
+      "sha256": "68fc4c2bffdd6ed45d95f281d97433627fe69e1e23c9588e9f624e214dcd5f00",
+      "size": 5269
+    },
+    {
+      "path": "geometry.py",
+      "sha256": "b3c19b040eb70431bab801a7c28a06ebf0efc5b3043af5c246e49b071203937a",
+      "size": 4169
+    },
+    {
+      "path": "independent/executions/Ammonia.json",
+      "sha256": "1adff2ec406f5660cfbe5b83b2820ff22f62b124a0a04b3078391479d6c78eef",
+      "size": 379
+    },
+    {
+      "path": "independent/executions/Benzoxadiazole.json",
+      "sha256": "1adff2ec406f5660cfbe5b83b2820ff22f62b124a0a04b3078391479d6c78eef",
+      "size": 379
+    },
+    {
+      "path": "independent/executions/Criegee_Intermediate.json",
+      "sha256": "1adff2ec406f5660cfbe5b83b2820ff22f62b124a0a04b3078391479d6c78eef",
+      "size": 379
+    },
+    {
+      "path": "independent/executions/Cyclobutadiene.json",
+      "sha256": "1adff2ec406f5660cfbe5b83b2820ff22f62b124a0a04b3078391479d6c78eef",
+      "size": 379
+    },
+    {
+      "path": "independent/executions/Hexatriene.json",
+      "sha256": "1adff2ec406f5660cfbe5b83b2820ff22f62b124a0a04b3078391479d6c78eef",
+      "size": 379
+    },
+    {
+      "path": "independent/geometries/I001.xyz",
+      "sha256": "f0b6e316c886188793ac4d2a8e9eb52dea4d23d2ce9db65d1a7773a093b5d06e",
+      "size": 263
+    },
+    {
+      "path": "independent/geometries/I002.xyz",
+      "sha256": "f0b6e316c886188793ac4d2a8e9eb52dea4d23d2ce9db65d1a7773a093b5d06e",
+      "size": 263
+    },
+    {
+      "path": "independent/geometries/I003.xyz",
+      "sha256": "5d8c9d831b6e9d66a83f64da5fd36a895b064534e330d6913e4efb8bc513b537",
+      "size": 345
+    },
+    {
+      "path": "independent/geometries/I004.xyz",
+      "sha256": "7b7d95a9ccdc6a2e0a346eed5e6f239a7d9712e63f42e1a9a2a020ad0153986b",
+      "size": 548
+    },
+    {
+      "path": "independent/geometries/I005.xyz",
+      "sha256": "52d9d67d40de735f19b298d38edee3bc5a27ead4faf0f6ff33bff304c71b5c87",
+      "size": 564
+    },
+    {
+      "path": "independent/geometries/I006.xyz",
+      "sha256": "66fcab392a844dc1cd94cd7bd7861de0b49aa1490136e259d0d894a14d51ac4e",
+      "size": 191
+    },
+    {
+      "path": "independent/manifest.json",
+      "sha256": "5a4952d2b8e5ea9b591fecd6a8646b8df8fd58e20e89be6b4a9f3f389815046f",
+      "size": 3086
+    },
+    {
+      "path": "independent/predictions/Ammonia/I006/projection.json",
+      "sha256": "df37f97fdb4934129f6d44ac238a1a942d8ffb7c4d6edc4e2828f2345e032d00",
+      "size": 181
+    },
+    {
+      "path": "independent/predictions/Ammonia/I006/result.json",
+      "sha256": "f9244b35135781584ef335e63f7f82d54ce23a1968419f4bf35c052425313ca8",
+      "size": 228
+    },
+    {
+      "path": "independent/predictions/Ammonia/native_certificate.json",
+      "sha256": "16526dc63c2d5a27b1b9134cfb9efff140cdb4bfa8d5be0899db86e66852b2bc",
+      "size": 60
+    },
+    {
+      "path": "independent/predictions/Ammonia/native_ground.npz",
+      "sha256": "62814b26a9c13c518b1c2a49fcc968f69bea4eca3a4fe2d09d58665479b72d13",
+      "size": 10041
+    },
+    {
+      "path": "independent/predictions/Ammonia/pass_complete.json",
+      "sha256": "012296c481fb7a2c9da8d3ee02708edde7b13cb8f411ed6e7181f0b43f0592a1",
+      "size": 89
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I001/parent_0_index_0_failure.json",
+      "sha256": "7a8c9a5d4a127e46d000b65675334841deeaceb336ec5d2a2633ce538e7cc909",
+      "size": 1568
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I001/parent_0_index_1.npz",
+      "sha256": "b62407ba7bf50a87caa4ca136b922fbdf1b8eb81777a77b2048ca96d12aeb21b",
+      "size": 18536
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I001/parent_1_index_0_failure.json",
+      "sha256": "7a8c9a5d4a127e46d000b65675334841deeaceb336ec5d2a2633ce538e7cc909",
+      "size": 1568
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I001/parent_1_index_1.npz",
+      "sha256": "8c51b443119588d750cb98a3e5591849efcc2eefe43980705aebae09fad74d4b",
+      "size": 18517
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I001/projection.json",
+      "sha256": "70f29c792a9eef7baeafd65fa24ebd72f04ff3b9295e2c6cf7543671e1193d3a",
+      "size": 240
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I001/result.json",
+      "sha256": "2f0a6b2f5f5ead2af5218f303e35993cddfeba12345ecc3b6c8ff6059a81f7cb",
+      "size": 286
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I001/stationary.npz",
+      "sha256": "b0a659f5e15c2e79d6953745d8e0b3bd343e639db283f890f2465a7f72703f28",
+      "size": 37003
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I002/parent_0_index_0.npz",
+      "sha256": "1940395f21340f1b425cad39ce77b484b7393a5384c67f2fd8383267a04efa55",
+      "size": 18525
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I002/parent_1_index_0.npz",
+      "sha256": "dd4558de735b78453ba8ddab7ec5047ecd17914d49d483dac0b082dbb700a478",
+      "size": 18519
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I002/projection.json",
+      "sha256": "91660e1bd8c73ed5af39dfec509aea9a519d7d8de3ff42a4c5a77446bcb21871",
+      "size": 232
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I002/result.json",
+      "sha256": "1cc50a3b8b12e65a1c56b3b429aece0fbf75ddee62de45df42956f0451f89927",
+      "size": 288
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/I002/stationary.npz",
+      "sha256": "615bf3ad2e7fefb1645a7a5c165919534a1bae4da66ca141e3616fb2cdaf012d",
+      "size": 37007
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/full_response/anchor/calibration.json",
+      "sha256": "ada74bf3d9a179b44a72f9d5e5df0c98eb9f73c480b85ceed32391cd30d15966",
+      "size": 360
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/grounds/0/certificate.json",
+      "sha256": "67f6c02276e416aeca7d244707fd5d1f4a0995134a577700e6742d1abcf3b997",
+      "size": 60
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/grounds/0/stationary.npz",
+      "sha256": "34b1b1ab1d46d7431d4d92c8467e174a5cf43b4c4220f94a49e909f4f9634eb7",
+      "size": 16685
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/grounds/1/certificate.json",
+      "sha256": "e0922984a68c6b57f328d6bdf321beb34496d8506edade72abcb5b467ef53c65",
+      "size": 61
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/grounds/1/stationary.npz",
+      "sha256": "56c80adbdc19e845177113ff2fb2d3655de66d646f78f35f1ece1501353e93f5",
+      "size": 16691
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/native_certificate.json",
+      "sha256": "cd73a772ade469b08113d8a7e127c10882daa51b0643c383d8112829e05ba9db",
+      "size": 61
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/native_ground.npz",
+      "sha256": "ebb1d6ab7968df57c7c8b38e24b6ca2940367a2f2385cd626eecbf8116a3119b",
+      "size": 16343
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/pass_complete.json",
+      "sha256": "d9547b40064549912e0773ec83e7f3260bdbd9e07ec7603857b143ca9758f999",
+      "size": 102
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/qualified_spectral_response/anchor/mapping.json",
+      "sha256": "329be2273f387b45474d11aaf261269c0bb9065d0d09a6b0d2220d89a79e0d14",
+      "size": 1676
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/spectral_protocol.json",
+      "sha256": "ca0ef1355b915d1224f53e3a6d30f17b867b59668e32c006d229c94a10f1b735",
+      "size": 126
+    },
+    {
+      "path": "independent/predictions/Cyclobutadiene/I003/projection.json",
+      "sha256": "9b9ec49d427d966874a1487004fa3f37305e3d0aae55ee6bd5b193463cca3647",
+      "size": 373
+    },
+    {
+      "path": "independent/predictions/Cyclobutadiene/I003/result.json",
+      "sha256": "d1aae16777cd84ee2e50916118bc4d8997b2ca000ad864b29f5c7afd1317bfb5",
+      "size": 233
+    },
+    {
+      "path": "independent/predictions/Cyclobutadiene/native_certificate.json",
+      "sha256": "81b7db8ebb7d949955e46f9a0833831b6f8a8e14578618cf256341551cc6505a",
+      "size": 60
+    },
+    {
+      "path": "independent/predictions/Cyclobutadiene/native_ground.npz",
+      "sha256": "bf0589178a9e13d8225b96d28c50c607b9ea1073b8174d9b3d49f10baf93a2e3",
+      "size": 19167
+    },
+    {
+      "path": "independent/predictions/Cyclobutadiene/pass_complete.json",
+      "sha256": "d45b227f4154a20c1803e7cfbb56a2ad973517caaa35199aa5397777cfcdba3d",
+      "size": 96
+    },
+    {
+      "path": "independent/predictions/Hexatriene/I005/parent_0_index_0_failure.json",
+      "sha256": "7a8c9a5d4a127e46d000b65675334841deeaceb336ec5d2a2633ce538e7cc909",
+      "size": 1568
+    },
+    {
+      "path": "independent/predictions/Hexatriene/I005/parent_0_index_1.npz",
+      "sha256": "5e758b6eade1d9ca4d4ef9391b8f4af3ce46d1c987f74298b7a25683c6815ffa",
+      "size": 49510
+    },
+    {
+      "path": "independent/predictions/Hexatriene/I005/parent_1_index_0_failure.json",
+      "sha256": "7a8c9a5d4a127e46d000b65675334841deeaceb336ec5d2a2633ce538e7cc909",
+      "size": 1568
+    },
+    {
+      "path": "independent/predictions/Hexatriene/I005/parent_1_index_1.npz",
+      "sha256": "6bcd259417e66bb48381eea73e678a24f10262d5624069289fe53eae75015717",
+      "size": 48668
+    },
+    {
+      "path": "independent/predictions/Hexatriene/I005/parent_1_index_2.npz",
+      "sha256": "51138a2124bef21facd0e72b253a6a17a861d06e244d6ecbeea92b9a000cb59e",
+      "size": 48655
+    },
+    {
+      "path": "independent/predictions/Hexatriene/I005/projection.json",
+      "sha256": "465b7d0c5bc47558683751c3cd0fc89803f6b51c4b6782b3fd62591fb3d15808",
+      "size": 531
+    },
+    {
+      "path": "independent/predictions/Hexatriene/I005/result.json",
+      "sha256": "efe59dcf5fb5fae154596ab118f3a7b34e6be11f6f9784b0682a3c23e3686597",
+      "size": 278
+    },
+    {
+      "path": "independent/predictions/Hexatriene/I005/stationary.npz",
+      "sha256": "92667e12f63ac1cae0cfc3c1ca93ec850723288fc307f479db943f37996f2dfe",
+      "size": 97992
+    },
+    {
+      "path": "independent/predictions/Hexatriene/full_response/anchor/calibration.json",
+      "sha256": "35cb9172e3e13ad7f7914c8b0b7fbde840ff020c9a09d7d728ecf0655c75acf4",
+      "size": 360
+    },
+    {
+      "path": "independent/predictions/Hexatriene/grounds/0/certificate.json",
+      "sha256": "e5f61a06d6481a0e8c02db858921ccf49d5d816fbc19f97f17c5aa0db82083f5",
+      "size": 60
+    },
+    {
+      "path": "independent/predictions/Hexatriene/grounds/0/stationary.npz",
+      "sha256": "4db11965cecb9498f7f8a06f0e6cd0564e056ba643de76b5946b9cc636038d2b",
+      "size": 41757
+    },
+    {
+      "path": "independent/predictions/Hexatriene/grounds/1/certificate.json",
+      "sha256": "c95fa0308a5fdcce8585ad61a45769f9d734fd00aa9cd1ed8313151552a9ee40",
+      "size": 60
+    },
+    {
+      "path": "independent/predictions/Hexatriene/grounds/1/stationary.npz",
+      "sha256": "e5fe83093f0ead5d744b079460eade16b66b8f667e863b88a1c3228463d278fc",
+      "size": 41394
+    },
+    {
+      "path": "independent/predictions/Hexatriene/native_certificate.json",
+      "sha256": "834c8190ed5367a334f71a7939510ade2c36884f977d1c40165d303cbf97faf2",
+      "size": 60
+    },
+    {
+      "path": "independent/predictions/Hexatriene/native_ground.npz",
+      "sha256": "bb9a3c4b778db1d520456ae6fade9eb33bed0b88a96391af1ede7e8fde9f56d2",
+      "size": 40973
+    },
+    {
+      "path": "independent/predictions/Hexatriene/pass_complete.json",
+      "sha256": "976da21252190fb45dea8020968d6990ec89f2afb9f8c0248fcd5ea81b524748",
+      "size": 92
+    },
+    {
+      "path": "independent/predictions/Hexatriene/qualified_spectral_response/anchor/mapping.json",
+      "sha256": "833c75710ce7da5901a6d1df71a00c49bcbcd492d880c6347cdc2d981e814f3c",
+      "size": 3175
+    },
+    {
+      "path": "independent/predictions/Hexatriene/spectral_protocol.json",
+      "sha256": "ca0ef1355b915d1224f53e3a6d30f17b867b59668e32c006d229c94a10f1b735",
+      "size": 126
+    },
+    {
+      "path": "independent/references/Ammonia/I006.npz",
+      "sha256": "4c094644398e7e2b5158a82ec019d931b7ee9ecb712ca467ae0b43828b262df0",
+      "size": 3479
+    },
+    {
+      "path": "independent/references/Ammonia/I006_cost.json",
+      "sha256": "13f5888ea7a3778e110c49a958cbadd71a65b963840764c26e80ed4f559d52be",
+      "size": 70
+    },
+    {
+      "path": "independent/references/Ammonia/I006_symmetry_correlation.json",
+      "sha256": "3c3e53605d67282ed03e8ea3134b919c4b5bf8b75c5f8b41f49cc1f72cd24154",
+      "size": 177
+    },
+    {
+      "path": "independent/references/Ammonia/ground_cost.json",
+      "sha256": "8f29e91d8c3e444ca0868cd9c1a43facc1863424756162c8717822e30a398a35",
+      "size": 49
+    },
+    {
+      "path": "independent/references/Ammonia/pyscf.log",
+      "sha256": "564655639cdde3669368308d643afae12fe560843c5168e6bc68816f6e0624f6",
+      "size": 15176
+    },
+    {
+      "path": "independent/references/Ammonia/reference.npz",
+      "sha256": "794198066bd24b796dcba5c2845646f80fbe4fbd4d5637353e028c0eec5803f5",
+      "size": 18858
+    },
+    {
+      "path": "independent/references/Ammonia/result.json",
+      "sha256": "df2fae4e6595860a15ea1e98c4cff1672fc788ff293b143be304177536eb59b0",
+      "size": 213
+    },
+    {
+      "path": "independent/references/Benzoxadiazole/ground_cost.json",
+      "sha256": "13396b924843090f8303693207062ec4c10d779eb1fbc9e9d96a9cf277818c70",
+      "size": 49
+    },
+    {
+      "path": "independent/references/Benzoxadiazole/pyscf.log",
+      "sha256": "7f79dfd0189bcf43bad54dbae360741573d3991f71aa98b0358d5884228f4557",
+      "size": 19813
+    },
+    {
+      "path": "independent/references/Benzoxadiazole/reference.npz",
+      "sha256": "61fdd600dd5823760b32026e26474c7155c523fd6bb9a8244222a44c15536d98",
+      "size": 389841
+    },
+    {
+      "path": "independent/references/Criegee_Intermediate/I001.npz",
+      "sha256": "49bbf4f6b782e442a271568f3c882bda4117bc5ca7c15ba67f0ee1e045719670",
+      "size": 7176
+    },
+    {
+      "path": "independent/references/Criegee_Intermediate/I001_cost.json",
+      "sha256": "7d92c9f11e967e377894ee49acd6a5ca9859caa955a81146fcd1a7ed63f6c4b0",
+      "size": 70
+    },
+    {
+      "path": "independent/references/Criegee_Intermediate/I002.npz",
+      "sha256": "02b2b23a4fdd8ec34d054f49c53c53a592de69bb45beb14389c5e322ff31700f",
+      "size": 10695
+    },
+    {
+      "path": "independent/references/Criegee_Intermediate/I002_cost.json",
+      "sha256": "fd9d181f831ecc55ed9951a5ecc745569bb6ebbfdc2481400634d094a0c67e0c",
+      "size": 70
+    },
+    {
+      "path": "independent/references/Criegee_Intermediate/ground_cost.json",
+      "sha256": "73fb242e3c47f9797ad7c7572f2a388e1abd219b921fbb0ef5e6bef3fb1026fd",
+      "size": 49
+    },
+    {
+      "path": "independent/references/Criegee_Intermediate/pyscf.log",
+      "sha256": "6ee91e1e9e35fd5a4663ac17b74d9d23bdea68011833f8865183f8ece7d5dca0",
+      "size": 19243
+    },
+    {
+      "path": "independent/references/Criegee_Intermediate/reference.npz",
+      "sha256": "7aea1c162ee8a73f1742587b0617f0a83c0dca7839d9cc889899d0e57a9cd339",
+      "size": 62461
+    },
+    {
+      "path": "independent/references/Criegee_Intermediate/result.json",
+      "sha256": "1d4d32f090270b8499dc328d71fc4fc1f2afcff1aacdfaa068c40a2e9a68f532",
+      "size": 238
+    },
+    {
+      "path": "independent/references/Cyclobutadiene/I003.npz",
+      "sha256": "ded920dfabe72e183465392e676209413310c5c4c162bed147d1b81281bcab5e",
+      "size": 4159
+    },
+    {
+      "path": "independent/references/Cyclobutadiene/I003_cost.json",
+      "sha256": "695719d77b4686398a4bb60623719e20ed4ca637435a013face4cb883a034187",
+      "size": 71
+    },
+    {
+      "path": "independent/references/Cyclobutadiene/ground_cost.json",
+      "sha256": "dc80ed9373cb1c5238cae711756af070709aa6f913f19a45012c867fd3f1465d",
+      "size": 49
+    },
+    {
+      "path": "independent/references/Cyclobutadiene/pyscf.log",
+      "sha256": "e1ae325ff74cfc482e9b3d724af57a922d77a16bdae963dae629bfca166a622d",
+      "size": 18527
+    },
+    {
+      "path": "independent/references/Cyclobutadiene/reference.npz",
+      "sha256": "afcc56177f9123bb8f032637169a4972fa8efc25b7076a46a3dfe720e38084e4",
+      "size": 64220
+    },
+    {
+      "path": "independent/references/Cyclobutadiene/result.json",
+      "sha256": "b0fccc553d72ebe94e2c1bcf04e1d0b8840a4d3c8cc1193c825cbe7c5a1a7ae1",
+      "size": 220
+    },
+    {
+      "path": "independent/references/Hexatriene/I005.npz",
+      "sha256": "cd706c28a1a64c22577fd246cb1c358e05dae06974e67feb43d84ca718db316f",
+      "size": 25451
+    },
+    {
+      "path": "independent/references/Hexatriene/I005_cost.json",
+      "sha256": "d3565479bfa1127f660fb34c6e30a05708d7ada19cb00decd824b7098f129869",
+      "size": 69
+    },
+    {
+      "path": "independent/references/Hexatriene/ground_cost.json",
+      "sha256": "b1ceeffb5f3aa852affcfa2237485f446ad3537b09a96a56931876f03cdf6f50",
+      "size": 49
+    },
+    {
+      "path": "independent/references/Hexatriene/pyscf.log",
+      "sha256": "0c9725a840cee0086d7063e0e04cb5264b7becf0719fd3fc3484e64ab16227a8",
+      "size": 19693
+    },
+    {
+      "path": "independent/references/Hexatriene/reference.npz",
+      "sha256": "d1ae77cfda7fcea3c255b1f0c9c5b0966d6e5e09005df782bb35cb195e92a6c7",
+      "size": 286543
+    },
+    {
+      "path": "independent/references/Hexatriene/result.json",
+      "sha256": "d21e82211ece62c47b01cb5f7ee2b3a5d18ce5dea88d050374577a67bb42f643",
+      "size": 216
+    },
+    {
+      "path": "independent.py",
+      "sha256": "63790cb981358422f3d7904227cca2058520a16f5044cf491b820b05e5a98d3c",
+      "size": 12674
+    },
+    {
+      "path": "independent_ammonia_recovery.log",
+      "sha256": "f1791d091b98fb11f82a96745d43cc015dbe19cf62f3373a6bee31fc67b3929e",
+      "size": 148
+    },
+    {
+      "path": "independent_ammonia_recovery.resources",
+      "sha256": "82907f11efbbf1548050405bc9e56fbd04a26cbb5b6aef7d53db4c3f7fe5a484",
+      "size": 793
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "d7f61e30e834cd57634d6932051473d0ea053c6f71f2518ed6f1ac83f0aade63",
+      "size": 4425
+    },
+    {
+      "path": "launch_manifest.json",
+      "sha256": "d51955390b959c69ffb6aa5469f21761e673d3c33f0bcbc6c5e7eed080432f36",
+      "size": 1056
+    },
+    {
+      "path": "launch_manifest_v2.json",
+      "sha256": "b2b613c2a808bf42a88b7e954a1b7e2afaf518c9f078fdf78ca8f686a5e94ba7",
+      "size": 1228
+    },
+    {
+      "path": "postprocess.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "postprocess.py",
+      "sha256": "2e8a900d9d029424115dbdc953daada55563fbcb40052cafde7ebbc2314e960e",
+      "size": 1835
+    },
+    {
+      "path": "postprocess_execution.json",
+      "sha256": "e33b7b2e1791dc157b93e91ba4678adca08843b49df2ab10bcc247c687bc4c8b",
+      "size": 1284
+    },
+    {
+      "path": "postprocess_progress.json",
+      "sha256": "fb7e36a285bb0ec6d724b9da6e2aaebdaac4225298e399a28e92f57a5f6d2a41",
+      "size": 110
+    },
+    {
+      "path": "progress.json",
+      "sha256": "327c52ac907787c9a9d92c81cc57b94c4497c4c02b984b81ead05c54c065c030",
+      "size": 194
+    },
+    {
+      "path": "protocol.json",
+      "sha256": "1bddf1278299a79d83a865bccb6564c2ae1d1c9f76eba49fcd14054dbf981f72",
+      "size": 3556
+    },
+    {
+      "path": "runtime_sources.json",
+      "sha256": "959e4a81e30174eea27682e8efee393a5deda3bd287648674a48d55fc69260c1",
+      "size": 27999
+    },
+    {
+      "path": "score_independent.py",
+      "sha256": "f4029a1cd546a713ab0344e6fdf6d9dca4b78eea65e8ea467072bfc84489df05",
+      "size": 2945
+    },
+    {
+      "path": "source_history/initial/collect.py",
+      "sha256": "f793a1bfec85915547635aa9f7e850f3395ebfa9937e38e4c5d9f088f9b2e535",
+      "size": 1843
+    },
+    {
+      "path": "source_history/initial/controller.py",
+      "sha256": "f5224c3f7ff7ced33d992eb2fa07aff917b1374369c5d754bd7be976847361f8",
+      "size": 3820
+    },
+    {
+      "path": "source_history/initial/cost.py",
+      "sha256": "91115ee9f74e9b0b896855e7519438b5e11aaca912eabf39a49adb92164afe35",
+      "size": 5543
+    },
+    {
+      "path": "source_history/initial/independent.py",
+      "sha256": "ee53a5df79c00b4d562bce75ae19ae1f3c3e4bad40c4b952f59c8f69538fa0b5",
+      "size": 11990
+    },
+    {
+      "path": "status.json",
+      "sha256": "7d467f93da043caa1cde09e812a6eaaf7ec533796ba0cd31d7af4f0816b6fd32",
+      "size": 21565
+    },
+    {
+      "path": "task_ledger.json",
+      "sha256": "841108f0a6f6753e96c1cb6ca511464a182eb305cd911678ed2c5742eaa6a9bb",
+      "size": 2934
+    },
+    {
+      "path": "tasks/anchor_Cyclopentadiene_0.98/exit.json",
+      "sha256": "6b6fcafff1368c0215093febfb3bae5ac3dfedc3ef7f92884f98418769048974",
+      "size": 151
+    },
+    {
+      "path": "tasks/anchor_Cyclopentadiene_0.98/pid.json",
+      "sha256": "4d80e376404889c9d0507f442a484e23091bedae13c05ed30a215d298acf415b",
+      "size": 108
+    },
+    {
+      "path": "tasks/anchor_Cyclopentadiene_0.98/resources.txt",
+      "sha256": "63e159a61274f22f9ecfff65474efa437fcd8de2f70b0db51f7abfe93ebc1afa",
+      "size": 817
+    },
+    {
+      "path": "tasks/anchor_Cyclopentadiene_0.98/stdout.log",
+      "sha256": "52cda26637737650d6e8c974405af6d601f98faf0ac7151c92e8f9053c92d868",
+      "size": 156
+    },
+    {
+      "path": "tasks/anchor_Cyclopentadiene_1.02/exit.json",
+      "sha256": "271d89ca2deeeda9db01ecf6da0d6701d87e3a4108ebc3f5f973f42a7405ddc4",
+      "size": 152
+    },
+    {
+      "path": "tasks/anchor_Cyclopentadiene_1.02/pid.json",
+      "sha256": "451d6b0431ee99e85ca52a2e1aef69bef3221abc783903b6b8d9adf6e5ee8f8d",
+      "size": 108
+    },
+    {
+      "path": "tasks/anchor_Cyclopentadiene_1.02/resources.txt",
+      "sha256": "91a49497a51b7d89003b49379d35afa2f8169350d7edc5acda6eac0778f64cdb",
+      "size": 817
+    },
+    {
+      "path": "tasks/anchor_Cyclopentadiene_1.02/stdout.log",
+      "sha256": "fb6fc2445068a359af3c5fa2145e4e4bf174bfec0ef1da295781df41103fd829",
+      "size": 155
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_0/exit.json",
+      "sha256": "ccbcf83c25ccca9a4bfba626eb32e991e86ad25d339c1c4e13163222e9f906b9",
+      "size": 147
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_0/pid.json",
+      "sha256": "bad57b968fdc57219d83670a0e76ad90e931e14ba28a2b2dd9d25ec54bbb3c1e",
+      "size": 91
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_0/resources.txt",
+      "sha256": "8e7a920cde2190bee742f9dfe57e3b1531771b86da38dd5df0a6957ac8214f52",
+      "size": 793
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_0/stdout.log",
+      "sha256": "47588d158b2a444d989e15f29980c05c0474c76d08704d74a3895f5075c45670",
+      "size": 37
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_1/exit.json",
+      "sha256": "ec9ef611109444173447549ec380e7201c7865060905621937ff7d060d23eb5f",
+      "size": 146
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_1/pid.json",
+      "sha256": "2ad391f7022569e294c25bcbbe00c55e9f02c189d82a61a4a5cf00169c4784d2",
+      "size": 91
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_1/resources.txt",
+      "sha256": "d707404f560217f75a001095c69519c5983125db962bbba83117bdc122c890c4",
+      "size": 793
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_1/stdout.log",
+      "sha256": "690f4a32bdba2a89bbe6001ccbf0f0320acd1999f5c2394c84e9ce1d92914fee",
+      "size": 37
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_2/exit.json",
+      "sha256": "fbcebdeab4d3a3419dcb79a2034e3a74c2d3bf706d420d71b11846f2f3b044cd",
+      "size": 146
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_2/pid.json",
+      "sha256": "94c0f2e1673108eace57f912c2e916e1929b7f7c094f76c469acee38414846e3",
+      "size": 91
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_2/resources.txt",
+      "sha256": "a4aab442150ecd6e9c04eb1768766f5dbd8e0ce6a993a717d9b7efe800b6d82c",
+      "size": 793
+    },
+    {
+      "path": "tasks/cost_nitroxyl_energy_2/stdout.log",
+      "sha256": "93bef105aad05559e9745dce2c4f4f9f14862ef0f7637fdf6ca1f99512763dfa",
+      "size": 38
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_0/exit.json",
+      "sha256": "3fc88d6d4289b877b8396fc7828835345119c7a529860f1dedc0921da3daf18b",
+      "size": 149
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_0/pid.json",
+      "sha256": "f5a06113ba65a7fcd0107d704ae54d51d583fcce207770068d3df558ff63d1d2",
+      "size": 93
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_0/resources.txt",
+      "sha256": "43d755f80c1ed5b00dfe1a690e46ccffcb82d7a16131744999e39eab4539ff0d",
+      "size": 796
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_0/stdout.log",
+      "sha256": "5d555968eebb0b0c99f5cfbf41fab4e13d74eed719df5a76a0db28ba2f60f4f9",
+      "size": 39
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_1/exit.json",
+      "sha256": "8a0ec2c816aa919477875bfcfe2facdd37ecfe029fd87d5ad48dae6f73f98559",
+      "size": 149
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_1/pid.json",
+      "sha256": "88ecb769d1f7a94ad74db7f37e3cf618290275d0b27dcc0e3f85b94f9f5ff68f",
+      "size": 93
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_1/resources.txt",
+      "sha256": "49d04137b79eeb447137cb48eaa4cb0f4b30e88619e4f799b1b306e9c1eabde7",
+      "size": 795
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_1/stdout.log",
+      "sha256": "bc8af260a0b96b24f855feb54e4ada6834d4a06209f38dc59cdcdc93548afc01",
+      "size": 40
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_2/exit.json",
+      "sha256": "a3d59617128ac3b92fed016f4a811d8ad6bb41d2cce4b8dc6c82ac2e73b38d21",
+      "size": 149
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_2/pid.json",
+      "sha256": "14c18d4e8188bc55946c8862ddeb61ec22e52f6718c8b11d9845604e42412209",
+      "size": 93
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_2/resources.txt",
+      "sha256": "caf65bd263bf4781c7c53a71c5996e8e5b4fc60b5efd8e03619a7e8889aca9ba",
+      "size": 795
+    },
+    {
+      "path": "tasks/cost_nitroxyl_gradient_2/stdout.log",
+      "sha256": "e3e5f10f050fb1dd5bf4d7222c756480c943a0e667c0963d5c4e3fce07648e0b",
+      "size": 40
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_0/exit.json",
+      "sha256": "521aefe6ce2f9108da2c2e1ad7f89bd356594a7f6875b34bb834a2403fbed5bd",
+      "size": 147
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_0/pid.json",
+      "sha256": "a02a540a841d4bfdbb4fc041eab76cfc95379eee26dd76070ac02c4fdbf42bc2",
+      "size": 92
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_0/resources.txt",
+      "sha256": "5cba777fa521c7c172d8685ad0699fbfae151e5ec23573953d0455f41300daee",
+      "size": 794
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_0/stdout.log",
+      "sha256": "81fea10afbe52d548896b39bf01f6ab11bec55f47f789897d955783fcb1fad78",
+      "size": 38
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_1/exit.json",
+      "sha256": "294859a0a02f7c3368de0dff4e65b9af2d27f7e00376c57fa00578fe03297254",
+      "size": 147
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_1/pid.json",
+      "sha256": "97dcea0300b38b7c8e7ca45f0867336c259a8dc89dbff4fb448bed21607a5341",
+      "size": 92
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_1/resources.txt",
+      "sha256": "61921aa1181f5854dbf8b4e40ecf0b5db78f86b9984465bdffe05d310220c73c",
+      "size": 794
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_1/stdout.log",
+      "sha256": "5eebb85d851ed1fb9de15b1d021db992df6664f5b45d417110cf24aa96dc6e13",
+      "size": 38
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_2/exit.json",
+      "sha256": "02520702d2775d0202dccf4f9b31dda4367987bca1e6777649e8ff77d9138d64",
+      "size": 147
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_2/pid.json",
+      "sha256": "a44cea20ae34bf7598679c201d97ed9e904a98aa90bf691054dff2e785a9aebd",
+      "size": 92
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_2/resources.txt",
+      "sha256": "04787ad0aa2ceb95e6d6586c4bcb34d2c51540276d1152a2348f8dd18036e202",
+      "size": 794
+    },
+    {
+      "path": "tasks/cost_nitroxyl_hessian_2/stdout.log",
+      "sha256": "18dc5c67df3523594a6bba2d4c0ca0e71c39987b75229b8be125e8928e359496",
+      "size": 37
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_0/exit.json",
+      "sha256": "0e69207a6cc188464d981e6f22d4fa17411e12acc5d62978734e44137e6a6986",
+      "size": 144
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_0/pid.json",
+      "sha256": "673c4e96e43ac2308226c8673b304eaf3650fbf6cb639db34ee536e0b8d03adc",
+      "size": 88
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_0/resources.txt",
+      "sha256": "04ef2b423375eca1570a5f342b9045775d2f86cc259a53a816cbbdc658338493",
+      "size": 793
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_0/stdout.log",
+      "sha256": "2e64c4a6e58aca1546da6c8fd4be4f64bacf27909780d3bad1e5d8be8c0293b3",
+      "size": 36
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_1/exit.json",
+      "sha256": "b893cfb0a97cb983085f75ffb404585f419c8267991ccb0a6fd016669e0c5d94",
+      "size": 144
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_1/pid.json",
+      "sha256": "9f838723678c56cd11a9b0bfb97b5dad3e2e8fcdfa762dfcff45aae9b4ad0ff7",
+      "size": 88
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_1/resources.txt",
+      "sha256": "299f66d822fe98407ac06265cb833966bf511898fccf16573b86cf62072f9b45",
+      "size": 790
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_1/stdout.log",
+      "sha256": "a349cc70e5bf41d202f642082d49aa0cc6d86961640533fd75e7f0880711fb32",
+      "size": 36
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_2/exit.json",
+      "sha256": "04854d8a081119956c968f3e51ef1f60e9b4d251e0fa6e836f74298d151fa85b",
+      "size": 144
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_2/pid.json",
+      "sha256": "66d39d653e80cdf3b6801e3560f40a797d0d730de47020d3a2232864460f2f4d",
+      "size": 88
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_2/resources.txt",
+      "sha256": "82b7646b15fa557a601a4218be4ce7b21114b62b5fad88281882708a3d7ca2a4",
+      "size": 790
+    },
+    {
+      "path": "tasks/cost_nitroxyl_tda_2/stdout.log",
+      "sha256": "329d2b07dd3c003c1aed9b65854711af8be5ee2f96f84c05e2acf44b571bee95",
+      "size": 36
+    },
+    {
+      "path": "tasks/geometry_Furan/pid.json",
+      "sha256": "45e01be60e81db9c9dd6d5d6e1c47b83993a93320fe2f3a3c2864d2674591d3e",
+      "size": 81
+    },
+    {
+      "path": "tasks/geometry_Furan/resources.txt",
+      "sha256": "976d06099777d21284348422c025e3c80c7b1a1b7741ac43eedb17fd19271c2a",
+      "size": 799
+    },
+    {
+      "path": "tasks/geometry_Furan/stdout.log",
+      "sha256": "774f601506713a8e5b5f99329448cce33de963f9d43c07fa65126bb211fb2467",
+      "size": 350
+    },
+    {
+      "path": "tasks/independent_Ammonia/exit.json",
+      "sha256": "f228da87b76bb40cddfb73b599327c82265514d6f6755bf96358f286e0335a5d",
+      "size": 145
+    },
+    {
+      "path": "tasks/independent_Ammonia/pid.json",
+      "sha256": "a54ec15966e3b2212347ba0c32f8a3d0fed5b99629b2b5fb2c16b8ef8c98f8e3",
+      "size": 74
+    },
+    {
+      "path": "tasks/independent_Ammonia/resources.txt",
+      "sha256": "c9283d2c5c5dad8874012e86917c90eeda675303ec63938e7c225c904c64228d",
+      "size": 833
+    },
+    {
+      "path": "tasks/independent_Ammonia/stdout.log",
+      "sha256": "a6f4cb84b1fe252ff9e31ce11c6087a8f7759212564e366bf1f6828718666dc3",
+      "size": 2348
+    },
+    {
+      "path": "tasks/independent_Benzoxadiazole/pid.json",
+      "sha256": "41d6fa6452258d4aea78309f89c9e376e96cafa4b3109f8c3b8993d967fdaf6f",
+      "size": 81
+    },
+    {
+      "path": "tasks/independent_Benzoxadiazole/resources.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "tasks/independent_Benzoxadiazole/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "tasks/independent_Criegee_Intermediate/exit.json",
+      "sha256": "e3bae8036b6b486e65073cf27d1892fa3edb933a473fb3dceb1637512173bf53",
+      "size": 157
+    },
+    {
+      "path": "tasks/independent_Criegee_Intermediate/pid.json",
+      "sha256": "24c8d39258ae6a18f6c9b7d217fc543a9f3b50a29f4b62f424bb84f2d068382d",
+      "size": 87
+    },
+    {
+      "path": "tasks/independent_Criegee_Intermediate/resources.txt",
+      "sha256": "6b5e912d8b28805019951ca883ff48db886cd43324dff7b0b224632362477b87",
+      "size": 808
+    },
+    {
+      "path": "tasks/independent_Criegee_Intermediate/stdout.log",
+      "sha256": "cf0e80445576366a5ad7fdea4246ea6a4f73235a525a2fe0c3a11e943d707490",
+      "size": 189
+    },
+    {
+      "path": "tasks/independent_Cyclobutadiene/exit.json",
+      "sha256": "63599e9d284f69766d7911da14409673bfaa4dcb1eff3dfdaf4be29c3eea63af",
+      "size": 150
+    },
+    {
+      "path": "tasks/independent_Cyclobutadiene/pid.json",
+      "sha256": "ab04312558e55c087fb53d14bdf609a45463a68299c4ee29cfedee7cf32413c5",
+      "size": 81
+    },
+    {
+      "path": "tasks/independent_Cyclobutadiene/resources.txt",
+      "sha256": "46b6b7004edd868929004870da851a899113086efc0f154435eee37e688fd05d",
+      "size": 801
+    },
+    {
+      "path": "tasks/independent_Cyclobutadiene/stdout.log",
+      "sha256": "1ac3fb6f4373712024329b6dd2fd8e9f9c6ac97100aef3dc4f495a7f732bbb35",
+      "size": 145
+    },
+    {
+      "path": "tasks/independent_Hexatriene/exit.json",
+      "sha256": "f1ef96f040d598d31c56cec31eaef8ba167347eaf6a528494fe0815b24dfbfef",
+      "size": 147
+    },
+    {
+      "path": "tasks/independent_Hexatriene/pid.json",
+      "sha256": "9feae545f823afb9472bca94ae5bddcb6db452fe3df44147b940de4acd0e5648",
+      "size": 77
+    },
+    {
+      "path": "tasks/independent_Hexatriene/resources.txt",
+      "sha256": "ece4761de2a12f7f7221eec45365a9bcd775b368d05320fdd2ff7445e0ce314a",
+      "size": 803
+    },
+    {
+      "path": "tasks/independent_Hexatriene/stdout.log",
+      "sha256": "2d21c3c4420852a3ffe58f2d318ad7fab9515ff8d90c054c589b8233fae28482",
+      "size": 280
+    }
+  ],
+  "large_files_retained_remotely": [
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/full_response/anchor/embedding.npz",
+      "sha256": "2f54ae3da770382e45cbe74c5c1c0cfd4e8b3df0c11910f29f4e6e921b84cfde",
+      "size": 30462,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/full_response/anchor/first_second_hf.npz",
+      "sha256": "14768873d104248995627958984493f5418e790dc5f1ad92afbb308b8a4d342d",
+      "size": 1716549,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/full_response/anchor/model.npz",
+      "sha256": "9ff6ca92f353e79a10bc765fb4258ffb74c4f841eb5ad79c2ea0dd46ed4cf524",
+      "size": 1566712,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/full_response/anchor/projected_eri.npz",
+      "sha256": "b2ecf9c9ba6a9c4acd202aa2dcc390545434294177bbd872571996aa065cb16b",
+      "size": 2734571,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/full_response/anchor/quadrature_progress.npz",
+      "sha256": "fa66cc35893ccde6072f60dd65dee664ecfe140eedaea85d728e34ebd54393e3",
+      "size": 1565382,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/portable_model/arrays.npz",
+      "sha256": "2d690ee9c0a114c682eeb031520082fa38b80b83c427ba47abec9ded68a61c54",
+      "size": 2756370,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/portable_model/ground_0.npz",
+      "sha256": "66f4c6160dbf35df2c3599b5442d8774d1e0e2bdcab07227a0522f338cf9c7e5",
+      "size": 31272,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/portable_model/ground_1.npz",
+      "sha256": "887c38d7ad13669ec6387887af10eb600a57866a0e8bc8fc8306f041d6bbd554",
+      "size": 30550,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/portable_model/ground_2.npz",
+      "sha256": "1aada959eb62701b2faa416799cc6d49de94afae9935712e1467d13f10dd4045",
+      "size": 30305,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/portable_model/response_0.npz",
+      "sha256": "9fb0ad03d522e82a032f2249f640331105539a06f2e32c98cc77b9346791f490",
+      "size": 1569063,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/portable_model/response_1.npz",
+      "sha256": "9707410821b87944e1ae1d11fe7f067f921931492fa6ee267b3ee47c67932d63",
+      "size": 1568881,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/portable_model/template.npz",
+      "sha256": "307ec3b21d36e48f572823ede21817b1a653d380131a86f5b03c6d3d309e542b",
+      "size": 31267,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/0.98/qualified_spectral_response/anchor/model.npz",
+      "sha256": "3bc8f7093826eb2a9f1bcba80fedef5eaffa1ed6dd6be69f5b31bc7c8224f6a8",
+      "size": 1566524,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/full_response/anchor/embedding.npz",
+      "sha256": "9070e821ae5d87bd11c10babc053f062f8bf47321c05d338ce2811d8c53944c6",
+      "size": 30469,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/full_response/anchor/first_second_hf.npz",
+      "sha256": "4181cf3880001da3c2e12a9466902ed11724d868128279d9796db941ce8167c4",
+      "size": 1716411,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/full_response/anchor/model.npz",
+      "sha256": "e9ee9d7245d34cd6a9dfc7606c38dd2c8cfdf84534fcab35e2ef97868782c3ed",
+      "size": 1575113,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/full_response/anchor/projected_eri.npz",
+      "sha256": "5a6000e98fd3c849293ecb68782b412ad37a8704a0d6052f3e452b816a4fa319",
+      "size": 2742273,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/full_response/anchor/quadrature_progress.npz",
+      "sha256": "14e8534eb91b1631ea7a84220a855245832e2fc491b4b6c4e97d5924f8dd8e8f",
+      "size": 1572187,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/portable_model/arrays.npz",
+      "sha256": "bdfd04ffdeadea78b94afc143b98537fcee5180644494daf75e8793e99f0405e",
+      "size": 2764090,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/portable_model/ground_0.npz",
+      "sha256": "1a05977e3d52b490436d5b3f9e130d2547801c3691ddb18e0c72423e3d86324c",
+      "size": 31151,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/portable_model/ground_1.npz",
+      "sha256": "b87a6801d40c04408f69a21199c7375b2d3b3f9fc6575065bfa8a5b175d97010",
+      "size": 30476,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/portable_model/ground_2.npz",
+      "sha256": "10001500e31b8a920c892d62c7eadb0a82744fb66336bcbda81b50c8ad27a6f3",
+      "size": 30262,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/portable_model/response_0.npz",
+      "sha256": "52364375ddd65506adf209bdcf0e65e7db1c90604f20e75cfdf993cb0d8692d0",
+      "size": 1577459,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/portable_model/response_1.npz",
+      "sha256": "6c64035abdc0cb6e759066a2afb4b14b4cf7d659a1c1adae1cde77a53c118dfa",
+      "size": 1577272,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/portable_model/template.npz",
+      "sha256": "aeb5ce38be9b104e8d3a4103d79c5d6e34ec91dcf9a109ae1d3eef969cb6653d",
+      "size": 31146,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Cyclopentadiene/1.02/qualified_spectral_response/anchor/model.npz",
+      "sha256": "f7fb27aa0dce6ea49b69a7701eaf60df4f75a4be60520f4e39c53be5fe4596b0",
+      "size": 1574914,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/full_response/anchor/embedding.npz",
+      "sha256": "baf491615089d8c179192b914c1b237f0dfb50a15191f7a87604e0f7a7f0aa8b",
+      "size": 26011,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/full_response/anchor/first_second_hf.npz",
+      "sha256": "651d50aed941ab2b611c0c9dc525977f92adff521241c9315662743db7b0e6de",
+      "size": 1353192,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/full_response/anchor/model.npz",
+      "sha256": "a959d56f3982542225d5e5a1ce0fb404eb49594d77568d3e076aaa902dbafe3a",
+      "size": 1288385,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/full_response/anchor/projected_eri.npz",
+      "sha256": "8bece4a1ac36a61b33dc56f097f48161103196bb4ec9c2c121949ecd5243a8e0",
+      "size": 1817695,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/full_response/anchor/quadrature_progress.npz",
+      "sha256": "614145ec25d5284bcb9ae89f727d3c204b74e2386565c5893e3a00a794430178",
+      "size": 1244048,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/portable_model/arrays.npz",
+      "sha256": "56a2fc56de89b1a1fb81e46e42fc669c54a5ce81e80e6c9b4866cfd4b9c443cc",
+      "size": 1836234,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/portable_model/ground_0.npz",
+      "sha256": "eed6d8045676a637391c6d827393148284c7722d1b5c479d8eaf1b094d1fc11c",
+      "size": 28335,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/portable_model/ground_1.npz",
+      "sha256": "b16e2b6733c029e92db84d64c0f20dab73bfc8c57cb214ff8881b23e6e6f9fc2",
+      "size": 27731,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/portable_model/ground_2.npz",
+      "sha256": "2119dc11a487d901f78d4ada117a3f4e9653d4fd5cecbc1e58c3dea4f1fd6fb2",
+      "size": 27639,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/portable_model/response_0.npz",
+      "sha256": "a426296310282323370e7ca185a06378472bb1e6573c980efb3c930853470013",
+      "size": 1290699,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/portable_model/response_1.npz",
+      "sha256": "b0d3e11a82206037cad3e21947b50d564055faf9c78294afe62d8a1e07290d21",
+      "size": 1290677,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/portable_model/template.npz",
+      "sha256": "b5228d703af7615826449501a80fed3068ecf771eddd5dcaf281c702ef1fcfb2",
+      "size": 28330,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/0.98/qualified_spectral_response/anchor/model.npz",
+      "sha256": "09401c1efeba647221d4619a5e44d1e88e944c916bab65616c9ac8117ef12932",
+      "size": 1288357,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/full_response/anchor/embedding.npz",
+      "sha256": "f4338fbcaf187ec5db5c04ed3a93939c94cb8a723eb302560a83366e3814c3b6",
+      "size": 25950,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/full_response/anchor/first_second_hf.npz",
+      "sha256": "0bb96f493f08fd770fb4fed6b7b91eaf5b113df4f83c3451836e7d2c375dc84a",
+      "size": 1354925,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/full_response/anchor/model.npz",
+      "sha256": "1017cd5c3038dd88ada2caa7e1a9cb5fa8d45b7e191f57af1e8e40e64a6327be",
+      "size": 1289296,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/full_response/anchor/projected_eri.npz",
+      "sha256": "00b6aaa92f87beaf2c8d627dcca92b191e94ad41ccd94cc484693c1acc8ec385",
+      "size": 1821161,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/full_response/anchor/quadrature_progress.npz",
+      "sha256": "f19594c9d450b2f9ee3913935364a2a6b984688528903330f47385274e423888",
+      "size": 1243372,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/portable_model/arrays.npz",
+      "sha256": "c32e6c1587b855ea86cf8dde35d5958edd82c359458ef508f194ab31d24ddbda",
+      "size": 1839709,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/portable_model/ground_0.npz",
+      "sha256": "827e35f42a308b4f75f98b8458d2a8870fbcf538e1f737e98cd2ba4327b444d7",
+      "size": 28290,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/portable_model/ground_1.npz",
+      "sha256": "fb73f9fca73425fd44a81fb862e87ec22052e8e04cd765847f644852dff62f8d",
+      "size": 27650,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/portable_model/ground_2.npz",
+      "sha256": "751a0753acfa6013a3f383b2d4a72e1f0ffbd12136482b93b7ed246a1d8c4922",
+      "size": 27551,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/portable_model/response_0.npz",
+      "sha256": "d7657f79c75a94e62e1951725e6b9dc959e7231644886948572a2bd8875b1834",
+      "size": 1291616,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/portable_model/response_1.npz",
+      "sha256": "57612eb54d1c96d02c970d5ac20955923872b4dfbe74f0ea095104e5a327d4d9",
+      "size": 1291585,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/portable_model/template.npz",
+      "sha256": "1bef72c9cf66500c3e27244791d5726de4a5d9e201a3e6bd794314e1f25a20e1",
+      "size": 28285,
+      "retained_remotely": true
+    },
+    {
+      "path": "anchor_energy/Furan/1.02/qualified_spectral_response/anchor/model.npz",
+      "sha256": "bceec1be5c7a7abf9da0377011f10907dd06dd98b56360fde0180248dc3a595b",
+      "size": 1289264,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/full_response/anchor/embedding.npz",
+      "sha256": "d3016bf68f2904bbbff67c9714af4e5e77af035be5fec2c4578891944736c2bd",
+      "size": 10187,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/full_response/anchor/first_second_hf.npz",
+      "sha256": "c7a03bcf9aef08828ada3cc3dd8c2cf54e787d21fa7ff50182ddb64b37fa62b2",
+      "size": 149339,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/full_response/anchor/model.npz",
+      "sha256": "401fb7e384a821c6bfdc7a7f37a15c6e3c46384e12dbb42eb4722ce8167bb839",
+      "size": 136736,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/full_response/anchor/projected_eri.npz",
+      "sha256": "b060cfbeefc8e46257af0434b47fcdf2864c9072c0fabf00664ee9ce015e1594",
+      "size": 193915,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/full_response/anchor/quadrature_progress.npz",
+      "sha256": "f9bedad19455c82d112dc1c28f226926c7d3888ceae2c81dccdcdbce960ad424",
+      "size": 144976,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Criegee_Intermediate/qualified_spectral_response/anchor/model.npz",
+      "sha256": "4259b874b7e30acf136c669e734d39bd8dccf82b43ead29272cedfca87cb10b2",
+      "size": 136735,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Hexatriene/full_response/anchor/embedding.npz",
+      "sha256": "e4f1817c31a0883df36eb7cf002fa790df8ec326d53c3ac754661abec9278b9b",
+      "size": 48163,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Hexatriene/full_response/anchor/first_second_hf.npz",
+      "sha256": "ed51f4dce1f1177aff9d04c07e0476c6ae93f64e96889cdd58f5773c175304c2",
+      "size": 4324011,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Hexatriene/full_response/anchor/model.npz",
+      "sha256": "eb724558c59540c792016162e89fdb9f294ba7556221235862f5618e1f5cceda",
+      "size": 4290598,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Hexatriene/full_response/anchor/projected_eri.npz",
+      "sha256": "2ae4dfbec9837a80de5300b633149029a653a1e9b4649ad3f796f6e8254bb608",
+      "size": 6150073,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Hexatriene/full_response/anchor/quadrature_progress.npz",
+      "sha256": "077868227f2db3cf99676e0946a10d376204c1def0c11f65f08ce589624d39a7",
+      "size": 4268367,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/predictions/Hexatriene/qualified_spectral_response/anchor/model.npz",
+      "sha256": "02b69a7deabadd046a69b98db17954a917f9bdddeb5436884f442555f956b13b",
+      "size": 4290434,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/references/Ammonia/backend.chk",
+      "sha256": "826f99b779296df84e4128a7d447da22dc02b4030a6da23f16b6787f53d47103",
+      "size": 44880,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/references/Benzoxadiazole/backend.chk",
+      "sha256": "40646ee06c441c9a6810535c0f1ae4eeb9acfc8965eab7ecf86d1b26d36309d7",
+      "size": 493600,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/references/Criegee_Intermediate/backend.chk",
+      "sha256": "ea1266548612bfbfe358604cd1f808f67bff6148b7e5d863aead8052d874fe63",
+      "size": 100504,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/references/Cyclobutadiene/backend.chk",
+      "sha256": "5421681a5622b0f4ac417ee7547eba14c375e7e532603fc06e2db06691cba9bf",
+      "size": 179960,
+      "retained_remotely": true
+    },
+    {
+      "path": "independent/references/Hexatriene/backend.chk",
+      "sha256": "23355dbb65c064e4fa54cbc904ef82451ec2d7dc9bcbba577569ca4777bdab38",
+      "size": 445880,
+      "retained_remotely": true
+    }
+  ],
+  "numerical_reference_labels_included": false
+}
