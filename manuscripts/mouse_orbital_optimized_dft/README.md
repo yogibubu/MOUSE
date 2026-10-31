@@ -87,3 +87,20 @@ algebraic vertical-weight and fixed-reference rank sensitivity. The actual
 DFT-anchor recalibration, independent validation, physical frequencies and
 complete size/cost/memory comparison remain open. The 50/50 weight and lambda
 0.9 remain fixed. Phthalimide's rank boundary is a material model limitation.
+
+## External DFTB symmetry audit
+
+A read-only audit of completed Oracle outputs supplies TD-DFTB2/mio-1-1
+symmetry/ordinal comparisons for all original 19 states: MAE 0.54547 eV versus
+0.18253 eV for MOUSE. Fifteen completed, eligible lowest-singlet Delta-DFTB
+cases have the correct final determinant spatial irrep: MAE 0.31353 eV versus
+0.17174 eV for MOUSE on precisely those states. Two incomplete SCC attempts
+and two higher reference states remain explicit. This is a weaker identity
+certificate than cross-model transition-overlap qualification; roots sharing
+an irrep may differ in character. It is not new independent validation.
+
+`build_dftb_audit.py` rebuilds Supporting Table S7 from standalone copied JSON.
+The qualification archive contains 254 hash-verified input/result artifacts,
+including actual DFT reference wavefunctions and DFTB eigenvectors, transition
+weights, occupations and energies. No electronic calculation was repeated for
+this audit. The energy model and all weights/scalings remain unchanged.

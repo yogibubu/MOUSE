@@ -1,0 +1,23 @@
+{
+  "returncode": 0,
+  "status": "completed_unassigned",
+  "wall_seconds": 0.11504204600350931,
+  "maximum_rss_bytes": 29278208,
+  "host": "oracle.sns.it",
+  "molecule": "pyrimidine",
+  "method": "td",
+  "request": {
+    "geometry_sha256": "7939633f6c2e942f0fefac0cdec980ec68cc14a752244f2537e3987d5785dbac",
+    "protocol": {
+      "host": "oracle.sns.it",
+      "software_sha256": "19314faec39cd5fe887bf5410ca2701e5cda20bc983a91d06c092c0c53e88cf8",
+      "parameters_commit": "263e52419ce15222c864df9b3f6fbf58bfbdfa0f",
+      "parameters": "mio-1-1",
+      "threads": 2,
+      "spin_constants_source": "mio-1-1/extras/spinw.txt",
+      "assignment": "pending; higher target states not applicable for DeltaDFTB"
+    },
+    "method": "td"
+  },
+  "input_sha256": "e3a86d0a12773b3eb5be7c353e78f9ff3186c528ff93c06f79c5cce194a07276"
+}

@@ -1,0 +1,30 @@
+Geometry = xyzFormat {
+ <<< "geometry.xyz"
+}
+Hamiltonian = DFTB {
+ SCC = Yes
+ SCCTolerance = 1e-10
+ MaxSCCIterations = 300
+ Mixer = Broyden { MixingParameter = 0.1 }
+ MaxAngularMomentum {
+ H = "s"
+ C = "p"
+ O = "p"
+ }
+ SlaterKosterFiles = Type2FileNames {
+ Prefix = "/local/scratch/home/enzo/MOUSE-publication-validation-20261030/software/mio-1-1/skfiles/"
+ Separator = "-"
+ Suffix = ".skf"
+ }
+}
+Options { WriteResultsTag = Yes }
+Analysis {
+ WriteEigenvectors = Yes
+ EigenvectorsAsText = Yes
+ }
+ExcitedState { Casida { NrOfExcitations = 30
+ Symmetry = "singlet"
+ Diagonaliser = Arpack {}
+ WriteTransitions = Yes
+ WriteXplusY = Yes
+ } }

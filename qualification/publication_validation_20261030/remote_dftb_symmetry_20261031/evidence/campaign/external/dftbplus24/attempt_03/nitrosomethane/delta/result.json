@@ -1,0 +1,24 @@
+{
+  "returncode": 0,
+  "status": "completed_unassigned",
+  "wall_seconds": 0.11505977500928566,
+  "maximum_rss_bytes": 28422144,
+  "host": "oracle.sns.it",
+  "molecule": "nitrosomethane",
+  "method": "delta",
+  "request": {
+    "geometry_sha256": "586f060fd802ecd83166e0252af06c58bb914a6955cc3701223bdfaf099867e7",
+    "protocol": {
+      "host": "oracle.sns.it",
+      "software_sha256": "19314faec39cd5fe887bf5410ca2701e5cda20bc983a91d06c092c0c53e88cf8",
+      "parameters_commit": "263e52419ce15222c864df9b3f6fbf58bfbdfa0f",
+      "parameters": "mio-1-1",
+      "threads": 2,
+      "spin_constants_source": "mio-1-1/extras/spinw.txt",
+      "assignment": "pending; higher target states not applicable for DeltaDFTB"
+    },
+    "method": "delta"
+  },
+  "input_sha256": "aa4765f9bbe648ca174dbde86c3a1baac05be642d547400609765dceda10355f",
+  "lowest_singlet_gap_ev": 2.6582
+}

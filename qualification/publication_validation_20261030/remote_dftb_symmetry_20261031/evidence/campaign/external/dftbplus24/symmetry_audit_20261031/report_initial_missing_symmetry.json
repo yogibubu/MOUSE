@@ -1,0 +1,107 @@
+{
+  "protocol": {
+    "schema": "mouse.dftb.symmetry.audit.v1",
+    "host": "oracle.sns.it",
+    "source_sha256": "0bcb65e981d004fa7301c3583f9ef938c84310d22a7255c416f3ef42d8178799",
+    "numerical_reference_values_used_for_assignment": false,
+    "assignment": "same point-group irrep and within-irrep energy ordinal as fixed DFT reference; require transition irrep weight >0.999",
+    "radial_overlap_available": false,
+    "cross_model_transition_overlap_available": false,
+    "scope": "symmetry/ordinal assignment only; does not prove same electronic character for roots sharing an irrep",
+    "original_electronic_outputs_immutable": true,
+    "auxiliary_basis": "one unit-exponent s and p shell for AO rotation representation only, no electronic calculation"
+  },
+  "rows": [
+    {
+      "molecule": "acetone",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "formamide",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "pyrazine",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "glyoxal",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "tetrazine",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "acrolein",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "nitrosomethane",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "pyrimidine",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "pyranone",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "maleimide",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "cyclopentadienone",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "imidazole",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "pyridazine",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "cyanoformaldehyde",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "cyclopropenone",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "nitroxyl",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    },
+    {
+      "molecule": "uracil",
+      "status": "unassigned",
+      "reason": "point groups differ"
+    }
+  ],
+  "spectra": {}
+}

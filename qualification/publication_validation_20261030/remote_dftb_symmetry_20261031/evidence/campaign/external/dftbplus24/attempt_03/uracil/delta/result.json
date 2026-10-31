@@ -1,0 +1,23 @@
+{
+  "returncode": 1,
+  "status": "execution_error",
+  "wall_seconds": 0.5158707610098645,
+  "maximum_rss_bytes": 36077568,
+  "host": "oracle.sns.it",
+  "molecule": "uracil",
+  "method": "delta",
+  "request": {
+    "geometry_sha256": "92ae29c6355c58dd71f0bce076b3763cc56b263a50aae91339204f863c458eed",
+    "protocol": {
+      "host": "oracle.sns.it",
+      "software_sha256": "19314faec39cd5fe887bf5410ca2701e5cda20bc983a91d06c092c0c53e88cf8",
+      "parameters_commit": "263e52419ce15222c864df9b3f6fbf58bfbdfa0f",
+      "parameters": "mio-1-1",
+      "threads": 2,
+      "spin_constants_source": "mio-1-1/extras/spinw.txt",
+      "assignment": "pending; higher target states not applicable for DeltaDFTB"
+    },
+    "method": "delta"
+  },
+  "input_sha256": "aa4765f9bbe648ca174dbde86c3a1baac05be642d547400609765dceda10355f"
+}

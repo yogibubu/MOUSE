@@ -1,0 +1,33 @@
+Geometry = xyzFormat {
+ <<< "geometry.xyz"
+}
+Hamiltonian = DFTB {
+ SCC = Yes
+ SCCTolerance = 1e-10
+ MaxSCCIterations = 300
+ Mixer = Broyden { MixingParameter = 0.1 }
+ MaxAngularMomentum {
+ H = "s"
+ N = "p"
+ O = "p"
+ }
+ SlaterKosterFiles = Type2FileNames {
+ Prefix = "/local/scratch/home/enzo/MOUSE-publication-validation-20261030/software/mio-1-1/skfiles/"
+ Separator = "-"
+ Suffix = ".skf"
+ }
+ NonAufbau {
+ GroundGuess = Yes
+ SpinPurify = Yes
+ }
+ SpinConstants { ShellResolvedSpin = Yes
+ H = { -0.0717 }
+ N = { -0.0332 -0.0275 -0.0275 -0.0255 }
+ O = { -0.0352 -0.0296 -0.0296 -0.0278 }
+ }
+}
+Options { WriteResultsTag = Yes }
+Analysis {
+ WriteEigenvectors = Yes
+ EigenvectorsAsText = Yes
+ }

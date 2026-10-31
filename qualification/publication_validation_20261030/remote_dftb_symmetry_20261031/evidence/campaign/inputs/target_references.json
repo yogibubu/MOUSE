@@ -1,0 +1,172 @@
+{
+  "acetone": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_B/acetone",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "formamide": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_B/formamide",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "acetaldehyde": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_B/acetaldehyde",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "pyrazine": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_C/pyrazine",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "glyoxal": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_C/glyoxal",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "tetrazine": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_C/tetrazine",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "acrolein": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_D/acrolein",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "nitrosomethane": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_D/nitrosomethane",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "pyrimidine": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_D/pyrimidine",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "pyranone": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_F/pyranone",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "maleimide": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_F/maleimide",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "cyclopentadienone": {
+    "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_F/cyclopentadienone",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "imidazole": {
+    "reference": "/home/enzo/MATRIX-runs/tda-frozen-validation-20261022-v1/docs/reports/tda_frozen_validation_20261022/imidazole/results/pbe0_avdz",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 8
+      }
+    ]
+  },
+  "pyridazine": {
+    "reference": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/holdout/pyridazine_pbe0",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      },
+      {
+        "id": "pi_pi",
+        "reference_root": 5
+      }
+    ]
+  },
+  "cyanoformaldehyde": {
+    "reference": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/holdout/cyanoformaldehyde_pbe0",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "cyclopropenone": {
+    "reference": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/holdout/cyclopropenone_pbe0",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "nitroxyl": {
+    "reference": "/home/enzo/MATRIX-runs/tda-dft-independent-20261022-v1/docs/reports/independent_dft_tda_20261022/results/nitroxyl_pbe0",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      }
+    ]
+  },
+  "uracil": {
+    "reference": "/home/enzo/MATRIX-runs/tda-uracil-application-20261022-v1/docs/reports/tda_uracil_application_20261022/results/pbe0_avdz",
+    "targets": [
+      {
+        "id": "n_pi",
+        "reference_root": 1
+      },
+      {
+        "id": "pi_pi",
+        "reference_root": 2
+      }
+    ]
+  }
+}

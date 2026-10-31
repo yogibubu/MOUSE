@@ -1,0 +1,7162 @@
+{
+  "protocol": {
+    "schema": "mouse.dftb.symmetry.audit.v1",
+    "host": "oracle.sns.it",
+    "source_sha256": "3de5764f0f7cfa7a486fa0a682005af3e08ae53cb43beb6ac3e12a0ddc0e8da1",
+    "numerical_reference_values_used_for_assignment": false,
+    "assignment": "same point-group irrep and within-irrep energy ordinal as fixed DFT reference; require transition irrep weight >0.999",
+    "radial_overlap_available": false,
+    "cross_model_transition_overlap_available": false,
+    "scope": "symmetry/ordinal assignment only; does not prove same electronic character for roots sharing an irrep",
+    "original_electronic_outputs_immutable": true,
+    "auxiliary_basis": "one unit-exponent s and p shell for AO rotation representation only, no electronic calculation"
+  },
+  "rows": [
+    {
+      "molecule": "acetone",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A2",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 4.6285315541,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0000365200000003,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/acetone/td",
+      "source_sha256": {
+        "geometry.xyz": "4220694699f848f06c05c78a6115c04df4fc3b3cbe992b3e4a8e4575a0a728b1",
+        "eigenvec.out": "3dcd64659fbc10c085f930f1f37e074945b45d6b0349facea3aafc8b08d889ae",
+        "TRA.DAT": "cee9c4993326d8f30792d62ea84661bf8306feab48a581e4336018ca24339d7a",
+        "backend_tda.npz": "6afa85a0cd24468455136123ae136e72684d6916fdbe663edf2092eadfc07a5a",
+        "reference.npz": "2989d821e97e0b060ade63d44b6efc2e163f27a48af4ec050f0e869a9fdf1eb3"
+      }
+    },
+    {
+      "molecule": "formamide",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A\"",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 5.6509831987,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/formamide/td",
+      "source_sha256": {
+        "geometry.xyz": "cb17f7e51f49e2f90be0f54ace97a92f327ba73eba0b487ab871afe3d53cd8e9",
+        "eigenvec.out": "b712c35839e7114ae00fee771efac80c9773f5e3a3016e6b8b767df1da55cbe0",
+        "TRA.DAT": "49f220e81f948a8b74bfb9fe2139a8c3f8427a64e381d6c536415d958f1909f7",
+        "backend_tda.npz": "3d4176ee1fca4bf3c8d6a0a05215540cf7526a00c6cb1cfde525d14f23018780",
+        "reference.npz": "110b7f6b12eabfc019f2a20d6a4efb631f45e51ee5fc1f251a82f95266aa9892"
+      }
+    },
+    {
+      "molecule": "acetaldehyde",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A\"",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 4.5310866084,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0000210400000002,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/acetaldehyde/td",
+      "source_sha256": {
+        "geometry.xyz": "9789853348cde999e6812f55953c4483d854d28bdf87894433ad5e9c4de0c89d",
+        "eigenvec.out": "ef3bd8c1aa9ac1a3c803e812d8ad1d20e7c7f7b10c8ac54bdb7dcf77645bcf29",
+        "TRA.DAT": "c6f0f37f9689beb4ee5dcc4974ab93dd451a043933b343710d2e3303842a37ad",
+        "backend_tda.npz": "e666607401b6e6889604f36617fffbaf96610d008851280dc556788c9cb835e5",
+        "reference.npz": "a7d9228ddc6145c651ed8084ccdefd17d8fdeab648103125e234891eebd31631"
+      }
+    },
+    {
+      "molecule": "pyrazine",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "B3u",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 3.7666908598,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/pyrazine/td",
+      "source_sha256": {
+        "geometry.xyz": "6571525f3159223c9d3ac630c78dcc1a3c93fe76eaa8f3069bb2a6fce76eea65",
+        "eigenvec.out": "1e786659caed8ce40c89cb5bb8a9471b76975811a25f08e537ec3a52fe2e3545",
+        "TRA.DAT": "9ef63d1f655f445ef261efddd0718dbb91c9bff6cb4fa436a93d321ccfbbb168",
+        "backend_tda.npz": "1e3b834c03bdac4165be0d1d6fd0d83feb73451e3fa00daeb7cfdc6b067d5398",
+        "reference.npz": "8d9598148e520e91c54aceff1ca65ad6a66a8073b6c73703fb1e5587e79db333"
+      }
+    },
+    {
+      "molecule": "glyoxal",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "Au",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 2.3459874862,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Bg": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/glyoxal/td",
+      "source_sha256": {
+        "geometry.xyz": "d2a60d12bd260a56af25dca5b2aaf2b749d02b3a873026092777a94b7f83c13c",
+        "eigenvec.out": "2f793f398fe8df42d8f15497fa8fa4e387efd95f88475c8dfec1e2b9569035b2",
+        "TRA.DAT": "f92840f4326c43429f5742b9d917739b0576c03545adab3251467a962cc5ec90",
+        "backend_tda.npz": "ef9b44f64c495ea99111d67968cbd52a4d1c8ed6b6a038f1a3a364095865ae8d",
+        "reference.npz": "cb705ec9534f02ea517f6c15a507dc0a9b47476891355131b99679a5aad5a7f7"
+      }
+    },
+    {
+      "molecule": "tetrazine",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "B3u",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 2.3866858564,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/tetrazine/td",
+      "source_sha256": {
+        "geometry.xyz": "dd9f06b7677d1ddbc2750047594561ff74282a2bdb55f7a1630485f682c2d7d0",
+        "eigenvec.out": "25404bf51c8a9738c543e4a21197080dc26e216857a97b0d54a47794c1395616",
+        "TRA.DAT": "69e30ed7d1a30614ae41aa71713aa2dbaa2109511f33e05f97b407b64c9535d4",
+        "backend_tda.npz": "fa5350c598440ce58f7b4c2e6f32695251b63688ac81666225570965cbd1d582",
+        "reference.npz": "e1db5970c384e61d42899617f5adac11dce610aed53fc6b23d7b11855f426976"
+      }
+    },
+    {
+      "molecule": "acrolein",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A\"",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 3.095927429,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/acrolein/td",
+      "source_sha256": {
+        "geometry.xyz": "40d91f413519a552e1e6efeffd6be9bf5d4e48337f41bd405d18bfc4cdd42078",
+        "eigenvec.out": "2a50bac40bbee3e0f93dc4515bd51f68c1e8ab3b827f112f21e14343c1b64410",
+        "TRA.DAT": "c0c038481454f19f88032e771f60442061d78592691113958114cdcf14546fa2",
+        "backend_tda.npz": "e3a253a2bf09616c1b4a5b8903e25c80a41aa6300065b4f9cbc7db4a7da452eb",
+        "reference.npz": "78288844b61e4fa616f67105d4b4c4184e3f64e5f861e92dc28ba0187f775a82"
+      }
+    },
+    {
+      "molecule": "nitrosomethane",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A\"",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 2.068060381,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0000032699999997,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/nitrosomethane/td",
+      "source_sha256": {
+        "geometry.xyz": "586f060fd802ecd83166e0252af06c58bb914a6955cc3701223bdfaf099867e7",
+        "eigenvec.out": "124175d81679ab68cb4f2852b151373cb85509af8af8189ca5959f07e95600be",
+        "TRA.DAT": "9e6713fdf8d5b0b7fc1e226ea637b436dcffd31df40b52c388c9b6b34e1021df",
+        "backend_tda.npz": "a1c3d808ec306326f4b418b37394734a6087029c5b316c1416828fbff163ad28",
+        "reference.npz": "23162d4664e02161158e3eb1d819727fee298fac7cec2a33e672cf5c6b0ee430"
+      }
+    },
+    {
+      "molecule": "pyrimidine",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "B1",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 4.2770691962,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/pyrimidine/td",
+      "source_sha256": {
+        "geometry.xyz": "7939633f6c2e942f0fefac0cdec980ec68cc14a752244f2537e3987d5785dbac",
+        "eigenvec.out": "286fcc74bfb4828a188b74bf1363a30b190f90a5c4c6c2b02e70fc4020ede1bc",
+        "TRA.DAT": "11c83fb415baacff9c5f2965a32ce1711d1b444e168a36d28136ca68d3dcbabf",
+        "backend_tda.npz": "d671a346707888d28da8f541592cf72c7a175e89365d430d533f9ac5c6fad7f1",
+        "reference.npz": "8e60ee0d74db30478ee65058d5e236831b62490a338e1c92adbb3d07b04562e4"
+      }
+    },
+    {
+      "molecule": "pyranone",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A2",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 3.436386532,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/pyranone/td",
+      "source_sha256": {
+        "geometry.xyz": "338e376ee17d780cb8058698005a61df608721841f419d397f979abd362079fc",
+        "eigenvec.out": "b3fc79073d7c3cc6e93ff0b87711a40391b2c6b7d5263f3a231f99be3f8c0fe2",
+        "TRA.DAT": "4616302c4316397490920a531de8fd8e180df445e26cba6b059f95a544f5294f",
+        "backend_tda.npz": "1409cf6be5d3419d419159034eaa1e01220798107985310104158cd47ffdcc00",
+        "reference.npz": "f8b28fcb72e174f9b88842e81c48619f4b1a3180c2d27d87847d015909f5bca6"
+      }
+    },
+    {
+      "molecule": "maleimide",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "B1",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 2.7288412578,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/maleimide/td",
+      "source_sha256": {
+        "geometry.xyz": "b3c38f105d88608df1adc05e64d9630c4cfdc7c52d4f8e806c28422573feea0b",
+        "eigenvec.out": "4fbaed260b033d82a87003f73de196ae9c12ef34890ee68530327b39f0bc372c",
+        "TRA.DAT": "c107bce5e6896a847cc4e9088e865b653403e6bf2dfc13487c916a8638cee508",
+        "backend_tda.npz": "a10610b9ca5652d71ca0fc9d9ed0400175eb4a6a3071b0cd7b19261ae6645bc7",
+        "reference.npz": "a13fb3464f56164307be65415caf18adcb1a58fbcfec5d3b56e9f293bdd7ea37"
+      }
+    },
+    {
+      "molecule": "cyclopentadienone",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A2",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 2.3176441768,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/cyclopentadienone/td",
+      "source_sha256": {
+        "geometry.xyz": "15af95359b6cd2e6444e53cbbc443efe6acfea6b631564469fff512919e48de7",
+        "eigenvec.out": "6d3ce81f4654f240fa0ccc33b16f2b257be9914f7604f3f7f035b9c45fc68ce3",
+        "TRA.DAT": "b3a649fc60e2f26fd5c3d2ce373bc79a9bd7edf0098dc6fda2993610cc554610",
+        "backend_tda.npz": "553f370b7e7f73e1dedb75d34b376c7c542e900e982e99046accb8e58beada37",
+        "reference.npz": "e15668bb220500d01ecc9b8ef16568070ab7d8e144d3e8b4bae32439d954e8a4"
+      }
+    },
+    {
+      "molecule": "imidazole",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A\"",
+      "ordinal": 6,
+      "assigned": {
+        "root": 10,
+        "energy_ev": 9.5685035075,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/imidazole/td",
+      "source_sha256": {
+        "geometry.xyz": "974dccf097018a10315a49dcb3e8d8ff49b5572d19880e45f9a5153b07a7abcd",
+        "eigenvec.out": "0d2123e2ffc065d106534bd9b8e78943a3be04ab83c867c3451cc6cc51dde8f2",
+        "TRA.DAT": "72f870e38eb2ce6e92ad574337172dd89008e4c50c2b7b719d6887115fc30f74",
+        "selected_full.npz": "678399eda4eb2b54be89b1fadf44bb6ab0fd5272689212c684b981194592a14a",
+        "reference.npz": "ce567360a1500b61f7d4ca5c7adcf891949bc529373915c5d99ff4a1c0b66683"
+      }
+    },
+    {
+      "molecule": "pyridazine",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "B1",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 3.5111444151,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/pyridazine/td",
+      "source_sha256": {
+        "geometry.xyz": "2a04d3f53a0d13e5e6deb4e961cea375bf85d0261ca096714a76959623ed5004",
+        "eigenvec.out": "8c55867e31208530382ac0e036e02a2afda9b52a5f81c18eafbbafdf495baea0",
+        "TRA.DAT": "d023088e829bd6025aec873244ff0deeebdf383782f6fda81df66a1b08d4bdac",
+        "baseline.npz": "8565e21e8f8efb3d73710833f4e1ebf94340be16b5bebf528e3b10ead3b887a8",
+        "reference.npz": "697603f7685776f1c34d5971a40c48e3c07ee46762910cab524c136e421baa60"
+      }
+    },
+    {
+      "molecule": "pyridazine",
+      "state": "pi_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A1",
+      "ordinal": 1,
+      "assigned": {
+        "root": 4,
+        "energy_ev": 5.4830373442,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3353906300000007,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/pyridazine/td",
+      "source_sha256": {
+        "geometry.xyz": "2a04d3f53a0d13e5e6deb4e961cea375bf85d0261ca096714a76959623ed5004",
+        "eigenvec.out": "8c55867e31208530382ac0e036e02a2afda9b52a5f81c18eafbbafdf495baea0",
+        "TRA.DAT": "d023088e829bd6025aec873244ff0deeebdf383782f6fda81df66a1b08d4bdac",
+        "baseline.npz": "8565e21e8f8efb3d73710833f4e1ebf94340be16b5bebf528e3b10ead3b887a8",
+        "reference.npz": "697603f7685776f1c34d5971a40c48e3c07ee46762910cab524c136e421baa60"
+      }
+    },
+    {
+      "molecule": "cyanoformaldehyde",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A\"",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 3.9460191515,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/cyanoformaldehyde/td",
+      "source_sha256": {
+        "geometry.xyz": "730bb9d2a194ffc9f711dd20e38872f7411e809ef619b85f9952659829798bd3",
+        "eigenvec.out": "a4f76446d3a88baf4e0dbee510e6126142a6d44b551638b8ec26dd88c9cedd6e",
+        "TRA.DAT": "cbb954866d6df4dd9a6982af17f89d030e307677e8bbec06c47f68c4e1fe783d",
+        "baseline.npz": "458e33dace3278269479d652fe977932c961ae4e83fa56ec200408404511fa0b",
+        "reference.npz": "38e95c5460d5110f16518a01f3affd643589149443767dea4b2ad97ce51f7f2e"
+      }
+    },
+    {
+      "molecule": "cyclopropenone",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "B1",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 3.3419692792,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/cyclopropenone/td",
+      "source_sha256": {
+        "geometry.xyz": "3953e13e0f75dbd1bf035b12baf9a7fc3b6fd71590ba35b807f53bcc34928719",
+        "eigenvec.out": "fbe5cf9940df3a0c21d215891244c06a2cdbf71aba1cd6cd04b90cd1c2338a67",
+        "TRA.DAT": "081716886757abc2f8037775174bb9e6ea81fde86987065e22a10604283c5a58",
+        "baseline.npz": "7ea6df99b87d6752de6898fd0c479d44fbba286086d53dc2005c46698f79ebf0",
+        "reference.npz": "777740da3838183e887b541eb1f2d3b6f4950f940aa3c06e25d45a99fe955316"
+      }
+    },
+    {
+      "molecule": "nitroxyl",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A\"",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 1.7291753145,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_04/nitroxyl/td",
+      "source_sha256": {
+        "geometry.xyz": "5a03ce502becc543c4a1ebcacec0db5ef43a7ea51c6ffc112c94d92e56d3e2bb",
+        "eigenvec.out": "a21a25769b707f95c1826d1c6a19929f10ba3141c0805b3dfd918e989a7bb107",
+        "TRA.DAT": "dd8c237567d35415303e098aa377fa138cd11d5a8a020f7e4dfd1820680a030d",
+        "backend_tda.npz": "fdd23a1ef647680799c721e38e8873284c2167204e496c322d1a039f3595942d",
+        "reference.npz": "e977e9a8c1588d74985762f1e57c2c7ee2e8cd81b7c46797325ced449455aab9"
+      }
+    },
+    {
+      "molecule": "uracil",
+      "state": "n_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A\"",
+      "ordinal": 1,
+      "assigned": {
+        "root": 1,
+        "energy_ev": 3.808791299,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/uracil/td",
+      "source_sha256": {
+        "geometry.xyz": "92ae29c6355c58dd71f0bce076b3763cc56b263a50aae91339204f863c458eed",
+        "eigenvec.out": "5cf599eb3cd3dddbc619aa48dbda5de44a4599c2586e42e3120c1bfc489cb372",
+        "TRA.DAT": "976b777a7074d9e35839978417560f1a40bef6fbc25280c54ac99bec7eadbaa0",
+        "selected_full.npz": "bad1e1a91b5c6d8ac581ce7c459dca1a9ec1c5682ab5a9c9427d62e9e6db340b",
+        "reference.npz": "bdbbeebfd09bd676014151a7939c62f4c431b81eed3762c194947b048ca57381"
+      }
+    },
+    {
+      "molecule": "uracil",
+      "state": "pi_pi",
+      "status": "symmetry_ordinal_assigned",
+      "symmetry": "A'",
+      "ordinal": 1,
+      "assigned": {
+        "root": 3,
+        "energy_ev": 4.9799319639,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3674076799999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      "cross_model_transition_overlap_qualified": false,
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/uracil/td",
+      "source_sha256": {
+        "geometry.xyz": "92ae29c6355c58dd71f0bce076b3763cc56b263a50aae91339204f863c458eed",
+        "eigenvec.out": "5cf599eb3cd3dddbc619aa48dbda5de44a4599c2586e42e3120c1bfc489cb372",
+        "TRA.DAT": "976b777a7074d9e35839978417560f1a40bef6fbc25280c54ac99bec7eadbaa0",
+        "selected_full.npz": "bad1e1a91b5c6d8ac581ce7c459dca1a9ec1c5682ab5a9c9427d62e9e6db340b",
+        "reference.npz": "bdbbeebfd09bd676014151a7939c62f4c431b81eed3762c194947b048ca57381"
+      }
+    }
+  ],
+  "spectra": {
+    "acetone": [
+      {
+        "root": 1,
+        "energy_ev": 4.6285315541,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0000365200000003,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 7.7358633455,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.00027665,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 7.8894008804,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0010980099999995,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 8.343561583,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0034627099999995,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 8.5028900621,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2204800699999998,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 9.1854583309,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0002054900000006,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 9.3591545467,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.00075446,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 10.069123619,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.136187709999999,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 11.245396687,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.00128257,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 14.36630648,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0130097300000003,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 14.711589858,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0013387499999995,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 14.857765536,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0029380600000002,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 15.138830001,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0168467099999998,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 15.34270619,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.00169369,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 16.371390366,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.00929368,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 16.662269531,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0381986200000002,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 16.852299986,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.02123716,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 17.337427734,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0359976200000007,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A2": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 17.534453139,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0161287100000003,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 17.54632069,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0579793800000008,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 17.585857185,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1302400699999997,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 17.84656303,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0270303499999995,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 17.868901902,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3651163700000002,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 17.898328282,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3325512999999996,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 17.992110346,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4286671700000007,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 18.141021028,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.5273680900000002,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 18.428544719,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1175886300000002,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 18.436663638,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2976195500000003,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 18.506634271,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1116362399999997,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 18.557488667,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3027896800000003,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      }
+    ],
+    "formamide": [
+      {
+        "root": 1,
+        "energy_ev": 5.6509831987,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 8.3637452627,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0731478500000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 9.3542124165,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 10.682702076,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0428076199999996,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 10.933159325,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 12.541023568,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 14.162480318,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 15.858794419,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.03752486,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 16.511996031,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 19.227100597,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3577061400000006,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 19.486076359,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 19.582915055,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.46621611,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 20.335771124,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.01036602,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 20.346784089,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 20.729064068,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 21.170866249,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1229376999999998,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 21.409884057,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 22.61131608,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2145753599999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 23.320864417,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 23.337602657,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4010645799999997,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 23.84671501,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 24.10579928,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1376068300000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 24.212921833,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4820792799999998,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 24.383964384,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 25.342418007,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.7385002199999997,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 25.749862462,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4655827499999994,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 26.004043688,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2637725099999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 26.55006183,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1715584399999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 26.741935462,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 27.754904253,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4661469500000004,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      }
+    ],
+    "acetaldehyde": [
+      {
+        "root": 1,
+        "energy_ev": 4.5310866084,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0000210400000002,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 7.720053062,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0007826199999994,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 8.3899182139,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3437498800000003,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 8.6868322978,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0001381399999998,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 9.4782356952,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.00078669,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 9.8471220429,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2825775699999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 11.805721317,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0006370099999995,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 14.699257453,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.02378713,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 15.039181109,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0011064200000002,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 15.709059198,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.00359572,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 16.907728086,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0387264299999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 17.346452743,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.02741171,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 17.973219403,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.587970929999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 18.095843413,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.6003598300000001,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 18.365934007,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1221485299999996,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 18.41349169,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4666899199999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 18.854450336,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2142534400000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 18.988236253,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.20810019,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 19.210558094,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0941772899999997,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 19.412058751,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0966686700000006,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 19.515881492,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3975160899999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 19.974083566,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.99321435,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 20.15713983,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.5839033699999994,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 20.174930944,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2211421600000003,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 20.67158316,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2297216399999995,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 21.033523879,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1615753300000002,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 21.087845642,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4818459800000001,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 21.295202942,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.7880067099999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 21.75775976,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.8209583299999998,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 22.088666043,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4807329700000003,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      }
+    ],
+    "pyrazine": [
+      {
+        "root": 1,
+        "energy_ev": 3.7666908598,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 4.3378864898,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 5.3391572025,
+        "symmetry": "B2u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1887277999999997,
+        "orbital_symmetry_weights": {
+          "B2u": 1.0,
+          "B3g": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B1u": 0.0,
+          "B1g": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 5.6294824245,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 5.9776100287,
+        "symmetry": "B1u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2492561800000006,
+        "orbital_symmetry_weights": {
+          "B1u": 1.0,
+          "B3g": 0.0,
+          "Au": 0.0,
+          "B2g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B1g": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 6.2006780545,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 6.4459525428,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 7.0171481728,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 7.2226770194,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 7.4959942342,
+        "symmetry": "B1u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.251263,
+        "orbital_symmetry_weights": {
+          "B1u": 1.0,
+          "B3g": 0.0,
+          "Au": 0.0,
+          "B2g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B1g": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 7.574955323,
+        "symmetry": "B2u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1271730299999998,
+        "orbital_symmetry_weights": {
+          "B2u": 1.0,
+          "B3g": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B1u": 0.0,
+          "B1g": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 7.7938726494,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 7.8288374722,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 8.3755306227,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.076513,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "B3g": 0.0,
+          "B1u": 0.0,
+          "Au": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0,
+          "B2g": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 8.3937150792,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 8.6272211217,
+        "symmetry": "B3g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.30217807,
+        "orbital_symmetry_weights": {
+          "B3g": 1.0,
+          "Au": 0.0,
+          "B1g": 0.0,
+          "B1u": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 8.9649107093,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 9.32030987,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 9.4201351704,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 9.5081913231,
+        "symmetry": "B3g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3016713899999997,
+        "orbital_symmetry_weights": {
+          "B3g": 1.0,
+          "Au": 0.0,
+          "B1g": 0.0,
+          "B1u": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 9.6916290369,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 9.8915055,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 9.9913308004,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 10.508099155,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 10.735389366,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0582428000000002,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "B3g": 0.0,
+          "B1u": 0.0,
+          "Au": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0,
+          "B2g": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 11.284823632,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 12.273138292,
+        "symmetry": "B1u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.00630035,
+        "orbital_symmetry_weights": {
+          "B1u": 1.0,
+          "B3g": 0.0,
+          "Au": 0.0,
+          "B2g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B1g": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 12.455861692,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 12.627981245,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 12.668818809,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      }
+    ],
+    "glyoxal": [
+      {
+        "root": 1,
+        "energy_ev": 2.3459874862,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 4.1261712191,
+        "symmetry": "Bg",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Bg": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 5.5478817004,
+        "symmetry": "Bg",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Bg": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 6.7814404462,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 7.3280654333,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 7.3425088206,
+        "symmetry": "Bu",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0981296900000004,
+        "orbital_symmetry_weights": {
+          "Bu": 1.0,
+          "Ag": 0.0,
+          "Bg": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 7.7631054925,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1921985799999997,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "Bu": 0.0,
+          "Au": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 7.7865594365,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 7.8366188257,
+        "symmetry": "Bg",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Bg": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 9.9696748321,
+        "symmetry": "Bg",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Bg": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 9.9833346604,
+        "symmetry": "Bg",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Bg": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 10.350697459,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.14636055,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "Bu": 0.0,
+          "Au": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 10.988453651,
+        "symmetry": "Bg",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Bg": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 11.03851304,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 11.040400381,
+        "symmetry": "Bu",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0470078799999998,
+        "orbital_symmetry_weights": {
+          "Bu": 1.0,
+          "Ag": 0.0,
+          "Bg": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 12.777990958,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 13.171569046,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 15.613272094,
+        "symmetry": "Bu",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0433942099999995,
+        "orbital_symmetry_weights": {
+          "Bu": 1.0,
+          "Ag": 0.0,
+          "Bg": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 15.979885172,
+        "symmetry": "Bg",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Bg": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 17.02881782,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1252954000000002,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "Bu": 0.0,
+          "Au": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 17.882357544,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.15784486,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "Bu": 0.0,
+          "Au": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 18.663155527,
+        "symmetry": "Bu",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.16838412,
+        "orbital_symmetry_weights": {
+          "Bu": 1.0,
+          "Ag": 0.0,
+          "Bg": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 18.751179877,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 19.507578112,
+        "symmetry": "Bu",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.5024826800000002,
+        "orbital_symmetry_weights": {
+          "Bu": 1.0,
+          "Ag": 0.0,
+          "Bg": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 19.889069381,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0220545499999998,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "Bu": 0.0,
+          "Au": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 19.893417938,
+        "symmetry": "Bg",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Bg": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 20.14779353,
+        "symmetry": "Bu",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.75877352,
+        "orbital_symmetry_weights": {
+          "Bu": 1.0,
+          "Ag": 0.0,
+          "Bg": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 20.755418703,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0554448000000003,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "Bu": 0.0,
+          "Au": 0.0,
+          "Bg": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 21.00389272,
+        "symmetry": "Bu",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.23774026,
+        "orbital_symmetry_weights": {
+          "Bu": 1.0,
+          "Ag": 0.0,
+          "Bg": 0.0,
+          "Au": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 21.090049998,
+        "symmetry": "Bg",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Bg": 1.0,
+          "Ag": 0.0,
+          "Bu": 0.0,
+          "Au": 0.0
+        }
+      }
+    ],
+    "tetrazine": [
+      {
+        "root": 1,
+        "energy_ev": 2.3866858564,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 3.6033596088,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 4.5744039223,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 4.686978061,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 5.2972126465,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 5.4078943595,
+        "symmetry": "B2u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2239594700000003,
+        "orbital_symmetry_weights": {
+          "B2u": 1.0,
+          "B1u": 0.0,
+          "B2g": 0.0,
+          "B3g": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 5.7910776748,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 5.9036518134,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 6.277329935,
+        "symmetry": "B1u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4283681100000003,
+        "orbital_symmetry_weights": {
+          "B1u": 1.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "Ag": 0.0,
+          "B2u": 0.0,
+          "B3g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 6.5138863989,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 6.7653260912,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 7.2009174372,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 7.2882834752,
+        "symmetry": "B1u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4607800600000003,
+        "orbital_symmetry_weights": {
+          "B1u": 1.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "Ag": 0.0,
+          "B2u": 0.0,
+          "B3g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 8.0254350063,
+        "symmetry": "B2u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1532311200000005,
+        "orbital_symmetry_weights": {
+          "B2u": 1.0,
+          "B1u": 0.0,
+          "B2g": 0.0,
+          "B3g": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 8.1880653781,
+        "symmetry": "B3g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0818784899999998,
+        "orbital_symmetry_weights": {
+          "B3g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 8.3694026678,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 8.4175911897,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 8.9530441571,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 8.9984305837,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.37488875,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "Au": 0.0,
+          "B2g": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 9.0656182958,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 9.5860764202,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 9.6758528813,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 9.6960163628,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 9.9546728304,
+        "symmetry": "Ag",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3873708799999998,
+        "orbital_symmetry_weights": {
+          "Ag": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "Au": 0.0,
+          "B2g": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 10.640783346,
+        "symmetry": "B3g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.06083942,
+        "orbital_symmetry_weights": {
+          "B3g": 1.0,
+          "B1u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B2u": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 10.912690115,
+        "symmetry": "B1g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 11.579557672,
+        "symmetry": "B3u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B3u": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 12.388852595,
+        "symmetry": "B1u",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0058423300000001,
+        "orbital_symmetry_weights": {
+          "B1u": 1.0,
+          "B2g": 0.0,
+          "Au": 0.0,
+          "Ag": 0.0,
+          "B2u": 0.0,
+          "B3g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 12.548336196,
+        "symmetry": "Au",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "Au": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "B2g": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 12.748042903,
+        "symmetry": "B2g",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B2g": 1.0,
+          "B1u": 0.0,
+          "B3g": 0.0,
+          "B2u": 0.0,
+          "Ag": 0.0,
+          "Au": 0.0,
+          "B3u": 0.0,
+          "B1g": 0.0
+        }
+      }
+    ],
+    "acrolein": [
+      {
+        "root": 1,
+        "energy_ev": 3.095927429,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 6.0392909308,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 6.1193588973,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.08578078,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 6.2950543093,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 6.6833117633,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 7.3282505637,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2725880100000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 7.8495709553,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 7.9594287157,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 9.0014513007,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2255761800000007,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 9.2384178111,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 9.8824386436,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 9.9601773896,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 10.76829007,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0683362499999993,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 11.048697836,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 11.158555596,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 11.975629553,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 13.15930427,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 14.128268616,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.01850468,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 15.174756433,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 15.560731347,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 15.633856663,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 16.822710269,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0902842899999998,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 17.39161482,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1561326499999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 17.614912838,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0296586800000014,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 17.626525001,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 17.73785124,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1892388300000005,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 18.026368234,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 18.759858227,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 18.85387247,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1235246300000006,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 19.023613048,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2518281200000005,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      }
+    ],
+    "nitrosomethane": [
+      {
+        "root": 1,
+        "energy_ev": 2.068060381,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0000032699999997,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 5.9013983478,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0004790300000006,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 7.0056494047,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2214970900000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 7.9919087152,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0015376299999998,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 8.2650144584,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0013341799999997,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 9.5365441169,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1636594699999994,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 11.397001736,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0007488600000003,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 14.115185587,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0001355000000003,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 14.347433938,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1128213500000004,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 15.019219957,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.09638052,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 15.313977351,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0012061599999997,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 17.877758296,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0744083100000004,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 17.983148898,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3528083299999998,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 18.374103991,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4516879099999997,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 18.672233129,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.14026308,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 18.93770072,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0219262299999998,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 19.115993129,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1375688499999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 19.857694188,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1175956299999998,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 19.94068823,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2750339399999997,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 19.950888235,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1679363400000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 20.175307424,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.573299,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 20.32158568,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.6723100499999994,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 20.57568374,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.7230708000000003,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 20.779209258,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 2.1664159299999994,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 20.795352101,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.12246449,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 21.16119778,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.5094282700000001,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 21.659746219,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2975799100000003,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 22.995642044,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0001084799999995,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 23.383604775,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1632827200000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 23.549751084,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2815145700000001,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      }
+    ],
+    "pyrimidine": [
+      {
+        "root": 1,
+        "energy_ev": 4.2770691962,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 4.5528417373,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 5.3120282255,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 5.5878007666,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 5.6685342681,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3126809800000006,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 6.1287332729,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.320055270000001,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 7.1029385448,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 7.3168384594,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 7.3193990847,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3442337999999996,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 7.3787110859,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 7.4549545448,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3046511,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 7.5926110005,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 8.138587218,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 8.3464732907,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 8.5243142663,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.09744365,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 8.6222458318,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 8.6973496167,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1888350099999994,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 9.1735462473,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 9.5807317897,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 9.5980388693,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 9.7846164681,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1728321999999995,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 9.8565043307,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 9.8738114104,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 10.491437522,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.081578559999999,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 10.964456567,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 11.178356481,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 12.207991312,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 12.301033203,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0067216300000006,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 12.819024197,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 12.835574303,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      }
+    ],
+    "pyranone": [
+      {
+        "root": 1,
+        "energy_ev": 3.436386532,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 3.6056594476,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 4.8237835751,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0295274100000003,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 5.3161846268,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3250263700000005,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 6.2897260877,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0395207900000014,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 6.7146135689,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 6.8838864845,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 6.9676078729,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 7.1368807885,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 7.1668406619,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3348871499999988,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 7.3296792063,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 7.6123441913,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3358000399999994,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 7.6544753033,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0347787399999997,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 7.7121348857,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 7.8814078013,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 8.2522779941,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 8.4215509096,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 8.9903384009,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 9.1503516123,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3146404899999997,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 9.1596113165,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 9.7114943386,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2712098000000007,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 9.7944912757,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0575823699999998,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 9.9799754599,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 10.149248376,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 10.210029509,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2688706499999998,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "A2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 10.287516653,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 10.456789568,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 10.607906243,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 10.860900547,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 11.605280788,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0388675100000002,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "B2": 0.0
+        }
+      }
+    ],
+    "maleimide": [
+      {
+        "root": 1,
+        "energy_ev": 2.7288412578,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 3.2475909203,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 4.2866143322,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2932231599999997,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 5.3456694856,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3159837400000007,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 6.0827166995,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 6.5672453862,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.12502731,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "A2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 6.6918736403,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 6.7547433935,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 6.8478247906,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 7.1110116173,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 7.1968310742,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 7.2734930561,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 7.3665744531,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 7.9210832631,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.216220239999999,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 8.2707130095,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 8.3516287499,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1672084799999998,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 8.7851294759,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.21400145,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "A2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 8.9558853805,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0543848000000005,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "A2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 9.2052990585,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1529606600000006,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 10.108618835,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 10.201700232,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 10.343099054,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 10.503331455,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 10.647978829,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.13367444,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "A2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 10.717775776,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 10.744700147,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.12262938,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 10.810857173,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 11.136913753,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 11.22273321,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 11.22999515,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      }
+    ],
+    "cyclopentadienone": [
+      {
+        "root": 1,
+        "energy_ev": 2.3176441768,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 3.2034089723,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0214555099999996,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 4.9872781801,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 5.4462519228,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.27355794,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 5.6480608543,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 5.8740050271,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 5.9837256196,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 6.1317618329,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 6.8408516274,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1948597600000002,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 6.9899772765,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 7.4842719019,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 7.8536901457,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2416320600000004,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 8.0428168069,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.03551087,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 8.6537284656,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 8.6770991555,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0333980599999995,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 8.8013958362,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 9.0044389754,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 9.4621785104,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 9.6596112799,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 9.6881226832,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 9.7978432756,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 9.8490154714,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1304884400000001,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 10.30924655,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0256721099999995,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 10.320393954,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 10.546338127,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 10.656058719,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 11.298389558,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 11.535572454,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0577551799999998,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 11.666260422,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 12.156605002,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      }
+    ],
+    "imidazole": [
+      {
+        "root": 1,
+        "energy_ev": 6.2762219214,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 6.4845196402,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1716609300000007,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 6.9744324417,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.523772530000001,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 7.2695340245,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 8.1310232969,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.7046958199999989,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 8.4764000582,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 8.8080428588,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2584798500000003,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 9.4697121613,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 9.4795191571,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 9.5685035075,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 10.47283126,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 10.561815611,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 10.610850969,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0190182999999993,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 11.391455843,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0166666599999996,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 12.008308051,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 13.001620154,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 13.138060606,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 13.577948713,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 14.13137271,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 14.571260816,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 16.068405286,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 16.643960345,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 16.695177585,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 16.725618606,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0079601899999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 17.105717302,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 17.353391055,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.008915610000001,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 17.637272448,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 17.732489601,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 18.392319006,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 18.977414244,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3080962100000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      }
+    ],
+    "pyridazine": [
+      {
+        "root": 1,
+        "energy_ev": 3.5111444151,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 4.1155092624,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 5.025466322,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 5.4830373442,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3353906300000007,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 5.6298311693,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 5.9599994428,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4260163000000001,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 6.9652263508,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 7.0328332769,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4542001500000004,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 7.1183746379,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 7.2678350669,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3376642900000004,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 7.5286307312,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 7.569591198,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 7.7227394852,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 8.1999437745,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1004022199999997,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 8.2019927154,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 8.6425754074,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2438528100000001,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 8.8063575627,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 9.0429526381,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 9.1924497111,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 9.2423472065,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 9.7871567761,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.2118905799999997,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 9.7968145584,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 9.8467120538,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 10.013390946,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0741776799999996,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 10.982712667,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 11.135860954,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 12.066736229,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0075842899999996,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A1": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 12.219479032,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 12.468798844,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 12.582760552,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "B2": 0.0,
+          "A1": 0.0,
+          "A2": 0.0
+        }
+      }
+    ],
+    "cyanoformaldehyde": [
+      {
+        "root": 1,
+        "energy_ev": 3.9460191515,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 6.1890361843,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 6.7635433775,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 6.8344338907,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1056045099999998,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 6.897969859,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3894808,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 8.222423661,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 8.2351505666,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 8.7221675669,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.21995625,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 8.977352544,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 9.479529843,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 9.6267222347,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.040420579999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 9.8667421696,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.5136663999999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 10.465440694,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 10.479693638,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 11.039947887,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 11.103644672,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1294457500000004,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 12.056383498,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4536191299999992,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 12.356415884,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0878009799999988,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 12.511555076,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 12.907034946,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 2.0569110699999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 13.070511749,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 13.755934353,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 15.955564568,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.003439990000001,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 17.346916259,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 17.658993685,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0443635899999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 18.10863586,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 19.066832919,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.19310449,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 19.3526415,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 19.563345841,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1372106500000003,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 20.22541963,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.08573443,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      }
+    ],
+    "cyclopropenone": [
+      {
+        "root": 1,
+        "energy_ev": 3.3419692792,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 5.7045902303,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 5.7659361605,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0789451900000004,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 7.0286480582,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 7.6909371854,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 8.6220035349,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 8.6713588173,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1713998699999995,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 8.7034680508,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0601020099999996,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 9.3912690093,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 10.053558137,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 10.777770115,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 10.984624486,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 11.094514061,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0631893899999996,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 11.713529969,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 13.140391066,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 13.437933614,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.12661537,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 13.729524258,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 14.07615092,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 14.282037442,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0418537499999994,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A2": 0.0,
+          "B1": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 15.666953418,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0146958099999999,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 15.874950819,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0512551,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 15.939670482,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 16.541130538,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 16.774038457,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0431948400000006,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 17.096569966,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 17.143962072,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0024226899999993,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "B1": 0.0,
+          "A2": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 17.474566678,
+        "symmetry": "A2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A2": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "B1": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 17.948203771,
+        "symmetry": "A1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0255321099999997,
+        "orbital_symmetry_weights": {
+          "A1": 1.0,
+          "B2": 0.0,
+          "B1": 0.0,
+          "A2": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 18.571618643,
+        "symmetry": "B2",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1131867000000004,
+        "orbital_symmetry_weights": {
+          "B2": 1.0,
+          "A2": 0.0,
+          "B1": 0.0,
+          "A1": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 18.751276763,
+        "symmetry": "B1",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "B1": 1.0,
+          "A1": 0.0,
+          "B2": 0.0,
+          "A2": 0.0
+        }
+      }
+    ],
+    "nitroxyl": [
+      {
+        "root": 1,
+        "energy_ev": 1.7291753145,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 7.0122447473,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 8.6275828139,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 9.313548531,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0346897899999998,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 13.322215604,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 16.335163414,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0169357500000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 21.067508253,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0009036399999998,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 21.121923897,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      }
+    ],
+    "uracil": [
+      {
+        "root": 1,
+        "energy_ev": 3.808791299,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 2,
+        "energy_ev": 4.3519050814,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 3,
+        "energy_ev": 4.9799319639,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3674076799999995,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 4,
+        "energy_ev": 5.2805666383,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.575692379999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 5,
+        "energy_ev": 5.5555628236,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 6,
+        "energy_ev": 6.0986766059,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 7,
+        "energy_ev": 6.6773314801,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.1821689100000008,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 8,
+        "energy_ev": 7.3287815934,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 9,
+        "energy_ev": 7.5170880367,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3373331199999987,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 10,
+        "energy_ev": 7.5822970812,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3190454500000022,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 11,
+        "energy_ev": 7.6079649988,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 12,
+        "energy_ev": 7.7798807444,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 13,
+        "energy_ev": 8.0891084183,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.3079596800000004,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 14,
+        "energy_ev": 8.2302879023,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 15,
+        "energy_ev": 8.3229945268,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 16,
+        "energy_ev": 8.7487701483,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.6781004999999993,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 17,
+        "energy_ev": 8.8114622872,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 18,
+        "energy_ev": 9.075553118,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 19,
+        "energy_ev": 9.0855840087,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.73680821,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 20,
+        "energy_ev": 9.3547365233,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 21,
+        "energy_ev": 9.5745111274,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 22,
+        "energy_ev": 9.6216410367,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.5171465300000002,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 23,
+        "energy_ev": 9.6838889061,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 2.008936969999999,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 24,
+        "energy_ev": 9.9770594268,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 25,
+        "energy_ev": 10.181003791,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.6615043799999998,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 26,
+        "energy_ev": 10.558233812,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 27,
+        "energy_ev": 10.570285549,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 28,
+        "energy_ev": 11.237177946,
+        "symmetry": "A'",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.4596312399999996,
+        "orbital_symmetry_weights": {
+          "A'": 1.0,
+          "A\"": 0.0
+        }
+      },
+      {
+        "root": 29,
+        "energy_ev": 11.299871039,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      },
+      {
+        "root": 30,
+        "energy_ev": 11.321282652,
+        "symmetry": "A\"",
+        "symmetry_weight": 1.0,
+        "transition_weight_sum": 1.0,
+        "orbital_symmetry_weights": {
+          "A\"": 1.0,
+          "A'": 0.0
+        }
+      }
+    ]
+  }
+}

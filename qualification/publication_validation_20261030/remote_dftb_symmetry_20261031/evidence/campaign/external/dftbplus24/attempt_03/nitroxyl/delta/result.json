@@ -1,0 +1,24 @@
+{
+  "returncode": 0,
+  "status": "completed_unassigned",
+  "wall_seconds": 0.06487222103169188,
+  "maximum_rss_bytes": 28241920,
+  "host": "oracle.sns.it",
+  "molecule": "nitroxyl",
+  "method": "delta",
+  "request": {
+    "geometry_sha256": "5a03ce502becc543c4a1ebcacec0db5ef43a7ea51c6ffc112c94d92e56d3e2bb",
+    "protocol": {
+      "host": "oracle.sns.it",
+      "software_sha256": "19314faec39cd5fe887bf5410ca2701e5cda20bc983a91d06c092c0c53e88cf8",
+      "parameters_commit": "263e52419ce15222c864df9b3f6fbf58bfbdfa0f",
+      "parameters": "mio-1-1",
+      "threads": 2,
+      "spin_constants_source": "mio-1-1/extras/spinw.txt",
+      "assignment": "pending; higher target states not applicable for DeltaDFTB"
+    },
+    "method": "delta"
+  },
+  "input_sha256": "decf90aa2e6d7577a0dd29d9e1603319b32869c739ba0f5fbb5352920023a56a",
+  "lowest_singlet_gap_ev": 2.3361
+}

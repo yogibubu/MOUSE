@@ -1,0 +1,24 @@
+{
+  "returncode": 0,
+  "status": "completed_unassigned",
+  "wall_seconds": 0.11486931802937761,
+  "maximum_rss_bytes": 27893760,
+  "host": "oracle.sns.it",
+  "molecule": "cyclopropenone",
+  "method": "delta",
+  "request": {
+    "geometry_sha256": "3953e13e0f75dbd1bf035b12baf9a7fc3b6fd71590ba35b807f53bcc34928719",
+    "protocol": {
+      "host": "oracle.sns.it",
+      "software_sha256": "19314faec39cd5fe887bf5410ca2701e5cda20bc983a91d06c092c0c53e88cf8",
+      "parameters_commit": "263e52419ce15222c864df9b3f6fbf58bfbdfa0f",
+      "parameters": "mio-1-1",
+      "threads": 2,
+      "spin_constants_source": "mio-1-1/extras/spinw.txt",
+      "assignment": "pending; higher target states not applicable for DeltaDFTB"
+    },
+    "method": "delta"
+  },
+  "input_sha256": "018d1d5554ea2c135d8a3b76125a3550e0a5da54c06d5c0da6a9de1ce3f506be",
+  "lowest_singlet_gap_ev": 4.1471
+}

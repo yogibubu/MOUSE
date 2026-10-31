@@ -1,0 +1,12 @@
+{
+  "schema": "mouse.dftb.symmetry.audit.v1",
+  "host": "oracle.sns.it",
+  "source_sha256": "3de5764f0f7cfa7a486fa0a682005af3e08ae53cb43beb6ac3e12a0ddc0e8da1",
+  "numerical_reference_values_used_for_assignment": false,
+  "assignment": "same point-group irrep and within-irrep energy ordinal as fixed DFT reference; require transition irrep weight >0.999",
+  "radial_overlap_available": false,
+  "cross_model_transition_overlap_available": false,
+  "scope": "symmetry/ordinal assignment only; does not prove same electronic character for roots sharing an irrep",
+  "original_electronic_outputs_immutable": true,
+  "auxiliary_basis": "one unit-exponent s and p shell for AO rotation representation only, no electronic calculation"
+}

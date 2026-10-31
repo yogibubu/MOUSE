@@ -1,0 +1,23 @@
+{
+  "returncode": 0,
+  "status": "completed_unassigned",
+  "wall_seconds": 0.11484419699991122,
+  "maximum_rss_bytes": 29696000,
+  "host": "oracle.sns.it",
+  "molecule": "imidazole",
+  "method": "td",
+  "request": {
+    "geometry_sha256": "974dccf097018a10315a49dcb3e8d8ff49b5572d19880e45f9a5153b07a7abcd",
+    "protocol": {
+      "host": "oracle.sns.it",
+      "software_sha256": "19314faec39cd5fe887bf5410ca2701e5cda20bc983a91d06c092c0c53e88cf8",
+      "parameters_commit": "263e52419ce15222c864df9b3f6fbf58bfbdfa0f",
+      "parameters": "mio-1-1",
+      "threads": 2,
+      "spin_constants_source": "mio-1-1/extras/spinw.txt",
+      "assignment": "pending; higher target states not applicable for DeltaDFTB"
+    },
+    "method": "td"
+  },
+  "input_sha256": "e3a86d0a12773b3eb5be7c353e78f9ff3186c528ff93c06f79c5cce194a07276"
+}

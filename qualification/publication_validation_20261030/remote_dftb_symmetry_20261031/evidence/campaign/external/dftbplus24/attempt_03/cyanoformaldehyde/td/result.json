@@ -1,0 +1,23 @@
+{
+  "returncode": 0,
+  "status": "completed_unassigned",
+  "wall_seconds": 0.11511501402128488,
+  "maximum_rss_bytes": 29536256,
+  "host": "oracle.sns.it",
+  "molecule": "cyanoformaldehyde",
+  "method": "td",
+  "request": {
+    "geometry_sha256": "730bb9d2a194ffc9f711dd20e38872f7411e809ef619b85f9952659829798bd3",
+    "protocol": {
+      "host": "oracle.sns.it",
+      "software_sha256": "19314faec39cd5fe887bf5410ca2701e5cda20bc983a91d06c092c0c53e88cf8",
+      "parameters_commit": "263e52419ce15222c864df9b3f6fbf58bfbdfa0f",
+      "parameters": "mio-1-1",
+      "threads": 2,
+      "spin_constants_source": "mio-1-1/extras/spinw.txt",
+      "assignment": "pending; higher target states not applicable for DeltaDFTB"
+    },
+    "method": "td"
+  },
+  "input_sha256": "a5a951bb3221cbd40a7bf8b56a7a54b657b62f8ab5d14bca22788d0a7d047e41"
+}

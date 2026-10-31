@@ -1,0 +1,12 @@
+{
+  "returncode": 0,
+  "status": "completed_unassigned",
+  "wall_seconds": 0.11515945999417454,
+  "maximum_rss_bytes": 29155328,
+  "molecule": "nitroxyl",
+  "method": "td",
+  "host": "oracle.sns.it",
+  "previous_attempt": "/local/scratch/home/enzo/MOUSE-publication-validation-20261030/external/dftbplus24/attempt_03/nitroxyl/td",
+  "input_sha256": "dbddcec27540e79542b66f38ea6af5404f005a5cbe2734d0e96cbd31e3721966",
+  "plan_sha256": "4245f681c3c546b3c5747763234803d4686e6ece8be85e502edfe9a3fc300ac0"
+}

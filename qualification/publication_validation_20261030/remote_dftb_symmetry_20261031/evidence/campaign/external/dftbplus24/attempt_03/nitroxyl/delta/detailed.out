@@ -1,0 +1,219 @@
+ S0 state
+ Total charge:    -0.00000000
+
+ Atomic gross charges (e)
+ Atom           Charge
+    1      -0.17712563
+    2       0.03462654
+    3       0.14249909
+
+Nr. of electrons (up):      6.00000000
+Atom populations (up)
+ Atom       Population
+    1       3.08856282
+    2       2.48268673
+    3       0.42875046
+
+l-shell populations (up)
+ Atom Sh.   l       Population
+    1   1   0       0.88921658
+    1   2   1       2.19934623
+    2   1   0       0.77126988
+    2   2   1       1.71141685
+    3   1   0       0.42875046
+
+Orbital populations (up)
+ Atom Sh.   l   m       Population  Label
+    1   1   0   0       0.88921658  s
+    1   2   1  -1       0.55872814  p_y
+    1   2   1   0       0.68417094  p_z
+    1   2   1   1       0.95644715  p_x
+    2   1   0   0       0.77126988  s
+    2   2   1  -1       0.44127186  p_y
+    2   2   1   0       0.50062070  p_z
+    2   2   1   1       0.76952430  p_x
+    3   1   0   0       0.42875046  s
+
+Nr. of electrons (down):      6.00000000
+Atom populations (down)
+ Atom       Population
+    1       3.08856282
+    2       2.48268673
+    3       0.42875046
+
+l-shell populations (down)
+ Atom Sh.   l       Population
+    1   1   0       0.88921658
+    1   2   1       2.19934623
+    2   1   0       0.77126988
+    2   2   1       1.71141685
+    3   1   0       0.42875046
+
+Orbital populations (down)
+ Atom Sh.   l   m       Population  Label
+    1   1   0   0       0.88921658  s
+    1   2   1  -1       0.55872814  p_y
+    1   2   1   0       0.68417094  p_z
+    1   2   1   1       0.95644715  p_x
+    2   1   0   0       0.77126988  s
+    2   2   1  -1       0.44127186  p_y
+    2   2   1   0       0.50062070  p_z
+    2   2   1   1       0.76952430  p_x
+    3   1   0   0       0.42875046  s
+
+ T1 state
+ Total charge:     0.00000000
+
+ Atomic gross charges (e)
+ Atom           Charge
+    1      -0.11313441
+    2      -0.12181312
+    3       0.23494754
+
+Nr. of electrons (up):      7.00000000
+Atom populations (up)
+ Atom       Population
+    1       3.53954565
+    2       3.03544824
+    3       0.42500611
+
+l-shell populations (up)
+ Atom Sh.   l       Population
+    1   1   0       0.89153829
+    1   2   1       2.64800736
+    2   1   0       0.77008732
+    2   2   1       2.26536092
+    3   1   0       0.42500611
+
+Orbital populations (up)
+ Atom Sh.   l   m       Population  Label
+    1   1   0   0       0.89153829  s
+    1   2   1  -1       1.00000000  p_y
+    1   2   1   0       0.69001933  p_z
+    1   2   1   1       0.95798803  p_x
+    2   1   0   0       0.77008732  s
+    2   2   1  -1       1.00000000  p_y
+    2   2   1   0       0.49497226  p_z
+    2   2   1   1       0.77038867  p_x
+    3   1   0   0       0.42500611  s
+
+Nr. of electrons (down):      5.00000000
+Atom populations (down)
+ Atom       Population
+    1       2.57358876
+    2       2.08636488
+    3       0.34004636
+
+l-shell populations (down)
+ Atom Sh.   l       Population
+    1   1   0       0.89052714
+    1   2   1       1.68306162
+    2   1   0       0.72105966
+    2   2   1       1.36530522
+    3   1   0       0.34004636
+
+Orbital populations (down)
+ Atom Sh.   l   m       Population  Label
+    1   1   0   0       0.89052714  s
+    1   2   1  -1       0.58450113  p_y
+    1   2   1   0       0.66828730  p_z
+    1   2   1   1       0.43027320  p_x
+    2   1   0   0       0.72105966  s
+    2   2   1  -1       0.41549887  p_y
+    2   2   1   0       0.48399319  p_z
+    2   2   1   1       0.46581315  p_x
+    3   1   0   0       0.34004636  s
+
+ S1 state
+ Total charge:    -0.00000000
+
+ Atomic gross charges (e)
+ Atom           Charge
+    1      -0.12622731
+    2      -0.10413495
+    3       0.23036226
+
+Nr. of electrons (up):      5.00000000
+Atom populations (up)
+ Atom       Population
+    1       2.38847348
+    2       2.41391474
+    3       0.19761178
+
+l-shell populations (up)
+ Atom Sh.   l       Population
+    1   1   0       0.88689120
+    1   2   1       1.50158228
+    2   1   0       0.70619201
+    2   2   1       1.70772273
+    3   1   0       0.19761178
+
+Orbital populations (up)
+ Atom Sh.   l   m       Population  Label
+    1   1   0   0       0.88689120  s
+    1   2   1  -1       1.00000000  p_y
+    1   2   1   0       0.63025525  p_z
+    1   2   1   1      -0.12867297  p_x
+    2   1   0   0       0.70619201  s
+    2   2   1  -1       1.00000000  p_y
+    2   2   1   0       0.50268376  p_z
+    2   2   1   1       0.20503897  p_x
+    3   1   0   0       0.19761178  s
+
+Nr. of electrons (down):      7.00000000
+Atom populations (down)
+ Atom       Population
+    1       3.73775383
+    2       2.69022021
+    3       0.57202596
+
+l-shell populations (down)
+ Atom Sh.   l       Population
+    1   1   0       0.89445151
+    1   2   1       2.84330231
+    2   1   0       0.80281030
+    2   2   1       1.88740992
+    3   1   0       0.57202596
+
+Orbital populations (down)
+ Atom Sh.   l   m       Population  Label
+    1   1   0   0       0.89445151  s
+    1   2   1  -1       0.63986485  p_y
+    1   2   1   0       0.71878242  p_z
+    1   2   1   1       1.48465505  p_x
+    2   1   0   0       0.80281030  s
+    2   2   1  -1       0.36013515  p_y
+    2   2   1   0       0.48383820  p_z
+    2   2   1   1       1.04343656  p_x
+    3   1   0   0       0.57202596  s
+
+
+Ground State Total Energy:          -5.9887082455 H         -162.9610 eV
+Ground State Extrapolated to 0K     -5.9887082455 H         -162.9610 eV
+Total Ground State Mermin egy:      -5.9887082455 H         -162.9610 eV
+Ground State Force related egy:     -5.9887082455 H         -162.9610 eV
+
+Triplet State Total Energy:         -5.9478862901 H         -161.8502 eV
+Triplet State Extrapolated to 0     -5.9478862901 H         -161.8502 eV
+Triplet State Mermin free egy:      -5.9478862901 H         -161.8502 eV
+Triplet State Force related egy     -5.9478862901 H         -161.8502 eV
+
+Purified State Total Energy:        -5.9028575541 H         -160.6249 eV
+Purified Extrapolated 0K:           -5.9028575541 H         -160.6249 eV
+Purified State Mermin free egy:     -5.9028575541 H         -160.6249 eV
+Purified Force related egy:         -5.9028575541 H         -160.6249 eV
+
+S0 -> T1:                            0.0408219554 H            1.1108 eV
+S0 -> S1:                            0.0858506914 H            2.3361 eV
+
+S0 Dipole moment:    0.11550417    0.00000000   -0.55015706 au
+S0 Dipole moment:    0.29358234    0.00000000   -1.39835989 Debye
+
+T1 Dipole moment:    0.30829511    0.00000000   -0.51518736 au
+T1 Dipole moment:    0.78360806    0.00000000   -1.30947576 Debye
+
+S1 Dipole moment:    0.29219870    0.00000000   -0.53864962 au
+S1 Dipole moment:    0.74269508    0.00000000   -1.36911089 Debye
+
+S0 -> S1 transition dipole:    0.17669453    0.00000000    0.01150744 au
+
