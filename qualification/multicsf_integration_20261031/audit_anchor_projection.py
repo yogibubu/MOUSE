@@ -10,7 +10,7 @@ P=Path('/home/enzo/MOUSE-publication-validation-20261030')
 os.environ.update(MOUSE_VALIDATION_ROOT=str(W),OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='2',MKL_NUM_THREADS='2')
 sys.path.insert(0,str(W/'source/qualification'));import remote_bootstrap
 sys.path.insert(0,str(W))
-from anchor_rank_converged import participation
+from anchor_rank_symmetry import participation
 import numpy as np
 from pyscf import gto,scf,lib
 from threadpoolctl import threadpool_limits
@@ -23,7 +23,7 @@ from extent_support import source_molecule
 with threadpool_limits(limits=2):
     lib.num_threads(2)
     lock=(P/'blind/references/compute.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX)
-    summary=json.loads((W/'anchor_rank_converged/summary.json').read_text());assert summary['complete']
+    summary=json.loads((W/'anchor_rank_symmetry/summary.json').read_text());assert summary['complete']
     audits=[]
     for name,sid in [('Phthalimide','B024'),('Furan','B022'),('Cyclopentadiene','B016')]:
         model=MultiCSFModel(W/f'models/{name}/{sid}/model.json')
@@ -45,7 +45,7 @@ with threadpool_limits(limits=2):
         rx=relaxed[:nc,:no]@x@relaxed[nc:,no:].T
         rows=[]
         for scale in [.98,1.02]:
-            folder=W/'anchor_rank_converged'/name/f'{scale:.2f}'
+            folder=W/'anchor_rank_symmetry'/name/f'{scale:.2f}'
             row=json.loads((folder/'result.json').read_text())
             with np.load(folder/'native.npz') as a:xyz=a['coordinates_angstrom'].copy()
             raw=load_derivative_point(folder/'native.npz',request_hash='anchor_rank_native',coordinates_angstrom=xyz,require_gradient=False)
@@ -67,5 +67,5 @@ with threadpool_limits(limits=2):
                            original_relaxed_native_compact=participation(rx),rows=rows))
     out=dict(host=socket.getfqdn(),rows=audits,source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
              scope='Reproduced original compact projection; co-rotating Lowdin transport of fixed anchor orbitals separates DFT-transition changes from native occupied-subspace relaxation; no full response-model recalibration')
-    (W/'anchor_rank_converged/projection_audit.json').write_text(json.dumps(out,indent=2)+'\n')
+    (W/'anchor_rank_symmetry/projection_audit.json').write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps(out,indent=2),flush=True)
