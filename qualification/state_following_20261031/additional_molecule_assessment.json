@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-31",
+  "decision": "Recommend at most two additional molecules; assessment only, no expanded production campaign activated",
+  "selection_basis": "Chemical coverage and application relevance, not prediction error; existing sealed accuracy labels were not opened",
+  "candidates": [
+    {
+      "priority": 1,
+      "molecule": "Aminobenzonitrile",
+      "state": "B026",
+      "family": "CT",
+      "atoms": 15,
+      "question": "Transfer of the fixed model to a chemically distinct amino/cyano donor-acceptor scaffold",
+      "cache": "An incomplete ground-reference archive exists; no completed corrected model or prediction",
+      "scope": "One predeclared vertical transition, corrected-GFN2 TDA comparison; derivative test only if a stationary surface is qualified",
+      "reference": "https://pubs.acs.org/doi/10.1021/acs.jctc.1c01307"
+    },
+    {
+      "priority": 2,
+      "molecule": "Azobenzene",
+      "state": "B003",
+      "family": "n_pi",
+      "atoms": 24,
+      "question": "Chemically useful azo chromophore beyond the carbonyl-rich development set; subsequently test a small displaced-geometry surface and derivatives",
+      "cache": "No completed reference or model in current campaign",
+      "scope": "First the predeclared n-pi transition; no conical-intersection or dynamics claims from a vertical test",
+      "reference": "https://arxiv.org/abs/2407.09060"
+    }
+  ],
+  "not_recommended_as_extra_success_case": {
+    "molecule": "Furan",
+    "state": "B040",
+    "family": "Rydberg",
+    "reason": "Existing preparation explicitly excluded the frozen target for symmetry or compact projection; retain as a basis/assignment limitation until the precise diagnostic is resolved, do not silently replace it with another root"
+  },
+  "protocol": {
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lambda_exchange": 0.9,
+    "energy_offset_ev": 0.0,
+    "reference_geometry": "Frozen QUEST geometry of each selected state",
+    "tda": "Corrected GFN2 parent ground orbitals and same response calibration",
+    "failure_reporting": "Record every predeclared target and its disposition",
+    "status": "Proposed extension kept separate from the 14-state campaign"
+  },
+  "literature_exposure": "Bibliographic search results can display published excitation energies; no new cohort is represented as wholly blind. Candidate rationale was stated before the targeted CT/azobenzene literature search.",
+  "subsequent_complete_campaign_evidence": {
+    "OO_states_matched": 14,
+    "TDA_states_matched": 14,
+    "oo_mae_ev": 0.4922815121270721,
+    "tda_Q_mae_ev": 0.26122387157670357,
+    "tda_F_mae_ev": 1.0125688321517978,
+    "tda_parent_mean_mae_ev": 0.6107646314403266,
+    "oo_pi_pi_mae_ev": 0.9539085594883716,
+    "priority": "Address existing pi-pi accuracy limitations before activating the two proposed new molecules; shortlist remains predeclared and all original outcomes must remain reported",
+    "accuracy_labels_opened_only_after_14_OO_predictions_and_14_true_TDA_controls_complete": true,
+    "post_score_fitting_performed": false,
+    "remote_report": "/home/enzo/MOUSE-orbital-performance-20261031/energy_scores.json",
+    "full_artifact_transfer": "Pending; SSH reset connection after successful completion and inspection of scores"
+  }
+}
