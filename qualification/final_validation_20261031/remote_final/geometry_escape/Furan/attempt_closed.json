@@ -1,0 +1,20 @@
+{
+  "status": "bounded_attempt_closed",
+  "closed_utc": "2026-10-31T22:31:50.746223+00:00",
+  "reason": "Completion scope frozen; close optional further descent at last qualified accepted point. The symmetric stationary-point EOM-CCSD comparison is complete. No minimum assigned.",
+  "checkpoints_retained": true,
+  "accepted_checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/geometry_escape/Furan/stage_0/accepted_103/result.json",
+  "accepted_checkpoint_sha256": "70eb1813ada1275c513e1c9d3d36a0971cff588a2a68b1d9e8971842e4b92952",
+  "accepted_points": 104,
+  "last_accepted": {
+    "energy_hartree": -14.46710523491764,
+    "max_gradient": 0.061824036963896045,
+    "fidelity": [
+      0.9996302290775928,
+      0.9995644050865994
+    ],
+    "step_bohr": 0.019999999999999876,
+    "elapsed_seconds": 336.01648191997083
+  },
+  "nuclear_minimum": false
+}

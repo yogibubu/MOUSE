@@ -1,0 +1,8 @@
+{
+  "status": "not_repeated_due_to_prespecified_budget",
+  "molecule": "Phthalimide",
+  "property": "energy",
+  "repeat": 1,
+  "reason": "Closing budget fixed before any large-cohort measurement; one complete measurement per property and size",
+  "budget_protocol_sha256": "7ae9ff28714a3bbfcd114a0d11f83eb3190713e5f24388f8f7574e78e089649e"
+}

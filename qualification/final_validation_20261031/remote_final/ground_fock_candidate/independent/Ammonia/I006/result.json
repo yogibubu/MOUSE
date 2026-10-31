@@ -1,0 +1,7 @@
+{
+  "id": "I006",
+  "molecule": "Ammonia",
+  "status": "not_representable",
+  "same_projection_gate": true,
+  "source_sha256": "f9244b35135781584ef335e63f7f82d54ce23a1968419f4bf35c052425313ca8"
+}

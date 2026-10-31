@@ -1,0 +1,4 @@
+{
+  "reason": "Small trust ball gives only linear progress in soft modes; enlarge numerical trial radius from 0.08 to 0.3 with unchanged residual-decrease backtracking, fidelity, Gram and final response-curvature certificates. No model change.",
+  "checkpoint_verified": true
+}

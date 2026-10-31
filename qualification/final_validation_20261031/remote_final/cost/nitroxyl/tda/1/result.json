@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "molecule": "nitroxyl",
+  "property": "tda",
+  "repeat": 1,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "natoms": 3,
+  "nao": 9,
+  "rank": 1,
+  "wall_seconds": 0.012850862985942513,
+  "cpu_seconds": 0.012765424999999997,
+  "process_peak_rss_kib": 123048,
+  "model_loading_and_ground_setup_seconds": 0.053278039034921676,
+  "total_gradient_included": false,
+  "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+  "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+  "roots_per_parent": [
+    18,
+    18
+  ],
+  "pair_dimensions": [
+    18,
+    18
+  ],
+  "lowest_ev": [
+    1.8560668996013379,
+    1.8403811381592308
+  ],
+  "orbitals": "own stationary corrected GFN2 orbitals, never DFT orbitals",
+  "tda_operator": "true singlet A with 0.5*0.225*((ib|aj)-(ij|ab)) nonlocal correction"
+}

@@ -1,0 +1,15 @@
+{
+  "frozen_utc": "2026-10-31T22:22:23.344398+00:00",
+  "candidate_protocol_sha256": "e06a6aa58dce14ede79ba2cceef93bfa949f4c44b65dcfa98cdff68387195e48",
+  "predictions_sha256": {
+    "independent/Criegee_Intermediate/I001/result.json": "913bf8521c754f3c11166ebd5db335fe5cfdb94b70ada115395a61d723e84d86",
+    "independent/Criegee_Intermediate/I002/result.json": "b643809ea750aa42d99892ef793d842b21a535b72bd9a98d930eb7849328534a",
+    "independent/Cyclobutadiene/I003/result.json": "efb2b1a2a5a229a8bc1de40abf6393bcf6c3ddadfb98a236b6dbf7747e561f7c",
+    "independent/Benzoxadiazole/I004/result.json": "609c13939377a008203941dd591ff76ec8dfa5afa3c7cc391ade647868634c47",
+    "independent/Hexatriene/I005/result.json": "f6ca5553735202fff011394a93048911a64e965c5f28f6b6709e58aed8cecafe",
+    "independent/Ammonia/I006/result.json": "b9ac2b0bc94f80eb34706265fc4f8cef5ce288694c5be1651da644d539c91ae6",
+    "independent_challenge/Furofuran/C001/result.json": "8472a7e3ea8d0c0eae3eca7e020c4cb80ea2a2ec8af92afaed46a93bbf5ec1c2",
+    "independent_challenge/Furofuran/C002/result.json": "af31a0a5557f29e58b534959d976efbe05a0bc3241ebb5144d684f58ca2924e6"
+  },
+  "scope": "Candidate specification frozen before primary score existed; predictions locked before this scorer opens numerical labels. Furofuran is exposed development; higher benzoxadiazole labels had already been exposed."
+}

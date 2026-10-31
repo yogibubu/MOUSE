@@ -1,0 +1,114 @@
+[
+  {
+    "iteration": 0,
+    "energy": -19.99239525496177,
+    "residual": 0.00015459092835842336,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.3519563438394953,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 1,
+    "energy": -19.9924032090735,
+    "residual": 0.00012771075153132858,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.3513266905546325,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 2,
+    "energy": -19.992408493624772,
+    "residual": 7.181091603396901e-05,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.35085294314204674,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 3,
+    "energy": -19.992410716214927,
+    "residual": 2.1942303837091738e-05,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.350646221257114,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 4,
+    "energy": -19.992411808886903,
+    "residual": 1.6454484211530777e-05,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.35052941976158414,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 5,
+    "energy": -19.992412415979494,
+    "residual": 1.2747989758055969e-05,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.3504594412847922,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 6,
+    "energy": -19.9924127789766,
+    "residual": 1.0099194225855623e-05,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.35041608476345826,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 7,
+    "energy": -19.992413006735568,
+    "residual": 8.111570036350138e-06,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.350388372511233,
+    "trust_radius": 0.08,
+    "step_type": "trusted_newton"
+  },
+  {
+    "iteration": 8,
+    "energy": -19.992413331996172,
+    "residual": 9.395524390608343e-06,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.35033416430222136,
+    "trust_radius": 0.064,
+    "step_type": "trusted_newton"
+  },
+  {
+    "iteration": 9,
+    "energy": -19.99241345541883,
+    "residual": 1.0384247162542604e-05,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.3503189836270822,
+    "trust_radius": 0.0768,
+    "step_type": "trusted_newton"
+  },
+  {
+    "iteration": 10,
+    "energy": -19.992413455502884,
+    "residual": 2.1688184037616685e-08,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.35033282981274727,
+    "trust_radius": 0.08,
+    "step_type": "trusted_newton"
+  },
+  {
+    "iteration": 11,
+    "energy": -19.992413455502877,
+    "residual": 6.929569765223853e-14,
+    "observed_index": 7,
+    "target_index": 7,
+    "minimum_curvature": -0.3503328380482034,
+    "trust_radius": 0.08
+  }
+]

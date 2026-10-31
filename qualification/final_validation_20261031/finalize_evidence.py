@@ -6,7 +6,7 @@ r=Path(__file__).resolve().parent;deadline=time.monotonic()+3600
 while True:
  progress=json.loads((r/'progress.json').read_text())
  rows=list((r/'cost').rglob('result.json'))
- if len(rows)==72 and progress.get('status')=='attempt_pass_complete':break
+ if len(rows)==72 and progress.get('status')=='attempt_pass_complete' and (r/'hessian_acceleration_benchmark_complete.json').exists():break
  if time.monotonic()>deadline:raise TimeoutError('Finite campaign did not close within archive wait budget')
  time.sleep(5)
 subprocess.run([sys.executable,str(r/'collect_final.py')],check=True)

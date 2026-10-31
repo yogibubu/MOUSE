@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "molecule": "nitroxyl",
+  "property": "gradient",
+  "repeat": 2,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "natoms": 3,
+  "nao": 9,
+  "rank": 1,
+  "wall_seconds": 0.301162401039619,
+  "cpu_seconds": 0.2994064729999999,
+  "process_peak_rss_kib": 147012,
+  "model_loading_and_ground_setup_seconds": 0.051142657990567386,
+  "total_gradient_included": true,
+  "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+  "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+  "energy_hartree": -7.297538817459815,
+  "residual": 1.878705524482882e-15,
+  "gradient_max": 0.04896977593999072
+}

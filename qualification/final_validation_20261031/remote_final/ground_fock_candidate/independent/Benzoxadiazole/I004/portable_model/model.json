@@ -1,0 +1,50 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 1,
+  "rank_policy": "effective_pairs_nearest",
+  "effective_pairs": 1.11707296576231,
+  "noccupied": 22,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.48607729992137483,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 0.8044753699723404,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.46781669464061276,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "candidate_protocol_sha256": "e06a6aa58dce14ede79ba2cceef93bfa949f4c44b65dcfa98cdff68387195e48",
+    "source_sha256": "6aef4675bb0b1a1c1287462abf5edeb2cc7cdca291f1bc4a09dfe9c390c0152f",
+    "cohort": "independent",
+    "state": "I004",
+    "energy_labels_used": false
+  },
+  "sha256": {
+    "template.npz": "29b087d6180332c4b87ec8020f83519094cfbf03284d2d8f76c579c6f226e785",
+    "response_0.npz": "67936fecdcf185c916126a3cb5c0bb64eccb6d65031a6595f9db5359567248fe",
+    "response_1.npz": "208d69de185943233b781b259528d5b892e14001ed4792fe8eba167dcf3499d6",
+    "arrays.npz": "ee29cc82f703b6c2cef59852ad1c288f33fce3491a86e08a1ba6bc25345914cf",
+    "ground_0.npz": "71b44c458e2f9820a3a183163ef6f9aaf0d72d091ab1efe16a7f663c634f6573",
+    "ground_1.npz": "48819f91c081d9461750e9f9a4b4965d33b8b70bcda7fe29344047e6c861c0aa",
+    "ground_2.npz": "97b8e085d540018db21510b0f1527dc8734f9f673c774bc81e7cfc575db27cac"
+  }
+}

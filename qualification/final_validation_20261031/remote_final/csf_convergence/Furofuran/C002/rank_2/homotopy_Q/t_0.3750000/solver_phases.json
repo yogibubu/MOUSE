@@ -1,0 +1,83 @@
+[
+  {
+    "phase": 0,
+    "target_index": 5,
+    "history": [
+      {
+        "iteration": 0,
+        "energy": -20.49074514491463,
+        "residual": 0.006580871095851143,
+        "observed_index": 5,
+        "target_index": 5,
+        "minimum_curvature": -0.2016435136682587,
+        "trust_radius": 0.08
+      },
+      {
+        "iteration": 1,
+        "energy": -20.490803769961968,
+        "residual": 0.004692238435618227,
+        "observed_index": 5,
+        "target_index": 5,
+        "minimum_curvature": -0.20397658588121426,
+        "trust_radius": 0.08
+      },
+      {
+        "iteration": 2,
+        "energy": -20.490838361707752,
+        "residual": 0.0031122705739869963,
+        "observed_index": 5,
+        "target_index": 5,
+        "minimum_curvature": -0.2063805822542322,
+        "trust_radius": 0.08
+      },
+      {
+        "iteration": 3,
+        "energy": -20.490855175017156,
+        "residual": 0.0018035922061596038,
+        "observed_index": 5,
+        "target_index": 5,
+        "minimum_curvature": -0.20905989468770816,
+        "trust_radius": 0.08
+      },
+      {
+        "iteration": 4,
+        "energy": -20.490860198342734,
+        "residual": 0.0007519075127197097,
+        "observed_index": 5,
+        "target_index": 5,
+        "minimum_curvature": -0.2121435523184873,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 5,
+        "energy": -20.49086000587426,
+        "residual": 4.5278871510396885e-05,
+        "observed_index": 5,
+        "target_index": 5,
+        "minimum_curvature": -0.21553566373495386,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 6,
+        "energy": -20.490859978714703,
+        "residual": 1.6198286607793308e-06,
+        "observed_index": 5,
+        "target_index": 5,
+        "minimum_curvature": -0.21599837618069764,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 7,
+        "energy": -20.49085997870904,
+        "residual": 4.768231446619295e-10,
+        "observed_index": 5,
+        "target_index": 5,
+        "minimum_curvature": -0.21600661289127482,
+        "trust_radius": 0.08
+      }
+    ]
+  }
+]

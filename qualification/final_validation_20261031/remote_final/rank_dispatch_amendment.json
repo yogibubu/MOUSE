@@ -1,0 +1,5 @@
+{
+  "reason": "Convergence experiments must explicitly store and verify the requested rank; the default writer otherwise reselects nearest effective rank. Superseded surface evaluations are invalid for rank-convergence inference; actual rank-two parent and homotopy checkpoints remain valid and are reused.",
+  "default_rank_rule_changed": false,
+  "energy_model_parameters_changed": false
+}

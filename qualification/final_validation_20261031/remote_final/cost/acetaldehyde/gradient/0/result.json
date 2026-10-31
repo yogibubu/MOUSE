@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "molecule": "acetaldehyde",
+  "property": "gradient",
+  "repeat": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "natoms": 7,
+  "nao": 16,
+  "rank": 1,
+  "wall_seconds": 0.37367949401959777,
+  "cpu_seconds": 0.596491652,
+  "process_peak_rss_kib": 155036,
+  "model_loading_and_ground_setup_seconds": 0.057547677017282695,
+  "total_gradient_included": true,
+  "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+  "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+  "energy_hartree": -10.199185289190952,
+  "residual": 1.5009736509252747e-11,
+  "gradient_max": 0.14255648002167196
+}

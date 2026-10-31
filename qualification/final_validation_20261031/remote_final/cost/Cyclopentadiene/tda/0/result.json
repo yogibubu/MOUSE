@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "molecule": "Cyclopentadiene",
+  "property": "tda",
+  "repeat": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "natoms": 11,
+  "nao": 26,
+  "rank": 2,
+  "wall_seconds": 0.30281244800426066,
+  "cpu_seconds": 0.440118789,
+  "process_peak_rss_kib": 174332,
+  "model_loading_and_ground_setup_seconds": 0.1893033660016954,
+  "total_gradient_included": false,
+  "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+  "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+  "roots_per_parent": [
+    169,
+    169
+  ],
+  "pair_dimensions": [
+    169,
+    169
+  ],
+  "lowest_ev": [
+    7.411542453066002,
+    6.205286587255898
+  ],
+  "orbitals": "own stationary corrected GFN2 orbitals, never DFT orbitals",
+  "tda_operator": "true singlet A with 0.5*0.225*((ib|aj)-(ij|ab)) nonlocal correction"
+}

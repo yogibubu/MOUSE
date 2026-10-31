@@ -1,0 +1,9 @@
+{
+  "status": "reference_ready",
+  "molecule": "Ammonia",
+  "states": [
+    "I006"
+  ],
+  "reference_sha256": "794198066bd24b796dcba5c2845646f80fbe4fbd4d5637353e028c0eec5803f5",
+  "numerical_labels_read": false
+}

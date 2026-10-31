@@ -1,0 +1,176 @@
+[
+  {
+    "iteration": 0,
+    "energy": -24.557335711642665,
+    "residual": 0.031510242314884994,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.08058041806548902,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 1,
+    "energy": -24.55685454537025,
+    "residual": 0.024793910473999724,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07605622964149387,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 2,
+    "energy": -24.55623005424653,
+    "residual": 0.01924235566176513,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07301621025195187,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 3,
+    "energy": -24.55575211322021,
+    "residual": 0.014997201878401782,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07068239542237177,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 4,
+    "energy": -24.555588703081717,
+    "residual": 0.012260464120956677,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.0685036686598865,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 5,
+    "energy": -24.55570717999887,
+    "residual": 0.010699165067905043,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.06637966663677902,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 6,
+    "energy": -24.555897095020956,
+    "residual": 0.0092948136706303,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.0646283099856697,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 7,
+    "energy": -24.555927515131444,
+    "residual": 0.0075204973771935656,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.06473607550279016,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 8,
+    "energy": -24.555675618682102,
+    "residual": 0.006556063368587679,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.06806055335077832,
+    "trust_radius": 0.08
+  },
+  {
+    "iteration": 9,
+    "energy": -24.555433876517238,
+    "residual": 0.006210644403560783,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07123317847091376,
+    "trust_radius": 0.064
+  },
+  {
+    "iteration": 10,
+    "energy": -24.55527221815703,
+    "residual": 0.006140296111994306,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.0732421766625149,
+    "trust_radius": 0.0512
+  },
+  {
+    "iteration": 11,
+    "energy": -24.555164863136348,
+    "residual": 0.006042931996663774,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07441651661411346,
+    "trust_radius": 0.04096
+  },
+  {
+    "iteration": 12,
+    "energy": -24.55509272221166,
+    "residual": 0.005812838998316694,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07503630388063431,
+    "trust_radius": 0.049152
+  },
+  {
+    "iteration": 13,
+    "energy": -24.55501998755963,
+    "residual": 0.005249772750934141,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07541977699182113,
+    "trust_radius": 0.0589824
+  },
+  {
+    "iteration": 14,
+    "energy": -24.554954974911396,
+    "residual": 0.003766054263286918,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07528961442344459,
+    "trust_radius": 0.07077887999999999
+  },
+  {
+    "iteration": 15,
+    "energy": -24.554922983133917,
+    "residual": 0.0003824822324438107,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07452538268219706,
+    "trust_radius": 0.08,
+    "step_type": "trusted_newton"
+  },
+  {
+    "iteration": 16,
+    "energy": -24.55492260844265,
+    "residual": 1.6586491979837803e-05,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.0745310817716341,
+    "trust_radius": 0.08,
+    "step_type": "trusted_newton"
+  },
+  {
+    "iteration": 17,
+    "energy": -24.554922608533673,
+    "residual": 9.514106648345066e-09,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07452725916501192,
+    "trust_radius": 0.08,
+    "step_type": "trusted_newton"
+  },
+  {
+    "iteration": 18,
+    "energy": -24.554922608533673,
+    "residual": 4.621303340002214e-15,
+    "observed_index": 3,
+    "target_index": 3,
+    "minimum_curvature": -0.07452725729360697,
+    "trust_radius": 0.08
+  }
+]

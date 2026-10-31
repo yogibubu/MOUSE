@@ -1,0 +1,348 @@
+{
+  "whole_prediction_workers": [
+    {
+      "molecule": "Criegee_Intermediate",
+      "subset": "independent",
+      "compact_nao": 14,
+      "complete": true,
+      "whole_process_resources": {
+        "cpu_user_seconds": 30.1,
+        "cpu_system_seconds": 2.25,
+        "peak_rss_kib": 580512.0,
+        "elapsed_including_queue_seconds": 14.31
+      },
+      "df_t_ground_cost": {
+        "seconds": 2.2032069680280983,
+        "nao": 87
+      },
+      "reference_tda_costs": [
+        {
+          "seconds": 4.410807243955787,
+          "roots": 2,
+          "symmetry": "A\""
+        },
+        {
+          "seconds": 3.9020803659805097,
+          "roots": 2,
+          "symmetry": "A'"
+        }
+      ],
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "1552f01f4d871e27226561ca8d78da77ac697ca2493bf493add53d72efd8ad39",
+        "feature_count": 105,
+        "seconds": 1.5168514020042494,
+        "energy_offset": 0.0,
+        "excited_reference_energies_used": false,
+        "profile": "full-ao-pair-v1",
+        "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+      },
+      "reference_labels_used": false,
+      "wall_after_lock_and_import_seconds": 13.656922817230225,
+      "clock_scope": "filesystem timestamps of execution record immediately after compute-lock acquisition and final prediction ledger; excludes import and queue time",
+      "dft_ground_reused_from_earlier_attempt": false
+    },
+    {
+      "molecule": "Cyclobutadiene",
+      "subset": "independent",
+      "compact_nao": 20,
+      "complete": true,
+      "whole_process_resources": {
+        "cpu_user_seconds": 31.95,
+        "cpu_system_seconds": 1.59,
+        "peak_rss_kib": 936920.0,
+        "elapsed_including_queue_seconds": 15.37
+      },
+      "df_t_ground_cost": {
+        "seconds": 4.101333481026813,
+        "nao": 128
+      },
+      "reference_tda_costs": [
+        {
+          "seconds": 10.500144882011227,
+          "roots": 2,
+          "symmetry": "B1g"
+        }
+      ],
+      "full_response_calibration": null,
+      "reference_labels_used": false,
+      "wall_after_lock_and_import_seconds": 14.753916501998901,
+      "clock_scope": "filesystem timestamps of execution record immediately after compute-lock acquisition and final prediction ledger; excludes import and queue time",
+      "dft_ground_reused_from_earlier_attempt": false
+    },
+    {
+      "molecule": "Benzoxadiazole",
+      "subset": "independent",
+      "compact_nao": 40,
+      "complete": true,
+      "whole_process_resources": {
+        "cpu_user_seconds": 501.55,
+        "cpu_system_seconds": 13.89,
+        "peak_rss_kib": 4627000.0,
+        "elapsed_including_queue_seconds": 249.72
+      },
+      "df_t_ground_cost": {
+        "seconds": 38.12977534701349,
+        "nao": 243
+      },
+      "reference_tda_costs": [
+        {
+          "seconds": 73.35866820899537,
+          "roots": 2,
+          "symmetry": "B2"
+        }
+      ],
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "36d5a9a588e164a2f2cd760e7fe6618fa1269491f740293308ed8a59320483f5",
+        "feature_count": 820,
+        "seconds": 77.17388356494484,
+        "energy_offset": 0.0,
+        "excited_reference_energies_used": false,
+        "profile": "full-ao-pair-v1",
+        "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+      },
+      "reference_labels_used": false,
+      "wall_after_lock_and_import_seconds": 249.052592754364,
+      "clock_scope": "filesystem timestamps of execution record immediately after compute-lock acquisition and final prediction ledger; excludes import and queue time",
+      "dft_ground_reused_from_earlier_attempt": false
+    },
+    {
+      "molecule": "Hexatriene",
+      "subset": "independent",
+      "compact_nao": 32,
+      "complete": true,
+      "whole_process_resources": {
+        "cpu_user_seconds": 237.82,
+        "cpu_system_seconds": 6.62,
+        "peak_rss_kib": 2965132.0,
+        "elapsed_including_queue_seconds": 116.28
+      },
+      "df_t_ground_cost": {
+        "seconds": 21.36935039103264,
+        "nao": 210
+      },
+      "reference_tda_costs": [
+        {
+          "seconds": 45.07469281798694,
+          "roots": 2,
+          "symmetry": "Bu"
+        }
+      ],
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "7bd59b8a7899e5c0810a6d076e97cbb377c52eed4701907f2ed87a131b214d21",
+        "feature_count": 528,
+        "seconds": 36.354257225000765,
+        "energy_offset": 0.0,
+        "excited_reference_energies_used": false,
+        "profile": "full-ao-pair-v1",
+        "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+      },
+      "reference_labels_used": false,
+      "wall_after_lock_and_import_seconds": 115.60134696960449,
+      "clock_scope": "filesystem timestamps of execution record immediately after compute-lock acquisition and final prediction ledger; excludes import and queue time",
+      "dft_ground_reused_from_earlier_attempt": false
+    },
+    {
+      "molecule": "Ammonia",
+      "subset": "independent",
+      "compact_nao": 7,
+      "complete": true,
+      "whole_process_resources": {
+        "cpu_user_seconds": 2.74,
+        "cpu_system_seconds": 0.33,
+        "peak_rss_kib": 296820.0,
+        "elapsed_including_queue_seconds": 100.85
+      },
+      "df_t_ground_cost": {
+        "seconds": 0.5103610180085525,
+        "nao": 50
+      },
+      "reference_tda_costs": [
+        {
+          "seconds": 0.8816332930000499,
+          "roots": 2,
+          "symmetry": "A'"
+        }
+      ],
+      "full_response_calibration": null,
+      "reference_labels_used": false,
+      "wall_after_lock_and_import_seconds": 0.9939942359924316,
+      "clock_scope": "filesystem timestamps of execution record immediately after compute-lock acquisition and final prediction ledger; excludes import and queue time",
+      "dft_ground_reused_from_earlier_attempt": true
+    },
+    {
+      "molecule": "Furofuran",
+      "subset": "independent_challenge",
+      "compact_nao": 36,
+      "complete": true,
+      "whole_process_resources": {
+        "cpu_user_seconds": 532.8,
+        "cpu_system_seconds": 10.88,
+        "peak_rss_kib": 3436656.0,
+        "elapsed_including_queue_seconds": 433.75
+      },
+      "df_t_ground_cost": {
+        "seconds": 25.570603331027087,
+        "nao": 220
+      },
+      "reference_tda_costs": [
+        {
+          "seconds": 52.613615197944455,
+          "roots": 2,
+          "symmetry": "Bu"
+        },
+        {
+          "seconds": 49.07479817501735,
+          "roots": 2,
+          "symmetry": "Ag"
+        }
+      ],
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "a50769679b77082ec58be5c915a40da14e575e8912b4750043f6de66279bd54d",
+        "feature_count": 666,
+        "seconds": 50.16189569502603,
+        "energy_offset": 0.0,
+        "excited_reference_energies_used": false,
+        "profile": "full-ao-pair-v1",
+        "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+      },
+      "reference_labels_used": false,
+      "wall_after_lock_and_import_seconds": 253.83259677886963,
+      "clock_scope": "filesystem timestamps of execution record immediately after compute-lock acquisition and final prediction ledger; excludes import and queue time",
+      "dft_ground_reused_from_earlier_attempt": false
+    }
+  ],
+  "existing_cost_cohort_preparation": [
+    {
+      "molecule": "nitroxyl",
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "d52ccdf04f07f85e22892632d6ed3a5edc7616dbe55a95e32cc5c57ef3c3c56c",
+        "feature_count": 45,
+        "seconds": 1.4680384000530466,
+        "scalar_energy_offset": 0.0,
+        "reference_density": "DFT frozen core plus embedded native GFN2 ground valence density",
+        "excited_reference_energies_used": false,
+        "scope": "vertical-only complete AO-pair response diagnostic"
+      },
+      "dft_ground": null,
+      "total_end_to_end_preparation_seconds": null,
+      "limitation": "archived checkpoints reused; missing whole-preparation timing is unknown, never zero; calibration timings may originate from earlier runtime/threads and are not rescaled"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "e77f25334d9d920250b6f88f9f74e838cb227a495b86a888886373851c851c84",
+        "feature_count": 136,
+        "seconds": 1.6864638249971904,
+        "energy_offset": 0.0,
+        "excited_reference_energies_used": false,
+        "profile": "full-ao-pair-v1",
+        "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+      },
+      "dft_ground": null,
+      "total_end_to_end_preparation_seconds": null,
+      "limitation": "archived checkpoints reused; missing whole-preparation timing is unknown, never zero; calibration timings may originate from earlier runtime/threads and are not rescaled"
+    },
+    {
+      "molecule": "acetone",
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "4c5e43502c1b7793900645e4e78c67c4878ee705dc0508543b283461db41575c",
+        "feature_count": 253,
+        "seconds": 4.615263394021895,
+        "energy_offset": 0.0,
+        "excited_reference_energies_used": false,
+        "profile": "full-ao-pair-v1",
+        "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+      },
+      "dft_ground": null,
+      "total_end_to_end_preparation_seconds": null,
+      "limitation": "archived checkpoints reused; missing whole-preparation timing is unknown, never zero; calibration timings may originate from earlier runtime/threads and are not rescaled"
+    },
+    {
+      "molecule": "Furan",
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "b7a5fd8aed8bc4924b41dde6eda023328aaccd0fe474807192aecd348231118d",
+        "feature_count": 300,
+        "seconds": 16.825437932042405,
+        "energy_offset": 0.0,
+        "excited_reference_energies_used": false,
+        "profile": "full-ao-pair-v1",
+        "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+      },
+      "dft_ground": {
+        "request": {
+          "plan_sha256": "81c6800b91bd51104038402c2fb949aa5cf255af40a0a3ba29ac92f384528bba",
+          "geometry_sha256": "81569196e1f0a100f68aaefd07672141d6835be944bfb27faac44d3194e3dc92"
+        },
+        "host": "oracle.sns.it",
+        "seconds": 8.914012452005409,
+        "nao": 151,
+        "converged": true,
+        "point_group": "C2v"
+      },
+      "total_end_to_end_preparation_seconds": null,
+      "limitation": "archived checkpoints reused; missing whole-preparation timing is unknown, never zero; calibration timings may originate from earlier runtime/threads and are not rescaled"
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "f4795cffc34e7fd2c03a8fb64701f1c9a4571d900cf6ab237c4fc85d40392171",
+        "feature_count": 351,
+        "seconds": 26.074625901004765,
+        "energy_offset": 0.0,
+        "excited_reference_energies_used": false,
+        "profile": "full-ao-pair-v1",
+        "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+      },
+      "dft_ground": {
+        "request": {
+          "plan_sha256": "81c6800b91bd51104038402c2fb949aa5cf255af40a0a3ba29ac92f384528bba",
+          "geometry_sha256": "0a0f04c43efea6cff33c9bd5ffd018c9adb119e5c7d5fd1cad07d3757fa980e9"
+        },
+        "host": "oracle.sns.it",
+        "seconds": 15.488575608993415,
+        "nao": 169,
+        "converged": true,
+        "point_group": "C2v"
+      },
+      "total_end_to_end_preparation_seconds": null,
+      "limitation": "archived checkpoints reused; missing whole-preparation timing is unknown, never zero; calibration timings may originate from earlier runtime/threads and are not rescaled"
+    },
+    {
+      "molecule": "Phthalimide",
+      "full_response_calibration": {
+        "host": "oracle.sns.it",
+        "request_hash": "be91ea8d7c416b75151899957e361042b2618482bc17041d98a849a85d516d08",
+        "feature_count": 1225,
+        "seconds": 181.82864375197096,
+        "energy_offset": 0.0,
+        "excited_reference_energies_used": false,
+        "profile": "full-ao-pair-v1",
+        "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+      },
+      "dft_ground": {
+        "request": {
+          "plan_sha256": "81c6800b91bd51104038402c2fb949aa5cf255af40a0a3ba29ac92f384528bba",
+          "geometry_sha256": "305717ae0036d643df96c6864a0acac55c1a9e5e3dce8c6b05eed1e4a685da05"
+        },
+        "host": "oracle.sns.it",
+        "seconds": 71.38631776999682,
+        "nao": 298,
+        "converged": true,
+        "point_group": "C2v"
+      },
+      "total_end_to_end_preparation_seconds": null,
+      "limitation": "archived checkpoints reused; missing whole-preparation timing is unknown, never zero; calibration timings may originate from earlier runtime/threads and are not rescaled"
+    }
+  ],
+  "accounting": "Whole-process RSS includes reference preparation; per-property prepared-surface timings exclude it and must be shown separately. Queue wait is not electronic calculation time.",
+  "scope": "same common DFT/FQ preparation may be shared; OO reference-transition preparation is an additional stage compared with energy-only TDA-Q"
+}

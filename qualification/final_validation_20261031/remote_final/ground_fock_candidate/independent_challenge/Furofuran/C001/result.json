@@ -1,0 +1,18 @@
+{
+  "status": "matched",
+  "molecule": "Furofuran",
+  "id": "C001",
+  "rank": 1,
+  "excitation_ev": 5.408384584063723,
+  "parent_gaps_ev": [
+    5.886601867978842,
+    4.930167300148604
+  ],
+  "residual": 6.41912621937961e-11,
+  "fidelity": [
+    0.9959482911440485,
+    0.9363059587219669
+  ],
+  "energy_labels_used": false,
+  "model_fingerprint": "34f11ba2cf9c9d3749534bf30a7216543adf746e24827622d6cace52ffcc3840"
+}

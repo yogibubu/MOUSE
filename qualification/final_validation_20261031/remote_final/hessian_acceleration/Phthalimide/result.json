@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "wall_seconds": 97.08092150901211,
+  "cpu_seconds": 161.32712363299999,
+  "peak_rss_kib": 1161368,
+  "energy_hartree": -30.566494618378094,
+  "gradient_max": 0.046629112822640484,
+  "residual": 8.617052559420468e-13,
+  "hessian_shape": [
+    48,
+    48
+  ],
+  "hessian_symmetry_error": 0.0,
+  "model_fingerprint": "2d8e35091f65871435cfb88f1e96b918400ee7b6d8539151395b1147d81ead96",
+  "source_sha256": {
+    "nonlocal_response.py": "7fe7a0e07cb86c912efc27b595b70114354de7b1dc5f107e3022f0cae6957ae1",
+    "multicsf_surface.py": "923f0ed850486c8bec541c19bef75946a01895e79dcc6161dc5f1c39d162c326",
+    "multicsf_nuclear.py": "388af9f672a1897105cdbf6631db60c00defd62ac04752e9f430c260e6abcd2a",
+    "deltascf_analytic_hessian.py": "e2d4ace4d696b23d45c9778de96374c2047e6ff4bd96199a50b80192d639c44d"
+  },
+  "profiled": true
+}

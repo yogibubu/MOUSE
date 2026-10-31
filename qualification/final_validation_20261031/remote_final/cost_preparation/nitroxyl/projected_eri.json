@@ -1,0 +1,8 @@
+{
+  "source": "reconstruction of missing projected ERI only",
+  "reference_sha256": "e977e9a8c1588d74985762f1e57c2c7ee2e8cd81b7c46797325ced449455aab9",
+  "embedding_sha256": "a86a39574cec5f0bcac6b7ab974d23074730031a5df56770d453515781d464b2",
+  "seconds": 0.1258347979746759,
+  "scf_calls": 0,
+  "source_sha256": "8401d59a438df5046d8bb7729b122b0805402a6adf282312a1ae5caf8920a534"
+}

@@ -1,0 +1,908 @@
+[
+  {
+    "iteration": 0,
+    "energy": -27.801472250408924,
+    "residual": 0.0332535619231139,
+    "fidelity": [
+      0.9768289140570277,
+      0.8482760084569868
+    ]
+  },
+  {
+    "iteration": 1,
+    "energy": -27.803513466672165,
+    "residual": 0.03179421976588208,
+    "fidelity": [
+      0.9749384967373856,
+      0.8525818060527826
+    ]
+  },
+  {
+    "iteration": 2,
+    "energy": -27.803912935070045,
+    "residual": 0.02311288318882608,
+    "fidelity": [
+      0.974123281872049,
+      0.8515764685477439
+    ]
+  },
+  {
+    "iteration": 3,
+    "energy": -27.80398214825815,
+    "residual": 0.02574066076169074,
+    "fidelity": [
+      0.9740369235535048,
+      0.8517108986266683
+    ]
+  },
+  {
+    "iteration": 4,
+    "energy": -27.8040726126682,
+    "residual": 0.0252289731560895,
+    "fidelity": [
+      0.9739149021537754,
+      0.8518995484648543
+    ]
+  },
+  {
+    "iteration": 5,
+    "energy": -27.80457755024817,
+    "residual": 0.02228145701938328,
+    "fidelity": [
+      0.9732375342001126,
+      0.8530359657888347
+    ]
+  },
+  {
+    "iteration": 6,
+    "energy": -27.804808935380695,
+    "residual": 0.023823009863758765,
+    "fidelity": [
+      0.9729033680727719,
+      0.8536089940427731
+    ]
+  },
+  {
+    "iteration": 7,
+    "energy": -27.80497304434869,
+    "residual": 0.022848317738777508,
+    "fidelity": [
+      0.9726586081027606,
+      0.85405143069856
+    ]
+  },
+  {
+    "iteration": 8,
+    "energy": -27.80513446531599,
+    "residual": 0.022795732698143455,
+    "fidelity": [
+      0.9724098247232809,
+      0.8545016752144856
+    ]
+  },
+  {
+    "iteration": 9,
+    "energy": -27.805314090696726,
+    "residual": 0.022668957461743425,
+    "fidelity": [
+      0.972119884578747,
+      0.855005692731104
+    ]
+  },
+  {
+    "iteration": 10,
+    "energy": -27.805515507634773,
+    "residual": 0.02187345112212821,
+    "fidelity": [
+      0.9717749656908585,
+      0.8555726987325571
+    ]
+  },
+  {
+    "iteration": 11,
+    "energy": -27.805733979666666,
+    "residual": 0.021367182005168798,
+    "fidelity": [
+      0.9713734468835434,
+      0.8561939123853465
+    ]
+  },
+  {
+    "iteration": 12,
+    "energy": -27.805960915801023,
+    "residual": 0.0198384879495537,
+    "fidelity": [
+      0.9709209860852062,
+      0.8568515686335811
+    ]
+  },
+  {
+    "iteration": 13,
+    "energy": -27.806186689056517,
+    "residual": 0.01813917518752478,
+    "fidelity": [
+      0.9704276777345006,
+      0.8575244936445875
+    ]
+  },
+  {
+    "iteration": 14,
+    "energy": -27.806402491413543,
+    "residual": 0.01699110069020934,
+    "fidelity": [
+      0.9699060410914653,
+      0.8581918557947478
+    ]
+  },
+  {
+    "iteration": 15,
+    "energy": -27.806601409561637,
+    "residual": 0.015939068557792244,
+    "fidelity": [
+      0.9693694839084583,
+      0.8588355170975537
+    ]
+  },
+  {
+    "iteration": 16,
+    "energy": -27.8067788523402,
+    "residual": 0.014455226581682468,
+    "fidelity": [
+      0.9688311639172049,
+      0.8594412070809018
+    ]
+  },
+  {
+    "iteration": 17,
+    "energy": -27.806932502310907,
+    "residual": 0.013019777837158507,
+    "fidelity": [
+      0.9683032111934111,
+      0.8599987839901363
+    ]
+  },
+  {
+    "iteration": 18,
+    "energy": -27.80706195684754,
+    "residual": 0.011694050476949188,
+    "fidelity": [
+      0.9677963486674931,
+      0.860501791294076
+    ]
+  },
+  {
+    "iteration": 19,
+    "energy": -27.807168175028828,
+    "residual": 0.010671945592694786,
+    "fidelity": [
+      0.9673201577464058,
+      0.8609463271729991
+    ]
+  },
+  {
+    "iteration": 20,
+    "energy": -27.807252774583503,
+    "residual": 0.00933217813589286,
+    "fidelity": [
+      0.9668847036797352,
+      0.8613288804091453
+    ]
+  },
+  {
+    "iteration": 21,
+    "energy": -27.807317126562104,
+    "residual": 0.008487204905509025,
+    "fidelity": [
+      0.9665051646161579,
+      0.8616422058969346
+    ]
+  },
+  {
+    "iteration": 22,
+    "energy": -27.807362232761374,
+    "residual": 0.007616591572959526,
+    "fidelity": [
+      0.9662039501655445,
+      0.8618748164265178
+    ]
+  },
+  {
+    "iteration": 23,
+    "energy": -27.80739506625316,
+    "residual": 0.0070083123391080195,
+    "fidelity": [
+      0.9659596112392452,
+      0.8620529130616008
+    ]
+  },
+  {
+    "iteration": 24,
+    "energy": -27.807422926728684,
+    "residual": 0.0065462821573510285,
+    "fidelity": [
+      0.9657297116164755,
+      0.8622146474954858
+    ]
+  },
+  {
+    "iteration": 25,
+    "energy": -27.807446453055306,
+    "residual": 0.005831367837124933,
+    "fidelity": [
+      0.9655143345549109,
+      0.8623609318664964
+    ]
+  },
+  {
+    "iteration": 26,
+    "energy": -27.80746632952883,
+    "residual": 0.005311060624326367,
+    "fidelity": [
+      0.9653126010131399,
+      0.8624933937571352
+    ]
+  },
+  {
+    "iteration": 27,
+    "energy": -27.80748307769261,
+    "residual": 0.0047814660552013164,
+    "fidelity": [
+      0.9651245914229625,
+      0.8626128113524155
+    ]
+  },
+  {
+    "iteration": 28,
+    "energy": -27.807497168353102,
+    "residual": 0.0042955504976542064,
+    "fidelity": [
+      0.9649504432311152,
+      0.8627198418709083
+    ]
+  },
+  {
+    "iteration": 29,
+    "energy": -27.807509039798063,
+    "residual": 0.00388457124282204,
+    "fidelity": [
+      0.9647900657858164,
+      0.8628152188099757
+    ]
+  },
+  {
+    "iteration": 30,
+    "energy": -27.807519096905008,
+    "residual": 0.003295571079696624,
+    "fidelity": [
+      0.9646430344333691,
+      0.8628997960521175
+    ]
+  },
+  {
+    "iteration": 31,
+    "energy": -27.807527709333364,
+    "residual": 0.0032189440856719236,
+    "fidelity": [
+      0.9645085476284666,
+      0.8629745422718326
+    ]
+  },
+  {
+    "iteration": 32,
+    "energy": -27.8075352125418,
+    "residual": 0.0031802409382957354,
+    "fidelity": [
+      0.9643853989060192,
+      0.863040531393725
+    ]
+  },
+  {
+    "iteration": 33,
+    "energy": -27.80754190976303,
+    "residual": 0.0031320421183601175,
+    "fidelity": [
+      0.9642719629260617,
+      0.8630989368620737
+    ]
+  },
+  {
+    "iteration": 34,
+    "energy": -27.807548072168416,
+    "residual": 0.0030991610924076176,
+    "fidelity": [
+      0.964166220135876,
+      0.8631510183498703
+    ]
+  },
+  {
+    "iteration": 35,
+    "energy": -27.80755393509139,
+    "residual": 0.0029647288112584053,
+    "fidelity": [
+      0.9640658511825031,
+      0.8631980850484998
+    ]
+  },
+  {
+    "iteration": 36,
+    "energy": -27.807559688689302,
+    "residual": 0.002848540056391633,
+    "fidelity": [
+      0.9639684316577508,
+      0.8632414207767197
+    ]
+  },
+  {
+    "iteration": 37,
+    "energy": -27.807565461293237,
+    "residual": 0.0026874005710199452,
+    "fidelity": [
+      0.9638717660966372,
+      0.8632821530442547
+    ]
+  },
+  {
+    "iteration": 38,
+    "energy": -27.807571292071593,
+    "residual": 0.0025099445145645846,
+    "fidelity": [
+      0.9637744430137568,
+      0.863321028842361
+    ]
+  },
+  {
+    "iteration": 39,
+    "energy": -27.807577079748107,
+    "residual": 0.002346713422892603,
+    "fidelity": [
+      0.9636768806575033,
+      0.8633579794082723
+    ]
+  },
+  {
+    "iteration": 40,
+    "energy": -27.807582432533817,
+    "residual": 0.0021845357631384565,
+    "fidelity": [
+      0.9635841549201521,
+      0.8633909492438311
+    ]
+  },
+  {
+    "iteration": 41,
+    "energy": -27.80758595082703,
+    "residual": 0.002072114905572576,
+    "fidelity": [
+      0.9635180322012581,
+      0.8634112142370625
+    ]
+  },
+  {
+    "iteration": 42,
+    "energy": -27.807587954759626,
+    "residual": 0.0020475071521325596,
+    "fidelity": [
+      0.9635004307922215,
+      0.8634239840221685
+    ]
+  },
+  {
+    "iteration": 43,
+    "energy": -27.807593093938234,
+    "residual": 0.0019155430563068993,
+    "fidelity": [
+      0.9634330142630114,
+      0.8634535058997033
+    ]
+  },
+  {
+    "iteration": 44,
+    "energy": -27.807598574996852,
+    "residual": 0.0017541425439931584,
+    "fidelity": [
+      0.963355468479339,
+      0.8634877269197314
+    ]
+  },
+  {
+    "iteration": 45,
+    "energy": -27.80760398293087,
+    "residual": 0.0016010106412823722,
+    "fidelity": [
+      0.9632748519442237,
+      0.8635236276790867
+    ]
+  },
+  {
+    "iteration": 46,
+    "energy": -27.80760908236311,
+    "residual": 0.001435845314884489,
+    "fidelity": [
+      0.9631966009592646,
+      0.8635585093181022
+    ]
+  },
+  {
+    "iteration": 47,
+    "energy": -27.80761380174136,
+    "residual": 0.0012473350922410174,
+    "fidelity": [
+      0.9631241614835417,
+      0.8635902431441469
+    ]
+  },
+  {
+    "iteration": 48,
+    "energy": -27.80761380174136,
+    "residual": 0.0012473350922410174,
+    "fidelity": [
+      0.9631241614835417,
+      0.8635902431441469
+    ],
+    "unrestricted_newton_norm": 0.7143550390284901,
+    "minimum_absolute_curvature": 1.5013646663661938e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 49,
+    "energy": -27.807625520766692,
+    "residual": 0.0007167819225851492,
+    "fidelity": [
+      0.9628300099084798,
+      0.863716157614813
+    ],
+    "unrestricted_newton_norm": 1.4731231533992737,
+    "minimum_absolute_curvature": 1.1152082653311242e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 50,
+    "energy": -27.807629384049044,
+    "residual": 0.000737287386374207,
+    "fidelity": [
+      0.962644373257988,
+      0.8637851477981772
+    ],
+    "unrestricted_newton_norm": 1.4564239464181503,
+    "minimum_absolute_curvature": 1.353496428092831e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 51,
+    "energy": -27.80763414273397,
+    "residual": 0.0007389304845785905,
+    "fidelity": [
+      0.9625782212730649,
+      0.8638165065764247
+    ],
+    "unrestricted_newton_norm": 1.2444110910754558,
+    "minimum_absolute_curvature": 1.9775222111529503e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 52,
+    "energy": -27.807636778728693,
+    "residual": 0.0006703895477136985,
+    "fidelity": [
+      0.962563892428201,
+      0.8638186435309094
+    ],
+    "unrestricted_newton_norm": 1.839969669509297,
+    "minimum_absolute_curvature": 1.612226272310539e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 53,
+    "energy": -27.807639669178293,
+    "residual": 0.0006327496177894339,
+    "fidelity": [
+      0.962553788037317,
+      0.8638151859540671
+    ],
+    "unrestricted_newton_norm": 2.53451377250749,
+    "minimum_absolute_curvature": 1.3875627331121729e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 54,
+    "energy": -27.807642878558433,
+    "residual": 0.0006190762237717269,
+    "fidelity": [
+      0.9625470595366107,
+      0.8638068561746041
+    ],
+    "unrestricted_newton_norm": 3.2679847749973665,
+    "minimum_absolute_curvature": 1.254747447727838e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 55,
+    "energy": -27.807646454966672,
+    "residual": 0.0006145578308077965,
+    "fidelity": [
+      0.9625431206523942,
+      0.8637940238735747
+    ],
+    "unrestricted_newton_norm": 3.9741645077645598,
+    "minimum_absolute_curvature": 1.1861684184019839e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 56,
+    "energy": -27.807648467978815,
+    "residual": 0.0005695865425893893,
+    "fidelity": [
+      0.9625436672330533,
+      0.8637855391273401
+    ],
+    "unrestricted_newton_norm": 9.262273258763344,
+    "minimum_absolute_curvature": 5.461904538956992e-06,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 57,
+    "energy": -27.80765056132126,
+    "residual": 0.000536437879816994,
+    "fidelity": [
+      0.9625444415336543,
+      0.8637764251508084
+    ],
+    "unrestricted_newton_norm": 114.68492068187166,
+    "minimum_absolute_curvature": 4.710974267626921e-07,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 58,
+    "energy": -27.807647688628805,
+    "residual": 0.0005610262312847489,
+    "fidelity": [
+      0.9625286935264558,
+      0.863799952692188
+    ],
+    "unrestricted_newton_norm": 55.09089030802009,
+    "minimum_absolute_curvature": 9.100323142714623e-07,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 59,
+    "energy": -27.807649688603213,
+    "residual": 0.0005286160200334746,
+    "fidelity": [
+      0.9625308108720131,
+      0.8637906503380501
+    ],
+    "unrestricted_newton_norm": 11.868919078148162,
+    "minimum_absolute_curvature": 4.4987261760623136e-06,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 60,
+    "energy": -27.80764791190773,
+    "residual": 0.000501418742853928,
+    "fidelity": [
+      0.9625271505424015,
+      0.8638011115485638
+    ],
+    "unrestricted_newton_norm": 6.667289989128313,
+    "minimum_absolute_curvature": 7.58351255718883e-06,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 61,
+    "energy": -27.807646192173237,
+    "residual": 0.0004790536509066889,
+    "fidelity": [
+      0.9625236324686354,
+      0.8638107831003389
+    ],
+    "unrestricted_newton_norm": 4.800300214879111,
+    "minimum_absolute_curvature": 9.924721718245747e-06,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 62,
+    "energy": -27.80764455043324,
+    "residual": 0.0004539265758510085,
+    "fidelity": [
+      0.9625202289789511,
+      0.8638196818767788
+    ],
+    "unrestricted_newton_norm": 3.8329656421438103,
+    "minimum_absolute_curvature": 1.1655558916910876e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 63,
+    "energy": -27.807643000089065,
+    "residual": 0.0004347675827879997,
+    "fidelity": [
+      0.9625169254213396,
+      0.8638278277338962
+    ],
+    "unrestricted_newton_norm": 3.2357374708821354,
+    "minimum_absolute_curvature": 1.2884138642807987e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 64,
+    "energy": -27.80764154970851,
+    "residual": 0.0004142533402393592,
+    "fidelity": [
+      0.9625137139322986,
+      0.8638352415774057
+    ],
+    "unrestricted_newton_norm": 2.825042873833515,
+    "minimum_absolute_curvature": 1.3700061343997044e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 65,
+    "energy": -27.80764020469173,
+    "residual": 0.00039390951451510897,
+    "fidelity": [
+      0.9625105901443332,
+      0.8638419442584226
+    ],
+    "unrestricted_newton_norm": 2.5198956598643734,
+    "minimum_absolute_curvature": 1.417871208974407e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 66,
+    "energy": -27.807638968324007,
+    "residual": 0.00037349140686874875,
+    "fidelity": [
+      0.9625075513895258,
+      0.8638479559091428
+    ],
+    "unrestricted_newton_norm": 2.2785479295802813,
+    "minimum_absolute_curvature": 1.4384267356754345e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 67,
+    "energy": -27.80763784246819,
+    "residual": 0.0003549752283164296,
+    "fidelity": [
+      0.9625045957158064,
+      0.8638532955462187
+    ],
+    "unrestricted_newton_norm": 2.0768418361115932,
+    "minimum_absolute_curvature": 1.4371881352404671e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 68,
+    "energy": -27.807636828032464,
+    "residual": 0.0003327356309854975,
+    "fidelity": [
+      0.9625017213677668,
+      0.8638579808454675
+    ],
+    "unrestricted_newton_norm": 1.8993963106815959,
+    "minimum_absolute_curvature": 1.4189312420444925e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 69,
+    "energy": -27.807635925292825,
+    "residual": 0.00030957023459668144,
+    "fidelity": [
+      0.96249892655161,
+      0.8638620280223317
+    ],
+    "unrestricted_newton_norm": 1.7355525244453303,
+    "minimum_absolute_curvature": 1.3878157046815836e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 70,
+    "energy": -27.807635134117213,
+    "residual": 0.000370574905756827,
+    "fidelity": [
+      0.9624962093854492,
+      0.8638654517727569
+    ],
+    "unrestricted_newton_norm": 1.5773447257481574,
+    "minimum_absolute_curvature": 1.3474796830063637e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 71,
+    "energy": -27.807634454121235,
+    "residual": 0.00039049008157147544,
+    "fidelity": [
+      0.9624935679870449,
+      0.8638682652367953
+    ],
+    "unrestricted_newton_norm": 1.4184391069597857,
+    "minimum_absolute_curvature": 1.3011147340224361e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 72,
+    "energy": -27.80763388477368,
+    "residual": 0.0003672208582733128,
+    "fidelity": [
+      0.9624910006694506,
+      0.8638704799627275
+    ],
+    "unrestricted_newton_norm": 1.253596395300867,
+    "minimum_absolute_curvature": 1.2515265526464536e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 73,
+    "energy": -27.80763342546352,
+    "residual": 0.0003508910624660294,
+    "fidelity": [
+      0.9624885062249717,
+      0.863872105861242
+    ],
+    "unrestricted_newton_norm": 1.0784652734374018,
+    "minimum_absolute_curvature": 1.2011860417075992e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 74,
+    "energy": -27.807633249425884,
+    "residual": 0.00033216897184368277,
+    "fidelity": [
+      0.96248775847363,
+      0.8638726542554224
+    ],
+    "unrestricted_newton_norm": 0.8452916219121156,
+    "minimum_absolute_curvature": 1.3648242363542645e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 75,
+    "energy": -27.807633102690673,
+    "residual": 0.0003157831949759718,
+    "fidelity": [
+      0.9624869548965256,
+      0.8638731221555211
+    ],
+    "unrestricted_newton_norm": 0.6676598567746752,
+    "minimum_absolute_curvature": 1.5174843975317819e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 76,
+    "energy": -27.807632984936767,
+    "residual": 0.0003012131792339824,
+    "fidelity": [
+      0.9624861043840726,
+      0.8638735050524649
+    ],
+    "unrestricted_newton_norm": 0.5267830020172649,
+    "minimum_absolute_curvature": 1.6599755374038664e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 77,
+    "energy": -27.807632895808503,
+    "residual": 0.0002879776616927575,
+    "fidelity": [
+      0.9624852149005854,
+      0.8638737998691638
+    ],
+    "unrestricted_newton_norm": 0.4117501644023596,
+    "minimum_absolute_curvature": 1.7930626773184104e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 78,
+    "energy": -27.807632834922003,
+    "residual": 0.00027523891498523897,
+    "fidelity": [
+      0.962484293683223,
+      0.8638740048064506
+    ],
+    "unrestricted_newton_norm": 0.3160346495303778,
+    "minimum_absolute_curvature": 1.91747109022043e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 79,
+    "energy": -27.807632801865665,
+    "residual": 0.0002640397766623775,
+    "fidelity": [
+      0.9624833474079427,
+      0.8638741192934496
+    ],
+    "unrestricted_newton_norm": 0.2360065852979642,
+    "minimum_absolute_curvature": 2.0338910654567587e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 80,
+    "energy": -27.80763282287929,
+    "residual": 0.0002522607876067904,
+    "fidelity": [
+      0.9624812143233299,
+      0.8638746654149265
+    ],
+    "unrestricted_newton_norm": 0.1426210453106087,
+    "minimum_absolute_curvature": 2.128447309218786e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 81,
+    "energy": -27.807633012919396,
+    "residual": 0.00024914649383266725,
+    "fidelity": [
+      0.9624780198480893,
+      0.8638772197058442
+    ],
+    "unrestricted_newton_norm": 0.09104851210317222,
+    "minimum_absolute_curvature": 2.581284851672984e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 82,
+    "energy": -27.80763346427632,
+    "residual": 0.00011573638920092627,
+    "fidelity": [
+      0.9624697723520427,
+      0.8638957459481553
+    ],
+    "unrestricted_newton_norm": 0.03724727110813613,
+    "minimum_absolute_curvature": 4.2825814889254617e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 83,
+    "energy": -27.80763348713908,
+    "residual": 2.6810900442567015e-05,
+    "fidelity": [
+      0.9624806765340018,
+      0.8639025397900262
+    ],
+    "unrestricted_newton_norm": 0.0059006677200918525,
+    "minimum_absolute_curvature": 3.8183377724695194e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 84,
+    "energy": -27.807633488257935,
+    "residual": 1.1586253317592332e-06,
+    "fidelity": [
+      0.9624816534736448,
+      0.8639028275001673
+    ],
+    "unrestricted_newton_norm": 0.00027909080513915664,
+    "minimum_absolute_curvature": 3.6338607004702677e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 85,
+    "energy": -27.807633488258496,
+    "residual": 1.7061938003906806e-09,
+    "fidelity": [
+      0.962481715798516,
+      0.863902867504598
+    ],
+    "unrestricted_newton_norm": 3.834390310734635e-07,
+    "minimum_absolute_curvature": 3.6254301800820455e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 86,
+    "energy": -27.807633488258446,
+    "residual": 6.918104519728384e-15,
+    "fidelity": [
+      0.9624817158570076,
+      0.8639028674867365
+    ]
+  },
+  {
+    "iteration": 87,
+    "energy": -27.807633488258446,
+    "residual": 6.918104519728384e-15,
+    "fidelity": [
+      0.9624817158570076,
+      0.8639028674867365
+    ]
+  }
+]

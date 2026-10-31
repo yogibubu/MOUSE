@@ -1,0 +1,50 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/escape_nuclear_saddle.py", line 45, in <module>
+    with threadpool_limits():run(args.name,args.sid)
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/escape_nuclear_saddle.py", line 31, in run
+    result=minimize(objective,x,jac=True,method='BFGS',callback=callback,options=dict(gtol=3e-5,maxiter=max(1,60-len(history))))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_minimize.py", line 779, in minimize
+    res = _minimize_bfgs(fun, x0, args, jac, callback, **options)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_optimize.py", line 1443, in _minimize_bfgs
+    _line_search_wolfe12(f, myfprime, xk, pk, gfk,
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_optimize.py", line 1172, in _line_search_wolfe12
+    ret = line_search_wolfe1(f, fprime, xk, pk, gfk,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_linesearch.py", line 93, in line_search_wolfe1
+    stp, fval, old_fval = scalar_search_wolfe1(
+                          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_linesearch.py", line 170, in scalar_search_wolfe1
+    stp, phi1, phi0, task = dcsrch(
+                            ^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_dcsrch.py", line 255, in __call__
+    phi1 = self.phi(stp)
+           ^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_linesearch.py", line 84, in phi
+    return f(xk + s*pk, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_differentiable_functions.py", line 394, in fun
+    self._update_fun()
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_differentiable_functions.py", line 362, in _update_fun
+    fx = self._wrapped_fun(self.x)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/_lib/_util.py", line 603, in __call__
+    fx = self.f(np.copy(x), *self.args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_optimize.py", line 80, in __call__
+    self._compute_if_needed(x, *args)
+  File "/home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/optimize/_optimize.py", line 74, in _compute_if_needed
+    fg = self.fun(x, *args)
+         ^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/escape_nuclear_saddle.py", line 25, in objective
+    point=evaluate_multicsf_surface(calc,flat.reshape(-1,3)/ANGSTROM_TO_BOHR,model,reference_result=reference,compute_hessian=False);cache.update(x=flat.copy(),point=point)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_surface.py", line 146, in evaluate_multicsf_surface
+    point=frame.polish(point);e,g,h,*_=frame.evaluate(point);values=np.linalg.eigvalsh(h);residual=float(np.max(abs(g)))
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_frame.py", line 73, in polish
+    if not accepted:raise RuntimeError('frame continuation blocked; checkpoint not accepted')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: frame continuation blocked; checkpoint not accepted

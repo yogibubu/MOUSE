@@ -1,0 +1,53 @@
+         8383489 function calls (8164677 primitive calls) in 96.812 seconds
+
+   Ordered by: cumulative time
+   List reduced from 2290 to 45 due to restriction <45>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.005    0.005   96.997   96.997 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_surface.py:151(evaluate_multicsf_surface)
+        1    0.000    0.000   65.485   65.485 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_surface.py:180(<listcomp>)
+        2    0.005    0.003   65.485   32.743 /local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/complete_phthalimide_hessian.py:13(parent)
+        2    0.015    0.008   65.221   32.611 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_nuclear.py:70(nuclear_response)
+        7    3.946    0.564   56.278    8.040 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py:104(_response_blocks)
+     7798    0.091    0.000   48.489    0.006 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py:143(density_kernel)
+       11    0.017    0.002   45.267    4.115 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py:148(<listcomp>)
+    75542    0.077    0.000   40.648    0.001 /home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/numpy/_core/einsumfunc.py:1057(einsum)
+    75526   38.609    0.001   38.609    0.001 {built-in method numpy._core._multiarray_umath.c_einsum}
+     7184    0.111    0.000   27.304    0.004 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/nonlocal_response.py:157(evaluate)
+     7194    7.108    0.001   25.923    0.004 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/nonlocal_response.py:98(evaluate)
+    14438    0.048    0.000   20.212    0.001 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/nonlocal_response.py:96(moments)
+     7156    1.511    0.000   19.348    0.003 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/nonlocal_response.py:101(response)
+        3    0.002    0.001   18.165    6.055 /local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/complete_phthalimide_hessian.py:22(ground)
+        3    0.009    0.003   18.095    6.032 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/restricted_ground.py:97(restricted_ground_analytic_hessian)
+        7    0.135    0.019   17.680    2.526 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py:47(_fixed_density_geometry)
+     5872    0.046    0.000   17.427    0.003 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_nuclear.py:79(<lambda>)
+      336    5.944    0.018   11.844    0.035 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/molecular_second_response.py:49(_integrals)
+        3    1.943    0.648   10.940    3.647 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_frame.py:43(evaluate)
+        2    0.973    0.486    8.291    4.145 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_nuclear.py:30(nuclear_blocks)
+        1    0.001    0.001    6.403    6.403 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_frame.py:70(polish)
+14410/4810    0.080    0.000    5.532    0.001 /home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/_lib/_util.py:1149(wrapper)
+     4800    0.757    0.000    5.444    0.001 /home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/linalg/_solvers.py:31(solve_sylvester)
+     9600    4.483    0.000    4.597    0.000 /home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/scipy/linalg/_decomp_schur.py:17(schur)
+      336    0.226    0.001    4.180    0.012 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/calculator.py:5192(ground_state_explicit_pair_hvp)
+       16    0.066    0.004    4.107    0.257 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf.py:57(evaluate)
+        3    0.000    0.000    4.106    1.369 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_frame.py:44(<listcomp>)
+      672    3.926    0.006    3.930    0.006 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/_mixed_jet.py:50(__setitem__)
+        8    0.750    0.094    3.733    0.467 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/roks_orbital_response.py:8(orbital_residual_jacobian)
+     1284    0.009    0.000    3.533    0.003 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/restricted_ground.py:120(<lambda>)
+        3    0.127    0.042    3.348    1.116 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_frame.py:27(maps)
+       11    0.001    0.000    3.241    0.295 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py:147(<listcomp>)
+      113    3.222    0.029    3.224    0.029 /home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/numpy/linalg/_linalg.py:1689(svd)
+        3    0.000    0.000    3.218    1.073 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_frame.py:12(_stable_svd)
+      672    0.003    0.000    2.613    0.004 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/basis.py:434(spherical_directional_seconds)
+      672    2.610    0.004    2.610    0.004 {built-in method matrix_gfn2._gfn2_native.context_spherical_directional_seconds}
+        1    0.007    0.007    2.423    2.423 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_frame.py:117(nuclear_response)
+    13286    0.315    0.000    2.394    0.000 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/response.py:107(__call__)
+       16    1.956    0.122    1.957    0.122 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/nonlocal_response.py:102(response_batch)
+      432    0.004    0.000    1.888    0.004 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/calculator.py:5122(_ground_state_directional_derivative_matrices)
+      432    0.129    0.000    1.861    0.004 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/calculator.py:4870(_ground_state_directional_derivative_matrices_sparse)
+        8    0.023    0.003    1.773    0.222 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/deltascf.py:228(batch)
+      330    1.687    0.005    1.711    0.005 /home/enzo/nano-MATRIX-current/.venv/lib/python3.11/site-packages/numpy/_core/numeric.py:1002(tensordot)
+     7828    0.323    0.000    1.341    0.000 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/spin_polarization.py:77(evaluate)
+    50688    1.337    0.000    1.337    0.000 /home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py:42(_density_second)
+
+

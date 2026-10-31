@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "host": "oracle.sns.it",
+  "archive": "evidence_20261031T231010Z.tar.gz",
+  "archive_sha256": "edfd71f404a0897421370f9a5ff5a41c25e09053edbad5249aefef643061ec22",
+  "verified_files": 2904,
+  "large_files_retained_remotely": 199,
+  "snapshot_utc": "20261031T231010Z",
+  "in_progress_snapshot": false
+}

@@ -1,0 +1,5 @@
+{
+  "model_changed": false,
+  "source_sha256": "9520a34134caf888802ebfb815d76553dcdf93fa718181e58082a65c02342421",
+  "reason": "Nearly redundant common/private generators amplify a normalized tangent step. Bound the norm of actual raw retraction coordinates; solve the residual trust problem in that metric. No energy, derivative expression or state gate change."
+}

@@ -1,0 +1,268 @@
+{
+  "schema": "mouse.independent.six.score.v1",
+  "n_attempted": 6,
+  "n_matched": 4,
+  "overall": {
+    "n": 4,
+    "mae": 0.6745855709591084,
+    "mse": -0.6745855709591084,
+    "rmse": 0.9691156614153482,
+    "maxabs": 1.8641993881576069
+  },
+  "families": {
+    "n_pi": {
+      "n": 1,
+      "mae": 0.2903119623780044,
+      "mse": -0.2903119623780044,
+      "rmse": 0.2903119623780044,
+      "maxabs": 0.2903119623780044
+    },
+    "pi_pi": {
+      "n": 3,
+      "mae": 0.8026767738194763,
+      "mse": -0.8026767738194763,
+      "rmse": 1.1064145734913688,
+      "maxabs": 1.8641993881576069
+    },
+    "Rydberg": {
+      "n": 0
+    },
+    "CT": {
+      "n": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "I001",
+      "molecule": "Criegee_Intermediate",
+      "family": "n_pi",
+      "status": "matched",
+      "rank": 1,
+      "excitation_ev": 2.1126880376219956,
+      "residual": 7.546047120499111e-14,
+      "projection_norm": 0.9250907440809996,
+      "seconds": 1.032197337015532,
+      "labels_read": false,
+      "reference_ev": 2.403,
+      "reference_safe": "Y",
+      "partial_double_character": true,
+      "error_ev": -0.2903119623780044,
+      "tda_operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+      "tda_gfn2": {
+        "id": "I001",
+        "molecule": "Criegee_Intermediate",
+        "family": "n_pi",
+        "status": "matched",
+        "parents": [
+          {
+            "profile": "F",
+            "status": "matched",
+            "root": 1,
+            "coherent_transition_overlap": 0.9994918271925624,
+            "margin": 0.9782305163299734,
+            "excitation_ev": 2.31985502826362,
+            "error_ev": -0.08314497173638014
+          },
+          {
+            "profile": "Q",
+            "status": "matched",
+            "root": 1,
+            "coherent_transition_overlap": 0.998473939511548,
+            "margin": 0.9626342786542832,
+            "excitation_ev": 2.6063991173156555,
+            "error_ev": 0.20339911731565552
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0
+      }
+    },
+    {
+      "id": "I002",
+      "molecule": "Criegee_Intermediate",
+      "family": "pi_pi",
+      "status": "matched",
+      "rank": 1,
+      "excitation_ev": 1.850800611842393,
+      "residual": 1.3917469607327426e-14,
+      "projection_norm": 0.8256439907363329,
+      "seconds": 0.3301511120516807,
+      "labels_read": false,
+      "reference_ev": 3.715,
+      "reference_safe": "Y",
+      "partial_double_character": true,
+      "error_ev": -1.8641993881576069,
+      "tda_operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+      "tda_gfn2": {
+        "id": "I002",
+        "molecule": "Criegee_Intermediate",
+        "family": "pi_pi",
+        "status": "matched",
+        "parents": [
+          {
+            "profile": "F",
+            "status": "matched",
+            "root": 2,
+            "coherent_transition_overlap": 0.9780789492049572,
+            "margin": 0.8856272997021669,
+            "excitation_ev": 7.364270914209781,
+            "error_ev": 3.6492709142097812
+          },
+          {
+            "profile": "Q",
+            "status": "matched",
+            "root": 2,
+            "coherent_transition_overlap": 0.942731869744467,
+            "margin": 0.6865903621274264,
+            "excitation_ev": 6.390608308189313,
+            "error_ev": 2.6756083081893127
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0
+      }
+    },
+    {
+      "id": "I003",
+      "molecule": "Cyclobutadiene",
+      "family": "pi_pi",
+      "status": "not_representable",
+      "reason": "compact projection below .7 or effective rank exceeds four",
+      "projection_norm": 0.3159821967104605,
+      "rank": 1,
+      "reference_ev": 3.138,
+      "reference_safe": "Y",
+      "partial_double_character": false,
+      "tda_operator": "not_applicable",
+      "tda_gfn2": {
+        "id": "I003",
+        "status": "not_representable",
+        "reason": "same fixed compact projection gate; no qualified compact model"
+      }
+    },
+    {
+      "id": "I004",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "status": "matched",
+      "rank": 1,
+      "excitation_ev": 4.491158121975504,
+      "residual": 6.794478174532159e-15,
+      "projection_norm": 0.9309306342241154,
+      "seconds": 56.6073704540031,
+      "labels_read": false,
+      "reference_ev": 4.606,
+      "reference_safe": "Y",
+      "partial_double_character": false,
+      "error_ev": -0.11484187802449597,
+      "tda_operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+      "tda_gfn2": {
+        "id": "I004",
+        "molecule": "Benzoxadiazole",
+        "family": "pi_pi",
+        "status": "completed_unassigned",
+        "parents": [
+          {
+            "profile": "F",
+            "status": "matched",
+            "root": 3,
+            "coherent_transition_overlap": 0.9828092260437119,
+            "margin": 0.8387214418844582,
+            "excitation_ev": 5.633800783899581,
+            "error_ev": 1.0278007838995808
+          },
+          {
+            "profile": "Q",
+            "status": "completed_unassigned",
+            "root": 6,
+            "coherent_transition_overlap": 0.6991792950828146,
+            "margin": 0.1488274801955991,
+            "excitation_ev": 4.608934903298167
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0
+      }
+    },
+    {
+      "id": "I005",
+      "molecule": "Hexatriene",
+      "family": "pi_pi",
+      "status": "matched",
+      "rank": 1,
+      "excitation_ev": 4.912010944723675,
+      "residual": 2.6646978894262485e-15,
+      "projection_norm": 0.8446415967423895,
+      "seconds": 11.402196298004128,
+      "labels_read": false,
+      "reference_ev": 5.341000000000001,
+      "reference_safe": "Y",
+      "partial_double_character": false,
+      "error_ev": -0.42898905527632625,
+      "tda_operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+      "tda_gfn2": {
+        "id": "I005",
+        "molecule": "Hexatriene",
+        "family": "pi_pi",
+        "status": "matched",
+        "parents": [
+          {
+            "profile": "F",
+            "status": "matched",
+            "root": 1,
+            "coherent_transition_overlap": 0.9880173461063267,
+            "margin": 0.9063030561939374,
+            "excitation_ev": 6.995209811830117,
+            "error_ev": 1.6542098118301158
+          },
+          {
+            "profile": "Q",
+            "status": "matched",
+            "root": 5,
+            "coherent_transition_overlap": 0.7122619329413877,
+            "margin": 0.07164159760849409,
+            "excitation_ev": 5.319418166453325,
+            "error_ev": -0.02158183354667642
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0
+      }
+    },
+    {
+      "id": "I006",
+      "molecule": "Ammonia",
+      "family": "Rydberg",
+      "status": "not_representable",
+      "reason": "compact projection below .7 or effective rank exceeds four",
+      "projection_norm": 0.4726743807733241,
+      "rank": 1,
+      "reference_ev": 6.588,
+      "reference_safe": "Y",
+      "partial_double_character": false,
+      "tda_operator": "not_applicable",
+      "tda_gfn2": {
+        "id": "I006",
+        "status": "not_representable",
+        "reason": "same fixed compact projection gate; no qualified compact model"
+      }
+    }
+  ],
+  "limitation": "Predeclared state cohort; CT shortfall; representation failures remain in denominator; no parameter refitting"
+}

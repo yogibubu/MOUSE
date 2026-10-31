@@ -1,0 +1,28 @@
+{
+  "started_utc": "2026-10-31T21:42:40.086841+00:00",
+  "source_sha256": {
+    "common.py": "a83daf9481fd20d59c624e7dedf95635c989c5c9e2e22edaab1a9f8342d35c0f",
+    "anchor_energy.py": "393b741946d695453c54097f1b43583b72edc774d734eb588e95bcaecd99d78c",
+    "freeze_independent.py": "0c02e0b012445e3f3b6c7f85998a4acf49b633d140ecfd3b650802c0036d82a1",
+    "geometry.py": "b3c19b040eb70431bab801a7c28a06ebf0efc5b3043af5c246e49b071203937a",
+    "independent.py": "2463720478411754cfa48f33b730acc1bcee779256e3a2426859064641d5cc03",
+    "cost.py": "7700b89704eace00ea2ee51662151e57fb2a05aafa3c04a96dce2ac45ae2b190",
+    "controller.py": "50c4a45087defb8f2896fc1d82742b8db3b30a59ab103b5ed382e41cd7372a5b",
+    "collect.py": "abc26ae4a5a12c1c3eba165513f9635ed37ba1df6446d1e60bd47fc75ba6bbfe",
+    "archive.py": "298b3d199840213c96507b8ef91c1db31a60f0686e09aebe075c2799fd34db2c",
+    "compare_furan.py": "89779f69645840e48b3c5dae86572b969ca97bcb005bb0557e8c3f21519d7d21",
+    "independent_controls.py": "a4970031eb75742c1a660af27498495c56dd1e870ac025f9277225a2c022f93b",
+    "score_independent.py": "6b25a2c7c1ba0383bf56e6a5aa4f8a7c2c503dcd979e25065956ab8a9716d4eb",
+    "postprocess.py": "cb71c5392e4c80289833adbb09caf23672910cbd5ec2d4ab4d808e07924aefd0",
+    "freeze_challenge.py": "fddffe2d82ad916aeb3999e01fc29ceeddf3136f3bc7da268ffd2ae03a540624",
+    "recover_anchor.py": "1a14faafd56d1d8d5d349c7900778315eaebf4fd537e6801a5c9016a75847e11",
+    "remeasure_small_hessian.py": "ecfc7774acb6a7f6020f6949c8c56946310388ebf0a09bcb9e4f6a229f3d01da",
+    "audit_preparation.py": "fc26207bd26f837e3911e8c40be94bc5a8e1d215068331b9c2a2dc62c60c4b45",
+    "freeze_state_challenge.py": "27ac10f8c8b489b8ff6ce0a7ccd12266d3590d226b68233ec338d08e979ff363",
+    "qualify_stationary_modes.py": "e92205cd2880933f5027cba1e9a4a5a5035abd984a557d55df694e2926416337",
+    "tda_operator.py": "8401d59a438df5046d8bb7729b122b0805402a6adf282312a1ae5caf8920a534",
+    "validate_tda_operator.py": "be7b1a988e2df7082b1a75196b37651fa8c2118505201d294c6fcd405a1060cc",
+    "repair_tda_costs.py": "63ec06c8af9a6ccbf59538127f23f59723999bf8675b0ddae69447c2a623584f"
+  },
+  "sealed_labels_read": false
+}

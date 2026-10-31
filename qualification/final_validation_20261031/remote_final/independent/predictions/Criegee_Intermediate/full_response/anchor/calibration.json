@@ -1,0 +1,10 @@
+{
+  "host": "oracle.sns.it",
+  "request_hash": "1552f01f4d871e27226561ca8d78da77ac697ca2493bf493add53d72efd8ad39",
+  "feature_count": 105,
+  "seconds": 1.5168514020042494,
+  "energy_offset": 0.0,
+  "excited_reference_energies_used": false,
+  "profile": "full-ao-pair-v1",
+  "source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad"
+}

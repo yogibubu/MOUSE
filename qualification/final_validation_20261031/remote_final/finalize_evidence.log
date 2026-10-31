@@ -1,0 +1,3 @@
+{"anchors": 6, "scores": {"independent": true, "independent_challenge": true, "independent_state_challenge": true}, "cost": 72, "closure": {"anchors": true, "independent": true, "geometry_attempts": true, "cost": true, "tda_operator": true}}
+{"archive": "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/evidence_20261031T225458Z.tar.gz", "sha256": "bad10c31feaacf72c906aa745f19a8bf9b25faead8f5e5e30328e873bf95b88f", "files": 2690, "remote_large_files": 199}
+

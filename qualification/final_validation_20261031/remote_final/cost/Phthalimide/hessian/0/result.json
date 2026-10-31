@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "molecule": "Phthalimide",
+  "property": "hessian",
+  "repeat": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "natoms": 16,
+  "nao": 49,
+  "rank": 2,
+  "wall_seconds": 42.22432681295322,
+  "cpu_seconds": 56.269294198000004,
+  "process_peak_rss_kib": 1123024,
+  "model_loading_and_ground_setup_seconds": 0.9171347339870408,
+  "total_gradient_included": true,
+  "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+  "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+  "energy_hartree": -30.566494618378094,
+  "residual": 8.617052559420468e-13,
+  "hessian": true
+}

@@ -1,0 +1,18 @@
+{
+  "status": "matched",
+  "molecule": "Benzoxadiazole",
+  "id": "I004",
+  "rank": 1,
+  "excitation_ev": 4.3618977682139795,
+  "parent_gaps_ev": [
+    4.618374050878542,
+    4.105421485549418
+  ],
+  "residual": 1.2763619774288842e-11,
+  "fidelity": [
+    0.9914693361106679,
+    0.9890028050973227
+  ],
+  "energy_labels_used": false,
+  "model_fingerprint": "78cc3a95afcdc58cb1e428a5fe1a2998c325c851ec85a72bfad7086524f7f077"
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "t": 0.125,
+    "status": "accepted",
+    "residual": 9.766618264996085e-10,
+    "fidelity": 0.9761920942429472,
+    "observed_index": 8,
+    "response_fingerprint": "4783ea0fd9350b35f122b2705dfd0d8a1c9b7f93501bce3eee8e773252909287"
+  },
+  {
+    "t_from": 0.125,
+    "t_target": 0.25,
+    "status": "subdivide",
+    "step": 0.125
+  },
+  {
+    "t": 0.1875,
+    "status": "accepted",
+    "residual": 1.4726284428001613e-13,
+    "fidelity": 0.9740466909747894,
+    "observed_index": 8,
+    "response_fingerprint": "d2548686dd50434f5be4174c5b593bdbcc98bf01bbb9329ab9691d5b69df9407"
+  },
+  {
+    "t_from": 0.1875,
+    "t_target": 0.25,
+    "status": "subdivide",
+    "step": 0.0625
+  },
+  {
+    "t": 0.21875,
+    "status": "accepted",
+    "residual": 6.929569765223853e-14,
+    "fidelity": 0.9729710954291612,
+    "observed_index": 7,
+    "response_fingerprint": "f5d451cf72009c34deaaebf9fd4b34cc6ebfa207a1c45b212f052d61bddb6723"
+  },
+  {
+    "t_from": 0.21875,
+    "t_target": 0.25,
+    "status": "subdivide",
+    "step": 0.03125
+  },
+  {
+    "t": 0.234375,
+    "status": "accepted",
+    "residual": 9.388171594293393e-10,
+    "fidelity": 0.9728785210460165,
+    "observed_index": 7,
+    "response_fingerprint": "e189eb0afbd18203c4f75d4e3f1d1e43abacc5feb15b22c61798a64443e438b4"
+  },
+  {
+    "t_from": 0.234375,
+    "t_target": 0.25,
+    "status": "subdivide",
+    "step": 0.015625
+  },
+  {
+    "t": 0.2421875,
+    "status": "accepted",
+    "residual": 6.375675083367116e-10,
+    "fidelity": 0.9732743607300728,
+    "observed_index": 7,
+    "response_fingerprint": "3d305e9594768d93c9edf976b354c0ea77c31649520261c3ec3509dd2308354a"
+  },
+  {
+    "t_from": 0.2421875,
+    "t_target": 0.25,
+    "status": "subdivide",
+    "step": 0.0078125
+  },
+  {
+    "t": 0.24609375,
+    "status": "accepted",
+    "residual": 4.5313991187817537e-10,
+    "fidelity": 0.9738129892981355,
+    "observed_index": 7,
+    "response_fingerprint": "48b501081b33ad09bc6df06978e8b905695122240a482ad1bd513ec39bd97b0f"
+  },
+  {
+    "t_from": 0.24609375,
+    "t_target": 0.25,
+    "status": "subdivide",
+    "step": 0.00390625
+  }
+]

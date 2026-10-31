@@ -1,0 +1,16 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{Available preparation stages for the fresh molecular cohort, in seconds. DFT includes the ground calculation; reference TDA supplies transition identity and rank. F calibration is a separate recorded stage. The final column is worker wall time after lock and imports through prediction closure, not a sum of stages or necessarily cold preparation. Ammonia reuses an earlier DFT checkpoint. Dashes denote unavailable/not executed stages. Historical six-size benchmark preparation totals are unavailable and are not assigned zero.}\label{tab:finalprep}
+\begin{tabular}{lrrrrr}
+\toprule
+Molecule & AOs & DFT & Ref. TDA & F calib. & Worker \\
+\midrule
+Criegee Intermediate & 14 & 2.20 & 8.31 & 1.52 & 13.66 \\
+Cyclobutadiene & 20 & 4.10 & 10.50 & -- & 14.75 \\
+Benzoxadiazole & 40 & 38.13 & 73.36 & 77.17 & 249.05 \\
+Hexatriene & 32 & 21.37 & 45.07 & 36.35 & 115.60 \\
+Ammonia & 7 & 0.51 & 0.88 & -- & 0.99 \\
+Furofuran & 36 & 25.57 & 101.69 & 50.16 & 253.83 \\
+\bottomrule
+\end{tabular}
+\end{table}

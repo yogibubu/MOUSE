@@ -1,0 +1,91 @@
+{
+  "schema": "mouse.independent.six.v1",
+  "created_utc": "2026-10-31T21:05:08.534989+00:00",
+  "protocol_sha256": "1bddf1278299a79d83a865bccb6564c2ae1d1c9f76eba49fcd14054dbf981f72",
+  "reference_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa",
+  "exposure_audit": {
+    "Ammonia": [],
+    "Criegee_Intermediate": [],
+    "Benzoxadiazole": [],
+    "Cyclobutadiene": [],
+    "Hexatriene": []
+  },
+  "old_audit_sha256": "511aa4a38069bd1aa9ece05058144678e36899c09c8ef20eec9980ce38dd4507",
+  "sealed_labels_sha256": "082254a0124043d2d92e1a3773e328f62fe1a7fc091054a4c4b6a8c296c8f4ef",
+  "candidate_frozen_before_predictions": true,
+  "states": [
+    {
+      "id": "I001",
+      "molecule": "Criegee_Intermediate",
+      "family": "n_pi",
+      "state_label": "^1A''",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 5,
+      "geometry_sha256": "f0b6e316c886188793ac4d2a8e9eb52dea4d23d2ce9db65d1a7773a093b5d06e",
+      "metadata_source": "data/json/MAIN/Criegee_Intermediate.json",
+      "metadata_index": 0,
+      "partial_double_character": true
+    },
+    {
+      "id": "I002",
+      "molecule": "Criegee_Intermediate",
+      "family": "pi_pi",
+      "state_label": "^1A'",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 5,
+      "geometry_sha256": "f0b6e316c886188793ac4d2a8e9eb52dea4d23d2ce9db65d1a7773a093b5d06e",
+      "metadata_source": "data/json/MAIN/Criegee_Intermediate.json",
+      "metadata_index": 1,
+      "partial_double_character": true
+    },
+    {
+      "id": "I003",
+      "molecule": "Cyclobutadiene",
+      "family": "pi_pi",
+      "state_label": "^1B_{1g}",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 8,
+      "geometry_sha256": "5d8c9d831b6e9d66a83f64da5fd36a895b064534e330d6913e4efb8bc513b537",
+      "metadata_source": "data/json/MAIN/Cyclobutadiene.json",
+      "metadata_index": 0,
+      "partial_double_character": false
+    },
+    {
+      "id": "I004",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "state_label": "^1B_2",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 13,
+      "geometry_sha256": "7b7d95a9ccdc6a2e0a346eed5e6f239a7d9712e63f42e1a9a2a020ad0153986b",
+      "metadata_source": "data/json/MAIN/Benzoxadiazole.json",
+      "metadata_index": 0,
+      "partial_double_character": false
+    },
+    {
+      "id": "I005",
+      "molecule": "Hexatriene",
+      "family": "pi_pi",
+      "state_label": "^1B_u",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 14,
+      "geometry_sha256": "52d9d67d40de735f19b298d38edee3bc5a27ead4faf0f6ff33bff304c71b5c87",
+      "metadata_source": "data/json/MAIN/Hexatriene.json",
+      "metadata_index": 0,
+      "partial_double_character": false
+    },
+    {
+      "id": "I006",
+      "molecule": "Ammonia",
+      "family": "Rydberg",
+      "state_label": "^1A_1",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 4,
+      "geometry_sha256": "66fcab392a844dc1cd94cd7bd7861de0b49aa1490136e259d0d894a14d51ac4e",
+      "metadata_source": "data/json/MAIN/Ammonia.json",
+      "metadata_index": 0,
+      "partial_double_character": false
+    }
+  ],
+  "CT_shortfall": true
+}

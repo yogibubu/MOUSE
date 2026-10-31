@@ -1,0 +1,8 @@
+[
+  {
+    "direction": 0,
+    "step_bohr": 0.0002,
+    "energy_gradient_error": 3.108449229932614e-10,
+    "hessian_vector_error": 0.00027684274667565123
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "model_changed": false,
+  "total_maximum_iterations": 150,
+  "phases": 3,
+  "iterations_per_phase": 50,
+  "state_guards_unchanged": true,
+  "reason": "Reassess local saddle index between bounded continuation phases to resolve stale-index oscillations; independent prediction energies and labels do not enter this choice."
+}

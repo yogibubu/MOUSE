@@ -1,0 +1,14 @@
+{
+  "host": "oracle.sns.it",
+  "local_remote_match": [
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/multicsf_surface.py",
+      "sha256": "923f0ed850486c8bec541c19bef75946a01895e79dcc6161dc5f1c39d162c326"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/multicsf_frame.py",
+      "sha256": "9290f8e3626bd4cb15d1910de4f9a162a778570212579863c456c85bbbae8dd2"
+    }
+  ],
+  "tests": "46 regressions pass in 12.87s; two additional surface contracts pass in 5.18s"
+}

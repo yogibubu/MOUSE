@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "mode_frequency_cm1": 204.76316848878918,
+  "step_bohr": 0.0002,
+  "max_hessian_vector_error": 1.3326469485222536e-10,
+  "model_fingerprint": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+  "source_sha256": "b3c9e357eac579b8c7d5fafe27f70ab11d675b475e6916fc06100bf9cf7c83ec"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "right_censored",
+  "molecule": "Phthalimide",
+  "property": "hessian",
+  "repeat": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "time_budget_seconds": 600,
+  "observed_wall_lower_bound_seconds": 600.0487562490162,
+  "peak_rss_kib": 8563828,
+  "completed_model_and_electronic_checkpoints_retained": true,
+  "analytic_derivative_value_not_assigned": true
+}

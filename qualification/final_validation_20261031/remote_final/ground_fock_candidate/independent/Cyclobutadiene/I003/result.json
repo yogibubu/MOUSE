@@ -1,0 +1,7 @@
+{
+  "id": "I003",
+  "molecule": "Cyclobutadiene",
+  "status": "not_representable",
+  "same_projection_gate": true,
+  "source_sha256": "d1aae16777cd84ee2e50916118bc4d8997b2ca000ad864b29f5c7afd1317bfb5"
+}

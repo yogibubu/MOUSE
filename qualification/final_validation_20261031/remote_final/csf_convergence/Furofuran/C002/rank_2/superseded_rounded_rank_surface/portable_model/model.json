@@ -1,0 +1,53 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 1,
+  "effective_pairs": 1.4060254400123555,
+  "noccupied": 20,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.8085768513464199,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 1.1198951523664193,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.23217171053738747,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "source_sha256": "67eb6a3803591d02a4fe0d2abdca0ee85231d4c85b043711730f1db5f6e13881",
+    "purpose": "CSF expansion convergence, no reference excitation energies used",
+    "rank": 2,
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lambda_exchange": 0.9,
+    "offset": 0
+  },
+  "sha256": {
+    "template.npz": "8711215c00b983b8b5ff684e6dafe4f06d64a5926e10a7a125cf7fc10e69088d",
+    "response_0.npz": "b84b4a71e02941d88bd23f5deb7cc86ea1a3469e2d332f0cbc501d6014decea3",
+    "response_1.npz": "4d42eeab60e715edaf8eca107b0a5a4af818cbc3881c79c3d69da49efd5280fe",
+    "arrays.npz": "e69ec14725b4802c7fc9df29ccb7f7ee05a498a9fbd9600c2ead49079108d655",
+    "ground_0.npz": "2975abc2f600bcfaa568e06bd9519798c68a89928ed10213ba545e163be88c4b",
+    "ground_1.npz": "217fe3c23b2a59c777f55ac981b5af720e664e6093e445fca7caf2bc11e29ff5",
+    "ground_2.npz": "9a89406e5f3856e616206a1f7cc315ad3dba27116674d943e83e1f76ee031a0f"
+  }
+}

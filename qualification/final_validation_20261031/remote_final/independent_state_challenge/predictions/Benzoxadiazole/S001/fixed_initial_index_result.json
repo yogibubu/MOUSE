@@ -1,0 +1,9 @@
+{
+  "id": "S001",
+  "molecule": "Benzoxadiazole",
+  "family": "pi_pi",
+  "status": "nonconverged",
+  "rank": 2,
+  "reason": "See retained stationary-search failure record",
+  "labels_read": false
+}

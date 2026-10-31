@@ -1,0 +1,131 @@
+{
+  "schema": "mouse.independent.six.score.v1",
+  "n_attempted": 2,
+  "n_matched": 2,
+  "overall": {
+    "n": 2,
+    "mae": 0.5369696621447124,
+    "mse": 0.5369696621447124,
+    "rmse": 0.7360107943701025,
+    "maxabs": 1.040333815979193
+  },
+  "families": {
+    "n_pi": {
+      "n": 0
+    },
+    "pi_pi": {
+      "n": 2,
+      "mae": 0.5369696621447124,
+      "mse": 0.5369696621447124,
+      "rmse": 0.7360107943701025,
+      "maxabs": 1.040333815979193
+    },
+    "Rydberg": {
+      "n": 0
+    },
+    "CT": {
+      "n": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "C001",
+      "molecule": "Furofuran",
+      "family": "pi_pi",
+      "status": "matched",
+      "rank": 1,
+      "excitation_ev": 5.522605508310233,
+      "residual": 7.320099387753132e-15,
+      "projection_norm": 0.8324095249091554,
+      "seconds": 26.36915062199114,
+      "labels_read": false,
+      "reference_ev": 5.489000000000001,
+      "reference_safe": "Y",
+      "partial_double_character": false,
+      "error_ev": 0.03360550831023179,
+      "tda_operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+      "tda_gfn2": {
+        "id": "C001",
+        "molecule": "Furofuran",
+        "family": "pi_pi",
+        "status": "matched",
+        "parents": [
+          {
+            "profile": "F",
+            "status": "matched",
+            "root": 1,
+            "coherent_transition_overlap": 0.9939953716998823,
+            "margin": 0.9356934690953076,
+            "excitation_ev": 7.2456729726968865,
+            "error_ev": 1.7566729726968857
+          },
+          {
+            "profile": "Q",
+            "status": "matched",
+            "root": 10,
+            "coherent_transition_overlap": 0.9554855167594921,
+            "margin": 0.7929474859250462,
+            "excitation_ev": 5.981434082386013,
+            "error_ev": 0.49243408238601205
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0
+      }
+    },
+    {
+      "id": "C002",
+      "molecule": "Furofuran",
+      "family": "pi_pi",
+      "status": "matched",
+      "rank": 1,
+      "excitation_ev": 7.067333815979192,
+      "residual": 1.1927438203773733e-13,
+      "projection_norm": 0.8322684517292747,
+      "seconds": 47.690797372022644,
+      "labels_read": false,
+      "reference_ev": 6.026999999999999,
+      "reference_safe": "Y",
+      "partial_double_character": false,
+      "error_ev": 1.040333815979193,
+      "tda_operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+      "tda_gfn2": {
+        "id": "C002",
+        "molecule": "Furofuran",
+        "family": "pi_pi",
+        "status": "matched",
+        "parents": [
+          {
+            "profile": "F",
+            "status": "matched",
+            "root": 3,
+            "coherent_transition_overlap": 0.9583642314084758,
+            "margin": 0.7489504495730712,
+            "excitation_ev": 7.749300793732061,
+            "error_ev": 1.722300793732062
+          },
+          {
+            "profile": "Q",
+            "status": "matched",
+            "root": 12,
+            "coherent_transition_overlap": 0.7976543604445849,
+            "margin": 0.24518252642592364,
+            "excitation_ev": 6.257737790373161,
+            "error_ev": 0.230737790373162
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0
+      }
+    }
+  ],
+  "limitation": "Predeclared state cohort; CT shortfall; representation failures remain in denominator; no parameter refitting"
+}

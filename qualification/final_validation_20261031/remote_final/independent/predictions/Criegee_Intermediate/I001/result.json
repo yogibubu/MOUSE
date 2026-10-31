@@ -1,0 +1,12 @@
+{
+  "id": "I001",
+  "molecule": "Criegee_Intermediate",
+  "family": "n_pi",
+  "status": "matched",
+  "rank": 1,
+  "excitation_ev": 2.1126880376219956,
+  "residual": 7.546047120499111e-14,
+  "projection_norm": 0.9250907440809996,
+  "seconds": 1.032197337015532,
+  "labels_read": false
+}

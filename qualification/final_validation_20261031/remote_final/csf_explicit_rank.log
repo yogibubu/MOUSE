@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/run_csf_convergence.py", line 5, in <module>
+    for rank in [2,3]:subprocess.run([sys.executable,str(R/'csf_rank_convergence.py'),'Furofuran',str(rank)],cwd=R,check=True)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/.local/share/mamba/envs/et-2.5/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/enzo/nano-MATRIX-current/.venv/bin/python', '/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/csf_rank_convergence.py', 'Furofuran', '3']' died with <Signals.SIGTERM: 15>.

@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "molecule": "Cyclopentadiene",
+  "property": "hessian",
+  "repeat": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "natoms": 11,
+  "nao": 26,
+  "rank": 2,
+  "wall_seconds": 7.082670236995909,
+  "cpu_seconds": 9.383117572,
+  "process_peak_rss_kib": 241308,
+  "model_loading_and_ground_setup_seconds": 0.12070091697387397,
+  "total_gradient_included": true,
+  "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+  "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+  "energy_hartree": -13.46672184538563,
+  "residual": 2.17930928105095e-11,
+  "hessian": true
+}

@@ -1,0 +1,10 @@
+{
+  "molecule": "Ammonia",
+  "rows": [
+    {
+      "id": "I006",
+      "status": "not_representable",
+      "reason": "same fixed compact projection gate; no qualified compact model"
+    }
+  ]
+}

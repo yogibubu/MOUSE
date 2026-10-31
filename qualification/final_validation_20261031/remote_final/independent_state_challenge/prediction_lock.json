@@ -1,0 +1,11 @@
+{
+  "closed_utc": "2026-10-31T22:10:45.853495+00:00",
+  "manifest_sha256": "3ac5e1ecb2dfa90130ae46161aafe9b4f565b40f4d9ec6e9dead19ed0e964f41",
+  "predictions_sha256": {
+    "predictions/Benzoxadiazole/S001/result.json": "a1ec8775462519d5a0f47ced561f713c71f56968b30ea76f8215661579e2707b",
+    "predictions/Benzoxadiazole/S002/result.json": "94391387d8c2bad4faea5f4e120a818a89f1411dc42f0b76407d2e8215c77645",
+    "predictions/Benzoxadiazole/S003/result.json": "a80cfdf491b6f71acfba2c4c69d4799f578ee9d7e4a52571dfe25201c8aa9099"
+  },
+  "candidate_frozen": true,
+  "scorer_source_sha256": "378b819b995eb1ee5924257ad842471ef121f5d229d08410041c0338ee49e096"
+}

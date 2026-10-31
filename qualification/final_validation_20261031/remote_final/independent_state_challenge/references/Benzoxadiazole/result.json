@@ -1,0 +1,11 @@
+{
+  "status": "reference_ready",
+  "molecule": "Benzoxadiazole",
+  "states": [
+    "S001",
+    "S002",
+    "S003"
+  ],
+  "reference_sha256": "61fdd600dd5823760b32026e26474c7155c523fd6bb9a8244222a44c15536d98",
+  "numerical_labels_read": false
+}

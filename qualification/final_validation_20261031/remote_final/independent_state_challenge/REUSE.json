@@ -1,0 +1,8 @@
+{
+  "reason": "Reuse only state-independent converged DFT/native ground and F/Q preparation; higher-state responses and excited solves are new",
+  "inputs": {
+    "independent_state_challenge/references/Benzoxadiazole/reference.npz": "61fdd600dd5823760b32026e26474c7155c523fd6bb9a8244222a44c15536d98",
+    "independent_state_challenge/references/Benzoxadiazole/backend.chk": "3d2c80371ca9f7774c56c4ed714f6da40743f74b091ad47516fbd8f6f15f612f",
+    "independent_state_challenge/predictions/Benzoxadiazole/native_ground.npz": "bc89424c96ec033ab77f263f804a5723d6e7bb933fdabc4003fbe23a95e3120a"
+  }
+}

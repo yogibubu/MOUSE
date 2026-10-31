@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-10-31T22:17:08.071994+00:00",
+  "primary_score_existed_at_freeze": false,
+  "primary_errors_inspected": false,
+  "motivation": "Furofuran Ag rank-two F/Q gaps 7.73745/5.98830 eV expose density-reference dependence of F; its target is the embedded-native-density Fock, whereas Q uses converged DFT orbital energies.",
+  "candidate": "Replace only F one-body target by lift.T@(S_D C_D diag(epsilon_D) C_D.T S_D)@lift, from archived converged DFT ground; retain full original nonlinear charge/spin response, native q0 and Q parent.",
+  "linear_coefficients": "dual AO-pair moments of projected converged DFT Fock minus native ground Fock",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "rank_rule": "unchanged nearest effective compact transition rank, frozen per surface",
+  "state_assignment": "same fixed projected transition and original representability gates; require raw transition fidelity >= .7",
+  "predictions": "all six primary states, and two exposed furofuran development controls; unsupported projections remain unsupported",
+  "source_preparation_reused": true,
+  "no_dft_reference_excitation_energy_in_model": true
+}

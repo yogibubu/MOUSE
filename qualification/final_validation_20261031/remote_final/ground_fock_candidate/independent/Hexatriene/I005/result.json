@@ -1,0 +1,18 @@
+{
+  "status": "matched",
+  "molecule": "Hexatriene",
+  "id": "I005",
+  "rank": 1,
+  "excitation_ev": 4.80964575947549,
+  "parent_gaps_ev": [
+    5.084580740463616,
+    4.534710778487366
+  ],
+  "residual": 8.450840215536721e-14,
+  "fidelity": [
+    0.9959621753160679,
+    0.9933374071708627
+  ],
+  "energy_labels_used": false,
+  "model_fingerprint": "c4cc9811304627f7711346edf2b2cf788e1c5cb4bd65a193372ad467fb22374a"
+}

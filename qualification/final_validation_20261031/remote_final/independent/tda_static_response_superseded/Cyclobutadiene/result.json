@@ -1,0 +1,10 @@
+{
+  "molecule": "Cyclobutadiene",
+  "rows": [
+    {
+      "id": "I003",
+      "status": "not_representable",
+      "reason": "same fixed compact projection gate; no qualified compact model"
+    }
+  ]
+}

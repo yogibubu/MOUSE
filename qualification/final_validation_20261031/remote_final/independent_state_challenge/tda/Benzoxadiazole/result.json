@@ -1,0 +1,98 @@
+{
+  "molecule": "Benzoxadiazole",
+  "rows": [
+    {
+      "id": "S001",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "status": "matched",
+      "parents": [
+        {
+          "profile": "F",
+          "status": "matched",
+          "root": 4,
+          "coherent_transition_overlap": 0.9966434288139667,
+          "margin": 0.9342977396153958,
+          "excitation_ev": 6.274562210038186
+        },
+        {
+          "profile": "Q",
+          "status": "matched",
+          "root": 10,
+          "coherent_transition_overlap": 0.7198617935316178,
+          "margin": 0.11605317190355358,
+          "excitation_ev": 5.478324580859924
+        }
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset_ev": 0
+    },
+    {
+      "id": "S002",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "status": "matched",
+      "parents": [
+        {
+          "profile": "F",
+          "status": "matched",
+          "root": 1,
+          "coherent_transition_overlap": 0.9958551446287731,
+          "margin": 0.9431671007185358,
+          "excitation_ev": 4.35162831744649
+        },
+        {
+          "profile": "Q",
+          "status": "matched",
+          "root": 9,
+          "coherent_transition_overlap": 0.9792287953767151,
+          "margin": 0.8599641460520212,
+          "excitation_ev": 5.233885791898771
+        }
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset_ev": 0
+    },
+    {
+      "id": "S003",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "status": "matched",
+      "parents": [
+        {
+          "profile": "F",
+          "status": "matched",
+          "root": 2,
+          "coherent_transition_overlap": 0.9358090085841467,
+          "margin": 0.6737728076547205,
+          "excitation_ev": 5.389208394058832
+        },
+        {
+          "profile": "Q",
+          "status": "matched",
+          "root": 14,
+          "coherent_transition_overlap": 0.9712551589569228,
+          "margin": 0.8259035653342618,
+          "excitation_ev": 5.810601410611087
+        }
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset_ev": 0
+    }
+  ],
+  "labels_read": false,
+  "operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+  "assignment": "maximum coherent projected DFT transition overlap, score>=.7 and margin>=.05; no reference excitation energy used"
+}

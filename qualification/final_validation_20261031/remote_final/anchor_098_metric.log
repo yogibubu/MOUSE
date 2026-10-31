@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/recover_anchor.py", line 53, in <module>
+    with threadpool_limits():run(args.name,args.sid,args.scale)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/recover_anchor.py", line 50, in run
+    return original.run(name,sid,scale)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy.py", line 6, in run
+    base=MultiCSFModel(W/f'models/{name}/{sid}/model.json');src=W/f'anchor_rank_symmetry/{name}/{scale:.2f}'
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to numpy.ndarray.__format__

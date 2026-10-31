@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "source": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/independent_state_challenge/tda/Benzoxadiazole/parent_0.npz",
+      "sha256": "321ebea913d0b6739345be07b09eb5e8889e4d5248938fb508277eaf435befdb"
+    },
+    {
+      "source": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/independent_state_challenge/tda/Benzoxadiazole/parent_1.npz",
+      "sha256": "e996bac1327317240d0f36366b5221f38808fede8e890fd1d0baac1406235318"
+    }
+  ],
+  "identical_checkpoint_hashes": {
+    "native_ground.npz": "bc89424c96ec033ab77f263f804a5723d6e7bb933fdabc4003fbe23a95e3120a",
+    "full_response/anchor/model.npz": "b725439172279c817751c2c5aa7d52dbe30641053055273ced9c10d5be9d3b4f",
+    "qualified_spectral_response/anchor/model.npz": "87d59ac9bc3d8f0bc56de58df24688409363836e24ff7cf7db0acf25398e94ff",
+    "grounds/0/stationary.npz": "6ce454b5ffbe834bb800d4abaf9be8933bbfb4304e7dd1be7455351c43dd3199",
+    "grounds/1/stationary.npz": "9c452881e8931566bfc678a88cb18a6d2e30ef8e93e79138b6f2e3babc36729c"
+  },
+  "no_new_electronic_solve": true
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "phase": 0,
+    "target_index": 2,
+    "history": [
+      {
+        "iteration": 0,
+        "energy": -20.304074368086162,
+        "residual": 0.004198170996616085,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.42399438041375137,
+        "trust_radius": 0.08
+      },
+      {
+        "iteration": 1,
+        "energy": -20.304294177580545,
+        "residual": 0.0016692402560410614,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.4402383411426536,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 2,
+        "energy": -20.304339762902977,
+        "residual": 0.0005478490855529428,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.45207203019975534,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 3,
+        "energy": -20.304345239294385,
+        "residual": 0.00012998792370334106,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.45733440004596343,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 4,
+        "energy": -20.30434552255417,
+        "residual": 1.0895730855470243e-05,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.4587290548745754,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 5,
+        "energy": -20.30434552423473,
+        "residual": 7.652808362013097e-08,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.45884356877521837,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 6,
+        "energy": -20.304345524234805,
+        "residual": 3.696584705004113e-12,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.4588443635256927,
+        "trust_radius": 0.08
+      }
+    ]
+  }
+]

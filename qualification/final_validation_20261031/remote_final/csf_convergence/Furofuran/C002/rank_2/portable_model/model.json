@@ -1,0 +1,54 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 2,
+  "rank_policy": "explicit_fixed_rank",
+  "effective_pairs": 1.4060254400123555,
+  "noccupied": 20,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.8085768513464199,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 1.1198951523664193,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.23217171053738747,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "source_sha256": "2eaeb1c883e2089907193a32c1f3a6f6eecbc3093e614b5e25f7c0916423c5d2",
+    "purpose": "CSF expansion convergence, no reference excitation energies used",
+    "rank": 2,
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lambda_exchange": 0.9,
+    "offset": 0
+  },
+  "sha256": {
+    "template.npz": "2e4aec0a0af91dad145912f5729cd0928a9def33e73959e151d5be31be935b51",
+    "response_0.npz": "b84b4a71e02941d88bd23f5deb7cc86ea1a3469e2d332f0cbc501d6014decea3",
+    "response_1.npz": "4d42eeab60e715edaf8eca107b0a5a4af818cbc3881c79c3d69da49efd5280fe",
+    "arrays.npz": "e69ec14725b4802c7fc9df29ccb7f7ee05a498a9fbd9600c2ead49079108d655",
+    "ground_0.npz": "0560af17b85594acd2204967331a7319318521afe5b8163805f417856c85d492",
+    "ground_1.npz": "217fe3c23b2a59c777f55ac981b5af720e664e6093e445fca7caf2bc11e29ff5",
+    "ground_2.npz": "9a89406e5f3856e616206a1f7cc315ad3dba27116674d943e83e1f76ee031a0f"
+  }
+}

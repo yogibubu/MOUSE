@@ -1,0 +1,8 @@
+{
+  "reason": "A correctly differentiated distorted surface has a nearly orthogonal BFGS direction; reset the inverse on descent cosine below 0.2, retain Armijo and all state gates.",
+  "molecule": "Furan",
+  "accepted_generation_resumed": 100,
+  "maximum_total_accepted_steps": 160,
+  "maximum_step_bohr": 0.08,
+  "energy_model_changed": false
+}

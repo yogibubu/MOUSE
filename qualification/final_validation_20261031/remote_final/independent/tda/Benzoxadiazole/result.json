@@ -1,0 +1,38 @@
+{
+  "molecule": "Benzoxadiazole",
+  "rows": [
+    {
+      "id": "I004",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "status": "completed_unassigned",
+      "parents": [
+        {
+          "profile": "F",
+          "status": "matched",
+          "root": 3,
+          "coherent_transition_overlap": 0.9828092260437119,
+          "margin": 0.8387214418844582,
+          "excitation_ev": 5.633800783899581
+        },
+        {
+          "profile": "Q",
+          "status": "completed_unassigned",
+          "root": 6,
+          "coherent_transition_overlap": 0.6991792950828146,
+          "margin": 0.1488274801955991,
+          "excitation_ev": 4.608934903298167
+        }
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset_ev": 0
+    }
+  ],
+  "labels_read": false,
+  "operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+  "assignment": "maximum coherent projected DFT transition overlap, score>=.7 and margin>=.05; no reference excitation energy used"
+}

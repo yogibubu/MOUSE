@@ -1,0 +1,21 @@
+{
+  "started_utc": "2026-10-31T23:07:57.290159+00:00",
+  "reason": "User requests a completed Phthalimide analytic Hessian. Exact early feature contraction, batched response and reuse of the independently assembled orbital/CI Hessian change only the evaluation order.",
+  "properties_remeasured": [
+    "gradient",
+    "hessian"
+  ],
+  "unchanged_properties_reused": [
+    "energy",
+    "tda"
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "repetitions": "three small; one large; previous prespecified omissions unchanged",
+  "old_results_retained": true,
+  "qualification_sha256": "630d477ffd415bc10eeb7513daae5bb8811a28f33d53d82972ff45427527ca40"
+}

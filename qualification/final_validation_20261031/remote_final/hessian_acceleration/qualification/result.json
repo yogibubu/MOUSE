@@ -1,0 +1,44 @@
+{
+  "status": "pass",
+  "whole_matrix_comparisons": [
+    {
+      "molecule": "Phthalimide",
+      "errors": {
+        "energy": 1.4210854715202004e-14,
+        "gradient": 3.927413949611491e-15,
+        "hessian": 1.3115064589896974e-12
+      },
+      "source_reference": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/hessian_acceleration/Phthalimide/accepted/result.json",
+      "seconds_or_restore": 6.137550231011119
+    },
+    {
+      "molecule": "Furan",
+      "errors": {
+        "energy": 4.618527782440651e-14,
+        "gradient": 3.4416913763379853e-15,
+        "hessian": 8.819334151866087e-15
+      },
+      "source_reference": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/geometry/Furan/analytic_stationary/result.json",
+      "seconds_or_restore": 4.835394078982063
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "errors": {
+        "energy": 0.0,
+        "gradient": 8.727827488508311e-16,
+        "hessian": 2.3869795029440866e-15
+      },
+      "source_reference": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/geometry_escape/Cyclopentadiene/stage_0/analytic_stationary/result.json",
+      "seconds_or_restore": 6.772881858982146
+    }
+  ],
+  "source_sha256": {
+    "nonlocal_response.py": "3939d8cd40039ad9077333bb6691689298ccfc398fca40af46a165d45827c349",
+    "local_frame_response.py": "789d7a601f8f91af9fa6349f6fa2fcff75e7363dc30018ac715a2df1ed70ea34",
+    "deltascf_analytic_hessian.py": "2e7659fa7962cb3fab1fa901f6bc3fd403826fc67776f4bc1fd7c01c92dbd74f",
+    "multicsf_nuclear.py": "6f578e3b86d3c471056be5ab393f4855b2183d339d505e1dbe0b23a0e3a977b2",
+    "restricted_ground.py": "bc519fa141cc4ea389025914595c357305e36ad864fdd9bd4ac3d4d5bd6cac43",
+    "multicsf_surface.py": "923f0ed850486c8bec541c19bef75946a01895e79dcc6161dc5f1c39d162c326"
+  },
+  "driver_sha256": "7854ac50e58176c743a512fee47fc1a36359d33bf0bc2d3044aeb32e923ce8b6"
+}

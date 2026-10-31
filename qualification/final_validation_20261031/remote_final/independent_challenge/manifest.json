@@ -1,0 +1,40 @@
+{
+  "schema": "mouse.independent.six.v1",
+  "created_utc": "2026-10-31T21:24:03.099793+00:00",
+  "protocol_sha256": "1bddf1278299a79d83a865bccb6564c2ae1d1c9f76eba49fcd14054dbf981f72",
+  "reference_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa",
+  "exposure_audit": {
+    "Furofuran": []
+  },
+  "old_audit_sha256": "511aa4a38069bd1aa9ece05058144678e36899c09c8ef20eec9980ce38dd4507",
+  "sealed_labels_sha256": "210d08f20c58de48cc18163f4f00d472cac50c9b7e502d5dcb1fb8f791bc84f3",
+  "candidate_frozen_before_predictions": true,
+  "challenge_reason": "Original six-state representable predictions all have rank one; test one fresh structurally related molecule without reference-error-based selection",
+  "states": [
+    {
+      "id": "C001",
+      "molecule": "Furofuran",
+      "family": "pi_pi",
+      "state_label": "^1B_u",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 12,
+      "geometry_sha256": "d7866de10b3d0e39d233c77895c790a2c1b0cb5cfc23fa28e045c9a97de5792a",
+      "metadata_source": "data/json/MAIN/Furofuran.json",
+      "metadata_index": 1,
+      "partial_double_character": false
+    },
+    {
+      "id": "C002",
+      "molecule": "Furofuran",
+      "family": "pi_pi",
+      "state_label": "^1A_g",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 12,
+      "geometry_sha256": "d7866de10b3d0e39d233c77895c790a2c1b0cb5cfc23fa28e045c9a97de5792a",
+      "metadata_source": "data/json/MAIN/Furofuran.json",
+      "metadata_index": 4,
+      "partial_double_character": false
+    }
+  ],
+  "CT_shortfall": true
+}

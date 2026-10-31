@@ -1,0 +1,30 @@
+{
+  "schema": "mouse.multicsf.result.v1",
+  "model_fingerprint": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+  "orbital_residual": 1.0454012238233021e-11,
+  "orbital_saddle_index": 0,
+  "minimum_absolute_curvature": 0.024763365269527233,
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.7154033240565022,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 1.0328026893227065,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.6371055808334226,
+      "index": 0
+    }
+  ],
+  "sha256": {
+    "point.npz": "42d52a50261551f5eb691d051064b3af18e52cb07cc87185316f682be6393816",
+    "ground_0.npz": "c96466b99a5d127d4f0a9fa7e684525eb7fa05a915aca5e7510eaa7f0e6276ca",
+    "ground_1.npz": "13dc7d9b870f0efc395c7b10772eb910302e1636bb3bc720c396f4601ec17710",
+    "ground_2.npz": "8bfa07f063b079940a4713def12a0a82666e2dbfd9c1dc4a1095ec258b46747c"
+  }
+}

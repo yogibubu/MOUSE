@@ -1,0 +1,10 @@
+{
+  "status": "reference_ready",
+  "molecule": "Furofuran",
+  "states": [
+    "C001",
+    "C002"
+  ],
+  "reference_sha256": "2fcb35f85d6fe0fa0474ed51235cfcd419c2fada56f08628df94663a476a3ead",
+  "numerical_labels_read": false
+}

@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "molecule": "Furan",
+  "property": "tda",
+  "repeat": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "natoms": 9,
+  "nao": 24,
+  "rank": 2,
+  "wall_seconds": 0.22442143701482564,
+  "cpu_seconds": 0.344663763,
+  "process_peak_rss_kib": 160976,
+  "model_loading_and_ground_setup_seconds": 0.17490194999845698,
+  "total_gradient_included": false,
+  "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+  "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+  "roots_per_parent": [
+    143,
+    143
+  ],
+  "pair_dimensions": [
+    143,
+    143
+  ],
+  "lowest_ev": [
+    8.447683637746733,
+    6.826429167271099
+  ],
+  "orbitals": "own stationary corrected GFN2 orbitals, never DFT orbitals",
+  "tda_operator": "true singlet A with 0.5*0.225*((ib|aj)-(ij|ab)) nonlocal correction"
+}

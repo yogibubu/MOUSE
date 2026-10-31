@@ -1,0 +1,30 @@
+{
+  "description": "The immutable controller first-pass ledger retains original exit codes. These explicit recovery outputs close the corresponding tasks; an unsupported compact-space state is not assigned an energy.",
+  "recovered_tasks": [
+    {
+      "original_pass_task": "independent_Ammonia",
+      "final_artifact": "independent/predictions/Ammonia/I006/result.json",
+      "sha256": "f9244b35135781584ef335e63f7f82d54ce23a1968419f4bf35c052425313ca8",
+      "final_status": "not_representable"
+    },
+    {
+      "original_pass_task": "anchor_Phthalimide_0.98",
+      "final_artifact": "anchor_energy/Phthalimide/0.98/result.json",
+      "sha256": "6358eeda7b67be2cdac9569384ac2a8cda422f475f0680d573482c6e4d27bc23",
+      "final_status": "complete"
+    },
+    {
+      "original_pass_task": "anchor_Phthalimide_1.02",
+      "final_artifact": "anchor_energy/Phthalimide/1.02/result.json",
+      "sha256": "171f51c9d0b1f426ea5f333b792d8e63eed5cbcb7f04d4226d41c7443f6b5dd0",
+      "final_status": "complete"
+    },
+    {
+      "original_pass_task": "cost_acetaldehyde_tda_0",
+      "final_artifact": "cost/acetaldehyde/tda/0/result.json",
+      "sha256": "9601a5f5f1f460f5b07f9d3e326578b15e5db41029c3257f1eebb56947ee167a",
+      "final_status": "complete"
+    }
+  ],
+  "legacy_nitroxyl_gradient_scope": "All three records include the three analytic ground-reference gradients. Their executed source is certified by SHA256 30fe524444bdbaacd617785f2d423edf951dc5437bd7be25835dce967cb373f6; only the later metadata field is absent."
+}

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/postprocess.py", line 16, in <module>
+    subprocess.run([sys.executable,str(R/'independent_controls.py'),name],cwd=R,check=True,timeout=7200)
+  File "/home/enzo/.local/share/mamba/envs/et-2.5/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/enzo/nano-MATRIX-current/.venv/bin/python', '/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/independent_controls.py', 'Cyclobutadiene']' died with <Signals.SIGTERM: 15>.

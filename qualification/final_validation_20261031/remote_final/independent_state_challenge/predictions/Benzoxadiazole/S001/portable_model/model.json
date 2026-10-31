@@ -1,0 +1,47 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 2,
+  "effective_pairs": 1.7362628733365157,
+  "noccupied": 22,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.48607729992137483,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 0.69306618595429,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.46781669464061276,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "independent_manifest_sha256": "3ac5e1ecb2dfa90130ae46161aafe9b4f565b40f4d9ec6e9dead19ed0e964f41",
+    "state": "S001",
+    "labels_read": false
+  },
+  "sha256": {
+    "template.npz": "29b087d6180332c4b87ec8020f83519094cfbf03284d2d8f76c579c6f226e785",
+    "response_0.npz": "cc95869e6ce3de52f1060c109b51fba7675b25ba3304d9e7db8f8c0e03a91031",
+    "response_1.npz": "208d69de185943233b781b259528d5b892e14001ed4792fe8eba167dcf3499d6",
+    "arrays.npz": "eac3d8e514bc64e96b5f5b54ac7a0e3d03f4eac1f867eaa2ca9c5a1a1b7f2689",
+    "ground_0.npz": "71b44c458e2f9820a3a183163ef6f9aaf0d72d091ab1efe16a7f663c634f6573",
+    "ground_1.npz": "920dbd94b63b7cb01b1b7152562d60749bd68faba744e4a4e75de629886bd4c8",
+    "ground_2.npz": "97b8e085d540018db21510b0f1527dc8734f9f673c774bc81e7cfc575db27cac"
+  }
+}

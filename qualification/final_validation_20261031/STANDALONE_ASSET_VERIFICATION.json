@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "electronic_runtime_required": false,
+  "matching_tables": [
+    {
+      "path": "tables/final_anchor.tex",
+      "sha256": "52124b181c04c9e72b550cfd38f79b7df6d7b02b46c77abdf2eaed35b779bcbc"
+    },
+    {
+      "path": "tables/final_cost.tex",
+      "sha256": "f7ddc942a32b2cd538165d0759ce802a1ae68691550593494aec89ddce8e0a1a"
+    },
+    {
+      "path": "tables/final_hessian_acceleration.tex",
+      "sha256": "8f14b333b9bb75371c8fe752d5660ba5194b33efc6d4730bf33c930437009bbf"
+    },
+    {
+      "path": "tables/final_independent.tex",
+      "sha256": "7c35a9cb5ff67d8209b7bf3d92c1306c0a198e1b363ec42f6b03b4370ac57bd8"
+    },
+    {
+      "path": "tables/final_preparation.tex",
+      "sha256": "1c97c756e4e55e93110e7d3c3ed38508dd0e0ccaf69905c65baafb8df29572bf"
+    },
+    {
+      "path": "tables/furan_physical_frequencies.tex",
+      "sha256": "c0ae5ef7662886bdf633a21e20cb49443c96958500a6cd0eab834e68dbf66126"
+    },
+    {
+      "path": "tables/furan_physical_structure.tex",
+      "sha256": "0b796a15c950832d96f1531fad830feda39cc34e0385147beddadba8641c2ac8"
+    }
+  ]
+}

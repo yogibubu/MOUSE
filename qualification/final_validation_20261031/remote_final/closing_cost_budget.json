@@ -1,0 +1,21 @@
+{
+  "frozen_utc": "2026-10-31T22:21:31.600073+00:00",
+  "reason": "User requests completion; retain all six sizes and all four properties, reduce only unstarted repetitions",
+  "small_cases_repetitions": 3,
+  "large_cases_repetitions": 1,
+  "large_cases": [
+    "Furan",
+    "Cyclopentadiene",
+    "Phthalimide"
+  ],
+  "properties": [
+    "tda",
+    "energy",
+    "gradient",
+    "hessian"
+  ],
+  "expected_measured_attempts": 48,
+  "expected_documented_omitted_repeats": 24,
+  "largest_hessian_limit_seconds": 600,
+  "all_completed_work_reused": true
+}

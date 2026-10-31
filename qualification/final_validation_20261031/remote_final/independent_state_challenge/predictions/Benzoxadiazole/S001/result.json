@@ -1,0 +1,12 @@
+{
+  "id": "S001",
+  "molecule": "Benzoxadiazole",
+  "family": "pi_pi",
+  "status": "matched",
+  "rank": 2,
+  "excitation_ev": 4.586771042161828,
+  "residual": 1.3241363925699058e-13,
+  "projection_norm": 0.9321160792877093,
+  "seconds": 120.47038496495225,
+  "labels_read": false
+}

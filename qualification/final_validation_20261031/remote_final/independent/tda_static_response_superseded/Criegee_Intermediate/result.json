@@ -1,0 +1,67 @@
+{
+  "molecule": "Criegee_Intermediate",
+  "rows": [
+    {
+      "id": "I001",
+      "molecule": "Criegee_Intermediate",
+      "family": "n_pi",
+      "status": "matched",
+      "parents": [
+        {
+          "profile": "F",
+          "status": "matched",
+          "root": 1,
+          "coherent_transition_overlap": 0.9991930804377243,
+          "margin": 0.9728581993264208,
+          "excitation_ev": 3.4918973179788693
+        },
+        {
+          "profile": "Q",
+          "status": "matched",
+          "root": 1,
+          "coherent_transition_overlap": 0.9982938832122072,
+          "margin": 0.9635967254159925,
+          "excitation_ev": 3.742501056790137
+        }
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset_ev": 0
+    },
+    {
+      "id": "I002",
+      "molecule": "Criegee_Intermediate",
+      "family": "pi_pi",
+      "status": "matched",
+      "parents": [
+        {
+          "profile": "F",
+          "status": "matched",
+          "root": 2,
+          "coherent_transition_overlap": 0.9836477939985665,
+          "margin": 0.8837268747764158,
+          "excitation_ev": 8.226747870877423
+        },
+        {
+          "profile": "Q",
+          "status": "matched",
+          "root": 2,
+          "coherent_transition_overlap": 0.9246658927186785,
+          "margin": 0.6093516254834307,
+          "excitation_ev": 7.205143482297378
+        }
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset_ev": 0
+    }
+  ],
+  "labels_read": false,
+  "assignment": "maximum coherent projected DFT transition overlap, score>=.7 and margin>=.05; no reference excitation energy used"
+}

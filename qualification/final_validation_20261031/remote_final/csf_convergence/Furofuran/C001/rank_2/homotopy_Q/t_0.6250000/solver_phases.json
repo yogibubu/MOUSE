@@ -1,0 +1,74 @@
+[
+  {
+    "phase": 0,
+    "target_index": 3,
+    "history": [
+      {
+        "iteration": 0,
+        "energy": -21.446627258733155,
+        "residual": 0.015208814881557663,
+        "observed_index": 3,
+        "target_index": 3,
+        "minimum_curvature": -0.36716156112430925,
+        "trust_radius": 0.08
+      },
+      {
+        "iteration": 1,
+        "energy": -21.44626120439716,
+        "residual": 0.009367848593953567,
+        "observed_index": 3,
+        "target_index": 3,
+        "minimum_curvature": -0.37726781089708034,
+        "trust_radius": 0.08
+      },
+      {
+        "iteration": 2,
+        "energy": -21.44609571207432,
+        "residual": 0.004600966595112873,
+        "observed_index": 3,
+        "target_index": 3,
+        "minimum_curvature": -0.38431469278522346,
+        "trust_radius": 0.08
+      },
+      {
+        "iteration": 3,
+        "energy": -21.446050718390765,
+        "residual": 0.0006971866837701208,
+        "observed_index": 3,
+        "target_index": 3,
+        "minimum_curvature": -0.3889537326125809,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 4,
+        "energy": -21.446050470751345,
+        "residual": 6.163269999852122e-06,
+        "observed_index": 3,
+        "target_index": 3,
+        "minimum_curvature": -0.38956226015215584,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 5,
+        "energy": -21.44605047079986,
+        "residual": 1.0902361090737306e-09,
+        "observed_index": 3,
+        "target_index": 3,
+        "minimum_curvature": -0.3895517087360387,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 6,
+        "energy": -21.44605047079987,
+        "residual": 1.045902730742454e-15,
+        "observed_index": 3,
+        "target_index": 3,
+        "minimum_curvature": -0.38955170902463504,
+        "trust_radius": 0.08
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "id": "I003",
+  "molecule": "Cyclobutadiene",
+  "family": "pi_pi",
+  "status": "not_representable",
+  "reason": "compact projection below .7 or effective rank exceeds four",
+  "projection_norm": 0.3159821967104605,
+  "rank": 1
+}

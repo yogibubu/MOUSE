@@ -1,0 +1,68 @@
+{
+  "molecule": "Criegee_Intermediate",
+  "rows": [
+    {
+      "id": "I001",
+      "molecule": "Criegee_Intermediate",
+      "family": "n_pi",
+      "status": "matched",
+      "parents": [
+        {
+          "profile": "F",
+          "status": "matched",
+          "root": 1,
+          "coherent_transition_overlap": 0.9994918271925624,
+          "margin": 0.9782305163299734,
+          "excitation_ev": 2.31985502826362
+        },
+        {
+          "profile": "Q",
+          "status": "matched",
+          "root": 1,
+          "coherent_transition_overlap": 0.998473939511548,
+          "margin": 0.9626342786542832,
+          "excitation_ev": 2.6063991173156555
+        }
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset_ev": 0
+    },
+    {
+      "id": "I002",
+      "molecule": "Criegee_Intermediate",
+      "family": "pi_pi",
+      "status": "matched",
+      "parents": [
+        {
+          "profile": "F",
+          "status": "matched",
+          "root": 2,
+          "coherent_transition_overlap": 0.9780789492049572,
+          "margin": 0.8856272997021669,
+          "excitation_ev": 7.364270914209781
+        },
+        {
+          "profile": "Q",
+          "status": "matched",
+          "root": 2,
+          "coherent_transition_overlap": 0.942731869744467,
+          "margin": 0.6865903621274264,
+          "excitation_ev": 6.390608308189313
+        }
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset_ev": 0
+    }
+  ],
+  "labels_read": false,
+  "operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+  "assignment": "maximum coherent projected DFT transition overlap, score>=.7 and margin>=.05; no reference excitation energy used"
+}

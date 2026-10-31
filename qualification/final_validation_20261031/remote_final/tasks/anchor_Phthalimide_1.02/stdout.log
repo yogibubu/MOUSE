@@ -1,0 +1,24 @@
+tot grids = 204056
+FULL BLOCK anchor 1
+FULL BLOCK anchor 2
+FULL BLOCK anchor 3
+FULL BLOCK anchor 4
+FULL BLOCK anchor 5
+FULL BLOCK anchor 6
+FULL BLOCK anchor 7
+FULL BLOCK anchor 8
+FULL BLOCK anchor 9
+FULL BLOCK anchor 10
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy.py", line 42, in <module>
+    with threadpool_limits():run(args.name,args.sid,args.scale)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy.py", line 32, in run
+    point=evaluate_multicsf_surface(calc,base.xyz,model,compute_hessian=False);save_multicsf_result(dest,point,model)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_surface.py", line 146, in evaluate_multicsf_surface
+    point=frame.polish(point);e,g,h,*_=frame.evaluate(point);values=np.linalg.eigvalsh(h);residual=float(np.max(abs(g)))
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_frame.py", line 75, in polish
+    raise RuntimeError('frame continuation budget exceeded')
+RuntimeError: frame continuation budget exceeded

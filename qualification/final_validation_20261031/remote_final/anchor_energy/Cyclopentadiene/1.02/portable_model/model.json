@@ -1,0 +1,48 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 2,
+  "effective_pairs": 1.9849579181045833,
+  "noccupied": 13,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.7876467578618297,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 1.1435190815524052,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.9153079287402849,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "anchor_source": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Cyclopentadiene/1.02",
+    "original_model": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+    "relative_frame": "metric-polar transported original full active Gram matrix",
+    "source_sha256": "393b741946d695453c54097f1b43583b72edc774d734eb588e95bcaecd99d78c"
+  },
+  "sha256": {
+    "template.npz": "aeb5ce38be9b104e8d3a4103d79c5d6e34ec91dcf9a109ae1d3eef969cb6653d",
+    "response_0.npz": "52364375ddd65506adf209bdcf0e65e7db1c90604f20e75cfdf993cb0d8692d0",
+    "response_1.npz": "6c64035abdc0cb6e759066a2afb4b14b4cf7d659a1c1adae1cde77a53c118dfa",
+    "arrays.npz": "bdfd04ffdeadea78b94afc143b98537fcee5180644494daf75e8793e99f0405e",
+    "ground_0.npz": "1a05977e3d52b490436d5b3f9e130d2547801c3691ddb18e0c72423e3d86324c",
+    "ground_1.npz": "b87a6801d40c04408f69a21199c7375b2d3b3f9fc6575065bfa8a5b175d97010",
+    "ground_2.npz": "10001500e31b8a920c892d62c7eadb0a82744fb66336bcbda81b50c8ad27a6f3"
+  }
+}

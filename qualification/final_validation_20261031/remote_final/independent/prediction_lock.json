@@ -1,0 +1,14 @@
+{
+  "closed_utc": "2026-10-31T22:17:18.988207+00:00",
+  "manifest_sha256": "5a4952d2b8e5ea9b591fecd6a8646b8df8fd58e20e89be6b4a9f3f389815046f",
+  "predictions_sha256": {
+    "predictions/Criegee_Intermediate/I001/result.json": "2f0a6b2f5f5ead2af5218f303e35993cddfeba12345ecc3b6c8ff6059a81f7cb",
+    "predictions/Criegee_Intermediate/I002/result.json": "1cc50a3b8b12e65a1c56b3b429aece0fbf75ddee62de45df42956f0451f89927",
+    "predictions/Cyclobutadiene/I003/result.json": "d1aae16777cd84ee2e50916118bc4d8997b2ca000ad864b29f5c7afd1317bfb5",
+    "predictions/Benzoxadiazole/I004/result.json": "4a419568029fbc14a4fb32869f135011656819b8fdc03b6d459f9299cf48cec8",
+    "predictions/Hexatriene/I005/result.json": "efe59dcf5fb5fae154596ab118f3a7b34e6be11f6f9784b0682a3c23e3686597",
+    "predictions/Ammonia/I006/result.json": "f9244b35135781584ef335e63f7f82d54ce23a1968419f4bf35c052425313ca8"
+  },
+  "candidate_frozen": true,
+  "scorer_source_sha256": "378b819b995eb1ee5924257ad842471ef121f5d229d08410041c0338ee49e096"
+}

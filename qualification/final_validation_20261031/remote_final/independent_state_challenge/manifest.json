@@ -1,0 +1,53 @@
+{
+  "schema": "mouse.independent.six.v1",
+  "created_utc": "2026-10-31T21:31:51.558874+00:00",
+  "protocol_sha256": "1bddf1278299a79d83a865bccb6564c2ae1d1c9f76eba49fcd14054dbf981f72",
+  "reference_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa",
+  "exposure_audit": {
+    "Benzoxadiazole": []
+  },
+  "old_audit_sha256": "511aa4a38069bd1aa9ece05058144678e36899c09c8ef20eec9980ce38dd4507",
+  "sealed_labels_sha256": "8535de25ef0a59a025a00ea41bd34549e49863593510dd6764ea64acbfc65b6e",
+  "candidate_frozen_before_predictions": true,
+  "challenge_reason": "State-level challenge on the three previously unpredicted higher pi-pi states of an already prepared primary-cohort molecule; all model parameters fixed and no reference-error-based selection",
+  "independent_new_molecule": false,
+  "states": [
+    {
+      "id": "S001",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "state_label": "^1A_1",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 13,
+      "geometry_sha256": "7b7d95a9ccdc6a2e0a346eed5e6f239a7d9712e63f42e1a9a2a020ad0153986b",
+      "metadata_source": "data/json/MAIN/Benzoxadiazole.json",
+      "metadata_index": 1,
+      "partial_double_character": false
+    },
+    {
+      "id": "S002",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "state_label": "^1A_2",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 13,
+      "geometry_sha256": "7b7d95a9ccdc6a2e0a346eed5e6f239a7d9712e63f42e1a9a2a020ad0153986b",
+      "metadata_source": "data/json/MAIN/Benzoxadiazole.json",
+      "metadata_index": 2,
+      "partial_double_character": false
+    },
+    {
+      "id": "S003",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "state_label": "^1B_1",
+      "ordinal_same_symmetry": 1,
+      "n_atoms": 13,
+      "geometry_sha256": "7b7d95a9ccdc6a2e0a346eed5e6f239a7d9712e63f42e1a9a2a020ad0153986b",
+      "metadata_source": "data/json/MAIN/Benzoxadiazole.json",
+      "metadata_index": 3,
+      "partial_double_character": false
+    }
+  ],
+  "CT_shortfall": true
+}

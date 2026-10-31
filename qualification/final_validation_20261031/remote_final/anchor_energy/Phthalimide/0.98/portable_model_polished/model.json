@@ -1,0 +1,47 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 2,
+  "effective_pairs": 1.5924190763614197,
+  "noccupied": 27,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.42300661759902386,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 0.6429333493195389,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.19137227003869672,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "original_model_fingerprint": "6093376fd3d490a9fe5863bbc18682d552148f61a40fc6bcec00e4d5012c3e6c",
+    "solver": "same fixed full-active Gram manifold; extended guarded Newton continuation only",
+    "source_sha256": "de5ca9c394c08f4006fd0ab856005fe98302b45fdd3a8ae30c45fd5d87380800"
+  },
+  "sha256": {
+    "template.npz": "50a003b103762dde485d10e476b00f41c1139264aa1386527b212cf03f9acc19",
+    "response_0.npz": "fbbf5fd63b7ba1daa1c48ec6654e04938d1d0aadfe3c5a5091e2ed0f9d814b14",
+    "response_1.npz": "d3af24d5b32e6aad778bd1ba8bac688c7dd9b6a1b864d9979497707462ba932c",
+    "arrays.npz": "f909ef90863837056737dc536c0871edb8ac2eb021bc53e442b7fac135d18a50",
+    "ground_0.npz": "51f79870ca9b7a618dc846f766fe1f286c760095e0e35dc2e516b507c825e0f7",
+    "ground_1.npz": "b478d076933d9c2b031e551b85484dcfed07f9d81280b49290298aed4228be13",
+    "ground_2.npz": "4b4ddb9b9c5d6cbfbf90ffaf3d934ba568352913632515c8f570ab261ac73df1"
+  }
+}

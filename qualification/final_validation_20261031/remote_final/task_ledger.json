@@ -1,0 +1,576 @@
+[
+  {
+    "tag": "anchor_Cyclopentadiene_0.98",
+    "exit_code": 0,
+    "seconds": 25.18602645897772,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "anchor_Cyclopentadiene_1.02",
+    "exit_code": 0,
+    "seconds": 22.812020764977206,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "independent_Ammonia",
+    "exit_code": 1,
+    "seconds": 1.2166867200285196,
+    "output_exists": false,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_tda_0",
+    "exit_code": 0,
+    "seconds": 0.7650241099763662,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_tda_1",
+    "exit_code": 0,
+    "seconds": 0.7155525329872034,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_tda_2",
+    "exit_code": 0,
+    "seconds": 0.7660007959930226,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_energy_0",
+    "exit_code": 0,
+    "seconds": 1.0675935889594257,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_energy_1",
+    "exit_code": 0,
+    "seconds": 1.017552854027599,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_energy_2",
+    "exit_code": 0,
+    "seconds": 1.017315074976068,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_gradient_0",
+    "exit_code": 0,
+    "seconds": 1.1164916109992191,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_gradient_1",
+    "exit_code": 0,
+    "seconds": 1.0653503019711934,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_gradient_2",
+    "exit_code": 0,
+    "seconds": 1.0653950010309927,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_hessian_0",
+    "exit_code": 0,
+    "seconds": 1.616183634963818,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_hessian_1",
+    "exit_code": 0,
+    "seconds": 1.619068600004539,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_nitroxyl_hessian_2",
+    "exit_code": 0,
+    "seconds": 1.616748041997198,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "independent_Criegee_Intermediate",
+    "exit_code": 0,
+    "seconds": 14.340530104993377,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "independent_Cyclobutadiene",
+    "exit_code": 0,
+    "seconds": 15.39449728600448,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "independent_Hexatriene",
+    "exit_code": 0,
+    "seconds": 116.30378787900554,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "independent_Benzoxadiazole",
+    "exit_code": 0,
+    "seconds": 249.76270169299096,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "geometry_Cyclopentadiene",
+    "exit_code": 0,
+    "seconds": 287.71481539600063,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "anchor_Phthalimide_0.98",
+    "exit_code": 1,
+    "seconds": 323.3908623299794,
+    "output_exists": false,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "anchor_Phthalimide_1.02",
+    "exit_code": 1,
+    "seconds": 612.6553504490294,
+    "output_exists": false,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_tda_0",
+    "exit_code": 143,
+    "seconds": 262.97684580198256,
+    "output_exists": false,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_tda_1",
+    "exit_code": 0,
+    "seconds": 967.0976819450152,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_tda_2",
+    "exit_code": 0,
+    "seconds": 363.04812889697496,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_energy_0",
+    "exit_code": 0,
+    "seconds": 1634.8541918449919,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_energy_1",
+    "exit_code": 0,
+    "seconds": 1.3667588210082613,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_energy_2",
+    "exit_code": 0,
+    "seconds": 1.3666287109954283,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_gradient_0",
+    "exit_code": 0,
+    "seconds": 1.5669646309688687,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_gradient_1",
+    "exit_code": 0,
+    "seconds": 2.168016280978918,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_gradient_2",
+    "exit_code": 0,
+    "seconds": 2.3187224729917943,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_hessian_0",
+    "exit_code": 0,
+    "seconds": 9.83570855698781,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_hessian_1",
+    "exit_code": 0,
+    "seconds": 10.687201861001085,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetaldehyde_hessian_2",
+    "exit_code": 0,
+    "seconds": 9.635196868039202,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_tda_0",
+    "exit_code": 0,
+    "seconds": 2.0682012990000658,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_tda_1",
+    "exit_code": 0,
+    "seconds": 1.4668827510322444,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_tda_2",
+    "exit_code": 0,
+    "seconds": 1.4167509160470217,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_energy_0",
+    "exit_code": 0,
+    "seconds": 1.6673411499941722,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_energy_1",
+    "exit_code": 0,
+    "seconds": 1.9678278699866496,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_energy_2",
+    "exit_code": 0,
+    "seconds": 2.169217653980013,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_gradient_0",
+    "exit_code": 0,
+    "seconds": 3.4211236700066365,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_gradient_1",
+    "exit_code": 0,
+    "seconds": 3.47117991495179,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_gradient_2",
+    "exit_code": 0,
+    "seconds": 2.970044937042985,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_hessian_0",
+    "exit_code": 0,
+    "seconds": 62.97472615499282,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_hessian_1",
+    "exit_code": 0,
+    "seconds": 63.96058490499854,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_acetone_hessian_2",
+    "exit_code": 0,
+    "seconds": 65.16441583499545,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_tda_0",
+    "exit_code": 0,
+    "seconds": 15.598752620979212,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_tda_1",
+    "exit_code": 0,
+    "seconds": 1.0657060840167105,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_tda_2",
+    "exit_code": 0,
+    "seconds": 1.0657777939923108,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_energy_0",
+    "exit_code": 0,
+    "seconds": 1.9176749149919488,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_energy_1",
+    "exit_code": 0,
+    "seconds": 1.1161033170064911,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_energy_2",
+    "exit_code": 0,
+    "seconds": 1.0157105579855852,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_gradient_0",
+    "exit_code": 0,
+    "seconds": 4.724252124025952,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_gradient_1",
+    "exit_code": 0,
+    "seconds": 1.0157142879907042,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_gradient_2",
+    "exit_code": 0,
+    "seconds": 1.1677415739977732,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_hessian_0",
+    "exit_code": 0,
+    "seconds": 105.43436301097972,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_hessian_1",
+    "exit_code": 0,
+    "seconds": 0.8151959590031765,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Furan_hessian_2",
+    "exit_code": 0,
+    "seconds": 1.065774092974607,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_tda_0",
+    "exit_code": 0,
+    "seconds": 1.416539387020748,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_tda_1",
+    "exit_code": 0,
+    "seconds": 1.0156899089924991,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_tda_2",
+    "exit_code": 0,
+    "seconds": 1.1158398980041966,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_energy_0",
+    "exit_code": 0,
+    "seconds": 2.1182388339657336,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_energy_1",
+    "exit_code": 0,
+    "seconds": 1.087848879978992,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_energy_2",
+    "exit_code": 0,
+    "seconds": 1.115969758015126,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_gradient_0",
+    "exit_code": 0,
+    "seconds": 6.6189119659829885,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_gradient_1",
+    "exit_code": 0,
+    "seconds": 1.1159138780203648,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_gradient_2",
+    "exit_code": 0,
+    "seconds": 1.165949982998427,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_hessian_0",
+    "exit_code": 0,
+    "seconds": 253.06864877202315,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_hessian_1",
+    "exit_code": 0,
+    "seconds": 1.2761848209775053,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Cyclopentadiene_hessian_2",
+    "exit_code": 0,
+    "seconds": 1.2665512100211345,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_tda_0",
+    "exit_code": 0,
+    "seconds": 11.392711288994178,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_tda_1",
+    "exit_code": 0,
+    "seconds": 1.1687091190251522,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_tda_2",
+    "exit_code": 0,
+    "seconds": 1.0768153669778258,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_energy_0",
+    "exit_code": 0,
+    "seconds": 14.0056575940107,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_energy_1",
+    "exit_code": 0,
+    "seconds": 1.3165091559640132,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_energy_2",
+    "exit_code": 0,
+    "seconds": 1.316490296041593,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_gradient_0",
+    "exit_code": 0,
+    "seconds": 73.86095270200167,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_gradient_1",
+    "exit_code": 0,
+    "seconds": 1.1158528280211613,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_gradient_2",
+    "exit_code": 0,
+    "seconds": 1.2160595879540779,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_hessian_0",
+    "exit_code": 0,
+    "seconds": 602.547165054013,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_hessian_1",
+    "exit_code": 0,
+    "seconds": 0.6167861740104854,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  },
+  {
+    "tag": "cost_Phthalimide_hessian_2",
+    "exit_code": 0,
+    "seconds": 0.665553238010034,
+    "output_exists": true,
+    "checkpoints_preserved": true
+  }
+]

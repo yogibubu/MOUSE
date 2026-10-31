@@ -1,0 +1,10 @@
+{
+  "closed_utc": "2026-10-31T21:53:37.275444+00:00",
+  "manifest_sha256": "82f6d901815c8b98752d6d36996f8f128a1572afe9047a6ec1ae6c36c94de02d",
+  "predictions_sha256": {
+    "predictions/Furofuran/C001/result.json": "49155042dff12b937f80a1d6d5ba36d9526483e09e77dff5fcf8b990d77e97b5",
+    "predictions/Furofuran/C002/result.json": "07d3196f3244f1fe77afa56bc2d68ce8d8b33db2271c84a918d8e2c98d7ff6b4"
+  },
+  "candidate_frozen": true,
+  "scorer_source_sha256": "378b819b995eb1ee5924257ad842471ef121f5d229d08410041c0338ee49e096"
+}

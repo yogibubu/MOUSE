@@ -1,0 +1,76 @@
+[
+  {
+    "phase": 0,
+    "target_index": 2,
+    "history": [
+      {
+        "iteration": 0,
+        "energy": -20.94348918206458,
+        "residual": 0.0042577448424887705,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.45827302169895984,
+        "trust_radius": 0.08
+      },
+      {
+        "iteration": 1,
+        "energy": -20.943639200542524,
+        "residual": 0.0014942858487261533,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.46249109750133965,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 2,
+        "energy": -20.943669332974856,
+        "residual": 0.000802883812207833,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.46628130399420287,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 3,
+        "energy": -20.94367404356365,
+        "residual": 0.0001902466847585882,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.4671568789839286,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 4,
+        "energy": -20.943674216489327,
+        "residual": 8.148970361353258e-06,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.46724044822414224,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 5,
+        "energy": -20.94367421676412,
+        "residual": 1.3044407415341297e-08,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.4672432238239443,
+        "trust_radius": 0.08,
+        "step_type": "trusted_newton"
+      },
+      {
+        "iteration": 6,
+        "energy": -20.943674216764116,
+        "residual": 3.5589586833140174e-14,
+        "observed_index": 2,
+        "target_index": 2,
+        "minimum_curvature": -0.46724322820578634,
+        "trust_radius": 0.08
+      }
+    ]
+  }
+]

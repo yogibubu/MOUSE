@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "molecule": "acetone",
+  "property": "gradient",
+  "repeat": 1,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "natoms": 10,
+  "nao": 22,
+  "rank": 1,
+  "wall_seconds": 0.49954666499979794,
+  "cpu_seconds": 0.7944935680000001,
+  "process_peak_rss_kib": 167064,
+  "model_loading_and_ground_setup_seconds": 0.0736536190379411,
+  "total_gradient_included": true,
+  "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+  "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+  "energy_hartree": -13.37440027367024,
+  "residual": 1.5779391682180233e-12,
+  "gradient_max": 0.14294482701906822
+}

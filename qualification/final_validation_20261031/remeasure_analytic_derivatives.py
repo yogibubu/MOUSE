@@ -27,5 +27,6 @@ for name in ['nitroxyl','acetaldehyde','acetone','Furan','Cyclopentadiene','Phth
 rows=[json.loads(p.read_text()) for p in (r/'cost').glob('*/*/*/result.json')]
 assert len(rows)==72
 assert all(p['status']=='complete' for p in rows if p['property']=='hessian' and p['repeat']==0)
+(r/'hessian_acceleration_benchmark_complete.json').write_text(json.dumps(dict(status='pass',complete_measurements=sum(p['status']=='complete' for p in rows),omitted_repeats=sum(p['status']=='not_repeated_due_to_prespecified_budget' for p in rows),all_six_hessians_complete=True),indent=2)+'\n')
 subprocess.run([sys.executable,str(r/'collect_final.py')],check=True)
 print('ALL ANALYTIC HESSIANS COMPLETE',flush=True)

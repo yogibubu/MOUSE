@@ -1,0 +1,10 @@
+{
+  "host": "oracle.sns.it",
+  "available_cpus": 128,
+  "concurrent_science_limit": 3,
+  "threads_per_worker": 2,
+  "global_lock": "shared for at most three scientific jobs; exclusive for every cost measurement and regression",
+  "model_changed": false,
+  "checkpoint_reuse": true,
+  "reason": "Finish independent scientific branches using available Oracle capacity without overlapping property timings with this campaign."
+}

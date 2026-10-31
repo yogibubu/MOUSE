@@ -1,0 +1,7 @@
+MATRIX Phthalimide {'molecule': 'Phthalimide', 'seconds': 43.50647350301733, 'errors': {'energy': 1.4210854715202004e-14, 'gradient': 3.927413949611491e-15, 'hessian': 1.3115064589896974e-12}, 'source_reference': '/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/hessian_acceleration/Phthalimide/accepted/result.json'}
+FD {'direction': 0, 'step_bohr': 0.0002, 'energy_gradient_error': 3.108449229932614e-10, 'hessian_vector_error': 0.00027684274667565123}
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/qualify_hessian_acceleration.py", line 28, in <module>
+    checks.append(dict(direction=k,step_bohr=eps,energy_gradient_error=float(ee),hessian_vector_error=he));write(out/'phthalimide_direction_checks.json',checks);print('FD',checks[-1],flush=True);assert ee<2e-7 and he<2e-6
+                                                                                                                                                                                                          ^^^^^^^^^^^^^^^^^^^
+AssertionError

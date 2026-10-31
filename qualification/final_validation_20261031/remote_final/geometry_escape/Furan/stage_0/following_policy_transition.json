@@ -1,0 +1,7 @@
+{
+  "accepted_generation": "accepted_041",
+  "from_policy": "fixed_transition",
+  "to_policy": "local_csf",
+  "energy_Hamiltonian_and_Gram_unchanged": true,
+  "reason": "Preserve the followed adiabatic CI branch through changing orbital character; coherent successive-CSF overlap remains required."
+}

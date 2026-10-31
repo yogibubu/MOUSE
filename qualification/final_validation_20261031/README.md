@@ -182,3 +182,29 @@ energy. Fixed-rank two results remain valid.
 Final qualification: 46 core/LINK/APOC regressions pass in 12.87 seconds; two
 additional contracts pass for fixed rank and explicit local-CSF restart policy.
 The local policy changes eigenroot following, not the Hamiltonian or energy.
+
+## Final verified release
+
+`FINAL_TRANSFER_VERIFICATION.json` certifies all 2,904 transferred files in
+`remote_final` against the immutable Oracle archive and its SHA256 manifest.
+Another 199 large files remain on Oracle with hashes. The final 72-row cost
+ledger contains 48 completed measurements and 24 prespecified omitted repeats.
+All six analytic Hessians, including Phthalimide, are complete. The preceding
+600-second censored attempt and all replaced derivative measurements remain
+in `cost_before_hessian_acceleration`. Energy-only and TDA timings are reused
+because their implementation is unchanged; derivative timings are remeasured.
+
+`HESSIAN_SOURCE_VERIFICATION.json` verifies the six exact runtime source hashes.
+The Phthalimide Hessian takes 42.224 s and the largest updated process uses
+1.07 GiB RSS. Controlled gradient differences at two step sizes converge
+quadratically; Richardson extrapolation agrees within 4.42e-7 Ha/bohr².
+Full matrices for Phthalimide, Furan and the Cyclopentadiene minimum agree with
+retained pre-batching matrices within 1.32e-12 Ha/bohr². Forty-six regressions,
+two restart/rank contracts and two exact-response tests pass. The 97-second
+first complete profiled run and its parent nuclear-block checkpoints are retained.
+`CLOSURE_MAP.json` maps initial controller exit codes to explicit recoveries.
+
+Three early nitroxyl gradient rows lack a later scope metadata field; their
+executed source already included all three ground-reference gradients. They
+remain in the historical baseline; the current remeasured rows include the
+explicit scope field.

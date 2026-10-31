@@ -1,0 +1,7 @@
+{
+  "source_sha256": "e511ccd82706ab6329c86a3073ad47efa2cc82d9f6d74040bc86450849bc569b",
+  "model_changed": false,
+  "reason": "Off-plane continuation blocked under uniform clipping. Safeguarded spectral residual trust step, larger guarded trial radius and bounded 64 iterations; stationarity, state, Gram and response-curvature gates unchanged.",
+  "qualification": "pending independent displaced-gradient and numerical Jacobian checks",
+  "lazy_fallback": true
+}

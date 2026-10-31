@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy.py", line 42, in <module>
+    with threadpool_limits():run(args.name,args.sid,args.scale)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy.py", line 11, in run
+    data,erifile=calibrate(out,src,s,ctx)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/common.py", line 52, in calibrate
+    case=dict(name='anchor',reference=str(reference));data,request=env['calibrate'](case,s,ctx)
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-roks-independent-20261030/full_fast.py", line 28, in calibrate
+    out=full.ROOT/case['name'];out.mkdir(exist_ok=True);final=out/'model.npz'
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/.local/share/mamba/envs/et-2.5/lib/python3.11/pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/anchor_energy/Furan/0.98/full_response/anchor'

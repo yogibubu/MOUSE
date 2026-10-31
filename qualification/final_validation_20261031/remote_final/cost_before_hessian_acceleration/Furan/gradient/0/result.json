@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "molecule": "Furan",
+  "property": "gradient",
+  "repeat": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "natoms": 9,
+  "nao": 24,
+  "rank": 2,
+  "wall_seconds": 3.3078575269901194,
+  "cpu_seconds": 3.994917405,
+  "process_peak_rss_kib": 487812,
+  "model_loading_and_ground_setup_seconds": 0.15701098000863567,
+  "total_gradient_included": true,
+  "preparation_timing": "separately archived; absent stage costs are unknown, never zero",
+  "scope": "fresh process, prepared converged anchor seeds; not an ab initio unprepared solve; both-parent all-root TDA versus one OO state",
+  "energy_hartree": -14.398964753208968,
+  "residual": 1.2453946934475374e-14,
+  "hessian": false
+}

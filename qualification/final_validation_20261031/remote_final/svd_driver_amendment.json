@@ -1,0 +1,5 @@
+{
+  "source_sha256": "9290f8e3626bd4cb15d1910de4f9a162a778570212579863c456c85bbbae8dd2",
+  "model_changed": false,
+  "reason": "Retain SVD rank threshold; retry finite matrices with independent LAPACK gesvd driver if gesdd does not converge. Explicitly reject nonfinite tangent maps."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "data_sha256": "dd33f7b9a1f1dac62c29a4025603f096c1ab0f19e2b82ab5cbae109c77cb79ee",
+  "operational_closure": {
+    "anchors": true,
+    "independent": true,
+    "geometry_attempts": true,
+    "cost": true,
+    "tda_operator": true,
+    "phthalimide_analytic_hessian": true
+  },
+  "cost_status": {
+    "complete": 48,
+    "not_repeated_due_to_prespecified_budget": 24
+  },
+  "scientific_claim": "A completed evidence package; not a universal accuracy or end-to-end speed certificate"
+}

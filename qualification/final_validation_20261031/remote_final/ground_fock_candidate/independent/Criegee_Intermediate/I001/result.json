@@ -1,0 +1,18 @@
+{
+  "status": "matched",
+  "molecule": "Criegee_Intermediate",
+  "id": "I001",
+  "rank": 1,
+  "excitation_ev": 2.480726295609369,
+  "parent_gaps_ev": [
+    2.635521820493476,
+    2.3259307707252623
+  ],
+  "residual": 4.418917031441073e-14,
+  "fidelity": [
+    0.993327383410663,
+    0.9968176901361813
+  ],
+  "energy_labels_used": false,
+  "model_fingerprint": "1ff9808a21b4181775b3d94eaf020f5af957fdc6a39926c3d99cbf95e8b1ecbb"
+}

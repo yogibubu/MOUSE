@@ -1,0 +1,31 @@
+[
+  {
+    "iteration": 0,
+    "energy": -21.54408033025829,
+    "residual": 0.0012503870564579966,
+    "observed_index": 1,
+    "target_index": 1,
+    "minimum_curvature": -0.45406883798100367,
+    "trust_radius": 0.08,
+    "step_type": "trusted_newton"
+  },
+  {
+    "iteration": 1,
+    "energy": -21.544083632112685,
+    "residual": 5.521043081248289e-06,
+    "observed_index": 1,
+    "target_index": 1,
+    "minimum_curvature": -0.45196956352315737,
+    "trust_radius": 0.08,
+    "step_type": "trusted_newton"
+  },
+  {
+    "iteration": 2,
+    "energy": -21.54408363218825,
+    "residual": 1.7061832502385244e-10,
+    "observed_index": 1,
+    "target_index": 1,
+    "minimum_curvature": -0.4519796161718762,
+    "trust_radius": 0.08
+  }
+]

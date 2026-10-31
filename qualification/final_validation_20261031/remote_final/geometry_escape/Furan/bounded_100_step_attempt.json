@@ -1,0 +1,6 @@
+{
+  "status": "unresolved",
+  "traceback": "Traceback (most recent call last):\n  File \"/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/escape_nuclear_saddle.py\", line 56, in <module>\n    with threadpool_limits():run(args.name,args.sid)\n                             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/escape_nuclear_saddle.py\", line 44, in run\n    if np.max(abs(reference.gradient_hartree_per_bohr))>=3e-5:raise RuntimeError('Bounded descent budget exhausted; accepted coordinates and inverse BFGS retained')\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Bounded descent budget exhausted; accepted coordinates and inverse BFGS retained\n",
+  "source_sha256": "258cdfacbcb6eb7bad3d2596fe2978d3fb590e9cd795cbce7bab8fd3f995bfca",
+  "checkpoints_retained": true
+}

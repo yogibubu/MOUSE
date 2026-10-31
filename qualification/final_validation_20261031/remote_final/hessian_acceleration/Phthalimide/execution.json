@@ -1,0 +1,11 @@
+{
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "source_sha256": {
+    "nonlocal_response.py": "7fe7a0e07cb86c912efc27b595b70114354de7b1dc5f107e3022f0cae6957ae1",
+    "multicsf_surface.py": "923f0ed850486c8bec541c19bef75946a01895e79dcc6161dc5f1c39d162c326",
+    "multicsf_nuclear.py": "388af9f672a1897105cdbf6631db60c00defd62ac04752e9f430c260e6abcd2a",
+    "deltascf_analytic_hessian.py": "e2d4ace4d696b23d45c9778de96374c2047e6ff4bd96199a50b80192d639c44d"
+  },
+  "driver_sha256": "d10fe506baae5dab3fdcd797b3654686bc56fe9aa7a10a39318ff339fecd63ae"
+}

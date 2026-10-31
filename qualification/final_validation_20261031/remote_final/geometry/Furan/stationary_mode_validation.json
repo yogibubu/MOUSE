@@ -1,0 +1,25 @@
+{
+  "complete": true,
+  "host": "oracle.sns.it",
+  "source_sha256": "e92205cd2880933f5027cba1e9a4a5a5035abd984a557d55df694e2926416337",
+  "checks": [
+    {
+      "mode": 0,
+      "frequency_cm1": -951.9266666728103,
+      "maximum_hessian_vector_error": 2.063223519116475e-09,
+      "analytic_curvature": -0.04076325655474785,
+      "finite_difference_curvature": -0.040763253741201995,
+      "step_bohr": 0.0002
+    },
+    {
+      "mode": 20,
+      "frequency_cm1": 3236.9857637530035,
+      "maximum_hessian_vector_error": 9.480510709813927e-09,
+      "analytic_curvature": 0.4336133788393085,
+      "finite_difference_curvature": 0.43361339696964374,
+      "step_bohr": 0.0002
+    }
+  ],
+  "maximum_error": 9.480510709813927e-09,
+  "scope": "most negative and highest positive vibrational directions at this stationary geometry; not a new full-column Hessian check"
+}

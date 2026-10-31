@@ -1,0 +1,13 @@
+{
+  "status": "attempt_pass_complete",
+  "all_tasks_attempted": true,
+  "completed_outputs": 85,
+  "total_tasks": 85,
+  "failed_tasks": [
+    "independent_Ammonia",
+    "anchor_Phthalimide_0.98",
+    "anchor_Phthalimide_1.02",
+    "cost_acetaldehyde_tda_0"
+  ],
+  "sealed_labels_read": false
+}

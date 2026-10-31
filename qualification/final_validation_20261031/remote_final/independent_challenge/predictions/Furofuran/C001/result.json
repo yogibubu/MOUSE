@@ -1,0 +1,12 @@
+{
+  "id": "C001",
+  "molecule": "Furofuran",
+  "family": "pi_pi",
+  "status": "matched",
+  "rank": 1,
+  "excitation_ev": 5.522605508310233,
+  "residual": 7.320099387753132e-15,
+  "projection_norm": 0.8324095249091554,
+  "seconds": 26.36915062199114,
+  "labels_read": false
+}

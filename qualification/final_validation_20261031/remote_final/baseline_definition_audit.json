@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "molecule": "Furan",
+      "native_reference_density_error": 1.0130785099704553e-13,
+      "reconstructed_Q_operator_errors": {
+        "operators": 0.0,
+        "charge": 0.0,
+        "spin": 0.0,
+        "q0": 0.0,
+        "linear": 0.0
+      }
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "native_reference_density_error": 9.637846076770984e-13,
+      "reconstructed_Q_operator_errors": {
+        "operators": 0.0,
+        "charge": 0.0,
+        "spin": 0.0,
+        "q0": 0.0,
+        "linear": 0.0
+      }
+    },
+    {
+      "molecule": "Phthalimide",
+      "native_reference_density_error": 5.717648576819556e-15,
+      "reconstructed_Q_operator_errors": {
+        "operators": 0.0,
+        "charge": 0.0,
+        "spin": 0.0,
+        "q0": 0.0,
+        "linear": 0.0
+      }
+    }
+  ],
+  "scope": "native calibration density equals direct restricted S0, and exact same Q prescription reconstructs original baseline operators; no new SCF, ERI or quadrature calculation",
+  "source_sha256": "8fa8b4d285717e43b2c71bbf4ddba5f8704136f9b2d927e569b905ef502ae0fa"
+}

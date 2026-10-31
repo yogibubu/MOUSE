@@ -1,8 +1,13 @@
 # MOUSE semiempirical OO-DFT manuscript
 
-Scientific draft in English, 30 October 2026. Validation status updated 31 October 2026.
+Scientific draft in English, 30 October 2026. Validation status updated 1 November 2026.
 
-The full-response GFN2 TDA controls in the current PDF and generated figures predate a confirmed nonlocal-exchange correction. They are archival static-response diagnostics, not qualified true-TDA comparisons. Their accuracy and timing comparisons must be regenerated before manuscript use. An independent PySCF A-matrix check verifies the correction to 3.6e-15 Hartree for exchange fractions 1 and 0.225. The OO-DFT energies, derivative checks and separate published sTDA-xTB results are unaffected. The corrected 14-state/10-molecule campaign is recorded in `../../qualification/state_following_20261031/reduced_validation`.
+The final release uses the corrected nonlocal singlet TDA operator on stationary
+corrected GFN2 orbitals. Archived static-response matrices are superseded and
+excluded from accuracy and timing comparisons. The final frozen primary cohort,
+full-anchor recalibrations, physical-reference checks and six-size cost ledger
+are packaged in `data/final_validation.json`; figures and tables rebuild using
+`python3 make_final_validation_assets.py` without electronic calculations.
 
 The central contribution is a semiempirical orbital-optimized density-functional-response-informed method with analytic excited-state gradients and nuclear Hessians. TDA on corrected GFN2 orbitals and a separate published dedicated sTDA-xTB calculation are the comparison methods. The implemented candidate is the fixed 50/50 relative-active-pair constrained ROKS composite, not a full-basis DFT calculation at each geometry.
 
@@ -21,7 +26,7 @@ The central contribution is a semiempirical orbital-optimized density-functional
 
 Levi and co-workers motivate direct orbital optimization and electronic saddle searches (2020, 2021, 2023, 2026; DOI links in the bibliography). Their published results are not attributed to MOUSE. The manuscript distinguishes a spin-pure CSF from an exact projected DFT energy, and a constrained composite stationary surface from an unconstrained single density functional.
 
-The main validation figures are 0.183 eV MAE for the curated 19-state cohort and 0.304 eV for the four prospective molecular tests. The previously quoted 1.029/1.073 eV static-response controls are withdrawn as TDA comparisons pending the corrected calculation. These four molecules had earlier predictions with other models. The text makes no claim of a wholly blind benchmark, universal n-to-pi-star correction, experimental-frequency accuracy, or faster energy-only execution.
+The main validation figures are 0.183 eV MAE for the curated 19-state cohort and 0.304 eV for the four prospective molecular tests. The previously quoted 1.029/1.073 eV static-response controls are withdrawn. The corrected 14-state TDA-Q MAE is 0.261 eV; the final primary frozen cohort accepts four of six states with OO MAE 0.675 eV. These four molecules had earlier predictions with other models. The text makes no claim of a wholly blind benchmark, universal n-to-pi-star correction, experimental-frequency accuracy, or faster energy-only execution.
 
 ## Rebuild
 
@@ -53,7 +58,7 @@ Six figures use a consistent vector style and are supplied in PDF, SVG and high-
 
 `extend_publication_results.py` generates the direct released sTDA-xTB comparison, all-state external-method table, structural comparison and vertical-anchor weight precheck. It is called by `build_assets.py`. Completed external results are copied into `data/`; `direct_stda_comparison.csv` preserves every root, overlap, projected norm and margin. The 50/50 candidate is unchanged.
 
-The original 44-state manifest and all dispositions are retained. The active scope was reduced after baseline convergence inspection to 14 states on ten molecules. All 14 states pass stationarity and available-root audits; matched TDA controls and prediction closure are complete. Reference labels were opened only after the lock. OO MAE is 0.492 eV versus 0.261 eV for TDA-Q; the single-CSF pi-pi error is substantial. This reduced/adapted set is not wholly blind. TD-DFTB/DeltaDFTB state assignments, full lambda/anchor sensitivity and complete derivative/memory costs remain unfinished.
+The original 44-state manifest and all dispositions are retained. The active scope was reduced after baseline convergence inspection to 14 states on ten molecules. All 14 states pass stationarity and available-root audits; matched TDA controls and prediction closure are complete. Reference labels were opened only after the lock. OO MAE is 0.492 eV versus 0.261 eV for TDA-Q; the single-CSF pi-pi error is substantial. This reduced/adapted set is not wholly blind. The external DFTB symmetry audit and the final full-anchor, derivative and memory campaign are reported in later sections; a full lambda scan remains outside this study.
 
 Internal-coordinate results against CCSDR(3)/def2-TZVPP are available for three minima. Nitroxyl harmonic-frequency comparisons remain provisional by frequency order until mode-vector confirmation. These physical comparisons must be kept separate from numerical validation of the analytic derivatives.
 
@@ -83,9 +88,9 @@ contract tests pass. Cold full-Hessian evaluation is 98.99 s; restoring the
 accepted state and its stored Hessian is 0.613 s, not a new-Hessian benchmark.
 
 Figure 10 and `make_integration_assets.py` report response-only lambda,
-algebraic vertical-weight and fixed-reference rank sensitivity. The actual
-DFT-anchor recalibration, independent validation, physical frequencies and
-complete size/cost/memory comparison remain open. The 50/50 weight and lambda
+algebraic vertical-weight and fixed-reference rank sensitivity. The final
+DFT-anchor recalibration, independent validation, physical-frequency comparison
+and six-size cost/memory assessment are reported in the final campaign. The 50/50 weight and lambda
 0.9 remain fixed. Phthalimide's rank boundary is a material model limitation.
 
 ## External DFTB symmetry audit
@@ -135,3 +140,23 @@ hash verified. It does not close full F/Q recalibration with energies evaluated
 at a common target geometry, independent molecular validation, physical
 structure/frequency accuracy, or a complete TDA/OO workflow cost and size study.
 `make_anchor_rank_assets.py` rebuilds the plot and table from standalone JSON.
+
+## Final campaign
+
+All six full F/Q anchor tests are complete. The primary, new-molecule and
+higher-state cohorts stay separate, with locked predictions and full coverage
+records. A symmetry-breaking cyclopentadiene minimum has 27 positive frequencies;
+Furan is compared to the corresponding symmetric EOM-CCSD stationary saddle.
+The six-size benchmark reports prepared E, E+G, E+G+H and true GFN2-orbital TDA,
+with process memory and separately audited preparation stages. Missing historical
+cold-preparation totals remain unknown. The candidate is not a universal accuracy
+or speed improvement over TDA. Source, checkpoints, bounded diagnostics and
+qualification records are in `qualification/final_validation_20261031`.
+
+The final analytic-response contraction completes Phthalimide's full 48-by-48
+Hessian in 42.224 s on Oracle with two threads, versus a previous lower bound
+of 600 s. All six benchmark Hessians are complete; affected derivative costs
+are remeasured. The benchmark peak RSS falls to 1.07 GiB. Literal-jet tests,
+whole-matrix comparisons, controlled gradient differences, and 50 regression/
+contract/response tests qualify the unchanged mathematical model. The exact
+implementation is committed as `4fe3cd8`.

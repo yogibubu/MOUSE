@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "full_matrix_error_hartree": 0.0,
+  "correction_max_hartree": 0.04812791210360981,
+  "existing_independent_pyscf_certificate": {
+    "host": "oracle.sns.it",
+    "status": "passed",
+    "cases": [
+      {
+        "exchange_fraction": 1.0,
+        "pyscf_A_max_error_hartree": 3.552713678800501e-15,
+        "uncorrected_static_max_error_hartree": 0.423710897216413,
+        "eigenvalue_max_error_hartree": 7.549516567451064e-15
+      },
+      {
+        "exchange_fraction": 0.225,
+        "pyscf_A_max_error_hartree": 3.552713678800501e-15,
+        "uncorrected_static_max_error_hartree": 0.10050120135807461,
+        "eigenvalue_max_error_hartree": 1.4210854715202004e-14
+      }
+    ],
+    "scope": "independent response-operator validation on water/STO-3G; benchmark TDA still uses corrected GFN2 orbitals"
+  },
+  "existing_certificate_sha256": "127548a2087bc8c0ba7390beaf63e1bc1c1cd92c453c7ea7fc328dadad51a643",
+  "independent_check_source_sha256": "2350f78a57c74c29f2d53262ce5d925db6139761673526e350d645ae2d43c270",
+  "helper_source_sha256": "8401d59a438df5046d8bb7729b122b0805402a6adf282312a1ae5caf8920a534",
+  "scope": "exact reproduction of the stored corrected GFN2-orbital TDA matrix; existing independent PySCF A validation retained"
+}

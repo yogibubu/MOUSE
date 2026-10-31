@@ -1,0 +1,48 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 2,
+  "effective_pairs": 1.5981863797985008,
+  "noccupied": 27,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.40117667230486387,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 0.6086508206738969,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.602887967705288,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "anchor_source": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/anchor_rank_symmetry/Phthalimide/1.02",
+    "original_model": "2d8e35091f65871435cfb88f1e96b918400ee7b6d8539151395b1147d81ead96",
+    "relative_frame": "metric-polar transported original full active Gram matrix",
+    "source_sha256": "393b741946d695453c54097f1b43583b72edc774d734eb588e95bcaecd99d78c"
+  },
+  "sha256": {
+    "template.npz": "f6eed85b625ae46c26408fc976623c58c237892137e0891120e49fec0ef46a06",
+    "response_0.npz": "0a12e6ac7c969244c55d137adf41ce6af98336e7c9530b3a7d94e6844e3cf3d6",
+    "response_1.npz": "91cbf06a5aee239525de7194a59b0e9384b5454c47b1ebb0a5f83fffcaa92ddc",
+    "arrays.npz": "cf8bc603bba70ca5ca1baea0a395526aeb4ec1ae15f96d707361fdb8137b461d",
+    "ground_0.npz": "41ee4c9b1fb19702f8616623f3c1ffe9678067292504f287e269632dc524234f",
+    "ground_1.npz": "7c16993f8f87d0fea064b4c8e9ef60048e1b439a923d40918d5b01435e89f95e",
+    "ground_2.npz": "2373cd1d54f4003ad6d53a9f7f129499e07706ec0c2d0230a0682d4e828a8176"
+  }
+}

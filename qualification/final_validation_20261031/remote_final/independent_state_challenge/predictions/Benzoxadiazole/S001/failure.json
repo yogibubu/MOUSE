@@ -1,0 +1,4 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/independent.py\", line 109, in predict\n    obj=MultiCSFObjective(context,eri,no,rank,c0,q);parents.append(optimize_parent(obj,c,dest/f'parent_{i}'))\n                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/final_validation/independent.py\", line 74, in optimize_parent\n    assert solved.converged,'Multi-CSF parent unresolved; checkpoint retained'\n           ^^^^^^^^^^^^^^^^\nAssertionError: Multi-CSF parent unresolved; checkpoint retained\n",
+  "checkpoints_preserved": true
+}

@@ -4,11 +4,12 @@
 \usepackage{lmodern,microtype,amsmath,amssymb,booktabs,graphicx,longtable}
 \usepackage[margin=25mm]{geometry}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\hypersetup{pdftitle={Supporting Information: MOUSE Semiempirical Orbital-Optimized DFT},pdfauthor={Vincenzo Barone}}
 \usepackage{fancyvrb}
 \newcommand{\Eh}{\ensuremath{E_{\rm h}}}
 \title{Supporting Information\\Semiempirical Orbital-Optimized DFT in MOUSE:\\Spin-Pure Excited-State Surfaces with Analytic Gradients and Hessians}
 \author{Vincenzo Barone}
-\date{Working manuscript, 31 October 2026}
+\date{Working manuscript, 1 November 2026}
 \begin{document}
 \maketitle
 \renewcommand{\thetable}{S\arabic{table}}
@@ -121,4 +122,30 @@ The same three rank-two molecules are recomputed at uniform internal Cartesian s
 The fresh-native-S0 and transported-original-subspace calculations both retain rank two. Baseline compact transition matrices are reproduced within $5\times10^{-16}$, before the changed references are analyzed. All six target transition overlaps exceed 0.996 and available-competitor margins exceed 0.972. This is a local reference/identity test with exposed data and limited competing-root coverage, not a full F/Q recalibration, a common-target-geometry energy anchoring test, or a new independent benchmark.
 \input{tables/actual_anchor_rank.tex}
 
+\clearpage
+\section{Final frozen cohorts and full-anchor energies}
+\input{tables/final_anchor.tex}
+\input{tables/final_independent.tex}
+\clearpage
+\section{Furan physical reference and cyclopentadiene descent}
+\input{tables/furan_physical_structure.tex}
+\input{tables/furan_physical_frequencies.tex}
+The furan reference is the symmetric A1 valence stationary point, not the nonsymmetric minimum. The independent distorted-point energy--gradient check has error $2.46\times10^{-9}$ Hartree/bohr. The cyclopentadiene descendant has 27 positive vibrational frequencies and maximum gradient $2.59\times10^{-5}$ Hartree/bohr. A central gradient difference along the softest cyclopentadiene minimum mode, at $2\times10^{-4}$ bohr, verifies its analytic Hessian action within $1.33\times10^{-10}$ Hartree/bohr$^2$. The retained furan descendant has not reached the same stationarity threshold; no minimum or harmonic spectrum is assigned to it.
+\clearpage
+\section{Prepared-property cost, memory, and preparation audit}
+\input{tables/final_cost.tex}
+\input{tables/final_preparation.tex}
+\clearpage
+\section{Complete phthalimide analytic Hessian}
+The complete $48\times48$ matrix is obtained with the same Hamiltonian, orbital stationarity and spin-adapted CSF definitions. A first complete profiled evaluation takes 97.08 s. Batched response and reuse of the independent orbital/CI block reproduce that matrix within $1.32\times10^{-12}$ Hartree/bohr$^2$. Along the most negative Cartesian Hessian eigenvector, central differences of relaxed gradients at $2\times10^{-4}$ and $10^{-4}$ bohr have maximum errors $2.7684\times10^{-4}$ and $6.8879\times10^{-5}$ Hartree/bohr$^2$, a ratio of 4.019. Richardson extrapolation gives $4.42\times10^{-7}$ Hartree/bohr$^2$ error. This step-convergence test uses finite differences only for validation; the production Hessian is analytic. The maximum translational identity residual is $5.59\times10^{-15}$ Hartree/bohr$^2$ and the nonstationary rotational-covariance residual is $5.56\times10^{-12}$ Hartree/bohr. Earlier censored timings and all displaced-state checkpoints are retained.
+\input{tables/final_hessian_acceleration.tex}
+
+\section{Bounded energy-model diagnostics}
+Increasing the furofuran space to fixed rank two gives 5.39274 and 6.86288 eV for the two challenge states, against fixed references 5.489 and 6.027 eV. The corresponding baseline rank-one values are 5.52261 and 7.06733 eV. Thus a larger singles-CSF space only partly reduces the Ag error. A rank-three continuation is closed at its last accepted homotopy checkpoint without assigning an endpoint energy. Fixed-rank manifests explicitly preserve the requested rank instead of reapplying the automatic NTO rank rule.
+
+A separate bounded diagnostic replaces only the F-parent linear reference by the projected converged-DFT-ground Fock operator, preserving all response terms, weights, scaling and zero-offset policy. Its primary-cohort MAE is 0.58854 eV and its two-state furofuran MAE is 0.47656 eV. This construction was frozen before the primary baseline labels were opened; furofuran labels were already exposed. The modest improvement does not establish a universal correction or justify promoting this diagnostic over the frozen baseline. Prediction locks and exposure records are retained separately.
+\section{Structures of all studied molecules}
+The following Jmol renderings use archived three-dimensional molecular coordinates. Inclusion identifies a studied molecule and does not imply that every requested electronic state is representable or accurate.
+\begin{figure}[p]\centering\includegraphics[page=1,width=\linewidth,height=.86\textheight,keepaspectratio]{figures/all_studied_structures_jmol.pdf}\caption{Archived three-dimensional molecular structures, plate 1.}\end{figure}
+\begin{figure}[p]\centering\includegraphics[page=2,width=\linewidth,height=.86\textheight,keepaspectratio]{figures/all_studied_structures_jmol.pdf}\caption{Archived three-dimensional molecular structures, plate 2.}\end{figure}
 \end{document}

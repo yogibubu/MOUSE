@@ -14,3 +14,20 @@ For a difficult independent Q parent, we also follow a stationary F parent throu
  v(\tau)=(1-\tau)v_F+\tau v_Q,\qquad 0\leq\tau\leq1.
 \end{equation}
 Only the frozen one-body operator changes along this numerical path; the common charge/spin response, bare projected integrals, active rank and final Q Hamiltonian are retained. The initial increment is $1/8$ and is subdivided if the state/stationarity gates fail. Accepted orbital checkpoints are reused. The effective exchange remains $0.25\times0.9$; $\tau$ is not an exchange parameter or a physical parent weight. Local electronic curvature is reassessed between bounded mode-following phases, while state identity remains controlled by the same projected transition. The endpoint is used only after certification with the original Q operator. Reference excitation energies do not select the continuation path.
+
+For a geometry path, an explicit opt-in local-CSF policy uses the preceding accepted CI vector only to select the continuous eigenroot. The Hamiltonian, energy, relative Gram constraints, and full-CSF overlap guard are unchanged. The policy is serialized and incompatible restart policies are rejected. Fixed-reference transition following remains the default for vertical validation. Separate contract tests verify both restart behavior and preservation of an explicitly requested CSF rank. Nuclear descent uses bounded BFGS steps and Armijo decrease, retaining the last accepted coordinates and inverse matrix; these numerical changes do not alter the energy model.
+For the final difficult full-anchor recovery only, a resolved full-Newton trial with raw coordinate norm at most 1 is tested before the 0.3 residual-trust fallback. Acceptance still requires residual decrease, coherent state overlap, the CI margin and exact active-Gram preservation. This documented solver-path amendment closes the remaining phthalimide calibration without altering its Hamiltonian or selecting an excitation-energy error.
+
+\subsection{Contracted analytic nuclear response}
+The complete analytic response initially materialized first and second nuclear jets of every transported AO-pair operator. This is unnecessary for either the charge density $P=P_\alpha+P_\beta$ or the spin density $P=P_\alpha-P_\beta$. With real symmetric $P$ and $S$, write
+\begin{equation}
+ q_a=A_a^0:Q,\qquad Q=U^{\mathsf T}\frac{SP+PS}{2}U,
+ \qquad q_{a,R}=A_a^0:Q_R.
+\end{equation}
+The field $v=K(q-q_0)+v_0$ is contracted into $A_v^0=\sum_a v_aA_a^0$ before differentiating the second-order frame contribution. Consequently,
+\begin{equation}
+ E_{RR'}=q_R^{\mathsf T}Kq_{R'}+\sum_a v_aq_{a,RR'}
+\end{equation}
+can be evaluated with small density-like and rotation jets, retaining every overlap/frame mixed term. The same adjoint contraction applies to global and covalent local frames. This removes coordinate-by-feature-by-AO-pair intermediates without changing the functional, its rank or a convergence threshold. Dense frozen response storage is still required.
+
+Charge and spin response are also applied to batches of density perturbations. The multi-CSF orbital/CI Hessian is already assembled independently; nuclear block construction therefore reuses it and computes the complete mixed and nuclear blocks without rebuilding an unused orbital block. The coupled orbital/CI response and all three ground-reference derivatives remain present. Literal operator-jet comparisons, fixed-density finite differences, whole-matrix molecular comparisons and relaxed-gradient differences qualify the reorganization. The previously censored phthalimide calculation is completed analytically; finite differences are used only for validation.

@@ -1,0 +1,180 @@
+{
+  "schema": "mouse.independent.six.score.v1",
+  "n_attempted": 3,
+  "n_matched": 3,
+  "overall": {
+    "n": 3,
+    "mae": 0.3998254381896424,
+    "mse": -0.3998254381896424,
+    "rmse": 0.40950922345886326,
+    "maxabs": 0.5240529195419885
+  },
+  "families": {
+    "n_pi": {
+      "n": 0
+    },
+    "pi_pi": {
+      "n": 3,
+      "mae": 0.3998254381896424,
+      "mse": -0.3998254381896424,
+      "rmse": 0.40950922345886326,
+      "maxabs": 0.5240529195419885
+    },
+    "Rydberg": {
+      "n": 0
+    },
+    "CT": {
+      "n": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "S001",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "status": "matched",
+      "rank": 2,
+      "excitation_ev": 4.586771042161828,
+      "residual": 1.3241363925699058e-13,
+      "projection_norm": 0.9321160792877093,
+      "seconds": 120.47038496495225,
+      "labels_read": false,
+      "reference_ev": 4.911,
+      "reference_safe": "N",
+      "partial_double_character": false,
+      "error_ev": -0.3242289578381712,
+      "tda_operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+      "tda_gfn2": {
+        "id": "S001",
+        "molecule": "Benzoxadiazole",
+        "family": "pi_pi",
+        "status": "matched",
+        "parents": [
+          {
+            "profile": "F",
+            "status": "matched",
+            "root": 4,
+            "coherent_transition_overlap": 0.9966434288139667,
+            "margin": 0.9342977396153958,
+            "excitation_ev": 6.274562210038186,
+            "error_ev": 1.3635622100381868
+          },
+          {
+            "profile": "Q",
+            "status": "matched",
+            "root": 10,
+            "coherent_transition_overlap": 0.7198617935316178,
+            "margin": 0.11605317190355358,
+            "excitation_ev": 5.478324580859924,
+            "error_ev": 0.5673245808599248
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0
+      }
+    },
+    {
+      "id": "S002",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "status": "matched",
+      "rank": 1,
+      "excitation_ev": 4.787947080458012,
+      "residual": 4.1106956488908e-11,
+      "projection_norm": 0.9343801093962566,
+      "seconds": 58.8950511040166,
+      "labels_read": false,
+      "reference_ev": 5.312,
+      "reference_safe": "Y",
+      "partial_double_character": false,
+      "error_ev": -0.5240529195419885,
+      "tda_operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+      "tda_gfn2": {
+        "id": "S002",
+        "molecule": "Benzoxadiazole",
+        "family": "pi_pi",
+        "status": "matched",
+        "parents": [
+          {
+            "profile": "F",
+            "status": "matched",
+            "root": 1,
+            "coherent_transition_overlap": 0.9958551446287731,
+            "margin": 0.9431671007185358,
+            "excitation_ev": 4.35162831744649,
+            "error_ev": -0.96037168255351
+          },
+          {
+            "profile": "Q",
+            "status": "matched",
+            "root": 9,
+            "coherent_transition_overlap": 0.9792287953767151,
+            "margin": 0.8599641460520212,
+            "excitation_ev": 5.233885791898771,
+            "error_ev": -0.07811420810122893
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0
+      }
+    },
+    {
+      "id": "S003",
+      "molecule": "Benzoxadiazole",
+      "family": "pi_pi",
+      "status": "matched",
+      "rank": 1,
+      "excitation_ev": 5.488805562811232,
+      "residual": 7.169910281809577e-14,
+      "projection_norm": 0.9446121380851253,
+      "seconds": 98.61339441896416,
+      "labels_read": false,
+      "reference_ev": 5.84,
+      "reference_safe": "Y",
+      "partial_double_character": false,
+      "error_ev": -0.3511944371887674,
+      "tda_operator": "true singlet TDA A; exact nonlocal exchange correction with 0.225 exchange fraction",
+      "tda_gfn2": {
+        "id": "S003",
+        "molecule": "Benzoxadiazole",
+        "family": "pi_pi",
+        "status": "matched",
+        "parents": [
+          {
+            "profile": "F",
+            "status": "matched",
+            "root": 2,
+            "coherent_transition_overlap": 0.9358090085841467,
+            "margin": 0.6737728076547205,
+            "excitation_ev": 5.389208394058832,
+            "error_ev": -0.45079160594116807
+          },
+          {
+            "profile": "Q",
+            "status": "matched",
+            "root": 14,
+            "coherent_transition_overlap": 0.9712551589569228,
+            "margin": 0.8259035653342618,
+            "excitation_ev": 5.810601410611087,
+            "error_ev": -0.029398589388913265
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset_ev": 0
+      }
+    }
+  ],
+  "limitation": "Predeclared state cohort; CT shortfall; representation failures remain in denominator; no parameter refitting"
+}

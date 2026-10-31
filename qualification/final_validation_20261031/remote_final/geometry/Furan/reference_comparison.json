@@ -1,0 +1,342 @@
+{
+  "state": "Furan C2v A1 valence stationary point",
+  "reference_doi": "10.1063/1.1578051",
+  "stationary_point_is_not_minimum": true,
+  "nuclear_imaginary_modes": [
+    {
+      "frequency_cm1": -951.9266666728103,
+      "irrep": "a2",
+      "plane_character": -1.0,
+      "c2_character": 1.0
+    },
+    {
+      "frequency_cm1": -510.3253823022542,
+      "irrep": "a2",
+      "plane_character": -0.9999999999999998,
+      "c2_character": 0.9999999999999998
+    },
+    {
+      "frequency_cm1": -489.9138680861635,
+      "irrep": "b1",
+      "plane_character": -1.0,
+      "c2_character": -1.0
+    },
+    {
+      "frequency_cm1": -307.73165061508666,
+      "irrep": "b1",
+      "plane_character": -0.9999999999999999,
+      "c2_character": -1.0
+    },
+    {
+      "frequency_cm1": -179.4294197655771,
+      "irrep": "a2",
+      "plane_character": -1.0000000000000002,
+      "c2_character": 1.0000000000000002
+    }
+  ],
+  "all_modes": [
+    {
+      "frequency_cm1": -951.9266666728103,
+      "irrep": "a2",
+      "plane_character": -1.0,
+      "c2_character": 1.0
+    },
+    {
+      "frequency_cm1": -510.3253823022542,
+      "irrep": "a2",
+      "plane_character": -0.9999999999999998,
+      "c2_character": 0.9999999999999998
+    },
+    {
+      "frequency_cm1": -489.9138680861635,
+      "irrep": "b1",
+      "plane_character": -1.0,
+      "c2_character": -1.0
+    },
+    {
+      "frequency_cm1": -307.73165061508666,
+      "irrep": "b1",
+      "plane_character": -0.9999999999999999,
+      "c2_character": -1.0
+    },
+    {
+      "frequency_cm1": -179.4294197655771,
+      "irrep": "a2",
+      "plane_character": -1.0000000000000002,
+      "c2_character": 1.0000000000000002
+    },
+    {
+      "frequency_cm1": 417.8271851205396,
+      "irrep": "b1",
+      "plane_character": -0.9999999999999999,
+      "c2_character": -1.0
+    },
+    {
+      "frequency_cm1": 736.2075821917265,
+      "irrep": "a1",
+      "plane_character": 0.9999999999999991,
+      "c2_character": 0.9999999999999992
+    },
+    {
+      "frequency_cm1": 754.4393671991089,
+      "irrep": "b2",
+      "plane_character": 0.9999999999999997,
+      "c2_character": -0.9999999999999997
+    },
+    {
+      "frequency_cm1": 971.5459010133927,
+      "irrep": "a1",
+      "plane_character": 0.9999999999999994,
+      "c2_character": 0.9999999999999993
+    },
+    {
+      "frequency_cm1": 991.0515862184607,
+      "irrep": "b2",
+      "plane_character": 0.9999999999999996,
+      "c2_character": -0.9999999999999996
+    },
+    {
+      "frequency_cm1": 1038.554173944801,
+      "irrep": "a1",
+      "plane_character": 1.0000000000000002,
+      "c2_character": 1.0000000000000004
+    },
+    {
+      "frequency_cm1": 1094.563529022545,
+      "irrep": "a1",
+      "plane_character": 0.9999999999999998,
+      "c2_character": 1.0
+    },
+    {
+      "frequency_cm1": 1096.7843059392899,
+      "irrep": "b2",
+      "plane_character": 0.9999999999999996,
+      "c2_character": -0.9999999999999997
+    },
+    {
+      "frequency_cm1": 1134.789673756128,
+      "irrep": "b2",
+      "plane_character": 1.0000000000000002,
+      "c2_character": -1.0000000000000002
+    },
+    {
+      "frequency_cm1": 1279.9447253983617,
+      "irrep": "a1",
+      "plane_character": 1.0000000000000002,
+      "c2_character": 1.0000000000000002
+    },
+    {
+      "frequency_cm1": 1424.2613432965254,
+      "irrep": "a1",
+      "plane_character": 0.9999999999999994,
+      "c2_character": 0.9999999999999992
+    },
+    {
+      "frequency_cm1": 1440.133502610218,
+      "irrep": "b2",
+      "plane_character": 1.0000000000000004,
+      "c2_character": -1.0000000000000002
+    },
+    {
+      "frequency_cm1": 3199.5697777817195,
+      "irrep": "a1",
+      "plane_character": 1.0,
+      "c2_character": 1.0
+    },
+    {
+      "frequency_cm1": 3200.1747290116195,
+      "irrep": "b2",
+      "plane_character": 0.9999999999999999,
+      "c2_character": -0.9999999999999999
+    },
+    {
+      "frequency_cm1": 3230.3476346069892,
+      "irrep": "b2",
+      "plane_character": 0.9999999999999999,
+      "c2_character": -0.9999999999999998
+    },
+    {
+      "frequency_cm1": 3236.9857637530035,
+      "irrep": "a1",
+      "plane_character": 0.9999999999999998,
+      "c2_character": 0.9999999999999998
+    }
+  ],
+  "bonds": [
+    {
+      "coordinate": "O-Calpha",
+      "mouse_angstrom": 1.3812262964981197,
+      "eom_ccsd_angstrom": 1.378,
+      "error_angstrom": 0.003226296498119785
+    },
+    {
+      "coordinate": "Calpha-Cbeta",
+      "mouse_angstrom": 1.4204982503982948,
+      "eom_ccsd_angstrom": 1.46,
+      "error_angstrom": -0.03950174960170516
+    },
+    {
+      "coordinate": "Cbeta-Cbeta",
+      "mouse_angstrom": 1.4997870398981892,
+      "eom_ccsd_angstrom": 1.464,
+      "error_angstrom": 0.03578703989818921
+    },
+    {
+      "coordinate": "Calpha-H",
+      "mouse_angstrom": 1.0683386748637393,
+      "eom_ccsd_angstrom": 1.085,
+      "error_angstrom": -0.01666132513626062
+    },
+    {
+      "coordinate": "Cbeta-H",
+      "mouse_angstrom": 1.0648580393149985,
+      "eom_ccsd_angstrom": 1.088,
+      "error_angstrom": -0.023141960685001628
+    }
+  ],
+  "angles": [
+    {
+      "coordinate": "Calpha-O-Calpha",
+      "mouse_degrees": 106.83319331239946,
+      "eom_ccsd_degrees": 109.6,
+      "error_degrees": -2.7668066876005355
+    },
+    {
+      "coordinate": "O-Calpha-Cbeta",
+      "mouse_degrees": 111.93531893255272,
+      "eom_ccsd_degrees": 109.6,
+      "error_degrees": 2.335318932552724
+    },
+    {
+      "coordinate": "Calpha-Cbeta-Cbeta",
+      "mouse_degrees": 104.64808441124757,
+      "eom_ccsd_degrees": 105.6,
+      "error_degrees": -0.9519155887524278
+    },
+    {
+      "coordinate": "O-Calpha-H",
+      "mouse_degrees": 117.03909606051627,
+      "eom_ccsd_degrees": 116.6,
+      "error_degrees": 0.4390960605162775
+    },
+    {
+      "coordinate": "Calpha-Cbeta-H",
+      "mouse_degrees": 127.74258843411381,
+      "eom_ccsd_degrees": 126.5,
+      "error_degrees": 1.242588434113813
+    }
+  ],
+  "in_plane_frequency_comparison": [
+    {
+      "irrep": "a1",
+      "within_irrep_frequency_order": 1,
+      "mouse_cm1": 3236.9857637530035,
+      "eom_ccsd_cm1": 3332,
+      "error_cm1": -95.01423624699646
+    },
+    {
+      "irrep": "a1",
+      "within_irrep_frequency_order": 2,
+      "mouse_cm1": 3199.5697777817195,
+      "eom_ccsd_cm1": 3303,
+      "error_cm1": -103.4302222182805
+    },
+    {
+      "irrep": "a1",
+      "within_irrep_frequency_order": 3,
+      "mouse_cm1": 1424.2613432965254,
+      "eom_ccsd_cm1": 1446,
+      "error_cm1": -21.73865670347459
+    },
+    {
+      "irrep": "a1",
+      "within_irrep_frequency_order": 4,
+      "mouse_cm1": 1279.9447253983617,
+      "eom_ccsd_cm1": 1407,
+      "error_cm1": -127.0552746016383
+    },
+    {
+      "irrep": "a1",
+      "within_irrep_frequency_order": 5,
+      "mouse_cm1": 1094.563529022545,
+      "eom_ccsd_cm1": 1079,
+      "error_cm1": 15.563529022545026
+    },
+    {
+      "irrep": "a1",
+      "within_irrep_frequency_order": 6,
+      "mouse_cm1": 1038.554173944801,
+      "eom_ccsd_cm1": 1066,
+      "error_cm1": -27.44582605519895
+    },
+    {
+      "irrep": "a1",
+      "within_irrep_frequency_order": 7,
+      "mouse_cm1": 971.5459010133927,
+      "eom_ccsd_cm1": 974,
+      "error_cm1": -2.4540989866072778
+    },
+    {
+      "irrep": "a1",
+      "within_irrep_frequency_order": 8,
+      "mouse_cm1": 736.2075821917265,
+      "eom_ccsd_cm1": 769,
+      "error_cm1": -32.79241780827351
+    },
+    {
+      "irrep": "b2",
+      "within_irrep_frequency_order": 1,
+      "mouse_cm1": 3230.3476346069892,
+      "eom_ccsd_cm1": 3451,
+      "error_cm1": -220.65236539301077
+    },
+    {
+      "irrep": "b2",
+      "within_irrep_frequency_order": 2,
+      "mouse_cm1": 3200.1747290116195,
+      "eom_ccsd_cm1": 3305,
+      "error_cm1": -104.82527098838045
+    },
+    {
+      "irrep": "b2",
+      "within_irrep_frequency_order": 3,
+      "mouse_cm1": 1440.133502610218,
+      "eom_ccsd_cm1": 2914,
+      "error_cm1": -1473.866497389782
+    },
+    {
+      "irrep": "b2",
+      "within_irrep_frequency_order": 4,
+      "mouse_cm1": 1134.789673756128,
+      "eom_ccsd_cm1": 1404,
+      "error_cm1": -269.21032624387203
+    },
+    {
+      "irrep": "b2",
+      "within_irrep_frequency_order": 5,
+      "mouse_cm1": 1096.7843059392899,
+      "eom_ccsd_cm1": 1261,
+      "error_cm1": -164.21569406071012
+    },
+    {
+      "irrep": "b2",
+      "within_irrep_frequency_order": 6,
+      "mouse_cm1": 991.0515862184607,
+      "eom_ccsd_cm1": 1053,
+      "error_cm1": -61.94841378153933
+    },
+    {
+      "irrep": "b2",
+      "within_irrep_frequency_order": 7,
+      "mouse_cm1": 754.4393671991089,
+      "eom_ccsd_cm1": 863,
+      "error_cm1": -108.56063280089109
+    }
+  ],
+  "bond_mae_angstrom": 0.023663674363855282,
+  "angle_mae_degrees": 1.5471451407071555,
+  "in_plane_frequency_mae_cm1": 188.58489748674668,
+  "assignment": "exact reflection/C2 characters, then descending frequency within each irrep; no published displacement vectors for cross-method mode-overlap assignment",
+  "reference_missing": "A2/B1 harmonic values for the C2v A1 state are not published in table VI; no numerical errors assigned to these modes",
+  "accuracy_scope": "one stationary geometry and fifteen in-plane harmonic values; not full-dimensional minimum/frequency validation"
+}

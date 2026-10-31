@@ -1,0 +1,13 @@
+{
+  "projected_converged_dft_ground_fock_error_hartree": 6.13398221105399e-15,
+  "reference_sha256": "61fdd600dd5823760b32026e26474c7155c523fd6bb9a8244222a44c15536d98",
+  "embedding_sha256": "5e0f857322a9326d55f2d9c6a919b8df76fe3bf11e12f99eedc08f19024336fe",
+  "protocol_sha256": "e06a6aa58dce14ede79ba2cceef93bfa949f4c44b65dcfa98cdff68387195e48",
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset": 0
+}

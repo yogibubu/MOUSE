@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "host": "oracle.sns.it",
+  "implementation_commit": "4fe3cd8",
+  "matching_sources": [
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/nonlocal_response.py",
+      "sha256": "3939d8cd40039ad9077333bb6691689298ccfc398fca40af46a165d45827c349"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/local_frame_response.py",
+      "sha256": "789d7a601f8f91af9fa6349f6fa2fcff75e7363dc30018ac715a2df1ed70ea34"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py",
+      "sha256": "2e7659fa7962cb3fab1fa901f6bc3fd403826fc67776f4bc1fd7c01c92dbd74f"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/multicsf_nuclear.py",
+      "sha256": "6f578e3b86d3c471056be5ab393f4855b2183d339d505e1dbe0b23a0e3a977b2"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/restricted_ground.py",
+      "sha256": "bc519fa141cc4ea389025914595c357305e36ad864fdd9bd4ac3d4d5bd6cac43"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/multicsf_surface.py",
+      "sha256": "923f0ed850486c8bec541c19bef75946a01895e79dcc6161dc5f1c39d162c326"
+    }
+  ],
+  "qualification_status": "pass"
+}

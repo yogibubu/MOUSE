@@ -1,0 +1,238 @@
+[
+  {
+    "iteration": 0,
+    "energy": -27.42827838732849,
+    "residual": 0.032968304757218056,
+    "fidelity": [
+      0.9758459812295147,
+      0.8473440778793573
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 1,
+    "energy": -27.432169823743465,
+    "residual": 0.021804719627312286,
+    "fidelity": [
+      0.9712025539467053,
+      0.8529472618320335
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 2,
+    "energy": -27.433813813611415,
+    "residual": 0.006291343231815379,
+    "fidelity": [
+      0.9664600927944719,
+      0.859306669834256
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 3,
+    "energy": -27.434173014619397,
+    "residual": 0.003356150927185482,
+    "fidelity": [
+      0.9613898526622187,
+      0.8627053295700386
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 4,
+    "energy": -27.434184262337766,
+    "residual": 0.00026928166522877426,
+    "fidelity": [
+      0.9612876811841288,
+      0.8629841109902954
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 5,
+    "energy": -27.434183168035204,
+    "residual": 0.00020751798002535622,
+    "fidelity": [
+      0.9613102415909588,
+      0.8629604374181469
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 6,
+    "energy": -27.434182213796895,
+    "residual": 0.00017874576649969337,
+    "fidelity": [
+      0.9613244082096144,
+      0.862945917736981
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 7,
+    "energy": -27.434181327602335,
+    "residual": 0.00015937573333475567,
+    "fidelity": [
+      0.9613342497061204,
+      0.8629377146786966
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 8,
+    "energy": -27.434180451725453,
+    "residual": 0.00014649536986306196,
+    "fidelity": [
+      0.9613417550084731,
+      0.8629342773451262
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 9,
+    "energy": -27.434179569282037,
+    "residual": 0.00013886511327620757,
+    "fidelity": [
+      0.9613479141985202,
+      0.8629345291677702
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 10,
+    "energy": -27.43417869983286,
+    "residual": 0.00012712236982833112,
+    "fidelity": [
+      0.9613531823737809,
+      0.8629376645334869
+    ],
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 11,
+    "energy": -27.43417788441297,
+    "residual": 0.00011507630463391887,
+    "fidelity": [
+      0.9613577059678096,
+      0.8629430970324582
+    ]
+  },
+  {
+    "iteration": 12,
+    "energy": -27.43417788441297,
+    "residual": 0.00011507630463391887,
+    "fidelity": [
+      0.9613577059678096,
+      0.8629430970324582
+    ],
+    "unrestricted_newton_norm": 0.17020913057487713,
+    "minimum_absolute_curvature": 2.4926128220143932e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 13,
+    "energy": -27.43417743995496,
+    "residual": 0.00011403219132406993,
+    "fidelity": [
+      0.9613594239442913,
+      0.8629481626471667
+    ],
+    "unrestricted_newton_norm": 0.15010370070965415,
+    "minimum_absolute_curvature": 2.5174321145657013e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 14,
+    "energy": -27.43417710208818,
+    "residual": 0.00010881909950081478,
+    "fidelity": [
+      0.9613607928916565,
+      0.8629526373888566
+    ],
+    "unrestricted_newton_norm": 0.13208305077963212,
+    "minimum_absolute_curvature": 2.533172847806722e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 15,
+    "energy": -27.43417684607403,
+    "residual": 0.00010373808694820789,
+    "fidelity": [
+      0.9613618915659607,
+      0.8629565729786242
+    ],
+    "unrestricted_newton_norm": 0.11602369682916788,
+    "minimum_absolute_curvature": 2.5423586864831376e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 16,
+    "energy": -27.434176484782732,
+    "residual": 0.00010009977943965363,
+    "fidelity": [
+      0.961363733409632,
+      0.862963496410406
+    ],
+    "unrestricted_newton_norm": 0.08795622655316732,
+    "minimum_absolute_curvature": 2.5493494947791005e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 17,
+    "energy": -27.434176286905217,
+    "residual": 8.820295629015133e-05,
+    "fidelity": [
+      0.9613648840664006,
+      0.8629687286818682
+    ],
+    "unrestricted_newton_norm": 0.06603412778712378,
+    "minimum_absolute_curvature": 2.545666642466721e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 18,
+    "energy": -27.43417610458858,
+    "residual": 7.280374558553889e-05,
+    "fidelity": [
+      0.9613664725852337,
+      0.8629765105606941
+    ],
+    "unrestricted_newton_norm": 0.03290047217790278,
+    "minimum_absolute_curvature": 2.5256598634207035e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 19,
+    "energy": -27.434176054856735,
+    "residual": 2.9406976832891172e-05,
+    "fidelity": [
+      0.9613676689405743,
+      0.8629839466437139
+    ],
+    "unrestricted_newton_norm": 0.0011983740519806716,
+    "minimum_absolute_curvature": 2.489679665675654e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 20,
+    "energy": -27.434176055710175,
+    "residual": 4.339008331917596e-08,
+    "fidelity": [
+      0.9613675405525678,
+      0.8629834014057473
+    ],
+    "unrestricted_newton_norm": 8.679145624477647e-06,
+    "minimum_absolute_curvature": 2.4921164447015813e-05,
+    "step_type": "spectral_residual_trust_newton"
+  },
+  {
+    "iteration": 21,
+    "energy": -27.434176055710175,
+    "residual": 2.6863138962964114e-12,
+    "fidelity": [
+      0.961367541362035,
+      0.8629834025869259
+    ]
+  }
+]
