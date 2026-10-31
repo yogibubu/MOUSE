@@ -71,6 +71,10 @@ The reduced extension initializes stationary parents from independently assigned
 All 14 predictions and matched TDA assignments were locked before label opening. The scope was reduced after inspecting convergence and is not wholly blind. The original prediction lock, scoring output, label-opening record and full scope ledger accompany the document in \path{data/reduced_extension/}. Failed or unresolved earlier attempts remain in the calculation archive.
 \input{tables/reduced_extension_all.tex}
 
+\section{Complete furan multi-CSF Hessian check}
+This check concerns the experimental full-relative-active-frame multi-CSF functional, separately from the original single-CSF minima and derivative checks. All 27 Cartesian columns are included; the maximum error is $2.2852\times10^{-8}$~\Eh/bohr$^2$. Electronic solutions are reoptimized at each displaced point, and all three ground-reference terms are included. Completed points and columns are retained for restart.
+\input{tables/furan_complete_columns.tex}
+
 \section{Reproducibility and automatic integration}
 The final remote qualification used \texttt{oracle.sns.it}. A transfer audit checked 561 result files and 30 source files; the remote test suite reports 86 passing tests. Cold and resumed executions of the integrated example differ by $1.7764\times10^{-15}$~\Eh. The copied \texttt{data/PROTOCOL.json} identifies the validated source files by SHA256. The source hashes refer to the calculation campaign; the manuscript-generation manifest separately identifies the document inputs and outputs.
 
@@ -86,4 +90,17 @@ native_roks_composite_component_tracking = "active_pair"
 The example source is \texttt{examples/roks\_relative\_pair.py} in the MOUSE repository. Response paths, two certified seed paths, promotions, and parent saddle indices are supplied explicitly. The accepted generation has precedence over cold seeds. It stores both CSFs, relative targets, multipliers, three restricted ground references, model fingerprints, and the anchor. Defaults for other methods are not changed.
 
 The manuscript-generation script \texttt{build\_assets.py} performs lightweight data aggregation and plotting only. It can be run from the associated MOUSE working tree to regenerate all tables, the validation figure, optimized XYZ files, and TBE method provenance. The accompanying CSV provides all 19 OO-DFT values and explicitly labelled archival static-response controls. The completed reduced-extension corrected TDA and OO values are reported separately below. The four-molecule comparison in the main text is the designated prospective comparison; additional exposed TDA values in the CSV must retain that exposure label.
+
+\section{Public multi-CSF interface qualification}
+The explicit research interface is
+\begin{Verbatim}[fontsize=\small]
+native_excited_method = "multicsf_50_50"
+native_multicsf_model_path = Path(".../model.json")
+\end{Verbatim}
+The model defines promotions, rank, reference transitions and the full relative frame. The example is \path{examples/multicsf_oo_dft.py}. Its input hashes are checked before optimizer-cache access. Accepted generations store both wavefunctions, CI coefficients, three ground references and derivatives; trial evaluations do not publish a new generation. A relocated complete model restores the same accepted state. Checkpoint corruption and modified model arrays are rejected. These checks and 46 distinct regression tests ran on Oracle with two threads. No electronic job ran on the laptop.
+
+The cold full-Hessian interface call takes 98.99~s; restoring the accepted state and its already stored Hessian takes 0.613~s. The latter is not a fresh-Hessian timing. Surface evaluation is instrumented against SCC calls and invokes no DFT/TDA solver. Preparation still requires the archived DFT response and reference transition. All source/result hashes, native-extension hash, logs and portable furan inputs are recorded in the multi-CSF integration qualification archive. The original single-CSF automatic interface above remains a separate model.
+
+The response-only $\lambda$ diagnostic uses 0.85, 0.90 and 0.95, with the one-body DFT reference, semilocal contribution and bare off-diagonal CSF couplings held fixed. Vertical weight and fixed-reference rank perturbations are separate algebraic diagnostics; no new molecular minimum or weighted Hessian is inferred. Actual displaced-anchor DFT recalibration and independent validation remain open.
+
 \end{document}

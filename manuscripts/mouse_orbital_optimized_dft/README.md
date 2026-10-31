@@ -72,3 +72,18 @@ Rebuild with `python make_structures_jmol.py --jmol-jar /path/to/Jmol.jar` (Jmol
 `build_reduced_extension.py` regenerates the complete locked 14-state tables and a separately labelled exposed-data experiment. The 95%-NTO-rank bare-coupling trial improves the five pi-pi states (MAE 0.162 eV) but severely worsens the aza-naphthalene n-pi control; it is not a universal correction or a production method. Nuclear qualification of this new energy is separate from the existing single-CSF analytic Hessian. Commit `49e0c9d` accelerates resolved soft saddle modes, with 31 remote regressions passing. No additional molecules have been added.
 
 The full-frame nuclear response now includes common/private product-chart and spectator-gauge mixed curvature. Two Hessian columns pass at the Furan anchor for the complete excited total energy and at a displaced geometry for the constrained parent mean, within 2.3e-8 Ha/bohr^2. This does not certify every molecular column or general transferability. Figure 9 compares all 14 state errors and family MAEs.
+
+## Public multi-CSF integration (489e899)
+
+The explicit `multicsf_50_50` selector now supports portable frozen models,
+coherent APOC expansions, direct LINK scans/optimization, analytic Hessians and
+atomic accepted-state restart. All 27 furan Hessian columns pass within
+2.2852e-8 Ha/bohr². Forty-three core/legacy/APOC tests and three further LINK
+contract tests pass. Cold full-Hessian evaluation is 98.99 s; restoring the
+accepted state and its stored Hessian is 0.613 s, not a new-Hessian benchmark.
+
+Figure 10 and `make_integration_assets.py` report response-only lambda,
+algebraic vertical-weight and fixed-reference rank sensitivity. The actual
+DFT-anchor recalibration, independent validation, physical frequencies and
+complete size/cost/memory comparison remain open. The 50/50 weight and lambda
+0.9 remain fixed. Phthalimide's rank boundary is a material model limitation.

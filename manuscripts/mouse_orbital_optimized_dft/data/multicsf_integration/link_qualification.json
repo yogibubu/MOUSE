@@ -1,0 +1,22 @@
+{
+  "host": "oracle.sns.it",
+  "model_fingerprint": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+  "rank": 2,
+  "cold_seconds": 98.99129531497601,
+  "resume_seconds": 0.613161165965721,
+  "energy_error": 0.0,
+  "gradient_max_error": 1.3877787807814457e-17,
+  "hessian_max_error": 1.3322676295501878e-14,
+  "displaced_parent_overlaps": [
+    0.999982466269864,
+    0.9999831086270448
+  ],
+  "rejected_trial_preserves_accepted_state": true,
+  "portable_bundle_restart": true,
+  "tamper_detection": true,
+  "direct_optimizer_dispatch": true,
+  "ground_scc_calls": 0,
+  "tda_calls": 0,
+  "analytic_hessian": true,
+  "source_runtime": "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source"
+}
