@@ -14,7 +14,7 @@ for name in ['independent','independent_challenge','independent_state_challenge'
 geometries={}
 for name in ['Furan','Cyclopentadiene']:
  root=R/'geometry'/name;escape=R/'geometry_escape'/name
- geometries[name]=dict(stationary=load(root/'result.json'),mode_check=load(root/'stationary_mode_validation.json'),reference_comparison=load(root/'reference_comparison.json'),escape=load(escape/'result.json'),escape_attempt=load(escape/'attempt_closed.json'))
+ geometries[name]=dict(stationary=load(root/'result.json'),mode_check=load(root/'stationary_mode_validation.json'),reference_comparison=load(root/'reference_comparison.json'),escape=load(escape/'result.json'),escape_attempt=load(escape/'attempt_closed.json'),minimum_mode_check=load(escape/'minimum_mode_check.json'))
 cost=[load(p) for p in sorted((R/'cost').glob('*/*/*/result.json'))]
 report=dict(schema='mouse.final.four.gate.v1',updated_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),host=socket.getfqdn(),source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),anchors=anchors,baseline_definition_audit=load(R/'baseline_definition_audit.json'),cohorts=cohorts,geometries=geometries,cost=cost,preparation_audit=load(R/'preparation_cost_audit.json'),tda_validation=load(R/'true_tda_operator_validation.json'),protocol=load(R/'protocol.json'),cost_budget=load(R/'cost_budget_amendment.json'),labels_read_by_collector=False)
 report['ground_fock_candidate']={cohort:load(R/'ground_fock_candidate'/cohort/'score.json') for cohort in ['independent','independent_challenge']}
