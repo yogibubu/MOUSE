@@ -53,7 +53,7 @@ Six figures use a consistent vector style and are supplied in PDF, SVG and high-
 
 `extend_publication_results.py` generates the direct released sTDA-xTB comparison, all-state external-method table, structural comparison and vertical-anchor weight precheck. It is called by `build_assets.py`. Completed external results are copied into `data/`; `direct_stda_comparison.csv` preserves every root, overlap, projected norm and margin. The 50/50 candidate is unchanged.
 
-The original 44-state manifest and all dispositions are retained. The active scope was reduced after baseline convergence inspection to 14 states on ten molecules. Ten states pass stationarity and available-root audits; four remain under calculation. Accuracy labels remain sealed until prediction closure. This reduced/adapted set is not wholly blind. TD-DFTB/DeltaDFTB state assignments, full lambda/anchor sensitivity and complete derivative/memory costs remain unfinished.
+The original 44-state manifest and all dispositions are retained. The active scope was reduced after baseline convergence inspection to 14 states on ten molecules. All 14 states pass stationarity and available-root audits; matched TDA controls and prediction closure are complete. Reference labels were opened only after the lock. OO MAE is 0.492 eV versus 0.261 eV for TDA-Q; the single-CSF pi-pi error is substantial. This reduced/adapted set is not wholly blind. TD-DFTB/DeltaDFTB state assignments, full lambda/anchor sensitivity and complete derivative/memory costs remain unfinished.
 
 Internal-coordinate results against CCSDR(3)/def2-TZVPP are available for three minima. Nitroxyl harmonic-frequency comparisons remain provisional by frequency order until mode-vector confirmation. These physical comparisons must be kept separate from numerical validation of the analytic derivatives.
 
@@ -63,6 +63,12 @@ Code commit `5620e2d` includes spin-pure ROKS/DeltaSCF, analytic nuclear respons
 
 ## Molecular-structure plate
 
-`figures/molecular_structures_jmol.pdf` shows all 28 molecules in two separate cohorts (18 initial, 10 extension), using actual Jmol ball-and-stick renders of the archived calculation anchors. The extension includes the unresolved phthalimide target; presence in the plate is not a convergence or accuracy claim. `data/molecular_structures_jmol.json` records geometry checksums, proper display rotations and Jmol scripts; `data/structure_geometry_sources.json` records the Oracle geometry sources and hashes. All ten transferred extension files match the frozen geometry hashes where present. No optimization is performed.
+`figures/molecular_structures_jmol.pdf` shows all 28 molecules in two separate cohorts (18 initial, 10 extension), using actual Jmol ball-and-stick renders of the archived calculation anchors. The extension includes the completed phthalimide targets; presence in the plate is not a convergence or accuracy claim. `data/molecular_structures_jmol.json` records geometry checksums, proper display rotations and Jmol scripts; `data/structure_geometry_sources.json` records the Oracle geometry sources and hashes. All ten transferred extension files match the frozen geometry hashes where present. No optimization is performed.
 
 Rebuild with `python make_structures_jmol.py --jmol-jar /path/to/Jmol.jar` (Jmol 14.31.10 used). Render caches are optional and stored under `tmp/jmol/`; PDF assembly uses ReportLab and Pillow, orientation uses NumPy.
+
+## Completed extension and multi-CSF development
+
+`build_reduced_extension.py` regenerates the complete locked 14-state tables and a separately labelled exposed-data experiment. The 95%-NTO-rank bare-coupling trial improves the five pi-pi states (MAE 0.162 eV) but severely worsens the aza-naphthalene n-pi control; it is not a universal correction or a production method. Nuclear qualification of this new energy is separate from the existing single-CSF analytic Hessian. Commit `49e0c9d` accelerates resolved soft saddle modes, with 31 remote regressions passing. No additional molecules have been added.
+
+The full-frame nuclear response now includes common/private product-chart and spectator-gauge mixed curvature. Two Hessian columns pass at the Furan anchor for the complete excited total energy and at a displaced geometry for the constrained parent mean, within 2.3e-8 Ha/bohr^2. This does not certify every molecular column or general transferability. Figure 9 compares all 14 state errors and family MAEs.

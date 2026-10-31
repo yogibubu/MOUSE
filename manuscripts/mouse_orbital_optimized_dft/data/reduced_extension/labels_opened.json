@@ -1,0 +1,21 @@
+{
+  "opened_utc": "2026-10-31T18:22:21.012988+00:00",
+  "selected_ids": [
+    "B001",
+    "B004",
+    "B005",
+    "B007",
+    "B011",
+    "B014",
+    "B015",
+    "B016",
+    "B022",
+    "B024",
+    "B025",
+    "B029",
+    "B030",
+    "B039"
+  ],
+  "prediction_lock_sha256": "2132d19086d8e1f2bdc06398a4675bf613c642fe28102fdaf9157e2412a86253",
+  "scope_note": "reduced after baseline convergence outcomes; remaining states deferred; no error-based state selection"
+}

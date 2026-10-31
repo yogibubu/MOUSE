@@ -1,0 +1,418 @@
+{
+  "scope": "95 percent NTO-rank development trial, rejected as universal prescription; Rydberg unresolved attempts archived separately",
+  "rows": [
+    {
+      "state": "B014",
+      "molecule": "Adenine",
+      "family": "pi_pi",
+      "reference_ev": 5.191000000000001,
+      "original_oo_ev": 5.448970972580705,
+      "candidate_ev": 5.190990093421453,
+      "rank": 2,
+      "parent_results": [
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Adenine",
+          "state": "B014",
+          "profile": 0,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 2,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9874107131672426,
+          "excitation_ev": 5.302496073634924,
+          "residual": 9.090894270008532e-14,
+          "orbital_index": 4,
+          "minimum_absolute_curvature": 0.002086542265666963,
+          "fidelity": 0.9581149806824397,
+          "raw_transition": 0.9520547853350558,
+          "projection_norm": 0.8880766021300899,
+          "ci": [
+            0.9541646707403793,
+            0.29928210957373297
+          ],
+          "seconds": 42.22632797801634,
+          "evaluations": 55,
+          "model_fingerprint": "f3eac1dde483473e0e3c59e8548bd8fa58b89f6bc05c67a1f809f719eaff4c42",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        },
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Adenine",
+          "state": "B014",
+          "profile": 1,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 2,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9874107131672426,
+          "excitation_ev": 5.0794841132079815,
+          "residual": 6.97764328955186e-14,
+          "orbital_index": 14,
+          "minimum_absolute_curvature": 0.00011149557928517734,
+          "fidelity": 0.8939770902386442,
+          "raw_transition": 0.8883320000452942,
+          "projection_norm": 0.8912770416040757,
+          "ci": [
+            0.9985250122084108,
+            0.054293645983602805
+          ],
+          "seconds": 48.75858500698814,
+          "evaluations": 73,
+          "model_fingerprint": "30cca390a11e7bbaf650c07f08d4eab4a1eb0180bc1e8ae5ec3566ed7e3246a4",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        }
+      ],
+      "accuracy_labels_already_exposed": true
+    },
+    {
+      "state": "B016",
+      "molecule": "Cyclopentadiene",
+      "family": "pi_pi",
+      "reference_ev": 6.451,
+      "original_oo_ev": 8.197277888879146,
+      "candidate_ev": 6.720139395450321,
+      "rank": 2,
+      "parent_results": [
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Cyclopentadiene",
+          "state": "B016",
+          "profile": 0,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 2,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9989827930295683,
+          "excitation_ev": 7.549685315435822,
+          "residual": 1.0759906854396206e-10,
+          "orbital_index": 0,
+          "minimum_absolute_curvature": 0.031798793405120394,
+          "fidelity": 0.9946532917525727,
+          "raw_transition": 0.9941465617729777,
+          "projection_norm": 0.8383854371572893,
+          "ci": [
+            0.7918608783506386,
+            0.6107015222985408
+          ],
+          "seconds": 1.0717917529982515,
+          "evaluations": 9,
+          "model_fingerprint": "69aebbb19ea3e613e4d48ebce99ae04634fdf13ce2db27b368c8ceeb1b020325",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        },
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Cyclopentadiene",
+          "state": "B016",
+          "profile": 1,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 2,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9989827930295683,
+          "excitation_ev": 5.890593475464821,
+          "residual": 5.879324804780595e-14,
+          "orbital_index": 0,
+          "minimum_absolute_curvature": 0.008789665201104767,
+          "fidelity": 0.9977839630266796,
+          "raw_transition": 0.9972763575077802,
+          "projection_norm": 0.8400923667768415,
+          "ci": [
+            0.7275899441028103,
+            0.6860122981699885
+          ],
+          "seconds": 1.253616989008151,
+          "evaluations": 11,
+          "model_fingerprint": "e09546921081f413366667a83e0d4db50ac3df9f1966612a8846fcadb1394af1",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        }
+      ],
+      "accuracy_labels_already_exposed": true
+    },
+    {
+      "state": "B022",
+      "molecule": "Furan",
+      "family": "pi_pi",
+      "reference_ev": 6.530000000000001,
+      "original_oo_ev": 7.973905034751296,
+      "candidate_ev": 6.67360467902898,
+      "rank": 2,
+      "parent_results": [
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Furan",
+          "state": "B022",
+          "profile": 0,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 2,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9949221180645568,
+          "excitation_ev": 7.426208513881495,
+          "residual": 8.009218288584918e-15,
+          "orbital_index": 0,
+          "minimum_absolute_curvature": 0.028887501376919936,
+          "fidelity": 0.9909870479527,
+          "raw_transition": 0.9884765805853724,
+          "projection_norm": 0.8464962708367194,
+          "ci": [
+            0.8030703869724118,
+            0.5958841779809063
+          ],
+          "seconds": 1.1476630400284193,
+          "evaluations": 13,
+          "model_fingerprint": "2f00e5cba72cbcbfaafae1aac6df14c886af7f7da441ed74e80ef3cb8b019f38",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        },
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Furan",
+          "state": "B022",
+          "profile": 1,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 2,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9949221180645568,
+          "excitation_ev": 5.921000844176464,
+          "residual": 1.1794384913166311e-14,
+          "orbital_index": 1,
+          "minimum_absolute_curvature": 0.002842447739763193,
+          "fidelity": 0.9997890525668233,
+          "raw_transition": 0.9972474165438505,
+          "projection_norm": 0.8468448362569552,
+          "ci": [
+            0.7304177055083709,
+            0.6830007141137459
+          ],
+          "seconds": 1.153532076976262,
+          "evaluations": 13,
+          "model_fingerprint": "29281974ea8dbf6f5e7a228cbadbe0409597f6a9aca65fca36dfdb83c35a7cb7",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        }
+      ],
+      "accuracy_labels_already_exposed": true
+    },
+    {
+      "state": "B024",
+      "molecule": "Phthalimide",
+      "family": "pi_pi",
+      "reference_ev": 4.6,
+      "original_oo_ev": 5.868844110096675,
+      "candidate_ev": 4.945826968898521,
+      "rank": 2,
+      "parent_results": [
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Phthalimide",
+          "state": "B024",
+          "profile": 0,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 2,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9966165012611798,
+          "excitation_ev": 5.119830915765741,
+          "residual": 1.1153682144549038e-12,
+          "orbital_index": 4,
+          "minimum_absolute_curvature": 0.006364897823118042,
+          "fidelity": 0.9761580608029277,
+          "raw_transition": 0.9745073246753004,
+          "projection_norm": 0.9311527759083739,
+          "ci": [
+            0.813381819261814,
+            0.5817301918366812
+          ],
+          "seconds": 36.399885806953534,
+          "evaluations": 6,
+          "model_fingerprint": "a66f509440bb4fac54772eb805503d61c1b8f6e40097445ce0a8f4c7485200ff",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        },
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Phthalimide",
+          "state": "B024",
+          "profile": 1,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 2,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9966165012611798,
+          "excitation_ev": 4.7718230220313,
+          "residual": 3.2886475660742764e-12,
+          "orbital_index": 7,
+          "minimum_absolute_curvature": 9.029906378999501e-05,
+          "fidelity": 0.8478896472694718,
+          "raw_transition": 0.8464540150995231,
+          "projection_norm": 0.9317996223962527,
+          "ci": [
+            0.999192019153656,
+            0.04019090518562812
+          ],
+          "seconds": 4.844509112008382,
+          "evaluations": 3,
+          "model_fingerprint": "39c6dc3059f8c5f3ae3798362ec0f332e8a17c386216d54c5e255ce283e3a606",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        }
+      ],
+      "accuracy_labels_already_exposed": true
+    },
+    {
+      "state": "B011",
+      "molecule": "Aza-naphthalene",
+      "family": "n_pi",
+      "reference_ev": 5.346,
+      "original_oo_ev": 5.278554329461959,
+      "candidate_ev": 2.838944678336161,
+      "rank": 3,
+      "parent_results": [
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Aza-naphthalene",
+          "state": "B011",
+          "profile": 0,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 3,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9748960005498006,
+          "excitation_ev": 2.4953928454002794,
+          "residual": 2.239528007486058e-15,
+          "orbital_index": 0,
+          "minimum_absolute_curvature": 0.019748266716320458,
+          "fidelity": 0.8893329519954265,
+          "raw_transition": 0.8779663132204681,
+          "projection_norm": 0.9111038533449861,
+          "ci": [
+            0.7453891365154864,
+            0.5011324221506869,
+            0.43961497999281546
+          ],
+          "seconds": 11.713621733011678,
+          "evaluations": 11,
+          "model_fingerprint": "e1118d67e3f715826a1ada6670ff4fbed00e10ef39693a69add914a41f27818c",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        },
+        {
+          "host": "oracle.sns.it",
+          "molecule": "Aza-naphthalene",
+          "state": "B011",
+          "profile": 1,
+          "status": "stationary_candidate",
+          "reason": null,
+          "rank": 3,
+          "rank_selection": "minimum rank retaining 95 percent of original fixed projected transition; no energy used",
+          "retained_weight": 0.9748960005498006,
+          "excitation_ev": 3.1824965112720425,
+          "residual": 7.676151381197371e-15,
+          "orbital_index": 0,
+          "minimum_absolute_curvature": 0.017562127723853658,
+          "fidelity": 0.8851544702252048,
+          "raw_transition": 0.8739733931013454,
+          "projection_norm": 0.9170942007736714,
+          "ci": [
+            0.7416742175952701,
+            0.5348287318030809,
+            0.40481796228965977
+          ],
+          "seconds": 11.907720999966841,
+          "evaluations": 11,
+          "model_fingerprint": "b044f583d93c121bce1fc531dd31fe93ac71ef6228d863c7c7a7ec2c8b4523b1",
+          "offdiagonal": "unscaled bare projected 2(ia|jb)-(ij|ab); different multistate functional, not a changed TDA kernel",
+          "diagonal_lambda_exchange": 0.9,
+          "energy_offset_ev": 0.0,
+          "weights": [
+            0.5,
+            0.5
+          ],
+          "nuclear_derivatives_available": false,
+          "accuracy_labels_already_exposed": true
+        }
+      ],
+      "accuracy_labels_already_exposed": true
+    },
+    {
+      "state": "B015",
+      "molecule": "Bimane_Syn",
+      "family": "pi_pi",
+      "reference_ev": 3.9640000000000004,
+      "original_oo_ev": 3.9114552088659638,
+      "candidate_ev": 3.9114552088659638,
+      "rank": 1,
+      "parent_results": [],
+      "accuracy_labels_already_exposed": true
+    }
+  ]
+}
