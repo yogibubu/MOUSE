@@ -1,0 +1,354 @@
+{
+  "protocol": {
+    "schema": "mouse.public.multicsf.hessian.v1",
+    "host": "oracle.sns.it",
+    "model_fingerprint": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+    "molecule": "Cyclopentadiene",
+    "state": "B016",
+    "rank": 2,
+    "threads": 2,
+    "columns": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "step_bohr": 0.0002,
+    "maximum_hessian_error": 2e-05,
+    "maximum_gradient_error": 2e-06,
+    "source_sha256": "fcd0d074bcb0ec79bda0057cf8711f98083bf8ff7d3b9f1e48580988e037c668",
+    "scope": "full total excited-energy analytic Hessian of fixed portable model; no physical frequency accuracy claim"
+  },
+  "checks": [
+    {
+      "coordinate": 0,
+      "energy_gradient_error": 2.6645609724605714e-11,
+      "hessian_column_max_error": 7.476686381124864e-09,
+      "displacement_seconds": [
+        6.040254366991576,
+        6.378438050043769
+      ]
+    },
+    {
+      "coordinate": 1,
+      "energy_gradient_error": 5.329160470931395e-11,
+      "hessian_column_max_error": 4.0677009816025844e-09,
+      "displacement_seconds": [
+        6.142860724008642,
+        8.558277898991946
+      ]
+    },
+    {
+      "coordinate": 2,
+      "energy_gradient_error": 1.5986500838394146e-09,
+      "hessian_column_max_error": 1.2015104466911453e-08,
+      "displacement_seconds": [
+        8.602160374983214,
+        8.728194581985008
+      ]
+    },
+    {
+      "coordinate": 3,
+      "energy_gradient_error": 8.881814056220964e-11,
+      "hessian_column_max_error": 1.1612571383656789e-08,
+      "displacement_seconds": [
+        8.388221647008322,
+        6.6352011790149845
+      ]
+    },
+    {
+      "coordinate": 4,
+      "energy_gradient_error": 5.015014709064403e-09,
+      "hessian_column_max_error": 1.8893619002646744e-08,
+      "displacement_seconds": [
+        7.540136038034689,
+        6.745890532969497
+      ]
+    },
+    {
+      "coordinate": 5,
+      "energy_gradient_error": 9.026999536754232e-09,
+      "hessian_column_max_error": 1.9186556898809215e-08,
+      "displacement_seconds": [
+        7.114255223015789,
+        5.920934526016936
+      ]
+    },
+    {
+      "coordinate": 6,
+      "energy_gradient_error": 3.552711689782503e-11,
+      "hessian_column_max_error": 1.1611320804155723e-08,
+      "displacement_seconds": [
+        5.965478849015199,
+        5.706272131996229
+      ]
+    },
+    {
+      "coordinate": 7,
+      "energy_gradient_error": 5.0283367365733245e-09,
+      "hessian_column_max_error": 1.889028200530163e-08,
+      "displacement_seconds": [
+        9.24889169295784,
+        6.670155600004364
+      ]
+    },
+    {
+      "coordinate": 8,
+      "energy_gradient_error": 8.942620671748003e-09,
+      "hessian_column_max_error": 1.9185134370047763e-08,
+      "displacement_seconds": [
+        6.553311656985898,
+        6.25029102404369
+      ]
+    },
+    {
+      "coordinate": 9,
+      "energy_gradient_error": 5.328877755125482e-11,
+      "hessian_column_max_error": 1.2963863152415378e-07,
+      "displacement_seconds": [
+        7.223906793049537,
+        9.30149458401138
+      ]
+    },
+    {
+      "coordinate": 10,
+      "energy_gradient_error": 6.92884301670138e-09,
+      "hessian_column_max_error": 1.5790033280893567e-08,
+      "displacement_seconds": [
+        6.985939308011439,
+        8.1467547310167
+      ]
+    },
+    {
+      "coordinate": 11,
+      "energy_gradient_error": 5.950773637741769e-09,
+      "hessian_column_max_error": 2.5198398700965186e-08,
+      "displacement_seconds": [
+        9.903961798991077,
+        7.594158491992857
+      ]
+    },
+    {
+      "coordinate": 12,
+      "energy_gradient_error": 8.881730180851299e-11,
+      "hessian_column_max_error": 1.296394386424149e-07,
+      "displacement_seconds": [
+        11.27202389203012,
+        8.121867647976615
+      ]
+    },
+    {
+      "coordinate": 13,
+      "energy_gradient_error": 7.133123480773662e-09,
+      "hessian_column_max_error": 1.5792631036237736e-08,
+      "displacement_seconds": [
+        7.67083418101538,
+        9.330707374960184
+      ]
+    },
+    {
+      "coordinate": 14,
+      "energy_gradient_error": 5.830868066158956e-09,
+      "hessian_column_max_error": 2.5196871589194814e-08,
+      "displacement_seconds": [
+        7.5649251120048575,
+        10.068641496996861
+      ]
+    },
+    {
+      "coordinate": 15,
+      "energy_gradient_error": 3.539276071870545e-09,
+      "hessian_column_max_error": 6.8364557487266e-09,
+      "displacement_seconds": [
+        7.353420931962319,
+        7.795411664992571
+      ]
+    },
+    {
+      "coordinate": 16,
+      "energy_gradient_error": 1.776355201302589e-10,
+      "hessian_column_max_error": 1.5152174237531568e-09,
+      "displacement_seconds": [
+        7.393649695964996,
+        6.722398974001408
+      ]
+    },
+    {
+      "coordinate": 17,
+      "energy_gradient_error": 8.945144208682976e-10,
+      "hessian_column_max_error": 4.413678894588102e-09,
+      "displacement_seconds": [
+        7.221734674007166,
+        8.006837274995632
+      ]
+    },
+    {
+      "coordinate": 18,
+      "energy_gradient_error": 3.859018921255342e-09,
+      "hessian_column_max_error": 6.83366915832373e-09,
+      "displacement_seconds": [
+        8.179186274996027,
+        8.379974960000254
+      ]
+    },
+    {
+      "coordinate": 19,
+      "energy_gradient_error": 1.9983969362970055e-10,
+      "hessian_column_max_error": 1.5199896410966751e-09,
+      "displacement_seconds": [
+        6.754930227005389,
+        7.559980137040839
+      ]
+    },
+    {
+      "coordinate": 20,
+      "energy_gradient_error": 1.0321799057827485e-09,
+      "hessian_column_max_error": 4.420762103607423e-09,
+      "displacement_seconds": [
+        7.773370696988422,
+        8.35324489598861
+      ]
+    },
+    {
+      "coordinate": 21,
+      "energy_gradient_error": 3.1085973739332857e-11,
+      "hessian_column_max_error": 3.0362298352598627e-09,
+      "displacement_seconds": [
+        7.7280494790175,
+        8.163260906992946
+      ]
+    },
+    {
+      "coordinate": 22,
+      "energy_gradient_error": 6.707230312819057e-09,
+      "hessian_column_max_error": 1.8804127643878843e-08,
+      "displacement_seconds": [
+        9.206014979979955,
+        9.066980311006773
+      ]
+    },
+    {
+      "coordinate": 23,
+      "energy_gradient_error": 4.864821063349511e-10,
+      "hessian_column_max_error": 2.9505896059767167e-09,
+      "displacement_seconds": [
+        6.053556528990157,
+        5.126012335007545
+      ]
+    },
+    {
+      "coordinate": 24,
+      "energy_gradient_error": 9.769974990320981e-11,
+      "hessian_column_max_error": 3.0349694198766874e-09,
+      "displacement_seconds": [
+        7.253786611021496,
+        6.708664033969399
+      ]
+    },
+    {
+      "coordinate": 25,
+      "energy_gradient_error": 6.627293732894279e-09,
+      "hessian_column_max_error": 1.8802930601413692e-08,
+      "displacement_seconds": [
+        6.269126357976347,
+        5.816398870025296
+      ]
+    },
+    {
+      "coordinate": 26,
+      "energy_gradient_error": 5.664181151020242e-10,
+      "hessian_column_max_error": 2.9503381959727903e-09,
+      "displacement_seconds": [
+        5.608975259005092,
+        5.404478273005225
+      ]
+    },
+    {
+      "coordinate": 27,
+      "energy_gradient_error": 1.5987290299033415e-10,
+      "hessian_column_max_error": 5.8281165483953234e-09,
+      "displacement_seconds": [
+        6.143436329963151,
+        5.514059094013646
+      ]
+    },
+    {
+      "coordinate": 28,
+      "energy_gradient_error": 4.2296613260439653e-10,
+      "hessian_column_max_error": 2.9943729995540735e-09,
+      "displacement_seconds": [
+        6.0701418739627115,
+        6.991762118006591
+      ]
+    },
+    {
+      "coordinate": 29,
+      "energy_gradient_error": 3.6641485457768186e-09,
+      "hessian_column_max_error": 1.012381889431424e-08,
+      "displacement_seconds": [
+        5.9149833070114255,
+        5.925307413970586
+      ]
+    },
+    {
+      "coordinate": 30,
+      "energy_gradient_error": 1.0214032781999615e-10,
+      "hessian_column_max_error": 5.829719453703808e-09,
+      "displacement_seconds": [
+        4.140856596000958,
+        4.10515870800009
+      ]
+    },
+    {
+      "coordinate": 31,
+      "energy_gradient_error": 5.428704204918366e-10,
+      "hessian_column_max_error": 2.991285247277986e-09,
+      "displacement_seconds": [
+        4.135060826025438,
+        4.1186839989968576
+      ]
+    },
+    {
+      "coordinate": 32,
+      "energy_gradient_error": 3.6819122156521444e-09,
+      "hessian_column_max_error": 1.0124827837243444e-08,
+      "displacement_seconds": [
+        4.0710961719742045,
+        4.067073893034831
+      ]
+    }
+  ],
+  "complete": true,
+  "maximum_hessian_column_error": 1.296394386424149e-07,
+  "maximum_energy_gradient_error": 9.026999536754232e-09,
+  "peak_rss_kib": 878220
+}

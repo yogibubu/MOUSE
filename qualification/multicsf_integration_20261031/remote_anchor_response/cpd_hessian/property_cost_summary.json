@@ -1,0 +1,12 @@
+{
+  "analytic_full_hessian_seconds": 250.27099072601413,
+  "gradient_calls": 66,
+  "gradient_seconds_sum": 465.47150619502645,
+  "gradient_seconds_median": 7.05300867051119,
+  "gradient_seconds_range": [
+    4.067073893034831,
+    11.27202389203012
+  ],
+  "finite_difference_to_analytic_ratio": 1.8598699946994837,
+  "scope": "same prepared fixed CPD model; 66 independently reoptimized displaced public energy/gradient calls versus one cold analytic Hessian call; excludes DFT/model preparation and transfer/I/O; not TDA or size-scaling comparison"
+}

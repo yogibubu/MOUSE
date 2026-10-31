@@ -1,0 +1,171 @@
+{
+  "scope": "lightweight reduction of transferred results only; no electronic calculation",
+  "checks": [
+    {
+      "coordinate": 0,
+      "gradient_error": 2.6645609724605714e-11,
+      "hessian_error": 7.476686381124864e-09
+    },
+    {
+      "coordinate": 1,
+      "gradient_error": 5.329160470931395e-11,
+      "hessian_error": 4.0677009816025844e-09
+    },
+    {
+      "coordinate": 2,
+      "gradient_error": 1.5986500838394146e-09,
+      "hessian_error": 1.2015104466911453e-08
+    },
+    {
+      "coordinate": 3,
+      "gradient_error": 8.881814056220964e-11,
+      "hessian_error": 1.1612571383656789e-08
+    },
+    {
+      "coordinate": 4,
+      "gradient_error": 5.015014709064403e-09,
+      "hessian_error": 1.8893619002646744e-08
+    },
+    {
+      "coordinate": 5,
+      "gradient_error": 9.026999536754232e-09,
+      "hessian_error": 1.9186556898809215e-08
+    },
+    {
+      "coordinate": 6,
+      "gradient_error": 3.552711689782503e-11,
+      "hessian_error": 1.1611320804155723e-08
+    },
+    {
+      "coordinate": 7,
+      "gradient_error": 5.0283367365733245e-09,
+      "hessian_error": 1.889028200530163e-08
+    },
+    {
+      "coordinate": 8,
+      "gradient_error": 8.942620671748003e-09,
+      "hessian_error": 1.9185134370047763e-08
+    },
+    {
+      "coordinate": 9,
+      "gradient_error": 5.328877755125482e-11,
+      "hessian_error": 1.2963863152415378e-07
+    },
+    {
+      "coordinate": 10,
+      "gradient_error": 6.92884301670138e-09,
+      "hessian_error": 1.5790033280893567e-08
+    },
+    {
+      "coordinate": 11,
+      "gradient_error": 5.950773637741769e-09,
+      "hessian_error": 2.5198398700965186e-08
+    },
+    {
+      "coordinate": 12,
+      "gradient_error": 8.881730180851299e-11,
+      "hessian_error": 1.296394386424149e-07
+    },
+    {
+      "coordinate": 13,
+      "gradient_error": 7.133123480773662e-09,
+      "hessian_error": 1.5792631036237736e-08
+    },
+    {
+      "coordinate": 14,
+      "gradient_error": 5.830868066158956e-09,
+      "hessian_error": 2.5196871589194814e-08
+    },
+    {
+      "coordinate": 15,
+      "gradient_error": 3.539276071870545e-09,
+      "hessian_error": 6.8364557487266e-09
+    },
+    {
+      "coordinate": 16,
+      "gradient_error": 1.776355201302589e-10,
+      "hessian_error": 1.5152174237531568e-09
+    },
+    {
+      "coordinate": 17,
+      "gradient_error": 8.945144208682976e-10,
+      "hessian_error": 4.413678894588102e-09
+    },
+    {
+      "coordinate": 18,
+      "gradient_error": 3.859018921255342e-09,
+      "hessian_error": 6.83366915832373e-09
+    },
+    {
+      "coordinate": 19,
+      "gradient_error": 1.9983969362970055e-10,
+      "hessian_error": 1.5199896410966751e-09
+    },
+    {
+      "coordinate": 20,
+      "gradient_error": 1.0321799057827485e-09,
+      "hessian_error": 4.420762103607423e-09
+    },
+    {
+      "coordinate": 21,
+      "gradient_error": 3.1085973739332857e-11,
+      "hessian_error": 3.0362298352598627e-09
+    },
+    {
+      "coordinate": 22,
+      "gradient_error": 6.707230312819057e-09,
+      "hessian_error": 1.8804127643878843e-08
+    },
+    {
+      "coordinate": 23,
+      "gradient_error": 4.864821063349511e-10,
+      "hessian_error": 2.9505896059767167e-09
+    },
+    {
+      "coordinate": 24,
+      "gradient_error": 9.769974990320981e-11,
+      "hessian_error": 3.0349694198766874e-09
+    },
+    {
+      "coordinate": 25,
+      "gradient_error": 6.627293732894279e-09,
+      "hessian_error": 1.8802930601413692e-08
+    },
+    {
+      "coordinate": 26,
+      "gradient_error": 5.664181151020242e-10,
+      "hessian_error": 2.9503381959727903e-09
+    },
+    {
+      "coordinate": 27,
+      "gradient_error": 1.5987290299033415e-10,
+      "hessian_error": 5.8281165483953234e-09
+    },
+    {
+      "coordinate": 28,
+      "gradient_error": 4.2296613260439653e-10,
+      "hessian_error": 2.9943729995540735e-09
+    },
+    {
+      "coordinate": 29,
+      "gradient_error": 3.6641485457768186e-09,
+      "hessian_error": 1.012381889431424e-08
+    },
+    {
+      "coordinate": 30,
+      "gradient_error": 1.0214032781999615e-10,
+      "hessian_error": 5.829719453703808e-09
+    },
+    {
+      "coordinate": 31,
+      "gradient_error": 5.428704204918366e-10,
+      "hessian_error": 2.991285247277986e-09
+    },
+    {
+      "coordinate": 32,
+      "gradient_error": 3.6819122156521444e-09,
+      "hessian_error": 1.0124827837243444e-08
+    }
+  ],
+  "all_reported_errors_reproduced": true
+}

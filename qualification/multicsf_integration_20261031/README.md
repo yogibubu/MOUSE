@@ -53,7 +53,7 @@ validation, additional molecular Hessians and physical structure/frequency and
 complete cost/memory comparisons. These results do not establish a universal
 accuracy advantage or an end-to-end speed advantage over TDA.
 
-## Additional qualification in progress
+## Additional qualification
 
 `anchor_rank.py` freezes six actual reference recalculations before inspecting
 results: internal Cartesian scales 0.98 and 1.02 for phthalimide, furan and
@@ -74,5 +74,16 @@ this is not a complete size-scaling benchmark or comparison with TDA.
 
 Both drivers assert Oracle identity, cap numerical libraries at two threads,
 share the existing compute lock and reuse finished checkpoints. No calculation
-from these additional tests runs on the laptop. Results must be inspected before
-these gates can be marked complete.
+from these additional tests runs on the laptop. The cyclopentadiene check is complete: 33/33 columns, maximum error
+1.2964e-7 Ha/bohr². All reported errors were independently reproduced by
+lightweight reduction of the transferred checkpoints. Both stored molecular
+Hessians pass acoustic and rotational-covariance checks. The anchor/rank gate
+remains in progress.
+
+The unseeded first DFT response was interrupted after more than nine minutes
+without a completed spectrum; its converged ground checkpoint and log are
+retained. `anchor_rank_seeded.py` resumes that ground and initializes the same
+two-root response with the transported original transition plus conventional
+guesses. It changes no Hamiltonian, root-identity rule or tolerance.
+`audit_anchor_projection.py` separately reproduces the original compact
+projection and distinguishes transported-anchor from relaxed-native subspaces.

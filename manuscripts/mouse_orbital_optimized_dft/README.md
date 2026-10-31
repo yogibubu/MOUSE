@@ -104,3 +104,19 @@ The qualification archive contains 254 hash-verified input/result artifacts,
 including actual DFT reference wavefunctions and DFTB eigenvectors, transition
 weights, occupations and energies. No electronic calculation was repeated for
 this audit. The energy model and all weights/scalings remain unchanged.
+
+## Complete second-molecule derivative validation
+
+All 33 cyclopentadiene excited-total Hessian columns pass through the public
+multi-CSF interface, maximum error 1.2964e-7 Ha/bohr². Along with all 27 furan
+columns, Figure 11 now shows every measured column and independent
+energy/gradient difference. Both stored molecular Hessians pass translation and
+nonstationary rotation covariance checks. These are derivative-consistency
+checks, separately from physical frequency accuracy.
+
+The cold cyclopentadiene public-surface Hessian call is 250.27 s and 858 MiB
+peak process RSS after model loading. Its 66 independently reoptimized signed
+energy/gradient calls total 465.47 s (median 7.05 s), a 1.86 ratio to the analytic
+call for this prepared model. Neither includes DFT/reference preparation, and
+this is not a TDA or a size-scaling comparison. `make_second_hessian_assets.py`
+rebuilds Figure 11 and Supporting Table S8 from copied standalone JSON.
