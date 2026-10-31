@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/validate_link.py", line 25, in <module>
+    result=_run_matrix_gfn2_scan_point(spec,tuple(symbols),ScanPoint(0,0.,model.xyz),sess,run_dir=run);cold=time.monotonic()-started
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-link/src/matrix_link/scan.py", line 4440, in _run_matrix_gfn2_scan_point
+    result=component.evaluate(point.coordinates_angstrom,compute_hessian='hessian' in requested)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-link/src/matrix_link/qmqm_component.py", line 111, in evaluate
+    return evaluate_multicsf_component(self,coordinates_angstrom,compute_hessian)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-link/src/matrix_link/multicsf_component.py", line 25, in evaluate_multicsf_component
+    result=evaluate_multicsf_surface(component.calculator._calculator,coordinates,component._multicsf_model,reference_result=previous,compute_hessian=compute_hessian,minimum_overlap=backend.state_tracking_minimum_overlap)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/multicsf_surface.py", line 168, in evaluate_multicsf_surface
+    if compute_hessian:hh+=weight*restricted_ground_analytic_hessian(calculator,xyz,reference_result=ground,spin_reference=ref).hessian_hartree_per_bohr2
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/source/packages/matrix-gfn2/src/matrix_gfn2/restricted_ground.py", line 111, in restricted_ground_analytic_hessian
+    raise ValueError('restricted Hessian needs a matching stationary geometry')
+ValueError: restricted Hessian needs a matching stationary geometry

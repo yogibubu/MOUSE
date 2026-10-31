@@ -1,0 +1,22 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Cyclopentadiene",
+  "state": "B016",
+  "lambda_exchange": 0.95,
+  "excitation_ev": 6.657377160405257,
+  "rank": 2,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "energy_offset_ev": 0.0,
+  "residual": 5.375377606139237e-12,
+  "minimum_absolute_curvature": 0.00911906274240351,
+  "fidelity": [
+    0.994684932324502,
+    0.9977455969707285
+  ],
+  "seconds": 1.496015836019069,
+  "model_fingerprint": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+  "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+}

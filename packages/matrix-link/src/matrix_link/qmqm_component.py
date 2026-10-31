@@ -94,6 +94,11 @@ class CappedQMComponent:
             ):
                 raise ValueError('native QM/QM response requires closed-shell singlet or explicit spin-flip')
 
+        if self.native and backend.native_excited_method == 'multicsf_50_50':
+            self.calculator._calculator.temperature_kelvin=0.
+            from .multicsf_component import initialize_multicsf
+            initialize_multicsf(self)
+
         if self.native and backend.native_excited_method == 'roks_50_50':
             self.calculator._calculator.temperature_kelvin=0.
             from .composite_roks_component import restore_accepted,initialize_from_seeds
@@ -101,6 +106,9 @@ class CappedQMComponent:
             initialize_from_seeds(self)
 
     def evaluate(self, coordinates_angstrom, *, compute_hessian=False):
+        if self.native and self.backend.native_excited_method=='multicsf_50_50':
+            from .multicsf_component import evaluate_multicsf_component
+            return evaluate_multicsf_component(self,coordinates_angstrom,compute_hessian)
         if self.native:
             from matrix_gfn2.response_reference import stationary_response_reference
             from .scan import PointEvaluationResult
@@ -265,7 +273,7 @@ class CappedQMComponent:
         if selected != int(result.execution['gradient_electronic_state']):
             raise ValueError('accepted QM/QM component has derivatives of another root')
         if self.native:
-            if self.backend.native_excited_method == 'roks_50_50':
+            if self.backend.native_excited_method in {'roks_50_50','multicsf_50_50'}:
                 if (result.scf_state is None or len(result.scf_state[1])!=2
                     or any(s.state_id!=selected for s in result.scf_state[1])):
                     raise ValueError('accepted 50/50 component lacks both selected CSFs')
@@ -279,6 +287,9 @@ class CappedQMComponent:
         if self.backend.electronic_state <= 0:
             return
         if self.native:
+            if self.backend.native_excited_method=='multicsf_50_50':
+                from .multicsf_component import persist_multicsf
+                persist_multicsf(self,result.scf_state[0])
             if self.backend.native_excited_method == 'roks_50_50':
                 from .composite_roks_component import persist_accepted
                 persist_accepted(self,result.scf_state)

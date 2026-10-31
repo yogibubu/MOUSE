@@ -1,0 +1,64 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 2,
+  "effective_pairs": 2.010464684268499,
+  "noccupied": 13,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.9073829313068784,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 1.2242304168662401,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.9793213784761933,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "host": "oracle.sns.it",
+    "state": "B022",
+    "reference_root": 5,
+    "input_sha256": {
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/prepared/Furan/ground.npz": "0e47b9610a990e79150053f8a230ceb20e4c64d26c2c928d90b1a5243ed56be0",
+      "/local/scratch/home/enzo/MOUSE-publication-validation-20261030/blind/prepared/Furan/B022/transition.npz": "41cae6387985cc12bf4ad0f0afef8176b44ac3b5ba4f370b80aab38899744bdc",
+      "/home/enzo/MOUSE-publication-validation-20261030/results/full_response/Furan/model.npz": "dae7693cf52e03c8889e2da3977dc72484dceaea83d6da22857dfbe485d4d91e",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/tda/Furan/0/spectrum.npz": "9b74eb193562b078dc05ba6fb7fd50beec88e52b25db586da1b0007772523209",
+      "/home/enzo/MOUSE-orbital-performance-20261031/pi_pi_repair/optimized/Furan/B022/0/latest.npz": "d23c2c614cf3a3bfa373da85782de2faed1e0e935ba763a9595d7108b2677099",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/models/Furan/model.npz": "83d7fe4fe564e27b540e5f513af34f7004d438d6f833592b5b8420d406315e64",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/tda/Furan/1/spectrum.npz": "21e2b06dec64b83a8f27a98b6af59b6044547792c1bbe84fd23f578cb33f0b3b",
+      "/home/enzo/MOUSE-orbital-performance-20261031/pi_pi_repair/optimized/Furan/B022/1/latest.npz": "eb89e9effb2c08a1a7c4769820a7a26ee426a523c568e86a2544445a45a21d49",
+      "/home/enzo/MOUSE-publication-validation-20261030/results/full_response/Furan/projected_eri.npz": "9a9fe3da66824c8cde2a6097ad56b5f7b7b00cf350634c3590694f5e3cf4e025",
+      "/home/enzo/MOUSE-state-following-20261031/ritz_projection_probe/results/Furan/B022/grounds/0/stationary.npz": "5ec2a8961a8aa0a34798121e8c1b649fe3d8dd33e8be62ebbe6f04c4194e0a9e",
+      "/home/enzo/MOUSE-state-following-20261031/ritz_projection_probe/results/Furan/B022/grounds/1/stationary.npz": "f7be14be9423614251875b9a1e8f1ee5aa71daf4a36516766279277f4ca7403d",
+      "/home/enzo/MOUSE-publication-validation-20261030/blind/mouse/Furan/grounds/2/stationary.npz": "d19357d8d39f1d28ad8d7822874e897c38a4740ec5655ccf46e86f7463795c3f"
+    },
+    "labels_already_exposed": true,
+    "energy_inputs_to_rank_selection": false,
+    "rank_rule": "nearest integer inverse NTO-weight purity"
+  },
+  "sha256": {
+    "template.npz": "f340774a9a4c927f45a9d90a573c69c51a6af3e03c587a7292d7de00d2dd2d2f",
+    "response_0.npz": "6b36fb9899c99fb9610163796f3245bece0c1351e4d6bc16691045fe3bf86a7e",
+    "response_1.npz": "91129a6ecc47797886088c39534f7f3f8bab4117caeda58439af81a4570405f4",
+    "arrays.npz": "3604b81ae8699be5fdb2ea646f023fb8402e1a89838f929c941dadcd508dd1bd",
+    "ground_0.npz": "b87d14b1dd7a79e7b1422fc1242089119bf41778b740d36fc670248368e15c37",
+    "ground_1.npz": "0ed3140d76c9d85b90fe50f4f1509f51712225a16c386a99e204aa5d95fc4aa3",
+    "ground_2.npz": "6f750539d6bc66cd60f167e17af66fb84e93395da4ccfc394777c64b99dcbb7c"
+  }
+}

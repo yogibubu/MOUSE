@@ -121,3 +121,6 @@ __all__ += ["DeterminantOrbitals", "DeltaSCFState", "determinant_overlap", "matc
 
 from .deltascf import SpinAdaptedSinglet, singlet_csf_overlap, follow_spin_adapted_singlet
 __all__ += ['SpinAdaptedSinglet', 'singlet_csf_overlap', 'follow_spin_adapted_singlet']
+
+from .multicsf import SingletCSFExpansion,multicsf_overlap,follow_multicsf_state
+__all__ += ['SingletCSFExpansion','multicsf_overlap','follow_multicsf_state']

@@ -1,0 +1,205 @@
+{
+  "host": "oracle.sns.it",
+  "rows": [
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "lambda_exchange": 0.85,
+      "excitation_ev": 6.782849330594405,
+      "rank": 2,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "energy_offset_ev": 0.0,
+      "residual": 5.2656069202171654e-12,
+      "minimum_absolute_curvature": 0.010646473919468226,
+      "fidelity": [
+        0.9946198182906535,
+        0.9978205485174034
+      ],
+      "seconds": 1.608559383021202,
+      "model_fingerprint": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+      "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "lambda_exchange": 0.9,
+      "excitation_ev": 6.720139395451143,
+      "rank": 2,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "energy_offset_ev": 0.0,
+      "residual": 2.17930928105095e-11,
+      "minimum_absolute_curvature": 0.009886041753766004,
+      "fidelity": [
+        0.9946532917525724,
+        0.9977839630266798
+      ],
+      "seconds": 0.47544866299722344,
+      "model_fingerprint": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+      "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "lambda_exchange": 0.95,
+      "excitation_ev": 6.657377160405257,
+      "rank": 2,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "energy_offset_ev": 0.0,
+      "residual": 5.375377606139237e-12,
+      "minimum_absolute_curvature": 0.00911906274240351,
+      "fidelity": [
+        0.994684932324502,
+        0.9977455969707285
+      ],
+      "seconds": 1.496015836019069,
+      "model_fingerprint": "c0f0a7d551e20c4cbc83f82f5010c90e8f15acbf758e2749056a5ebef56b1bec",
+      "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Furan",
+      "state": "B022",
+      "lambda_exchange": 0.85,
+      "excitation_ev": 6.743043211228459,
+      "rank": 2,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "energy_offset_ev": 0.0,
+      "residual": 2.850275926364656e-11,
+      "minimum_absolute_curvature": 0.022693246862121465,
+      "fidelity": [
+        0.9913419801976235,
+        0.9998205932994878
+      ],
+      "seconds": 1.2790804720134474,
+      "model_fingerprint": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+      "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Furan",
+      "state": "B022",
+      "lambda_exchange": 0.9,
+      "excitation_ev": 6.67360467902765,
+      "rank": 2,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "energy_offset_ev": 0.0,
+      "residual": 1.2453946934475374e-14,
+      "minimum_absolute_curvature": 0.021697950368155583,
+      "fidelity": [
+        0.9909870479526978,
+        0.9997890525668234
+      ],
+      "seconds": 0.36116010398836806,
+      "model_fingerprint": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+      "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Furan",
+      "state": "B022",
+      "lambda_exchange": 0.95,
+      "excitation_ev": 6.6040229004672515,
+      "rank": 2,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "energy_offset_ev": 0.0,
+      "residual": 3.5854142280780524e-11,
+      "minimum_absolute_curvature": 0.02070170403185144,
+      "fidelity": [
+        0.9906069589967661,
+        0.9997522308101701
+      ],
+      "seconds": 1.1699223989853635,
+      "model_fingerprint": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+      "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Phthalimide",
+      "state": "B024",
+      "lambda_exchange": 0.85,
+      "excitation_ev": 5.0298168481714525,
+      "rank": 2,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "energy_offset_ev": 0.0,
+      "residual": 6.443093849514155e-11,
+      "minimum_absolute_curvature": 3.899531780792638e-05,
+      "fidelity": [
+        0.9755123033884365,
+        0.8472202126511731
+      ],
+      "seconds": 38.99467140098568,
+      "model_fingerprint": "2d8e35091f65871435cfb88f1e96b918400ee7b6d8539151395b1147d81ead96",
+      "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Phthalimide",
+      "state": "B024",
+      "lambda_exchange": 0.9,
+      "excitation_ev": 4.945826968898666,
+      "rank": 2,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "energy_offset_ev": 0.0,
+      "residual": 8.617052559420468e-13,
+      "minimum_absolute_curvature": 4.447868565800526e-05,
+      "fidelity": [
+        0.976158060802929,
+        0.8478896472694717
+      ],
+      "seconds": 8.247212630987633,
+      "model_fingerprint": "2d8e35091f65871435cfb88f1e96b918400ee7b6d8539151395b1147d81ead96",
+      "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Phthalimide",
+      "state": "B024",
+      "lambda_exchange": 0.95,
+      "excitation_ev": 4.861260540426115,
+      "rank": 2,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "energy_offset_ev": 0.0,
+      "residual": 1.0456110161588851e-11,
+      "minimum_absolute_curvature": 1.6067415343166642e-06,
+      "fidelity": [
+        0.9768582324870034,
+        0.8486714009164139
+      ],
+      "seconds": 50.98625987803098,
+      "model_fingerprint": "2d8e35091f65871435cfb88f1e96b918400ee7b6d8539151395b1147d81ead96",
+      "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+    }
+  ],
+  "production_lambda": 0.9,
+  "parameter_selection_from_results": false
+}

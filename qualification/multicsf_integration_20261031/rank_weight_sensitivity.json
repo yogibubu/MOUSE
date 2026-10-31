@@ -1,0 +1,214 @@
+{
+  "scope": "exposed development; scalar perturbation of fixed reference NTO singular values and algebraic vertical weight sensitivity, no new anchor or nuclear surface",
+  "rank_rule": "nearest integer inverse NTO-weight purity",
+  "production_weights": [
+    0.5,
+    0.5
+  ],
+  "rank_sensitivity": [
+    {
+      "state": "B007",
+      "molecule": "Adenine",
+      "rank": 1,
+      "effective_pairs": 1.0136245564021427,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 5.999224003468641,
+        "relative_change_percent": 499.92240034686415
+      }
+    },
+    {
+      "state": "B014",
+      "molecule": "Adenine",
+      "rank": 1,
+      "effective_pairs": 1.2196778011861704,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 1.5256713133996052,
+        "relative_change_percent": 52.56713133996052
+      }
+    },
+    {
+      "state": "B011",
+      "molecule": "Aza-naphthalene",
+      "rank": 1,
+      "effective_pairs": 1.2008425849204523,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 1.5564852986392228,
+        "relative_change_percent": 55.64852986392228
+      }
+    },
+    {
+      "state": "B039",
+      "molecule": "Benzoquinone",
+      "rank": 1,
+      "effective_pairs": 1.263619317943553,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 1.3858748050254373,
+        "relative_change_percent": 38.58748050254373
+      }
+    },
+    {
+      "state": "B015",
+      "molecule": "Bimane_Syn",
+      "rank": 1,
+      "effective_pairs": 1.0850014282941347,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 2.369444757919045,
+        "relative_change_percent": 136.9444757919045
+      }
+    },
+    {
+      "state": "B016",
+      "molecule": "Cyclopentadiene",
+      "rank": 2,
+      "effective_pairs": 1.9882659894993426,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 0.5651255389343423,
+        "relative_change_percent": 43.48744610656578
+      }
+    },
+    {
+      "state": "B001",
+      "molecule": "Diazirine",
+      "rank": 1,
+      "effective_pairs": 1.0003948728472245,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 35.37147012509359,
+        "relative_change_percent": 3437.147012509359
+      }
+    },
+    {
+      "state": "B022",
+      "molecule": "Furan",
+      "rank": 2,
+      "effective_pairs": 2.0104646842684994,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 0.5510587549256143,
+        "relative_change_percent": 44.89412450743857
+      }
+    },
+    {
+      "state": "B004",
+      "molecule": "Nitropyridine_N-oxide",
+      "rank": 1,
+      "effective_pairs": 1.0017321802824617,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 16.86078514224824,
+        "relative_change_percent": 1586.078514224824
+      }
+    },
+    {
+      "state": "B029",
+      "molecule": "Nitropyridine_N-oxide",
+      "rank": 1,
+      "effective_pairs": 1.0877348056299365,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 2.35203155823352,
+        "relative_change_percent": 135.203155823352
+      }
+    },
+    {
+      "state": "B005",
+      "molecule": "Phthalimide",
+      "rank": 1,
+      "effective_pairs": 1.0391253093576907,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 3.6607062783502227,
+        "relative_change_percent": 266.07062783502226
+      }
+    },
+    {
+      "state": "B024",
+      "molecule": "Phthalimide",
+      "rank": 2,
+      "effective_pairs": 1.594924318261687,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 0.9024779640378944,
+        "relative_change_percent": 9.752203596210563
+      }
+    },
+    {
+      "state": "B025",
+      "molecule": "Quinoxaline",
+      "rank": 1,
+      "effective_pairs": 1.0193191644388222,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 5.002835874006568,
+        "relative_change_percent": 400.28358740065676
+      }
+    },
+    {
+      "state": "B030",
+      "molecule": "Quinoxaline",
+      "rank": 1,
+      "effective_pairs": 1.0921091326860395,
+      "nearest_crossing": {
+        "boundary": 1.5,
+        "subleading_singular_value_scale": 2.327364949148384,
+        "relative_change_percent": 132.7364949148384
+      }
+    }
+  ],
+  "weight_sensitivity": [
+    {
+      "state": "B016",
+      "molecule": "Cyclopentadiene",
+      "parent_energies_ev": [
+        7.549685315435822,
+        5.890593475464821
+      ],
+      "vertical_energies_ev": {
+        "0.4": 6.554230211453222,
+        "0.5": 6.720139395450321,
+        "0.6": 6.886048579447422
+      },
+      "rank_one_ev": 8.197277888879146,
+      "rank_two_ev": 6.720139395450321,
+      "vertical_rank_switch_jump_ev": -1.477138493428825
+    },
+    {
+      "state": "B022",
+      "molecule": "Furan",
+      "parent_energies_ev": [
+        7.426208513881495,
+        5.921000844176464
+      ],
+      "vertical_energies_ev": {
+        "0.4": 6.5230839120584765,
+        "0.5": 6.67360467902898,
+        "0.6": 6.824125445999481
+      },
+      "rank_one_ev": 7.973905034751296,
+      "rank_two_ev": 6.67360467902898,
+      "vertical_rank_switch_jump_ev": -1.3003003557223165
+    },
+    {
+      "state": "B024",
+      "molecule": "Phthalimide",
+      "parent_energies_ev": [
+        5.119830915765741,
+        4.7718230220313
+      ],
+      "vertical_energies_ev": {
+        "0.4": 4.911026179525076,
+        "0.5": 4.945826968898521,
+        "0.6": 4.9806277582719645
+      },
+      "rank_one_ev": 5.868844110096675,
+      "rank_two_ev": 4.945826968898521,
+      "vertical_rank_switch_jump_ev": -0.9230171411981543
+    }
+  ]
+}

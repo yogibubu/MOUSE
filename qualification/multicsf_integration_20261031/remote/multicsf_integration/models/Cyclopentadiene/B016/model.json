@@ -1,0 +1,64 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 2,
+  "effective_pairs": 1.988265989499343,
+  "noccupied": 13,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.8238471996974126,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 1.1996174391332217,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.9521593307918824,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "host": "oracle.sns.it",
+    "state": "B016",
+    "reference_root": 8,
+    "input_sha256": {
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/prepared/Cyclopentadiene/ground.npz": "fe49a23b3b673379251d15633c6e154b13f004d52c1f7047863bb59d083bcc60",
+      "/local/scratch/home/enzo/MOUSE-publication-validation-20261030/blind/prepared/Cyclopentadiene/B016/transition.npz": "910b696d861f1a722dfdbc6d8aeaef61f2003a1e8b62a9c1b31695808c27494a",
+      "/home/enzo/MOUSE-publication-validation-20261030/results/full_response/Cyclopentadiene/model.npz": "dcca68a456afce94e2da41da790f2cc6def2e86596df6bdfa7f8e50b4948d77c",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/tda/Cyclopentadiene/0/spectrum.npz": "d381d30f48f5ca322a798f7675392bd3a5582688136cc202d921e7e73cc0ef23",
+      "/home/enzo/MOUSE-orbital-performance-20261031/pi_pi_repair/optimized/Cyclopentadiene/B016/0/latest.npz": "9a607b7d08e031ba6b6a55f142c9a3fae51e1840033de17c5fca65de44ec5387",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/models/Cyclopentadiene/model.npz": "57aa84557a1bc840814040f9ea2d745f5bc6e673318e7dde83fc65123e80b3fb",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/tda/Cyclopentadiene/1/spectrum.npz": "3320aeb1cf8658e7cd5233f0e4210ffa2de8b020ffb99e5a12cc8a846e688ebe",
+      "/home/enzo/MOUSE-orbital-performance-20261031/pi_pi_repair/optimized/Cyclopentadiene/B016/1/latest.npz": "7ee823de04fdb4ba537d62d7ce7ad76a36b6edf2b0eab502c8b3d30e0ab72bb9",
+      "/home/enzo/MOUSE-publication-validation-20261030/results/full_response/Cyclopentadiene/projected_eri.npz": "8f1d00796c3f06f7d92801fc3886a83b7b09735720c36d202fd3bf7e13728830",
+      "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/ground_cache/Cyclopentadiene/0/stationary.npz": "59687f2a0d27431b651fbc7911206d84e114187aa901bac5683038681565e957",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/static_response_controls/Cyclopentadiene/0/ground/stationary.npz": "4099eaf2e22d850b0b53007e5c4362465443505f86a011aac1e0e36597f328ce",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/static_response_controls/Cyclopentadiene/1/ground/stationary.npz": "f4a2840d4e11713cf43c2cf9a5b7e79a0500e8b32ede7bfec5ed14568eb74288"
+    },
+    "labels_already_exposed": true,
+    "energy_inputs_to_rank_selection": false,
+    "rank_rule": "nearest integer inverse NTO-weight purity"
+  },
+  "sha256": {
+    "template.npz": "ee931d58f50a1596a7f08decc71c7111d3bdea0892d94e1aa680f5208c17c358",
+    "response_0.npz": "dd6a2be300cff14588fdeb4229440b752b5be7c9bff2693903dad76931a24e3d",
+    "response_1.npz": "17a4f7234891d4207e05dcf548cb28d448eaaacf06aafe395d95ee49a743fcfa",
+    "arrays.npz": "5854813826c6de481d01025e06815cd30d0ae8202d0a37dae60d4a42baed072f",
+    "ground_0.npz": "9d394e51e5ac7aa6be0ea0891fe60fda9048c54107cc2ad8e7d65a90532da898",
+    "ground_1.npz": "784a18bd764cf5bd519e27b712784dd3a267928234961b1d16b959cc27468bc9",
+    "ground_2.npz": "431ea39346a0c8c1b0c6927bbebdafc311f1076fcec6f2aefa79b6db5c3d6bf1"
+  }
+}

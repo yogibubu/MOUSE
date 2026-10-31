@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/export_model.py", line 55, in <module>
+    with threadpool_limits(limits=2):export(sys.argv[1],sys.argv[2])
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/export_model.py", line 49, in export
+    if ground is None:raise RuntimeError(f'Missing completed ground certificate {name} profile {i}')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Missing completed ground certificate Cyclopentadiene profile 0
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/finish_sensitivity.py", line 5, in <module>
+    for name,sid in [('Cyclopentadiene','B016'),('Phthalimide','B024')]:subprocess.run([sys.executable,str(w/'export_model.py'),name,sid],check=True)
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/.local/share/mamba/envs/et-2.5/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/enzo/nano-MATRIX-current/.venv/bin/python', '/home/enzo/MOUSE-orbital-performance-20261031/multicsf_integration/export_model.py', 'Cyclopentadiene', 'B016']' returned non-zero exit status 1.

@@ -120,8 +120,11 @@ are still required. Rydberg accuracy is not corrected.
 
 ## Current limits
 
-This candidate remains in qualification, not the public MOUSE method selector.
-The original single-CSF method remains separate. Broader off-anchor qualification, complete molecular column checks, automatic
-LINK/APOC integration, and
-physical structure/frequency validation of this new multi-CSF surface remain
-open. No broad accuracy or general timing advantage is established.
+The candidate now has an explicit opt-in public selector, multicsf_50_50,
+backed by portable checksummed frozen models and coherent APOC expansions.
+It remains experimental and does not change the default method.
+The original single-CSF method remains separate. LINK/APOC cold, displaced, relocated and resumed evaluations now pass; trial
+points do not advance the accepted state and corrupt inputs are rejected. All
+27 furan total-energy Hessian columns pass within 2.29e-8 Ha/bohr^2. Further
+molecular column checks, actual DFT-anchor recalibration, independent chemical
+validation and physical structure/frequency validation remain open. No broad accuracy or general timing advantage is established.

@@ -1,0 +1,158 @@
+{
+  "host": "oracle.sns.it",
+  "scope": "full excited total energy: native S0 plus equally weighted multi-CSF parent gaps; fixed full active cross-overlap frame; not original single-pair PES",
+  "ground_checkpoint_provenance": [
+    {
+      "source": "/home/enzo/MOUSE-state-following-20261031/ritz_projection_probe/results/Furan/B022/grounds/0/stationary.npz",
+      "sha256": "5ec2a8961a8aa0a34798121e8c1b649fe3d8dd33e8be62ebbe6f04c4194e0a9e"
+    },
+    {
+      "source": "/home/enzo/MOUSE-state-following-20261031/ritz_projection_probe/results/Furan/B022/grounds/1/stationary.npz",
+      "sha256": "f7be14be9423614251875b9a1e8f1ee5aa71daf4a36516766279277f4ca7403d"
+    },
+    {
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/blind/mouse/Furan/grounds/2/stationary.npz",
+      "sha256": "d19357d8d39f1d28ad8d7822874e897c38a4740ec5655ccf46e86f7463795c3f"
+    }
+  ],
+  "analytic_seconds": 0.5710575289558619,
+  "checks": [
+    {
+      "coordinate": 0,
+      "energy_gradient_error": 1.3467615697768452e-15,
+      "hessian_column_max_error": 1.2468276661126154e-08
+    },
+    {
+      "coordinate": 8,
+      "energy_gradient_error": 6.418758982662531e-09,
+      "hessian_column_max_error": 2.284462385926389e-08
+    },
+    {
+      "coordinate": 1,
+      "energy_gradient_error": 1.62880077481109e-09,
+      "hessian_column_max_error": 1.6458099660887626e-08
+    },
+    {
+      "coordinate": 2,
+      "energy_gradient_error": 8.172979543141778e-09,
+      "hessian_column_max_error": 1.5191276125925413e-08
+    },
+    {
+      "coordinate": 3,
+      "energy_gradient_error": 7.105311369362803e-11,
+      "hessian_column_max_error": 1.2496621480673209e-08
+    },
+    {
+      "coordinate": 4,
+      "energy_gradient_error": 2.0728807281766848e-09,
+      "hessian_column_max_error": 1.6468111208034486e-08
+    },
+    {
+      "coordinate": 5,
+      "energy_gradient_error": 8.332844164682385e-09,
+      "hessian_column_max_error": 1.5185519786076185e-08
+    },
+    {
+      "coordinate": 6,
+      "energy_gradient_error": 1.8651788019772252e-10,
+      "hessian_column_max_error": 9.928766746269968e-09
+    },
+    {
+      "coordinate": 7,
+      "energy_gradient_error": 7.81966842666737e-09,
+      "hessian_column_max_error": 1.8321951955613258e-08
+    },
+    {
+      "coordinate": 9,
+      "energy_gradient_error": 1.1102218020489962e-10,
+      "hessian_column_max_error": 9.93182208697263e-09
+    },
+    {
+      "coordinate": 10,
+      "energy_gradient_error": 7.841872026737029e-09,
+      "hessian_column_max_error": 1.833229090753008e-08
+    },
+    {
+      "coordinate": 11,
+      "energy_gradient_error": 6.680769409905807e-09,
+      "hessian_column_max_error": 2.28517026412689e-08
+    },
+    {
+      "coordinate": 12,
+      "energy_gradient_error": 1.3766784361803428e-10,
+      "hessian_column_max_error": 1.887123873833829e-09
+    },
+    {
+      "coordinate": 13,
+      "energy_gradient_error": 2.219563405808989e-11,
+      "hessian_column_max_error": 8.800179140955322e-09
+    },
+    {
+      "coordinate": 14,
+      "energy_gradient_error": 3.883026497564224e-09,
+      "hessian_column_max_error": 2.7967548416052423e-09
+    },
+    {
+      "coordinate": 15,
+      "energy_gradient_error": 2.2204515571179086e-10,
+      "hessian_column_max_error": 2.128444317496536e-09
+    },
+    {
+      "coordinate": 16,
+      "energy_gradient_error": 5.365848340958476e-09,
+      "hessian_column_max_error": 1.1625253648617218e-08
+    },
+    {
+      "coordinate": 17,
+      "energy_gradient_error": 2.1874941961985694e-10,
+      "hessian_column_max_error": 2.981501823207111e-09
+    },
+    {
+      "coordinate": 18,
+      "energy_gradient_error": 7.993656705328166e-11,
+      "hessian_column_max_error": 2.1283771021660125e-09
+    },
+    {
+      "coordinate": 19,
+      "energy_gradient_error": 5.2015354467215e-09,
+      "hessian_column_max_error": 1.1625028217832067e-08
+    },
+    {
+      "coordinate": 20,
+      "energy_gradient_error": 1.5657651217249047e-10,
+      "hessian_column_max_error": 2.9799238354666358e-09
+    },
+    {
+      "coordinate": 21,
+      "energy_gradient_error": 6.661399745901643e-11,
+      "hessian_column_max_error": 1.5622931906489335e-09
+    },
+    {
+      "coordinate": 22,
+      "energy_gradient_error": 9.306257825990316e-10,
+      "hessian_column_max_error": 2.7749058328918608e-09
+    },
+    {
+      "coordinate": 23,
+      "energy_gradient_error": 3.3282119484435296e-09,
+      "hessian_column_max_error": 9.406038947723516e-09
+    },
+    {
+      "coordinate": 24,
+      "energy_gradient_error": 2.9309850864182303e-10,
+      "hessian_column_max_error": 1.5642257281123229e-09
+    },
+    {
+      "coordinate": 25,
+      "energy_gradient_error": 7.618722649288534e-10,
+      "hessian_column_max_error": 2.77514924929001e-09
+    },
+    {
+      "coordinate": 26,
+      "energy_gradient_error": 3.1372538685826845e-09,
+      "hessian_column_max_error": 9.412346929638105e-09
+    }
+  ],
+  "complete": true,
+  "maximum_hessian_column_error": 2.28517026412689e-08
+}

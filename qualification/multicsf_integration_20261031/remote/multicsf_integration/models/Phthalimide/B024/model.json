@@ -1,0 +1,64 @@
+{
+  "schema": "mouse.multicsf.model.v1",
+  "experimental": true,
+  "rank": 2,
+  "effective_pairs": 1.5949243182616868,
+  "noccupied": 27,
+  "state_id": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "diagonal_lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "offdiagonal": "bare projected Slater-Condon",
+  "orbital_manifold": "fixed full active cross-overlap matrix",
+  "grounds": [
+    {
+      "path": "ground_0.npz",
+      "minimum_curvature": 0.41226103083224847,
+      "index": 0
+    },
+    {
+      "path": "ground_1.npz",
+      "minimum_curvature": 0.6281908136911151,
+      "index": 0
+    },
+    {
+      "path": "ground_2.npz",
+      "minimum_curvature": 0.49724947468029923,
+      "index": 0
+    }
+  ],
+  "provenance": {
+    "host": "oracle.sns.it",
+    "state": "B024",
+    "reference_root": 2,
+    "input_sha256": {
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/prepared/Phthalimide/ground.npz": "231cabadd48e63d5bf07e1dc781a5e6a540334f8f020db4af6ed4bac09301886",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/prepared/Phthalimide/B024/transition.npz": "69ba669a9b6469911c44f6f9bd9724f938827c9d0716027ce87a527e6967bc0d",
+      "/home/enzo/MOUSE-publication-validation-20261030/results/full_response/Phthalimide/model.npz": "9cd37deff85c216ed57f8ad148ea0ce2d53e4a94861c7ec1c0851e19d9ab5068",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/tda/Phthalimide/0/spectrum.npz": "483daabfa91af1fd8a820180d628ce9de6b64b1851feef18ca58ff2effeb5d85",
+      "/home/enzo/MOUSE-orbital-performance-20261031/pi_pi_repair/optimized/Phthalimide/B024/0_fr_v1/latest_released.npz": "9def928947032114fd6cae756dd73fcb2442133de92d362837285fd7d64171fe",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/models/Phthalimide/model.npz": "c9be8779d816ef40bf2a27cb0688c92545a15b5d0137e95ad54b689f2e9ee6b1",
+      "/home/enzo/MOUSE-state-following-20261031/reduced_validation/tda/Phthalimide/1/spectrum.npz": "f46ac4e6759fea8ed5709c131f489a463544725a87151584e71c8a4c8faaef30",
+      "/home/enzo/MOUSE-orbital-performance-20261031/pi_pi_repair/optimized/Phthalimide/B024/1_gmf_polish_v1/latest.npz": "7f27386e9d40204f0c9b34bc57d09200b21ef4a469fb4a7064ae406aa09f3a48",
+      "/home/enzo/MOUSE-publication-validation-20261030/results/full_response/Phthalimide/projected_eri.npz": "e3d04ee5896d550f66272882fc61e135cd80c4f45c6f24a6593e57b21afe155f",
+      "/home/enzo/MOUSE-orbital-performance-20261031/results/Phthalimide/B005/grounds/0/stationary.npz": "5ef932fe311abc399c68f406df1e7e797ac8f02da895db4a30b253996573111c",
+      "/home/enzo/MOUSE-orbital-performance-20261031/results/Phthalimide/B005/grounds/1/stationary.npz": "103c55885d2f1abbfddf4b18fc71a2b7eff261e9ffde76daa7ace9aecb2f0dfa",
+      "/home/enzo/MOUSE-orbital-performance-20261031/results/Phthalimide/B005/grounds/2/stationary.npz": "7a2752a601aa999f7baa0d7e3923fd4454b17a5a50850fd486d9829b3ec98dea"
+    },
+    "labels_already_exposed": true,
+    "energy_inputs_to_rank_selection": false,
+    "rank_rule": "nearest integer inverse NTO-weight purity"
+  },
+  "sha256": {
+    "template.npz": "7e92adc04d04f6c60ab5febebb02eaf32fee1f34d44a46d685b32f319e2b49cc",
+    "response_0.npz": "e720da5a5520b45a789cc8aef4379d14f7edcfbdbc112d280be53309376532a6",
+    "response_1.npz": "fe06a05b255515bc280379c56342a3726d6717d4aa39eaef1e64450653da1b00",
+    "arrays.npz": "11e6702da8cb26919ea8f643d3a5d1021df2811e0ef3c0108e72567f9a01b8b9",
+    "ground_0.npz": "dbf859654039cb89af192c04b3edf0c03c428941602801c2a9dc2542877568b9",
+    "ground_1.npz": "5a848729268c0cd746e7f71b946fb410850570531dd760f0c900417de2f15086",
+    "ground_2.npz": "25fb9945cf506fd0375037bcfbbb93b82b5c9055cdcb63225f04f946c1b4a605"
+  }
+}

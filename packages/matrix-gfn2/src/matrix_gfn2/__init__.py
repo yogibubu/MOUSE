@@ -928,3 +928,8 @@ __all__ += ['ROKSContinuationState', 'ROKSStateFollowingError',
 
 from .roks_tracking import assigned_transition_orbitals
 __all__ += ['assigned_transition_orbitals']
+
+from .multicsf_surface import (MultiCSFModel,MultiCSFSurfaceResult,effective_transition_rank,
+    write_multicsf_model,evaluate_multicsf_surface,save_multicsf_result,load_multicsf_result)
+__all__ += ['MultiCSFModel','MultiCSFSurfaceResult','effective_transition_rank',
+    'write_multicsf_model','evaluate_multicsf_surface','save_multicsf_result','load_multicsf_result']

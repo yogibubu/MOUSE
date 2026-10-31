@@ -18,7 +18,12 @@
     "Furan excited total Hessian including three ground terms: two columns",
     "31 core solver regression tests",
     "effective-rank vertical development scores from identical stationary points",
-    "off-anchor Furan full-frame analytic response, BCH and spectator-gauge terms: two nuclear Hessian columns within 2.3e-8 Ha/bohr^2"
+    "off-anchor Furan full-frame analytic response, BCH and spectator-gauge terms: two nuclear Hessian columns within 2.3e-8 Ha/bohr^2",
+    "all 27 Furan excited-total Hessian columns validated: maximum error 2.2852e-8 Ha/bohr^2",
+    "public opt-in multi-CSF LINK/APOC integration with atomic accepted-state restart and portable model",
+    "46 distinct remote regression tests (43 core/legacy/coherent-APOC plus 3 new LINK contracts)",
+    "lambda 0.85/0.9/0.95 response-only sensitivity on three rank-two pi-pi states; no parameter changed",
+    "vertical weights 0.4/0.5/0.6 and fixed-NTO rank sensitivity quantified"
   ],
   "rejected_or_unqualified": [
     "95 percent cumulative rank prescription: aza-naphthalene overcorrelation",
@@ -27,11 +32,10 @@
     "native-screened couplings: fixed-orbital diagnostics only"
   ],
   "pending": [
-    "complete molecular Hessian-column checks beyond the sampled Furan columns",
-    "public LINK/APOC integration of the multi-CSF candidate",
-    "rank and anchor sensitivity, especially phthalimide",
+    "complete Hessian-column checks on molecules beyond Furan",
+    "actual rank/energy sensitivity with DFT recalibrated at displaced anchors",
     "new frozen independent validation",
-    "excited structure/frequency comparisons and full cost/memory benchmark",
+    "excited structure/frequency comparisons and full size-dependent cost/memory benchmark",
     "qualified TD-DFTB and DeltaDFTB direct comparison"
   ]
 }

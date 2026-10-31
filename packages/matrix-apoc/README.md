@@ -97,3 +97,12 @@ ORACLE may consume APOC data in place of its geometry-only estimates.
 ARCHITECT/ZAFF requires the APOC CM5/Mayer contract by default. Alternative
 charge or bond-order definitions must be supplied and labelled explicitly;
 they never silently replace CM5 or Mayer.
+
+## Coherent singlet expansions
+
+`SingletCSFExpansion`, `multicsf_overlap` and `follow_multicsf_state` track a
+normalized real linear combination of orthonormal spin-singlet CSFs. Signed
+cross-CSF terms are summed before taking an absolute overlap; interference
+and overall phase are retained. Expansion coefficients use the determinant
+ordering of each CSF, so excitation-operator phases must be supplied by the
+producer. No transition observable or spin-projected DFT energy is inferred.

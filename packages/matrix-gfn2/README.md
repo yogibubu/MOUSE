@@ -552,3 +552,24 @@ within `1.85e-8 Eh/bohr`. Complete analytic Hessian checks are in
 reconverged stationary adjoints, full matrices against gradient differences,
 reciprocity, translations, rotations, and guards against displaced-SCF or
 numerical-derivative fallback. Reference fixtures are in `tests/fixtures/nn_xtb_water_*`.
+
+## Experimental spin-pure multi-CSF OO-DFT
+
+`MultiCSFModel` loads a portable `model.json` directory with checked response,
+ERI, orbital and ground-state files. `evaluate_multicsf_surface` returns the
+excited total energy, analytic nuclear gradient and optional analytic Hessian.
+The energy combines two parents with fixed weights 1/2 and restores the native
+S0 reference while subtracting the two corrected S0 energies. CI eigenvector,
+orbital, metric, frame, product-chart and spectator-gauge response are included.
+
+The active rank is frozen at preparation as the nearest integer to the inverse
+purity of normalized reference NTO weights. Bare Slater–Condon couplings define
+a different approximate functional from single-CSF ROKS; diagonal response
+lambda remains 0.9 and no energy offset is added. The full active cross-parent
+overlap matrix is preserved. This option remains a research candidate, not a
+new default or a universal accuracy claim. Its current preparation protocol
+needs fixed DFT reference transitions, in addition to ground-state information.
+
+All 27 furan Hessian columns agree with reoptimized finite differences within
+2.29e-8 Ha/bohr². Two displaced-geometry parent-mean columns were also checked.
+These are numerical derivative tests, not physical frequency validation.

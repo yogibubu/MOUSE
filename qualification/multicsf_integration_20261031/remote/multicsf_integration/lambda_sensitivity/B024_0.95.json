@@ -1,0 +1,22 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Phthalimide",
+  "state": "B024",
+  "lambda_exchange": 0.95,
+  "excitation_ev": 4.861260540426115,
+  "rank": 2,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "energy_offset_ev": 0.0,
+  "residual": 1.0456110161588851e-11,
+  "minimum_absolute_curvature": 1.6067415343166642e-06,
+  "fidelity": [
+    0.9768582324870034,
+    0.8486714009164139
+  ],
+  "seconds": 50.98625987803098,
+  "model_fingerprint": "2d8e35091f65871435cfb88f1e96b918400ee7b6d8539151395b1147d81ead96",
+  "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+}

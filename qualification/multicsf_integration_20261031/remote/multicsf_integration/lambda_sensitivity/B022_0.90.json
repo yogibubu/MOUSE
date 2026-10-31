@@ -1,0 +1,22 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Furan",
+  "state": "B022",
+  "lambda_exchange": 0.9,
+  "excitation_ev": 6.67360467902765,
+  "rank": 2,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "energy_offset_ev": 0.0,
+  "residual": 1.2453946934475374e-14,
+  "minimum_absolute_curvature": 0.021697950368155583,
+  "fidelity": [
+    0.9909870479526978,
+    0.9997890525668234
+  ],
+  "seconds": 0.36116010398836806,
+  "model_fingerprint": "9a986fe822ee8ca79828e2cc7f4e934e1c9d14379dc36c41a89493e5334cc0cb",
+  "scope": "diagonal exact-exchange response only; one-body DFT anchor and bare CSF couplings fixed; no refit"
+}
