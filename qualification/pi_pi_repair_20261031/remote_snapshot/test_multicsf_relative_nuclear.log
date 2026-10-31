@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/test_multicsf_relative_nuclear.py", line 40, in <module>
+    response=anchor_nuclear_response(objects,coefficients,target,responses)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_relative_response.py", line 84, in anchor_nuclear_response
+    e,res,b,info=stationary_blocks(objects,coefficients,target,np.zeros(len(target)),weights)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_relative_response.py", line 47, in stationary_blocks
+    if singular[-1]<1e-8:raise ValueError('active constraint singularity: shared-coordinate elimination required')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: active constraint singularity: shared-coordinate elimination required

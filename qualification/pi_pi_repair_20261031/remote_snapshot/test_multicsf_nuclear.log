@@ -1,0 +1,21 @@
+{'coordinate': 0, 'energy_gradient_error': np.float64(1.3322755035261494e-11), 'hessian_column_max_error': 3.7664280028160135e-09}
+{'coordinate': 8, 'energy_gradient_error': np.float64(6.4595706075754045e-09), 'hessian_column_max_error': 2.184382530412421e-08}
+{
+  "host": "oracle.sns.it",
+  "method": "single-parent multi-CSF; analytic nuclear/orbital/CI response; not the constrained 50/50 Hessian",
+  "maximum_response_residual": 4.440892098500626e-16,
+  "gradient_implementation_difference": 6.938893903907228e-18,
+  "analytic_seconds": 32.79395788302645,
+  "checks": [
+    {
+      "coordinate": 0,
+      "energy_gradient_error": 1.3322755035261494e-11,
+      "hessian_column_max_error": 3.7664280028160135e-09
+    },
+    {
+      "coordinate": 8,
+      "energy_gradient_error": 6.4595706075754045e-09,
+      "hessian_column_max_error": 2.184382530412421e-08
+    }
+  ]
+}

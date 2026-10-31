@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/enzo/MOUSE-orbital-performance-20261031/test_multicsf_jet.py", line 7, in <module>
+    from multicsf_objective import MultiCSFObjective,quartic_jet
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/multicsf_objective.py", line 13, in <module>
+    from matrix_gfn2.roks_orbital_response import orbital_residual_jacobian
+ModuleNotFoundError: No module named 'matrix_gfn2.roks_orbital_response'

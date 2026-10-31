@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/test_multicsf_excitation_nuclear.py", line 24, in <module>
+    folder=V/f'results/Furan/B022/grounds/{i}';cp=folder/'stationary.npz';cert=json.loads((folder/'certificate.json').read_text())
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/.local/share/mamba/envs/et-2.5/lib/python3.11/pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/enzo/.local/share/mamba/envs/et-2.5/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/enzo/MOUSE-orbital-performance-20261031/results/Furan/B022/grounds/0/certificate.json'

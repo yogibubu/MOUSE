@@ -1,0 +1,33 @@
+{'coordinate': 0, 'energy_gradient_error': np.float64(1.3467615697768452e-15), 'hessian_column_max_error': 1.2468276661126154e-08}
+{'coordinate': 8, 'energy_gradient_error': np.float64(6.418758982662531e-09), 'hessian_column_max_error': 2.284462385926389e-08}
+{
+  "host": "oracle.sns.it",
+  "scope": "full excited total energy: native S0 plus equally weighted multi-CSF parent gaps; fixed full active cross-overlap frame; not original single-pair PES",
+  "ground_checkpoint_provenance": [
+    {
+      "source": "/home/enzo/MOUSE-state-following-20261031/ritz_projection_probe/results/Furan/B022/grounds/0/stationary.npz",
+      "sha256": "5ec2a8961a8aa0a34798121e8c1b649fe3d8dd33e8be62ebbe6f04c4194e0a9e"
+    },
+    {
+      "source": "/home/enzo/MOUSE-state-following-20261031/ritz_projection_probe/results/Furan/B022/grounds/1/stationary.npz",
+      "sha256": "f7be14be9423614251875b9a1e8f1ee5aa71daf4a36516766279277f4ca7403d"
+    },
+    {
+      "source": "/home/enzo/MOUSE-publication-validation-20261030/blind/mouse/Furan/grounds/2/stationary.npz",
+      "sha256": "d19357d8d39f1d28ad8d7822874e897c38a4740ec5655ccf46e86f7463795c3f"
+    }
+  ],
+  "analytic_seconds": 33.188499656971544,
+  "checks": [
+    {
+      "coordinate": 0,
+      "energy_gradient_error": 1.3467615697768452e-15,
+      "hessian_column_max_error": 1.2468276661126154e-08
+    },
+    {
+      "coordinate": 8,
+      "energy_gradient_error": 6.418758982662531e-09,
+      "hessian_column_max_error": 2.284462385926389e-08
+    }
+  ]
+}

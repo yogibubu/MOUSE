@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/local/scratch/home/enzo/MOUSE-orbital-performance-20261031/test_multicsf_offanchor_nuclear.py", line 41, in <module>
+    assert orbital_error<2e-6,orbital_error
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: 9.034880765090847e-06

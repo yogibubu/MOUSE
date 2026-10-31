@@ -1,0 +1,36 @@
+{'coordinate': 0, 'energy_gradient_error': np.float64(8.882368670152247e-12), 'hessian_column_max_error': 1.1457224849409364e-08}
+{'coordinate': 8, 'energy_gradient_error': np.float64(6.481187600493321e-09), 'hessian_column_max_error': 2.2789247156040915e-08}
+{
+  "host": "oracle.sns.it",
+  "scope": "constrained excited parent total-energy 50/50 mean only; full excitation PES ground terms not yet qualified",
+  "orbital_hessian_directional_error": 8.223492686809664e-08,
+  "target_overlaps": [
+    0.997587672775194,
+    0.9996242215665458,
+    0.999629190015414,
+    0.9996242215665646
+  ],
+  "relative_manifold": "full active cross-overlap matrix preserved exactly",
+  "constraint_gradient_error": 9.642386715469353e-11,
+  "constraint_hessian_error": 1.6347584425036032e-08,
+  "parent_stationarity_residuals": [
+    0.00023509617082654102,
+    0.00023056102543125628
+  ],
+  "analytic_seconds": 63.296484525024425,
+  "maximum_response_residual": 5.551115123125783e-16,
+  "minimum_absolute_curvature": 0.022669023329632925,
+  "dimension": 303,
+  "checks": [
+    {
+      "coordinate": 0,
+      "energy_gradient_error": 8.882368670152247e-12,
+      "hessian_column_max_error": 1.1457224849409364e-08
+    },
+    {
+      "coordinate": 8,
+      "energy_gradient_error": 6.481187600493321e-09,
+      "hessian_column_max_error": 2.2789247156040915e-08
+    }
+  ]
+}
