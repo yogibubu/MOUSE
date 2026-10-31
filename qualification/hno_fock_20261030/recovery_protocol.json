@@ -1,0 +1,9 @@
+{
+ "compute_host": "oracle.sns.it", "molecule": "nitroxyl",
+ "stage": "resume after thermal-homotopy fix; preserve first segment and failed initialization separately",
+ "changes": ["ordered S0 energy guesses after Newton shifts", "valid generalized eigensystem on an unconverged direct SCC exit", "explicit accepted S0 retry at requested temperature if independent reference fails"],
+ "unchanged": "Hamiltonian, 50/50 weights, lambda, energy offset zero, response files and all state/canonical residual gates",
+ "checkpoint": "latest accepted results/nitroxyl/resume; spectrum_resume failed before advancing any accepted state",
+ "maximum_remaining_steps": 63,
+ "analytic_validation": "exact analytic final Hessian and two central-gradient Hessian-vector checks if stationary; report numerical limits otherwise"
+}

@@ -1,0 +1,18 @@
+\begin{table}[!htbp]
+\centering\footnotesize
+\caption{Methodological positioning. Derivative statements refer to the cited formulations, not an exhaustive survey of all software capabilities. No inter-method accuracy ranking is implied.}\label{tab:positioning}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.20\linewidth}p{0.23\linewidth}p{0.24\linewidth}p{0.23\linewidth}}
+\toprule
+Family & Electronic reference & Excited-state description & Relation to this work\\
+\midrule
+sTDA/sTD-DFT; Xs variants\cite{tda,stdft2014,std22026} & Typically DFT orbitals; optional dedicated xTB reference & Simplified multi-root linear response & Spectroscopic reference family; different target from stationary OO energy\\[4pt]
+sTDA-xTB\cite{stdaxtb2016} & Dedicated xTB Hamiltonian and augmented basis & Simplified TDA spectrum & Essential future external control; distinct from our GFN2 TDA controls\\[4pt]
+TD-DFTB; hybrid extensions\cite{dftb2025,hybriddftb2025} & DFTB ground-state orbitals & Response with DFTB-specific interactions & Compact competing route to excited-state properties and dynamics\\[4pt]
+TDDFT+TB; TDDFT-aas\cite{tbgrad2023,aas2024} & DFT ground state & Approximate response; analytic gradients & Demonstrate that low-cost analytic excited-state forces are established\\[4pt]
+$\Delta$DFTB\cite{deltadftb2016,dftb2025} & State-specific DFTB configurations & Relaxed excited-state total energies and gradients & Closest state-specific semiempirical precedent\\[4pt]
+OMx/ODMx--MRCI\cite{omxexc2016,odmx2019} & Parameterized semiempirical Hamiltonian & Multireference CI states & Established configurational alternative; broader state mixing\\[4pt]
+MOUSE OO-DFT (this work) & GFN2 plus frozen projected DFT response & Constrained spin-pure ROKS composite & Analytic gradient and coupled nuclear Hessian; local validation\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,96 @@
+{
+  "host_required": "oracle.sns.it",
+  "cohort": "unused molecules C; qualified spectral profile frozen before predictions",
+  "cases": [
+    {
+      "name": "glyoxal",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_C/glyoxal",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_C_inputs/Glyoxal.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_C_inputs/glyoxal.xyz",
+      "metadata_sha256": "482d3c023c072c070fb53e929d79ff5152649adcba0d084ce272f1b1a336225b",
+      "geometry_sha256": "d4b612021f8ac8aea4c815ca621bf131dc26ab373086b20efbb0b43bfa44f09b",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A_u",
+          "family": "npi",
+          "tbe_ev": 2.877,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "pyrazine",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_C/pyrazine",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_C_inputs/Pyrazine.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_C_inputs/pyrazine.xyz",
+      "metadata_sha256": "d5074046677aec5bc2966e3fce94d22616a2b4fd3c596b1ab24cf16cea56a557",
+      "geometry_sha256": "36341ad7c94dd7267aae841ae19724f0faf48638baea01d8fb5424c9de8e080e",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "B_3u",
+          "family": "npi",
+          "tbe_ev": 4.144,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "tetrazine",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_C/tetrazine",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_C_inputs/Tetrazine.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_C_inputs/tetrazine.xyz",
+      "metadata_sha256": "6bcae9b7b5d122c0c49142f2c227e109ca368e448608769c6d3eaa25598c77f5",
+      "geometry_sha256": "ba6f4ef315ecc632a8f04013aa25ac8f93cb98d814e8ef05aaa315738b98bc1a",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "B_3u",
+          "family": "npi",
+          "tbe_ev": 2.462,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    }
+  ],
+  "model": "qualified-spectral-full-response",
+  "basis": "aug-cc-pVDZ Cartesian",
+  "xc": "PBE0",
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "profile_sha256": "a7725f3059ef6dc3fc9615909e0969673ab89d84b35d054483cb888b32418b3f",
+  "profile_source_sha256": "497716ecb259f1eb4d4a1d02046abc0227034fb0f049a6301761e87f4199f136",
+  "calibration_source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad",
+  "prior_carbonyl_diagnostic": "new profile worsens already exposed B carbonyls; no modification made before C",
+  "reference_root_rule": "first singlet DFT TDA root, fixed symmetry, compact projection >=0.7, no root substitution",
+  "minimum_projection": 0.7,
+  "minimum_leading_amplitude": 0.7,
+  "minimum_csf_overlap": 0.7,
+  "minimum_transition_overlap": 0.7,
+  "orbital_residual": 1e-09,
+  "saddle_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "maximum_iterations_per_attempt": 120,
+  "acceptance": {
+    "all_three_molecules_required": true,
+    "mae_below_native_roks": true,
+    "mae_below_raw_full_response": true,
+    "maximum_absolute_error_ev": 0.5
+  },
+  "profile_changes_after_predictions": false,
+  "nuclear_derivatives_supported": false,
+  "default_changed": false,
+  "source_repository": "https://github.com/pfloos/QUESTDB",
+  "source_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa"
+}

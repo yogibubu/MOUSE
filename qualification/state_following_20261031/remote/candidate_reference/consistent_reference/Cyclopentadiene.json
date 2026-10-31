@@ -1,0 +1,15 @@
+{
+  "molecule": "Cyclopentadiene",
+  "state": "B016",
+  "original_canonical_gap_hartree": 0.21251401139757425,
+  "selected_profile": "original_qualified_spectral",
+  "selected_model": "/home/enzo/MOUSE-publication-validation-20261030/results/qualified_spectral_response/Cyclopentadiene/model.npz",
+  "selected_model_sha256": "57aa84557a1bc840814040f9ea2d745f5bc6e673318e7dde83fc65123e80b3fb",
+  "prediction_source": "/home/enzo/MOUSE-state-following-20261031/recovery_rank_one/Cyclopentadiene/B016/result.json",
+  "prediction_sha256": "0c229e12773a243951e1387970e59ad49dc4f1f308648bec86945263bde09e5e",
+  "status": "matched",
+  "excitation_ev": 8.197277888879146,
+  "joint_residual": 2.1771174273099714e-11,
+  "reused_without_recalculation": true,
+  "response_unchanged": true
+}

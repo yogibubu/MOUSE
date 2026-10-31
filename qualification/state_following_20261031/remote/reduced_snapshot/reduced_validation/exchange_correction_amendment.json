@@ -1,0 +1,16 @@
+{
+  "host": "oracle.sns.it",
+  "date_utc": "2026-10-31T14:55:06.868553+00:00",
+  "reason": "Independent PySCF A validation requires antisymmetric nonlocal exchange correction; existing symmetrized matrices retained and reused",
+  "exchange_fraction": 0.225,
+  "prediction_labels_unopened": true,
+  "oo_predictions_unchanged": true,
+  "completed_static_molecules": [
+    "Diazirine",
+    "Furan",
+    "Cyclopentadiene",
+    "Benzoquinone",
+    "Aza-naphthalene",
+    "Bimane_Syn"
+  ]
+}

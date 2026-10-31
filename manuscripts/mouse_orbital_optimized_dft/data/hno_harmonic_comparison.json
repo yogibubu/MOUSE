@@ -1,0 +1,26 @@
+{
+  "host": "oracle.sns.it",
+  "doi": "10.1021/acs.jctc.1c00307",
+  "reference_method": "(T)+EOM/aug-cc-pVTZ",
+  "scope": "harmonic only; frequency-order correspondence provisional pending mode-vector confirmation; R0 excluded",
+  "rows": [
+    {
+      "label": "bend",
+      "prediction_cm": 1261.4091324768672,
+      "reference_cm": 990.2,
+      "error_cm": 271.2091324768671
+    },
+    {
+      "label": "N-O stretch",
+      "prediction_cm": 1592.5839875820404,
+      "reference_cm": 1458.8,
+      "error_cm": 133.78398758204048
+    },
+    {
+      "label": "N-H stretch",
+      "prediction_cm": 3301.0506036951997,
+      "reference_cm": 3140.5,
+      "error_cm": 160.5506036951997
+    }
+  ]
+}

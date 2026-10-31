@@ -1,0 +1,8 @@
+{
+  "driver": "b78a730950e6fd6c48e825ad254ffdd2ad5054293f11aa4486260a1582e58327",
+  "model_source": {
+    "nonlocal_response.py": "c88ced88b09923b449c89c10e197bfbd039cb0021af7a515ea91a1e80a8fa964",
+    "composite_roks.py": "053bd4d5780d6030303b4cc5c3da172cc76add6aa3f92ef22b813635bb8674be",
+    "deltascf.py": "28ca429724705e818960efb333499e982b883a3cc7bbf59f6dd4739a0d1d8c54"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "stage": "library_diazirine",
+      "returncode": 0
+    },
+    {
+      "stage": "library_cyclopentadiene",
+      "returncode": 0
+    },
+    {
+      "stage": "regression_tests",
+      "returncode": 0
+    },
+    {
+      "stage": "assignment_audit",
+      "returncode": 0
+    }
+  ],
+  "host": "oracle.sns.it",
+  "labels_read": false
+}

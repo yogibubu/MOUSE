@@ -1,0 +1,9 @@
+{
+  "host": "oracle.sns.it",
+  "stage": "reference",
+  "molecule": "Nitropyridine_N-oxide",
+  "updated_utc": "2026-10-31T14:56:50.521333+00:00",
+  "status": "running",
+  "pid": 620701,
+  "numerical_reference_labels_read": false
+}

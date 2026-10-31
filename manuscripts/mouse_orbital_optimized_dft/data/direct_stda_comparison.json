@@ -1,0 +1,2541 @@
+{
+  "host": "oracle.sns.it",
+  "matched": 19,
+  "requested": 19,
+  "mae_ev": 0.4540092825740107,
+  "rows": [
+    {
+      "molecule": "acetaldehyde",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 4.453697411334787,
+      "best_overlap": 0.9147713852651259,
+      "margin": 0.7291158951826093,
+      "projection_norm": 0.9801226098284637,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 4.453697411334787,
+          "overlap": 0.9147713852651259,
+          "projection_norm": 0.9801226098284637
+        },
+        {
+          "root": 2,
+          "excitation_ev": 6.6194425250988385,
+          "overlap": 2.4137127288883234e-08,
+          "projection_norm": 0.9819200837698434
+        },
+        {
+          "root": 3,
+          "excitation_ev": 7.805509249845656,
+          "overlap": 1.0767484142650213e-07,
+          "projection_norm": 0.9805802738137078
+        },
+        {
+          "root": 4,
+          "excitation_ev": 8.141422895031727,
+          "overlap": 0.18565549008251664,
+          "projection_norm": 0.9731721215862987
+        },
+        {
+          "root": 5,
+          "excitation_ev": 8.610874492151595,
+          "overlap": 2.689221818306985e-08,
+          "projection_norm": 0.9768378478453553
+        },
+        {
+          "root": 6,
+          "excitation_ev": 8.72335012589205,
+          "overlap": 0.079171261937769,
+          "projection_norm": 0.9820109122271022
+        },
+        {
+          "root": 7,
+          "excitation_ev": 8.929459490519735,
+          "overlap": 2.7954045830670317e-08,
+          "projection_norm": 0.9816952164058609
+        },
+        {
+          "root": 8,
+          "excitation_ev": 9.83375242694893,
+          "overlap": 1.2759543118673217e-07,
+          "projection_norm": 0.9802560930813479
+        }
+      ]
+    },
+    {
+      "molecule": "acetone",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 4.530698706715072,
+      "best_overlap": 0.9300416842218756,
+      "margin": 0.8172288744033873,
+      "projection_norm": 0.9792551570468979,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 4.530698706715072,
+          "overlap": 0.9300416842218756,
+          "projection_norm": 0.9792551570468979
+        },
+        {
+          "root": 2,
+          "excitation_ev": 6.709728602763283,
+          "overlap": 1.1541776058973127e-08,
+          "projection_norm": 0.9781969532911148
+        },
+        {
+          "root": 3,
+          "excitation_ev": 8.010994173344088,
+          "overlap": 5.8539895378546616e-09,
+          "projection_norm": 0.9774670803005775
+        },
+        {
+          "root": 4,
+          "excitation_ev": 8.388304210586883,
+          "overlap": 0.11281280981848826,
+          "projection_norm": 0.9695090309808387
+        },
+        {
+          "root": 5,
+          "excitation_ev": 8.626101124155221,
+          "overlap": 5.231629533646991e-07,
+          "projection_norm": 0.9722348927406029
+        },
+        {
+          "root": 6,
+          "excitation_ev": 8.708717118442465,
+          "overlap": 0.09072310417580516,
+          "projection_norm": 0.9875853928981903
+        },
+        {
+          "root": 7,
+          "excitation_ev": 8.836208533935112,
+          "overlap": 4.74020231443173e-07,
+          "projection_norm": 0.9770219791161139
+        },
+        {
+          "root": 8,
+          "excitation_ev": 9.030818450234538,
+          "overlap": 2.452953904159393e-10,
+          "projection_norm": 0.9797223254477555
+        },
+        {
+          "root": 9,
+          "excitation_ev": 9.037160177027696,
+          "overlap": 2.335682539937158e-08,
+          "projection_norm": 0.9843329689130162
+        },
+        {
+          "root": 10,
+          "excitation_ev": 9.272905355457066,
+          "overlap": 3.090946821253234e-08,
+          "projection_norm": 0.977324854401182
+        },
+        {
+          "root": 11,
+          "excitation_ev": 9.58840058667918,
+          "overlap": 4.231524960373605e-08,
+          "projection_norm": 0.9777374606299359
+        },
+        {
+          "root": 12,
+          "excitation_ev": 9.632878636256878,
+          "overlap": 9.471340612433692e-08,
+          "projection_norm": 0.9785377527135312
+        }
+      ]
+    },
+    {
+      "molecule": "acrolein",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 3.8259791826003284,
+      "best_overlap": 0.9176538987724271,
+      "margin": 0.8083574951542403,
+      "projection_norm": 0.9808820077007779,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 3.8259791826003284,
+          "overlap": 0.9176538987724271,
+          "projection_norm": 0.9808820077007779
+        },
+        {
+          "root": 2,
+          "excitation_ev": 6.088820026187669,
+          "overlap": 2.608187870863493e-08,
+          "projection_norm": 0.9599272082781739
+        },
+        {
+          "root": 3,
+          "excitation_ev": 7.132158971888148,
+          "overlap": 2.7009775573056762e-08,
+          "projection_norm": 0.9821324197648366
+        },
+        {
+          "root": 4,
+          "excitation_ev": 7.265883445198214,
+          "overlap": 0.08999479874691915,
+          "projection_norm": 0.9879162068296394
+        },
+        {
+          "root": 5,
+          "excitation_ev": 7.513895242486066,
+          "overlap": 0.00324704762220043,
+          "projection_norm": 0.9606323885177704
+        },
+        {
+          "root": 6,
+          "excitation_ev": 7.845734612044409,
+          "overlap": 0.10929640361818682,
+          "projection_norm": 0.9872539270708506
+        },
+        {
+          "root": 7,
+          "excitation_ev": 7.905148969048754,
+          "overlap": 4.1661216602423816e-08,
+          "projection_norm": 0.9819475414148614
+        },
+        {
+          "root": 8,
+          "excitation_ev": 8.287572935851353,
+          "overlap": 0.003083865946150052,
+          "projection_norm": 0.9592328786650633
+        },
+        {
+          "root": 9,
+          "excitation_ev": 8.497896061657716,
+          "overlap": 0.08752169017251334,
+          "projection_norm": 0.9615643379006518
+        },
+        {
+          "root": 10,
+          "excitation_ev": 8.641939221888007,
+          "overlap": 2.029861437884982e-07,
+          "projection_norm": 0.9793703591620544
+        },
+        {
+          "root": 11,
+          "excitation_ev": 8.683309663144552,
+          "overlap": 0.05622333272089238,
+          "projection_norm": 0.9852173414423117
+        },
+        {
+          "root": 12,
+          "excitation_ev": 8.924588849711588,
+          "overlap": 4.495590465691243e-08,
+          "projection_norm": 0.9424422615951378
+        },
+        {
+          "root": 13,
+          "excitation_ev": 9.04212002371145,
+          "overlap": 0.0007024673396949323,
+          "projection_norm": 0.9610406336779879
+        },
+        {
+          "root": 14,
+          "excitation_ev": 9.414739453822325,
+          "overlap": 4.680270447596155e-09,
+          "projection_norm": 0.966073410354467
+        },
+        {
+          "root": 15,
+          "excitation_ev": 9.691514469255926,
+          "overlap": 1.6421872794781843e-08,
+          "projection_norm": 0.9786008970718674
+        }
+      ]
+    },
+    {
+      "molecule": "cyanoformaldehyde",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 3.910856140352962,
+      "best_overlap": 0.9002388859744342,
+      "margin": 0.7446153769339012,
+      "projection_norm": 0.9770175046127261,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 3.910856140352962,
+          "overlap": 0.9002388859744342,
+          "projection_norm": 0.9770175046127261
+        },
+        {
+          "root": 2,
+          "excitation_ev": 6.884471559602502,
+          "overlap": 1.3349446951173063e-08,
+          "projection_norm": 0.9829288227932992
+        },
+        {
+          "root": 3,
+          "excitation_ev": 7.250624374694366,
+          "overlap": 0.11017460843811319,
+          "projection_norm": 0.9776473887601519
+        },
+        {
+          "root": 4,
+          "excitation_ev": 7.761774041923012,
+          "overlap": 0.1206051106919498,
+          "projection_norm": 0.9765023100146194
+        },
+        {
+          "root": 5,
+          "excitation_ev": 8.174925378059728,
+          "overlap": 3.374921944686139e-08,
+          "projection_norm": 0.9772934058779117
+        },
+        {
+          "root": 6,
+          "excitation_ev": 8.636598222826658,
+          "overlap": 0.15562350904053296,
+          "projection_norm": 0.9740213975077388
+        },
+        {
+          "root": 7,
+          "excitation_ev": 8.659220832880616,
+          "overlap": 4.3679125347796357e-07,
+          "projection_norm": 0.9806326685557143
+        },
+        {
+          "root": 8,
+          "excitation_ev": 8.951196529517667,
+          "overlap": 6.946950592264472e-08,
+          "projection_norm": 0.978516882367085
+        },
+        {
+          "root": 9,
+          "excitation_ev": 9.136916674831593,
+          "overlap": 1.2698401533230248e-07,
+          "projection_norm": 0.981685116928285
+        }
+      ]
+    },
+    {
+      "molecule": "cyclopentadienone",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 2,
+      "excitation_ev": 2.840185528069602,
+      "best_overlap": 0.9225072397192763,
+      "margin": 0.7242888366553974,
+      "projection_norm": 0.9800673037937884,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 1.8219852035964563,
+          "overlap": 3.4267908807751745e-08,
+          "projection_norm": 0.9649172792246297
+        },
+        {
+          "root": 2,
+          "excitation_ev": 2.840185528069602,
+          "overlap": 0.9225072397192763,
+          "projection_norm": 0.9800673037937884
+        },
+        {
+          "root": 3,
+          "excitation_ev": 5.277567196091661,
+          "overlap": 9.925492000278309e-09,
+          "projection_norm": 0.9582152112945913
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.010065835351703,
+          "overlap": 0.0012602317876173018,
+          "projection_norm": 0.9668276948823669
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.052638123041432,
+          "overlap": 4.952117322606053e-09,
+          "projection_norm": 0.9877730162044971
+        },
+        {
+          "root": 6,
+          "excitation_ev": 6.989471740967082,
+          "overlap": 1.3901022402125687e-08,
+          "projection_norm": 0.9549571148559604
+        },
+        {
+          "root": 7,
+          "excitation_ev": 7.1493238042799625,
+          "overlap": 0.05056163689382714,
+          "projection_norm": 0.9850955215172609
+        },
+        {
+          "root": 8,
+          "excitation_ev": 7.188979870799843,
+          "overlap": 8.090893786082653e-07,
+          "projection_norm": 0.9685335956172244
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.512083552248736,
+          "overlap": 0.0032901439574445357,
+          "projection_norm": 0.9675939206962769
+        },
+        {
+          "root": 10,
+          "excitation_ev": 7.540063380614155,
+          "overlap": 1.2165922420133696e-07,
+          "projection_norm": 0.9785124509138458
+        },
+        {
+          "root": 11,
+          "excitation_ev": 7.5919049697419645,
+          "overlap": 4.687501693268853e-08,
+          "projection_norm": 0.9836822846470453
+        },
+        {
+          "root": 12,
+          "excitation_ev": 7.747068047847931,
+          "overlap": 0.07697204484371481,
+          "projection_norm": 0.9863183678581875
+        },
+        {
+          "root": 13,
+          "excitation_ev": 7.907400200964078,
+          "overlap": 3.0675339705678075e-07,
+          "projection_norm": 0.9610559740940182
+        },
+        {
+          "root": 14,
+          "excitation_ev": 8.373174894083922,
+          "overlap": 3.128501176416034e-07,
+          "projection_norm": 0.9687187418073487
+        },
+        {
+          "root": 15,
+          "excitation_ev": 8.405809647231017,
+          "overlap": 0.19821840306387878,
+          "projection_norm": 0.984603945155429
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.542604424586981,
+          "overlap": 2.109804765607651e-07,
+          "projection_norm": 0.9673708296240576
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.605051781361967,
+          "overlap": 3.2120029042899696e-08,
+          "projection_norm": 0.9889799662370622
+        },
+        {
+          "root": 18,
+          "excitation_ev": 8.769617158756922,
+          "overlap": 0.004300485089486722,
+          "projection_norm": 0.9654082477977425
+        },
+        {
+          "root": 19,
+          "excitation_ev": 8.79536521830715,
+          "overlap": 2.1766471819325903e-08,
+          "projection_norm": 0.9837575366475809
+        },
+        {
+          "root": 20,
+          "excitation_ev": 9.008396958881947,
+          "overlap": 6.796585617155909e-09,
+          "projection_norm": 0.9821068405617212
+        },
+        {
+          "root": 21,
+          "excitation_ev": 9.033021024399527,
+          "overlap": 3.234515062560754e-08,
+          "projection_norm": 0.9567419493411112
+        },
+        {
+          "root": 22,
+          "excitation_ev": 9.172621732024583,
+          "overlap": 2.908697792714952e-08,
+          "projection_norm": 0.9836927312119306
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.311687204395998,
+          "overlap": 1.7836414823901954e-08,
+          "projection_norm": 0.9515116932861285
+        },
+        {
+          "root": 24,
+          "excitation_ev": 9.406728766192806,
+          "overlap": 0.002747347167334168,
+          "projection_norm": 0.9601332102525896
+        },
+        {
+          "root": 25,
+          "excitation_ev": 9.768304508903523,
+          "overlap": 1.2970418939336245e-07,
+          "projection_norm": 0.9771634250947426
+        }
+      ]
+    },
+    {
+      "molecule": "cyclopropenone",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 3.8383812321972326,
+      "best_overlap": 0.9021603887863918,
+      "margin": 0.902159835683016,
+      "projection_norm": 0.988070136781667,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 3.8383812321972326,
+          "overlap": 0.9021603887863918,
+          "projection_norm": 0.988070136781667
+        },
+        {
+          "root": 2,
+          "excitation_ev": 5.254038740919037,
+          "overlap": 2.931355103270894e-07,
+          "projection_norm": 0.9830668842878537
+        },
+        {
+          "root": 3,
+          "excitation_ev": 5.390607259735957,
+          "overlap": 5.531033757792395e-07,
+          "projection_norm": 0.9834445727340514
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.944994502351892,
+          "overlap": 1.0463857354024837e-07,
+          "projection_norm": 0.9845431026496297
+        },
+        {
+          "root": 5,
+          "excitation_ev": 7.227743878563654,
+          "overlap": 3.170765193396304e-09,
+          "projection_norm": 0.9689127929629213
+        },
+        {
+          "root": 6,
+          "excitation_ev": 7.236891535625909,
+          "overlap": 1.2153422274795342e-08,
+          "projection_norm": 0.9778195668508058
+        },
+        {
+          "root": 7,
+          "excitation_ev": 7.561071364319624,
+          "overlap": 2.2258607273391532e-08,
+          "projection_norm": 0.981114019480194
+        },
+        {
+          "root": 8,
+          "excitation_ev": 7.771585877277287,
+          "overlap": 4.641146866300007e-09,
+          "projection_norm": 0.9721289089540195
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.791739917464446,
+          "overlap": 6.065901086839083e-08,
+          "projection_norm": 0.9757306589696891
+        },
+        {
+          "root": 10,
+          "excitation_ev": 8.281342310921454,
+          "overlap": 1.980508841737119e-08,
+          "projection_norm": 0.9878028347806913
+        },
+        {
+          "root": 11,
+          "excitation_ev": 8.378231245305832,
+          "overlap": 1.228195872214447e-07,
+          "projection_norm": 0.9721995525050486
+        },
+        {
+          "root": 12,
+          "excitation_ev": 9.007672769364518,
+          "overlap": 5.859478247899062e-08,
+          "projection_norm": 0.9815400103518714
+        },
+        {
+          "root": 13,
+          "excitation_ev": 9.286651980888122,
+          "overlap": 1.2651943241802966e-07,
+          "projection_norm": 0.9730211883669785
+        },
+        {
+          "root": 14,
+          "excitation_ev": 9.63981155471656,
+          "overlap": 5.1618567928075635e-08,
+          "projection_norm": 0.9649972516720111
+        },
+        {
+          "root": 15,
+          "excitation_ev": 9.865317520551248,
+          "overlap": 4.929436005679768e-08,
+          "projection_norm": 0.9835795206374132
+        },
+        {
+          "root": 16,
+          "excitation_ev": 9.887669269128365,
+          "overlap": 2.637621567116878e-08,
+          "projection_norm": 0.9702383031168597
+        }
+      ]
+    },
+    {
+      "molecule": "formamide",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 6.039374020301161,
+      "best_overlap": 0.8526509544152961,
+      "margin": 0.47182763354354385,
+      "projection_norm": 0.9794965789778588,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 6.039374020301161,
+          "overlap": 0.8526509544152961,
+          "projection_norm": 0.9794965789778588
+        },
+        {
+          "root": 2,
+          "excitation_ev": 6.3024624215291185,
+          "overlap": 0.026009518979593606,
+          "projection_norm": 0.9732594834195382
+        },
+        {
+          "root": 3,
+          "excitation_ev": 6.367821944661425,
+          "overlap": 7.669721506800175e-08,
+          "projection_norm": 0.9778036843575775
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.903223445617618,
+          "overlap": 7.716255982115952e-08,
+          "projection_norm": 0.9720183823665594
+        },
+        {
+          "root": 5,
+          "excitation_ev": 7.021948356425605,
+          "overlap": 0.004069039522853237,
+          "projection_norm": 0.9731093186820748
+        },
+        {
+          "root": 6,
+          "excitation_ev": 7.4580491205060016,
+          "overlap": 5.756345870519348e-08,
+          "projection_norm": 0.9773559948817353
+        },
+        {
+          "root": 7,
+          "excitation_ev": 8.401980282279956,
+          "overlap": 0.0027886328320185284,
+          "projection_norm": 0.9734338914666071
+        },
+        {
+          "root": 8,
+          "excitation_ev": 8.55464316298141,
+          "overlap": 0.3808233208717523,
+          "projection_norm": 0.9658071649891352
+        },
+        {
+          "root": 9,
+          "excitation_ev": 8.641704853723912,
+          "overlap": 8.4745152210558e-09,
+          "projection_norm": 0.9793381927780122
+        },
+        {
+          "root": 10,
+          "excitation_ev": 8.897110196174582,
+          "overlap": 1.1127711265147949e-07,
+          "projection_norm": 0.9645277771240384
+        },
+        {
+          "root": 11,
+          "excitation_ev": 9.901174227732774,
+          "overlap": 0.0069791717942957274,
+          "projection_norm": 0.9645065431197244
+        }
+      ]
+    },
+    {
+      "molecule": "glyoxal",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 2.007417457220922,
+      "best_overlap": 0.9244161740909442,
+      "margin": 0.7390997869885518,
+      "projection_norm": 0.9771961333822029,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 2.007417457220922,
+          "overlap": 0.9244161740909442,
+          "projection_norm": 0.9771961333822029
+        },
+        {
+          "root": 2,
+          "excitation_ev": 4.82302676656077,
+          "overlap": 1.6026672125203884e-08,
+          "projection_norm": 0.979214034400075
+        },
+        {
+          "root": 3,
+          "excitation_ev": 6.239615260238911,
+          "overlap": 1.41528978886665e-07,
+          "projection_norm": 0.9844094166153762
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.5260034252129335,
+          "overlap": 3.944884132584074e-08,
+          "projection_norm": 0.9824767359060022
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.756105926528905,
+          "overlap": 1.1438997695379295e-08,
+          "projection_norm": 0.9848445558864093
+        },
+        {
+          "root": 6,
+          "excitation_ev": 7.508096860571604,
+          "overlap": 0.18531638710239243,
+          "projection_norm": 0.9742800661889324
+        },
+        {
+          "root": 7,
+          "excitation_ev": 8.148184700402744,
+          "overlap": 3.027071084520626e-08,
+          "projection_norm": 0.980179984236295
+        },
+        {
+          "root": 8,
+          "excitation_ev": 8.577011941771142,
+          "overlap": 0.10690714457579237,
+          "projection_norm": 0.9750762477720116
+        },
+        {
+          "root": 9,
+          "excitation_ev": 9.131804367196802,
+          "overlap": 7.463573333549687e-09,
+          "projection_norm": 0.9844429977256087
+        },
+        {
+          "root": 10,
+          "excitation_ev": 9.220476629475261,
+          "overlap": 0.06097334260378537,
+          "projection_norm": 0.9833013290314403
+        },
+        {
+          "root": 11,
+          "excitation_ev": 9.497022953482308,
+          "overlap": 1.7782396044511947e-07,
+          "projection_norm": 0.9821501073199325
+        },
+        {
+          "root": 12,
+          "excitation_ev": 9.927530509162143,
+          "overlap": 1.4511002586646054e-07,
+          "projection_norm": 0.9797776066279126
+        },
+        {
+          "root": 13,
+          "excitation_ev": 9.927835431064215,
+          "overlap": 2.783882634412469e-10,
+          "projection_norm": 0.9752141215271483
+        }
+      ]
+    },
+    {
+      "molecule": "imidazole",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 8,
+      "excitation_ev": 7.277268547813194,
+      "best_overlap": 0.7394235281761488,
+      "margin": 0.19272322228219874,
+      "projection_norm": 0.9799496573128836,
+      "reference_root": 8,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 5.303044394165046,
+          "overlap": 1.9127223047708672e-08,
+          "projection_norm": 0.9674696583044419
+        },
+        {
+          "root": 2,
+          "excitation_ev": 6.319719703646565,
+          "overlap": 8.958912326973717e-09,
+          "projection_norm": 0.9662223839297602
+        },
+        {
+          "root": 3,
+          "excitation_ev": 6.441587905125943,
+          "overlap": 3.796587907406172e-08,
+          "projection_norm": 0.968296465457014
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.786757876350007,
+          "overlap": 4.591930417379898e-08,
+          "projection_norm": 0.9666023392614156
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.911209804371969,
+          "overlap": 4.7363497692902465e-09,
+          "projection_norm": 0.951167195026281
+        },
+        {
+          "root": 6,
+          "excitation_ev": 7.183059844509552,
+          "overlap": 4.1771387481033e-06,
+          "projection_norm": 0.9757063739280767
+        },
+        {
+          "root": 7,
+          "excitation_ev": 7.276526517120645,
+          "overlap": 2.7638805008342218e-05,
+          "projection_norm": 0.9726888371839559
+        },
+        {
+          "root": 8,
+          "excitation_ev": 7.277268547813194,
+          "overlap": 0.7394235281761488,
+          "projection_norm": 0.9799496573128836
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.35132969862972,
+          "overlap": 2.0258944143911766e-08,
+          "projection_norm": 0.9757613465260294
+        },
+        {
+          "root": 10,
+          "excitation_ev": 7.841356225477114,
+          "overlap": 4.8631901154063626e-08,
+          "projection_norm": 0.9653195782728938
+        },
+        {
+          "root": 11,
+          "excitation_ev": 8.245305570063705,
+          "overlap": 6.310021722883206e-08,
+          "projection_norm": 0.9674572793559966
+        },
+        {
+          "root": 12,
+          "excitation_ev": 8.285843152827082,
+          "overlap": 0.01080823744716383,
+          "projection_norm": 0.9800106697512847
+        },
+        {
+          "root": 13,
+          "excitation_ev": 8.404220160720202,
+          "overlap": 1.0193537402105312e-07,
+          "projection_norm": 0.9765375159170868
+        },
+        {
+          "root": 14,
+          "excitation_ev": 8.44366862083867,
+          "overlap": 2.9680173020075515e-08,
+          "projection_norm": 0.9786826099899878
+        },
+        {
+          "root": 15,
+          "excitation_ev": 8.511987346153614,
+          "overlap": 3.967290776788529e-08,
+          "projection_norm": 0.9642930926399881
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.689204549597171,
+          "overlap": 7.229373803986897e-08,
+          "projection_norm": 0.9741516241289929
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.73769118683965,
+          "overlap": 9.744852214513284e-08,
+          "projection_norm": 0.9686178099362492
+        },
+        {
+          "root": 18,
+          "excitation_ev": 8.938684189020016,
+          "overlap": 1.8183013902796308e-07,
+          "projection_norm": 0.9747418664257068
+        },
+        {
+          "root": 19,
+          "excitation_ev": 9.088408141601466,
+          "overlap": 7.523268055735858e-07,
+          "projection_norm": 0.9530478582141596
+        },
+        {
+          "root": 20,
+          "excitation_ev": 9.242620771650964,
+          "overlap": 0.54670030589395,
+          "projection_norm": 0.9555672419422134
+        },
+        {
+          "root": 21,
+          "excitation_ev": 9.57949297451856,
+          "overlap": 2.195095536524523e-07,
+          "projection_norm": 0.9713448644297145
+        },
+        {
+          "root": 22,
+          "excitation_ev": 9.838978269334493,
+          "overlap": 7.266479564986393e-08,
+          "projection_norm": 0.9755889707059318
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.863522860526533,
+          "overlap": 1.093849299708308e-07,
+          "projection_norm": 0.973878930098141
+        }
+      ]
+    },
+    {
+      "molecule": "maleimide",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 2,
+      "excitation_ev": 3.6540510766177667,
+      "best_overlap": 0.9306333784734018,
+      "margin": 0.7733446073437054,
+      "projection_norm": 0.9818971640409293,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 3.4419535648493294,
+          "overlap": 2.0973704809906098e-08,
+          "projection_norm": 0.9714436054123502
+        },
+        {
+          "root": 2,
+          "excitation_ev": 3.6540510766177667,
+          "overlap": 0.9306333784734018,
+          "projection_norm": 0.9818971640409293
+        },
+        {
+          "root": 3,
+          "excitation_ev": 4.735575002853114,
+          "overlap": 1.3128577312558984e-07,
+          "projection_norm": 0.9777326406649313
+        },
+        {
+          "root": 4,
+          "excitation_ev": 5.8416086488927625,
+          "overlap": 3.663975358221759e-09,
+          "projection_norm": 0.9668474283747688
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.966735596162352,
+          "overlap": 0.0005105801053173689,
+          "projection_norm": 0.9700116282355898
+        },
+        {
+          "root": 6,
+          "excitation_ev": 7.195444863893839,
+          "overlap": 6.197743324468494e-09,
+          "projection_norm": 0.9650522253881245
+        },
+        {
+          "root": 7,
+          "excitation_ev": 7.364854931296766,
+          "overlap": 1.1083500115615474e-08,
+          "projection_norm": 0.9814513902700289
+        },
+        {
+          "root": 8,
+          "excitation_ev": 7.593050048799756,
+          "overlap": 2.1428593382674136e-07,
+          "projection_norm": 0.9810592925980376
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.802628711026052,
+          "overlap": 0.0007356398193565509,
+          "projection_norm": 0.9713013779268117
+        },
+        {
+          "root": 10,
+          "excitation_ev": 7.822312392960009,
+          "overlap": 0.08839579359512235,
+          "projection_norm": 0.9862244383091305
+        },
+        {
+          "root": 11,
+          "excitation_ev": 8.374834123370213,
+          "overlap": 1.3598421891913082e-06,
+          "projection_norm": 0.9749342522598371
+        },
+        {
+          "root": 12,
+          "excitation_ev": 8.383550348379533,
+          "overlap": 7.108033102095138e-07,
+          "projection_norm": 0.9832251053782445
+        },
+        {
+          "root": 13,
+          "excitation_ev": 8.423452947501088,
+          "overlap": 0.15728877112969647,
+          "projection_norm": 0.9850195475105353
+        },
+        {
+          "root": 14,
+          "excitation_ev": 8.452331322322625,
+          "overlap": 3.1523252052303795e-07,
+          "projection_norm": 0.9860822964609347
+        },
+        {
+          "root": 15,
+          "excitation_ev": 8.491298070712812,
+          "overlap": 8.9380084528938e-08,
+          "projection_norm": 0.9629304521511637
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.717527415102426,
+          "overlap": 0.001751590032907214,
+          "projection_norm": 0.969471766172062
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.780870074483506,
+          "overlap": 2.0009137733846842e-07,
+          "projection_norm": 0.9790425885433854
+        },
+        {
+          "root": 18,
+          "excitation_ev": 8.841257586494475,
+          "overlap": 2.912921501393815e-07,
+          "projection_norm": 0.9703867918072833
+        },
+        {
+          "root": 19,
+          "excitation_ev": 9.183227499671762,
+          "overlap": 3.182754465397407e-08,
+          "projection_norm": 0.9672791119606279
+        },
+        {
+          "root": 20,
+          "excitation_ev": 9.223968634024029,
+          "overlap": 0.008559419862800897,
+          "projection_norm": 0.9791980407539133
+        },
+        {
+          "root": 21,
+          "excitation_ev": 9.309053198178074,
+          "overlap": 1.5410674132344547e-07,
+          "projection_norm": 0.9740029233432986
+        },
+        {
+          "root": 22,
+          "excitation_ev": 9.452621134380129,
+          "overlap": 7.386902667819986e-08,
+          "projection_norm": 0.970387609114584
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.547395078550116,
+          "overlap": 0.0027897894982932547,
+          "projection_norm": 0.9683659279765892
+        },
+        {
+          "root": 24,
+          "excitation_ev": 9.58603906386311,
+          "overlap": 1.9855603839420786e-08,
+          "projection_norm": 0.9774827620855626
+        },
+        {
+          "root": 25,
+          "excitation_ev": 9.683065861873429,
+          "overlap": 8.854087204119848e-08,
+          "projection_norm": 0.9733914441487371
+        },
+        {
+          "root": 26,
+          "excitation_ev": 9.93193565749212,
+          "overlap": 2.384894916418004e-07,
+          "projection_norm": 0.9797547519051276
+        },
+        {
+          "root": 27,
+          "excitation_ev": 9.974546871382111,
+          "overlap": 9.653287875747377e-08,
+          "projection_norm": 0.9739130170396163
+        },
+        {
+          "root": 28,
+          "excitation_ev": 9.981221092802533,
+          "overlap": 2.065478302724817e-08,
+          "projection_norm": 0.9782689014000545
+        }
+      ]
+    },
+    {
+      "molecule": "nitrosomethane",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 0.49223893393276114,
+      "best_overlap": 0.9495741830647306,
+      "margin": 0.8416737938780483,
+      "projection_norm": 0.9671552463859809,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 0.49223893393276114,
+          "overlap": 0.9495741830647306,
+          "projection_norm": 0.9671552463859809
+        },
+        {
+          "root": 2,
+          "excitation_ev": 5.384435835068959,
+          "overlap": 0.0974388702891945,
+          "projection_norm": 0.9794012443922067
+        },
+        {
+          "root": 3,
+          "excitation_ev": 5.891485275869699,
+          "overlap": 2.043756593051847e-10,
+          "projection_norm": 0.9695760630794308
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.578131284105193,
+          "overlap": 5.977289593117305e-09,
+          "projection_norm": 0.9746817933216211
+        },
+        {
+          "root": 5,
+          "excitation_ev": 7.398843991828081,
+          "overlap": 0.01121087439593558,
+          "projection_norm": 0.9663080130120025
+        },
+        {
+          "root": 6,
+          "excitation_ev": 7.447556887609596,
+          "overlap": 1.6540060017539985e-08,
+          "projection_norm": 0.96770366768858
+        },
+        {
+          "root": 7,
+          "excitation_ev": 7.55038368945939,
+          "overlap": 3.484333153765343e-08,
+          "projection_norm": 0.9678184918777885
+        },
+        {
+          "root": 8,
+          "excitation_ev": 8.290873553248819,
+          "overlap": 0.040015946449175666,
+          "projection_norm": 0.9752782708050457
+        },
+        {
+          "root": 9,
+          "excitation_ev": 9.006376040318193,
+          "overlap": 2.0486602179012993e-09,
+          "projection_norm": 0.9712471778213695
+        },
+        {
+          "root": 10,
+          "excitation_ev": 9.587602599573751,
+          "overlap": 0.10790038918668227,
+          "projection_norm": 0.9775107700717691
+        },
+        {
+          "root": 11,
+          "excitation_ev": 9.867905301906358,
+          "overlap": 0.006929745966589361,
+          "projection_norm": 0.9708885124041725
+        },
+        {
+          "root": 12,
+          "excitation_ev": 9.942809042766118,
+          "overlap": 7.139799830170489e-08,
+          "projection_norm": 0.9808176377845376
+        }
+      ]
+    },
+    {
+      "molecule": "nitroxyl",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 0.23671149093985422,
+      "best_overlap": 0.9548025228548941,
+      "margin": 0.8591858225738291,
+      "projection_norm": 0.9701657430506352,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 0.23671149093985422,
+          "overlap": 0.9548025228548941,
+          "projection_norm": 0.9701657430506352
+        },
+        {
+          "root": 2,
+          "excitation_ev": 5.6375607509541075,
+          "overlap": 5.166033837888393e-09,
+          "projection_norm": 0.9748187148210322
+        },
+        {
+          "root": 3,
+          "excitation_ev": 6.89646893890915,
+          "overlap": 0.09561670028106489,
+          "projection_norm": 0.9751959468714037
+        },
+        {
+          "root": 4,
+          "excitation_ev": 7.324782030049049,
+          "overlap": 1.1879847822090641e-08,
+          "projection_norm": 0.9708742313751347
+        },
+        {
+          "root": 5,
+          "excitation_ev": 7.530985466327373,
+          "overlap": 1.4821749826838163e-08,
+          "projection_norm": 0.9686145071309432
+        },
+        {
+          "root": 6,
+          "excitation_ev": 7.543153147760182,
+          "overlap": 0.04360633618326242,
+          "projection_norm": 0.9665153030760076
+        }
+      ]
+    },
+    {
+      "molecule": "pyranone",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 4.709509046000721,
+      "best_overlap": 0.9131379076281446,
+      "margin": 0.7047881011384962,
+      "projection_norm": 0.9780054322451824,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 4.709509046000721,
+          "overlap": 0.9131379076281446,
+          "projection_norm": 0.9780054322451824
+        },
+        {
+          "root": 2,
+          "excitation_ev": 5.385554963326575,
+          "overlap": 8.338928110956364e-09,
+          "projection_norm": 0.9577929173388894
+        },
+        {
+          "root": 3,
+          "excitation_ev": 5.826285512350981,
+          "overlap": 1.603911671918132e-08,
+          "projection_norm": 0.9868158362191712
+        },
+        {
+          "root": 4,
+          "excitation_ev": 5.843351407317124,
+          "overlap": 1.9286153765363773e-07,
+          "projection_norm": 0.9643299587839123
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.163522648346059,
+          "overlap": 1.2151801775838976e-07,
+          "projection_norm": 0.9679664272109912
+        },
+        {
+          "root": 6,
+          "excitation_ev": 6.307320086937178,
+          "overlap": 4.722702984548419e-08,
+          "projection_norm": 0.9578259030937504
+        },
+        {
+          "root": 7,
+          "excitation_ev": 6.838675695953338,
+          "overlap": 5.667936404057701e-09,
+          "projection_norm": 0.9810575774011798
+        },
+        {
+          "root": 8,
+          "excitation_ev": 6.906955495068018,
+          "overlap": 0.0010185570743503544,
+          "projection_norm": 0.9643947215503353
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.657296120411985,
+          "overlap": 2.2187294057963924e-08,
+          "projection_norm": 0.9819657212735204
+        },
+        {
+          "root": 10,
+          "excitation_ev": 7.716867804142402,
+          "overlap": 0.0010385630765524054,
+          "projection_norm": 0.9674654733790258
+        },
+        {
+          "root": 11,
+          "excitation_ev": 7.799956589570366,
+          "overlap": 1.99298322239017e-08,
+          "projection_norm": 0.9600461171824112
+        },
+        {
+          "root": 12,
+          "excitation_ev": 8.003816344207742,
+          "overlap": 3.7171912095303854e-09,
+          "projection_norm": 0.9488566488243276
+        },
+        {
+          "root": 13,
+          "excitation_ev": 8.078530319841208,
+          "overlap": 0.008014894529929558,
+          "projection_norm": 0.9701221842572431
+        },
+        {
+          "root": 14,
+          "excitation_ev": 8.134973310225332,
+          "overlap": 1.1026800506683415e-07,
+          "projection_norm": 0.9586622219171413
+        },
+        {
+          "root": 15,
+          "excitation_ev": 8.299315672931272,
+          "overlap": 2.1819735856952793e-08,
+          "projection_norm": 0.9718077386858693
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.54396765255876,
+          "overlap": 1.321018018792551e-07,
+          "projection_norm": 0.9820513363641318
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.631584852617541,
+          "overlap": 8.924027404502307e-08,
+          "projection_norm": 0.980666076483312
+        },
+        {
+          "root": 18,
+          "excitation_ev": 8.731898481662727,
+          "overlap": 7.767867792046268e-08,
+          "projection_norm": 0.9472331730556436
+        },
+        {
+          "root": 19,
+          "excitation_ev": 8.761920313617042,
+          "overlap": 0.002149654532531534,
+          "projection_norm": 0.9638376085352508
+        },
+        {
+          "root": 20,
+          "excitation_ev": 8.965377830851677,
+          "overlap": 0.06214296503459281,
+          "projection_norm": 0.9719466565667849
+        },
+        {
+          "root": 21,
+          "excitation_ev": 9.142396348481382,
+          "overlap": 5.873278361708813e-08,
+          "projection_norm": 0.9607434911991077
+        },
+        {
+          "root": 22,
+          "excitation_ev": 9.19709090370361,
+          "overlap": 0.04127473591068769,
+          "projection_norm": 0.9897155013583928
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.3948992561248,
+          "overlap": 2.742242399947217e-08,
+          "projection_norm": 0.9813862949361786
+        },
+        {
+          "root": 24,
+          "excitation_ev": 9.410322141054762,
+          "overlap": 1.6193738445882993e-07,
+          "projection_norm": 0.9548184448950451
+        },
+        {
+          "root": 25,
+          "excitation_ev": 9.539746891160569,
+          "overlap": 0.0042881572783151365,
+          "projection_norm": 0.9665420275481829
+        },
+        {
+          "root": 26,
+          "excitation_ev": 9.594039208980055,
+          "overlap": 0.20834980648964838,
+          "projection_norm": 0.9824711959721374
+        },
+        {
+          "root": 27,
+          "excitation_ev": 9.598742791512064,
+          "overlap": 1.2832659534031677e-05,
+          "projection_norm": 0.9469765969227899
+        },
+        {
+          "root": 28,
+          "excitation_ev": 9.678614488680633,
+          "overlap": 2.7586367578096737e-07,
+          "projection_norm": 0.969372061137227
+        },
+        {
+          "root": 29,
+          "excitation_ev": 9.690312622822745,
+          "overlap": 3.082466235116142e-07,
+          "projection_norm": 0.9785197435449031
+        },
+        {
+          "root": 30,
+          "excitation_ev": 9.931468543088942,
+          "overlap": 1.7960684283725634e-07,
+          "projection_norm": 0.9746237289678681
+        }
+      ]
+    },
+    {
+      "molecule": "pyrazine",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 4.21334069461778,
+      "best_overlap": 0.9096370553620559,
+      "margin": 0.676389854647589,
+      "projection_norm": 0.9816257943844283,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 4.21334069461778,
+          "overlap": 0.9096370553620559,
+          "projection_norm": 0.9816257943844283
+        },
+        {
+          "root": 2,
+          "excitation_ev": 4.772676131999358,
+          "overlap": 3.123112979808884e-08,
+          "projection_norm": 0.9858624338625478
+        },
+        {
+          "root": 3,
+          "excitation_ev": 5.456857625180577,
+          "overlap": 6.472940084624007e-07,
+          "projection_norm": 0.9737916606379248
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.304408326061113,
+          "overlap": 3.864671838906936e-08,
+          "projection_norm": 0.9802264074616486
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.425175240457996,
+          "overlap": 1.3438058205728538e-08,
+          "projection_norm": 0.9802000419246069
+        },
+        {
+          "root": 6,
+          "excitation_ev": 6.549257775058693,
+          "overlap": 1.2036581677989116e-08,
+          "projection_norm": 0.9764639749828297
+        },
+        {
+          "root": 7,
+          "excitation_ev": 7.008047648118502,
+          "overlap": 5.2894536386619655e-08,
+          "projection_norm": 0.9705775078543061
+        },
+        {
+          "root": 8,
+          "excitation_ev": 7.0519142319670385,
+          "overlap": 5.302532146671301e-08,
+          "projection_norm": 0.9844422112417724
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.13790058642722,
+          "overlap": 9.51911834486088e-08,
+          "projection_norm": 0.9830571378244728
+        },
+        {
+          "root": 10,
+          "excitation_ev": 7.826047686260428,
+          "overlap": 0.0015609366416651192,
+          "projection_norm": 0.9732255625492876
+        },
+        {
+          "root": 11,
+          "excitation_ev": 7.9620460984359696,
+          "overlap": 5.456835078769661e-10,
+          "projection_norm": 0.9793463902016339
+        },
+        {
+          "root": 12,
+          "excitation_ev": 8.117389210218164,
+          "overlap": 0.23324720071446678,
+          "projection_norm": 0.9592905115507678
+        },
+        {
+          "root": 13,
+          "excitation_ev": 8.284092284777666,
+          "overlap": 9.249199405975744e-09,
+          "projection_norm": 0.9892429526049431
+        },
+        {
+          "root": 14,
+          "excitation_ev": 8.70879010506796,
+          "overlap": 5.270338901763349e-08,
+          "projection_norm": 0.971688362445702
+        },
+        {
+          "root": 15,
+          "excitation_ev": 8.717932896355183,
+          "overlap": 1.1189978131175308e-08,
+          "projection_norm": 0.9798221032663559
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.762414189782902,
+          "overlap": 1.6610302493179217e-07,
+          "projection_norm": 0.983043363856456
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.803432673312056,
+          "overlap": 0.0052095581278347345,
+          "projection_norm": 0.9935082651275609
+        },
+        {
+          "root": 18,
+          "excitation_ev": 8.943583213515854,
+          "overlap": 4.201213164708888e-08,
+          "projection_norm": 0.9704572287708935
+        },
+        {
+          "root": 19,
+          "excitation_ev": 8.945743617630555,
+          "overlap": 1.5202167764288628e-07,
+          "projection_norm": 0.9609437822435821
+        },
+        {
+          "root": 20,
+          "excitation_ev": 8.945967443282083,
+          "overlap": 2.7016634664173785e-09,
+          "projection_norm": 0.9803148378378632
+        },
+        {
+          "root": 21,
+          "excitation_ev": 9.092055850951292,
+          "overlap": 2.9726686772546565e-08,
+          "projection_norm": 0.9835572355577453
+        },
+        {
+          "root": 22,
+          "excitation_ev": 9.212024778242743,
+          "overlap": 3.870764076753818e-08,
+          "projection_norm": 0.9675104182759622
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.263581719531116,
+          "overlap": 1.1338226943267148e-07,
+          "projection_norm": 0.9756196789473127
+        },
+        {
+          "root": 24,
+          "excitation_ev": 9.442276496659728,
+          "overlap": 2.5644861949800246e-08,
+          "projection_norm": 0.9782569086468673
+        },
+        {
+          "root": 25,
+          "excitation_ev": 9.593225813587017,
+          "overlap": 1.0824464018814076e-08,
+          "projection_norm": 0.9738769031580069
+        },
+        {
+          "root": 26,
+          "excitation_ev": 9.638730541696702,
+          "overlap": 2.1319529880713764e-08,
+          "projection_norm": 0.9819299128288408
+        },
+        {
+          "root": 27,
+          "excitation_ev": 9.663403264964613,
+          "overlap": 8.302458786067126e-09,
+          "projection_norm": 0.9865930981069708
+        }
+      ]
+    },
+    {
+      "molecule": "pyridazine",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 3.8098426506655123,
+      "best_overlap": 0.9213650908767624,
+      "margin": 0.8122121360302896,
+      "projection_norm": 0.9810615068983257,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 3.8098426506655123,
+          "overlap": 0.9213650908767624,
+          "projection_norm": 0.9810615068983257
+        },
+        {
+          "root": 2,
+          "excitation_ev": 4.729757157838521,
+          "overlap": 6.335767471406432e-08,
+          "projection_norm": 0.9827394488009988
+        },
+        {
+          "root": 3,
+          "excitation_ev": 5.634050905230223,
+          "overlap": 6.2422705255567475e-09,
+          "projection_norm": 0.9744699093653104
+        },
+        {
+          "root": 4,
+          "excitation_ev": 5.873174553457587,
+          "overlap": 2.4227080232293265e-08,
+          "projection_norm": 0.9837317153718723
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.40275009977413,
+          "overlap": 2.5782968209535513e-08,
+          "projection_norm": 0.9778306200648872
+        },
+        {
+          "root": 6,
+          "excitation_ev": 6.547899412861948,
+          "overlap": 4.8322075541683606e-08,
+          "projection_norm": 0.9724163639541594
+        },
+        {
+          "root": 7,
+          "excitation_ev": 6.722803751239766,
+          "overlap": 0.0036753723940902237,
+          "projection_norm": 0.9854657727519719
+        },
+        {
+          "root": 8,
+          "excitation_ev": 7.419920907346522,
+          "overlap": 5.368986612724077e-09,
+          "projection_norm": 0.9813309553525024
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.83198393180083,
+          "overlap": 9.227873483989914e-09,
+          "projection_norm": 0.9713688184095827
+        },
+        {
+          "root": 10,
+          "excitation_ev": 7.835683542751006,
+          "overlap": 9.098046075202639e-09,
+          "projection_norm": 0.9716353635932962
+        },
+        {
+          "root": 11,
+          "excitation_ev": 7.842588077522997,
+          "overlap": 7.512526046069586e-09,
+          "projection_norm": 0.966749247697683
+        },
+        {
+          "root": 12,
+          "excitation_ev": 7.850657154452908,
+          "overlap": 4.46043632056561e-08,
+          "projection_norm": 0.9729551922388607
+        },
+        {
+          "root": 13,
+          "excitation_ev": 8.304262544214936,
+          "overlap": 3.623323719406553e-08,
+          "projection_norm": 0.9532175814608934
+        },
+        {
+          "root": 14,
+          "excitation_ev": 8.329210994734725,
+          "overlap": 2.480094821824218e-08,
+          "projection_norm": 0.980149787719646
+        },
+        {
+          "root": 15,
+          "excitation_ev": 8.396444652217285,
+          "overlap": 1.1536817920283371e-08,
+          "projection_norm": 0.9823806982044159
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.66391144001254,
+          "overlap": 0.03364663166486337,
+          "projection_norm": 0.9858266537038578
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.913908473513903,
+          "overlap": 1.7695836198409487e-07,
+          "projection_norm": 0.9877840497047391
+        },
+        {
+          "root": 18,
+          "excitation_ev": 8.919859316379402,
+          "overlap": 1.704380316115706e-07,
+          "projection_norm": 0.9740155044665667
+        },
+        {
+          "root": 19,
+          "excitation_ev": 9.04860447990558,
+          "overlap": 8.241933777893549e-08,
+          "projection_norm": 0.9695040565337176
+        },
+        {
+          "root": 20,
+          "excitation_ev": 9.271784605274439,
+          "overlap": 0.07051300016715999,
+          "projection_norm": 0.9878877568872034
+        },
+        {
+          "root": 21,
+          "excitation_ev": 9.289103520542307,
+          "overlap": 1.3112892409728895e-06,
+          "projection_norm": 0.9803103898120108
+        },
+        {
+          "root": 22,
+          "excitation_ev": 9.345617875626916,
+          "overlap": 1.0901141218023835e-07,
+          "projection_norm": 0.9795471006124897
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.505072567312089,
+          "overlap": 0.10915295484647275,
+          "projection_norm": 0.9687849023813048
+        },
+        {
+          "root": 24,
+          "excitation_ev": 9.535018168790884,
+          "overlap": 3.431182461777952e-07,
+          "projection_norm": 0.9797505517898337
+        },
+        {
+          "root": 25,
+          "excitation_ev": 9.675893709474618,
+          "overlap": 2.5260611744302997e-08,
+          "projection_norm": 0.9729357347646642
+        },
+        {
+          "root": 26,
+          "excitation_ev": 9.701604464749593,
+          "overlap": 3.0561356875638106e-09,
+          "projection_norm": 0.9687530640372598
+        },
+        {
+          "root": 27,
+          "excitation_ev": 9.743166293157444,
+          "overlap": 2.8857311209747236e-08,
+          "projection_norm": 0.9419043208615858
+        },
+        {
+          "root": 28,
+          "excitation_ev": 9.746922671483008,
+          "overlap": 5.5319212339235936e-08,
+          "projection_norm": 0.9465332072065127
+        },
+        {
+          "root": 29,
+          "excitation_ev": 9.786729577028915,
+          "overlap": 0.016922069727979303,
+          "projection_norm": 0.9886011118829439
+        },
+        {
+          "root": 30,
+          "excitation_ev": 9.983319863766818,
+          "overlap": 3.174937812248261e-07,
+          "projection_norm": 0.9907869939387459
+        }
+      ]
+    },
+    {
+      "molecule": "pyrimidine",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 4.684146193640613,
+      "best_overlap": 0.9323931655102072,
+      "margin": 0.879905333497564,
+      "projection_norm": 0.9834203740939746,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 4.684146193640613,
+          "overlap": 0.9323931655102072,
+          "projection_norm": 0.9834203740939746
+        },
+        {
+          "root": 2,
+          "excitation_ev": 4.920775321201002,
+          "overlap": 3.002411938119855e-07,
+          "projection_norm": 0.9845993256593621
+        },
+        {
+          "root": 3,
+          "excitation_ev": 5.764008457702151,
+          "overlap": 1.0970140344692841e-07,
+          "projection_norm": 0.9755673164874274
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.226205995210153,
+          "overlap": 3.96666802038862e-07,
+          "projection_norm": 0.9837776928153503
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.4381315829274195,
+          "overlap": 0.013280789245947788,
+          "projection_norm": 0.9850964491918441
+        },
+        {
+          "root": 6,
+          "excitation_ev": 6.597733058826094,
+          "overlap": 2.238350014017945e-07,
+          "projection_norm": 0.9799613488876706
+        },
+        {
+          "root": 7,
+          "excitation_ev": 6.776387287829431,
+          "overlap": 1.8230539127655458e-11,
+          "projection_norm": 0.9748756620448111
+        },
+        {
+          "root": 8,
+          "excitation_ev": 7.28068269996143,
+          "overlap": 0.0008758043152641747,
+          "projection_norm": 0.9692462299514152
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.6858817377690265,
+          "overlap": 1.995252273901346e-08,
+          "projection_norm": 0.9822871539347972
+        },
+        {
+          "root": 10,
+          "excitation_ev": 7.822193992434203,
+          "overlap": 1.2403926918412576e-09,
+          "projection_norm": 0.9810445736216263
+        },
+        {
+          "root": 11,
+          "excitation_ev": 8.295346822429261,
+          "overlap": 7.248455740588993e-09,
+          "projection_norm": 0.979267808885704
+        },
+        {
+          "root": 12,
+          "excitation_ev": 8.316143144920789,
+          "overlap": 1.3906662657985266e-09,
+          "projection_norm": 0.9635792342518793
+        },
+        {
+          "root": 13,
+          "excitation_ev": 8.325634650085386,
+          "overlap": 4.938970969836388e-09,
+          "projection_norm": 0.9789784175169174
+        },
+        {
+          "root": 14,
+          "excitation_ev": 8.419619527737503,
+          "overlap": 2.9804193434513274e-09,
+          "projection_norm": 0.9798129873004418
+        },
+        {
+          "root": 15,
+          "excitation_ev": 8.634877360389947,
+          "overlap": 6.478915606753624e-08,
+          "projection_norm": 0.9712495361680888
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.771136091529762,
+          "overlap": 0.0018518176451656871,
+          "projection_norm": 0.9721704277399156
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.958932300857812,
+          "overlap": 9.116014730584754e-08,
+          "projection_norm": 0.9764621407920975
+        },
+        {
+          "root": 18,
+          "excitation_ev": 9.034231791420266,
+          "overlap": 7.271832502891793e-08,
+          "projection_norm": 0.9839989612866477
+        },
+        {
+          "root": 19,
+          "excitation_ev": 9.042675533027731,
+          "overlap": 2.8698975402989662e-09,
+          "projection_norm": 0.9499520505404342
+        },
+        {
+          "root": 20,
+          "excitation_ev": 9.260253529408464,
+          "overlap": 9.739338923851428e-09,
+          "projection_norm": 0.9824470329684929
+        },
+        {
+          "root": 21,
+          "excitation_ev": 9.284486710998385,
+          "overlap": 3.2229978296200425e-07,
+          "projection_norm": 0.9813084856662311
+        },
+        {
+          "root": 22,
+          "excitation_ev": 9.467869662371404,
+          "overlap": 0.01323974896667201,
+          "projection_norm": 0.9902376245072749
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.554842147238297,
+          "overlap": 0.05248783201264328,
+          "projection_norm": 0.9887646382714671
+        },
+        {
+          "root": 24,
+          "excitation_ev": 9.586819209793417,
+          "overlap": 7.873520339737279e-07,
+          "projection_norm": 0.9838231069615315
+        },
+        {
+          "root": 25,
+          "excitation_ev": 9.828525773600859,
+          "overlap": 2.1354833286346844e-07,
+          "projection_norm": 0.9829786590883297
+        },
+        {
+          "root": 26,
+          "excitation_ev": 9.891176681964732,
+          "overlap": 2.6590828917822565e-07,
+          "projection_norm": 0.9760657682277649
+        },
+        {
+          "root": 27,
+          "excitation_ev": 9.895364492343234,
+          "overlap": 3.554110308129083e-09,
+          "projection_norm": 0.9709828375212639
+        },
+        {
+          "root": 28,
+          "excitation_ev": 9.938893715789472,
+          "overlap": 0.01679043687339317,
+          "projection_norm": 0.9639025088570892
+        },
+        {
+          "root": 29,
+          "excitation_ev": 9.963633748945345,
+          "overlap": 2.5495582827122433e-08,
+          "projection_norm": 0.9879672807196159
+        }
+      ]
+    },
+    {
+      "molecule": "tetrazine",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 1.7527298165876364,
+      "best_overlap": 0.9456852646168299,
+      "margin": 0.9379184818097608,
+      "projection_norm": 0.9825351213642185,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 1.7527298165876364,
+          "overlap": 0.9456852646168299,
+          "projection_norm": 0.9825351213642185
+        },
+        {
+          "root": 2,
+          "excitation_ev": 3.507929419485831,
+          "overlap": 9.162577492801884e-09,
+          "projection_norm": 0.9814843701690378
+        },
+        {
+          "root": 3,
+          "excitation_ev": 4.674807149427056,
+          "overlap": 1.094507896343227e-08,
+          "projection_norm": 0.9839904190130121
+        },
+        {
+          "root": 4,
+          "excitation_ev": 4.888544427381652,
+          "overlap": 3.1386210777146256e-09,
+          "projection_norm": 0.9837973661917611
+        },
+        {
+          "root": 5,
+          "excitation_ev": 5.693750721036509,
+          "overlap": 5.773730817554376e-12,
+          "projection_norm": 0.9824083869575649
+        },
+        {
+          "root": 6,
+          "excitation_ev": 5.823297926480648,
+          "overlap": 4.600791611042399e-08,
+          "projection_norm": 0.9829831290568288
+        },
+        {
+          "root": 7,
+          "excitation_ev": 5.976725544824806,
+          "overlap": 2.0604354500025777e-07,
+          "projection_norm": 0.9796306134366339
+        },
+        {
+          "root": 8,
+          "excitation_ev": 6.371183384246802,
+          "overlap": 0.007766782807069139,
+          "projection_norm": 0.9829606447189774
+        },
+        {
+          "root": 9,
+          "excitation_ev": 6.701994453348147,
+          "overlap": 1.79835329044187e-08,
+          "projection_norm": 0.982778870640048
+        },
+        {
+          "root": 10,
+          "excitation_ev": 6.755362273911344,
+          "overlap": 3.0515704170213727e-10,
+          "projection_norm": 0.9814734806305024
+        },
+        {
+          "root": 11,
+          "excitation_ev": 7.335540258647266,
+          "overlap": 6.044504387703026e-10,
+          "projection_norm": 0.9816507917618966
+        },
+        {
+          "root": 12,
+          "excitation_ev": 7.360850398444512,
+          "overlap": 2.998112942452776e-09,
+          "projection_norm": 0.9816498977237076
+        },
+        {
+          "root": 13,
+          "excitation_ev": 7.800246103184835,
+          "overlap": 2.7182447478738964e-08,
+          "projection_norm": 0.9642024577236246
+        },
+        {
+          "root": 14,
+          "excitation_ev": 7.825593547257339,
+          "overlap": 4.9061958459871316e-09,
+          "projection_norm": 0.9815717439684565
+        },
+        {
+          "root": 15,
+          "excitation_ev": 8.631391843541225,
+          "overlap": 1.1613934694299392e-07,
+          "projection_norm": 0.982324737344145
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.761891929929348,
+          "overlap": 2.7625745996774218e-08,
+          "projection_norm": 0.9812846932804647
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.903589786593676,
+          "overlap": 1.2571272473779302e-08,
+          "projection_norm": 0.9750919303333386
+        },
+        {
+          "root": 18,
+          "excitation_ev": 8.95579306499895,
+          "overlap": 7.653518982421652e-11,
+          "projection_norm": 0.9908647583938877
+        },
+        {
+          "root": 19,
+          "excitation_ev": 9.103938073582157,
+          "overlap": 1.968080275950752e-08,
+          "projection_norm": 0.974023381836872
+        },
+        {
+          "root": 20,
+          "excitation_ev": 9.133043517905234,
+          "overlap": 3.1049440405833907e-09,
+          "projection_norm": 0.9793147865647719
+        },
+        {
+          "root": 21,
+          "excitation_ev": 9.199153181355145,
+          "overlap": 1.7350663135934636e-08,
+          "projection_norm": 0.9814734272354657
+        },
+        {
+          "root": 22,
+          "excitation_ev": 9.300547823420189,
+          "overlap": 1.4503955001916439e-11,
+          "projection_norm": 0.9839473641668928
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.396392238097462,
+          "overlap": 1.945703842169777e-08,
+          "projection_norm": 0.9767417041441988
+        },
+        {
+          "root": 24,
+          "excitation_ev": 9.435378449587782,
+          "overlap": 2.9524184277279043e-09,
+          "projection_norm": 0.9766695415278662
+        },
+        {
+          "root": 25,
+          "excitation_ev": 9.687261781876982,
+          "overlap": 9.604497675884617e-09,
+          "projection_norm": 0.9828874951191497
+        },
+        {
+          "root": 26,
+          "excitation_ev": 9.91812658794814,
+          "overlap": 0.002166977296559232,
+          "projection_norm": 0.9810476248556225
+        },
+        {
+          "root": 27,
+          "excitation_ev": 9.934835659411856,
+          "overlap": 2.171948742568484e-07,
+          "projection_norm": 0.9886509752809055
+        }
+      ]
+    },
+    {
+      "molecule": "uracil",
+      "state": "n_pi",
+      "status": "matched",
+      "assigned_root": 3,
+      "excitation_ev": 5.759692920729033,
+      "best_overlap": 0.8919320719358087,
+      "margin": 0.7423171144928827,
+      "projection_norm": 0.980505398591508,
+      "reference_root": 1,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 5.209828308968161,
+          "overlap": 2.719540934487283e-09,
+          "projection_norm": 0.9702378090371101
+        },
+        {
+          "root": 2,
+          "excitation_ev": 5.480454201203665,
+          "overlap": 6.960393633247034e-07,
+          "projection_norm": 0.9682162636875623
+        },
+        {
+          "root": 3,
+          "excitation_ev": 5.759692920729033,
+          "overlap": 0.8919320719358087,
+          "projection_norm": 0.980505398591508
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.024875632627492,
+          "overlap": 4.080509148185149e-08,
+          "projection_norm": 0.9650661396927995
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.341384566981504,
+          "overlap": 6.9056146776427e-09,
+          "projection_norm": 0.9738105123487343
+        },
+        {
+          "root": 6,
+          "excitation_ev": 6.750326196752071,
+          "overlap": 1.1463146323784279e-07,
+          "projection_norm": 0.96906537965104
+        },
+        {
+          "root": 7,
+          "excitation_ev": 6.752509713298182,
+          "overlap": 1.6667037577748503e-09,
+          "projection_norm": 0.9569893459434415
+        },
+        {
+          "root": 8,
+          "excitation_ev": 6.854707613724941,
+          "overlap": 0.08794373482146066,
+          "projection_norm": 0.9813002088844177
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.203179013308976,
+          "overlap": 1.942809614682222e-07,
+          "projection_norm": 0.9677782327578464
+        },
+        {
+          "root": 10,
+          "excitation_ev": 7.226559873305595,
+          "overlap": 5.7174358528262826e-08,
+          "projection_norm": 0.9731687890016536
+        },
+        {
+          "root": 11,
+          "excitation_ev": 7.3899250261923815,
+          "overlap": 1.299506950922949e-07,
+          "projection_norm": 0.97226588036091
+        },
+        {
+          "root": 12,
+          "excitation_ev": 7.467164339068035,
+          "overlap": 0.05001478866318587,
+          "projection_norm": 0.9819829066814485
+        },
+        {
+          "root": 13,
+          "excitation_ev": 7.518869686494919,
+          "overlap": 6.991156196642818e-08,
+          "projection_norm": 0.9777153925176374
+        },
+        {
+          "root": 14,
+          "excitation_ev": 7.723869654415055,
+          "overlap": 0.14961495744292597,
+          "projection_norm": 0.9811950306024888
+        },
+        {
+          "root": 15,
+          "excitation_ev": 7.951450062338859,
+          "overlap": 3.544361693400829e-08,
+          "projection_norm": 0.9789120061506691
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.241544325963105,
+          "overlap": 6.482110797503419e-07,
+          "projection_norm": 0.9760322520638075
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.253084322416642,
+          "overlap": 9.341914335734754e-08,
+          "projection_norm": 0.9695457203763606
+        },
+        {
+          "root": 18,
+          "excitation_ev": 8.30630698069135,
+          "overlap": 6.879546931020993e-08,
+          "projection_norm": 0.9630612860068956
+        },
+        {
+          "root": 19,
+          "excitation_ev": 8.373779872113039,
+          "overlap": 2.366156600524204e-07,
+          "projection_norm": 0.9784187425349311
+        },
+        {
+          "root": 20,
+          "excitation_ev": 8.47820670298622,
+          "overlap": 0.10031166885343057,
+          "projection_norm": 0.969960967101012
+        },
+        {
+          "root": 21,
+          "excitation_ev": 8.654322619347283,
+          "overlap": 6.072783517532968e-08,
+          "projection_norm": 0.9714485512259068
+        },
+        {
+          "root": 22,
+          "excitation_ev": 8.946723260337224,
+          "overlap": 3.2502004041367306e-08,
+          "projection_norm": 0.9813104972968598
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.010572771284254,
+          "overlap": 7.134334275672579e-08,
+          "projection_norm": 0.9748393439163509
+        },
+        {
+          "root": 24,
+          "excitation_ev": 9.065462768470312,
+          "overlap": 1.0026836392251065e-07,
+          "projection_norm": 0.9736401335748359
+        },
+        {
+          "root": 25,
+          "excitation_ev": 9.104536563911228,
+          "overlap": 4.539862781247598e-08,
+          "projection_norm": 0.9771128616408918
+        },
+        {
+          "root": 26,
+          "excitation_ev": 9.265566955744626,
+          "overlap": 6.830212263891972e-08,
+          "projection_norm": 0.9674394671584116
+        },
+        {
+          "root": 27,
+          "excitation_ev": 9.315544953034754,
+          "overlap": 1.193174965223136e-07,
+          "projection_norm": 0.96294796857804
+        },
+        {
+          "root": 28,
+          "excitation_ev": 9.432433844730244,
+          "overlap": 3.835909033983384e-08,
+          "projection_norm": 0.9702633450874315
+        },
+        {
+          "root": 29,
+          "excitation_ev": 9.506276846632785,
+          "overlap": 5.3046327336027624e-08,
+          "projection_norm": 0.9781057034379732
+        },
+        {
+          "root": 30,
+          "excitation_ev": 9.596935156087264,
+          "overlap": 0.007387346523235859,
+          "projection_norm": 0.9667251007973123
+        }
+      ]
+    },
+    {
+      "molecule": "uracil",
+      "state": "pi_pi",
+      "status": "matched",
+      "assigned_root": 1,
+      "excitation_ev": 5.209828308968161,
+      "best_overlap": 0.8842809451513362,
+      "margin": 0.7278425286059107,
+      "projection_norm": 0.9702378090371101,
+      "reference_root": 2,
+      "all_roots": [
+        {
+          "root": 1,
+          "excitation_ev": 5.209828308968161,
+          "overlap": 0.8842809451513362,
+          "projection_norm": 0.9702378090371101
+        },
+        {
+          "root": 2,
+          "excitation_ev": 5.480454201203665,
+          "overlap": 1.510244564493421e-08,
+          "projection_norm": 0.9682162636875623
+        },
+        {
+          "root": 3,
+          "excitation_ev": 5.759692920729033,
+          "overlap": 1.427722900602624e-08,
+          "projection_norm": 0.980505398591508
+        },
+        {
+          "root": 4,
+          "excitation_ev": 6.024875632627492,
+          "overlap": 0.03996699593943738,
+          "projection_norm": 0.9650661396927995
+        },
+        {
+          "root": 5,
+          "excitation_ev": 6.341384566981504,
+          "overlap": 0.09216314613104251,
+          "projection_norm": 0.9738105123487343
+        },
+        {
+          "root": 6,
+          "excitation_ev": 6.750326196752071,
+          "overlap": 3.62777047494128e-07,
+          "projection_norm": 0.96906537965104
+        },
+        {
+          "root": 7,
+          "excitation_ev": 6.752509713298182,
+          "overlap": 0.10516482294081939,
+          "projection_norm": 0.9569893459434415
+        },
+        {
+          "root": 8,
+          "excitation_ev": 6.854707613724941,
+          "overlap": 1.5279020322404477e-08,
+          "projection_norm": 0.9813002088844177
+        },
+        {
+          "root": 9,
+          "excitation_ev": 7.203179013308976,
+          "overlap": 6.461327344770353e-08,
+          "projection_norm": 0.9677782327578464
+        },
+        {
+          "root": 10,
+          "excitation_ev": 7.226559873305595,
+          "overlap": 0.04547783757774119,
+          "projection_norm": 0.9731687890016536
+        },
+        {
+          "root": 11,
+          "excitation_ev": 7.3899250261923815,
+          "overlap": 5.135859911585926e-09,
+          "projection_norm": 0.97226588036091
+        },
+        {
+          "root": 12,
+          "excitation_ev": 7.467164339068035,
+          "overlap": 4.0879956302284584e-08,
+          "projection_norm": 0.9819829066814485
+        },
+        {
+          "root": 13,
+          "excitation_ev": 7.518869686494919,
+          "overlap": 0.01909494829848158,
+          "projection_norm": 0.9777153925176374
+        },
+        {
+          "root": 14,
+          "excitation_ev": 7.723869654415055,
+          "overlap": 5.627366906986173e-09,
+          "projection_norm": 0.9811950306024888
+        },
+        {
+          "root": 15,
+          "excitation_ev": 7.951450062338859,
+          "overlap": 0.007948177120319732,
+          "projection_norm": 0.9789120061506691
+        },
+        {
+          "root": 16,
+          "excitation_ev": 8.241544325963105,
+          "overlap": 7.017668377159952e-07,
+          "projection_norm": 0.9760322520638075
+        },
+        {
+          "root": 17,
+          "excitation_ev": 8.253084322416642,
+          "overlap": 5.153787141542148e-07,
+          "projection_norm": 0.9695457203763606
+        },
+        {
+          "root": 18,
+          "excitation_ev": 8.30630698069135,
+          "overlap": 0.1564384165454255,
+          "projection_norm": 0.9630612860068956
+        },
+        {
+          "root": 19,
+          "excitation_ev": 8.373779872113039,
+          "overlap": 0.0169983375812112,
+          "projection_norm": 0.9784187425349311
+        },
+        {
+          "root": 20,
+          "excitation_ev": 8.47820670298622,
+          "overlap": 2.5244765317167274e-07,
+          "projection_norm": 0.969960967101012
+        },
+        {
+          "root": 21,
+          "excitation_ev": 8.654322619347283,
+          "overlap": 0.09803844289075976,
+          "projection_norm": 0.9714485512259068
+        },
+        {
+          "root": 22,
+          "excitation_ev": 8.946723260337224,
+          "overlap": 0.041467588239846226,
+          "projection_norm": 0.9813104972968598
+        },
+        {
+          "root": 23,
+          "excitation_ev": 9.010572771284254,
+          "overlap": 8.442087780701e-09,
+          "projection_norm": 0.9748393439163509
+        },
+        {
+          "root": 24,
+          "excitation_ev": 9.065462768470312,
+          "overlap": 0.02103662323687412,
+          "projection_norm": 0.9736401335748359
+        },
+        {
+          "root": 25,
+          "excitation_ev": 9.104536563911228,
+          "overlap": 0.0006358379955507114,
+          "projection_norm": 0.9771128616408918
+        },
+        {
+          "root": 26,
+          "excitation_ev": 9.265566955744626,
+          "overlap": 2.2092356309944572e-07,
+          "projection_norm": 0.9674394671584116
+        },
+        {
+          "root": 27,
+          "excitation_ev": 9.315544953034754,
+          "overlap": 0.008424892525405306,
+          "projection_norm": 0.96294796857804
+        },
+        {
+          "root": 28,
+          "excitation_ev": 9.432433844730244,
+          "overlap": 1.4398591491200605e-07,
+          "projection_norm": 0.9702633450874315
+        },
+        {
+          "root": 29,
+          "excitation_ev": 9.506276846632785,
+          "overlap": 0.028393786328257804,
+          "projection_norm": 0.9781057034379732
+        },
+        {
+          "root": 30,
+          "excitation_ev": 9.596935156087264,
+          "overlap": 2.0390525896086733e-07,
+          "projection_norm": 0.9667251007973123
+        }
+      ]
+    }
+  ]
+}

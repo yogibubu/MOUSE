@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,booktabs,graphicx,longtable}
+\usepackage[margin=25mm]{geometry}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{fancyvrb}
+\newcommand{\Eh}{\ensuremath{E_{\rm h}}}
+\title{Supporting Information\\Semiempirical Orbital-Optimized DFT in MOUSE:\\Spin-Pure Excited-State Surfaces with Analytic Gradients and Hessians}
+\author{Vincenzo Barone}
+\date{Working manuscript, 31 October 2026}
+\begin{document}
+\maketitle
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\section{Data scope and fixed protocol}
+The data in this document are generated from the final relative-active-pair qualification archive, not from the earlier shared-pair or shared-hole exploratory surfaces. The two parent weights are 0.5, the exchange-response scaling is 0.9, and the additive excitation-energy offset is zero. The full and qualified-spectral parents share their quadratic charge/spin correction and differ in their one-body operator. The mixed-spin and triplet energies within each parent use common spatial orbitals.
+
+The 15 regression states were exposed during development. The four final prospective molecules had previous native/shell-model predictions, but the present full/spectral composite protocol was frozen before their new predictions. Reference transition character, rather than TBE proximity, determines assignments. The reported states constitute a curated qualified cohort; the table is not a survey of every attempted state in preceding development campaigns. In particular, its size must not be used as a database-wide success-rate denominator.
+
+The spectral matching uses occupation-sector assignments with absolute overlap at least 0.7 and a best-versus-alternative margin of at least 0.05. Unqualified orbital levels retain native spacings. There is no fitted orbital-extent correction and no multiplication of the orbital gaps by 0.9. The effective exact-exchange response coefficient is 0.225, and the semilocal response is unchanged. The mean occupied energy sets a gauge for spectral shifts, not a fitted shift of excitation energies.
+
+The two relative active-pair targets are squared cross-parent overlaps at the anchor. They remain fixed while the absolute orbital orientations and spectators relax. Targets within $10^{-10}$ of unity use an exact shared-orbital elimination. The final stationarity certificate concerns the coupled Lagrangian; independent parent orbital gradients are not assumed to vanish away from the anchor. Projected absolute orbital curvatures must exceed $10^{-7}$~\Eh\ for certification. The full-CSF and active-character following thresholds are 0.7.
+
+\clearpage
+\section{Complete vertical-energy results}
+\input{tables/all_vertical.tex}
+\section{Direct dedicated sTDA-xTB comparison}
+The published dedicated Hamiltonian and parameters are retained. Ground-state xtb4stda wavefunctions and std2 singlet vectors are evaluated at the original XYZs, without geometry optimization or TBE-based root assignment. Cross-basis transition overlaps are normalized only after projection; the norm, overlap, and assignment margin are reported separately in \texttt{data/direct\_stda\_comparison.csv}. All 19 states pass overlap $\geq0.7$, projected norm $\geq0.7$, and margin $\geq0.05$. The small difference between coordinate conversions stored by the legacy executable and the input XYZ is bounded by $2\times10^{-6}$ bohr; no geometry is optimized or refitted. Earlier parameter-path setup failures are preserved separately from the successful electronic attempts.
+\input{tables/all_stda.tex}
+\section{Physical structural accuracy and weight precheck}
+The following internal-coordinate references are from the published CCSDR(3)/def2-TZVPP supporting tables (DOI 10.1021/acs.jctc.7b00921): acetaldehyde S19, acetone S20, and maleimide S27. The geometry definitions and reference provenance are retained in \path{data/geometry_reference_comparison.json}. No structural reference was used to fit the energy model.
+\input{tables/geometry_accuracy.tex}
+\input{tables/weight_anchor.tex}
+The weight table uses independently stationary vertical parents only. It cannot substitute for reoptimizing a weighted off-anchor coupled problem. The production weight remains 0.5. The separate harmonic nitroxyl precheck is retained in \texttt{data/hno\_harmonic\_comparison.json}; its frequency-order correspondence remains provisional until mode-vector confirmation.
+
+\section{Reference data provenance}
+The machine-readable file \texttt{data/tbe\_provenance.json} associates each state with its archived QUEST TBE method. The target basis is aug-cc-pVTZ (AVTZ); AVDZ denotes aug-cc-pVDZ. These are theoretical vertical references, not measured absorption maxima. The full input metadata and inherited state assignments are in \texttt{reference\_provenance.json}. The DFT reference basis is aug-cc-pVDZ; it is distinct from the target basis of the TBE. These values are used for reporting errors, not constructing the semiempirical energy.
+
+\input{tables/tbe_methods.tex}
+
+\section{Derivative checks and stationarity criteria}
+The five nuclear minima satisfy a maximum Cartesian gradient below $3\times10^{-5}$~\Eh/bohr and have positive projected vibrational curvatures. Positive excitation gaps and tracked state character are required as separate checks. Directional checks use central differences of the scalar energy and analytic gradient at $\pm h v$, with $h=2\times10^{-4}$ and $10^{-4}$~bohr. The reported Hessian-vector discrepancy is the largest component of the difference from the analytic Hessian acting on the same direction. No finite differences enter the production gradient or Hessian.
+
+At $h=10^{-4}$~bohr, complete Cartesian-column checks yield:
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Molecule & Columns & Maximum Hessian error & Scalar-gradient error\\
+\midrule
+Nitroxyl & 9 & $1.1512\times10^{-8}$ & $3.6434\times10^{-9}$\\
+Formamide & 18 & $4.6669\times10^{-9}$ & $2.2575\times10^{-9}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Hessian errors are in \Eh/bohr$^2$; scalar-gradient errors are in \Eh/bohr. The maximum asymmetry of the numerical Hessians is $8.74\times10^{-9}$ and $5.30\times10^{-9}$~\Eh/bohr$^2$, respectively. Full displacement checks and the two-step directional checks for every minimum are recorded in \texttt{data/SUMMARY.json}. Translational and rotational modes are removed before vibrational stability is assessed. No experimental-frequency accuracy is inferred from these implementation tests.
+
+\clearpage
+\section{Optimized geometries and projected harmonic frequencies}
+All coordinates below are in Angstrom, in the original atom order. They describe minima of the constrained composite semiempirical surface. The XYZ files are also supplied in \texttt{coordinates/}. These coordinates are not high-level reference geometries.
+\input{tables/minimum_coordinates.tex}
+
+\section{Timing interpretation}
+Earlier values labelled TDA were built with a symmetrized static response and omitted the nonlocal exchange difference required for the TDA $A$ matrix. Their timing ratios and TDA accuracy claims are withdrawn. The archival measurements are explicitly identified in \path{data/archival_static_response_timing.json}; the corresponding CSV fields are labelled archival static response. Corrected TDA uses the corrected GFN2 ground orbitals, with effective exact exchange 0.225, and agrees with the independent PySCF matrix within $3.6\times10^{-15}$~\Eh.
+
+The batched analytic Jacobian comparison uses the identical retained 44-AO nitropyridine checkpoint and two Oracle threads: 4.13837 versus 0.241612~s, maximum elementwise difference $8.88\times10^{-16}$. This 17.13-fold kernel speedup excludes reference preparation and does not establish an end-to-end advantage. The current response/ROKS regression suite passes 26 tests.
+
+The reduced extension initializes stationary parents from independently assigned NTO and native seeds. It applies local CSF overlap 0.90, attainable single-pair transition fidelity squared above one half, occupied/virtual norms 0.7 and an available-root projected margin of 0.05. The ratio to the leading singular value is a representability diagnostic, not a state probability. Absolute active-orbital anchor overlap is reported diagnostically when a fixed reference transition is supplied. Stationarity and curvature criteria remain unchanged. This assignment amendment is separated from the original 19-state data and from future accuracy scoring. The reduced scope is 14 states in ten molecules, selected after baseline convergence outcomes; no excluded state is silently removed from the original ledger.
+
+\section{Reproducibility and automatic integration}
+The final remote qualification used \texttt{oracle.sns.it}. A transfer audit checked 561 result files and 30 source files; the remote test suite reports 86 passing tests. Cold and resumed executions of the integrated example differ by $1.7764\times10^{-15}$~\Eh. The copied \texttt{data/PROTOCOL.json} identifies the validated source files by SHA256. The source hashes refer to the calculation campaign; the manuscript-generation manifest separately identifies the document inputs and outputs.
+
+The explicit interface selects the following settings:
+\begin{Verbatim}[fontsize=\small]
+native_excited_method = "roks_50_50"
+native_roks_composite_orbital_coupling = "relative_active_pair"
+native_roks_composite_following = "character_newton_index"
+native_roks_composite_reference_policy = "geometry_only"
+native_roks_composite_ground_surface = "native_plus_gaps"
+native_roks_composite_component_tracking = "active_pair"
+\end{Verbatim}
+The example source is \texttt{examples/roks\_relative\_pair.py} in the MOUSE repository. Response paths, two certified seed paths, promotions, and parent saddle indices are supplied explicitly. The accepted generation has precedence over cold seeds. It stores both CSFs, relative targets, multipliers, three restricted ground references, model fingerprints, and the anchor. Defaults for other methods are not changed.
+
+The manuscript-generation script \texttt{build\_assets.py} performs lightweight data aggregation and plotting only. It can be run from the associated MOUSE working tree to regenerate all tables, the validation figure, optimized XYZ files, and TBE method provenance. The accompanying CSV provides all 19 OO-DFT values and explicitly labelled archival static-response controls. Corrected TDA values are reported separately when the new prediction pass is closed. The four-molecule comparison in the main text is the designated prospective comparison; additional exposed TDA values in the CSV must retain that exposure label.
+\end{document}

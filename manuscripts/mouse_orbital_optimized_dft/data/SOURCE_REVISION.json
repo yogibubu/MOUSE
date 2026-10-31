@@ -1,0 +1,7 @@
+{
+  "implementation_commit": "5620e2d063f510e9378a0bb438d54eb01a88493f",
+  "remote_regression": "26 passed, 13.07 seconds, oracle.sns.it",
+  "original_19_state_campaign": "separate archived generation, 86 historical tests",
+  "new_reduced_set": "10/14 solver-qualified, accuracy labels sealed",
+  "identity_policy": "attainable single-pair fidelity ratio squared >1/2, not a many-electron probability"
+}

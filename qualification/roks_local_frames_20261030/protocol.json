@@ -1,0 +1,14 @@
+{
+ "schema":"mouse.roks.local_covalent_frames.v1","host":"oracle.sns.it",
+ "molecules":["nitroxyl","acetaldehyde","maleimide","acetone","formamide"],
+ "weights":[0.5,0.5],"lambda_exchange":0.9,"fitted_offset":0.0,"fitted_parameters":0,
+ "functional":"native S0 plus mean full/spectral ROKS gaps; only response-operator transport changes from one global rotation to fixed covalent-neighborhood atomic rotations",
+ "clusters":"breadth-first neighborhoods in the anchor graph, radius sums plus 0.28 angstrom, extended only until the fixed anchor cluster spans a noncollinear frame; never reselect along the geometry path",
+ "vertical_preservation":"all local rotations are identity at the anchor; energies, Fock and electronic response remain identical to the previous calibrated 50/50 model for every density",
+ "derivatives":"analytic first and second local Kabsch rotation jets; native GFN2 fixed-density derivatives and relaxed orbital Schur complements for all five stationary energy components",
+ "tracking":"full local CSF >=0.7; original active pair compared in the same local atomic AO frame >=0.7; intercomponent active pair >=0.7; bounded adjacent-index following",
+ "optimization":"maximum 160 additional accepted steps; damped BFGS with Armijo descent; if a stationary point has a vibrational frequency below -20 cm-1, up to two 0.05 angstrom displacements along the lowest exact mode",
+ "qualification":"max gradient below 3e-5 Ha/bohr, no mode below -20 cm-1, positive component gaps, independent central energy/gradient and Hessian-vector checks at 2e-4 and 1e-4 bohr; no SCC invocation",
+ "sources":"completed vertical states and last accepted molecular checkpoints reused, with explicit model migration and newly evaluated derivatives; no DFT SCF reruns or TBE-based root selection",
+ "validation_scope":"acetaldehyde motivated the transport change; the other four molecules test transferability without fitting"
+}

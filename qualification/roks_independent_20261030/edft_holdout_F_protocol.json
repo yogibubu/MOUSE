@@ -1,0 +1,107 @@
+{
+  "host": "oracle.sns.it",
+  "cases": [
+    {
+      "name": "cyclopentadienone",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_F/cyclopentadienone",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_F_inputs/Cyclopentadienone.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_F_inputs/cyclopentadienone.xyz",
+      "metadata_sha256": "b03776a0484966671aa562ba1d109d75379196dead7443c979340f684d2f8973",
+      "geometry_sha256": "037345b5f5eaf55f39fb2dd19d482d489fde3df9c201eb6fdd86565f1907c690",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A_2",
+          "family": "npi",
+          "tbe_ev": 2.951,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "maleimide",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_F/maleimide",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_F_inputs/Maleimide.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_F_inputs/maleimide.xyz",
+      "metadata_sha256": "1e372109d94cc3f19de4d764371b6b097243fd2d443126972831013d9b6528e9",
+      "geometry_sha256": "dbe2b37d867bcccc16037d9536988afdfc3651e4528b3029d440be9db48d621d",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "B_1",
+          "family": "npi",
+          "tbe_ev": 3.8099999999999996,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "pyranone",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_F/pyranone",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_F_inputs/Pyranone.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_F_inputs/pyranone.xyz",
+      "metadata_sha256": "ffe2567cca1b71fa1154049d3af74225a61253e343d998ef8fcede64fdca229b",
+      "geometry_sha256": "7afddacee25dda2b891723cd81dd644240f3c79d9f3664b95d1f61e1c14c4a70",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A_2",
+          "family": "npi",
+          "tbe_ev": 4.016,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    }
+  ],
+  "scope": "prospective molecule holdout for S1 npi only; not promotion as a universal all-state method",
+  "candidate": "PBE0-derived spectral GFN2 triplet plus 2*(1-.32)*K_ab, optimized with analytic orbital response",
+  "xi": 0.32,
+  "lambda_exchange": 0.9,
+  "fit": false,
+  "scalar_energy_offset": 0.0,
+  "source_sha256": {
+    "edft_pbe0_response.py": "1efc69453253191cabd58b7cf177b2df36cf8364ded85c2f6a1e8f849f934897",
+    "edft_statefollow_response.py": "98a6df709cb6ddcc89fca29c2eebdee40fcc394d69c131e7e803db3675c7eca7",
+    "edft_pbe0_statefollow.py": "6d28ad1d4e674e90649a81122daacc26dbacaf938bdaefd9a6b4682ea2a9206f",
+    "edft_transition_identity.py": "752c342737fdf8934e089db6b6a7908cd984413cf77991ce316ed2c5a9e6c34c",
+    "prepare_F.py": "f00d5ec21e2462e2f75ab130c17ec9b8d49faa745db04ffb735fe4e1a134a343",
+    "edft_holdout_F_run.py": "cd87cc950f424d9bf3aafa47ac783fff85a1017595ef6d89eb666929c84bf893",
+    "reference_td_checkpoint.py": "dc2cdcea67e860f1fcb6869984bd09c548ed1568bf8f4e100154e88607856339"
+  },
+  "controls": [
+    "native ROKS",
+    "old spectral ROKS",
+    "old fixed raw/spectral 50/50 mean",
+    "parent-functional TDA on GFN2 orbitals"
+  ],
+  "existing_composite_weights": [
+    0.5,
+    0.5
+  ],
+  "reference": "fixed first PBE0 aug-cc-pVDZ Cartesian/grid3 singlet TDA root; no substitution",
+  "minimum_projection": 0.7,
+  "minimum_leading_amplitude": 0.7,
+  "minimum_csf_overlap": 0.7,
+  "minimum_transition_overlap": 0.7,
+  "orbital_residual": 1e-09,
+  "saddle_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "candidate_identity": "overlap with prior qualified excited CSF and unmodified reference transition; native canonical CSF is diagnostic",
+  "gate": "all three molecules qualified, candidate MAE below native, old spectral and old fixed mean, maxabs <=0.5 eV; no exclusions replaced",
+  "previous_general_gate": "uracil pipi/all-state gate failed; remains failed. This scoped follow-up does not override it.",
+  "previous_E": "separate preplanned E preparation is retained; triazine native seed fails transition identity. No replacement or hidden inclusion in F.",
+  "external_parameters": "xi=.32 is the literature parameter, not fitted on MOUSE data. Independence from its original published training set is not certified.",
+  "source_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa",
+  "nuclear_derivatives_supported": false,
+  "default_changed": false
+}

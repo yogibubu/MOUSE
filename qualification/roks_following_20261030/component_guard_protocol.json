@@ -1,0 +1,10 @@
+{
+  "schema": "mouse.roks.component_guard_recovery.v1", "compute_host": "oracle.sns.it",
+  "molecule": "maleimide",
+  "evidence": "primary continuation aborted on a trial with raw/spectral full-CSF overlap 0.688258, below unchanged threshold 0.7",
+  "change": "treat a failed component-CSF comparison as a recoverable electronic-continuity failure; reject trial, shrink geometry step, retain accepted checkpoint",
+  "ground_reference_recovery": "same optional accepted S0 retry as acetaldehyde; same residual thresholds",
+  "resume": "latest primary-continuation accepted checkpoint and optimizer Hessian; preserve original anchor",
+  "maximum_additional_steps": 80,
+  "unchanged": "all Hamiltonians, calibrations, weights and continuity thresholds"
+}

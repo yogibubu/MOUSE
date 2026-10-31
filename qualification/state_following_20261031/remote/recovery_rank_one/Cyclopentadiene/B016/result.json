@@ -1,0 +1,47 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Cyclopentadiene",
+  "state": "B016",
+  "status": "matched",
+  "excitation_ev": 8.197277888879146,
+  "endpoint_energy_check_hartree": 0.0,
+  "joint_residual": 2.1771174273099714e-11,
+  "joint_index": 4,
+  "minimum_curvature": 0.004889725349883006,
+  "final_guard": {
+    "local_csf": 1.0,
+    "anchor_active": 0.9733071129141698,
+    "transition": 0.9459385808410278,
+    "raw_transition": 0.697708748099667,
+    "transition_metric": "rank_one",
+    "rank_one_limit": 0.7375835622217023,
+    "rank_one_margin": 0.08552429587122368,
+    "sector_norm": 0.9762472762290889,
+    "accepted": true
+  },
+  "seconds_current_run": 15.433482552994974,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "baseline_untouched": true,
+  "exploratory_solver_recovery": true,
+  "reference_labels_read": false,
+  "baseline_result": {
+    "status": "prediction_pass_complete",
+    "host": "oracle.sns.it",
+    "molecule": "Cyclopentadiene",
+    "rows": [
+      {
+        "id": "B016",
+        "molecule": "Cyclopentadiene",
+        "status": "nonconverged",
+        "reason": "Assigned transition lost in qualified_spectral_response",
+        "traceback": "Traceback (most recent call last):\n  File \"/local/scratch/home/enzo/MOUSE-publication-validation-20261030/blind_mouse.py\", line 132, in worker\n    if min(score,np.linalg.norm(h),np.linalg.norm(p))<.7:raise RuntimeError('Assigned transition lost in '+profile)\n                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Assigned transition lost in qualified_spectral_response\n"
+      }
+    ],
+    "numerical_reference_labels_read": false
+  }
+}

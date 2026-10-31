@@ -1,0 +1,24 @@
+{
+  "campaign": "frozen_extent_profile_generalization_20261029",
+  "host": "oracle.sns.it",
+  "reference_method": "PBE0",
+  "reference_basis": "aug-cc-pVDZ Cartesian",
+  "reference_energy_scale": 0.8706205766726199,
+  "extent_power": 1.5,
+  "refit": false,
+  "overlap_threshold": 0.7,
+  "margin_threshold": 0.05,
+  "minimum_projected_transition_norm": 0.7,
+  "minimum_seed_csf_overlap": 0.7,
+  "minimum_transition_overlap": 0.7,
+  "saddle_indices_to_try": [1, 2, 3],
+  "maximum_iterations_per_attempt": 70,
+  "state_selection": "First index-certified solution passing chemical character, seed CSF and projected-reference transition overlap. No selection by energy proximity to QUEST. Retain every failure/exclusion.",
+  "cases": [
+    {"name":"nitroxyl","dataset":"independent","folder":"nitroxyl_pbe0","metadata":"Nitroxyl.json","targets":[{"id":"n_pi","family":"npi","metadata_index":0,"reference_root":1}]},
+    {"name":"nitrous_acid","dataset":"independent","folder":"nitrous_acid_pbe0","metadata":"Nitrous_acid.json","targets":[{"id":"n_pi","family":"npi","metadata_index":0,"reference_root":1}]},
+    {"name":"propynal","dataset":"independent","folder":"propynal_pbe0/full_ao_retry_2","metadata":"Propynal.json","targets":[{"id":"n_pi","family":"npi","metadata_index":0,"reference_root":1}]},
+    {"name":"pyridine","dataset":"pyridine","targets":[{"id":"n_pi","family":"npi","metadata_index":0},{"id":"pi_pi","family":"ppi","metadata_index":1}]},
+    {"name":"cytosine","dataset":"frozen","targets":[{"id":"pi_pi","family":"ppi","metadata_index":0},{"id":"n_pi","family":"npi","metadata_index":1}]}
+  ]
+}

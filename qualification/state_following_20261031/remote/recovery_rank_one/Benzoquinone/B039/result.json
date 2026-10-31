@@ -1,0 +1,47 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Benzoquinone",
+  "state": "B039",
+  "status": "matched",
+  "excitation_ev": 7.681227290483868,
+  "endpoint_energy_check_hartree": 0.0,
+  "joint_residual": 4.710962522858075e-12,
+  "joint_index": 6,
+  "minimum_curvature": 0.011409340456674077,
+  "final_guard": {
+    "local_csf": 1.0,
+    "anchor_active": 0.995450879121597,
+    "transition": 0.9924783097397202,
+    "raw_transition": 0.9333569916602826,
+    "transition_metric": "rank_one",
+    "rank_one_limit": 0.9404306194913798,
+    "rank_one_margin": 0.6719744365649034,
+    "sector_norm": 0.9858582781648151,
+    "accepted": true
+  },
+  "seconds_current_run": 76.61668577603996,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "baseline_untouched": true,
+  "exploratory_solver_recovery": true,
+  "reference_labels_read": false,
+  "baseline_result": {
+    "status": "prediction_pass_complete",
+    "host": "oracle.sns.it",
+    "molecule": "Benzoquinone",
+    "rows": [
+      {
+        "id": "B039",
+        "molecule": "Benzoquinone",
+        "status": "nonconverged",
+        "reason": "No qualified qualified_spectral_response stationary parent",
+        "traceback": "Traceback (most recent call last):\n  File \"/local/scratch/home/enzo/MOUSE-publication-validation-20261030/blind_mouse.py\", line 125, in worker\n    if not report.get('qualified'):raise RuntimeError('No qualified '+profile+' stationary parent')\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: No qualified qualified_spectral_response stationary parent\n"
+      }
+    ],
+    "numerical_reference_labels_read": false
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "host": "oracle.sns.it",
+  "frozen_utc": "2026-10-30T10:16:24.693602+00:00",
+  "training_sha256": "ee69a1f8d1a3f917ea782051c2c0a098c0e88229001fe769c6432b4a7950b7c0",
+  "original_D_protocol_sha256": "38dbd1dfc1f1b626b0224276c7bd7406cde2959a74089ab7bda3a13ff2df0607",
+  "primary_npi_global_fit": {
+    "raw_full_weight": 0.5562343070452148,
+    "spectral_weight": 0.4437656929547852,
+    "training_count": 8,
+    "training_mae_ev": 0.1507936003255704,
+    "half_half_mae_ev": 0.15102152839233687
+  },
+  "all_nine_global_fit_sensitivity": {
+    "raw_full_weight": 0.49151961329823557,
+    "spectral_weight": 0.5084803867017644,
+    "training_count": 9,
+    "training_mae_ev": 0.16743376181399683,
+    "half_half_mae_ev": 0.1680904765540715
+  },
+  "original_control": {
+    "raw_full_weight": 0.5,
+    "spectral_weight": 0.5
+  },
+  "objective": "unweighted mean absolute energy error; one convex scalar weight shared by all molecules; no intercept; exact piecewise-linear minimization on [0,1]; ties closest to 1/2",
+  "selection": "primary npi fit fixed before reading any D outputs; report all-nine fit as sensitivity, never select on D",
+  "D_results_read_during_weight_fit": false,
+  "component_jobs_may_be_running": true,
+  "original_50_50_protocol_preserved": true,
+  "training_states": [
+    {
+      "molecule": "nitroxyl",
+      "state": "n_pi",
+      "tbe_ev": 1.743
+    },
+    {
+      "molecule": "uracil",
+      "state": "n_pi",
+      "tbe_ev": 4.935
+    },
+    {
+      "molecule": "uracil",
+      "state": "pi_pi",
+      "tbe_ev": 5.381
+    },
+    {
+      "molecule": "acetaldehyde",
+      "state": "n_pi",
+      "tbe_ev": 4.304
+    },
+    {
+      "molecule": "acetone",
+      "state": "n_pi",
+      "tbe_ev": 4.468
+    },
+    {
+      "molecule": "formamide",
+      "state": "n_pi",
+      "tbe_ev": 5.644
+    },
+    {
+      "molecule": "glyoxal",
+      "state": "n_pi",
+      "tbe_ev": 2.877
+    },
+    {
+      "molecule": "pyrazine",
+      "state": "n_pi",
+      "tbe_ev": 4.144
+    },
+    {
+      "molecule": "tetrazine",
+      "state": "n_pi",
+      "tbe_ev": 2.462
+    }
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "leave_one_molecule_out": [
+    {
+      "held_molecule": "acetaldehyde",
+      "raw_full_weight": 0.49151961329823557,
+      "held_mae_ev": 0.030791543604284044
+    },
+    {
+      "held_molecule": "acetone",
+      "raw_full_weight": 0.49151961329823557,
+      "held_mae_ev": 0.13272715805631385
+    },
+    {
+      "held_molecule": "formamide",
+      "raw_full_weight": 0.5562343070452148,
+      "held_mae_ev": 0.030118930752210282
+    },
+    {
+      "held_molecule": "glyoxal",
+      "raw_full_weight": 0.49151961329823557,
+      "held_mae_ev": 0.1271191468200943
+    },
+    {
+      "held_molecule": "nitroxyl",
+      "raw_full_weight": 0.5562343070452148,
+      "held_mae_ev": 0.26148138518883113
+    },
+    {
+      "held_molecule": "pyrazine",
+      "raw_full_weight": 0.5562343070452148,
+      "held_mae_ev": 0.22019987303662436
+    },
+    {
+      "held_molecule": "tetrazine",
+      "raw_full_weight": 0.5562343070452148,
+      "held_mae_ev": 0.43534694811785846
+    },
+    {
+      "held_molecule": "uracil",
+      "raw_full_weight": 0.49151961329823557,
+      "held_mae_ev": 0.05189669842870881
+    }
+  ]
+}

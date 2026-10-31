@@ -1,0 +1,47 @@
+{
+  "fraction": 0.4,
+  "origin_fingerprint": "0dfdcd70fadcad62c045f095f06b9c7de080d98cb9ddc858569f97aa614f4d05",
+  "target_fingerprint": "ec5816518201ae8041127b0117d58f81c3ccbb3d2c5478a230481be6db474cec",
+  "history": [
+    {
+      "from_fraction": 0.0,
+      "to_fraction": 0.2,
+      "accepted": true,
+      "index": 0,
+      "residual": 7.4593109467002705e-16,
+      "guard": {
+        "local_csf": 0.9991054855818611,
+        "anchor_active": 0.9994252482535914,
+        "transition": 0.9888286897076939,
+        "raw_transition": 0.9887310925977398,
+        "transition_metric": "rank_one",
+        "rank_one_limit": 0.9999013002849029,
+        "rank_one_margin": 0.9879801514335991,
+        "sector_norm": 0.985560584140591,
+        "accepted": true
+      },
+      "guard_trials": 5,
+      "guard_rejections": 0
+    },
+    {
+      "from_fraction": 0.2,
+      "to_fraction": 0.4,
+      "accepted": true,
+      "index": 0,
+      "residual": 1.8561541192951836e-15,
+      "guard": {
+        "local_csf": 0.9987945458599167,
+        "anchor_active": 0.99726092535655,
+        "transition": 0.9925840597042008,
+        "raw_transition": 0.992486091940298,
+        "transition_metric": "rank_one",
+        "rank_one_limit": 0.9999013002849029,
+        "rank_one_margin": 0.9879801514335991,
+        "sector_norm": 0.9804644472680459,
+        "accepted": true
+      },
+      "guard_trials": 5,
+      "guard_rejections": 0
+    }
+  ]
+}

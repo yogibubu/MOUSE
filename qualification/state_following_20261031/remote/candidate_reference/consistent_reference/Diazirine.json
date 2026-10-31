@@ -1,0 +1,15 @@
+{
+  "molecule": "Diazirine",
+  "state": "B001",
+  "original_canonical_gap_hartree": 0.1443060804238918,
+  "selected_profile": "original_qualified_spectral",
+  "selected_model": "/home/enzo/MOUSE-publication-validation-20261030/results/qualified_spectral_response/Diazirine/model.npz",
+  "selected_model_sha256": "0eb24f160f7570cfe75283f9b0702db3e494a0a721b84ee6f885883ccbba5170",
+  "prediction_source": "/home/enzo/MOUSE-state-following-20261031/recovery_rank_one/Diazirine/B001/result.json",
+  "prediction_sha256": "d86431894b479c6217d6bdc9285a89751bbc98bcf4510454099ca7d03a28d9e2",
+  "status": "matched",
+  "excitation_ev": 4.241949435486163,
+  "joint_residual": 1.97758476261356e-15,
+  "reused_without_recalculation": true,
+  "response_unchanged": true
+}

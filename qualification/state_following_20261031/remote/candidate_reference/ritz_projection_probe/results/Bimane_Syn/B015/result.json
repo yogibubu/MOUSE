@@ -1,0 +1,102 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Bimane_Syn",
+  "state": "B015",
+  "status": "matched",
+  "excitation_ev": 3.9114552088659638,
+  "joint_residual": 5.10702591327572e-15,
+  "joint_index": 2,
+  "minimum_curvature_hartree": 0.00019120017681898834,
+  "guards": [
+    {
+      "local_csf": 0.9999999999999801,
+      "anchor_active": 0.9999999999999972,
+      "transition": 0.9356773352793663,
+      "raw_transition": 0.9166606410579133,
+      "transition_metric": "rank_one",
+      "rank_one_limit": 0.9796760127616267,
+      "rank_one_margin": 0.8615486352140735,
+      "sector_norm": 0.990906641609638,
+      "accepted": true
+    },
+    {
+      "local_csf": 1.0,
+      "anchor_active": 0.9985600635843905,
+      "transition": 0.9491536334910737,
+      "raw_transition": 0.9298630471567455,
+      "transition_metric": "rank_one",
+      "rank_one_limit": 0.9796760127616267,
+      "rank_one_margin": 0.8615486352140735,
+      "sector_norm": 0.9883761379108567,
+      "accepted": true
+    }
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "reference_labels_read": false,
+  "baseline_preserved": true,
+  "exploratory_model_revision": "complete projected DFT ground Fock",
+  "component_gaps_ev": [
+    3.9930084360250335,
+    3.829901981706701
+  ],
+  "ground_certificates": [
+    {
+      "residual": 1.4469808182168802e-11,
+      "index": 0,
+      "minimum_curvature": 0.4043107634035655
+    },
+    {
+      "residual": 4.449805385416691e-14,
+      "index": 0,
+      "minimum_curvature": 0.6280691149234583
+    },
+    {
+      "residual": 1.0148872766631096e-15,
+      "index": 0,
+      "minimum_curvature": 0.6393167937254896
+    }
+  ],
+  "assignment_audit": {
+    "molecule": "Bimane_Syn",
+    "state": "B015",
+    "target_root": 1,
+    "symmetry": "A\"",
+    "target_parent_fidelities": [
+      0.9356773352793664,
+      0.9491536334910737
+    ],
+    "margins_against_other_converged_representable_same_symmetry_roots": [
+      0.9356773352793664,
+      0.9491536334910737
+    ],
+    "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+      0.847422134775316,
+      0.8596273180888824
+    ],
+    "uniquely_assigned": true,
+    "reference_coverage_complete": false,
+    "available_same_symmetry_candidates": [
+      {
+        "root": 1,
+        "converged": true,
+        "projection_norm": 0.9244665875446673,
+        "rank_one_limit": 0.9796760127616264,
+        "parent_fidelities": [
+          0.9356773352793664,
+          0.9491536334910737
+        ],
+        "parent_projected_overlaps": [
+          0.847422134775316,
+          0.8596273180888824
+        ],
+        "representable_single_pair": true
+      }
+    ],
+    "numerical_reference_energies_used": false
+  }
+}

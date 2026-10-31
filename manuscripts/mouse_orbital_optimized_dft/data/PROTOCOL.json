@@ -1,0 +1,83 @@
+{
+  "schema": "mouse.roks.relative_active_pair.protocol.v1",
+  "host": "oracle.sns.it",
+  "remote_root": "/home/enzo/MOUSE-roks-relative-pair-20261030",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "orbital_gap_scale": 1.0,
+  "fitted_state_energy_offsets": 0,
+  "surface": "E0_native(R)+0.5 sum_i(E_ROKS_i(R)-E0_i(R))",
+  "state_constraint": "fixed squared cross-parent h/h and p/p overlaps at the original assigned vertical anchor; labels follow the promotion; phases arbitrary",
+  "unit_overlap": "eliminate common orbitals exactly when overlap squared is within 1e-10 of one",
+  "orbital_response": "analytic Lagrangian KKT projected-index certificate, then coupled nuclear Schur complement",
+  "ground_response": "three directly optimized restricted references; no SCC in excited-state evaluation",
+  "qualification": {
+    "maximum_gradient_hartree_per_bohr": 3e-05,
+    "minimum_csf_overlap": 0.7,
+    "minimum_anchor_pair_character": 0.7,
+    "positive_component_gaps": true,
+    "all_observed_vibrational_modes_real": true,
+    "finite_difference_steps_bohr": [
+      0.0002,
+      0.0001
+    ],
+    "gradient_tolerance_hartree_per_bohr": 1e-07,
+    "hessian_vector_tolerance_hartree_per_bohr2": 1e-06
+  },
+  "validation": {
+    "regression_states": 15,
+    "regression_molecules": 14,
+    "prospective_molecules": 4,
+    "prospective_caveat": "prior native/shell predictions existed; no nonlocal/relative-model fitting on these molecules",
+    "stationary_molecules": [
+      "nitroxyl",
+      "acetaldehyde",
+      "acetone",
+      "formamide",
+      "maleimide"
+    ],
+    "full_hessian_columns": {
+      "nitroxyl": 9,
+      "formamide": 18
+    },
+    "software_tests": 86
+  },
+  "automatic_initialization": "native_roks_composite_seed_paths: two certified ROKS CSFs; response/seed SHA256, promotion, occupations, saddle index checked; existing accepted generation takes priority",
+  "source_sha256": {
+    "packages/matrix-gfn2/src/matrix_gfn2/__init__.py": "99f166963a746484eb16953c3e24cdcefe84443372bac2f6aa30a5c7ba5c7566",
+    "packages/matrix-gfn2/src/matrix_gfn2/relative_pair_roks.py": "415810893a968dc5703707bef13727bab084ed6f9e738610d5baddf96575700d",
+    "packages/matrix-gfn2/src/matrix_gfn2/shared_pair_roks.py": "0e34b3dcdb621df6feb358dab5c85bb68a4cfb02e622637b50094a5d8d3a4174",
+    "packages/matrix-gfn2/src/matrix_gfn2/ground_referenced_roks.py": "863138e44314bb1612f160a2f53d151440c32801bb426e70e5a8378fc3679b06",
+    "packages/matrix-gfn2/src/matrix_gfn2/restricted_ground.py": "001f44f6d3cb78e3a47fdb6f31e2511e9bfcce7858dbc7726aacf0fe7d1456b2",
+    "packages/matrix-gfn2/src/matrix_gfn2/roks.py": "66c65d515e133ee6ee4cf409af7135b9960e055500f2c76616da11815891e796",
+    "packages/matrix-gfn2/src/matrix_gfn2/roks_tracking.py": "8ce9bf244a0d3f9aacf1fcdca70d6a258a7151b63d5fb70929d25564333d944f",
+    "packages/matrix-gfn2/src/matrix_gfn2/orbital_saddle.py": "520a6327ceb05d9a39c48d9f32ab7df572fe20e40683110bb8b5f46b6c1e1a4e",
+    "packages/matrix-gfn2/src/matrix_gfn2/roks_orbital_response.py": "b74f227202319c291b899a9ebfe4d53a603510d522279c39472a68a3f8652b51",
+    "packages/matrix-gfn2/src/matrix_gfn2/local_frame_response.py": "42e5b799215ac91395a20945cc465a6c7f5c85545276b9cadac296c7ca0c8fce",
+    "packages/matrix-gfn2/src/matrix_gfn2/nonlocal_response.py": "d599bf6b0a45462ba3815c0ff911b447969f2e97d89ef6c91b27b4ea8d5ed422",
+    "packages/matrix-gfn2/src/matrix_gfn2/orbital_geometry_reference.py": "d0c82a8e48635e4bf87fee711fcbe702016f4fdfc998d02c6ac7deb1463b7681",
+    "packages/matrix-gfn2/src/matrix_gfn2/deltascf.py": "937b6b1869919ede6dd6c64c40cc58f58a2aac0f895388e65133f89d8517d648",
+    "packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py": "e2d4ace4d696b23d45c9778de96374c2047e6ff4bd96199a50b80192d639c44d",
+    "packages/matrix-link/src/matrix_link/scan.py": "9af25deae6c18c55e678d0482e702226b242ee68cba35163d44b9d963245c67e",
+    "packages/matrix-link/src/matrix_link/qmqm_component.py": "026baf29ef1108532f1a7208eebd2622c1e8d3694bfb7913190466b25ccf3901",
+    "packages/matrix-link/src/matrix_link/composite_roks_component.py": "a3f3a0be3168d33a02eea3ab844f4018ca27c8cb92f9f5193c545c831e29df84",
+    "packages/matrix-link/src/matrix_link/shared_roks_component.py": "d070fc33e524ba3ef7b02700478be657c064298af14f059805db23dfc43be729",
+    "qualification/test_relative_pair_roks.py": "b4ecf9b8a5631175ba71bf5e9b983f68a2fdd55a935327bf10e16fb8291d577a",
+    "qualification/test_shared_pair_roks.py": "b1d2ef6a371464b0e93b6d9444485780dac5e51c5a676a7dd483e0723f8bc7ea",
+    "qualification/test_orbital_saddle.py": "dad1df8bfd0109f92c685ae8bf754bb3afca1499a35b2208d34c6878cdaa8f1d",
+    "examples/roks_relative_pair.py": "3d01e19c47caf3b37165ecd343c9b22a1a96a5ec41fae337e62f13a6e92f9458",
+    "packages/matrix-gfn2/src/matrix_gfn2/calculator.py": "00151fc37cae8532c73438bacc086e5d12476f069d217f01f9ee844640234abf",
+    "packages/matrix-gfn2/src/matrix_gfn2/response_reference.py": "45fe555e2071be238b5841470cfdf6927e96c3e960c8fe3338ec91fa1cd24b67",
+    "packages/matrix-gfn2/src/matrix_gfn2/spin_reference.py": "dedb7d13b373d03f4e0acf4cea63e72512b91d860c8edbc3c8a9b7f0dd54592b",
+    "packages/matrix-gfn2/src/matrix_gfn2/deltascf_derivatives.py": "739cafb798623dc5a314634733abbb69ba7f4828a4bbc348c909d7067aee067c",
+    "packages/matrix-gfn2/src/matrix_gfn2/spin_polarization.py": "8aa2f5315b43e6a6c36320a359d5931b57bbfe235ff1d0fa4d047be40cc2a860",
+    "packages/matrix-gfn2/src/matrix_gfn2/lowdin_operator_jet.py": "61a4aec09abac5dac2ee3c5a4e8f0ec336164d2c962fbc747a1eae688ba6c4a3",
+    "packages/matrix-apoc/src/matrix_apoc/deltascf.py": "6478dd94bf9301e23f5fae9a314d567b14eb6e04ac6304b3a9046c3e24eb1239",
+    "packages/matrix-apoc/src/matrix_apoc/__init__.py": "4bfe722cec6850db8432ba83fef7134916eabab54ecdf9f911f30adcb73abe76"
+  },
+  "default_changed": false,
+  "scientific_scope": "validated constrained composite candidate; universal accuracy not established"
+}

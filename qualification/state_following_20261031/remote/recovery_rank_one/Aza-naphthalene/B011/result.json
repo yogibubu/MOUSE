@@ -1,0 +1,33 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Aza-naphthalene",
+  "state": "B011",
+  "status": "matched",
+  "excitation_ev": 5.278554329461959,
+  "endpoint_energy_check_hartree": 0.0,
+  "joint_residual": 7.095582801874833e-13,
+  "joint_index": 8,
+  "minimum_curvature": 0.0011176208577442191,
+  "final_guard": {
+    "local_csf": 0.9999999999999913,
+    "anchor_active": 0.990817930901284,
+    "transition": 0.9965862978185464,
+    "raw_transition": 0.9512314443640572,
+    "transition_metric": "rank_one",
+    "rank_one_limit": 0.9544897882363348,
+    "rank_one_margin": 0.7948784631903452,
+    "sector_norm": 0.9983068282853855,
+    "accepted": true
+  },
+  "seconds_current_run": 462.5486740540364,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "baseline_untouched": true,
+  "exploratory_solver_recovery": true,
+  "reference_labels_read": false,
+  "baseline_result": null
+}

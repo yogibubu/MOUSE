@@ -1,0 +1,172 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Nitropyridine_N-oxide",
+  "state": "B029",
+  "status": "matched",
+  "excitation_ev": 4.153172126825745,
+  "joint_residual": 2.557572209571646e-13,
+  "joint_index": 8,
+  "minimum_curvature_hartree": 0.0011715534811939485,
+  "guards": [
+    {
+      "local_csf": 0.9999999999999886,
+      "anchor_active": 1.0000000000000004,
+      "transition": 0.8229653528412182,
+      "raw_transition": 0.8229653528412182,
+      "transition_metric": "raw",
+      "rank_one_limit": 0.9789956944635118,
+      "rank_one_margin": 0.8333433975959027,
+      "sector_norm": 0.9548756710434261,
+      "accepted": true
+    },
+    {
+      "local_csf": 1.0,
+      "anchor_active": 0.8217520455559346,
+      "transition": 0.8373987284578265,
+      "raw_transition": 0.8373987284578265,
+      "transition_metric": "raw",
+      "rank_one_limit": 0.9789956944635118,
+      "rank_one_margin": 0.8333433975959027,
+      "sector_norm": 0.9835261010940906,
+      "accepted": true
+    }
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "reference_labels_read": false,
+  "baseline_preserved": true,
+  "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+  "parent_reports": [
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Nitropyridine_N-oxide",
+      "state": "B029",
+      "profile": "full",
+      "qualified": true,
+      "solver": "newton",
+      "seed": "retained_full",
+      "residual": 5.041765616109473e-13,
+      "index": 3,
+      "energy_hartree": -25.956897356584797,
+      "guard": {
+        "local_csf": 0.9999999999999606,
+        "anchor_active": 0.8044135728075528,
+        "transition": 0.822965352841218,
+        "raw_transition": 0.822965352841218,
+        "transition_metric": "raw",
+        "rank_one_limit": 0.9789956944635118,
+        "rank_one_margin": 0.8333433975959027,
+        "sector_norm": 0.9548756710434241,
+        "accepted": true
+      },
+      "initialization_search": false,
+      "identity_policy": "raw_target_weight_gt_half_and_competing_root_margin",
+      "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Nitropyridine_N-oxide/B029/full/majority_v1/stationary.npz",
+      "request_hash": "assigned_nto_parent_v1",
+      "seconds": 1.278922452009283,
+      "attempts": [],
+      "model_sha256": "ea42595a692d691b1b58ec2c7d9c4fe100079da55b7a7b8393ac07c08d9221d5",
+      "reference_labels_read": false
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Nitropyridine_N-oxide",
+      "state": "B029",
+      "profile": "spectral",
+      "qualified": true,
+      "solver": "newton",
+      "seed": "native_stationary",
+      "residual": 9.362356809955452e-16,
+      "index": 6,
+      "energy_hartree": -30.478768603568074,
+      "guard": {
+        "local_csf": 1.0,
+        "anchor_active": 0.8377011823254239,
+        "transition": 0.837398728457826,
+        "raw_transition": 0.837398728457826,
+        "transition_metric": "raw",
+        "rank_one_limit": 0.9789956944635118,
+        "rank_one_margin": 0.8333433975959027,
+        "sector_norm": 0.9835261010940889,
+        "accepted": true
+      },
+      "initialization_search": false,
+      "identity_policy": "raw_target_weight_gt_half_and_competing_root_margin",
+      "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Nitropyridine_N-oxide/B029/spectral/majority_v1/stationary.npz",
+      "request_hash": "assigned_nto_parent_v1",
+      "seconds": 7.9001671859878115,
+      "attempts": [],
+      "model_sha256": "7e1b1db7dd3b98b0f91752218c4721342136d49a19ad9d9dac3fdea09848a8a6",
+      "reference_labels_read": false
+    }
+  ],
+  "seconds_current_run": 14.044053160003386,
+  "component_gaps_ev": [
+    4.129560796410204,
+    4.176783457241188
+  ],
+  "ground_certificates": [
+    {
+      "residual": 8.025240338741414e-16,
+      "index": 0,
+      "minimum_curvature": 0.35480028297745353
+    },
+    {
+      "residual": 3.884133687434028e-14,
+      "index": 0,
+      "minimum_curvature": 0.5293658628517908
+    },
+    {
+      "residual": 8.174756735993631e-16,
+      "index": 0,
+      "minimum_curvature": 0.2556359732935078
+    }
+  ],
+  "assignment_audit": {
+    "molecule": "Nitropyridine_N-oxide",
+    "state": "B029",
+    "target_root": 1,
+    "symmetry": "A1",
+    "target_parent_fidelities": [
+      0.8406220349030257,
+      0.8553650778992645
+    ],
+    "margins_against_other_converged_representable_same_symmetry_roots": [
+      0.8406220349030257,
+      0.8553650778992645
+    ],
+    "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+      0.7683442778881717,
+      0.7818196952035483
+    ],
+    "target_raw_overlaps": [
+      0.8229653528412181,
+      0.8373987284578263
+    ],
+    "target_weight_gt_half": true,
+    "uniquely_assigned": true,
+    "reference_coverage_complete": false,
+    "available_same_symmetry_candidates": [
+      {
+        "root": 1,
+        "converged": true,
+        "projection_norm": 0.9336289495487609,
+        "rank_one_limit": 0.9789956944635118,
+        "parent_fidelities": [
+          0.8406220349030257,
+          0.8553650778992645
+        ],
+        "parent_projected_overlaps": [
+          0.7683442778881717,
+          0.7818196952035483
+        ],
+        "representable_single_pair": true
+      }
+    ],
+    "numerical_reference_energies_used": false
+  }
+}

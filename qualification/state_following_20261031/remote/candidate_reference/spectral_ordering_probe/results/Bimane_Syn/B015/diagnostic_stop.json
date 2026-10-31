@@ -1,0 +1,4 @@
+{
+  "reason": "Fixed native S0 sector guard blocks a locally continuous reference-like branch; inspect actual Q ground chart before further continuation",
+  "accepted_checkpoint_preserved": true
+}

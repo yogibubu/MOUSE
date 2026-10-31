@@ -1,0 +1,15 @@
+{
+  "molecule": "Furan",
+  "state": "B022",
+  "original_canonical_gap_hartree": 0.2493192208762422,
+  "selected_profile": "original_qualified_spectral",
+  "selected_model": "/home/enzo/MOUSE-publication-validation-20261030/results/qualified_spectral_response/Furan/model.npz",
+  "selected_model_sha256": "83d7fe4fe564e27b540e5f513af34f7004d438d6f833592b5b8420d406315e64",
+  "prediction_source": "/home/enzo/MOUSE-state-following-20261031/recovery_rank_one/Furan/B022/result.json",
+  "prediction_sha256": "81dd4dd93cd22b1345efd2a9cda25b72349317079b774a702fc1c8b2a68a58be",
+  "status": "matched",
+  "excitation_ev": 7.973905034751296,
+  "joint_residual": 1.9205470547234427e-13,
+  "reused_without_recalculation": true,
+  "response_unchanged": true
+}

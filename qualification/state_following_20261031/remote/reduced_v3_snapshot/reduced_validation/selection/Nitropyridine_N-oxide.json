@@ -1,0 +1,9 @@
+{
+  "molecule": "Nitropyridine_N-oxide",
+  "original_canonical_gap_hartree": 0.07922152601813243,
+  "selected_profile": "original_qualified_spectral",
+  "selected_model": "/home/enzo/MOUSE-publication-validation-20261030/results/qualified_spectral_response/Nitropyridine_N-oxide/model.npz",
+  "selected_model_sha256": "7e1b1db7dd3b98b0f91752218c4721342136d49a19ad9d9dac3fdea09848a8a6",
+  "response_unchanged": true,
+  "reference_excitation_labels_read": false
+}

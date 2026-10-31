@@ -1,0 +1,19 @@
+{
+  "host": "oracle.sns.it",
+  "status": "passed",
+  "cases": [
+    {
+      "exchange_fraction": 1.0,
+      "pyscf_A_max_error_hartree": 3.552713678800501e-15,
+      "uncorrected_static_max_error_hartree": 0.423710897216413,
+      "eigenvalue_max_error_hartree": 7.549516567451064e-15
+    },
+    {
+      "exchange_fraction": 0.225,
+      "pyscf_A_max_error_hartree": 3.552713678800501e-15,
+      "uncorrected_static_max_error_hartree": 0.10050120135807461,
+      "eigenvalue_max_error_hartree": 1.4210854715202004e-14
+    }
+  ],
+  "scope": "independent response-operator validation on water/STO-3G; benchmark TDA still uses corrected GFN2 orbitals"
+}

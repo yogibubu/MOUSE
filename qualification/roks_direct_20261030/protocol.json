@@ -1,0 +1,13 @@
+{
+ "schema": "mouse.roks.direct.v1", "compute_host": "oracle.sns.it", "molecules": ["nitroxyl","acetaldehyde","maleimide"],
+ "weights": [0.5,0.5], "lambda_exchange": 0.9, "energy_offset": 0.0,
+ "functional": "same absolute physical GFN2 plus existing frozen responses; core eigensystem is only an AO chart, never an S0 solution",
+ "ground_scc_evaluations": 0, "ground_excitation_gap": "not evaluated during a total-excited-energy geometry calculation",
+ "tracking": "full CSF overlap >=0.7 from last accepted point for each component; active-pair overlap >=0.7 across the explicitly different full/spectral Hamiltonians",
+ "initial_anchor": "retained for diagnostics; original active character may evolve continuously along the connected electronic branch; no hard long-path overlap threshold",
+ "saddle_indices": "same initial indices and bounded adjacent-index following; component indices remain certified",
+ "maximum_additional_steps": 120,
+ "qualification": "unchanged max force 3e-5 Ha/bohr, exact relaxed analytic Hessian, no vibrational mode below -20 cm^-1, central-gradient Hessian-vector checks at 2e-4 and 1e-4 bohr",
+ "accuracy": "compare certified geometry with existing published references; connected-state relaxation does not by itself establish spectroscopic n/pi purity or accuracy",
+ "restart": "migrate last accepted checkpoints, preserve anchors and reused optimizer Hessians; no recalibration or re-running completed parent phases"
+}

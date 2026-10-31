@@ -1,0 +1,316 @@
+{
+  "host": "oracle.sns.it",
+  "rows": [
+    {
+      "molecule": "Bimane_Syn",
+      "state": "B015",
+      "target_root": 1,
+      "symmetry": "A\"",
+      "target_parent_fidelities": [
+        0.9356773352793664,
+        0.9491536334910737
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9356773352793664,
+        0.9491536334910737
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.847422134775316,
+        0.8596273180888824
+      ],
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 1,
+          "converged": true,
+          "projection_norm": 0.9244665875446673,
+          "rank_one_limit": 0.9796760127616264,
+          "parent_fidelities": [
+            0.9356773352793664,
+            0.9491536334910737
+          ],
+          "parent_projected_overlaps": [
+            0.847422134775316,
+            0.8596273180888824
+          ],
+          "representable_single_pair": true
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Diazirine",
+      "state": "B001",
+      "target_root": 1,
+      "symmetry": "B1",
+      "target_parent_fidelities": [
+        0.98457950375753,
+        0.9965537663103182
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.98457950375753,
+        0.9965537663103182
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.7104154608234801,
+        0.7170434567065804
+      ],
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 1,
+          "converged": true,
+          "projection_norm": 0.9350349314600543,
+          "rank_one_limit": 0.9999013002849029,
+          "parent_fidelities": [
+            0.98457950375753,
+            0.9965537663103182
+          ],
+          "parent_projected_overlaps": [
+            0.9205253642533988,
+            0.9317206129418031
+          ],
+          "representable_single_pair": true
+        },
+        {
+          "root": 8,
+          "converged": true,
+          "projection_norm": 0.37227262506453007,
+          "rank_one_limit": 0.9994212616772684,
+          "parent_fidelities": [
+            0.014810945512548213,
+            0.014046637156580702
+          ],
+          "parent_projected_overlaps": [
+            0.0055105185706179945,
+            0.005226152161622082
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 16,
+          "converged": true,
+          "projection_norm": 0.2917995903915542,
+          "rank_one_limit": 0.9937809516196857,
+          "parent_fidelities": [
+            0.01739468190498046,
+            0.007513903357350203
+          ],
+          "parent_projected_overlaps": [
+            0.005044194651297559,
+            0.0021789183229996663
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 21,
+          "converged": true,
+          "projection_norm": 0.22323564375924798,
+          "rank_one_limit": 0.9776591220756438,
+          "parent_fidelities": [
+            0.9627100981035525,
+            0.9836369574494485
+          ],
+          "parent_projected_overlaps": [
+            0.2101099034299188,
+            0.2146771562352226
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 23,
+          "converged": true,
+          "projection_norm": 0.2792004198631256,
+          "rank_one_limit": 0.9879197753509452,
+          "parent_fidelities": [
+            0.12048097619908277,
+            0.12913773475247323
+          ],
+          "parent_projected_overlaps": [
+            0.0332319804466672,
+            0.03561975352133441
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 27,
+          "converged": true,
+          "projection_norm": 0.2741822286007126,
+          "rank_one_limit": 0.9841306835391225,
+          "parent_fidelities": [
+            0.0024518911090001434,
+            0.012997723808043636
+          ],
+          "parent_projected_overlaps": [
+            0.0006615965830204197,
+            0.0035071906851326337
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 31,
+          "converged": true,
+          "projection_norm": 0.3253426586544244,
+          "rank_one_limit": 0.9975412278978588,
+          "parent_fidelities": [
+            0.029424015024208095,
+            0.024503325243699317
+          ],
+          "parent_projected_overlaps": [
+            0.00954934972809177,
+            0.007952375706060251
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 33,
+          "converged": true,
+          "projection_norm": 0.3873506523498938,
+          "rank_one_limit": 0.9988543820096807,
+          "parent_fidelities": [
+            0.002941497912479567,
+            0.0012638611271573424
+          ],
+          "parent_projected_overlaps": [
+            0.0011380858283022185,
+            0.0004889965862825787
+          ],
+          "representable_single_pair": false
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Furan",
+      "state": "B022",
+      "target_root": 5,
+      "symmetry": "A1",
+      "target_parent_fidelities": [
+        0.9663221311150626,
+        0.9611972961813676
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9663221311150626,
+        0.9611972961813676
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.16992543301282398,
+        0.16813480527353392
+      ],
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 5,
+          "converged": true,
+          "projection_norm": 0.8468448362569544,
+          "rank_one_limit": 0.7297106700885369,
+          "parent_fidelities": [
+            0.9663221311150626,
+            0.9611972961813676
+          ],
+          "parent_projected_overlaps": [
+            0.5971404161609325,
+            0.5939735156351923
+          ],
+          "representable_single_pair": true
+        },
+        {
+          "root": 13,
+          "converged": true,
+          "projection_norm": 0.19998113214226892,
+          "rank_one_limit": 0.6893694923080069,
+          "parent_fidelities": [
+            0.8120336552840683,
+            0.806784539846416
+          ],
+          "parent_projected_overlaps": [
+            0.11194768367477681,
+            0.11122403594076619
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 16,
+          "converged": true,
+          "projection_norm": 0.5783921791844143,
+          "rank_one_limit": 0.7477865613033963,
+          "parent_fidelities": [
+            0.9877485657126629,
+            0.9845665343596702
+          ],
+          "parent_projected_overlaps": [
+            0.4272149831481085,
+            0.4258387103616584
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 19,
+          "converged": true,
+          "projection_norm": 0.1739260768054754,
+          "rank_one_limit": 0.9273476113588682,
+          "parent_fidelities": [
+            0.9794852877678873,
+            0.9754309473187576
+          ],
+          "parent_projected_overlaps": [
+            0.1579811153401506,
+            0.1573271910452979
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 32,
+          "converged": true,
+          "projection_norm": 0.33746995973111543,
+          "rank_one_limit": 0.9833067686802509,
+          "parent_fidelities": [
+            0.11495615812657389,
+            0.11473499984834565
+          ],
+          "parent_projected_overlaps": [
+            0.038146648663794046,
+            0.038073260275767254
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 35,
+          "converged": true,
+          "projection_norm": 0.3195158209308461,
+          "rank_one_limit": 0.7866157588581106,
+          "parent_fidelities": [
+            0.6873114001174022,
+            0.6836292707611119
+          ],
+          "parent_projected_overlaps": [
+            0.17274622174069323,
+            0.17182076941420632
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 38,
+          "converged": true,
+          "projection_norm": 0.5302181323206521,
+          "rank_one_limit": 0.7018715805635244,
+          "parent_fidelities": [
+            0.8147385293394673,
+            0.8162658530261895
+          ],
+          "parent_projected_overlaps": [
+            0.30320090142984857,
+            0.30376928736216086
+          ],
+          "representable_single_pair": false
+        }
+      ],
+      "numerical_reference_energies_used": false
+    }
+  ],
+  "scope": "available frozen DFT roots only; absence of additional roots is not proof of global uniqueness",
+  "baseline_untouched": true
+}

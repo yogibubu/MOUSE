@@ -1,0 +1,36 @@
+{
+  "status": "withdrawn_as_TDA_benchmark",
+  "reason": "missing antisymmetric nonlocal exchange in static response",
+  "archival_measurements": [
+    {
+      "molecule": "acetaldehyde",
+      "tda_two_all_roots_seconds": 0.03395784000167623,
+      "roks_one_state_warm_seconds": 0.29834924900205806,
+      "maximum_tda_matrix_error": 6.983302824892235e-13
+    },
+    {
+      "molecule": "acetone",
+      "tda_two_all_roots_seconds": 0.09924153698375449,
+      "roks_one_state_warm_seconds": 0.8689700270188041,
+      "maximum_tda_matrix_error": 7.320810624378282e-13
+    },
+    {
+      "molecule": "formamide",
+      "tda_two_all_roots_seconds": 0.028507593960966915,
+      "roks_one_state_warm_seconds": 0.24699549499200657,
+      "maximum_tda_matrix_error": 1.6038281813735011e-12
+    },
+    {
+      "molecule": "glyoxal",
+      "tda_two_all_roots_seconds": 0.04567495797527954,
+      "roks_one_state_warm_seconds": 0.4191303229890764,
+      "maximum_tda_matrix_error": 8.626432901337466e-13
+    },
+    {
+      "molecule": "nitroxyl",
+      "tda_two_all_roots_seconds": 0.012128135014791042,
+      "roks_one_state_warm_seconds": 0.07984435703838244,
+      "maximum_tda_matrix_error": 3.1397107136399427e-13
+    }
+  ]
+}

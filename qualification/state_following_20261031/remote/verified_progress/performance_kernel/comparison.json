@@ -1,0 +1,12 @@
+{
+  "host": "oracle.sns.it",
+  "matrix_shape": [
+    510,
+    510
+  ],
+  "maximum_absolute_difference": 8.881784197001252e-16,
+  "old_seconds": 4.138373181980569,
+  "new_seconds": 0.2416118280380033,
+  "kernel_speedup": 17.128189524436863,
+  "scope": "one analytic mixed-state orbital Jacobian on the identical retained nitropyridine checkpoint; not an end-to-end or TDA speed comparison"
+}

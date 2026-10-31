@@ -1,0 +1,15 @@
+{
+  "molecule": "Aza-naphthalene",
+  "state": "B011",
+  "original_canonical_gap_hartree": 0.15945055199497635,
+  "selected_profile": "original_qualified_spectral",
+  "selected_model": "/home/enzo/MOUSE-publication-validation-20261030/results/qualified_spectral_response/Aza-naphthalene/model.npz",
+  "selected_model_sha256": "2a0787853d04f2e4900d1b57877f2a9c0dc7ef31fed702e4c1c3bb3ee8f285c9",
+  "prediction_source": "/home/enzo/MOUSE-state-following-20261031/recovery_rank_one/Aza-naphthalene/B011/result.json",
+  "prediction_sha256": "ff1454f9fa9df3a9bd139a794a6318088f4620e6f0ab970be11a71acded1b8a5",
+  "status": "matched",
+  "excitation_ev": 5.278554329461959,
+  "joint_residual": 7.095582801874833e-13,
+  "reused_without_recalculation": true,
+  "response_unchanged": true
+}

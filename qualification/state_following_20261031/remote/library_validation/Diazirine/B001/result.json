@@ -1,0 +1,24 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Diazirine",
+  "state": "B001",
+  "passed": true,
+  "saved_fractions": [
+    0.2,
+    0.4
+  ],
+  "resumed_fractions": [
+    0.6000000000000001,
+    0.8,
+    1.0
+  ],
+  "accepted_fractions_not_recomputed": true,
+  "endpoint_fingerprint_exact": true,
+  "endpoint_energy_error_hartree": 0.0,
+  "endpoint_csf_overlap": 1.0,
+  "index": 1,
+  "residual": 5.635778302370831e-13,
+  "foreign_restart_rejected": true,
+  "source_sha256": "326c09d03b1a268ebc3310d2f80bfabe9c60e9cf73244b7fb61302089dc2f537",
+  "reference_labels_read": false
+}

@@ -1,0 +1,80 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Cyclopentadiene",
+  "status": "controls_complete",
+  "rows": [
+    {
+      "state": "B016",
+      "status": "matched",
+      "parent_energies_ev": [
+        8.282436392494354,
+        6.6239363501840325
+      ],
+      "mean_parent_tda_ev": 7.453186371339193
+    }
+  ],
+  "profiles": [
+    {
+      "host": "oracle.sns.it",
+      "profile": 0,
+      "model_sha256": "dcca68a456afce94e2da41da790f2cc6def2e86596df6bdfa7f8e50b4948d77c",
+      "fingerprint": "69aebbb19ea3e613e4d48ebce99ae04634fdf13ce2db27b368c8ceeb1b020325",
+      "rows": [
+        {
+          "eigen_residual_hartree": 1.6718397499726478e-16,
+          "state": "B016",
+          "status": "matched",
+          "excitation_ev": 8.282436392494354,
+          "root": 2,
+          "overlap": 0.9951217349710795,
+          "margin": 0.9023281502063681,
+          "projection_norm": 0.8383854371572895
+        }
+      ],
+      "orbitals": "canonical orbitals of the corrected GFN2 restricted ground; no DFT molecular orbitals",
+      "ground_reused": true,
+      "ground_seconds": 0.009519586979877204,
+      "tda_seconds": 0.026215581048745662,
+      "maxrss_kb": 140088,
+      "hermiticity_error": 1.214306433183765e-16,
+      "static_matrix_reused": true,
+      "nonlocal_exchange_fraction": 0.225,
+      "nonlocal_exchange_correction_max_hartree": 0.04360517129778757,
+      "projected_eri_sha256": "8f1d00796c3f06f7d92801fc3886a83b7b09735720c36d202fd3bf7e13728830",
+      "operator": "true TDA A: static charge response plus 0.5*0.225*((ib|aj)-(ij|ab))",
+      "reference_excitation_labels_read": false
+    },
+    {
+      "host": "oracle.sns.it",
+      "profile": 1,
+      "model_sha256": "57aa84557a1bc840814040f9ea2d745f5bc6e673318e7dde83fc65123e80b3fb",
+      "fingerprint": "e09546921081f413366667a83e0d4db50ac3df9f1966612a8846fcadb1394af1",
+      "rows": [
+        {
+          "eigen_residual_hartree": 2.7755575615628914e-16,
+          "state": "B016",
+          "status": "matched",
+          "excitation_ev": 6.6239363501840325,
+          "root": 2,
+          "overlap": 0.9957388450586717,
+          "margin": 0.9314007661780194,
+          "projection_norm": 0.8400923667768414
+        }
+      ],
+      "orbitals": "canonical orbitals of the corrected GFN2 restricted ground; no DFT molecular orbitals",
+      "ground_reused": true,
+      "ground_seconds": 0.009236167999915779,
+      "tda_seconds": 0.022567712992895395,
+      "maxrss_kb": 150360,
+      "hermiticity_error": 1.249000902703301e-16,
+      "static_matrix_reused": true,
+      "nonlocal_exchange_fraction": 0.225,
+      "nonlocal_exchange_correction_max_hartree": 0.043398738301585284,
+      "projected_eri_sha256": "8f1d00796c3f06f7d92801fc3886a83b7b09735720c36d202fd3bf7e13728830",
+      "operator": "true TDA A: static charge response plus 0.5*0.225*((ib|aj)-(ij|ab))",
+      "reference_excitation_labels_read": false
+    }
+  ],
+  "mean_definition": "arithmetic mean of matched parent TDA excitations; not asserted to equal a coupled composite linear-response Hessian",
+  "reference_excitation_labels_read": false
+}

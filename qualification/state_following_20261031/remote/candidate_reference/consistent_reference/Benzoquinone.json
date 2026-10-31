@@ -1,0 +1,15 @@
+{
+  "molecule": "Benzoquinone",
+  "state": "B039",
+  "original_canonical_gap_hartree": 0.1431181377262871,
+  "selected_profile": "original_qualified_spectral",
+  "selected_model": "/home/enzo/MOUSE-publication-validation-20261030/results/qualified_spectral_response/Benzoquinone/model.npz",
+  "selected_model_sha256": "9fafd7c2fa00628075485a9c8d53533e474d002198cf9623e0c9494f113fbbd9",
+  "prediction_source": "/home/enzo/MOUSE-state-following-20261031/recovery_rank_one/Benzoquinone/B039/result.json",
+  "prediction_sha256": "3b370477ade789dc3b48cdba29656f86b8e80b73087329eafabed36f47ec51b4",
+  "status": "matched",
+  "excitation_ev": 7.681227290483868,
+  "joint_residual": 4.710962522858075e-12,
+  "reused_without_recalculation": true,
+  "response_unchanged": true
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "mouse.roks.ground_recovery.v1",
+  "compute_host": "oracle.sns.it",
+  "molecule": "acetaldehyde",
+  "evidence": "cold native ground ISCF fails at descent step 1e-3 bohr; accepted-state projection certifies the same point with Fock residual 5.35e-14 hartree",
+  "method": "same native SCC and Newton correction; retry once with explicitly projected S0 from last accepted checkpoint only if independent reference fails",
+  "unchanged": "Hamiltonians, response files, 50/50 weights, lambda, orbital indices, all overlap and stationarity thresholds",
+  "resume": "latest accepted resume checkpoint and optimizer Hessian; original anchor retained; separate contract and directory",
+  "maximum_additional_steps": 80,
+  "qualification": "same stationary and analytic Hessian qualification as primary following protocol",
+  "nitroxyl": "not repeated with this policy: diagnostic seed retry did not remove canonical residual floor at 1e-3 and 2e-4 bohr"
+}

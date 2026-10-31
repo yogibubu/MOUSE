@@ -1,0 +1,95 @@
+{
+  "host_required": "oracle.sns.it",
+  "cohort": "fresh molecular holdout B; fixed after HNO/uracil development and before any B prediction",
+  "cases": [
+    {
+      "name": "acetaldehyde",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_B/acetaldehyde",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_B_inputs/Acetaldehyde.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_B_inputs/acetaldehyde.xyz",
+      "metadata_sha256": "74d302933cbb75f1b53eacccfaf08dcbeb7407ef4192b85c298f802eea6956b9",
+      "geometry_sha256": "990081886ee7efb4931c1b67341910d44fde48cbe664cdba328b09c42a309fb0",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A''",
+          "family": "npi",
+          "tbe_ev": 4.304,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "acetone",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_B/acetone",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_B_inputs/Acetone.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_B_inputs/acetone.xyz",
+      "metadata_sha256": "d16701de773da615ebe72ff65f18026ce87936a462408b46988930574e8a403b",
+      "geometry_sha256": "8152d92b156499b44c8539aae53139cf507a2c232585f640547ba82c67b9c0de",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A_2",
+          "family": "npi",
+          "tbe_ev": 4.468,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "formamide",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_B/formamide",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_B_inputs/Formamide.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_B_inputs/formamide.xyz",
+      "metadata_sha256": "47620b974252f8519039b905872d182fd6f5c4e7992a50b981bffaf8f164d4e1",
+      "geometry_sha256": "c712cbeba74703a3864f39a52b5ef9bc53ee995f9e6691db957fcd148955ab1b",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A''",
+          "family": "npi",
+          "tbe_ev": 5.644,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    }
+  ],
+  "model": "full-ao-pair-v1",
+  "basis": "aug-cc-pVDZ Cartesian",
+  "xc": "PBE0",
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "reference_root_rule": "first singlet DFT TDA root; must have specified symmetry and compact projection >=0.7; no root substitution",
+  "minimum_projection": 0.7,
+  "minimum_leading_amplitude": 0.7,
+  "minimum_csf_overlap": 0.7,
+  "minimum_transition_overlap": 0.7,
+  "orbital_residual": 1e-09,
+  "saddle_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "maximum_iterations_per_attempt": 120,
+  "calibration": "complete DFT first and second density derivatives at embedded GFN2 ground density; no TBE fitting",
+  "acceptance": {
+    "all_three_molecules_required": true,
+    "mae_below_native_roks": true,
+    "mae_below_shell_corrected_roks": true,
+    "maximum_absolute_error_ev": 0.3
+  },
+  "profile_changes_after_predictions": false,
+  "nuclear_derivatives_supported": false,
+  "default_changed": false,
+  "source_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa",
+  "source_repository": "https://github.com/pfloos/QUESTDB",
+  "model_source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad",
+  "orbital_source_sha256": "92cfa29ef730b59367d896dff58ebdf73280368e5c340f5d26a7a7424c9c2606"
+}

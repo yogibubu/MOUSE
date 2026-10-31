@@ -1,0 +1,176 @@
+{
+  "host": "oracle.sns.it",
+  "scope": "chemically assigned internal coordinates at three completed minima",
+  "rows": [
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-O",
+      "prediction": 1.3120451551206318,
+      "reference": 1.331,
+      "error": -0.01895484487936816,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-C",
+      "prediction": 1.488178896371413,
+      "reference": 1.508,
+      "error": -0.01982110362858691,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-Hald",
+      "prediction": 1.0983920243892147,
+      "reference": 1.091,
+      "error": 0.007392024389214713,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-C-O",
+      "prediction": 116.8412629321143,
+      "reference": 115.2,
+      "error": 1.6412629321143015,
+      "unit": "degree",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-C-Hald",
+      "prediction": 113.76656476112645,
+      "reference": 119.3,
+      "error": -5.533435238873551,
+      "unit": "degree",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "pyramidalization",
+      "prediction": 41.6507852526333,
+      "reference": 38.7,
+      "error": 2.9507852526332954,
+      "unit": "degree",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetone",
+      "metric": "C-O",
+      "prediction": 1.3187349268085415,
+      "reference": 1.336,
+      "error": -0.017265073191458535,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetone",
+      "metric": "C-C",
+      "prediction": 1.4887022936698706,
+      "reference": 1.507,
+      "error": -0.018297706330129282,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetone",
+      "metric": "C-C-C",
+      "prediction": 117.76138918054521,
+      "reference": 119.5,
+      "error": -1.7386108194547916,
+      "unit": "degree",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetone",
+      "metric": "pyramidalization",
+      "prediction": 30.555090728536012,
+      "reference": 42.3,
+      "error": -11.744909271463985,
+      "unit": "degree",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "maleimide",
+      "metric": "N-C",
+      "prediction": 1.3782853377561257,
+      "reference": 1.404,
+      "error": -0.025714662243874198,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "maleimide",
+      "metric": "C-O",
+      "prediction": 1.2435867821875721,
+      "reference": 1.248,
+      "error": -0.004413217812427872,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "maleimide",
+      "metric": "C-C",
+      "prediction": 1.4264724425261266,
+      "reference": 1.432,
+      "error": -0.005527557473873346,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "maleimide",
+      "metric": "C=C",
+      "prediction": 1.370856695957717,
+      "reference": 1.386,
+      "error": -0.015143304042282812,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "maleimide",
+      "metric": "N-H",
+      "prediction": 1.0123391429444055,
+      "reference": 1.006,
+      "error": 0.006339142944405518,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "maleimide",
+      "metric": "C-H",
+      "prediction": 1.071928103884867,
+      "reference": 1.074,
+      "error": -0.0020718961151331428,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "maleimide",
+      "metric": "C-N-C",
+      "prediction": 111.08972474034675,
+      "reference": 109.8,
+      "error": 1.289724740346756,
+      "unit": "degree",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "doi": "10.1021/acs.jctc.7b00921"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "host": "oracle.sns.it",
+  "recorded_utc": "2026-10-31T15:41:17.508640+00:00",
+  "reason": "Replace multi-vector uncheckpointed Davidson with validated single-vector Ritz-checkpointed exact solver; tighter linear-dependence threshold supports unchanged 1e-7 residual tolerance",
+  "old_worker_progress": {
+    "host": "oracle.sns.it",
+    "stage": "reference",
+    "molecule": "Nitropyridine_N-oxide",
+    "updated_utc": "2026-10-31T14:56:50.521333+00:00",
+    "status": "running",
+    "pid": 620701,
+    "numerical_reference_labels_read": false
+  },
+  "completed_ground_sha256": "ff8cad8dd00b6189a95924f5c4ca6343db3e46ef6a568d28d23186f711ccd33d",
+  "completed_symmetry_checkpoints": [],
+  "old_incomplete_ritz_checkpoint_available": false,
+  "completed_work_preserved": true,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "scf_and_response_hamiltonian_unchanged": true,
+  "reference_solver_validation_sha256": "f040dcaa0c41804347978644202736efd70f83c08d5883e607eff65a0a49edcb",
+  "source_sha256": {
+    "reference_eigensolver.py": "4dd204147bcfefcbcd8e0dac406d821f5dad5f2d721261063a47c9957b2fffc5",
+    "checkpointed_reference.py": "9404ea57513bd91ac7f2c6bcd5e040d954929b8623ba610a5bd158565d0e8919",
+    "verify_reference_eigensolver.py": "034131a5872047a1ae12fb070b6fd9169b728d5d553882ca8173bc4b454aa4b8"
+  }
+}

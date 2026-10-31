@@ -1,0 +1,93 @@
+{
+  "host": "oracle.sns.it",
+  "rows": [
+    {
+      "molecule": "Nitropyridine_N-oxide",
+      "state": "B004",
+      "target_root": 2,
+      "symmetry": "B1",
+      "target_parent_fidelities": [
+        0.9938733344933625,
+        0.9695871416934484
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9938733344933625,
+        0.9695871416934484
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.9467512621281348,
+        0.9236165397368485
+      ],
+      "target_raw_overlaps": [
+        0.9934432994151152,
+        0.9691676149108346
+      ],
+      "target_weight_gt_half": true,
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 2,
+          "converged": true,
+          "projection_norm": 0.9529997964509196,
+          "rank_one_limit": 0.9995673139993574,
+          "parent_fidelities": [
+            0.9938733344933625,
+            0.9695871416934484
+          ],
+          "parent_projected_overlaps": [
+            0.9467512621281348,
+            0.9236165397368485
+          ],
+          "representable_single_pair": true
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Nitropyridine_N-oxide",
+      "state": "B029",
+      "target_root": 1,
+      "symmetry": "A1",
+      "target_parent_fidelities": [
+        0.8406220349030257,
+        0.8553650778992645
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.8406220349030257,
+        0.8553650778992645
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.7683442778881717,
+        0.7818196952035483
+      ],
+      "target_raw_overlaps": [
+        0.8229653528412181,
+        0.8373987284578263
+      ],
+      "target_weight_gt_half": true,
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 1,
+          "converged": true,
+          "projection_norm": 0.9336289495487609,
+          "rank_one_limit": 0.9789956944635118,
+          "parent_fidelities": [
+            0.8406220349030257,
+            0.8553650778992645
+          ],
+          "parent_projected_overlaps": [
+            0.7683442778881717,
+            0.7818196952035483
+          ],
+          "representable_single_pair": true
+        }
+      ],
+      "numerical_reference_energies_used": false
+    }
+  ],
+  "scope": "available frozen DFT roots only; absence of additional roots is not proof of global uniqueness",
+  "baseline_untouched": true
+}

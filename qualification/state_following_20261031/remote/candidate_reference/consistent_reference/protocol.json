@@ -1,0 +1,17 @@
+{
+  "schema": "mouse.consistent.reference.v1",
+  "host": "oracle.sns.it",
+  "source_sha256": "807b9d138bb80712fdceb8bee2eacb2d782acf8cedbdf23a21e7885dcbfa4894",
+  "rule": "original qualified spectral operator if its original canonical occupied/virtual gap is strictly positive; otherwise complete projected DFT ground Fock",
+  "selection_scope": "one operator per molecular frozen anchor, independent of target and excitation labels",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "minimum_gap_hartree": 0.0,
+  "existing_cases_preserved": true,
+  "reference_excitation_labels_read": false,
+  "exploratory_method_amendment": true
+}

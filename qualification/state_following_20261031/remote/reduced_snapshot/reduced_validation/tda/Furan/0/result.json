@@ -1,0 +1,30 @@
+{
+  "host": "oracle.sns.it",
+  "profile": 0,
+  "model_sha256": "dae7693cf52e03c8889e2da3977dc72484dceaea83d6da22857dfbe485d4d91e",
+  "fingerprint": "2f00e5cba72cbcbfaafae1aac6df14c886af7f7da441ed74e80ef3cb8b019f38",
+  "rows": [
+    {
+      "eigen_residual_hartree": 4.163336342344337e-16,
+      "state": "B022",
+      "status": "matched",
+      "excitation_ev": 8.447683637746673,
+      "root": 1,
+      "overlap": 0.9966492558013115,
+      "margin": 0.9362654145047766,
+      "projection_norm": 0.8464962708367193
+    }
+  ],
+  "orbitals": "canonical orbitals of the corrected GFN2 restricted ground; no DFT molecular orbitals",
+  "ground_reused": true,
+  "ground_seconds": 0.013825412024743855,
+  "tda_seconds": 0.046236491994932294,
+  "maxrss_kb": 131908,
+  "hermiticity_error": 1.1102230246251565e-16,
+  "static_matrix_reused": true,
+  "nonlocal_exchange_fraction": 0.225,
+  "nonlocal_exchange_correction_max_hartree": 0.04812791210360981,
+  "projected_eri_sha256": "9a9fe3da66824c8cde2a6097ad56b5f7b7b00cf350634c3590694f5e3cf4e025",
+  "operator": "true TDA A: static charge response plus 0.5*0.225*((ib|aj)-(ij|ab))",
+  "reference_excitation_labels_read": false
+}

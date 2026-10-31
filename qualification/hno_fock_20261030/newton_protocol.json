@@ -1,0 +1,9 @@
+{
+ "compute_host": "oracle.sns.it", "molecule": "nitroxyl", "stage": "bounded S0 Newton line search",
+ "controls": "initial metric norm cap 0.2; at most 12 halvings; nonlinear canonical residual must decrease; at most 8 native/Newton corrections",
+ "unchanged_gates": "Fock closure 1e-10 Ha; canonical eigen residual 1e-12 Ha; same ROKS/component/active-pair continuity thresholds",
+ "unchanged_physics": "same frozen responses, lambda 0.9, weights 50/50 and zero offset",
+ "checkpoint": "results/nitroxyl/ground_resume; complete accepted states and original anchors preserved",
+ "remaining_geometry_steps": 47,
+ "reporting_fix": "ROKS optimization no longer launches an unrelated S0 SCC/Mayer descriptor calculation during final output"
+}

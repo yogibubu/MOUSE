@@ -1,0 +1,17 @@
+{
+  "schema": "mouse.roks.following.v1",
+  "compute_host": "oracle.sns.it",
+  "parent_campaign": "/home/enzo/MOUSE-roks-50-50-optimization-20261030",
+  "weights": [0.5,0.5], "lambda_exchange": 0.9, "orbital_gap_scale": 1.0, "state_energy_offset": 0.0,
+  "response": "reuse exact frozen raw/spectral files, no refit",
+  "local_guard": "full APOC cross-AO singlet CSF amplitude >= 0.7 from accepted step",
+  "global_guard": "corotating Lowdin symmetrized active-pair amplitude >= 0.7 from original anchor; full anchor CSF retained as diagnostic",
+  "global_guard_scope": "labelled AO character diagnostic; not a proof of n/pi spectroscopic assignment or PES validity far from calibration",
+  "nitroxyl": "resume main accepted checkpoint; at most one adjacent orbital-index retry per component, within +/-1 of original seed, same accepted seed, all continuity gates required",
+  "acetaldehyde": "resume negative_mode_minus accepted checkpoint; fixed original orbital indices",
+  "maleimide": "resume negative_mode_minus accepted checkpoint; fixed original orbital indices",
+  "restart": "explicit contract migration to separate directory; retain original anchor and last accepted state; start new optimizer segment at accepted geometry with saved optimizer Hessian",
+  "optimizer": "same parent tolerances and trust radii, maximum 80 additional steps",
+  "qualification": "stationary gradient, analytic nuclear Hessian, zero vibrational modes below -20 cm^-1, independent Hessian-vector checks at 2e-4 and 1e-4 bohr; report failures",
+  "fallback": "no thresholds lowered and no energy-based state selection"
+}

@@ -1,0 +1,25 @@
+{
+  "source_script": "make_publication_figures.py",
+  "data_sha256": "94d5070c945f0a63a6d57492840254c3c9fece0e049a323f03c5ed614d9ebb6b",
+  "figures": {
+    "method_workflow": "Vector diagram of the implemented method; no numerical results.",
+    "stationary_response": "Labelled schematic: E=0.5*x^2-0.5*y^2+0.5*R^2+0.45*R*x; local elimination gives Erelaxed=0.5*(1-0.45^2)*R^2. Not molecular data.",
+    "vertical_validation": "All 19 recorded energies; four prospective errors and MAEs; exact molecule identities from JSON.",
+    "molecular_minima": "Archived optimized XYZ geometries; rigid principal-axis display rotation and tilt; distance-inferred bonds, no bond-order assignment. Frequencies from SUMMARY.json.",
+    "hessian_validation": "Archived two-step HVP checks and all-column Hessian discrepancies; no new derivative evaluations.",
+    "solver_acceleration": "Measured identical-checkpoint 510-rotation orbital Jacobian; excludes preparation and nuclear derivatives; no end-to-end TDA comparison."
+  },
+  "publication_extension": {
+    "figure": "direct_stda_validation",
+    "source": "data/direct_stda_comparison.csv",
+    "electronic_compute_host": "oracle.sns.it",
+    "scope": "19 curated states, not the new blind set",
+    "assignment": "cross-AO transition identity with explicit norm/overlap/margin gates"
+  },
+  "solver_acceleration_source": {
+    "path": "data/solver_acceleration.json",
+    "sha256": "e5de4c91a9861b38c5616771c00d9d75f723f6759fadfb00c7f7af6bbd87759d",
+    "script": "make_solver_figure.py",
+    "host": "oracle.sns.it"
+  }
+}

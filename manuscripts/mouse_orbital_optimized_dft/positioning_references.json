@@ -1,0 +1,119 @@
+{
+  "stdft2014": {
+    "author": "Bannwarth, Christoph and Grimme, Stefan",
+    "title": "A simplified time-dependent density functional theory approach for electronic ultraviolet and circular dichroism spectra of very large molecules",
+    "journal": "Computational and Theoretical Chemistry",
+    "year": 2014,
+    "volume": "1040-1041",
+    "pages": "45-53",
+    "doi": "10.1016/j.comptc.2014.02.023"
+  },
+  "stdaxtb2016": {
+    "author": "Grimme, Stefan and Bannwarth, Christoph",
+    "title": "Ultra-fast computation of electronic spectra for large systems by tight-binding based simplified Tamm-Dancoff approximation (sTDA-xTB)",
+    "journal": "The Journal of Chemical Physics",
+    "year": 2016,
+    "volume": "145",
+    "pages": "054103",
+    "doi": "10.1063/1.4959605"
+  },
+  "std22026": {
+    "author": "Beaujean, Pierre and Liger, Axel and Satisha, Arya and Maraldi, Marilù G. and Bannwarth, Christoph and de Wergifosse, Marc",
+    "title": "The\n                    <tt>std2</tt>\n                    package: A computationally efficient program to calculate molecular response properties and excited states using simplified quantum chemistry methods",
+    "journal": "The Journal of Chemical Physics",
+    "year": 2026,
+    "volume": "165",
+    "pages": "152501",
+    "doi": "10.1063/5.0349975"
+  },
+  "tbgrad2023": {
+    "author": "Havenridge, Shana and Rüger, Robert and Aikens, Christine M.",
+    "title": "Analytical excited state gradients for time-dependent density functional theory plus tight binding (TDDFT + TB)",
+    "journal": "The Journal of Chemical Physics",
+    "year": 2023,
+    "volume": "158",
+    "pages": "224103",
+    "doi": "10.1063/5.0142240"
+  },
+  "aas2024": {
+    "author": "Wang, Yuchen and Havenridge, Shana and Aikens, Christine M.",
+    "title": "Implementation of energy and gradient for the TDDFT-approximate auxiliary function (aas) method",
+    "journal": "The Journal of Chemical Physics",
+    "year": 2024,
+    "volume": "161",
+    "pages": "024101",
+    "doi": "10.1063/5.0213587"
+  },
+  "deltadftb2016": {
+    "author": "Kowalczyk, Tim and Le, Khoa and Irle, Stephan",
+    "title": "Self-Consistent Optimization of Excited States within Density-Functional Tight-Binding",
+    "journal": "Journal of Chemical Theory and Computation",
+    "year": 2016,
+    "volume": "12",
+    "pages": "313-323",
+    "doi": "10.1021/acs.jctc.5b00734"
+  },
+  "dftb2025": {
+    "author": "Hourahine, B. and Berdakin, M. and Bich, J. A. and Bonafé, F. P. and Camacho, C. and Cui, Q. and Deshaye, M. Y. and Díaz Mirón, G. and Ehlert, S. and Elstner, M. and Frauenheim, T. and Goldman, N. and González León, R. A. and van der Heide, T. and Irle, S. and Kowalczyk, T. and Kubař, T. and Lee, I. S. and Lien-Medrano, C. R. and Maryewski, A. and Melson, T. and Min, S. K. and Niehaus, T. and Niklasson, A. M. N. and Pecchia, A. and Reuter, K. and Sánchez, C. G. and Scheurer, C. and Sentef, M. A. and Stishenko, P. V. and Vuong, V. Q. and Aradi, B.",
+    "title": "Recent Developments in DFTB+, a Software Package for Efficient Atomistic Quantum Mechanical Simulations",
+    "journal": "The Journal of Physical Chemistry A",
+    "year": 2025,
+    "volume": "129",
+    "pages": "5373-5390",
+    "doi": "10.1021/acs.jpca.5c01146"
+  },
+  "hybriddftb2025": {
+    "author": "Sun, Wenbo and van der Heide, Tammo and Vuong, Van-Quan and Frauenheim, Thomas and Sentef, Michael A. and Aradi, Bálint and Lien-Medrano, Carlos R.",
+    "title": "Hybrid Functional DFTB Parametrizations for Modeling Organic Photovoltaic Systems",
+    "journal": "Journal of Chemical Theory and Computation",
+    "year": 2025,
+    "volume": "21",
+    "pages": "5103-5117",
+    "doi": "10.1021/acs.jctc.5c00232"
+  },
+  "omxexc2016": {
+    "author": "Tuna, Deniz and Lu, You and Koslowski, Axel and Thiel, Walter",
+    "title": "Semiempirical Quantum-Chemical Orthogonalization-Corrected\nMethods: Benchmarks of Electronically Excited States",
+    "journal": "Journal of Chemical Theory and Computation",
+    "year": 2016,
+    "volume": "12",
+    "pages": "4400-4422",
+    "doi": "10.1021/acs.jctc.6b00403"
+  },
+  "odmx2019": {
+    "author": "Dral, Pavlo O. and Wu, Xin and Thiel, Walter",
+    "title": "Semiempirical Quantum-Chemical Methods with Orthogonalization\nand Dispersion Corrections",
+    "journal": "Journal of Chemical Theory and Computation",
+    "year": 2019,
+    "volume": "15",
+    "pages": "1743-1760",
+    "doi": "10.1021/acs.jctc.8b01265"
+  },
+  "tddftbvib2016": {
+    "author": "Rüger, Robert and Niehaus, Thomas and van Lenthe, Erik and Heine, Thomas and Visscher, Lucas",
+    "title": "Vibrationally resolved UV/Vis spectroscopy with time-dependent density functional based tight binding",
+    "journal": "The Journal of Chemical Physics",
+    "year": 2016,
+    "volume": 145,
+    "pages": "184102",
+    "doi": "10.1063/1.4966918"
+  },
+  "geometries2017": {
+    "author": "Budzák, Šimon and Scalmani, Giovanni and Jacquemin, Denis",
+    "title": "Accurate Excited-State Geometries: A CASPT2 and Coupled-Cluster Reference Database\nfor Small Molecules",
+    "journal": "Journal of Chemical Theory and Computation",
+    "year": 2017,
+    "volume": "13",
+    "pages": "6237-6252",
+    "doi": "10.1021/acs.jctc.7b00921"
+  },
+  "hnoharmonic2021": {
+    "author": "Davis, Megan C. and Fortenberry, Ryan C.",
+    "title": "(T)+EOM Quartic Force Fields for Theoretical Vibrational Spectroscopy of Electronically Excited States",
+    "journal": "Journal of Chemical Theory and Computation",
+    "year": 2021,
+    "volume": "17",
+    "pages": "4374-4382",
+    "doi": "10.1021/acs.jctc.1c00307"
+  }
+}

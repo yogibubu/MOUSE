@@ -1,0 +1,32 @@
+import importlib.util,json
+from pathlib import Path
+BASE=Path('/home/enzo/MOUSE-hno-fock-20261030')
+spec=importlib.util.spec_from_file_location('p',BASE/'source/qualification/probe.py');p=importlib.util.module_from_spec(spec);spec.loader.exec_module(p)
+np=p.np
+import matrix_gfn2.calculator as module
+from matrix_gfn2.response_reference import stationary_response_reference
+from scipy.linalg import eigh
+original=module.GFN2OrbitalState
+records=[]
+def inspect_state(**kw):
+ c,s,f,e=[kw[k] for k in ['coefficients','overlap','fock','orbital_energies_hartree']]
+ gram=c.T@s@c;err=float(np.max(abs(gram-np.eye(len(s)))))
+ records.append(dict(orthogonality_error=err,eigen_residual=float(np.max(abs(f@c-s@c*e))),overlap_eigenvalues=np.linalg.eigvalsh(s).tolist(),energies=e.tolist()))
+ if err>1e-7:np.savez_compressed(BASE/'failed_orthogonality.npz',c=c,s=s,f=f,e=e,xyz=kw['coordinates_bohr']/p.ANGSTROM_TO_BOHR)
+ return original(**kw)
+module.GFN2OrbitalState=inspect_state
+with p.threadpool_limits(limits=2):
+ # Load the newly accepted point, with its original anchor and fingerprints.
+ from types import SimpleNamespace
+ from matrix_link.composite_roks_component import restore_accepted
+ comp=SimpleNamespace(backend=p.b,run_dir=BASE/'results/nitroxyl/resume/roks_50_50',reference=None,anchor=None);restore_accepted(comp)
+ xyz=comp.reference[0].components[0].reference_state.coordinates_bohr/p.ANGSTROM_TO_BOHR
+ spec=importlib.util.spec_from_file_location('driver',BASE/'source/qualification/resume_spectrum.py');driver=importlib.util.module_from_spec(spec);spec.loader.exec_module(driver)
+ initial=np.array(json.loads((BASE/'results/nitroxyl/spectrum_migration.json').read_text())['starting_coordinates_angstrom'])
+ service,*_=driver.service_for('nitroxyl','spectrum_resume',initial)
+ calc=service._orbital_component.calculator._calculator
+ print('SETTINGS',calc._hessian_process_options(),flush=True)
+ try:r,d=stationary_response_reference(calc,xyz);print('PASS',d)
+ except Exception as exc:print('FAIL',str(exc))
+ (BASE/'orthogonality_service.json').write_text(json.dumps(records,indent=2)+'\n')
+ print(json.dumps(records,indent=2))

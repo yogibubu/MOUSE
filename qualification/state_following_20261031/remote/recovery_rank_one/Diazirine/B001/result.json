@@ -1,0 +1,81 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Diazirine",
+  "state": "B001",
+  "status": "matched",
+  "excitation_ev": 4.241949435486163,
+  "endpoint_energy_check_hartree": 0.0,
+  "joint_residual": 1.97758476261356e-15,
+  "joint_index": 1,
+  "minimum_curvature": 0.015597866492192202,
+  "final_guard": {
+    "local_csf": 1.0,
+    "anchor_active": 0.9514343885905125,
+    "transition": 0.9999003311641771,
+    "raw_transition": 0.9998016412863656,
+    "transition_metric": "rank_one",
+    "rank_one_limit": 0.9999013002849029,
+    "rank_one_margin": 0.9879801514335991,
+    "sector_norm": 0.9144893968483642,
+    "accepted": true
+  },
+  "seconds_current_run": 2.66959871200379,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "baseline_untouched": true,
+  "exploratory_solver_recovery": true,
+  "reference_labels_read": false,
+  "baseline_result": {
+    "status": "prediction_pass_complete",
+    "host": "oracle.sns.it",
+    "molecule": "Diazirine",
+    "rows": [
+      {
+        "id": "B044",
+        "status": "not_representable",
+        "reason": "fixed reference root fails symmetry or compact projection"
+      },
+      {
+        "id": "B001",
+        "molecule": "Diazirine",
+        "family": "n_pi",
+        "status": "matched",
+        "excitation_ev": 4.241949435486163,
+        "parent_gaps_ev": [
+          4.959835231914228,
+          3.5240636390581455
+        ],
+        "joint_residual": 2.0660556598883772e-15,
+        "joint_index": 1,
+        "minimum_curvature_hartree": 0.015597866491867979,
+        "identity": [
+          {
+            "profile": "full_response",
+            "transition_overlap": 0.9844823260661573,
+            "hole_norm": 0.9886975650337715,
+            "particle_norm": 0.9999999999999998
+          },
+          {
+            "profile": "qualified_spectral_response",
+            "transition_overlap": 0.9998016412863644,
+            "hole_norm": 0.9144893968506769,
+            "particle_norm": 0.9999999999999999
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset": 0.0,
+        "reference_root": 1,
+        "numerical_reference_labels_read": false
+      }
+    ],
+    "numerical_reference_labels_read": false
+  }
+}

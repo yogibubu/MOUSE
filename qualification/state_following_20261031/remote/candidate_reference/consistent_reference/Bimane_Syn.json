@@ -1,0 +1,15 @@
+{
+  "molecule": "Bimane_Syn",
+  "state": "B015",
+  "original_canonical_gap_hartree": -0.01043974712944512,
+  "selected_profile": "complete_projected_ground_fock",
+  "selected_model": "/home/enzo/MOUSE-state-following-20261031/ritz_projection_probe/models/Bimane_Syn/model.npz",
+  "selected_model_sha256": "b4221d970ddd9abaae446d8adc09fa305008f220619e087e44d179ec645e7f9d",
+  "prediction_source": "/home/enzo/MOUSE-state-following-20261031/ritz_projection_probe/results/Bimane_Syn/B015/result.json",
+  "prediction_sha256": "956344f8c23786268713a09eeef0de88f54413afb3e2784044d8bcdcfbac3e05",
+  "status": "matched",
+  "excitation_ev": 3.9114552088659638,
+  "joint_residual": 5.10702591327572e-15,
+  "reused_without_recalculation": true,
+  "response_unchanged": true
+}

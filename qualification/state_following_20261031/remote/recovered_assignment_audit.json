@@ -1,0 +1,497 @@
+{
+  "host": "oracle.sns.it",
+  "rows": [
+    {
+      "molecule": "Aza-naphthalene",
+      "state": "B011",
+      "target_root": 1,
+      "symmetry": "Au",
+      "target_parent_fidelities": [
+        0.9979923143527403,
+        0.9965862978185464
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9979923143527403,
+        0.9965862978185464
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.8735996077047448,
+        0.8723688412198397
+      ],
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 1,
+          "converged": true,
+          "projection_norm": 0.917094200773671,
+          "rank_one_limit": 0.9544897882363348,
+          "parent_fidelities": [
+            0.9979923143527403,
+            0.9965862978185464
+          ],
+          "parent_projected_overlaps": [
+            0.8735996077047448,
+            0.8723688412198397
+          ],
+          "representable_single_pair": true
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Benzoquinone",
+      "state": "B039",
+      "target_root": 2,
+      "symmetry": "B3g",
+      "target_parent_fidelities": [
+        0.9995306522635299,
+        0.9924783097397213
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.8958665510014623,
+        0.8844085472848325
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.5644934109184685,
+        0.5556752987083082
+      ],
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 1,
+          "converged": true,
+          "projection_norm": 0.9501089524130611,
+          "rank_one_limit": 0.9906689200935003,
+          "parent_fidelities": [
+            0.10366410126206754,
+            0.10806976245488877
+          ],
+          "parent_projected_overlaps": [
+            0.09757315215179564,
+            0.10171995171560672
+          ],
+          "representable_single_pair": true
+        },
+        {
+          "root": 2,
+          "converged": true,
+          "projection_norm": 0.7043342004162,
+          "rank_one_limit": 0.9404306194913788,
+          "parent_fidelities": [
+            0.9995306522635299,
+            0.9924783097397213
+          ],
+          "parent_projected_overlaps": [
+            0.6620665630702641,
+            0.657395250423915
+          ],
+          "representable_single_pair": true
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "target_root": 8,
+      "symmetry": "A1",
+      "target_parent_fidelities": [
+        0.9732014333919,
+        0.9459385808410282
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9732014333919,
+        0.9459385808410282
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.16427165807208455,
+        0.14857386272230522
+      ],
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 8,
+          "converged": true,
+          "projection_norm": 0.8400923667768415,
+          "rank_one_limit": 0.7375835622217021,
+          "parent_fidelities": [
+            0.9732014333919,
+            0.9459385808410282
+          ],
+          "parent_projected_overlaps": [
+            0.6030329016781414,
+            0.5861397935119564
+          ],
+          "representable_single_pair": true
+        },
+        {
+          "root": 14,
+          "converged": true,
+          "projection_norm": 0.20441624277204862,
+          "rank_one_limit": 0.8895364468759177,
+          "parent_fidelities": [
+            0.9502956124611928,
+            0.9140357367096814
+          ],
+          "parent_projected_overlaps": [
+            0.17279766626351548,
+            0.16620432643672337
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 20,
+          "converged": true,
+          "projection_norm": 0.5569951468206314,
+          "rank_one_limit": 0.8410122911517253,
+          "parent_fidelities": [
+            0.9366438905799211,
+            0.9340922011061275
+          ],
+          "parent_projected_overlaps": [
+            0.43876124360605684,
+            0.4375659307896512
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 24,
+          "converged": true,
+          "projection_norm": 0.31078030800272016,
+          "rank_one_limit": 0.9232701590448819,
+          "parent_fidelities": [
+            0.64309475796848,
+            0.7037076704447565
+          ],
+          "parent_projected_overlaps": [
+            0.1845258698681149,
+            0.20191778647346378
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 35,
+          "converged": true,
+          "projection_norm": 0.37445445331061233,
+          "rank_one_limit": 0.9904081422309765,
+          "parent_fidelities": [
+            0.025539281058489783,
+            0.021917042769771217
+          ],
+          "parent_projected_overlaps": [
+            0.00947156773702388,
+            0.00812821452231643
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 38,
+          "converged": true,
+          "projection_norm": 0.37428095936602024,
+          "rank_one_limit": 0.8803567380962704,
+          "parent_fidelities": [
+            0.12072643255825419,
+            0.11946066928955801
+          ],
+          "parent_projected_overlaps": [
+            0.03977945182559773,
+            0.03936238186086226
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 39,
+          "converged": true,
+          "projection_norm": 0.413269649344708,
+          "rank_one_limit": 0.71671678901947,
+          "parent_fidelities": [
+            0.1962844433830205,
+            0.2722857208095958
+          ],
+          "parent_projected_overlaps": [
+            0.058138921392135945,
+            0.08065029426432663
+          ],
+          "representable_single_pair": false
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Diazirine",
+      "state": "B001",
+      "target_root": 1,
+      "symmetry": "B1",
+      "target_parent_fidelities": [
+        0.9845795037558192,
+        0.9999003311632059
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9845795037558192,
+        0.9999003311632059
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.7104154608224579,
+        0.7179740174474434
+      ],
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 1,
+          "converged": true,
+          "projection_norm": 0.9350349314600543,
+          "rank_one_limit": 0.9999013002849029,
+          "parent_fidelities": [
+            0.9845795037558192,
+            0.9999003311632059
+          ],
+          "parent_projected_overlaps": [
+            0.9205253642517992,
+            0.9348494591329387
+          ],
+          "representable_single_pair": true
+        },
+        {
+          "root": 8,
+          "converged": true,
+          "projection_norm": 0.37227262506453007,
+          "rank_one_limit": 0.9994212616772684,
+          "parent_fidelities": [
+            0.014810945512622154,
+            0.013400306190031935
+          ],
+          "parent_projected_overlaps": [
+            0.0055105185706455055,
+            0.004985680087039472
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 16,
+          "converged": true,
+          "projection_norm": 0.2917995903915542,
+          "rank_one_limit": 0.9937809516196857,
+          "parent_fidelities": [
+            0.017394681906015418,
+            0.00012831699067788823
+          ],
+          "parent_projected_overlaps": [
+            0.005044194651597681,
+            3.720998645354243e-05
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 21,
+          "converged": true,
+          "projection_norm": 0.22323564375924798,
+          "rank_one_limit": 0.9776591220756438,
+          "parent_fidelities": [
+            0.9627100981009065,
+            0.9937093603535676
+          ],
+          "parent_projected_overlaps": [
+            0.21010990342934135,
+            0.21687544168549536
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 23,
+          "converged": true,
+          "projection_norm": 0.2792004198631256,
+          "rank_one_limit": 0.9879197753509452,
+          "parent_fidelities": [
+            0.12048097619811439,
+            0.13485212553886108
+          ],
+          "parent_projected_overlaps": [
+            0.03323198044640009,
+            0.03719594030923082
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 27,
+          "converged": true,
+          "projection_norm": 0.2741822286007126,
+          "rank_one_limit": 0.9841306835391225,
+          "parent_fidelities": [
+            0.002451891110629644,
+            0.0244079539002602
+          ],
+          "parent_projected_overlaps": [
+            0.0006615965834601097,
+            0.0065860261247560675
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 31,
+          "converged": true,
+          "projection_norm": 0.3253426586544244,
+          "rank_one_limit": 0.9975412278978588,
+          "parent_fidelities": [
+            0.02942401502471408,
+            0.02070956833230192
+          ],
+          "parent_projected_overlaps": [
+            0.009549349728255984,
+            0.006721139537220169
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 33,
+          "converged": true,
+          "projection_norm": 0.3873506523498938,
+          "rank_one_limit": 0.9988543820096807,
+          "parent_fidelities": [
+            0.002941497912655295,
+            9.944178766094311e-06
+          ],
+          "parent_projected_overlaps": [
+            0.0011380858283702089,
+            3.847471344372199e-06
+          ],
+          "representable_single_pair": false
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Furan",
+      "state": "B022",
+      "target_root": 5,
+      "symmetry": "A1",
+      "target_parent_fidelities": [
+        0.9663221311150626,
+        0.9709927252526869
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9663221311150626,
+        0.9709927252526869
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.16992543301282398,
+        0.17161736203475297
+      ],
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 5,
+          "converged": true,
+          "projection_norm": 0.8468448362569544,
+          "rank_one_limit": 0.7297106700885369,
+          "parent_fidelities": [
+            0.9663221311150626,
+            0.9709927252526869
+          ],
+          "parent_projected_overlaps": [
+            0.5971404161609325,
+            0.6000266178086598
+          ],
+          "representable_single_pair": true
+        },
+        {
+          "root": 13,
+          "converged": true,
+          "projection_norm": 0.19998113214226892,
+          "rank_one_limit": 0.6893694923080069,
+          "parent_fidelities": [
+            0.8120336552840683,
+            0.816881111306681
+          ],
+          "parent_projected_overlaps": [
+            0.11194768367477681,
+            0.1126159582837362
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 16,
+          "converged": true,
+          "projection_norm": 0.5783921791844143,
+          "rank_one_limit": 0.7477865613033963,
+          "parent_fidelities": [
+            0.9877485657126629,
+            0.9905098009682936
+          ],
+          "parent_projected_overlaps": [
+            0.4272149831481085,
+            0.42840925577390687
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 19,
+          "converged": true,
+          "projection_norm": 0.1739260768054754,
+          "rank_one_limit": 0.9273476113588682,
+          "parent_fidelities": [
+            0.9794852877678873,
+            0.9831033299918501
+          ],
+          "parent_projected_overlaps": [
+            0.1579811153401506,
+            0.15856466912398737
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 32,
+          "converged": true,
+          "projection_norm": 0.33746995973111543,
+          "rank_one_limit": 0.9833067686802509,
+          "parent_fidelities": [
+            0.11495615812657389,
+            0.11513149998756882
+          ],
+          "parent_projected_overlaps": [
+            0.038146648663794046,
+            0.03820483349248382
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 35,
+          "converged": true,
+          "projection_norm": 0.3195158209308461,
+          "rank_one_limit": 0.7866157588581106,
+          "parent_fidelities": [
+            0.6873114001174022,
+            0.6906696605377016
+          ],
+          "parent_projected_overlaps": [
+            0.17274622174069323,
+            0.17359027408600416
+          ],
+          "representable_single_pair": false
+        },
+        {
+          "root": 38,
+          "converged": true,
+          "projection_norm": 0.5302181323206521,
+          "rank_one_limit": 0.7018715805635244,
+          "parent_fidelities": [
+            0.8147385293394673,
+            0.8129519758211858
+          ],
+          "parent_projected_overlaps": [
+            0.30320090142984857,
+            0.3025360444018708
+          ],
+          "representable_single_pair": false
+        }
+      ],
+      "numerical_reference_energies_used": false
+    }
+  ],
+  "scope": "available frozen DFT roots only; absence of additional roots is not proof of global uniqueness",
+  "baseline_untouched": true
+}

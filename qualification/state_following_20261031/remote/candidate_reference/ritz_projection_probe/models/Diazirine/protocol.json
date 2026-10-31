@@ -1,0 +1,20 @@
+{
+  "schema": "mouse.projected_ground_fock.v1",
+  "host": "oracle.sns.it",
+  "source_sha256": "1e8ac3a3341bf6ca5ac011a9a36b24e8c01a45ed7a11de245720477d47471a7e",
+  "full_model_sha256": "05b679c5c231be24c26dff518d0f4b9c6945876b9733fa79c5d2f3c3673c8a98",
+  "embedding_sha256": "620d3360836139f9545fed8985546aefa19eb4df334ed2030394b81a8ae37aa7",
+  "dft_reference_sha256": "28ccddf7cf3fcafb0d8b1d4f63d20df347a934f8455d533cdfbbb8517d6a00ab",
+  "native_reference_sha256": "1fa902744f587157fa7e1a6f969e684d9ee9feba317c9b64a2a017a3340d9e59",
+  "one_body": "L.T @ (S_DFT C_DFT diag(e_DFT) C_DFT.T S_DFT) @ L - F_native; full-spectrum Galerkin projection in the existing isometric embedding",
+  "response": "exactly unchanged full AO-pair charge and spin response",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "orbital_gap_scaling": 1.0,
+  "energy_offset_ev": 0.0,
+  "reference_excitation_labels_read": false,
+  "exploratory_model_revision": true
+}

@@ -1,0 +1,194 @@
+{
+  "host": "oracle.sns.it",
+  "rows": [
+    {
+      "molecule": "Adenine",
+      "state": "B007",
+      "target_root": 1,
+      "symmetry": "A\"",
+      "target_parent_fidelities": [
+        0.9828141759710544,
+        0.9482950541992559
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9828141759710544,
+        0.9482950541992559
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.8761412041217957,
+        0.8476731018895489
+      ],
+      "target_raw_overlaps": [
+        0.9794885468180672,
+        0.9450862302374294
+      ],
+      "attainable_single_pair_fidelity_squared_gt_half": true,
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 1,
+          "converged": true,
+          "projection_norm": 0.9064549628078139,
+          "rank_one_limit": 0.9966162177608994,
+          "parent_fidelities": [
+            0.9828141759710544,
+            0.9482950541992559
+          ],
+          "parent_projected_overlaps": [
+            0.8878622542766508,
+            0.8566781036800462
+          ],
+          "representable_single_pair": true
+        },
+        {
+          "root": 3,
+          "converged": true,
+          "projection_norm": 0.396107759425095,
+          "rank_one_limit": 0.9936916262966945,
+          "parent_fidelities": [
+            0.029778412681734447,
+            0.022878040446411143
+          ],
+          "parent_projected_overlaps": [
+            0.011721050154854975,
+            0.009005001790497283
+          ],
+          "representable_single_pair": false
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Adenine",
+      "state": "B014",
+      "target_root": 2,
+      "symmetry": "A'",
+      "target_parent_fidelities": [
+        0.9503172912679726,
+        0.9528259414290112
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9503172912679726,
+        0.9528259414290112
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.8041406398760491,
+        0.8062634125165754
+      ],
+      "target_raw_overlaps": [
+        0.9022342126403237,
+        0.9046159329600862
+      ],
+      "attainable_single_pair_fidelity_squared_gt_half": true,
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 2,
+          "converged": true,
+          "projection_norm": 0.8912770416040745,
+          "rank_one_limit": 0.9494031319124021,
+          "parent_fidelities": [
+            0.9503172912679726,
+            0.9528259414290112
+          ],
+          "parent_projected_overlaps": [
+            0.8041406398760491,
+            0.8062634125165754
+          ],
+          "representable_single_pair": true
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Nitropyridine_N-oxide",
+      "state": "B004",
+      "target_root": 2,
+      "symmetry": "B1",
+      "target_parent_fidelities": [
+        0.9938733344933625,
+        0.9695871416934484
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.9938733344933625,
+        0.9695871416934484
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.9467512621281348,
+        0.9236165397368485
+      ],
+      "target_raw_overlaps": [
+        0.9934432994151152,
+        0.9691676149108346
+      ],
+      "attainable_single_pair_fidelity_squared_gt_half": true,
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 2,
+          "converged": true,
+          "projection_norm": 0.9529997964509196,
+          "rank_one_limit": 0.9995673139993574,
+          "parent_fidelities": [
+            0.9938733344933625,
+            0.9695871416934484
+          ],
+          "parent_projected_overlaps": [
+            0.9467512621281348,
+            0.9236165397368485
+          ],
+          "representable_single_pair": true
+        }
+      ],
+      "numerical_reference_energies_used": false
+    },
+    {
+      "molecule": "Nitropyridine_N-oxide",
+      "state": "B029",
+      "target_root": 1,
+      "symmetry": "A1",
+      "target_parent_fidelities": [
+        0.8406220349030257,
+        0.8553650778992645
+      ],
+      "margins_against_other_converged_representable_same_symmetry_roots": [
+        0.8406220349030257,
+        0.8553650778992645
+      ],
+      "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+        0.7683442778881717,
+        0.7818196952035483
+      ],
+      "target_raw_overlaps": [
+        0.8229653528412181,
+        0.8373987284578263
+      ],
+      "attainable_single_pair_fidelity_squared_gt_half": true,
+      "uniquely_assigned": true,
+      "reference_coverage_complete": false,
+      "available_same_symmetry_candidates": [
+        {
+          "root": 1,
+          "converged": true,
+          "projection_norm": 0.9336289495487609,
+          "rank_one_limit": 0.9789956944635118,
+          "parent_fidelities": [
+            0.8406220349030257,
+            0.8553650778992645
+          ],
+          "parent_projected_overlaps": [
+            0.7683442778881717,
+            0.7818196952035483
+          ],
+          "representable_single_pair": true
+        }
+      ],
+      "numerical_reference_energies_used": false
+    }
+  ],
+  "scope": "available frozen DFT roots only; absence of additional roots is not proof of global uniqueness",
+  "baseline_untouched": true
+}

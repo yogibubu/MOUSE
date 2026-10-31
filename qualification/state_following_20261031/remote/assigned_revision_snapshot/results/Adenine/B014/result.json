@@ -1,0 +1,172 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Adenine",
+  "state": "B014",
+  "status": "matched",
+  "excitation_ev": 5.448970972580705,
+  "joint_residual": 3.3692059558942944e-13,
+  "joint_index": 7,
+  "minimum_curvature_hartree": 0.0025287901628629136,
+  "guards": [
+    {
+      "local_csf": 1.0,
+      "anchor_active": 1.0,
+      "transition": 0.9503172912679729,
+      "raw_transition": 0.9022342126403239,
+      "transition_metric": "rank_one",
+      "rank_one_limit": 0.949403131912402,
+      "rank_one_margin": 0.6910340208240954,
+      "sector_norm": 0.9938262731109591,
+      "accepted": true
+    },
+    {
+      "local_csf": 1.0,
+      "anchor_active": 0.9192281486710084,
+      "transition": 0.9528259414290116,
+      "raw_transition": 0.9046159329600865,
+      "transition_metric": "rank_one",
+      "rank_one_limit": 0.949403131912402,
+      "rank_one_margin": 0.6910340208240954,
+      "sector_norm": 0.9900513457386143,
+      "accepted": true
+    }
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "reference_labels_read": false,
+  "baseline_preserved": true,
+  "exploratory_model_revision": "unchanged molecular reference rule; independent assigned-NTO parent initialization",
+  "parent_reports": [
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Adenine",
+      "state": "B014",
+      "profile": "full",
+      "qualified": true,
+      "solver": "newton",
+      "seed": "assigned_nto",
+      "residual": 4.5428938388880624e-14,
+      "index": 3,
+      "energy_hartree": -21.72664220358734,
+      "guard": {
+        "local_csf": 1.0,
+        "anchor_active": 0.9315600321088299,
+        "transition": 0.9503172912679728,
+        "raw_transition": 0.9022342126403238,
+        "transition_metric": "rank_one",
+        "rank_one_limit": 0.949403131912402,
+        "rank_one_margin": 0.6910340208240954,
+        "sector_norm": 0.9938262731109575,
+        "accepted": true
+      },
+      "initialization_search": false,
+      "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+      "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Adenine/B014/full/majority_v1/stationary.npz",
+      "request_hash": "assigned_nto_parent_v1",
+      "seconds": 11.227686116006225,
+      "attempts": [],
+      "model_sha256": "e6ef0925b1421146abb6b5842adf0f797d753a8fabc0d93853f6f9a8a8989dc0",
+      "reference_labels_read": false
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Adenine",
+      "state": "B014",
+      "profile": "spectral",
+      "qualified": true,
+      "solver": "newton",
+      "seed": "assigned_nto",
+      "residual": 6.729716610365255e-13,
+      "index": 4,
+      "energy_hartree": -27.02777272216287,
+      "guard": {
+        "local_csf": 1.0,
+        "anchor_active": 0.9426338816798473,
+        "transition": 0.9528259414290113,
+        "raw_transition": 0.9046159329600862,
+        "transition_metric": "rank_one",
+        "rank_one_limit": 0.949403131912402,
+        "rank_one_margin": 0.6910340208240954,
+        "sector_norm": 0.9900513457386131,
+        "accepted": true
+      },
+      "initialization_search": false,
+      "identity_policy": "attainable_single_pair_fidelity_gt_sqrt_half_plus_margin",
+      "checkpoint": "/home/enzo/MOUSE-orbital-performance-20261031/assigned_parents/Adenine/B014/spectral/majority_v1/stationary.npz",
+      "request_hash": "assigned_nto_parent_v1",
+      "seconds": 9.884063993988093,
+      "attempts": [],
+      "model_sha256": "b33928f60e4cf18c559cceaf4831ee973d649d178f2f604d8bc25e0689707030",
+      "reference_labels_read": false
+    }
+  ],
+  "seconds_current_run": 8.051433222019114,
+  "component_gaps_ev": [
+    5.79271463140127,
+    5.105227313760237
+  ],
+  "ground_certificates": [
+    {
+      "residual": 5.842077586302797e-16,
+      "index": 0,
+      "minimum_curvature": 0.46905675822425563
+    },
+    {
+      "residual": 4.211870889214252e-13,
+      "index": 0,
+      "minimum_curvature": 0.641817934483605
+    },
+    {
+      "residual": 7.840594192648729e-16,
+      "index": 0,
+      "minimum_curvature": 0.6727199399435023
+    }
+  ],
+  "assignment_audit": {
+    "molecule": "Adenine",
+    "state": "B014",
+    "target_root": 2,
+    "symmetry": "A'",
+    "target_parent_fidelities": [
+      0.9503172912679726,
+      0.9528259414290112
+    ],
+    "margins_against_other_converged_representable_same_symmetry_roots": [
+      0.9503172912679726,
+      0.9528259414290112
+    ],
+    "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+      0.8041406398760491,
+      0.8062634125165754
+    ],
+    "target_raw_overlaps": [
+      0.9022342126403237,
+      0.9046159329600862
+    ],
+    "attainable_single_pair_fidelity_squared_gt_half": true,
+    "uniquely_assigned": true,
+    "reference_coverage_complete": false,
+    "available_same_symmetry_candidates": [
+      {
+        "root": 2,
+        "converged": true,
+        "projection_norm": 0.8912770416040745,
+        "rank_one_limit": 0.9494031319124021,
+        "parent_fidelities": [
+          0.9503172912679726,
+          0.9528259414290112
+        ],
+        "parent_projected_overlaps": [
+          0.8041406398760491,
+          0.8062634125165754
+        ],
+        "representable_single_pair": true
+      }
+    ],
+    "numerical_reference_energies_used": false
+  }
+}

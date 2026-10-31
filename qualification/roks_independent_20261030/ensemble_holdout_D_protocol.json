@@ -1,0 +1,106 @@
+{
+  "host_required": "oracle.sns.it",
+  "cohort": "unused molecules D: prospective validation of the fixed 50/50 energy composite",
+  "cases": [
+    {
+      "name": "acrolein",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_D/acrolein",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_D_inputs/Acrolein.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_D_inputs/acrolein.xyz",
+      "metadata_sha256": "e8b0b5acdd4f2c056445154c3fefacfe40e43c7de1ca49fe82ef78fa7d16c585",
+      "geometry_sha256": "6dff25881df842d57762b78080d032561de5ce2245fc7f0d426ae8e1f9eb2a13",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A''",
+          "family": "npi",
+          "tbe_ev": 3.723,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "pyrimidine",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_D/pyrimidine",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_D_inputs/Pyrimidine.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_D_inputs/pyrimidine.xyz",
+      "metadata_sha256": "d806e67243e02f70bf52f0b99a7730f660e4d8c6b594e2812e5c8240c0b3c8f1",
+      "geometry_sha256": "e3cb7babe53942641c523217bc9d1b853e5dcb30400d134149b5ded4f6eea5a6",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "B_1",
+          "family": "npi",
+          "tbe_ev": 4.451,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "nitrosomethane",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_D/nitrosomethane",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_D_inputs/Nitrosomethane.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_D_inputs/nitrosomethane.xyz",
+      "metadata_sha256": "1b55e41332893ae6bae975bc66297d281c4fd703d961b869ff1e1c36e8593352",
+      "geometry_sha256": "f74fdd75d28172196aff184b219aefa2481d6cdd26c0bbbfded22d50d4403185",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A''",
+          "family": "npi",
+          "tbe_ev": 1.952,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    }
+  ],
+  "model": "half stationary raw-full ROKS gap plus half stationary qualified-spectral ROKS gap; two independently optimized common-orbital singlet CSFs",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "fitted_weights": false,
+  "basis": "aug-cc-pVDZ Cartesian",
+  "xc": "PBE0",
+  "lambda_exchange": 0.9,
+  "gap_scale": 1.0,
+  "state_energy_offset": 0.0,
+  "profile_sha256": "a7725f3059ef6dc3fc9615909e0969673ab89d84b35d054483cb888b32418b3f",
+  "profile_source_sha256": "497716ecb259f1eb4d4a1d02046abc0227034fb0f049a6301761e87f4199f136",
+  "calibration_source_sha256": "095079c5f64b0482acca00b52248264d979f2bbd9119b148cc3b8a1f6d17bcad",
+  "raw_source_sha256": "92cfa29ef730b59367d896dff58ebdf73280368e5c340f5d26a7a7424c9c2606",
+  "reference_solver": "unmodified first-singlet TDA operator; checkpointed Davidson, residual <1e-8; no root substitution",
+  "reference_root_rule": "first singlet DFT TDA root, specified symmetry and compact projection >=0.7",
+  "minimum_projection": 0.7,
+  "minimum_leading_amplitude": 0.7,
+  "minimum_csf_overlap": 0.7,
+  "minimum_transition_overlap": 0.7,
+  "orbital_residual": 1e-09,
+  "saddle_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "maximum_iterations_per_attempt": 120,
+  "acceptance": {
+    "all_three_molecules_required": true,
+    "both_components_positive_and_qualified": true,
+    "ensemble_mae_below_native": true,
+    "ensemble_mae_below_both_components": true,
+    "maximum_absolute_error_ev": 0.5
+  },
+  "profile_changes_after_predictions": false,
+  "nuclear_derivatives_supported": false,
+  "default_changed": false,
+  "source_repository": "https://github.com/pfloos/QUESTDB",
+  "source_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa",
+  "nitrosomethane_geometry": "QUEST nitrosomethane_1, explicitly labelled ground state. Original missing atom-count line retained; normalized XYZ adds 6 without changing coordinates.",
+  "nitrosomethane_raw_geometry_sha256": "f74fdd75d28172196aff184b219aefa2481d6cdd26c0bbbfded22d50d4403185"
+}

@@ -1,0 +1,9 @@
+{
+  "cycle": 10,
+  "vectors": 11,
+  "residuals": [
+    3.042157651824192e-08
+  ],
+  "seconds_current_run": 49.253884078003466,
+  "ritz_checkpoint_saved": true
+}

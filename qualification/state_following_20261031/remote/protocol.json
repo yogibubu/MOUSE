@@ -1,0 +1,28 @@
+{
+  "host": "oracle.sns.it",
+  "method": "adaptive F-to-Q continuation with a local CSF and fixed global transition trial guard; certified analytic orbital Newton; final relative-pair solve unchanged",
+  "source_sha256": {
+    "/local/scratch/home/enzo/MOUSE-state-following-20261031/continuation_recovery.py": "4ff12fff6184a314e2dbb144115bc9f8af923eb68685e11048f7237c81bd38fa",
+    "/home/enzo/MOUSE-state-following-20261031/source/packages/matrix-gfn2/src/matrix_gfn2/orbital_saddle.py": "3d73883d3583547ea027886c832378e102e22a9ffce98166596a264dd09ff36c",
+    "/home/enzo/MOUSE-state-following-20261031/source/packages/matrix-gfn2/src/matrix_gfn2/roks_tracking.py": "cbe2d95737360107ed29b43855f7cf1eb976aa111997fcd44788f5d21ce282ae",
+    "/home/enzo/MOUSE-state-following-20261031/source/packages/matrix-gfn2/src/matrix_gfn2/roks_orbital_response.py": "73beb3508cbc484ec57b96bdfef41e10b2e72c0bb42119c6fe51b3bca5f19a0d"
+  },
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "guard_thresholds": {
+    "local_csf": 0.9,
+    "active": 0.7,
+    "transition": 0.7,
+    "sector_norm": 0.7
+  },
+  "initial_step": 0.2,
+  "minimum_step": 0.0005,
+  "maximum_step": 0.2,
+  "newton_iterations": 80,
+  "fit_reference_energies": false,
+  "exploratory_numerical_recovery_not_original_blind_baseline": true
+}

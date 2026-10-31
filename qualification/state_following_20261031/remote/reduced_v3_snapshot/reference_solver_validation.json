@@ -1,0 +1,10 @@
+{
+  "host": "oracle.sns.it",
+  "status": "passed",
+  "dense_reference_error_hartree": 2.220446049250313e-16,
+  "residual": 4.3210249853288585e-11,
+  "restart_uses_saved_ritz_vector": true,
+  "foreign_checkpoint_rejected": true,
+  "maximum_space_increment": 1,
+  "operator_unchanged": true
+}

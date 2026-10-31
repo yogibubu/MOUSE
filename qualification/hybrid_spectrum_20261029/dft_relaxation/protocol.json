@@ -1,0 +1,29 @@
+{
+  "schema": "common-orbital-dft-relaxation-v1",
+  "host_required": "oracle.sns.it",
+  "xc": "PBE0",
+  "grid_level": 3,
+  "small_rho_cutoff": 0.0,
+  "threads": 2,
+  "max_memory_mb": 20000,
+  "orbital_tolerance": 1e-07,
+  "maximum_iterations": 45,
+  "trust_radius": 0.35,
+  "minimum_seed_csf_overlap": 0.7,
+  "minimum_step_csf_overlap": 0.9,
+  "gmres_rtol": 0.08,
+  "gmres_restart": 24,
+  "gmres_maxiter": 2,
+  "orbital_space": "full AO; all core and valence orbitals may relax",
+  "objective": "2*UKS(mixed)-UKS(triplet), common orbitals",
+  "solver": "analytic-response Newton-GMRES with residual line search",
+  "cases": [
+    "uracil",
+    "thymine"
+  ],
+  "states": [
+    "n_pi",
+    "pi_pi"
+  ],
+  "parameters_fitted": 0
+}

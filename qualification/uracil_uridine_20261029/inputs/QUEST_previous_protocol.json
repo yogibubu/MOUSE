@@ -1,0 +1,106 @@
+{
+  "system": "uracil",
+  "geometry": "uracil.xyz",
+  "production_commit": "c609f5455",
+  "quest_repository": "https://github.com/pfloos/QUESTDB",
+  "quest_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa",
+  "license": "CC BY-SA 4.0",
+  "cases": [
+    {
+      "method": "B3LYP",
+      "basis": "aug-cc-pVDZ"
+    },
+    {
+      "method": "PBE0",
+      "basis": "aug-cc-pVDZ"
+    },
+    {
+      "method": "PBE0",
+      "basis": "aug-cc-pVTZ"
+    }
+  ],
+  "response_scale": 0.9,
+  "radial_model": "original exponent-two Ohno J and K",
+  "targets": [
+    {
+      "metadata_index": 0,
+      "state": "^1A''",
+      "family": "npi",
+      "type": "npi",
+      "ordinal_in_family": 1,
+      "tbe_ev": 4.935,
+      "reference_strength": 0.0
+    },
+    {
+      "metadata_index": 1,
+      "state": "^1A'",
+      "family": "ppi",
+      "type": "ppi",
+      "ordinal_in_family": 1,
+      "tbe_ev": 5.381,
+      "reference_strength": 0.199
+    },
+    {
+      "metadata_index": 2,
+      "state": "^1A''",
+      "family": "rydberg",
+      "type": "unknown",
+      "ordinal_in_family": 1,
+      "tbe_ev": 6.052,
+      "reference_strength": 0.003
+    },
+    {
+      "metadata_index": 3,
+      "state": "^1A'",
+      "family": "ppi",
+      "type": "ppi",
+      "ordinal_in_family": 2,
+      "tbe_ev": 6.287,
+      "reference_strength": 0.047
+    },
+    {
+      "metadata_index": 4,
+      "state": "^1A''",
+      "family": "npi",
+      "type": "npi",
+      "ordinal_in_family": 2,
+      "tbe_ev": 6.312,
+      "reference_strength": 0.0
+    },
+    {
+      "metadata_index": 5,
+      "state": "^1A'",
+      "family": "ppi",
+      "type": "ppi",
+      "ordinal_in_family": 3,
+      "tbe_ev": 6.736,
+      "reference_strength": 0.198
+    }
+  ],
+  "reference_intensity_level": "LR-CCSD/aug-cc-pVTZ; diagnostic comparison, not exact intensities",
+  "windows_ev": [
+    15.0,
+    20.0,
+    30.0,
+    50.0,
+    75.0,
+    100.0
+  ],
+  "roots": 24,
+  "eigen_residual_hartree": 1e-09,
+  "convergence": {
+    "energy_ev": 0.01,
+    "strength_absolute": 0.0001,
+    "strength_relative": 0.01,
+    "overlap": 0.9,
+    "margin": 0.1,
+    "reference": "full supplied virtual space"
+  },
+  "assignment": "Fixed ordinal within symmetry/character family; overlap tracking across models/windows; never nearest TBE energy. Unavailable/ambiguous assignments remain unresolved.",
+  "scope": "Previously unused molecule in imported-TDA/excitation calibration. Reused elsewhere for ground-state work is unrelated; no tuning or physical acceptance threshold chosen after results.",
+  "input_sha256": {
+    "Uracil.json": "7e532dd4995b3fb1fead23cf8f96b01a5dae59dde64c71d60c0d2d29ff665dda",
+    "QUEST_LICENSE": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2",
+    "uracil.xyz": "f042c5ba35fe5d4dcd2d4869c309a2bab48f9ae98a8acd0e27f4cea815f7dd2b"
+  }
+}

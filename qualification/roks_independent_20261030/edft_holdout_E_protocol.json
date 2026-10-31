@@ -1,0 +1,98 @@
+{
+  "host": "oracle.sns.it",
+  "cases": [
+    {
+      "name": "diazete",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_E/diazete",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_E_inputs/Diazete.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_E_inputs/diazete.xyz",
+      "metadata_sha256": "d4ce22c109011dea8cd5f3a687f8291d26b0928ac1cfcaa46fe64d8ddfa16367",
+      "geometry_sha256": "2397b9556154ae626defbb82695fc35c82d22694618f9a17ed87709398c87e54",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A_u",
+          "family": "npi",
+          "tbe_ev": 2.827999999999999,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "methanimine",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_E/methanimine",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_E_inputs/Methanimine.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_E_inputs/methanimine.xyz",
+      "metadata_sha256": "3ec107060d69e39341bd8eb5d960f2cf369d44d79940be678e3ab78dabd17686",
+      "geometry_sha256": "6edd2d3a9b8aaab3b81f1714fc629c72e64853e4ca4f270f94759fa2dd3ea502",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A''",
+          "family": "npi",
+          "tbe_ev": 5.193,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    },
+    {
+      "name": "triazine",
+      "reference": "/home/enzo/MOUSE-roks-independent-20261030/references_E/triazine",
+      "metadata": "/home/enzo/MOUSE-roks-independent-20261030/holdout_E_inputs/Triazine.json",
+      "geometry": "/home/enzo/MOUSE-roks-independent-20261030/holdout_E_inputs/triazine.xyz",
+      "metadata_sha256": "8c243e222a30908813fd271899a6c7c4efadcf53814f70b2e8c7cf8724b9da3f",
+      "geometry_sha256": "0bf79ca344dc0b4437f7c19e0f09a084d16dfc86e0d1dd840376fbd40f3e86a4",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A_1''",
+          "family": "npi",
+          "tbe_ev": 4.737,
+          "reference_root": 1,
+          "prior_assignment_present": false
+        }
+      ]
+    }
+  ],
+  "selection": "three unused CHN molecules, first safe valence npi state; fixed first singlet DFT reference root; no replacement after failures",
+  "candidate": "single qualified-spectral EDFT/RSH response functional; exploratory selection after HNO/carbonyl development; not the original composite",
+  "existing_composite_control": "old PBE0 raw/spectral energy mean, weights remain 50/50; no refitting",
+  "external_parameters": {
+    "alpha_sr": 0.375,
+    "alpha_lr": 1.0,
+    "omega": 0.2,
+    "xi": 0.32
+  },
+  "lambda_exchange": 0.9,
+  "gap_scale": 1.0,
+  "energy_offset": 0.0,
+  "minimum_projection": 0.7,
+  "minimum_leading_amplitude": 0.7,
+  "minimum_csf_overlap": 0.7,
+  "minimum_transition_overlap": 0.7,
+  "orbital_residual": 1e-09,
+  "saddle_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "source_sha256": {
+    "edft_rsh_consistent_calibration.py": "dbaf732e9bd4738f44cd0862b3739627158473f5aad5f603290a58dd9f5b3de7",
+    "edft_rsh_response.py": "f0294d71e2b7003bc9d01f644da2bc7c9b7759e26467c6e86fadbb940a956232",
+    "prepare_E.py": "dcd82970a2607cc91e0330ee2b4d6a6cd3142ac187812d81331c3f431a12e841",
+    "reference_td_checkpoint.py": "dc2cdcea67e860f1fcb6869984bd09c548ed1568bf8f4e100154e88607856339"
+  },
+  "guard_before_candidate_predictions": "uracil pipi qualified and absolute error <=0.3 eV; otherwise do not run candidate holdout and reject general promotion",
+  "gate": "all three states retained, candidate MAE below old spectral and old fixed mean and native, maxabs <=0.5 eV; no parameter tuning on E",
+  "preparation_allowed_before_guard": true,
+  "reference": "PBE0 aug-cc-pVDZ Cartesian grid3 TDA root1 for identity only; RSH references separate for candidate",
+  "nuclear_derivatives_supported": false,
+  "default_changed": false,
+  "source_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa"
+}

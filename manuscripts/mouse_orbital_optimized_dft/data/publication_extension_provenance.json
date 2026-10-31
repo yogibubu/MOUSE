@@ -1,0 +1,12 @@
+{
+  "host_for_electronic_jobs": "oracle.sns.it",
+  "cohort": "19 archived matched states; no blind scores",
+  "assignment": "exact cross-AO transition overlaps; best >=0.7, projection norm >=0.7, margin >=0.05",
+  "source_sha256": "fd00cf63662a569a1c03885929ad5efa6844a854fd0750f705b6f5b8451de1cf",
+  "sources": {
+    "direct_stda_comparison.json": "9430fbe8c18a283f56c1e8831a2a2bad0a67947d61097165073a390da3f488ce",
+    "geometry_reference_comparison.json": "0ab11e50c57db5a0c0ac4606c0b3199dd24fd6ab102596130e1cf59113ea4cc0",
+    "weight_anchor_precheck.json": "a6d1f4bceb15314fe873addcefba30b6c17e009b7affbb8ee024938b7796f077",
+    "hno_harmonic_comparison.json": "f0573ce91d75b7b315b975a6536c5b13fd5a20d20e2aa22e0046ab8656eb1a50"
+  }
+}

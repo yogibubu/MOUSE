@@ -1,0 +1,6 @@
+{
+  "projected_fock_error": 1.0235302189132156e-14,
+  "embedding_metric_error": 9.325873406851315e-15,
+  "scalar_offset": 0.0,
+  "full_dft_spectrum_used": true
+}

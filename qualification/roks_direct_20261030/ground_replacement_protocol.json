@@ -1,0 +1,12 @@
+{
+ "schema":"mouse.roks.ground_replacement.research.v1",
+ "host":"oracle.sns.it",
+ "formula":"E_native_ground(R) + 0.5 * sum_i [E_ROKS_i(R) - E_corrected_ground_i(R)]",
+ "weights":[0.5,0.5],"lambda_exchange":0.9,"fitted_offset":0.0,
+ "derivatives":"analytic gradients for all five stationary components; analytic restricted ground and ROKS orbital response Hessians, summed with the exact formula weights",
+ "solver":"direct orbital minimization for each restricted S0; certified GMF for each spin-pure excited CSF, no SCC iteration",
+ "start":"retained vertical electronic seeds, distinct new potential; completed old-surface calculations preserved",
+ "tracking":"last accepted full CSF >=0.7 per excited component; intercomponent active pair >=0.7; certified initial saddle index",
+ "qualification":"max gradient below 3e-5 Ha/bohr; analytic Hessian with no mode below -20 cm-1; independent two-step HVP check; molecular accuracy compared with existing published references",
+ "status":"research candidate, not default or asserted improvement"
+}

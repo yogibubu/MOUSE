@@ -1,0 +1,239 @@
+{
+  "commit": "5620e2d063f510e9378a0bb438d54eb01a88493f",
+  "matched": 54,
+  "rows": [
+    {
+      "path": "examples/deltascf.py",
+      "status": "missing_from_validation_snapshot"
+    },
+    {
+      "path": "examples/roks_relative_pair.py",
+      "status": "missing_from_validation_snapshot"
+    },
+    {
+      "path": "packages/matrix-apoc/src/matrix_apoc/__init__.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-apoc/src/matrix_apoc/cli.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-apoc/src/matrix_apoc/deltascf.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/__init__.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/anchored_roks.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/calculator.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/composite_roks.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/data/spin_constants.toml",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/data/spin_constants_LICENSE.md",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/deltascf.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/deltascf_derivatives.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/ground_referenced_roks.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/hybrid_spectrum.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/local_frame_response.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/lowdin_operator_jet.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/nonlocal_response.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/orbital_geometry_reference.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/orbital_saddle.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/relative_pair_roks.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/response_reference.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/restricted_ground.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/roks.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/roks_continuation.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/roks_orbital_response.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/roks_tracking.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/shared_pair_roks.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/spin_polarization.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/spin_reference.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-gfn2/src/matrix_gfn2/tensor_spin.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-link/src/matrix_link/composite_roks_component.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-link/src/matrix_link/deltascf_component.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-link/src/matrix_link/optimizer.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-link/src/matrix_link/qmqm_component.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-link/src/matrix_link/scan.py",
+      "status": "match"
+    },
+    {
+      "path": "packages/matrix-link/src/matrix_link/shared_roks_component.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/remote_bootstrap.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/remote_run_deltascf_tests.py",
+      "status": "missing_from_validation_snapshot"
+    },
+    {
+      "path": "qualification/test_anchored_roks_link.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_composite_roks_link.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_deltascf.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_deltascf_link.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_energy_only_checkpoint.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_frozen_response_reference.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_hybrid_spectrum.py",
+      "status": "missing_from_validation_snapshot"
+    },
+    {
+      "path": "qualification/test_local_frame_roks.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_nonlocal_response.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_orbital_saddle.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_relative_pair_roks.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_response_reference_homotopy.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_roks.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_roks_geometry_only.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_roks_tracking.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_roks_trial_guard.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_shared_pair_roks.py",
+      "status": "match"
+    },
+    {
+      "path": "qualification/test_tensor_response.py",
+      "status": "match"
+    }
+  ],
+  "scope": "byte comparison with the Oracle validation checkout; previous campaign and current regression generations remain distinct"
+}

@@ -1,0 +1,213 @@
+{
+  "host_required": "oracle.sns.it",
+  "cases": [
+    {
+      "name": "cyanoformaldehyde",
+      "reference": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/holdout/cyanoformaldehyde_pbe0",
+      "metadata": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/inputs/Cyanoformaldehyde.json",
+      "metadata_sha256": "6d400f2069a92676a0f56e7cab6e37ab22a040b6434d4902d4ada1a161b03eee",
+      "reference_sha256": "38e95c5460d5110f16518a01f3affd643589149443767dea4b2ad97ce51f7f2e",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A''",
+          "tbe_ev": 3.8169999999999993,
+          "family": "npi"
+        },
+        {
+          "id": "pi_pi",
+          "metadata_index": 1,
+          "symmetry": "A''",
+          "tbe_ev": 6.428999999999999,
+          "family": "ppi"
+        }
+      ]
+    },
+    {
+      "name": "cyclopropenone",
+      "reference": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/holdout/cyclopropenone_pbe0",
+      "metadata": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/inputs/Cyclopropenone.json",
+      "metadata_sha256": "797932a41c02b7595c8c8f91f8e65dc5f7be302171b42ad9eab12ecf302b5705",
+      "reference_sha256": "777740da3838183e887b541eb1f2d3b6f4950f940aa3c06e25d45a99fe955316",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "B_1",
+          "tbe_ev": 4.274,
+          "family": "npi"
+        },
+        {
+          "id": "pi_pi",
+          "metadata_index": 3,
+          "symmetry": "B_2",
+          "tbe_ev": 6.541,
+          "family": "ppi"
+        }
+      ]
+    },
+    {
+      "name": "methylenecyclopropene",
+      "reference": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/holdout/methylenecyclopropene_pbe0",
+      "metadata": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/inputs/Methylenecyclopropene.json",
+      "metadata_sha256": "8f2f05df062ff1d058fbc08a39bd2f36670fe154a16524164e1ba09cdb8a1e43",
+      "reference_sha256": "8bae19b21f67bed51e473b22838bbd97c949f6a134f59b820d577d791d04685b",
+      "targets": [
+        {
+          "id": "pi_pi",
+          "metadata_index": 0,
+          "symmetry": "B_2",
+          "tbe_ev": 4.28,
+          "family": "ppi"
+        }
+      ]
+    },
+    {
+      "name": "pyridazine",
+      "reference": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/holdout/pyridazine_pbe0",
+      "metadata": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/inputs/Pyridazine.json",
+      "metadata_sha256": "485773bf269e36a0cd1af92683038571722d994edb670b4883a0def7854a3abe",
+      "reference_sha256": "697603f7685776f1c34d5971a40c48e3c07ee46762910cab524c136e421baa60",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "B_1",
+          "tbe_ev": 3.829999999999999,
+          "family": "npi"
+        },
+        {
+          "id": "pi_pi",
+          "metadata_index": 2,
+          "symmetry": "A_1",
+          "tbe_ev": 5.244999999999999,
+          "family": "ppi"
+        }
+      ]
+    },
+    {
+      "name": "aniline",
+      "reference": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/holdout/aniline_pbe0",
+      "metadata": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/inputs/Aniline.json",
+      "metadata_sha256": "d74f8cddb2be0b8846762261c40f35f6b6c557e88f6d63d88e4f41f2df681dc1",
+      "reference_sha256": "f92d581a22fa10a43689b073b6c6a33541f0343078ff15d42afafe273f25fd4d",
+      "targets": [
+        {
+          "id": "pi_pi",
+          "metadata_index": 0,
+          "symmetry": "B_2",
+          "tbe_ev": 4.486,
+          "family": "ppi"
+        }
+      ]
+    },
+    {
+      "name": "nitrobenzene",
+      "reference": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/holdout/nitrobenzene_pbe0",
+      "metadata": "/home/enzo/MATRIX-runs/tda-jk-qualification-20261022-v1/docs/reports/tda_jk_finalization_20261022/inputs/Nitrobenzene.json",
+      "metadata_sha256": "bf715f6d27bca358a8f4feded0bf91c2ab2118dd0c09d05b458fcd2fe82bf047",
+      "reference_sha256": "14e89734344b78c89dc035aa8590a05f878cbaefdc25aa2c942a272dc5727a35",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 0,
+          "symmetry": "A_2",
+          "tbe_ev": 3.9259999999999997,
+          "family": "npi"
+        },
+        {
+          "id": "pi_pi",
+          "metadata_index": 2,
+          "symmetry": "B_2",
+          "tbe_ev": 4.725000000000001,
+          "family": "ppi"
+        }
+      ]
+    },
+    {
+      "name": "benzonitrile",
+      "reference": "/home/enzo/MATRIX-runs/tda-dft-independent-20261022-v1/docs/reports/independent_dft_tda_20261022/results/benzonitrile_pbe0",
+      "metadata": "/home/enzo/MATRIX-runs/tda-dft-independent-20261022-v1/docs/reports/independent_dft_tda_20261022/inputs/Benzonitrile.json",
+      "metadata_sha256": "1d4efde4dabc9bc9b966cbd62b4de0dfa40e574dec95f730538a72d182016398",
+      "reference_sha256": "dc2eaf5b96432aa8ac8a791b4c519d399dc1a825e58e47aeadd4b9003c1ec29b",
+      "targets": [
+        {
+          "id": "pi_pi",
+          "metadata_index": 0,
+          "symmetry": "B_2",
+          "tbe_ev": 4.863999999999999,
+          "family": "ppi"
+        }
+      ]
+    },
+    {
+      "name": "imidazole",
+      "reference": "/home/enzo/MATRIX-runs/tda-frozen-validation-20261022-v1/docs/reports/tda_frozen_validation_20261022/imidazole/results/pbe0_avdz",
+      "metadata": "/home/enzo/MATRIX-runs/tda-frozen-validation-20261022-v1/docs/reports/tda_frozen_validation_20261022/imidazole/inputs/Imidazole.json",
+      "metadata_sha256": "20bab464ab6f881c2e931b3004d9f2e0958e28cfcd55c391ad18c5a7b43705b0",
+      "reference_sha256": "ce567360a1500b61f7d4ca5c7adcf891949bc529373915c5d99ff4a1c0b66683",
+      "targets": [
+        {
+          "id": "n_pi",
+          "metadata_index": 3,
+          "symmetry": "A''",
+          "tbe_ev": 6.715,
+          "family": "npi"
+        },
+        {
+          "id": "pi_pi",
+          "metadata_index": 4,
+          "symmetry": "A'",
+          "tbe_ev": 6.844,
+          "family": "ppi"
+        }
+      ]
+    }
+  ],
+  "xc": "PBE0",
+  "lambda_exchange": 0.9,
+  "energy_offset": false,
+  "models": [
+    "shell_charge_spin",
+    "tensor_spin",
+    "tensor_charge_spin"
+  ],
+  "tensor_definition": "on-site sym(P S) sp vector and traceless pp tensor; isotropic trace average within irreducible blocks",
+  "calibration": "DFT ground response projected onto dual moments; tensor charge is DFT minus native GFN2 charge response; no TBE fitting",
+  "ground_reference": "minimum of the SAME corrected functional; not the native GFN2 ground energy when charge anisotropy is active",
+  "development_molecules": [
+    "nitroxyl",
+    "uracil",
+    "thymine",
+    "nitrous_acid",
+    "propynal",
+    "pyridine",
+    "cytosine",
+    "ketene",
+    "diazomethane",
+    "nitroaniline"
+  ],
+  "minimum_projection": 0.7,
+  "minimum_leading_amplitude": 0.7,
+  "minimum_csf_overlap": 0.7,
+  "minimum_transition_overlap": 0.7,
+  "orbital_residual": 1e-09,
+  "saddle_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "maximum_iterations_per_attempt": 120,
+  "selection": "lowest safe valence singlet below 8eV per family; lowest DFT TDA root of its irrep passing projection; no reassignments after prediction",
+  "accuracy_gate": {
+    "minimum_new_molecules": 6,
+    "minimum_npi_states": 4,
+    "paired_npi_mae_strictly_lower_than_shell": true,
+    "paired_total_mae_not_increased": true,
+    "maximum_per_state_regression_ev": 0.25
+  },
+  "model_changes_after_predictions": false,
+  "default_changed": false
+}

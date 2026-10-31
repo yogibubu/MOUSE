@@ -1,0 +1,9 @@
+{
+  "old_parent_tda_status": "withdrawn_static_response_missing_nonlocal_exchange",
+  "energy_accuracy_claims_against_old_parent_tda": "withdrawn",
+  "new_tda_exchange_fraction": 0.225,
+  "independent_A_matrix_error_hartree": 3.55e-15,
+  "old_oo_and_dedicated_stda_results": "unaffected",
+  "new_14_state_accuracy_labels": "sealed pending complete prediction lock",
+  "new_identity": "attainable single-pair fidelity ratio squared >1/2; finite competing-root margin; not a many-electron probability"
+}

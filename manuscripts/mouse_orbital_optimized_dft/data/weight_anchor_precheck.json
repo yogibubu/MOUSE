@@ -1,0 +1,201 @@
+{
+  "host": "oracle.sns.it",
+  "scope": "algebraic vertical-anchor energy sensitivity only, not a weighted PES/Hessian",
+  "default_changed": false,
+  "rows": [
+    {
+      "molecule": "acetaldehyde",
+      "state": "n_pi",
+      "full_gap_ev": 4.5151457212194614,
+      "spectral_gap_ev": 4.0393412041700225,
+      "tbe_ev": 4.304,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "acetone",
+      "state": "n_pi",
+      "full_gap_ev": 4.50249098138698,
+      "spectral_gap_ev": 4.173632398408103,
+      "tbe_ev": 4.468,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "acrolein",
+      "state": "n_pi",
+      "full_gap_ev": 3.976193148502119,
+      "spectral_gap_ev": 3.5653841220111424,
+      "tbe_ev": 3.723,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "cyclopentadienone",
+      "state": "n_pi",
+      "full_gap_ev": 3.101642062582508,
+      "spectral_gap_ev": 2.8050527776209364,
+      "tbe_ev": 2.951,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "formamide",
+      "state": "n_pi",
+      "full_gap_ev": 5.88065236856108,
+      "spectral_gap_ev": 5.415241362059699,
+      "tbe_ev": 5.644,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "glyoxal",
+      "state": "n_pi",
+      "full_gap_ev": 2.883211166330964,
+      "spectral_gap_ev": 2.6209978801590044,
+      "tbe_ev": 2.877,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "maleimide",
+      "state": "n_pi",
+      "full_gap_ev": 3.712806295807509,
+      "spectral_gap_ev": 3.5736438630619607,
+      "tbe_ev": 3.8099999999999996,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "nitrosomethane",
+      "state": "n_pi",
+      "full_gap_ev": 1.614707406460819,
+      "spectral_gap_ev": 1.8276974349277388,
+      "tbe_ev": 1.952,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "nitroxyl",
+      "state": "n_pi",
+      "full_gap_ev": 1.4558078091983695,
+      "spectral_gap_ev": 1.513745603897202,
+      "tbe_ev": 1.743,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "pyranone",
+      "state": "n_pi",
+      "full_gap_ev": 4.012043526720179,
+      "spectral_gap_ev": 4.139260429373581,
+      "tbe_ev": 4.016,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "pyrazine",
+      "state": "n_pi",
+      "full_gap_ev": 3.8628728700933315,
+      "spectral_gap_ev": 4.000168875253992,
+      "tbe_ev": 4.144,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "pyrimidine",
+      "state": "n_pi",
+      "full_gap_ev": 4.085563463371066,
+      "spectral_gap_ev": 4.349794676294588,
+      "tbe_ev": 4.451,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "tetrazine",
+      "state": "n_pi",
+      "full_gap_ev": 1.7627783613999746,
+      "spectral_gap_ev": 2.3574045226184643,
+      "tbe_ev": 2.462,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "uracil",
+      "state": "n_pi",
+      "full_gap_ev": 4.9953859730000625,
+      "spectral_gap_ev": 4.774565909207458,
+      "tbe_ev": 4.935,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "uracil",
+      "state": "pi_pi",
+      "full_gap_ev": 6.050331403740893,
+      "spectral_gap_ev": 5.320952719955003,
+      "tbe_ev": 5.381,
+      "cohort": "exposed"
+    },
+    {
+      "molecule": "cyanoformaldehyde",
+      "state": "n_pi",
+      "full_gap_ev": 4.0585430882706905,
+      "spectral_gap_ev": 3.919113606964658,
+      "tbe_ev": 3.8169999999999993,
+      "cohort": "previous_prospective"
+    },
+    {
+      "molecule": "cyclopropenone",
+      "state": "n_pi",
+      "full_gap_ev": 5.231569542923918,
+      "spectral_gap_ev": 3.7314526845907166,
+      "tbe_ev": 4.274,
+      "cohort": "previous_prospective"
+    },
+    {
+      "molecule": "imidazole",
+      "state": "n_pi",
+      "full_gap_ev": 6.2907409603680735,
+      "spectral_gap_ev": 6.069545091119271,
+      "tbe_ev": 6.715,
+      "cohort": "previous_prospective"
+    },
+    {
+      "molecule": "pyridazine",
+      "state": "n_pi",
+      "full_gap_ev": 3.30000937210267,
+      "spectral_gap_ev": 3.7593585624464123,
+      "tbe_ev": 3.829999999999999,
+      "cohort": "previous_prospective"
+    }
+  ],
+  "statistics": [
+    {
+      "weight_full": 0.0,
+      "count": 19,
+      "mae_ev": 0.21007338676508022,
+      "rmse_ev": 0.25725018641632696,
+      "mse_ev": -0.1863498039926339,
+      "maxabs_ev": 0.6454549088807289
+    },
+    {
+      "weight_full": 0.25,
+      "count": 19,
+      "mae_ev": 0.17937157737845327,
+      "rmse_ev": 0.21059240613677904,
+      "mse_ev": -0.14245320138867715,
+      "maxabs_ev": 0.5901559415685282
+    },
+    {
+      "weight_full": 0.5,
+      "count": 19,
+      "mae_ev": 0.18252674846246386,
+      "rmse_ev": 0.22850727113111236,
+      "mse_ev": -0.09855659878472038,
+      "maxabs_ev": 0.5348569742563276
+    },
+    {
+      "weight_full": 0.75,
+      "count": 19,
+      "mae_ev": 0.23873592572065713,
+      "rmse_ev": 0.2996279238041136,
+      "mse_ev": -0.054659996180763636,
+      "maxabs_ev": 0.5825403283406176
+    },
+    {
+      "weight_full": 1.0,
+      "count": 19,
+      "mae_ev": 0.3077281784735097,
+      "rmse_ev": 0.396274047614282,
+      "mse_ev": -0.010763393576806873,
+      "maxabs_ev": 0.9575695429239177
+    }
+  ]
+}

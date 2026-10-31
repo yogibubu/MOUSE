@@ -1,0 +1,81 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Furan",
+  "state": "B022",
+  "status": "matched",
+  "excitation_ev": 7.973905034751296,
+  "endpoint_energy_check_hartree": 0.0,
+  "joint_residual": 1.9205470547234427e-13,
+  "joint_index": 3,
+  "minimum_curvature": 0.03451273151680415,
+  "final_guard": {
+    "local_csf": 1.0,
+    "anchor_active": 0.9955909655237881,
+    "transition": 0.970992725252687,
+    "raw_transition": 0.7085437521952329,
+    "transition_metric": "rank_one",
+    "rank_one_limit": 0.729710670088537,
+    "rank_one_margin": 0.06807901358435609,
+    "sector_norm": 0.9653757408811657,
+    "accepted": true
+  },
+  "seconds_current_run": 10.914319225004874,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "baseline_untouched": true,
+  "exploratory_solver_recovery": true,
+  "reference_labels_read": false,
+  "baseline_result": {
+    "status": "prediction_pass_complete",
+    "host": "oracle.sns.it",
+    "molecule": "Furan",
+    "rows": [
+      {
+        "id": "B040",
+        "status": "not_representable",
+        "reason": "fixed reference root fails symmetry or compact projection"
+      },
+      {
+        "id": "B022",
+        "molecule": "Furan",
+        "family": "pi_pi",
+        "status": "matched",
+        "excitation_ev": 7.9739050347511995,
+        "parent_gaps_ev": [
+          8.491743119872105,
+          7.456066949630295
+        ],
+        "joint_residual": 4.4104234153685695e-12,
+        "joint_index": 3,
+        "minimum_curvature_hartree": 0.034512731516794126,
+        "identity": [
+          {
+            "profile": "full_response",
+            "transition_overlap": 0.7051355698173553,
+            "hole_norm": 0.9832859617242385,
+            "particle_norm": 0.974313347032791
+          },
+          {
+            "profile": "qualified_spectral_response",
+            "transition_overlap": 0.7085437521909738,
+            "hole_norm": 0.9742250443771375,
+            "particle_norm": 0.9653757408791623
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "lambda_exchange": 0.9,
+        "energy_offset": 0.0,
+        "reference_root": 5,
+        "numerical_reference_labels_read": false
+      }
+    ],
+    "numerical_reference_labels_read": false
+  }
+}

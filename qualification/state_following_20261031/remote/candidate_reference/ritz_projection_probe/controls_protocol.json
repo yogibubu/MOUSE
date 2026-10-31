@@ -1,0 +1,33 @@
+{
+  "host": "oracle.sns.it",
+  "cases": [
+    [
+      "Bimane_Syn",
+      "B015"
+    ],
+    [
+      "Diazirine",
+      "B001"
+    ],
+    [
+      "Furan",
+      "B022"
+    ]
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "threads": 2,
+  "concurrent_workers": 1,
+  "reference_excitation_labels_read": false,
+  "source_sha256": {
+    "build_ritz_reference.py": "1e8ac3a3341bf6ca5ac011a9a36b24e8c01a45ed7a11de245720477d47471a7e",
+    "ritz_projection_worker.py": "d7357433d77d549263ffbbe5ef115cc8e2e90a80adc2ead8877faff795b7accc",
+    "ritz_projection_audit.py": "1e02ea0c7a1c37311c602ad20af5dc39272ec00200bf1acf4525fb866f10ebb2",
+    "validate_ritz_controls.py": "901975a1ab53eff50e7fe98f1d58055d87745f505318f15b664bde7489c0ec4c"
+  },
+  "scope": "Bimane method repair plus two previously completed positive controls; exploratory numerical validation, not blind accuracy validation"
+}

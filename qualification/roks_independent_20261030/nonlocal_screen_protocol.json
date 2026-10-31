@@ -1,0 +1,13 @@
+{
+  "scope": "original ten development states only",
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "spin": "native GFN2 on-site shell blocks; DFT-derived interatomic shell blocks",
+  "charge_variants": [
+    "zero additional charge response",
+    "DFT-minus-native charge correction on interatomic shell blocks only"
+  ],
+  "parameters_fitted_to_excited_energies": 0,
+  "selection": "minimum npi MAE among profiles with total MAE no worse than existing shell-response model; original development states only",
+  "new_cohorts_used_for_selection": false
+}

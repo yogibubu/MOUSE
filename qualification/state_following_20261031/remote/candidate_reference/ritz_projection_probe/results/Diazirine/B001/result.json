@@ -1,0 +1,207 @@
+{
+  "host": "oracle.sns.it",
+  "molecule": "Diazirine",
+  "state": "B001",
+  "status": "matched",
+  "excitation_ev": 4.840506183078791,
+  "joint_residual": 2.1111584702637742e-15,
+  "joint_index": 0,
+  "minimum_curvature_hartree": 0.050433021792002326,
+  "guards": [
+    {
+      "local_csf": 0.9999999999999997,
+      "anchor_active": 0.9999999999999987,
+      "transition": 0.98457950375753,
+      "raw_transition": 0.9844823260410187,
+      "transition_metric": "rank_one",
+      "rank_one_limit": 0.9999013002849029,
+      "rank_one_margin": 0.9879801514335991,
+      "sector_norm": 0.9886975650562239,
+      "accepted": true
+    },
+    {
+      "local_csf": 1.0,
+      "anchor_active": 0.9950012312180482,
+      "transition": 0.9965537663103182,
+      "raw_transition": 0.9964554067375044,
+      "transition_metric": "rank_one",
+      "rank_one_limit": 0.9999013002849029,
+      "rank_one_margin": 0.9879801514335991,
+      "sector_norm": 0.9929159012379225,
+      "accepted": true
+    }
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "reference_labels_read": false,
+  "baseline_preserved": true,
+  "exploratory_model_revision": "complete projected DFT ground Fock",
+  "component_gaps_ev": [
+    4.9598352319141314,
+    4.721177134243498
+  ],
+  "ground_certificates": [
+    {
+      "residual": 1.7212822842065655e-12,
+      "index": 0,
+      "minimum_curvature": 0.5295105257445385
+    },
+    {
+      "residual": 5.97748607471642e-16,
+      "index": 0,
+      "minimum_curvature": 0.8614683355834284
+    },
+    {
+      "residual": 6.757019713869127e-16,
+      "index": 0,
+      "minimum_curvature": 0.8030032830526609
+    }
+  ],
+  "assignment_audit": {
+    "molecule": "Diazirine",
+    "state": "B001",
+    "target_root": 1,
+    "symmetry": "B1",
+    "target_parent_fidelities": [
+      0.98457950375753,
+      0.9965537663103182
+    ],
+    "margins_against_other_converged_representable_same_symmetry_roots": [
+      0.98457950375753,
+      0.9965537663103182
+    ],
+    "projected_overlap_margin_against_all_converged_same_symmetry_roots": [
+      0.7104154608234801,
+      0.7170434567065804
+    ],
+    "uniquely_assigned": true,
+    "reference_coverage_complete": false,
+    "available_same_symmetry_candidates": [
+      {
+        "root": 1,
+        "converged": true,
+        "projection_norm": 0.9350349314600543,
+        "rank_one_limit": 0.9999013002849029,
+        "parent_fidelities": [
+          0.98457950375753,
+          0.9965537663103182
+        ],
+        "parent_projected_overlaps": [
+          0.9205253642533988,
+          0.9317206129418031
+        ],
+        "representable_single_pair": true
+      },
+      {
+        "root": 8,
+        "converged": true,
+        "projection_norm": 0.37227262506453007,
+        "rank_one_limit": 0.9994212616772684,
+        "parent_fidelities": [
+          0.014810945512548213,
+          0.014046637156580702
+        ],
+        "parent_projected_overlaps": [
+          0.0055105185706179945,
+          0.005226152161622082
+        ],
+        "representable_single_pair": false
+      },
+      {
+        "root": 16,
+        "converged": true,
+        "projection_norm": 0.2917995903915542,
+        "rank_one_limit": 0.9937809516196857,
+        "parent_fidelities": [
+          0.01739468190498046,
+          0.007513903357350203
+        ],
+        "parent_projected_overlaps": [
+          0.005044194651297559,
+          0.0021789183229996663
+        ],
+        "representable_single_pair": false
+      },
+      {
+        "root": 21,
+        "converged": true,
+        "projection_norm": 0.22323564375924798,
+        "rank_one_limit": 0.9776591220756438,
+        "parent_fidelities": [
+          0.9627100981035525,
+          0.9836369574494485
+        ],
+        "parent_projected_overlaps": [
+          0.2101099034299188,
+          0.2146771562352226
+        ],
+        "representable_single_pair": false
+      },
+      {
+        "root": 23,
+        "converged": true,
+        "projection_norm": 0.2792004198631256,
+        "rank_one_limit": 0.9879197753509452,
+        "parent_fidelities": [
+          0.12048097619908277,
+          0.12913773475247323
+        ],
+        "parent_projected_overlaps": [
+          0.0332319804466672,
+          0.03561975352133441
+        ],
+        "representable_single_pair": false
+      },
+      {
+        "root": 27,
+        "converged": true,
+        "projection_norm": 0.2741822286007126,
+        "rank_one_limit": 0.9841306835391225,
+        "parent_fidelities": [
+          0.0024518911090001434,
+          0.012997723808043636
+        ],
+        "parent_projected_overlaps": [
+          0.0006615965830204197,
+          0.0035071906851326337
+        ],
+        "representable_single_pair": false
+      },
+      {
+        "root": 31,
+        "converged": true,
+        "projection_norm": 0.3253426586544244,
+        "rank_one_limit": 0.9975412278978588,
+        "parent_fidelities": [
+          0.029424015024208095,
+          0.024503325243699317
+        ],
+        "parent_projected_overlaps": [
+          0.00954934972809177,
+          0.007952375706060251
+        ],
+        "representable_single_pair": false
+      },
+      {
+        "root": 33,
+        "converged": true,
+        "projection_norm": 0.3873506523498938,
+        "rank_one_limit": 0.9988543820096807,
+        "parent_fidelities": [
+          0.002941497912479567,
+          0.0012638611271573424
+        ],
+        "parent_projected_overlaps": [
+          0.0011380858283022185,
+          0.0004889965862825787
+        ],
+        "representable_single_pair": false
+      }
+    ],
+    "numerical_reference_energies_used": false
+  }
+}

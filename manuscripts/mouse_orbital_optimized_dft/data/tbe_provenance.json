@@ -1,0 +1,173 @@
+[
+  {
+    "molecule": "acetaldehyde",
+    "state": "n_pi",
+    "symmetry": "^1A''",
+    "tbe_ev": 4.304,
+    "reference_method": "CCSDTQ/AVDZ + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "acetone",
+    "state": "n_pi",
+    "symmetry": "^1A_2",
+    "tbe_ev": 4.468,
+    "reference_method": "CCSDTQ/6-31+G(d) + [CC4/AVDZ - CC4/6-31+G(d)] + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "acrolein",
+    "state": "n_pi",
+    "symmetry": "^1A''",
+    "tbe_ev": 3.723,
+    "reference_method": "CCSDTQ/6-31+G(d) + [CC4/AVDZ - CC4/6-31+G(d)] + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "cyclopentadienone",
+    "state": "n_pi",
+    "symmetry": "^1A_2",
+    "tbe_ev": 2.951,
+    "reference_method": "CC4/6-31+G(d) + [CCSDT/AVTZ - CCSDT/6-31+G(d)]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "formamide",
+    "state": "n_pi",
+    "symmetry": "^1A''",
+    "tbe_ev": 5.644,
+    "reference_method": "CCSDTQ/AVDZ + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "glyoxal",
+    "state": "n_pi",
+    "symmetry": "^1A_u",
+    "tbe_ev": 2.877,
+    "reference_method": "CC4/AVDZ + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "maleimide",
+    "state": "n_pi",
+    "symmetry": "^1B_1",
+    "tbe_ev": 3.8099999999999996,
+    "reference_method": "CC4/6-31+G(d) + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "nitrosomethane",
+    "state": "n_pi",
+    "symmetry": "^1A''",
+    "tbe_ev": 1.952,
+    "reference_method": "CCSDTQ/AVDZ + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "nitroxyl",
+    "state": "n_pi",
+    "symmetry": "^1A''",
+    "tbe_ev": 1.743,
+    "reference_method": "CCSDTQP/6-31+G(d) + [CCSDTQ/AVTZ - CCSDTQ/6-31+G(d)]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "pyranone",
+    "state": "n_pi",
+    "symmetry": "^1A_2",
+    "tbe_ev": 4.016,
+    "reference_method": "CC4/6-31+G(d) + [CCSDT/AVTZ - CCSDT/6-31+G(d)]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "pyrazine",
+    "state": "n_pi",
+    "symmetry": "^1B_{3u}",
+    "tbe_ev": 4.144,
+    "reference_method": "CC4/6-31+G(d) + [CCSDT/AVTZ - CCSDT/6-31+G(d)]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "pyrimidine",
+    "state": "n_pi",
+    "symmetry": "^1B_1",
+    "tbe_ev": 4.451,
+    "reference_method": "CC4/6-31+G(d) + [CCSDT/AVTZ - CCSDT/6-31+G(d)]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "tetrazine",
+    "state": "n_pi",
+    "symmetry": "^1B_{3u}   ",
+    "tbe_ev": 2.462,
+    "reference_method": "CC4/AVDZ + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "uracil",
+    "state": "n_pi",
+    "symmetry": "^1A''",
+    "tbe_ev": 4.935,
+    "reference_method": "CCSDT/6-31+G(d) + [CC3/AVTZ - CC3/6-31+G(d)]",
+    "safe_flag": null,
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "uracil",
+    "state": "pi_pi",
+    "symmetry": "^1A'",
+    "tbe_ev": 5.381,
+    "reference_method": "CCSDT/6-31+G(d) + [CC3/AVTZ - CC3/6-31+G(d)]",
+    "safe_flag": null,
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "cyanoformaldehyde",
+    "state": "n_pi",
+    "symmetry": "^1A''",
+    "tbe_ev": 3.8169999999999993,
+    "reference_method": "CC4/AVDZ + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "cyclopropenone",
+    "state": "n_pi",
+    "symmetry": "^1B_1",
+    "tbe_ev": 4.274,
+    "reference_method": "CC4/AVDZ + [CCSDT/AVTZ - CCSDT/AVDZ]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "imidazole",
+    "state": "n_pi",
+    "symmetry": "^1A''",
+    "tbe_ev": 6.715,
+    "reference_method": "CC4/6-31+G(d) + [CCSDT/AVTZ - CCSDT/6-31+G(d)]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  },
+  {
+    "molecule": "pyridazine",
+    "state": "n_pi",
+    "symmetry": "^1B_1",
+    "tbe_ev": 3.829999999999999,
+    "reference_method": "CC4/6-31+G(d) + [CCSDT/AVTZ - CCSDT/6-31+G(d)]",
+    "safe_flag": "Y",
+    "reference_basis": "aug-cc-pVTZ"
+  }
+]

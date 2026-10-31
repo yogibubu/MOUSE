@@ -1,0 +1,1547 @@
+{
+  "schema": "mouse.roks.relative_active_pair.validation.v1",
+  "compute_host": "oracle.sns.it",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset": 0.0,
+  "method": "fixed squared relative overlaps of the assigned open orbital pairs; unchanged independent energy mean; exact KKT orbital/nuclear response",
+  "regression_statistics": {
+    "count": 15,
+    "mae_ev": 0.15023305016212393,
+    "maximum_absolute_error_ev": 0.40190855799107084,
+    "mean_error_ev": -0.09444945542007303
+  },
+  "prospective_statistics": {
+    "count": 4,
+    "mae_ev": 0.30362811708886817,
+    "maximum_absolute_error_ev": 0.5348569742563276,
+    "mean_error_ev": -0.11395838640190381
+  },
+  "all_statistics": {
+    "count": 19,
+    "mae_ev": 0.18252674846249115,
+    "maximum_absolute_error_ev": 0.5348569742563276,
+    "mean_error_ev": -0.09855659878466899
+  },
+  "npi_statistics": {
+    "count": 18,
+    "mae_ev": 0.1757425643854488,
+    "maximum_absolute_error_ev": 0.5348569742563276,
+    "mean_error_ev": -0.12095652437544244
+  },
+  "prospective_tda_gfn2_statistics": {
+    "full_response": {
+      "count": 4,
+      "mae_ev": 1.029411412715477,
+      "maximum_absolute_error_ev": 1.7207764830192422
+    },
+    "qualified_spectral_response": {
+      "count": 4,
+      "mae_ev": 1.0731681924863024,
+      "maximum_absolute_error_ev": 1.4587200977469532
+    }
+  },
+  "regression_states": [
+    {
+      "host": "oracle.sns.it",
+      "molecule": "acetaldehyde",
+      "state": "n_pi",
+      "excitation_ev": 4.277243462694814,
+      "source_characters": [
+        {
+          "hole": 0.9999999999999989,
+          "particle": 1.0,
+          "transition": 1.0
+        },
+        {
+          "hole": 0.9999999999999989,
+          "particle": 1.0,
+          "transition": 1.0
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 1.5010527543157792e-11,
+      "joint_index": 0,
+      "minimum_absolute_curvature": 0.05925474870665528,
+      "seconds": 0.4591547169839032,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 4.2772434626947415,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 6.217178852486707,
+          "tbe_ev": 4.304,
+          "error_ev": 1.9131788524867064,
+          "overlap": 0.9723098930613853,
+          "margin": 0.804538168123265,
+          "projection_norm": 0.9975307940330338,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 5.6909628403424435,
+          "tbe_ev": 4.304,
+          "error_ev": 1.3869628403424432,
+          "overlap": 0.9995189068210472,
+          "margin": 0.9823785543401555,
+          "projection_norm": 0.9999999999999997,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 4.304
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "acetone",
+      "state": "n_pi",
+      "excitation_ev": 4.338061689897928,
+      "source_characters": [
+        {
+          "hole": 0.9999999999999992,
+          "particle": 0.999999999999998,
+          "transition": 0.9999999999999972
+        },
+        {
+          "hole": 1.0,
+          "particle": 0.9999999999999981,
+          "transition": 0.9999999999999981
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 1.5775991624167318e-12,
+      "joint_index": 0,
+      "minimum_absolute_curvature": 0.057884688875943675,
+      "seconds": 0.9515220639877953,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 4.3380616898975415,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 6.142267349119464,
+          "tbe_ev": 4.468,
+          "error_ev": 1.6742673491194644,
+          "overlap": 0.976054985491883,
+          "margin": 0.8202720204799709,
+          "projection_norm": 0.9968014963148568,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 5.764756829200849,
+          "tbe_ev": 4.468,
+          "error_ev": 1.2967568292008487,
+          "overlap": 0.9990533463130858,
+          "margin": 0.9733108330835821,
+          "projection_norm": 0.9999999999999986,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 4.468
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "acrolein",
+      "state": "n_pi",
+      "excitation_ev": 3.770788635257138,
+      "source_characters": [
+        {
+          "hole": 1.0,
+          "particle": 0.9999999999999969,
+          "transition": 0.9999999999999971
+        },
+        {
+          "hole": 0.9999999999999993,
+          "particle": 0.9999999999999977,
+          "transition": 0.999999999999997
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 3.1239594244780733e-13,
+      "joint_index": 1,
+      "minimum_absolute_curvature": 0.018532291034258352,
+      "seconds": 0.6219120349851437,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 3.770788635256631,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 5.262366272060775,
+          "tbe_ev": 3.723,
+          "error_ev": 1.539366272060775,
+          "overlap": 0.9637625433106035,
+          "margin": 0.7782972303896591,
+          "projection_norm": 0.9992535834074834,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 4.7890488995073905,
+          "tbe_ev": 3.723,
+          "error_ev": 1.0660488995073907,
+          "overlap": 0.9585013247509163,
+          "margin": 0.6892592734828569,
+          "projection_norm": 1.0,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 3.723
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "cyclopentadienone",
+      "state": "n_pi",
+      "excitation_ev": 2.9533474201011662,
+      "source_characters": [
+        {
+          "hole": 0.9999999999999989,
+          "particle": 0.9999999999999987,
+          "transition": 0.9999999999999976
+        },
+        {
+          "hole": 0.999999999999999,
+          "particle": 0.9999999999999989,
+          "transition": 0.9999999999999979
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 2.7087707077377843e-15,
+      "joint_index": 0,
+      "minimum_absolute_curvature": 0.00535118351592822,
+      "seconds": 4.710545369016472,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 2.9533474201017222,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 4.285582547549051,
+          "tbe_ev": 2.951,
+          "error_ev": 1.3345825475490511,
+          "overlap": 0.968384655686234,
+          "margin": 0.7891608149805991,
+          "projection_norm": 0.9996818801749193,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 3.9169843179580894,
+          "tbe_ev": 2.951,
+          "error_ev": 0.9659843179580894,
+          "overlap": 0.9952036976314189,
+          "margin": 0.9291987584199499,
+          "projection_norm": 1.0000000000000007,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 2.951
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "formamide",
+      "state": "n_pi",
+      "excitation_ev": 5.647946865310268,
+      "source_characters": [
+        {
+          "hole": 0.9999999999999972,
+          "particle": 0.9999999999999997,
+          "transition": 0.9999999999999969
+        },
+        {
+          "hole": 0.9999999999999978,
+          "particle": 1.0,
+          "transition": 0.9999999999999978
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 6.05539923759224e-14,
+      "joint_index": 0,
+      "minimum_absolute_curvature": 0.022778055876839384,
+      "seconds": 0.2512591300182976,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 5.64794686531039,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 7.358332457212716,
+          "tbe_ev": 5.644,
+          "error_ev": 1.7143324572127154,
+          "overlap": 0.979649688578182,
+          "margin": 0.8074732456496398,
+          "projection_norm": 0.9986767101787662,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 6.945625215107428,
+          "tbe_ev": 5.644,
+          "error_ev": 1.3016252151074275,
+          "overlap": 0.9920484281769033,
+          "margin": 0.8704196409098126,
+          "projection_norm": 1.000000000000001,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 5.644
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "glyoxal",
+      "state": "n_pi",
+      "excitation_ev": 2.7521045232446455,
+      "source_characters": [
+        {
+          "hole": 1.0,
+          "particle": 1.0,
+          "transition": 1.0
+        },
+        {
+          "hole": 1.0,
+          "particle": 1.0,
+          "transition": 1.0
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 2.6059883417861585e-15,
+      "joint_index": 0,
+      "minimum_absolute_curvature": 0.011386514332346585,
+      "seconds": 0.43457733700051904,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 2.7521045232449843,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 4.1455114626141025,
+          "tbe_ev": 2.877,
+          "error_ev": 1.2685114626141027,
+          "overlap": 0.9774001945664419,
+          "margin": 0.7834810432409709,
+          "projection_norm": 0.999518197923979,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 3.852109233683235,
+          "tbe_ev": 2.877,
+          "error_ev": 0.9751092336832352,
+          "overlap": 0.9984528882425262,
+          "margin": 0.9541316759254819,
+          "projection_norm": 0.9999999999999993,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 2.877
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "maleimide",
+      "state": "n_pi",
+      "excitation_ev": 3.643225079434155,
+      "source_characters": [
+        {
+          "hole": 0.9999999999999989,
+          "particle": 1.0,
+          "transition": 1.0
+        },
+        {
+          "hole": 0.9999999999999991,
+          "particle": 1.0,
+          "transition": 1.0
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 8.485169164518247e-12,
+      "joint_index": 0,
+      "minimum_absolute_curvature": 0.02308360842232347,
+      "seconds": 4.083189079014119,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 3.643225079434735,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 4.62953459082019,
+          "tbe_ev": 3.8099999999999996,
+          "error_ev": 0.8195345908201901,
+          "overlap": 0.9717442117296516,
+          "margin": 0.7697925616311059,
+          "projection_norm": 0.9995832247454733,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 4.537479820303473,
+          "tbe_ev": 3.8099999999999996,
+          "error_ev": 0.7274798203034738,
+          "overlap": 0.9984414421531786,
+          "margin": 0.9701701660318582,
+          "projection_norm": 1.0000000000000007,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 3.8099999999999996
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "nitrosomethane",
+      "state": "n_pi",
+      "excitation_ev": 1.7212024206946657,
+      "source_characters": [
+        {
+          "hole": 1.0,
+          "particle": 1.0,
+          "transition": 1.0
+        },
+        {
+          "hole": 1.0,
+          "particle": 1.0,
+          "transition": 1.0
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 2.6645352591003757e-15,
+      "joint_index": 1,
+      "minimum_absolute_curvature": 0.0017556592493404698,
+      "seconds": 0.45445874700089917,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 1.7212024206942789,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 3.5275506455155585,
+          "tbe_ev": 1.952,
+          "error_ev": 1.5755506455155586,
+          "overlap": 0.9915056859385388,
+          "margin": 0.9109533779577106,
+          "projection_norm": 0.9952553251560331,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 3.688748528732212,
+          "tbe_ev": 1.952,
+          "error_ev": 1.7367485287322122,
+          "overlap": 0.9962734054838115,
+          "margin": 0.9423128482017471,
+          "projection_norm": 0.9999999999999997,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 1.952
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "nitroxyl",
+      "state": "n_pi",
+      "excitation_ev": 1.4847767065476287,
+      "source_characters": [
+        {
+          "hole": 0.9999999999999988,
+          "particle": 0.9999999999999993,
+          "transition": 0.9999999999999981
+        },
+        {
+          "hole": 0.9999999999999987,
+          "particle": 0.9999999999999988,
+          "transition": 0.9999999999999974
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 1.8639603749370792e-15,
+      "joint_index": 0,
+      "minimum_absolute_curvature": 0.0016792830099491703,
+      "seconds": 0.6155343939899467,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 1.4847767065477857,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 3.4497662875797146,
+          "tbe_ev": 1.743,
+          "error_ev": 1.7067662875797145,
+          "overlap": 0.98960209849543,
+          "margin": 0.8615101561203495,
+          "projection_norm": 0.9989359076566598,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 3.4170512252512917,
+          "tbe_ev": 1.743,
+          "error_ev": 1.6740512252512916,
+          "overlap": 0.9969554935504321,
+          "margin": 0.9351917749784769,
+          "projection_norm": 1.0,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 1.743
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "pyranone",
+      "state": "n_pi",
+      "excitation_ev": 4.075651978047556,
+      "source_characters": [
+        {
+          "hole": 1.0,
+          "particle": 0.9999999999999954,
+          "transition": 0.9999999999999972
+        },
+        {
+          "hole": 1.0,
+          "particle": 0.9999999999999968,
+          "transition": 0.9999999999999988
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 8.217754254857823e-11,
+      "joint_index": 1,
+      "minimum_absolute_curvature": 0.004042457938724512,
+      "seconds": 4.733130859036464,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 4.07565197804688,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 5.026923922666678,
+          "tbe_ev": 4.016,
+          "error_ev": 1.0109239226666782,
+          "overlap": 0.9777978172654932,
+          "margin": 0.8225881643835274,
+          "projection_norm": 0.9978452446969774,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 5.125760451535311,
+          "tbe_ev": 4.016,
+          "error_ev": 1.109760451535311,
+          "overlap": 0.9937709738279471,
+          "margin": 0.917791086410735,
+          "projection_norm": 0.9999999999999997,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 4.016
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "pyrazine",
+      "state": "n_pi",
+      "excitation_ev": 3.931520872673251,
+      "source_characters": [
+        {
+          "hole": 1.0,
+          "particle": 0.9999999999999973,
+          "transition": 0.9999999999999978
+        },
+        {
+          "hole": 1.0,
+          "particle": 0.9999999999999974,
+          "transition": 0.9999999999999977
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 8.282177027529869e-14,
+      "joint_index": 2,
+      "minimum_absolute_curvature": 0.006245967478603074,
+      "seconds": 2.4625760019989684,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 3.931520872673662,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 5.117428770987399,
+          "tbe_ev": 4.144,
+          "error_ev": 0.9734287709873986,
+          "overlap": 0.9960773993518792,
+          "margin": 0.9156358852915802,
+          "projection_norm": 0.9962740823955667,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 5.2081233139692955,
+          "tbe_ev": 4.144,
+          "error_ev": 1.0641233139692954,
+          "overlap": 0.9981115333147784,
+          "margin": 0.970538000225328,
+          "projection_norm": 1.0000000000000018,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 4.144
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "pyrimidine",
+      "state": "n_pi",
+      "excitation_ev": 4.217679069832585,
+      "source_characters": [
+        {
+          "hole": 0.9999999999999978,
+          "particle": 1.0,
+          "transition": 0.9999999999999989
+        },
+        {
+          "hole": 0.9999999999999962,
+          "particle": 1.0,
+          "transition": 0.9999999999999991
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 5.10702591327572e-15,
+      "joint_index": 1,
+      "minimum_absolute_curvature": 0.0060615950881991575,
+      "seconds": 4.773274987994228,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 4.217679069832826,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 5.155903992841021,
+          "tbe_ev": 4.451,
+          "error_ev": 0.7049039928410217,
+          "overlap": 0.9865769749472246,
+          "margin": 0.8637571269825004,
+          "projection_norm": 0.995150017461693,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 5.4490056516406264,
+          "tbe_ev": 4.451,
+          "error_ev": 0.9980056516406268,
+          "overlap": 0.9951693227240006,
+          "margin": 0.9284386863274986,
+          "projection_norm": 1.0,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 4.451
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "tetrazine",
+      "state": "n_pi",
+      "excitation_ev": 2.0600914420089294,
+      "source_characters": [
+        {
+          "hole": 0.9999999999999991,
+          "particle": 0.9999999999999988,
+          "transition": 0.9999999999999979
+        },
+        {
+          "hole": 0.9999999999999996,
+          "particle": 0.9999999999999987,
+          "transition": 0.9999999999999982
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 1.869456068604571e-14,
+      "joint_index": 1,
+      "minimum_absolute_curvature": 0.011710117701975168,
+      "seconds": 1.7633344450150616,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 2.0600914420092193,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 2.996286332796626,
+          "tbe_ev": 2.462,
+          "error_ev": 0.5342863327966256,
+          "overlap": 0.9983020776798447,
+          "margin": 0.9615653159875358,
+          "projection_norm": 0.9980912474244931,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 3.5947249077269343,
+          "tbe_ev": 2.462,
+          "error_ev": 1.1327249077269341,
+          "overlap": 0.9978752273822002,
+          "margin": 0.9593746745378995,
+          "projection_norm": 0.9999999999999992,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 2.462
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "uracil",
+      "state": "n_pi",
+      "excitation_ev": 4.88497594110492,
+      "source_characters": [
+        {
+          "hole": 1.0,
+          "particle": 1.0,
+          "transition": 1.0
+        },
+        {
+          "hole": 1.0,
+          "particle": 1.0,
+          "transition": 1.0
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 4.4034379956389355e-15,
+      "joint_index": 3,
+      "minimum_absolute_curvature": 0.007612721776571614,
+      "seconds": 19.488097468973137,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 4.88497594110376,
+      "parent_tda_gfn2": [
+        {
+          "state": "n_pi",
+          "energy_ev": 5.8799136694495235,
+          "tbe_ev": 4.935,
+          "error_ev": 0.9449136694495239,
+          "overlap": 0.9724420707358001,
+          "margin": 0.8448876300099203,
+          "projection_norm": 0.9991700129045615,
+          "qualified": true
+        },
+        {
+          "state": "n_pi",
+          "energy_ev": 5.789171739809069,
+          "tbe_ev": 4.935,
+          "error_ev": 0.8541717398090691,
+          "overlap": 0.9761947944708349,
+          "margin": 0.8329353805512979,
+          "projection_norm": 1.0000000000000004,
+          "qualified": true
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 4.935
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "uracil",
+      "state": "pi_pi",
+      "excitation_ev": 5.685642061849253,
+      "source_characters": [
+        {
+          "hole": 0.9999999999999976,
+          "particle": 1.0,
+          "transition": 1.0
+        },
+        {
+          "hole": 0.9999999999999963,
+          "particle": 1.0,
+          "transition": 1.0
+        }
+      ],
+      "qualified": true,
+      "joint_residual": 4.6629367034256575e-15,
+      "joint_index": 5,
+      "minimum_absolute_curvature": 0.001794357643340544,
+      "seconds": 24.191197865002323,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "energy_offset": 0.0,
+      "independent_mean_ev": 5.685642061847949,
+      "parent_tda_gfn2": [
+        {
+          "state": "pi_pi",
+          "energy_ev": 7.042605408370363,
+          "tbe_ev": 5.381,
+          "error_ev": 1.661605408370363,
+          "overlap": 0.7160761666298714,
+          "margin": 0.34733831775810914,
+          "projection_norm": 0.9987992349608716,
+          "qualified": true
+        },
+        {
+          "state": "pi_pi",
+          "energy_ev": 6.572768823064411,
+          "tbe_ev": 5.381,
+          "error_ev": 1.191768823064411,
+          "overlap": 0.4994647366893903,
+          "margin": 0.1792375406116523,
+          "projection_norm": 1.0000000000000007,
+          "qualified": false
+        }
+      ],
+      "scope": "exposed vertical regression; stationary roots selected by continuity",
+      "tbe_ev": 5.381
+    }
+  ],
+  "prospective_states": [
+    {
+      "host": "oracle.sns.it",
+      "molecule": "cyanoformaldehyde",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset": 0.0,
+      "excitation_ev": 3.9888283476172632,
+      "archived_ground_gap_ev": 3.988828347617674,
+      "independent_vertical_energy_change_hartree": -2.1316282072803006e-14,
+      "target_squared_overlaps": [
+        0.952525701230485,
+        0.9669554575857222
+      ],
+      "joint_index": 1,
+      "joint_residual": 1.046553815831075e-11,
+      "parent_assignments": [
+        {
+          "transition_overlap": 0.9726060656675868,
+          "hole_sector_norm": 0.9998564869453765,
+          "particle_sector_norm": 0.9869267042784808,
+          "qualified": true
+        },
+        {
+          "transition_overlap": 0.9331063325688095,
+          "hole_sector_norm": 0.999799904190317,
+          "particle_sector_norm": 0.9944893209060128,
+          "qualified": true
+        }
+      ],
+      "qualified": true,
+      "tda_gfn2": [
+        {
+          "profile": "full_response",
+          "energy_ev": 5.5377764830192415,
+          "overlap": 0.9461602907250574,
+          "margin": 0.6333029900719338,
+          "projection_norm": 0.9983934228952112,
+          "qualified": true,
+          "solver_seconds": 0.016977674036752433
+        },
+        {
+          "profile": "qualified_spectral_response",
+          "energy_ev": 5.2757200977469525,
+          "overlap": 0.9023594023972361,
+          "margin": 0.5316202049065128,
+          "projection_norm": 1.0000000000000004,
+          "qualified": true,
+          "solver_seconds": 0.016927354037761688
+        }
+      ],
+      "tda_mean_control_ev": 5.4067482903830975,
+      "tda_orbitals": "corrected GFN2 restricted ground orbitals; no DFT orbitals",
+      "scope": "four prospective molecules; no model or weight fitting after protocol freeze",
+      "tbe_ev": 3.8169999999999993,
+      "error_ev": 0.17182834761726395
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "cyclopropenone",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset": 0.0,
+      "excitation_ev": 4.481511113756665,
+      "archived_ground_gap_ev": 4.481511113757317,
+      "independent_vertical_energy_change_hartree": -1.7763568394002505e-14,
+      "target_squared_overlaps": [
+        0.9590201784797195,
+        0.9447323948037735
+      ],
+      "joint_index": 0,
+      "joint_residual": 5.633590816067624e-11,
+      "parent_assignments": [
+        {
+          "transition_overlap": 0.9769091932921491,
+          "hole_sector_norm": 0.9930419544032695,
+          "particle_sector_norm": 0.9945925950955767,
+          "qualified": true
+        },
+        {
+          "transition_overlap": 0.9874884363198603,
+          "hole_sector_norm": 0.9713717450754669,
+          "particle_sector_norm": 1.0000000000000007,
+          "qualified": true
+        }
+      ],
+      "qualified": true,
+      "tda_gfn2": [
+        {
+          "profile": "full_response",
+          "energy_ev": 5.986475474622758,
+          "overlap": 0.9924129776083851,
+          "margin": 0.8743031902787918,
+          "projection_norm": 0.9996341129064452,
+          "qualified": true,
+          "solver_seconds": 0.021247205033432692
+        },
+        {
+          "profile": "qualified_spectral_response",
+          "energy_ev": 5.0266386544019,
+          "overlap": 0.9938699249242661,
+          "margin": 0.888381879549018,
+          "projection_norm": 0.9999999999999999,
+          "qualified": true,
+          "solver_seconds": 0.021361463994253427
+        }
+      ],
+      "tda_mean_control_ev": 5.506557064512329,
+      "tda_orbitals": "corrected GFN2 restricted ground orbitals; no DFT orbitals",
+      "scope": "four prospective molecules; no model or weight fitting after protocol freeze",
+      "tbe_ev": 4.274,
+      "error_ev": 0.20751111375666476
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "imidazole",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset": 0.0,
+      "excitation_ev": 6.180143025743672,
+      "archived_ground_gap_ev": 6.180143025743672,
+      "independent_vertical_energy_change_hartree": -5.329070518200751e-15,
+      "target_squared_overlaps": [
+        0.9953087363917212,
+        0.8909256666469405
+      ],
+      "joint_index": 3,
+      "joint_residual": 4.1164732213216926e-12,
+      "parent_assignments": [
+        {
+          "transition_overlap": 0.9910948597899635,
+          "hole_sector_norm": 0.9949851712663026,
+          "particle_sector_norm": 0.9841201694904178,
+          "qualified": true
+        },
+        {
+          "transition_overlap": 0.972558723535027,
+          "hole_sector_norm": 0.9971089713071664,
+          "particle_sector_norm": 0.9939790629567686,
+          "qualified": true
+        }
+      ],
+      "qualified": true,
+      "tda_gfn2": [
+        {
+          "profile": "full_response",
+          "energy_ev": 6.847391430777257,
+          "overlap": 0.9162247937621025,
+          "margin": 0.5310482600904788,
+          "projection_norm": 0.9955673071753928,
+          "qualified": true,
+          "solver_seconds": 0.072496704000514
+        },
+        {
+          "profile": "qualified_spectral_response",
+          "energy_ev": 7.70256421155637,
+          "overlap": 0.7933952770984094,
+          "margin": 0.2146486628349643,
+          "projection_norm": 0.9999999999999978,
+          "qualified": true,
+          "solver_seconds": 0.07314287102781236
+        }
+      ],
+      "tda_mean_control_ev": 7.274977821166814,
+      "tda_orbitals": "corrected GFN2 restricted ground orbitals; no DFT orbitals",
+      "scope": "four prospective molecules; no model or weight fitting after protocol freeze",
+      "tbe_ev": 6.715,
+      "error_ev": -0.5348569742563276
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "pyridazine",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset": 0.0,
+      "excitation_ev": 3.529683967274783,
+      "archived_ground_gap_ev": 3.5296839672745413,
+      "independent_vertical_energy_change_hartree": 3.552713678800501e-15,
+      "target_squared_overlaps": [
+        0.8891526074088285,
+        0.9074101660043363
+      ],
+      "joint_index": 1,
+      "joint_residual": 4.326400349086157e-15,
+      "parent_assignments": [
+        {
+          "transition_overlap": 0.9964065570301809,
+          "hole_sector_norm": 0.9965634454016196,
+          "particle_sector_norm": 0.9990137413376234,
+          "qualified": true
+        },
+        {
+          "transition_overlap": 0.973363364468305,
+          "hole_sector_norm": 0.9615425096808188,
+          "particle_sector_norm": 0.9634106778432058,
+          "qualified": true
+        }
+      ],
+      "qualified": true,
+      "tda_gfn2": [
+        {
+          "profile": "full_response",
+          "energy_ev": 4.382002262442649,
+          "overlap": 0.9835435160813407,
+          "margin": 0.8483756445706447,
+          "projection_norm": 0.9958933187345049,
+          "qualified": true,
+          "solver_seconds": 0.15377259900560603
+        },
+        {
+          "profile": "qualified_spectral_response",
+          "energy_ev": 4.923749806239985,
+          "overlap": 0.9911521732672194,
+          "margin": 0.9140236086885071,
+          "projection_norm": 0.9999999999999998,
+          "qualified": true,
+          "solver_seconds": 0.15343632001895458
+        }
+      ],
+      "tda_mean_control_ev": 4.6528760343413165,
+      "tda_orbitals": "corrected GFN2 restricted ground orbitals; no DFT orbitals",
+      "scope": "four prospective molecules; no model or weight fitting after protocol freeze",
+      "tbe_ev": 3.829999999999999,
+      "error_ev": -0.30031603272521634
+    }
+  ],
+  "molecular_minima": [
+    {
+      "molecule": "acetaldehyde",
+      "status": "qualified_stationary",
+      "maximum_gradient": 2.2287272366250388e-05,
+      "xyz": [
+        [
+          0.22230350929787654,
+          0.10132771128702876,
+          0.2334913667279852
+        ],
+        [
+          -0.9453005960535579,
+          -0.025194258276420668,
+          -0.6804940117051161
+        ],
+        [
+          0.4079243109171823,
+          -0.8702860896196858,
+          1.0954507793277528
+        ],
+        [
+          0.30104476057042573,
+          1.0841255171421453,
+          0.7176125575430943
+        ],
+        [
+          -1.8688390393636958,
+          -0.3135713164258303,
+          -0.1481562051145587
+        ],
+        [
+          -0.7506835893718085,
+          -0.8350717204933122,
+          -1.393658275842375
+        ],
+        [
+          -1.1076978658761902,
+          0.9035664199577553,
+          -1.2182916608920045
+        ]
+      ],
+      "checks": [
+        {
+          "step": 0.0002,
+          "gradient_error": 2.5695222518931616e-09,
+          "hvp_error": 7.560932019368138e-09
+        },
+        {
+          "step": 0.0001,
+          "gradient_error": 3.6239887893835037e-10,
+          "hvp_error": 1.895730628032055e-09
+        }
+      ],
+      "frequencies_cm": [
+        186.88918358663585,
+        432.2326542335107,
+        667.8511561245389,
+        973.2602128878057,
+        990.2806689352217,
+        1095.1250574942062,
+        1240.7870308507654,
+        1375.248886551973,
+        1389.4974982722044,
+        1416.3455346906865,
+        1455.6686337149902,
+        2766.354235346847,
+        2838.158215866431,
+        2919.2782806124774,
+        3059.5374022477226
+      ],
+      "seconds": 28.081419235968497,
+      "passed": true
+    },
+    {
+      "molecule": "acetone",
+      "status": "qualified_stationary",
+      "maximum_gradient": 2.510579738960756e-05,
+      "xyz": [
+        [
+          -0.5689937111267613,
+          -0.05338362908351129,
+          -0.29558971025258146
+        ],
+        [
+          0.04750473100688092,
+          1.2845796507628724,
+          -0.5101289621920984
+        ],
+        [
+          0.2806363777256267,
+          -1.2536119814361462,
+          -0.527551980255696
+        ],
+        [
+          -1.845096539788296,
+          -0.1685475054546337,
+          -0.6076164069404388
+        ],
+        [
+          1.092203762986559,
+          1.2729010513871009,
+          -0.21257063888109765
+        ],
+        [
+          1.3076035812366547,
+          -1.0537316303172966,
+          -0.23526364079656562
+        ],
+        [
+          -0.022725319839604352,
+          1.6074367060568153,
+          -1.5645009173928333
+        ],
+        [
+          -0.49768687977818077,
+          2.0329363229216466,
+          0.07422686041197268
+        ],
+        [
+          0.2629093176286112,
+          -1.5736462118852776,
+          -1.5849234343209535
+        ],
+        [
+          -0.11406601800404428,
+          -2.0949327727206866,
+          0.05147526193663559
+        ]
+      ],
+      "checks": [
+        {
+          "step": 0.0002,
+          "gradient_error": 6.739433786464666e-10,
+          "hvp_error": 1.2218747125203322e-09
+        },
+        {
+          "step": 0.0001,
+          "gradient_error": 6.028891050704566e-10,
+          "hvp_error": 3.064416220777133e-10
+        }
+      ],
+      "frequencies_cm": [
+        148.281885797463,
+        149.628969820243,
+        270.70960209137155,
+        368.6465928519383,
+        500.4154000376456,
+        852.5679643659017,
+        968.7870304745626,
+        988.7235317663951,
+        1000.9345446157777,
+        1047.1570097144183,
+        1229.450909393067,
+        1371.0036193871956,
+        1387.3861808524216,
+        1394.904252116746,
+        1416.8890105875005,
+        1425.4478025311403,
+        1460.917342682283,
+        1468.3102145614623,
+        2741.861555634425,
+        2761.5276362706995,
+        2932.38975208795,
+        2934.400865048079,
+        3043.7981240145987,
+        3048.1233426811527
+      ],
+      "seconds": 118.50281899102265,
+      "passed": true
+    },
+    {
+      "molecule": "formamide",
+      "status": "qualified_stationary",
+      "maximum_gradient": 5.487488300855679e-06,
+      "xyz": [
+        [
+          -0.19910288437204476,
+          -0.27257117553077137,
+          0.5163934339097361
+        ],
+        [
+          1.083517982352093,
+          -0.37924406760760443,
+          0.1254002010300951
+        ],
+        [
+          -1.0286807403440783,
+          0.21615886036053422,
+          -0.4725654836347922
+        ],
+        [
+          -0.1480202140155726,
+          0.36920947342676985,
+          1.4479826708206998
+        ],
+        [
+          -0.5794619260106136,
+          0.4820208966124256,
+          -1.3402912230561936
+        ],
+        [
+          -1.8635741275171158,
+          -0.33946738843092256,
+          -0.6301074390548687
+        ]
+      ],
+      "checks": [
+        {
+          "step": 0.0002,
+          "gradient_error": 2.790123964241644e-09,
+          "hvp_error": 7.90243115389444e-09
+        },
+        {
+          "step": 0.0001,
+          "gradient_error": 7.517544910298568e-10,
+          "hvp_error": 2.0181710747024795e-09
+        }
+      ],
+      "frequencies_cm": [
+        324.3838409930506,
+        489.56217389294744,
+        567.7548738669877,
+        902.413221454891,
+        1043.3232895864649,
+        1172.3149525518572,
+        1242.5583959976746,
+        1256.846429883074,
+        1491.0241416127803,
+        2377.420591603327,
+        3308.9811481847764,
+        3430.0601239036882
+      ],
+      "seconds": 57.185740813962184,
+      "passed": true
+    },
+    {
+      "molecule": "maleimide",
+      "status": "qualified_stationary",
+      "maximum_gradient": 1.8843223616568996e-05,
+      "xyz": [
+        [
+          1.5265878663944393e-15,
+          1.1364919550599586,
+          0.09273665534006167
+        ],
+        [
+          1.0108340766991675e-15,
+          -1.136491955065204,
+          0.09273665536090343
+        ],
+        [
+          -3.1296053415943345e-15,
+          0.6854283479696175,
+          -1.2605427879187179
+        ],
+        [
+          3.4211002372340236e-15,
+          -0.6854283479880995,
+          -1.2605427879749351
+        ],
+        [
+          -2.580380789206105e-15,
+          2.755282963273857e-12,
+          0.8725164373091769
+        ],
+        [
+          1.898554480604136e-15,
+          2.2842746106865643,
+          0.5713837699169189
+        ],
+        [
+          4.680760819036829e-16,
+          -2.284274610685142,
+          0.5713837699153622
+        ],
+        [
+          6.9256283403658e-17,
+          4.644413807415706e-13,
+          1.8848555802535825
+        ],
+        [
+          -1.4110388875383593e-15,
+          1.3571912082076192,
+          -2.0958657910704876
+        ],
+        [
+          -1.2703777050152847e-15,
+          -1.3571912081885444,
+          -2.095865791047457
+        ]
+      ],
+      "checks": [
+        {
+          "step": 0.0002,
+          "gradient_error": 9.93091678244798e-10,
+          "hvp_error": 7.957675629555183e-09
+        },
+        {
+          "step": 0.0001,
+          "gradient_error": 2.647853740906953e-10,
+          "hvp_error": 1.9567293896294302e-09
+        }
+      ],
+      "frequencies_cm": [
+        179.1731201109913,
+        288.09059272784697,
+        385.4501069393446,
+        502.10014973349394,
+        527.2698783112504,
+        554.2917448326318,
+        601.0856505696478,
+        618.7637017256538,
+        648.3764807806926,
+        676.3717532967175,
+        705.1382082964968,
+        774.1718998122273,
+        992.5911488320166,
+        1029.272461591276,
+        1049.2826352492718,
+        1165.932930743072,
+        1220.5651231254128,
+        1252.2262224692072,
+        1312.018478993213,
+        1486.366898334018,
+        1636.3670954802176,
+        3169.720953830485,
+        3180.1629255745815,
+        3405.90029527685
+      ],
+      "seconds": 409.02371618995676,
+      "passed": true
+    },
+    {
+      "molecule": "nitroxyl",
+      "status": "qualified_stationary",
+      "maximum_gradient": 9.143389821782144e-06,
+      "xyz": [
+        [
+          0.08261176816113305,
+          1.2517962292619938e-13,
+          1.186724860402521
+        ],
+        [
+          -0.18427032888117623,
+          -1.0005720134210837e-13,
+          -0.02007417322812695
+        ],
+        [
+          0.6016583607040417,
+          -2.507410008433944e-14,
+          -0.6666508771903853
+        ]
+      ],
+      "checks": [
+        {
+          "step": 0.0002,
+          "gradient_error": 3.5371932529424337e-09,
+          "hvp_error": 1.3278576678853914e-08
+        },
+        {
+          "step": 0.0001,
+          "gradient_error": 7.727379216257939e-10,
+          "hvp_error": 3.3275321029056206e-09
+        }
+      ],
+      "frequencies_cm": [
+        1261.4091324768672,
+        1592.5839875820404,
+        3301.0506036951997
+      ],
+      "seconds": 3.866933330951724,
+      "passed": true
+    }
+  ],
+  "software_and_transfer_validation": {
+    "verified_files": 561,
+    "verified_source_files": 30,
+    "all_artifact_hashes_match": true,
+    "all_source_hashes_match": true,
+    "example_restart": {
+      "host": "oracle.sns.it",
+      "restarted": true,
+      "energy_change_hartree": 1.7763568394002505e-15,
+      "passed": true
+    },
+    "remote_full_tests": "86 passed in 107.95s (0:01:47)"
+  },
+  "full_hessian_column_checks": [
+    {
+      "host": "oracle.sns.it",
+      "molecule": "formamide",
+      "columns": 18,
+      "step_bohr": 0.0001,
+      "hessian_max_error": 4.666862951641093e-09,
+      "scalar_gradient_max_error": 2.257482756284901e-09,
+      "numerical_symmetry_error": 5.296813335164963e-09,
+      "seconds": 36.91155468201032,
+      "passed": true
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "nitroxyl",
+      "columns": 9,
+      "step_bohr": 0.0001,
+      "hessian_max_error": 1.1511571140765398e-08,
+      "scalar_gradient_max_error": 3.6434216268976805e-09,
+      "numerical_symmetry_error": 8.737778296047383e-09,
+      "seconds": 7.990086243022233,
+      "passed": true
+    }
+  ],
+  "timing_with_preparation": [
+    {
+      "molecule": "acetaldehyde",
+      "tda_two_all_roots_seconds": 0.03395784000167623,
+      "roks_one_state_warm_seconds": 0.29834924900205806,
+      "maximum_tda_matrix_error": 6.983302824892235e-13
+    },
+    {
+      "molecule": "acetone",
+      "tda_two_all_roots_seconds": 0.09924153698375449,
+      "roks_one_state_warm_seconds": 0.8689700270188041,
+      "maximum_tda_matrix_error": 7.320810624378282e-13
+    },
+    {
+      "molecule": "formamide",
+      "tda_two_all_roots_seconds": 0.028507593960966915,
+      "roks_one_state_warm_seconds": 0.24699549499200657,
+      "maximum_tda_matrix_error": 1.6038281813735011e-12
+    },
+    {
+      "molecule": "glyoxal",
+      "tda_two_all_roots_seconds": 0.04567495797527954,
+      "roks_one_state_warm_seconds": 0.4191303229890764,
+      "maximum_tda_matrix_error": 8.626432901337466e-13
+    },
+    {
+      "molecule": "nitroxyl",
+      "tda_two_all_roots_seconds": 0.012128135014791042,
+      "roks_one_state_warm_seconds": 0.07984435703838244,
+      "maximum_tda_matrix_error": 3.1397107136399427e-13
+    }
+  ],
+  "limitations": [
+    "State-coherent constrained composite PES, not an unconstrained single DFT functional.",
+    "Four prospective molecules have prior native/shell predictions; none was used to fit this composite.",
+    "Residual error is not zero: this is a validated candidate, not a demonstrated universal correction.",
+    "Cached energy-only ROKS is slower than the two-parent TDA control in this implementation."
+  ]
+}

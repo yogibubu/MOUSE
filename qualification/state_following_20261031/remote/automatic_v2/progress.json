@@ -1,0 +1,10 @@
+{
+  "host": "oracle.sns.it",
+  "status": "running",
+  "stage": "reference",
+  "molecule": "Bimane_Syn",
+  "state": null,
+  "pid": 516661,
+  "updated_utc": "2026-10-31T13:46:58.062456+00:00",
+  "numerical_labels_read": false
+}

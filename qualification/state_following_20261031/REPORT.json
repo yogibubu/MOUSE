@@ -1,0 +1,180 @@
+{
+  "host": "oracle.sns.it",
+  "date": "2026-10-31",
+  "scope": "state assignment and solver reliability; not an excitation-energy accuracy result",
+  "recovered_states": 3,
+  "positive_controls": 2,
+  "maximum_control_energy_change_ev": 9.681144774731365e-14,
+  "tests_passed": 31,
+  "library_checkpoint_tests": [
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Diazirine",
+      "state": "B001",
+      "passed": true,
+      "saved_fractions": [
+        0.2,
+        0.4
+      ],
+      "resumed_fractions": [
+        0.6000000000000001,
+        0.8,
+        1.0
+      ],
+      "accepted_fractions_not_recomputed": true,
+      "endpoint_fingerprint_exact": true,
+      "endpoint_energy_error_hartree": 0.0,
+      "endpoint_csf_overlap": 1.0,
+      "index": 1,
+      "residual": 5.635778302370831e-13,
+      "foreign_restart_rejected": true,
+      "source_sha256": "326c09d03b1a268ebc3310d2f80bfabe9c60e9cf73244b7fb61302089dc2f537",
+      "reference_labels_read": false
+    },
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "passed": true,
+      "saved_fractions": [
+        0.2,
+        0.4
+      ],
+      "resumed_fractions": [
+        0.6000000000000001,
+        0.8,
+        1.0
+      ],
+      "accepted_fractions_not_recomputed": true,
+      "endpoint_fingerprint_exact": true,
+      "endpoint_energy_error_hartree": 0.0,
+      "endpoint_csf_overlap": 1.0,
+      "index": 2,
+      "residual": 4.3543160396786185e-11,
+      "foreign_restart_rejected": true,
+      "source_sha256": "326c09d03b1a268ebc3310d2f80bfabe9c60e9cf73244b7fb61302089dc2f537",
+      "reference_labels_read": false
+    }
+  ],
+  "rows": [
+    {
+      "molecule": "Aza-naphthalene",
+      "state": "B011",
+      "classification": "exploratory_recovery",
+      "energy_ev": 5.278554329461959,
+      "fidelity": 0.9965862978185464,
+      "raw_transition": 0.9512314443640572,
+      "best_single_pair_overlap": 0.9544897882363348,
+      "joint_residual": 7.095582801874833e-13,
+      "joint_index": 8,
+      "minimum_orbital_curvature_hartree": 0.0011176208577442191,
+      "minimum_competitor_margin": 0.8723688412198397,
+      "available_competing_reference_roots": 0,
+      "reference_coverage_complete": false,
+      "endpoint_energy_check_hartree": 0.0
+    },
+    {
+      "molecule": "Benzoquinone",
+      "state": "B039",
+      "classification": "exploratory_recovery",
+      "energy_ev": 7.681227290483868,
+      "fidelity": 0.9924783097397202,
+      "raw_transition": 0.9333569916602826,
+      "best_single_pair_overlap": 0.9404306194913798,
+      "joint_residual": 4.710962522858075e-12,
+      "joint_index": 6,
+      "minimum_orbital_curvature_hartree": 0.011409340456674077,
+      "minimum_competitor_margin": 0.5556752987083082,
+      "available_competing_reference_roots": 1,
+      "reference_coverage_complete": false,
+      "endpoint_energy_check_hartree": 0.0
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "state": "B016",
+      "classification": "exploratory_recovery",
+      "energy_ev": 8.197277888879146,
+      "fidelity": 0.9459385808410278,
+      "raw_transition": 0.697708748099667,
+      "best_single_pair_overlap": 0.7375835622217023,
+      "joint_residual": 2.1771174273099714e-11,
+      "joint_index": 4,
+      "minimum_orbital_curvature_hartree": 0.004889725349883006,
+      "minimum_competitor_margin": 0.14857386272230522,
+      "available_competing_reference_roots": 6,
+      "reference_coverage_complete": false,
+      "endpoint_energy_check_hartree": 0.0
+    },
+    {
+      "molecule": "Diazirine",
+      "state": "B001",
+      "classification": "positive_control",
+      "energy_ev": 4.241949435486163,
+      "fidelity": 0.9999003311641771,
+      "raw_transition": 0.9998016412863656,
+      "best_single_pair_overlap": 0.9999013002849029,
+      "joint_residual": 1.97758476261356e-15,
+      "joint_index": 1,
+      "minimum_orbital_curvature_hartree": 0.015597866492192202,
+      "minimum_competitor_margin": 0.7104154608224579,
+      "available_competing_reference_roots": 7,
+      "reference_coverage_complete": false,
+      "endpoint_energy_check_hartree": 0.0,
+      "control_energy_change_ev": 0.0
+    },
+    {
+      "molecule": "Furan",
+      "state": "B022",
+      "classification": "positive_control",
+      "energy_ev": 7.973905034751296,
+      "fidelity": 0.970992725252687,
+      "raw_transition": 0.7085437521952329,
+      "best_single_pair_overlap": 0.729710670088537,
+      "joint_residual": 1.9205470547234427e-13,
+      "joint_index": 3,
+      "minimum_orbital_curvature_hartree": 0.03451273151680415,
+      "minimum_competitor_margin": 0.16992543301282398,
+      "available_competing_reference_roots": 6,
+      "reference_coverage_complete": false,
+      "endpoint_energy_check_hartree": 0.0,
+      "control_energy_change_ev": 9.681144774731365e-14
+    }
+  ],
+  "source_verification": {
+    "orbital_saddle.py": {
+      "local_sha256": "3d73883d3583547ea027886c832378e102e22a9ffce98166596a264dd09ff36c",
+      "tested_remote_sha256": "3d73883d3583547ea027886c832378e102e22a9ffce98166596a264dd09ff36c",
+      "match": true
+    },
+    "roks_orbital_response.py": {
+      "local_sha256": "73beb3508cbc484ec57b96bdfef41e10b2e72c0bb42119c6fe51b3bca5f19a0d",
+      "tested_remote_sha256": "73beb3508cbc484ec57b96bdfef41e10b2e72c0bb42119c6fe51b3bca5f19a0d",
+      "match": true
+    },
+    "roks_tracking.py": {
+      "local_sha256": "2e9bf860bfb482fee9f0b6b5c79f6e69915211e9fdfd8775795008cca5ad4eba",
+      "tested_remote_sha256": "2e9bf860bfb482fee9f0b6b5c79f6e69915211e9fdfd8775795008cca5ad4eba",
+      "match": true
+    },
+    "roks_continuation.py": {
+      "local_sha256": "326c09d03b1a268ebc3310d2f80bfabe9c60e9cf73244b7fb61302089dc2f537",
+      "tested_remote_sha256": "326c09d03b1a268ebc3310d2f80bfabe9c60e9cf73244b7fb61302089dc2f537",
+      "match": true
+    }
+  },
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0.0,
+  "original_blind_baseline_preserved": true,
+  "reference_labels_unopened": true,
+  "limitations": [
+    "only five molecular states tested with this recovery",
+    "no competitor roots available for aza-naphthalene in its targeted reference subset",
+    "comparison with available roots does not prove global uniqueness",
+    "seven compact-basis projection failures are not repaired by a better solver",
+    "full 44-state validation and accuracy scoring remain unfinished"
+  ]
+}

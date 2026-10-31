@@ -1,0 +1,56 @@
+{
+  "host": "oracle.sns.it",
+  "accepted_fraction": 1.0,
+  "ground": {
+    "fingerprint": "f1120fdbd13855170c5e2a1d3403240fa1a0fbc7e5f5cd2c05f98559cf8b2cfc",
+    "energy_hartree": -29.081180127516976,
+    "residual": 1.0148872766631096e-15,
+    "index": 0,
+    "minimum_curvature": 0.6393167937254896
+  },
+  "charts": [
+    {
+      "chart": "native",
+      "projection_norm": 0.9244665875446673,
+      "rank_one_limit": 0.9796760127616265,
+      "directions": [
+        {
+          "hole_norm": 0.9924159033241124,
+          "particle_norm": 0.9883761379108584,
+          "fidelity": 0.9491536334910733,
+          "raw_overlap": 0.929863047156745,
+          "physical_projected_overlap": 0.859627318088882
+        },
+        {
+          "hole_norm": 0.15202831975792358,
+          "particle_norm": 0.12292548486536942,
+          "fidelity": 0.0006021501545139845,
+          "raw_overlap": 0.0005899120624580577,
+          "physical_projected_overlap": 0.0005453539913320372
+        }
+      ]
+    },
+    {
+      "chart": "relaxed_Q",
+      "projection_norm": 0.9252945449352372,
+      "rank_one_limit": 0.9796696691686733,
+      "directions": [
+        {
+          "hole_norm": 0.9947054313585322,
+          "particle_norm": 0.9905212620023638,
+          "fidelity": 0.9488927451106077,
+          "raw_overlap": 0.9296014416790632,
+          "physical_projected_overlap": 0.8601551429495693
+        },
+        {
+          "hole_norm": 0.13735949010259782,
+          "particle_norm": 0.10276723614964271,
+          "fidelity": 0.0017971055851750102,
+          "raw_overlap": 0.0017605698340895772,
+          "physical_projected_overlap": 0.0016290456634606215
+        }
+      ]
+    }
+  ],
+  "reference_excitation_labels_read": false
+}

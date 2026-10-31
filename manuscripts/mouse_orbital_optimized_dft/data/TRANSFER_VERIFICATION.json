@@ -1,0 +1,13 @@
+{
+  "verified_files": 561,
+  "verified_source_files": 30,
+  "all_artifact_hashes_match": true,
+  "all_source_hashes_match": true,
+  "example_restart": {
+    "host": "oracle.sns.it",
+    "restarted": true,
+    "energy_change_hartree": 1.7763568394002505e-15,
+    "passed": true
+  },
+  "remote_full_tests": "86 passed in 107.95s (0:01:47)"
+}
