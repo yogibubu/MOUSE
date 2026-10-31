@@ -1,0 +1,175 @@
+{
+  "renderer": "Jmol 14.31.10",
+  "jar_sha256": "50d63fac6e8074aaf7883b072e4b0a46e95c78fe1958a05e79560fa99eb1cfdf",
+  "molecules": [
+    {
+      "molecule": "Criegee_Intermediate",
+      "path": "coordinates/independent/Criegee_Intermediate.xyz",
+      "geometry_sha256": "f0b6e316c886188793ac4d2a8e9eb52dea4d23d2ce9db65d1a7773a093b5d06e",
+      "display_center": [
+        -0.029332349999999934,
+        -0.0004395533333333331,
+        0.0
+      ],
+      "display_rotation": [
+        [
+          0.9999399002682455,
+          0.01096338686408031,
+          0.0
+        ],
+        [
+          -0.01096338686408031,
+          0.9999399002682455,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol_final/Criegee_Intermediate.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol_final/Criegee_Intermediate.png\"\n"
+    },
+    {
+      "molecule": "Cyclobutadiene",
+      "path": "coordinates/independent/Cyclobutadiene.xyz",
+      "geometry_sha256": "5d8c9d831b6e9d66a83f64da5fd36a895b064534e330d6913e4efb8bc513b537",
+      "display_center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "display_rotation": [
+        [
+          1.0,
+          -1.3523929166367943e-16,
+          0.0
+        ],
+        [
+          1.3523929166367943e-16,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol_final/Cyclobutadiene.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol_final/Cyclobutadiene.png\"\n"
+    },
+    {
+      "molecule": "Benzoxadiazole",
+      "path": "coordinates/independent/Benzoxadiazole.xyz",
+      "geometry_sha256": "7b7d95a9ccdc6a2e0a346eed5e6f239a7d9712e63f42e1a9a2a020ad0153986b",
+      "display_center": [
+        0.0,
+        0.0,
+        -0.06199977999999984
+      ],
+      "display_rotation": [
+        [
+          -0.0,
+          -0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -0.0
+        ]
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol_final/Benzoxadiazole.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol_final/Benzoxadiazole.png\"\n"
+    },
+    {
+      "molecule": "Hexatriene",
+      "path": "coordinates/independent/Hexatriene.xyz",
+      "geometry_sha256": "52d9d67d40de735f19b298d38edee3bc5a27ead4faf0f6ff33bff304c71b5c87",
+      "display_center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "display_rotation": [
+        [
+          -0.9999927626440799,
+          0.0038045577220794757,
+          -0.0
+        ],
+        [
+          0.0038045577220794757,
+          0.9999927626440799,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol_final/Hexatriene.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol_final/Hexatriene.png\"\n"
+    },
+    {
+      "molecule": "Ammonia",
+      "path": "coordinates/independent/Ammonia.xyz",
+      "geometry_sha256": "66fcab392a844dc1cd94cd7bd7861de0b49aa1490136e259d0d894a14d51ac4e",
+      "display_center": [
+        0.06775908,
+        0.0,
+        0.0
+      ],
+      "display_rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol_final/Ammonia.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol_final/Ammonia.png\"\n"
+    },
+    {
+      "molecule": "Furofuran",
+      "path": "coordinates/independent/Furofuran.xyz",
+      "geometry_sha256": "d7866de10b3d0e39d233c77895c790a2c1b0cb5cfc23fa28e045c9a97de5792a",
+      "display_center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "display_rotation": [
+        [
+          -0.9990715643067303,
+          0.043081427479866215,
+          -0.0
+        ],
+        [
+          0.043081427479866215,
+          0.9990715643067303,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol_final/Furofuran.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol_final/Furofuran.png\"\n"
+    }
+  ],
+  "scope": "five primary holdout molecules and one subsequent fresh molecular challenge; presence does not certify convergence or accuracy"
+}

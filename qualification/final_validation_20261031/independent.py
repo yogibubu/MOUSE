@@ -8,7 +8,7 @@ from matrix_gfn2.orbital_saddle import generalized_mode_following
 from scipy.linalg import expm
 
 def reference(name):
- root=OUT/'independent';manifest=json.loads((root/'manifest.json').read_text());rows=[r for r in manifest['states'] if r['molecule']==name];out=root/'references'/name;out.mkdir(parents=True,exist_ok=True)
+ root=OUT/os.environ.get('MOUSE_HOLDOUT_DIRECTORY','independent');manifest=json.loads((root/'manifest.json').read_text());rows=[r for r in manifest['states'] if r['molecule']==name];out=root/'references'/name;out.mkdir(parents=True,exist_ok=True)
  if (out/'result.json').exists():return out
  xyz=root/'geometries'/f"{rows[0]['id']}.xyz";assert sha(xyz)==rows[0]['geometry_sha256'];lines=xyz.read_text().splitlines();n=int(lines[0])
  mol=gto.M(atom='\n'.join(lines[2:2+n]),unit='Angstrom',basis='aug-cc-pVDZ',symmetry=True,verbose=4,output=str(out/'pyscf.log'),max_memory=24000)
@@ -67,7 +67,7 @@ def optimize_parent(obj,c,out):
  np.savez_compressed(out/'converged.npz',coefficients=solved.point);return solved.point
 
 def predict(name):
- root=OUT/'independent';rows=[r for r in json.loads((root/'manifest.json').read_text())['states'] if r['molecule']==name];refdir=reference(name);out=root/'predictions'/name;out.mkdir(parents=True,exist_ok=True)
+ root=OUT/os.environ.get('MOUSE_HOLDOUT_DIRECTORY','independent');rows=[r for r in json.loads((root/'manifest.json').read_text())['states'] if r['molecule']==name];refdir=reference(name);out=root/'predictions'/name;out.mkdir(parents=True,exist_ok=True)
  with np.load(refdir/'reference.npz') as a:xyz=a['coordinates_bohr'].copy()/ANGSTROM_TO_BOHR;z=a['atomic_numbers'].copy();dc=a['coefficients'].copy();dn=int(np.count_nonzero(a['occupations']==2))
  calc=GFN2Calculator([{1:'H',6:'C',7:'N',8:'O'}[int(k)] for k in z],temperature_kelvin=0.)
  gp=out/'native_ground.npz'
@@ -132,5 +132,5 @@ def predict(name):
  write(out/'pass_complete.json',dict(status='attempt_pass_complete',molecule=name,labels_read=False))
 if __name__=='__main__':
  a=argparse.ArgumentParser();a.add_argument('name');args=a.parse_args();lock=(P/'blind/references/compute.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX)
- write(OUT/f'independent/executions/{args.name}.json',dict(script_sha256=sha(__file__),common_sha256=sha(Path(__file__).parent/'common.py'),protocol_sha256=sha(OUT/'protocol.json'),manifest_sha256=sha(OUT/'independent/manifest.json'),labels_read=False))
+ write(OUT/os.environ.get('MOUSE_HOLDOUT_DIRECTORY','independent')/f'executions/{args.name}.json',dict(script_sha256=sha(__file__),common_sha256=sha(Path(__file__).parent/'common.py'),protocol_sha256=sha(OUT/'protocol.json'),manifest_sha256=sha(OUT/os.environ.get('MOUSE_HOLDOUT_DIRECTORY','independent')/'manifest.json'),labels_read=False))
  with threadpool_limits():predict(args.name)

@@ -1,0 +1,7 @@
+{
+  "reason": "Bound the largest-system derivative cost experiment before its first measurement; numerical candidate and accuracy protocols unchanged",
+  "largest_case": "Phthalimide",
+  "largest_hessian_wall_budget_seconds": 600,
+  "repeat_policy": "Three repeats for all other requested properties/cases. For the largest Hessian, repeat only when first completed measurement is <=300 s; otherwise retain first measurement or censoring and omit two redundant expensive repeats.",
+  "reporting": "Right-censored runtime is a lower bound, never a completed Hessian. Report coverage, process RSS, and all omitted repetitions explicitly."
+}

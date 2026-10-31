@@ -1,0 +1,32 @@
+[
+  {
+    "molecule": "Criegee_Intermediate",
+    "path": "coordinates/independent/Criegee_Intermediate.xyz",
+    "geometry_sha256": "f0b6e316c886188793ac4d2a8e9eb52dea4d23d2ce9db65d1a7773a093b5d06e"
+  },
+  {
+    "molecule": "Cyclobutadiene",
+    "path": "coordinates/independent/Cyclobutadiene.xyz",
+    "geometry_sha256": "5d8c9d831b6e9d66a83f64da5fd36a895b064534e330d6913e4efb8bc513b537"
+  },
+  {
+    "molecule": "Benzoxadiazole",
+    "path": "coordinates/independent/Benzoxadiazole.xyz",
+    "geometry_sha256": "7b7d95a9ccdc6a2e0a346eed5e6f239a7d9712e63f42e1a9a2a020ad0153986b"
+  },
+  {
+    "molecule": "Hexatriene",
+    "path": "coordinates/independent/Hexatriene.xyz",
+    "geometry_sha256": "52d9d67d40de735f19b298d38edee3bc5a27ead4faf0f6ff33bff304c71b5c87"
+  },
+  {
+    "molecule": "Ammonia",
+    "path": "coordinates/independent/Ammonia.xyz",
+    "geometry_sha256": "66fcab392a844dc1cd94cd7bd7861de0b49aa1490136e259d0d894a14d51ac4e"
+  },
+  {
+    "molecule": "Furofuran",
+    "path": "coordinates/independent/Furofuran.xyz",
+    "geometry_sha256": "d7866de10b3d0e39d233c77895c790a2c1b0cb5cfc23fa28e045c9a97de5792a"
+  }
+]
