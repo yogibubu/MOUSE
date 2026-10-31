@@ -52,3 +52,27 @@ Open scientific gates are actual DFT-anchor recalibration, new independent
 validation, additional molecular Hessians and physical structure/frequency and
 complete cost/memory comparisons. These results do not establish a universal
 accuracy advantage or an end-to-end speed advantage over TDA.
+
+## Additional qualification in progress
+
+`anchor_rank.py` freezes six actual reference recalculations before inspecting
+results: internal Cartesian scales 0.98 and 1.02 for phthalimide, furan and
+cyclopentadiene. PBE0/aug-cc-pVDZ/grid-3 ground orbitals and two same-symmetry
+TDA roots are recomputed; identity requires coherent cross-geometry transition
+overlap above 0.7 and competitor margin above 0.05, consistent with the original
+symmetry ordinal. A fresh direct native GFN2 S0 minimum defines the compact
+projection. The original fixed compact NTO rank is compared with the recalculated
+rank. This is an anchor/rank diagnostic, not a recalibration of the full F/Q
+response model and not an independent excitation-energy validation.
+
+`qualify_cpd_hessian.py` checks all 33 Cartesian columns of the cyclopentadiene
+excited-total analytic Hessian through the public multi-CSF interface, using
+independently relaxed plus/minus displacements and saved ground/state seeds.
+The 2e-4-bohr displacement and tolerances are frozen in `protocol.json` before
+calculation. The first cold Hessian cost and peak process RSS are recorded;
+this is not a complete size-scaling benchmark or comparison with TDA.
+
+Both drivers assert Oracle identity, cap numerical libraries at two threads,
+share the existing compute lock and reuse finished checkpoints. No calculation
+from these additional tests runs on the laptop. Results must be inspected before
+these gates can be marked complete.
