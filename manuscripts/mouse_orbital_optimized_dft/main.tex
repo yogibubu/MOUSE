@@ -164,6 +164,13 @@ Vertical reference values are the archived \emph{aug}-cc-pVTZ theoretical best e
 
 The reported cohort contains 15 previously exposed regression states in 14 molecules and four additional molecular tests. These latter molecules had earlier native or shell-model predictions, so they are prospective with respect to the present projected-response composite, not a wholly blind benchmark. The 19 reported, qualified transitions form a curated development/validation cohort, not a denominator for a database-wide convergence rate. Eighteen are \npi\ and one is \pipi. The supporting information gives every vertical energy and signed error.
 
+Figure~\ref{fig:structures} collects the archived anchor geometries of both molecular cohorts. The reduced extension is shown separately because its operator-selection and assignment protocol differs from the original vertical-validation cohort.
+
+\begin{figure}[p]
+\centering\includegraphics[width=\linewidth,height=0.87\textheight,keepaspectratio]{figures/molecular_structures_jmol.pdf}
+\caption{Molecular structures studied in this work, rendered with Jmol from the archived calculation geometries. (A) The 18 molecules of the initial 19-state vertical-validation cohort. (B) The 10 molecules of the reduced 14-state extension, including the phthalimide target still under assignment repair at this snapshot. Inclusion denotes study scope, not successful validation of every target state. Ball-and-stick views use carbon in grey, hydrogen in white, nitrogen in blue, and oxygen in red. Display transformations are rigid rotations and translations only; individual panel scales vary for legibility.}\label{fig:structures}
+\end{figure}
+
 For the reduced extension, benchmark reference-response calculations use checkpointed single-vector Davidson expansion per requested root, response residual tolerance $10^{-7}$, and linear-dependence threshold $10^{-18}$. The PBE0 Hamiltonian, basis, grid and requested symmetry/ordinal assignments are unchanged. Completed symmetry roots and accepted Ritz vectors are reused with operator fingerprints. These reference calculations assist benchmark assignment and are accounted for as preparation, separately from the semiempirical stationary-state evaluation. Assigned NTOs and identity projections use the retained native ground-state orbital chart, never the geometry-only core eigensystem used internally for transport.
 
 For TDA, the response equation is

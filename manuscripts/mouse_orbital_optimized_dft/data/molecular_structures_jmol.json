@@ -1,0 +1,861 @@
+{
+  "renderer": "Jmol",
+  "jar_sha256": "50d63fac6e8074aaf7883b072e4b0a46e95c78fe1958a05e79560fa99eb1cfdf",
+  "number_of_molecules": 28,
+  "geometry_changes": "Rigid translation and proper rotation only; original coordinates archived unchanged",
+  "projection": "Orthographic; fixed 18/-12/-5 degree display tilts; panels scaled independently for legibility",
+  "groups": [
+    {
+      "name": "Initial vertical cohort",
+      "molecules": [
+        "acetaldehyde",
+        "acetone",
+        "acrolein",
+        "cyclopentadienone",
+        "formamide",
+        "glyoxal",
+        "maleimide",
+        "nitrosomethane",
+        "nitroxyl",
+        "pyranone",
+        "pyrazine",
+        "pyrimidine",
+        "tetrazine",
+        "uracil",
+        "cyanoformaldehyde",
+        "cyclopropenone",
+        "imidazole",
+        "pyridazine"
+      ]
+    },
+    {
+      "name": "Reduced extension",
+      "molecules": [
+        "Diazirine",
+        "Nitropyridine_N-oxide",
+        "Phthalimide",
+        "Adenine",
+        "Aza-naphthalene",
+        "Bimane_Syn",
+        "Cyclopentadiene",
+        "Furan",
+        "Quinoxaline",
+        "Benzoquinone"
+      ]
+    }
+  ],
+  "molecules": [
+    {
+      "molecule": "acetaldehyde",
+      "geometry": "coordinates/acetaldehyde_anchor.xyz",
+      "geometry_sha256": "9789853348cde999e6812f55953c4483d854d28bdf87894433ad5e9c4de0c89d",
+      "atoms": 7,
+      "display_rotation": [
+        [
+          0.8780232015739706,
+          -0.4786180705926121,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.4786180705926121,
+          0.8780232015739706,
+          0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.09148607660000004,
+        0.0,
+        0.04254480663333332
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/acetaldehyde_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/acetaldehyde.png\"\n"
+    },
+    {
+      "molecule": "acetone",
+      "geometry": "coordinates/acetone_anchor.xyz",
+      "geometry_sha256": "4220694699f848f06c05c78a6115c04df4fc3b3cbe992b3e4a8e4575a0a728b1",
+      "atoms": 10,
+      "display_rotation": [
+        [
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.0046930024999999875
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/acetone_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/acetone.png\"\n"
+    },
+    {
+      "molecule": "acrolein",
+      "geometry": "coordinates/acrolein_anchor.xyz",
+      "geometry_sha256": "40d91f413519a552e1e6efeffd6be9bf5d4e48337f41bd405d18bfc4cdd42078",
+      "atoms": 8,
+      "display_rotation": [
+        [
+          0.9999813102579449,
+          0.0061138477903863635,
+          -0.0
+        ],
+        [
+          0.0061138477903863635,
+          -0.9999813102579449,
+          -0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -1.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.04255564747499996,
+        0.007514775024999986,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/acrolein_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/acrolein.png\"\n"
+    },
+    {
+      "molecule": "cyclopentadienone",
+      "geometry": "coordinates/cyclopentadienone_anchor.xyz",
+      "geometry_sha256": "15af95359b6cd2e6444e53cbbc443efe6acfea6b631564469fff512919e48de7",
+      "atoms": 10,
+      "display_rotation": [
+        [
+          -0.0,
+          0.0,
+          0.9999999999999998
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.9999999999999998,
+          0.0,
+          0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        -0.05191229828333329
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/cyclopentadienone_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/cyclopentadienone.png\"\n"
+    },
+    {
+      "molecule": "formamide",
+      "geometry": "coordinates/formamide_anchor.xyz",
+      "geometry_sha256": "cb17f7e51f49e2f90be0f54ace97a92f327ba73eba0b487ab871afe3d53cd8e9",
+      "atoms": 6,
+      "display_rotation": [
+        [
+          0.9324847072622257,
+          0.361209455471588,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.361209455471588,
+          -0.9324847072622257,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.08839767993333336,
+        0.0,
+        0.03000941999999999
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/formamide_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/formamide.png\"\n"
+    },
+    {
+      "molecule": "glyoxal",
+      "geometry": "coordinates/glyoxal_anchor.xyz",
+      "geometry_sha256": "d2a60d12bd260a56af25dca5b2aaf2b749d02b3a873026092777a94b7f83c13c",
+      "atoms": 6,
+      "display_rotation": [
+        [
+          -0.9999866140843552,
+          -0.0051741329811740835,
+          -0.0
+        ],
+        [
+          -0.0051741329811740835,
+          0.9999866140843552,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/glyoxal_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/glyoxal.png\"\n"
+    },
+    {
+      "molecule": "maleimide",
+      "geometry": "coordinates/maleimide_anchor.xyz",
+      "geometry_sha256": "b3c38f105d88608df1adc05e64d9630c4cfdc7c52d4f8e806c28422573feea0b",
+      "atoms": 10,
+      "display_rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.9999999999999998,
+          0.0,
+          -0.0
+        ],
+        [
+          2.0934671631672284e-17,
+          0.9999999999999999,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        -0.04490993714285718
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/maleimide_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/maleimide.png\"\n"
+    },
+    {
+      "molecule": "nitrosomethane",
+      "geometry": "coordinates/nitrosomethane_anchor.xyz",
+      "geometry_sha256": "586f060fd802ecd83166e0252af06c58bb914a6955cc3701223bdfaf099867e7",
+      "atoms": 6,
+      "display_rotation": [
+        [
+          0.9217811473691275,
+          0.3877106090305692,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.3877106090305692,
+          -0.9217811473691275,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.07028638330000003,
+        0.0,
+        0.07812147663333334
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/nitrosomethane_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/nitrosomethane.png\"\n"
+    },
+    {
+      "molecule": "nitroxyl",
+      "geometry": "coordinates/nitroxyl_anchor.xyz",
+      "geometry_sha256": "5a03ce502becc543c4a1ebcacec0db5ef43a7ea51c6ffc112c94d92e56d3e2bb",
+      "atoms": 3,
+      "display_rotation": [
+        [
+          -0.28799371471641305,
+          -0.9576322991022398,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          -0.9576322991022398,
+          0.2879937147164127,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        -0.062647065,
+        0.0,
+        0.56059211475
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/nitroxyl_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/nitroxyl.png\"\n"
+    },
+    {
+      "molecule": "pyranone",
+      "geometry": "coordinates/pyranone_anchor.xyz",
+      "geometry_sha256": "338e376ee17d780cb8058698005a61df608721841f419d397f979abd362079fc",
+      "atoms": 11,
+      "display_rotation": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          -0.0,
+          0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.0015482157142857136
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/pyranone_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/pyranone.png\"\n"
+    },
+    {
+      "molecule": "pyrazine",
+      "geometry": "coordinates/pyrazine_anchor.xyz",
+      "geometry_sha256": "6571525f3159223c9d3ac630c78dcc1a3c93fe76eaa8f3069bb2a6fce76eea65",
+      "atoms": 10,
+      "display_rotation": [
+        [
+          0.0,
+          -0.0,
+          -1.0
+        ],
+        [
+          -1.6653345369377348e-15,
+          0.9999999999999999,
+          -0.0
+        ],
+        [
+          1.0,
+          1.5554574325939035e-15,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/pyrazine_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/pyrazine.png\"\n"
+    },
+    {
+      "molecule": "pyrimidine",
+      "geometry": "coordinates/pyrimidine_anchor.xyz",
+      "geometry_sha256": "7939633f6c2e942f0fefac0cdec980ec68cc14a752244f2537e3987d5785dbac",
+      "atoms": 10,
+      "display_rotation": [
+        [
+          -0.0,
+          -0.0,
+          1.0000000000000002
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0000000000000002,
+          0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        -0.004755411650000004
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/pyrimidine_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/pyrimidine.png\"\n"
+    },
+    {
+      "molecule": "tetrazine",
+      "geometry": "coordinates/tetrazine_anchor.xyz",
+      "geometry_sha256": "dd9f06b7677d1ddbc2750047594561ff74282a2bdb55f7a1630485f682c2d7d0",
+      "atoms": 8,
+      "display_rotation": [
+        [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.9999999999999998
+        ],
+        [
+          -0.0,
+          -0.9999999999999998,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/tetrazine_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/tetrazine.png\"\n"
+    },
+    {
+      "molecule": "uracil",
+      "geometry": "coordinates/uracil_anchor.xyz",
+      "geometry_sha256": "92ae29c6355c58dd71f0bce076b3763cc56b263a50aae91339204f863c458eed",
+      "atoms": 12,
+      "display_rotation": [
+        [
+          -0.9997345089518364,
+          -0.02304151928216875,
+          -0.0
+        ],
+        [
+          -0.02304151928216875,
+          0.9997345089518364,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "display_center_angstrom": [
+        -0.021856563737499946,
+        -0.03789296247500004,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/uracil_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/uracil.png\"\n"
+    },
+    {
+      "molecule": "cyanoformaldehyde",
+      "geometry": "coordinates/cyanoformaldehyde_anchor.xyz",
+      "geometry_sha256": "730bb9d2a194ffc9f711dd20e38872f7411e809ef619b85f9952659829798bd3",
+      "atoms": 5,
+      "display_rotation": [
+        [
+          -0.07667141384466751,
+          -0.9970564148026229,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          -0.9970564148026229,
+          0.07667141384466751,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.029568082474999993,
+        0.0,
+        0.086629979975
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/cyanoformaldehyde_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/cyanoformaldehyde.png\"\n"
+    },
+    {
+      "molecule": "cyclopropenone",
+      "geometry": "coordinates/cyclopropenone_anchor.xyz",
+      "geometry_sha256": "3953e13e0f75dbd1bf035b12baf9a7fc3b6fd71590ba35b807f53bcc34928719",
+      "atoms": 6,
+      "display_rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -1.1102230246251565e-16,
+          0.9999999999999999,
+          -0.0
+        ],
+        [
+          0.9999999999999999,
+          9.050584923774927e-17,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        -0.05651571745
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/cyclopropenone_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/cyclopropenone.png\"\n"
+    },
+    {
+      "molecule": "imidazole",
+      "geometry": "coordinates/imidazole_anchor.xyz",
+      "geometry_sha256": "974dccf097018a10315a49dcb3e8d8ff49b5572d19880e45f9a5153b07a7abcd",
+      "atoms": 9,
+      "display_rotation": [
+        [
+          -0.8955266234870662,
+          -0.4450079399582149,
+          -0.0
+        ],
+        [
+          -0.4450079399582149,
+          0.8955266234870662,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.028654467979999997,
+        -0.017299793979999985,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/imidazole_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/imidazole.png\"\n"
+    },
+    {
+      "molecule": "pyridazine",
+      "geometry": "coordinates/pyridazine_anchor.xyz",
+      "geometry_sha256": "2a04d3f53a0d13e5e6deb4e961cea375bf85d0261ca096714a76959623ed5004",
+      "atoms": 10,
+      "display_rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.6653345369377348e-15,
+          1.0,
+          -0.0
+        ],
+        [
+          0.9999999999999999,
+          -1.6302737275857102e-15,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        -0.008704543333333334
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/pyridazine_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/pyridazine.png\"\n"
+    },
+    {
+      "molecule": "Diazirine",
+      "geometry": "coordinates/extension/Diazirine.xyz",
+      "geometry_sha256": "8485fa764e0aa958683e79240d3567f0ad84c37d55c3d1eb9b658940e097f80f",
+      "atoms": 5,
+      "display_rotation": [
+        [
+          -0.0,
+          -1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0000000000000002
+        ],
+        [
+          -1.0000000000000002,
+          -0.0,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.7543769399999999
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/diazirine_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/diazirine.png\"\n"
+    },
+    {
+      "molecule": "Nitropyridine_N-oxide",
+      "geometry": "coordinates/extension/Nitropyridine_N-oxide.xyz",
+      "geometry_sha256": "96a9d4d943f5db870385cf78024f29e62b86eb0f4c2fdea7e30c49051f573a78",
+      "atoms": 14,
+      "display_rotation": [
+        [
+          1.0184527828909346e-17,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          1.0184527828909346e-17,
+          0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.03785179899999998
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/nitropyridine_n-oxide_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/nitropyridine_n-oxide.png\"\n"
+    },
+    {
+      "molecule": "Phthalimide",
+      "geometry": "coordinates/extension/Phthalimide.xyz",
+      "geometry_sha256": "305717ae0036d643df96c6864a0acac55c1a9e5e3dce8c6b05eed1e4a685da05",
+      "atoms": 16,
+      "display_rotation": [
+        [
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        [
+          5.551115123125783e-16,
+          0.9999999999999997,
+          0.0
+        ],
+        [
+          -0.9999999999999998,
+          5.104226672904769e-16,
+          0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        -0.07524720181818184
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/phthalimide_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/phthalimide.png\"\n"
+    },
+    {
+      "molecule": "Adenine",
+      "geometry": "coordinates/extension/Adenine.xyz",
+      "geometry_sha256": "eb85ddaa431cbb64499d2e6bd22dce2f562efc7fced2eec04158f2fec02d25c2",
+      "atoms": 15,
+      "display_rotation": [
+        [
+          -0.9962315512605808,
+          0.0867334783860108,
+          -0.0
+        ],
+        [
+          0.0867334783860108,
+          0.9962315512605808,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.009092049999999971,
+        0.02069356099999997,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/adenine_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/adenine.png\"\n"
+    },
+    {
+      "molecule": "Aza-naphthalene",
+      "geometry": "coordinates/extension/Aza-naphthalene.xyz",
+      "geometry_sha256": "e2e9c208e2cc69f03f31a06f5a1f808cac15abb373ee43bfd2a5db7da9d73490",
+      "atoms": 14,
+      "display_rotation": [
+        [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/aza-naphthalene_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/aza-naphthalene.png\"\n"
+    },
+    {
+      "molecule": "Bimane_Syn",
+      "geometry": "coordinates/extension/Bimane_Syn.xyz",
+      "geometry_sha256": "f0497aef88886f3704e161048abf42dcf042beb03fb1e6e4e22db93448d1199d",
+      "atoms": 14,
+      "display_rotation": [
+        [
+          -0.0,
+          0.9999999736854244,
+          0.00022941044099991122
+        ],
+        [
+          -0.0,
+          0.00022941044099991122,
+          -0.9999999736854244
+        ],
+        [
+          -1.0,
+          0.0,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        -0.048883638999999944,
+        -0.0022162199999999866,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/bimane_syn_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/bimane_syn.png\"\n"
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "geometry": "coordinates/extension/Cyclopentadiene.xyz",
+      "geometry_sha256": "0a0f04c43efea6cff33c9bd5ffd018c9adb119e5c7d5fd1cad07d3757fa980e9",
+      "atoms": 11,
+      "display_rotation": [
+        [
+          0.0,
+          -0.0,
+          -1.0
+        ],
+        [
+          0.9999999999999999,
+          0.0,
+          -0.0
+        ],
+        [
+          2.220446049250313e-16,
+          -0.9999999999999999,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.02189778600000003
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/cyclopentadiene_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/cyclopentadiene.png\"\n"
+    },
+    {
+      "molecule": "Furan",
+      "geometry": "coordinates/extension/Furan.xyz",
+      "geometry_sha256": "81569196e1f0a100f68aaefd07672141d6835be944bfb27faac44d3194e3dc92",
+      "atoms": 9,
+      "display_rotation": [
+        [
+          -0.0,
+          0.0,
+          1.0
+        ],
+        [
+          7.926992395823618e-14,
+          1.0000000000000004,
+          0.0
+        ],
+        [
+          -1.0000000000000002,
+          7.908655009478896e-14,
+          0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.040878926000000024
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/furan_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/furan.png\"\n"
+    },
+    {
+      "molecule": "Quinoxaline",
+      "geometry": "coordinates/extension/Quinoxaline.xyz",
+      "geometry_sha256": "ec8f434daebd28eb959944fd3fa54ef20db4ce2592fd31910aa3f72cea348c15",
+      "atoms": 16,
+      "display_rotation": [
+        [
+          0.0,
+          -0.0,
+          -1.0
+        ],
+        [
+          -2.0816681711721685e-17,
+          0.9999999999999998,
+          -0.0
+        ],
+        [
+          0.9999999999999999,
+          1.0651028442746856e-17,
+          -0.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        -0.018218369999999994
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/quinoxaline_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/quinoxaline.png\"\n"
+    },
+    {
+      "molecule": "Benzoquinone",
+      "geometry": "coordinates/extension/Benzoquinone.xyz",
+      "geometry_sha256": "40a19534ee5914ffec10b3e97f83d057402a1342011fb84d7d0b210a1be5ca44",
+      "atoms": 12,
+      "display_rotation": [
+        [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "display_center_angstrom": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jmol_script": "load \"$MANUSCRIPT/tmp/jmol/benzoquinone_view.xyz\"\nbackground white\nset frank off\nset antialiasDisplay true\nset antialiasImages true\nset perspectiveDepth false\nselect all\nspacefill 23%\nwireframe 0.09\ncolor atoms CPK\nselect carbon\ncolor atoms [x535B66]\nselect hydrogen\ncolor atoms [xF0F0EC]\nselect all\nset ambientPercent 42\nset diffusePercent 78\nset specularPercent 28\nrotate x 18\nrotate y -12\nrotate z -5\nzoom 85\nwrite image 1000 650 PNG \"$MANUSCRIPT/tmp/jmol/benzoquinone.png\"\n"
+    }
+  ]
+}

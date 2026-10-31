@@ -60,3 +60,9 @@ Internal-coordinate results against CCSDR(3)/def2-TZVPP are available for three 
 ## Revision of 31 October 2026
 
 Code commit `5620e2d` includes spin-pure ROKS/DeltaSCF, analytic nuclear response, APOC/LINK integration, batched orbital response and assigned-NTO initialization. Main Sections 2.6--2.7 and 4.4 and SI Section 8 explain the solver, amended identity policy and measured timing scope. Seven scientific figures use archived results or labelled schematics. The obsolete static-response accuracy and timing comparisons have been withdrawn as TDA results.
+
+## Molecular-structure plate
+
+`figures/molecular_structures_jmol.pdf` shows all 28 molecules in two separate cohorts (18 initial, 10 extension), using actual Jmol ball-and-stick renders of the archived calculation anchors. The extension includes the unresolved phthalimide target; presence in the plate is not a convergence or accuracy claim. `data/molecular_structures_jmol.json` records geometry checksums, proper display rotations and Jmol scripts; `data/structure_geometry_sources.json` records the Oracle geometry sources and hashes. All ten transferred extension files match the frozen geometry hashes where present. No optimization is performed.
+
+Rebuild with `python make_structures_jmol.py --jmol-jar /path/to/Jmol.jar` (Jmol 14.31.10 used). Render caches are optional and stored under `tmp/jmol/`; PDF assembly uses ReportLab and Pillow, orientation uses NumPy.

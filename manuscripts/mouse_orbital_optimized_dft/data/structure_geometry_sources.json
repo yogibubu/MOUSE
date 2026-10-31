@@ -1,0 +1,72 @@
+[
+  {
+    "molecule": "Diazirine",
+    "id": "B001",
+    "path": "coordinates/extension/Diazirine.xyz",
+    "sha256": "8485fa764e0aa958683e79240d3567f0ad84c37d55c3d1eb9b658940e097f80f",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B001.xyz"
+  },
+  {
+    "molecule": "Nitropyridine_N-oxide",
+    "id": "B004",
+    "path": "coordinates/extension/Nitropyridine_N-oxide.xyz",
+    "sha256": "96a9d4d943f5db870385cf78024f29e62b86eb0f4c2fdea7e30c49051f573a78",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B004.xyz"
+  },
+  {
+    "molecule": "Phthalimide",
+    "id": "B005",
+    "path": "coordinates/extension/Phthalimide.xyz",
+    "sha256": "305717ae0036d643df96c6864a0acac55c1a9e5e3dce8c6b05eed1e4a685da05",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B005.xyz"
+  },
+  {
+    "molecule": "Adenine",
+    "id": "B007",
+    "path": "coordinates/extension/Adenine.xyz",
+    "sha256": "eb85ddaa431cbb64499d2e6bd22dce2f562efc7fced2eec04158f2fec02d25c2",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B007.xyz"
+  },
+  {
+    "molecule": "Aza-naphthalene",
+    "id": "B011",
+    "path": "coordinates/extension/Aza-naphthalene.xyz",
+    "sha256": "e2e9c208e2cc69f03f31a06f5a1f808cac15abb373ee43bfd2a5db7da9d73490",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B011.xyz"
+  },
+  {
+    "molecule": "Bimane_Syn",
+    "id": "B015",
+    "path": "coordinates/extension/Bimane_Syn.xyz",
+    "sha256": "f0497aef88886f3704e161048abf42dcf042beb03fb1e6e4e22db93448d1199d",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B015.xyz"
+  },
+  {
+    "molecule": "Cyclopentadiene",
+    "id": "B016",
+    "path": "coordinates/extension/Cyclopentadiene.xyz",
+    "sha256": "0a0f04c43efea6cff33c9bd5ffd018c9adb119e5c7d5fd1cad07d3757fa980e9",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B016.xyz"
+  },
+  {
+    "molecule": "Furan",
+    "id": "B022",
+    "path": "coordinates/extension/Furan.xyz",
+    "sha256": "81569196e1f0a100f68aaefd07672141d6835be944bfb27faac44d3194e3dc92",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B022.xyz"
+  },
+  {
+    "molecule": "Quinoxaline",
+    "id": "B025",
+    "path": "coordinates/extension/Quinoxaline.xyz",
+    "sha256": "ec8f434daebd28eb959944fd3fa54ef20db4ce2592fd31910aa3f72cea348c15",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B025.xyz"
+  },
+  {
+    "molecule": "Benzoquinone",
+    "id": "B039",
+    "path": "coordinates/extension/Benzoquinone.xyz",
+    "sha256": "40a19534ee5914ffec10b3e97f83d057402a1342011fb84d7d0b210a1be5ca44",
+    "source": "oracle.sns.it:/home/enzo/MOUSE-publication-validation-20261030/blind/geometries/B039.xyz"
+  }
+]
