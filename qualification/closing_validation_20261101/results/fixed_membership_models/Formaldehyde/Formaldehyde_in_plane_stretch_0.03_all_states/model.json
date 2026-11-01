@@ -1,0 +1,48 @@
+{
+  "schema": "mouse.nosi.screened_even_cid.v1",
+  "active_space_size": 5,
+  "interaction": "static_constrained_RPA",
+  "augmentation": "frozen_reflection_even",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "state_ids": [
+    "B001"
+  ],
+  "labels": [
+    "S0",
+    "B001",
+    "B001_pair_double",
+    "pair_h4_p6",
+    "open_h4_4_p6_7",
+    "pair_h4_p7",
+    "open_h4_5_p6_6",
+    "four_h4_5_p6_7_0",
+    "four_h4_5_p6_7_1",
+    "open_h4_5_p7_7",
+    "open_h5_5_p6_7",
+    "pair_h5_p7"
+  ],
+  "sha256": {
+    "response.npz": "fc4ffccf15bbd6f3941bdc30f1f90d276e90433d7af91593bdee6fd24281de32",
+    "template.npz": "0659be2ed14f2f4a97bc6d72eb75eb46bfd6186c89c1fb65f8d02cf7c2816ae6",
+    "arrays.npz": "26486a7eec0a90fe75dbe85aa04a7496120778f511ffffb8e784aa82e0501923"
+  },
+  "provenance": {
+    "candidate_freeze_commit": "2d59ab8",
+    "native_model_sha256": "5da43cafc0e324768a9b4b0bece8f547001ed1caa40171b4f339f8495bf839df",
+    "selected_matrix_sha256": "68658b0fe8fe62806227de49541a849f243e7f4f8ce2bd9cfb457f1ce3fc5705",
+    "reflection_certificate": {
+      "available": false,
+      "reason": "no molecular plane"
+    },
+    "runtime_DFT_backend_required": false,
+    "runtime_TDA_required": false,
+    "source_sha256": "a931df084873e8bcf3db5974a4b87ad1affc71f0586791c86f60280a84878acc",
+    "membership_frozen_from": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+    "anchor_selection_changed": false
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "model_generation": "final screened-even OO-CID with unchanged F/Q and lambda",
+  "minima": [
+    {
+      "molecule": "Formaldehyde",
+      "model_fingerprint": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+      "host": "mac-2.homenet.telecomitalia.it",
+      "gradient_max": 4.029744721898477e-07,
+      "frequencies_cm": [
+        336.8299842685799,
+        1100.6706491596012,
+        1255.9346370697797,
+        1540.3930290511619,
+        3059.8057049517934,
+        3107.0813909103917
+      ],
+      "imaginary_modes": 0,
+      "minimum_frequency_cm": 336.8299842685799,
+      "coordinates_angstrom": [
+        [
+          -0.14428599685825422,
+          -1.5555028679070783e-15,
+          -0.641193265703606
+        ],
+        [
+          0.02128525433412712,
+          1.3464333884508106e-14,
+          0.6281625934450936
+        ],
+        [
+          0.021812080444342574,
+          0.9116226628457411,
+          -1.1744545038328034
+        ],
+        [
+          0.02181208044433385,
+          -0.9116226628457524,
+          -1.1744545038327945
+        ]
+      ],
+      "atomic_numbers": [
+        6,
+        8,
+        1,
+        1
+      ],
+      "optimization_steps": 18,
+      "optimization_message": "Optimization terminated successfully.",
+      "wall_seconds": 24.598618416988757,
+      "hessian_seconds": 5.820720458053984,
+      "maximum_stationary_residual": 2.4945504724157274e-15,
+      "minimum_overlap": 1.0000000000000002,
+      "derivatives": "analytic of final frozen anchored model; no re-preparation inside optimization",
+      "frequency_scaling": 1.0
+    },
+    {
+      "molecule": "acetaldehyde",
+      "model_fingerprint": "528dc05936cfb8fd90df8e94dc63bf66b68bf67501b58551b1a087f0f82ad273",
+      "host": "mac-2.homenet.telecomitalia.it",
+      "gradient_max": 4.613024267774955e-06,
+      "frequencies_cm": [
+        526.792465371224,
+        588.3060586170375,
+        756.4036919155177,
+        964.609075243117,
+        1072.8848982338154,
+        1142.7529822863069,
+        1226.607202694686,
+        1420.66101404825,
+        1449.1844228515654,
+        1512.1225013176233,
+        1588.8082102748067,
+        2929.842137287703,
+        3180.5587032065278,
+        3194.157393562377,
+        3248.2819279563773
+      ],
+      "imaginary_modes": 0,
+      "minimum_frequency_cm": 526.792465371224,
+      "coordinates_angstrom": [
+        [
+          -0.06595971009836535,
+          -0.13748050573336743,
+          0.5015102126481169
+        ],
+        [
+          -0.9650991614760788,
+          -0.03311092612650141,
+          -0.7030809749289434
+        ],
+        [
+          1.1851761988741334,
+          -0.3681317778869945,
+          0.4382829540583631
+        ],
+        [
+          -0.36884860203697956,
+          0.47688641185674147,
+          1.3377598707828018
+        ],
+        [
+          -1.724433169187567,
+          0.6884123791218772,
+          -0.49481106448939877
+        ],
+        [
+          -1.4225653747594382,
+          -0.9721114009315224,
+          -0.9268507788614905
+        ],
+        [
+          -0.3795186911952479,
+          0.26615923806440445,
+          -1.5468556691646682
+        ]
+      ],
+      "atomic_numbers": [
+        6,
+        6,
+        8,
+        1,
+        1,
+        1,
+        1
+      ],
+      "optimization_steps": 51,
+      "optimization_message": "converged analytic gradient; resumed saved optimized checkpoint",
+      "hessian_seconds": 70.43803408299573,
+      "hessian_workers": 8,
+      "hessian_scope": "checkpointed parallel analytic columns; not a serial public-API timing",
+      "hessian_asymmetry": 9.298117831235686e-16,
+      "maximum_stationary_residual": 8.95793509140838e-16,
+      "minimum_overlap": 0.9999999994833539,
+      "derivatives": "complete analytic anchored-model response",
+      "frequency_scaling": 1.0
+    }
+  ],
+  "geometries": [
+    {
+      "molecule": "Formaldehyde",
+      "metric": "C-O",
+      "prediction": 1.280108642411473,
+      "reference": 1.326,
+      "error": -0.04589135758852714,
+      "unit": "Angstrom",
+      "reference_method": "CC3/aug-cc-pVTZ",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "Formaldehyde",
+      "metric": "C-H",
+      "prediction": 1.0691173924264201,
+      "reference": 1.089,
+      "error": -0.019882607573579847,
+      "unit": "Angstrom",
+      "reference_method": "CC3/aug-cc-pVTZ",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "Formaldehyde",
+      "metric": "H-C-H",
+      "prediction": 117.01030549285082,
+      "reference": 118.3,
+      "error": -1.2896945071491785,
+      "unit": "degree",
+      "reference_method": "CC3/aug-cc-pVTZ",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "Formaldehyde",
+      "metric": "pyramidalization",
+      "prediction": 24.73210336931118,
+      "reference": 36.8,
+      "error": -12.067896630688818,
+      "unit": "degree",
+      "reference_method": "CC3/aug-cc-pVTZ",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-O",
+      "prediction": 1.2737891341565537,
+      "reference": 1.331,
+      "error": -0.05721086584344626,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-C",
+      "prediction": 1.5067795762351712,
+      "reference": 1.508,
+      "error": -0.001220423764828782,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-Hald",
+      "prediction": 1.080972655074748,
+      "reference": 1.091,
+      "error": -0.010027344925251924,
+      "unit": "Angstrom",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-C-O",
+      "prediction": 123.98508728530383,
+      "reference": 115.2,
+      "error": 8.785087285303831,
+      "unit": "degree",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "C-C-Hald",
+      "prediction": 114.32350544256114,
+      "reference": 119.3,
+      "error": -4.976494557438855,
+      "unit": "degree",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "metric": "pyramidalization",
+      "prediction": 25.38421941169386,
+      "reference": 38.7,
+      "error": -13.315780588306144,
+      "unit": "degree",
+      "reference_method": "CCSDR(3)/def2-TZVPP",
+      "reference_doi": "10.1021/acs.jctc.7b00921"
+    }
+  ],
+  "frequencies": [
+    {
+      "molecule": "Formaldehyde",
+      "mode": "C-O stretch",
+      "mode_index": 4,
+      "prediction_harmonic_cm": 1540.3930290511619,
+      "reference_fundamental_cm": 1173.0,
+      "difference_cm": 367.3930290511619,
+      "mass_weighted_internal_coordinate_score": 0.9746557734857918,
+      "reference_doi": "10.1016/0022-2852(69)90274-4",
+      "scope": "harmonic versus experimental fundamental; difference includes anharmonicity, not a harmonic error estimate"
+    },
+    {
+      "molecule": "Formaldehyde",
+      "mode": "symmetric C-H stretch",
+      "mode_index": 6,
+      "prediction_harmonic_cm": 3107.0813909103917,
+      "reference_fundamental_cm": 2847.0,
+      "difference_cm": 260.08139091039175,
+      "mass_weighted_internal_coordinate_score": 0.997977864260856,
+      "reference_doi": "10.1016/0022-2852(69)90274-4",
+      "scope": "harmonic versus experimental fundamental; no scale factor"
+    },
+    {
+      "molecule": "Formaldehyde",
+      "mode": "asymmetric C-H stretch",
+      "mode_index": 5,
+      "prediction_harmonic_cm": 3059.8057049517934,
+      "reference_fundamental_cm": 2968.0,
+      "difference_cm": 91.80570495179336,
+      "mass_weighted_internal_coordinate_score": 0.9993926077786781,
+      "reference_doi": "10.1016/0022-2852(69)90274-4",
+      "scope": "harmonic versus experimental fundamental; no scale factor"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "mode": "C-O stretch",
+      "mode_index": 11,
+      "prediction_harmonic_cm": 1588.8082102748067,
+      "reference_fundamental_cm": 1119.0,
+      "difference_cm": 469.8082102748067,
+      "mass_weighted_internal_coordinate_score": 0.9573999529263558,
+      "reference_doi": "10.1021/ja00402a016",
+      "scope": "harmonic versus experimental fundamental; difference includes anharmonicity, not a harmonic error estimate"
+    }
+  ],
+  "all_minima_converged": true,
+  "all_minima_positive": true,
+  "frequency_comparison": "Experiment is anharmonic. Inversion/torsion splittings are not treated as harmonic curvature benchmarks. Modes assigned through mass-weighted chemical-coordinate projection, not frequency ordering."
+}

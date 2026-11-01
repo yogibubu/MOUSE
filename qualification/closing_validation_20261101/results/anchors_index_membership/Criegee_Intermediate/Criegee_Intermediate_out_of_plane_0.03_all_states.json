@@ -1,0 +1,32 @@
+{
+  "molecule": "Criegee_Intermediate",
+  "state_id": "I002",
+  "direction": "out_of_plane",
+  "step_bohr": 0.03,
+  "old_anchor_gap_ev": 4.062875419008819,
+  "new_anchor_gap_ev": 4.015936749478369,
+  "anchor_shift_ev": -0.04693866953044967,
+  "frozen_csf_count": 178,
+  "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+  "new_anchor": "e15414ee80d0f6de7f3daebd4b95e8662175a8d6ca676f145a5886add2c06f85",
+  "model_prepared_without_new_electronic_work": true,
+  "selected_predictions": [
+    {
+      "id": "I001",
+      "root": 0,
+      "gap_ev": 2.361134215959684,
+      "overlap": 0.9983578418136635,
+      "margin": 0.9581347699689597,
+      "qualified": true
+    },
+    {
+      "id": "I002",
+      "root": 1,
+      "gap_ev": 4.015936749550838,
+      "overlap": 0.9641506530125108,
+      "margin": 0.903707887020219,
+      "qualified": true
+    }
+  ],
+  "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+}

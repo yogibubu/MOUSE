@@ -1,0 +1,6 @@
+{
+  "serial_pid": 91451,
+  "serial_elapsed": "24:43",
+  "optimized_checkpoint_preserved": true,
+  "reason": "Resume final analytic Hessian as checkpointed parallel columns; no completed Hessian or electronic preparation restarted"
+}

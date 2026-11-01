@@ -1,0 +1,31 @@
+{
+  "model": "ed1b1613628e0f3c113c0d40c73d9f163b7b7025fd6d147a270f7f8261d15c4f",
+  "predictions": [
+    {
+      "excitation_ev": 8.155586877683598,
+      "root": 2,
+      "overlap": 0.961945227041299,
+      "margin": 0.8162888440727084,
+      "qualified": true,
+      "orbitals": "own stationary corrected GFN2 ground orbitals",
+      "operator": "complete singlet TDA A including nonlocal exchange correction",
+      "lambda_exchange": 0.9,
+      "xc": "CAM-B3LYP",
+      "response_short_range_exchange": 0.171,
+      "response_long_range_exchange": 0.585,
+      "omega_bohr_inverse": 0.33,
+      "id": "B003",
+      "wall_seconds": 0.03182812500745058
+    }
+  ],
+  "DFT_spatial_orbitals_used": false,
+  "same_corrected_native_reference": true,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "host": "mac-2.homenet.telecomitalia.it",
+  "scope": "Same corrected native orbitals, one-body F/Q field and charge/spin response. TDA retains its response kernel; the OO-CID screened configuration Hamiltonian is a distinct approximation."
+}

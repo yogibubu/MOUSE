@@ -1,0 +1,15 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "model": "ffb1d1301c5003b5188560f3309e8a7e5d17a780aad3d7000b91eabff972d859",
+  "wall_energy_seconds": 0.036008583032526076,
+  "energy_errors_ev": {
+    "B002": 0.0
+  },
+  "restart_error_hartree": 2.6645352591003757e-15,
+  "spin_squared": [
+    0.0
+  ],
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_solves": 0
+}

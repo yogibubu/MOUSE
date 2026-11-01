@@ -1,0 +1,49 @@
+{
+  "molecule": "Criegee_Intermediate",
+  "state_id": "I002",
+  "direction": "out_of_plane",
+  "step_bohr": 0.01,
+  "old_anchor_gap_ev": 4.064238676222918,
+  "new_anchor_gap_ev": 4.028900813231895,
+  "anchor_shift_ev": -0.03533786299102282,
+  "frozen_csf_count": 178,
+  "canonical_orbital_mapping": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "minimum_orbital_overlap": 0.9999833464633755,
+  "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+  "new_anchor": "fbcce4af8397f159694f0ccf13dbcfe07ecb9464664ef85743c8b25920c426fa",
+  "model_prepared_without_new_electronic_work": true,
+  "selected_predictions": [
+    {
+      "id": "I001",
+      "root": 0,
+      "gap_ev": 2.350542849780506,
+      "overlap": 0.9971055183025603,
+      "margin": 0.9544935466443546,
+      "qualified": true
+    },
+    {
+      "id": "I002",
+      "root": 1,
+      "gap_ev": 4.028900813490944,
+      "overlap": 0.9634113588446906,
+      "margin": 0.9026396082037994,
+      "qualified": true
+    }
+  ],
+  "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+}

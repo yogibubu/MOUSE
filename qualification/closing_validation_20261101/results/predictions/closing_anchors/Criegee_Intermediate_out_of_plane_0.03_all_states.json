@@ -1,0 +1,86 @@
+{
+  "item": {
+    "cohort": "closing_anchors",
+    "molecule": "Criegee_Intermediate_out_of_plane_0.03_all_states",
+    "states": [
+      "I002"
+    ]
+  },
+  "result": {
+    "primary": {
+      "predictions": [
+        {
+          "id": "I001",
+          "root": 0,
+          "gap_ev": 2.36129468988838,
+          "overlap": 0.998365017664067,
+          "margin": 0.9575842770079493,
+          "qualified": true
+        },
+        {
+          "id": "I002",
+          "root": 1,
+          "gap_ev": 4.325625505995803,
+          "overlap": 0.97156388027271,
+          "margin": 0.9458952412042837,
+          "qualified": true
+        }
+      ],
+      "all_eigenvalues_ev": [
+        2.36129468988838,
+        4.325625505995803,
+        12.798586129671017,
+        15.315511361925598,
+        15.67265844182804,
+        18.3185460235111,
+        18.836846775332262,
+        20.313862007910583,
+        20.62225733007926,
+        21.718321556673946,
+        22.09753265166172,
+        23.28162667733436
+      ],
+      "metric_eigenvalues": [
+        0.6357360698253972,
+        0.9879229345934861,
+        0.9970369652787184,
+        0.9997203111611362,
+        0.9999999999999677,
+        0.9999999999999731,
+        0.9999999999999746,
+        0.9999999999999789,
+        1.0002803032166538,
+        1.0029284014965774,
+        1.0120504918600481,
+        1.3643245225678757
+      ]
+    },
+    "labels": [
+      "S0",
+      "I001",
+      "I002",
+      "I001_pair_double",
+      "I002_pair_double",
+      "open_h7_7_p9_10",
+      "pair_h7_p10",
+      "open_h7_8_p9_9",
+      "four_h7_8_p9_10_0",
+      "four_h7_8_p9_10_1",
+      "open_h7_8_p10_10",
+      "open_h8_8_p9_10",
+      "pair_h8_p10"
+    ],
+    "reflection": {
+      "available": false,
+      "reason": "molecular reflection not certified",
+      "geometry_error_bohr": 0.10794450916147512
+    },
+    "source_sha256": "f53799fa9a5092cf5a869decad32a02b1f6c93965e6633510f3b64648871c5c9",
+    "parent_sha256": "421badae200f2dd1e4323fd5c148666566bc141cd0e826fe074c30c77a4569d9",
+    "single_common_interaction": true,
+    "no_state_family_branch": true
+  },
+  "model_sha256": "01e2682a0553787a2f96a73408e72eba9fe1978528a58579cc7d982260147f77",
+  "protocol_sha256": "764a1d70be47b79e8d069616600c34b93fca4774bb36ee2804568e9708b9c49e",
+  "scoring_labels_read": false
+}

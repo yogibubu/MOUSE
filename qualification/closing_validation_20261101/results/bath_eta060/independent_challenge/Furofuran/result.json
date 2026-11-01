@@ -1,0 +1,38 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "independent_challenge",
+  "molecule": "Furofuran",
+  "states": [
+    {
+      "id": "C001",
+      "gap_ev": 5.400384587958555,
+      "overlap": 0.9998085689375611,
+      "margin": 0.9898326368141457
+    },
+    {
+      "id": "C002",
+      "gap_ev": 6.507885101909608,
+      "overlap": 0.9989400107940295,
+      "margin": 0.9575124566857847
+    }
+  ],
+  "model": "2f7649e85a26aea2bd04e9ed4b3a117603aefdb17f663fc04c2b580f6e7533f0",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 436,
+  "bath_virtuals": 176,
+  "native_environment_transitions": 290,
+  "bath_transitions": 3520,
+  "gauge_alignment_hartree": 0.09311027233386715,
+  "minimum_bath_gap_hartree": 0.3067469735715562,
+  "bare_DF_integral_max_error_hartree": 0.0001452955574983983,
+  "minimum_dielectric_eigenvalue": 1.000007818837834,
+  "screened_coulomb_trace": 28.85303514609015
+}

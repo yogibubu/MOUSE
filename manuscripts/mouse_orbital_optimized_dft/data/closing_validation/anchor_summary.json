@@ -1,0 +1,596 @@
+{
+  "frozen_membership": [
+    {
+      "molecule": "Formaldehyde",
+      "state_id": "B001",
+      "direction": "out_of_plane",
+      "step_bohr": 0.01,
+      "old_anchor_gap_ev": 4.284786133151497,
+      "new_anchor_gap_ev": 4.2848419461097755,
+      "anchor_shift_ev": 5.581295827816746e-05,
+      "frozen_csf_count": 12,
+      "canonical_orbital_mapping": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "minimum_orbital_overlap": 0.9997432325973068,
+      "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+      "new_anchor": "bc9439d0785a0f8cd416ed1e0c82e71534f7d28aff20453c2db005456cb62f72",
+      "model_prepared_without_new_electronic_work": true,
+      "selected_predictions": [
+        {
+          "id": "B001",
+          "root": 0,
+          "gap_ev": 4.284841946410187,
+          "overlap": 0.994278918834357,
+          "margin": 0.8881837903110504,
+          "qualified": true
+        }
+      ],
+      "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+    },
+    {
+      "molecule": "Formaldehyde",
+      "state_id": "B001",
+      "direction": "in_plane_stretch",
+      "step_bohr": 0.03,
+      "old_anchor_gap_ev": 4.400009379935135,
+      "new_anchor_gap_ev": 4.429910372688625,
+      "anchor_shift_ev": 0.029900992753490563,
+      "frozen_csf_count": 12,
+      "canonical_orbital_mapping": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "minimum_orbital_overlap": 0.9997508412014771,
+      "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+      "new_anchor": "5a8b3c458d99f0029e6f74a9c810acd48e7e50fb7956256ed534efb305a2a958",
+      "model_prepared_without_new_electronic_work": true,
+      "selected_predictions": [
+        {
+          "id": "B001",
+          "root": 0,
+          "gap_ev": 4.4299103728381555,
+          "overlap": 0.9949939811989634,
+          "margin": 0.8958658440207957,
+          "qualified": true
+        }
+      ],
+      "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+    },
+    {
+      "molecule": "Formaldehyde",
+      "state_id": "B001",
+      "direction": "in_plane_stretch",
+      "step_bohr": 0.01,
+      "old_anchor_gap_ev": 4.322993879928514,
+      "new_anchor_gap_ev": 4.3337452844523545,
+      "anchor_shift_ev": 0.010751404523840158,
+      "frozen_csf_count": 12,
+      "canonical_orbital_mapping": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "minimum_orbital_overlap": 0.9999724746112593,
+      "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+      "new_anchor": "8bd6fe1587ea93dc6ef171d94c22ca2a7c04dba72c44ef7cbfd67433b34b7182",
+      "model_prepared_without_new_electronic_work": true,
+      "selected_predictions": [
+        {
+          "id": "B001",
+          "root": 0,
+          "gap_ev": 4.333745284688542,
+          "overlap": 0.9945160470685103,
+          "margin": 0.8906756459773824,
+          "qualified": true
+        }
+      ],
+      "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+    },
+    {
+      "molecule": "Formaldehyde",
+      "state_id": "B001",
+      "direction": "out_of_plane",
+      "step_bohr": 0.03,
+      "old_anchor_gap_ev": 4.282495602563772,
+      "new_anchor_gap_ev": 4.28298546955311,
+      "anchor_shift_ev": 0.0004898669893380614,
+      "frozen_csf_count": 12,
+      "canonical_orbital_mapping": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "minimum_orbital_overlap": 0.9977111343095306,
+      "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+      "new_anchor": "b07290ef9f8368b6956f4e63ef1fd065deef16bab6657f8ad935d654530a421c",
+      "model_prepared_without_new_electronic_work": true,
+      "selected_predictions": [
+        {
+          "id": "B001",
+          "root": 0,
+          "gap_ev": 4.282985469849018,
+          "overlap": 0.9943129572286472,
+          "margin": 0.8885738248560058,
+          "qualified": true
+        }
+      ],
+      "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+    },
+    {
+      "molecule": "Criegee_Intermediate",
+      "state_id": "I002",
+      "direction": "out_of_plane",
+      "step_bohr": 0.03,
+      "old_anchor_gap_ev": 4.062875419008819,
+      "new_anchor_gap_ev": 4.015936749478369,
+      "anchor_shift_ev": -0.04693866953044967,
+      "frozen_csf_count": 178,
+      "canonical_orbital_mapping": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "minimum_orbital_overlap": 0.9998503454349377,
+      "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+      "new_anchor": "e15414ee80d0f6de7f3daebd4b95e8662175a8d6ca676f145a5886add2c06f85",
+      "model_prepared_without_new_electronic_work": true,
+      "selected_predictions": [
+        {
+          "id": "I001",
+          "root": 0,
+          "gap_ev": 2.361134215959684,
+          "overlap": 0.9983578418136635,
+          "margin": 0.9581347699689597,
+          "qualified": true
+        },
+        {
+          "id": "I002",
+          "root": 1,
+          "gap_ev": 4.015936749550838,
+          "overlap": 0.9641506530125108,
+          "margin": 0.903707887020219,
+          "qualified": true
+        }
+      ],
+      "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+    },
+    {
+      "molecule": "Criegee_Intermediate",
+      "state_id": "I002",
+      "direction": "in_plane_stretch",
+      "step_bohr": 0.03,
+      "old_anchor_gap_ev": 4.152870260901035,
+      "new_anchor_gap_ev": 4.121704447724288,
+      "anchor_shift_ev": -0.031165813176746937,
+      "frozen_csf_count": 178,
+      "canonical_orbital_mapping": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "minimum_orbital_overlap": 0.9651425897721043,
+      "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+      "new_anchor": "490624d3c3eadc325277a43fb44155f252459bf15470b4ca56158b86430cbe19",
+      "model_prepared_without_new_electronic_work": true,
+      "selected_predictions": [
+        {
+          "id": "I001",
+          "root": 0,
+          "gap_ev": 2.483761906841134,
+          "overlap": 0.9988732702511612,
+          "margin": 0.9658891031099467,
+          "qualified": true
+        },
+        {
+          "id": "I002",
+          "root": 1,
+          "gap_ev": 4.1217044477243245,
+          "overlap": 0.9655939565911501,
+          "margin": 0.9101184386809646,
+          "qualified": true
+        }
+      ],
+      "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+    },
+    {
+      "molecule": "Criegee_Intermediate",
+      "state_id": "I002",
+      "direction": "in_plane_stretch",
+      "step_bohr": 0.01,
+      "old_anchor_gap_ev": 4.093784708351377,
+      "new_anchor_gap_ev": 4.0831480717552235,
+      "anchor_shift_ev": -0.010636636596153437,
+      "frozen_csf_count": 178,
+      "canonical_orbital_mapping": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "minimum_orbital_overlap": 0.9941376736037635,
+      "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+      "new_anchor": "89b4e89338a3f38ec222046ec6b164bb14600613391cd33779d2a6b18e88f6be",
+      "model_prepared_without_new_electronic_work": true,
+      "selected_predictions": [
+        {
+          "id": "I001",
+          "root": 0,
+          "gap_ev": 2.4127460128202887,
+          "overlap": 0.9987920678977844,
+          "margin": 0.9624355335130517,
+          "qualified": true
+        },
+        {
+          "id": "I002",
+          "root": 1,
+          "gap_ev": 4.083148071755236,
+          "overlap": 0.9651114376260528,
+          "margin": 0.9089535536466854,
+          "qualified": true
+        }
+      ],
+      "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+    },
+    {
+      "molecule": "Criegee_Intermediate",
+      "state_id": "I002",
+      "direction": "out_of_plane",
+      "step_bohr": 0.01,
+      "old_anchor_gap_ev": 4.064238676222918,
+      "new_anchor_gap_ev": 4.028900813231895,
+      "anchor_shift_ev": -0.03533786299102282,
+      "frozen_csf_count": 178,
+      "canonical_orbital_mapping": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "minimum_orbital_overlap": 0.9999833464633755,
+      "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+      "new_anchor": "fbcce4af8397f159694f0ccf13dbcfe07ecb9464664ef85743c8b25920c426fa",
+      "model_prepared_without_new_electronic_work": true,
+      "selected_predictions": [
+        {
+          "id": "I001",
+          "root": 0,
+          "gap_ev": 2.350542849780506,
+          "overlap": 0.9971055183025603,
+          "margin": 0.9544935466443546,
+          "qualified": true
+        },
+        {
+          "id": "I002",
+          "root": 1,
+          "gap_ev": 4.028900813490944,
+          "overlap": 0.9634113588446906,
+          "margin": 0.9026396082037994,
+          "qualified": true
+        }
+      ],
+      "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+    }
+  ],
+  "fresh_selection": [
+    {
+      "molecule": "Formaldehyde",
+      "direction": "out_of_plane",
+      "step_bohr": 0.01,
+      "old_anchor_gap_ev": 4.284786133151497,
+      "new_anchor_gap_ev": 4.284841945857045,
+      "anchor_shift_ev": 5.5812705547927855e-05,
+      "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+      "new_anchor": "34b52900d26f9a561f348a8f000253ff562af6a7d5bdaa98e51facad31475afd",
+      "old_csf_count": 12,
+      "new_csf_count": 12,
+      "new_reflection": {
+        "available": false,
+        "reason": "no molecular plane"
+      },
+      "state_overlap_original": 0.9999776318414145,
+      "state_overlap_new": 0.9999999999999946,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0
+    },
+    {
+      "molecule": "Formaldehyde",
+      "direction": "in_plane_stretch",
+      "step_bohr": 0.03,
+      "old_anchor_gap_ev": 4.400009379935135,
+      "new_anchor_gap_ev": 4.42991037243181,
+      "anchor_shift_ev": 0.029900992496675566,
+      "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+      "new_anchor": "f97d3b74d53ed1cf25c186f4d44ea7c2529e09d83d5a7ebad32f4b11dc4e493f",
+      "old_csf_count": 12,
+      "new_csf_count": 12,
+      "new_reflection": {
+        "available": false,
+        "reason": "no molecular plane"
+      },
+      "state_overlap_original": 0.9996673188984805,
+      "state_overlap_new": 0.9999999999999961,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0
+    },
+    {
+      "molecule": "Formaldehyde",
+      "direction": "in_plane_stretch",
+      "step_bohr": 0.01,
+      "old_anchor_gap_ev": 4.322993879928514,
+      "new_anchor_gap_ev": 4.333745284197715,
+      "anchor_shift_ev": 0.010751404269199558,
+      "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+      "new_anchor": "54daed1a6d0cb1baa18668342264af217e063eb8adcb78fb42b437cf7a5afe65",
+      "old_csf_count": 12,
+      "new_csf_count": 12,
+      "new_reflection": {
+        "available": false,
+        "reason": "no molecular plane"
+      },
+      "state_overlap_original": 0.9999639168801545,
+      "state_overlap_new": 1.000000000000001,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0
+    },
+    {
+      "molecule": "Formaldehyde",
+      "direction": "out_of_plane",
+      "step_bohr": 0.03,
+      "old_anchor_gap_ev": 4.282495602563772,
+      "new_anchor_gap_ev": 4.282985469300428,
+      "anchor_shift_ev": 0.0004898667366559282,
+      "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+      "new_anchor": "55b04bb72654f43c599995be3629a1e2d905e3848dfb1bb611bcde9555651033",
+      "old_csf_count": 12,
+      "new_csf_count": 12,
+      "new_reflection": {
+        "available": false,
+        "reason": "no molecular plane"
+      },
+      "state_overlap_original": 0.9997987369784562,
+      "state_overlap_new": 0.999999999999997,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0
+    },
+    {
+      "molecule": "Criegee_Intermediate",
+      "direction": "out_of_plane",
+      "step_bohr": 0.03,
+      "old_anchor_gap_ev": 4.062875419008819,
+      "new_anchor_gap_ev": 4.325625505995803,
+      "anchor_shift_ev": 0.2627500869869843,
+      "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+      "new_anchor": "01e2682a0553787a2f96a73408e72eba9fe1978528a58579cc7d982260147f77",
+      "old_csf_count": 178,
+      "new_csf_count": 13,
+      "new_reflection": {
+        "available": false,
+        "reason": "molecular reflection not certified",
+        "geometry_error_bohr": 0.10794450916147512
+      },
+      "state_overlap_original": 0.9998439575412967,
+      "state_overlap_new": 1.000000000000007,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0,
+      "state_id": "I002",
+      "reporting_correction": "select matching state_id instead of states[0]; completed selected-matrix eigenvalue used, no electronic job repeated"
+    },
+    {
+      "molecule": "Criegee_Intermediate",
+      "direction": "in_plane_stretch",
+      "step_bohr": 0.03,
+      "old_anchor_gap_ev": 4.152870260901035,
+      "new_anchor_gap_ev": 4.121704447724312,
+      "anchor_shift_ev": -0.031165813176722956,
+      "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+      "new_anchor": "128a3dfe3a5744299057ad25bd5d85c71d83fd7bd77938c848a6fb93530a27e9",
+      "old_csf_count": 178,
+      "new_csf_count": 178,
+      "new_reflection": {
+        "available": true,
+        "geometry_error_bohr": 1.1102230246251565e-16,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "mo_characters": [
+          0.9999999999999991,
+          0.9999999999999993,
+          1.0000000000000002,
+          1.0000000000000009,
+          1.0000000000000004,
+          -0.9999999999999991,
+          0.9999999999999991,
+          -0.9999999999999987,
+          0.9999999999999998,
+          -1.0000000000000004,
+          0.999999999999999,
+          0.9999999999999992,
+          0.9999999999999991,
+          0.9999999999999983
+        ],
+        "offdiagonal_error": 7.616661881378942e-13
+      },
+      "state_overlap_original": 0.9999014641956351,
+      "state_overlap_new": 1.000000000000006,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0,
+      "state_id": "I002",
+      "reporting_correction": "select matching state_id instead of states[0]; completed selected-matrix eigenvalue used, no electronic job repeated"
+    },
+    {
+      "molecule": "Criegee_Intermediate",
+      "direction": "in_plane_stretch",
+      "step_bohr": 0.01,
+      "old_anchor_gap_ev": 4.093784708351377,
+      "new_anchor_gap_ev": 4.083148071755236,
+      "anchor_shift_ev": -0.010636636596141003,
+      "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+      "new_anchor": "2a412db1bed345b7df39076d0f247178f125f0a3cf88700012f565a5fa824213",
+      "old_csf_count": 178,
+      "new_csf_count": 178,
+      "new_reflection": {
+        "available": true,
+        "geometry_error_bohr": 1.3877787807814457e-17,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "mo_characters": [
+          0.9999999999999999,
+          1.0000000000000002,
+          1.0000000000000016,
+          1.0000000000000007,
+          1.0000000000000022,
+          -0.9999999999999997,
+          1.0000000000000013,
+          0.9999999999999998,
+          -0.9999999999999999,
+          -1.0000000000000004,
+          1.0000000000000004,
+          1.0000000000000013,
+          0.9999999999999998,
+          0.9999999999999997
+        ],
+        "offdiagonal_error": 1.4137998074236542e-13
+      },
+      "state_overlap_original": 0.9999892553867099,
+      "state_overlap_new": 0.9999999999999925,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0,
+      "state_id": "I002",
+      "reporting_correction": "select matching state_id instead of states[0]; completed selected-matrix eigenvalue used, no electronic job repeated"
+    },
+    {
+      "molecule": "Criegee_Intermediate",
+      "direction": "out_of_plane",
+      "step_bohr": 0.01,
+      "old_anchor_gap_ev": 4.064238676222918,
+      "new_anchor_gap_ev": 4.33740608867407,
+      "anchor_shift_ev": 0.2731674124511523,
+      "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+      "new_anchor": "fc5101a795e85426f68a845382d2141f46e8cc33d426efba656825465c3ad6ee",
+      "old_csf_count": 178,
+      "new_csf_count": 13,
+      "new_reflection": {
+        "available": false,
+        "reason": "molecular reflection not certified",
+        "geometry_error_bohr": 0.03598467332501169
+      },
+      "state_overlap_original": 0.9999826780818682,
+      "state_overlap_new": 0.9999999999999964,
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0,
+      "state_id": "I002",
+      "reporting_correction": "select matching state_id instead of states[0]; completed selected-matrix eigenvalue used, no electronic job repeated"
+    }
+  ]
+}

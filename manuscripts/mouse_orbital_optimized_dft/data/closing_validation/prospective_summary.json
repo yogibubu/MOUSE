@@ -1,0 +1,54 @@
+{
+  "protocol_commit": "94d2312",
+  "no_model_refit": true,
+  "exposure": "prospective fixed-model extension; one formaldehyde literature value seen after prediction, see preparation amendment; distinct from the exposed development twenty",
+  "rows": [
+    {
+      "molecule": "Formaldehyde",
+      "state": "^1A_2",
+      "id": "B001",
+      "reference_ev": 3.966,
+      "prediction_ev": 4.285072542555207,
+      "error_ev": 0.31907254255520723,
+      "state_assigned": true,
+      "overlap": 0.9942746076726579,
+      "margin": 0.8881344743820784,
+      "within_05_ev": true,
+      "TDA_ev": 4.649931281361805,
+      "TDA_error_ev": 0.6839312813618044
+    },
+    {
+      "molecule": "Ethylene",
+      "state": "^1B_{1u}",
+      "id": "B002",
+      "reference_ev": 7.897,
+      "prediction_ev": 9.078513469522075,
+      "error_ev": 1.1815134695220753,
+      "state_assigned": true,
+      "overlap": 1.0000000000000007,
+      "margin": 0.9999999999999986,
+      "within_05_ev": false,
+      "TDA_ev": 11.429867986575843,
+      "TDA_error_ev": 3.532867986575843
+    },
+    {
+      "molecule": "Butadiene",
+      "state": "^1B_u",
+      "id": "B003",
+      "reference_ev": 6.221999999999999,
+      "prediction_ev": 6.631844788325067,
+      "error_ev": 0.409844788325068,
+      "state_assigned": true,
+      "overlap": 0.9933559060978886,
+      "margin": 0.9068346999364109,
+      "within_05_ev": true,
+      "TDA_ev": 8.567434882667007,
+      "TDA_error_ev": 2.345434882667008
+    }
+  ],
+  "mae_ev": 0.6368102668007835,
+  "max_abs_error_ev": 1.1815134695220753,
+  "all_assigned": true,
+  "all_within_05_ev": false,
+  "TDA_mae_ev": 2.187411383534885
+}

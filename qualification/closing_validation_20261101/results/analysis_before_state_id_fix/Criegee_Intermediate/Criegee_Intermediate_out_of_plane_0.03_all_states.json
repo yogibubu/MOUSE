@@ -1,0 +1,25 @@
+{
+  "molecule": "Criegee_Intermediate",
+  "direction": "out_of_plane",
+  "step_bohr": 0.03,
+  "old_anchor_gap_ev": 4.062875419008819,
+  "new_anchor_gap_ev": 2.3612946895400952,
+  "anchor_shift_ev": -1.7015807294687235,
+  "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+  "new_anchor": "01e2682a0553787a2f96a73408e72eba9fe1978528a58579cc7d982260147f77",
+  "old_csf_count": 178,
+  "new_csf_count": 13,
+  "new_reflection": {
+    "available": false,
+    "reason": "molecular reflection not certified",
+    "geometry_error_bohr": 0.10794450916147512
+  },
+  "state_overlap_original": 0.9998439575412967,
+  "state_overlap_new": 1.000000000000007,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0
+}

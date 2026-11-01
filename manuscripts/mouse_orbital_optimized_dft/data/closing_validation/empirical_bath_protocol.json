@@ -1,0 +1,18 @@
+{
+  "status": "one-parameter semiempirical development candidate",
+  "parent": "Qualified-complement diagonal one-body self-energy before F/Q averaging; explicit orthogonal full-DFT bath with mixed Coulomb vertices",
+  "dielectric": "I + B_native B_native^T + eta B_bath B_bath^T",
+  "bath_polarization_efficiency_eta": 0.60,
+  "eta_is_empirical_and_calibrated": true,
+  "parameters_fitted": 1,
+  "calibration": "Use the already exposed original-development Furan V010 and Furofuran C002 states to balance their opposite errors. Interpolate their maximum absolute errors from eta=1 and eta=0.65 and round the estimated crossing near 0.60 to two significant figures. Freeze before the complete-ledger calculation. This is calibration, not parameter-free theory or blind validation.",
+  "calibration_data": {"eta_1_Furan_ev": 6.155466808169837, "eta_1_C002_ev": 6.67925873389587, "eta_065_Furan_ev": 6.062441677877524, "eta_065_C002_ev": 6.531184665192791, "Furan_reference_ev": 6.530, "C002_reference_ev": 6.027},
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "orbital_gap_scaling": "none",
+  "molecule_or_state_family_switch": false,
+  "configuration_space": "Original frozen screened-even CID; no auxiliary singles and no residue renormalization",
+  "test_scope": "All 23 states are exposed development. The remaining 21 states were not used to set eta, but are not claimed as a blind benchmark.",
+  "runtime": "Frozen prepared operators, unchanged analytic first/second nuclear response; no DFT/TDA/SCC driver after preparation"
+}

@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "closing_blind",
+  "molecule": "Butadiene",
+  "states": [
+    {
+      "id": "B003",
+      "gap_ev": 6.208427326068693,
+      "overlap": 0.9998676103547027,
+      "margin": 0.9879973408397466
+    }
+  ],
+  "model": "ed1b1613628e0f3c113c0d40c73d9f163b7b7025fd6d147a270f7f8261d15c4f",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 262,
+  "bath_virtuals": 120,
+  "native_environment_transitions": 96,
+  "bath_transitions": 1320,
+  "gauge_alignment_hartree": 0.07968359070558922,
+  "minimum_bath_gap_hartree": 0.33546590208548177,
+  "bare_DF_integral_max_error_hartree": 6.643320847576906e-05,
+  "minimum_dielectric_eigenvalue": 1.000011313433035,
+  "screened_coulomb_trace": 17.41058909299796
+}

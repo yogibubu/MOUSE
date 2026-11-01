@@ -1,0 +1,13 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "wall_seconds": 3.6970844580209814,
+  "cold_start_energy": -5.7760511433901325,
+  "restart_error": 2.6645352591003757e-15,
+  "trial_overlap": 0.9999999478231842,
+  "trial_does_not_advance_accepted": true,
+  "spin_squared": 0,
+  "new_SCC_calls": 0,
+  "DFT_imports": 0,
+  "selected_electronic_state": 1,
+  "model_sha256": "ffb1d1301c5003b5188560f3309e8a7e5d17a780aad3d7000b91eabff972d859"
+}

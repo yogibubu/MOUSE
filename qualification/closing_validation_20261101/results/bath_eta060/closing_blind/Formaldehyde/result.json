@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "closing_blind",
+  "molecule": "Formaldehyde",
+  "states": [
+    {
+      "id": "B001",
+      "gap_ev": 3.643514122196525,
+      "overlap": 0.9997029876879072,
+      "margin": 0.9753477354622716
+    }
+  ],
+  "model": "3fd1782f68c17a6975306ac932a555aa47100f0051298fcf4872d13fbc0fb059",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 120,
+  "bath_virtuals": 52,
+  "native_environment_transitions": 4,
+  "bath_transitions": 312,
+  "gauge_alignment_hartree": 0.0767684600905405,
+  "minimum_bath_gap_hartree": 0.3768149253116542,
+  "bare_DF_integral_max_error_hartree": 0.00015239556088786355,
+  "minimum_dielectric_eigenvalue": 1.0000029046082448,
+  "screened_coulomb_trace": 9.505155555281414
+}

@@ -159,6 +159,87 @@ The following Jmol renderings use archived three-dimensional molecular coordinat
 \begin{figure}[p]\centering\includegraphics[page=1,width=\linewidth,height=.86\textheight,keepaspectratio]{figures/all_studied_structures_jmol.pdf}\caption{Archived three-dimensional molecular structures, plate 1.}\end{figure}
 \begin{figure}[p]\centering\includegraphics[page=2,width=\linewidth,height=.86\textheight,keepaspectratio]{figures/all_studied_structures_jmol.pdf}\caption{Archived three-dimensional molecular structures, plate 2.}\end{figure}
 \clearpage
+\section{Closing prospective, anchor and physical validation}
+This section concerns the final screened-even energy and its unchanged
+50/50 weights, exchange scale 0.9 and zero energy offset. It is distinct
+from the earlier model generations above. All three new fixed predictions
+were saved before their QUEST scoring labels were opened. The state-seed
+amendment and the bibliographic exposure of an approximate formaldehyde
+vertical energy after its prediction are disclosed in
+\path{data/closing_validation/preparation_amendment.json}. No new score is
+used to alter the model.
+\begin{center}\small\input{tables/closing_vertical.tex}\end{center}
+The prospective MAEs are 0.637 eV for OO-CID and 2.187 eV for the matched
+native-orbital TDA control. The ethylene error is retained and precludes a
+universal 0.5 eV claim. All fresh spin-pure runtime and restart checks pass;
+no DFT backend, TDA input or new SCC driver is required for evaluation.
+
+The eight anchor tests compare excitation gaps at the same displaced
+geometry. All original target states are retained. The original canonical
+membership is transported using occupied- and virtual-sector overlap
+assignments. The maximum absolute gap change is 0.047 eV for Criegee and
+0.030 eV for formaldehyde. Re-selecting the configuration space after
+symmetry breaking is separately recorded: the Criegee space falls from
+178 to 13 CSFs and its pi state changes by 0.263--0.273 eV. Integer orbital
+indices without overlap transport are also retained as a diagnostic, and
+are not confused with the frozen physical membership. All anchor matrices,
+reports, mappings and preparation checkpoints remain archived. An initial
+reporting-only state-index error is corrected by matching \texttt{state\_id}
+against the completed eigensystem; no electronic result was refitted.
+
+\subsection{Final-model minima and physical comparisons}
+The following internal coordinates belong to the optimized final energy.
+Formaldehyde references are CC3/aug-cc-pVTZ; acetaldehyde references are
+CCSDR(3)/def2-TZVPP.\cite{geometries2017}
+\begin{center}\small\input{tables/closing_geometry.tex}\end{center}
+The frequencies below are model harmonic values and experimental
+fundamentals, in cm$^{-1}$. Their differences include anharmonicity and
+are not estimates of error against a harmonic coupled-cluster reference.
+Chemical-coordinate projection determines the mode index. No scale factor
+is applied.\cite{formaldehydespectrum1969,acetaldehydespectrum1981}
+\begin{center}\small\input{tables/closing_frequencies.tex}\end{center}
+Complete minimum coordinates, all harmonic modes, gradient residuals and
+Hessian certificates are in \path{data/closing_validation/}. Inversion
+splittings and torsional level spacings are excluded from the harmonic
+comparison. The derivative implementation is tested independently of
+these physical discrepancies.
+
+\subsection{Exact dense-response acceleration}
+The optimized dense residual completion gives the same two-state public
+Criegee energy, gradients and full Hessians bit-for-bit. The archived
+cold two-thread times are 418.04 and 397.37 s; peak resident memory is
+1.06 and 1.19 GB, respectively. This is a single-run 4.9\% reduction,
+not a robust cost-scaling claim. All ten existing spin, canonical-algebra
+and legacy-contract tests pass. The new numerical work runs exclusively
+on the verified Mac Studio; existing completed electronic checkpoints
+and analytic Hessian columns are preserved on resume.
+
+
+\clearpage
+\section{Common-reference repair and calibrated bath efficiency}
+The initial twenty-state model, its original prospective extension and its
+minimum/frequency data above are retained as distinct model generations.
+The following complete table uses the corrected reference and the single
+global bath parameter $\eta=0.60$. Stars mark furan V010 and furofuran C002,
+the only states used to set $\eta$. All 23 labels had already been exposed;
+none is claimed as a blind validation. F/Q weights remain 50/50, exchange
+scale remains 0.9 and the energy offset is zero. Every state is reported.
+{\small\setlength{\tabcolsep}{4pt}\input{tables/empirical_bath_vertical.tex}}
+The corrected native-reference TDA is recomputed using native GFN2 spatial
+orbitals, not DFT spatial orbitals. Complete molecule-level checksummed
+manifests and fresh-process energy/spin/restart certificates are archived in
+\path{qualification/closing_validation_20261101/results/bath_eta060}.
+The corrected ethylene analytic E/G/H certificate and numerical portable
+bundle are in \path{qualification/closing_validation_20261101/portable_corrected/Ethylene}.
+Its gradient and curvature Richardson discrepancies are
+$1.73\times10^{-11}$ Ha/bohr and $6.56\times10^{-8}$ Ha/bohr$^2$.
+The minimization and physical-frequency tables above are not reassigned to
+this corrected candidate. An opt-in auxiliary-single schema is also available for configuration-space
+diagnostics; the selected correction in this table retains the original CID
+configuration space. The fitted screening efficiency requires further
+prospective testing; it does not establish a universal error correction.
+
+\clearpage
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 \end{document}

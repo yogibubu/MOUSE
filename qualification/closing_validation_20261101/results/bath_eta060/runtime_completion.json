@@ -1,0 +1,107 @@
+[
+  {
+    "cohort": "additional_three",
+    "molecule": "cyclopentadienone",
+    "returncode": 0
+  },
+  {
+    "cohort": "additional_three",
+    "molecule": "pyranone",
+    "returncode": 0
+  },
+  {
+    "cohort": "additional_three",
+    "molecule": "pyrimidine",
+    "returncode": 0
+  },
+  {
+    "cohort": "cid_prospective",
+    "molecule": "maleimide",
+    "returncode": 0
+  },
+  {
+    "cohort": "cid_prospective",
+    "molecule": "nitrosomethane",
+    "returncode": 0
+  },
+  {
+    "cohort": "closing_blind",
+    "molecule": "Butadiene",
+    "returncode": 0
+  },
+  {
+    "cohort": "closing_blind",
+    "molecule": "Ethylene",
+    "returncode": 0
+  },
+  {
+    "cohort": "closing_blind",
+    "molecule": "Formaldehyde",
+    "returncode": 0
+  },
+  {
+    "cohort": "extra_npi",
+    "molecule": "acetaldehyde",
+    "returncode": 0
+  },
+  {
+    "cohort": "extra_npi",
+    "molecule": "formamide",
+    "returncode": 0
+  },
+  {
+    "cohort": "extra_npi",
+    "molecule": "pyrazine",
+    "returncode": 0
+  },
+  {
+    "cohort": "independent",
+    "molecule": "Benzoxadiazole",
+    "returncode": 0
+  },
+  {
+    "cohort": "independent",
+    "molecule": "Criegee_Intermediate",
+    "returncode": 0
+  },
+  {
+    "cohort": "independent",
+    "molecule": "Hexatriene",
+    "returncode": 0
+  },
+  {
+    "cohort": "independent_challenge",
+    "molecule": "Furofuran",
+    "returncode": 0
+  },
+  {
+    "cohort": "last_two",
+    "molecule": "Furan",
+    "returncode": 0
+  },
+  {
+    "cohort": "last_two",
+    "molecule": "uracil",
+    "returncode": 0
+  },
+  {
+    "cohort": "post_kernel_validation",
+    "molecule": "acrolein",
+    "returncode": 0
+  },
+  {
+    "cohort": "post_kernel_validation",
+    "molecule": "tetrazine",
+    "returncode": 0
+  },
+  {
+    "cohort": "prospective_cisd",
+    "molecule": "acetone",
+    "returncode": 0
+  },
+  {
+    "cohort": "prospective_cisd",
+    "molecule": "glyoxal",
+    "returncode": 0
+  }
+]

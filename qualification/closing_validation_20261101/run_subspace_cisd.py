@@ -1,6 +1,6 @@
 """Checkpoint-preserving common-rule complete-ledger candidate evaluation."""
 from pathlib import Path
-import socket,json,subprocess,sys,concurrent.futures,os
+import socket,json,subprocess,sys,concurrent.futures,os,time
 assert socket.getfqdn()=='mac-2.homenet.telecomitalia.it'
 assert subprocess.check_output(['scutil','--get','ComputerName'],text=True).strip()=='Mac Studio di Vincenzo'
 HERE=Path('/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101');REPAIR=HERE.parent/'MOUSE-pi-pi-transfer-repair-20261101'
@@ -14,6 +14,9 @@ def group(items):
  for cohort,name in items:
   out=HERE/'subspace_cisd_driver'/cohort/name;out.mkdir(parents=True,exist_ok=True)
   with (out/'driver.log').open('a') as log:
+   # Reuse a preparation already in flight instead of writing its files twice.
+   needle='radial_embedding.py '+cohort+' '+name+' --mode subspace'
+   while any(needle in line for line in subprocess.check_output(['ps','-axo','command'],text=True).splitlines()):time.sleep(3)
    code=subprocess.call([sys.executable,str(HERE/'radial_embedding.py'),cohort,name,'--mode','subspace'],stdout=log,stderr=subprocess.STDOUT,env=os.environ)
    if code==0:code=subprocess.call([sys.executable,str(HERE/'complete_singles.py'),'subspace_'+cohort,name,'--parent','original_prepared'],stdout=log,stderr=subprocess.STDOUT,env=os.environ)
   row=dict(cohort=cohort,molecule=name,returncode=code);rows.append(row);(out/'status.json').write_text(json.dumps(row,indent=2)+'\n');print(row,flush=True)

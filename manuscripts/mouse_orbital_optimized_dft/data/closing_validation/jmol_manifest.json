@@ -1,0 +1,93 @@
+{
+  "renderer": "Jmol 14.31.10",
+  "jar_sha256": "50d63fac6e8074aaf7883b072e4b0a46e95c78fe1958a05e79560fa99eb1cfdf",
+  "molecules": [
+    {
+      "molecule": "Formaldehyde",
+      "geometry": "coordinates/closing_validation/Formaldehyde.xyz",
+      "geometry_sha256": "12aaa15993072edaca70ee7d1e06ef4f685d03f3cd1b6be28a81ca330e2f1c62",
+      "render": "data/closing_validation/Formaldehyde.png",
+      "render_sha256": "7b85b513312af459eed16bbf482f359543290d02dfeb26e7a8fd2bfa0fba0876",
+      "display_rotation": [
+        [
+          -0.0,
+          -0.0,
+          -1.0000000000000002
+        ],
+        [
+          0.0,
+          -1.0,
+          -0.0
+        ],
+        [
+          -1.0000000000000002,
+          0.0,
+          -0.0
+        ]
+      ],
+      "display_center": [
+        0.0,
+        0.0,
+        -0.59048492
+      ]
+    },
+    {
+      "molecule": "Ethylene",
+      "geometry": "coordinates/closing_validation/Ethylene.xyz",
+      "geometry_sha256": "7e5c47ecd6fb50d6c9ca201fe272c65823e59e0f4d3c569a94177094680ac71c",
+      "render": "data/closing_validation/Ethylene.png",
+      "render_sha256": "d8cbca43540258268baee82b3518f5e26116e36470a70fd03c2cba096ca93e79",
+      "display_rotation": [
+        [
+          0.0,
+          -0.0,
+          -1.0000000000000002
+        ],
+        [
+          1.0000000000000002,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "display_center": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "molecule": "Butadiene",
+      "geometry": "coordinates/closing_validation/Butadiene.xyz",
+      "geometry_sha256": "3e7eeb9b717270778b20255ebb0c57ab628e54af0d7db54db8970a2ddb759d36",
+      "render": "data/closing_validation/Butadiene.png",
+      "render_sha256": "2300fe05e4c8327521c711159056d22b13f3c808a59fe1372b6f39d57ca846e4",
+      "display_rotation": [
+        [
+          -0.9997529688661821,
+          0.02222613873921297,
+          -0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.02222613873921297,
+          0.9997529688661821,
+          -0.0
+        ]
+      ],
+      "display_center": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

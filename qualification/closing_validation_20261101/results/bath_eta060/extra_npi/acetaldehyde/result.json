@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "extra_npi",
+  "molecule": "acetaldehyde",
+  "states": [
+    {
+      "id": "N001",
+      "gap_ev": 4.252090787040593,
+      "overlap": 0.9999667097146049,
+      "margin": 0.99180919129344
+    }
+  ],
+  "model": "83a30827b72883e12cefeff4e22e106d5311ce3dbd1c2bd6850659e5b8697887",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 231,
+  "bath_virtuals": 92,
+  "native_environment_transitions": 38,
+  "bath_transitions": 828,
+  "gauge_alignment_hartree": 0.06970336519484022,
+  "minimum_bath_gap_hartree": 0.3605388833313198,
+  "bare_DF_integral_max_error_hartree": 0.00011751443499657954,
+  "minimum_dielectric_eigenvalue": 1.0000014003466686,
+  "screened_coulomb_trace": 13.872087976539607
+}

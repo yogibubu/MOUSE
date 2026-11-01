@@ -1,0 +1,29 @@
+{
+  "predictions": [
+    {
+      "excitation_ev": 8.567434882667007,
+      "root": 1,
+      "overlap": 0.9605224956597251,
+      "margin": 0.8124080705861648,
+      "qualified": true,
+      "orbitals": "own stationary corrected GFN2 ground orbitals",
+      "operator": "complete singlet TDA A including nonlocal exchange correction",
+      "lambda_exchange": 0.9,
+      "xc": "CAM-B3LYP",
+      "response_short_range_exchange": 0.171,
+      "response_long_range_exchange": 0.585,
+      "omega_bohr_inverse": 0.33,
+      "id": "B003",
+      "wall_seconds": 0.028915958013385534
+    }
+  ],
+  "DFT_spatial_orbitals_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "model_sha256": "d7a46f11b9c7f7a313713e0f3d4c90c6b7a96a300bca6d6feb356f5e55bfebfb",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "scope": "same-native-orbital response control, not retuned; OO-CID additionally has screened state interaction"
+}

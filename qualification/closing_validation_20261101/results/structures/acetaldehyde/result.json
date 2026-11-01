@@ -1,0 +1,81 @@
+{
+  "molecule": "acetaldehyde",
+  "model_fingerprint": "528dc05936cfb8fd90df8e94dc63bf66b68bf67501b58551b1a087f0f82ad273",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "gradient_max": 4.613024267774955e-06,
+  "frequencies_cm": [
+    526.792465371224,
+    588.3060586170375,
+    756.4036919155177,
+    964.609075243117,
+    1072.8848982338154,
+    1142.7529822863069,
+    1226.607202694686,
+    1420.66101404825,
+    1449.1844228515654,
+    1512.1225013176233,
+    1588.8082102748067,
+    2929.842137287703,
+    3180.5587032065278,
+    3194.157393562377,
+    3248.2819279563773
+  ],
+  "imaginary_modes": 0,
+  "minimum_frequency_cm": 526.792465371224,
+  "coordinates_angstrom": [
+    [
+      -0.06595971009836535,
+      -0.13748050573336743,
+      0.5015102126481169
+    ],
+    [
+      -0.9650991614760788,
+      -0.03311092612650141,
+      -0.7030809749289434
+    ],
+    [
+      1.1851761988741334,
+      -0.3681317778869945,
+      0.4382829540583631
+    ],
+    [
+      -0.36884860203697956,
+      0.47688641185674147,
+      1.3377598707828018
+    ],
+    [
+      -1.724433169187567,
+      0.6884123791218772,
+      -0.49481106448939877
+    ],
+    [
+      -1.4225653747594382,
+      -0.9721114009315224,
+      -0.9268507788614905
+    ],
+    [
+      -0.3795186911952479,
+      0.26615923806440445,
+      -1.5468556691646682
+    ]
+  ],
+  "atomic_numbers": [
+    6,
+    6,
+    8,
+    1,
+    1,
+    1,
+    1
+  ],
+  "optimization_steps": 51,
+  "optimization_message": "converged analytic gradient; resumed saved optimized checkpoint",
+  "hessian_seconds": 70.43803408299573,
+  "hessian_workers": 8,
+  "hessian_scope": "checkpointed parallel analytic columns; not a serial public-API timing",
+  "hessian_asymmetry": 9.298117831235686e-16,
+  "maximum_stationary_residual": 8.95793509140838e-16,
+  "minimum_overlap": 0.9999999994833539,
+  "derivatives": "complete analytic anchored-model response",
+  "frequency_scaling": 1.0
+}

@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "prospective_cisd",
+  "molecule": "glyoxal",
+  "states": [
+    {
+      "id": "V002",
+      "gap_ev": 3.1252224073220525,
+      "overlap": 0.9999999999999936,
+      "margin": 0.9999999999999398
+    }
+  ],
+  "model": "284c0b02d255c7faf29b4eb42b530db81f1076d6a4c4d90f3b0c317b22c629f0",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 268,
+  "bath_virtuals": 96,
+  "native_environment_transitions": 52,
+  "bath_transitions": 1056,
+  "gauge_alignment_hartree": 0.08883278061820388,
+  "minimum_bath_gap_hartree": 0.373764140581186,
+  "bare_DF_integral_max_error_hartree": 0.00011805301291725745,
+  "minimum_dielectric_eigenvalue": 1.0000016871153092,
+  "screened_coulomb_trace": 16.3157691682397
+}

@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "additional_three",
+  "molecule": "pyrimidine",
+  "states": [
+    {
+      "id": "V007",
+      "gap_ev": 4.369134912968153,
+      "overlap": 1.000000000000002,
+      "margin": 0.9999999999999982
+    }
+  ],
+  "model": "49e8b215eb240d69f08e31dbc214ed90c4bbc75243f759fee792e9803e37ec91",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 414,
+  "bath_virtuals": 152,
+  "native_environment_transitions": 170,
+  "bath_transitions": 2280,
+  "gauge_alignment_hartree": 0.11269882155476102,
+  "minimum_bath_gap_hartree": 0.3380323548040647,
+  "bare_DF_integral_max_error_hartree": 0.0003273809701428432,
+  "minimum_dielectric_eigenvalue": 1.000001278463171,
+  "screened_coulomb_trace": 22.499081203227163
+}

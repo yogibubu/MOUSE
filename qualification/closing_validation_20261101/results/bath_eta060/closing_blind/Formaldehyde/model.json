@@ -1,0 +1,79 @@
+{
+  "schema": "mouse.nosi.screened_even_cid.v1",
+  "active_space_size": 5,
+  "interaction": "static_constrained_RPA",
+  "augmentation": "frozen_reflection_even",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "state_ids": [
+    "B001"
+  ],
+  "labels": [
+    "S0",
+    "B001",
+    "B001_pair_double",
+    "pair_h4_p6",
+    "open_h4_4_p6_7",
+    "pair_h4_p7",
+    "open_h4_5_p6_6",
+    "four_h4_5_p6_7_0",
+    "four_h4_5_p6_7_1",
+    "open_h4_5_p7_7",
+    "open_h5_5_p6_7",
+    "pair_h5_p7"
+  ],
+  "sha256": {
+    "template.npz": "de8442f3f2fa2e3dc0f0562a73a4330eaa0a81a7d27a920052e0908897ee7211",
+    "response.npz": "5973e24db5f03db1ece7890d7033a539dbbfd34c63e8f7e2145f05be73eb94ff",
+    "arrays.npz": "3629ac5c82563edf09aecd2e6f60f498ffec84a92a5e595f3548336bb87f159b"
+  },
+  "provenance": {
+    "candidate_freeze_commit": "2d59ab8",
+    "native_model_sha256": "6b978cf9011ff06d03363ce46eaaeb5c8680fec3852529b87b3f83757c9b05d6",
+    "selected_matrix_sha256": "5428db16513ecc4c32aec0957bd46b95d4a855419f38c5d580f864af8b284432",
+    "reflection_certificate": {
+      "available": false,
+      "reason": "no molecular plane"
+    },
+    "runtime_DFT_backend_required": false,
+    "runtime_TDA_required": false,
+    "source_sha256": "a931df084873e8bcf3db5974a4b87ad1affc71f0586791c86f60280a84878acc",
+    "parent_model": "46e98d750ab099cbb0dffa3d85c46200b22e03ff86f8fd683b2df5e654fdb629",
+    "reference_correction": "diagonal Feshbach self-energy of excluded full-DFT complement, evaluated at qualified matched orbital levels",
+    "fitted_parameters": 0,
+    "screened_operator": "held fixed as diagnostic",
+    "self_energy_hartree": [
+      -0.01196477219241785,
+      -0.01430805946122333,
+      -0.007245258031000818,
+      -0.02094657026936944,
+      -0.023739073238480676,
+      -0.018450592681757666,
+      -0.06732047855248066,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_common_levels_hartree": [
+      -0.005982386096208925,
+      -0.007154029730611665,
+      -0.003622629015500409,
+      -0.01047328513468472,
+      -0.011869536619240338,
+      -0.009225296340878833,
+      -0.03366023927624033,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "polarization_chart": "native_valence_plus_orthogonal_full_DFT_bath",
+    "native_active_space": "frozen retained CI chart plus retained target spans",
+    "auxbasis": "weigend+etb",
+    "bath_polarization_strength": 0.6,
+    "bath_strength_fitted": true
+  }
+}

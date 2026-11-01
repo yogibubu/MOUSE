@@ -1,0 +1,49 @@
+{
+  "cohort": "subspace_closing_blind",
+  "molecule": "Ethylene",
+  "states": [
+    {
+      "id": "B002",
+      "gap_ev": 7.5730574223247284,
+      "overlap": 0.9969331728557818,
+      "margin": 0.9263827601331402
+    }
+  ],
+  "model": "a076049dfcddcbdc9868d56884a92ae8e68686680d377f502c1d0e5322547a16",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "added_singles": [
+    "single_h1_p6",
+    "single_h1_p7",
+    "single_h1_p8",
+    "single_h1_p9",
+    "single_h1_p10",
+    "single_h2_p6",
+    "single_h2_p7",
+    "single_h2_p8",
+    "single_h2_p9",
+    "single_h2_p10",
+    "single_h3_p6",
+    "single_h3_p7",
+    "single_h3_p8",
+    "single_h3_p9",
+    "single_h3_p10",
+    "single_h4_p6",
+    "single_h4_p7",
+    "single_h4_p8",
+    "single_h4_p9",
+    "single_h4_p10",
+    "single_h5_p6",
+    "single_h5_p7",
+    "single_h5_p8",
+    "single_h5_p9",
+    "single_h5_p10"
+  ],
+  "excluded_linear_dependence": [],
+  "minimum_gram_eigenvalue": 0.002074256379934978
+}

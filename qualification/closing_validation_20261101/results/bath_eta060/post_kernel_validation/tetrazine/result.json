@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "post_kernel_validation",
+  "molecule": "tetrazine",
+  "states": [
+    {
+      "id": "V003",
+      "gap_ev": 2.551222524048133,
+      "overlap": 0.9999999999999729,
+      "margin": 0.9999999999999689
+    }
+  ],
+  "model": "0bcde4241d975da31cef0ea01c5829cfec792862a698d0c542263cd913f1ccf0",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 390,
+  "bath_virtuals": 136,
+  "native_environment_transitions": 135,
+  "bath_transitions": 2040,
+  "gauge_alignment_hartree": 0.1421853657410057,
+  "minimum_bath_gap_hartree": 0.32934193855633104,
+  "bare_DF_integral_max_error_hartree": 0.0003203744194739677,
+  "minimum_dielectric_eigenvalue": 1.0000012687827182,
+  "screened_coulomb_trace": 20.68385390697999
+}

@@ -1,0 +1,48 @@
+{
+  "molecule": "Criegee_Intermediate",
+  "direction": "in_plane_stretch",
+  "step_bohr": 0.01,
+  "old_anchor_gap_ev": 4.093784708351377,
+  "new_anchor_gap_ev": 4.083148071755236,
+  "anchor_shift_ev": -0.010636636596141003,
+  "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+  "new_anchor": "2a412db1bed345b7df39076d0f247178f125f0a3cf88700012f565a5fa824213",
+  "old_csf_count": 178,
+  "new_csf_count": 178,
+  "new_reflection": {
+    "available": true,
+    "geometry_error_bohr": 1.3877787807814457e-17,
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "mo_characters": [
+      0.9999999999999999,
+      1.0000000000000002,
+      1.0000000000000016,
+      1.0000000000000007,
+      1.0000000000000022,
+      -0.9999999999999997,
+      1.0000000000000013,
+      0.9999999999999998,
+      -0.9999999999999999,
+      -1.0000000000000004,
+      1.0000000000000004,
+      1.0000000000000013,
+      0.9999999999999998,
+      0.9999999999999997
+    ],
+    "offdiagonal_error": 1.4137998074236542e-13
+  },
+  "state_overlap_original": 0.9999892553867099,
+  "state_overlap_new": 0.9999999999999925,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "state_id": "I002",
+  "reporting_correction": "select matching state_id instead of states[0]; completed selected-matrix eigenvalue used, no electronic job repeated"
+}

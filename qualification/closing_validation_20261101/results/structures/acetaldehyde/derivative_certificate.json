@@ -1,0 +1,55 @@
+{
+  "molecule": "acetaldehyde",
+  "model": "528dc05936cfb8fd90df8e94dc63bf66b68bf67501b58551b1a087f0f82ad273",
+  "rows": [
+    {
+      "direction": "softest harmonic mode",
+      "analytic_gradient": -5.590391426935131e-07,
+      "analytic_curvature": 0.019076504746583373,
+      "richardson_gradient": -5.590677550533959e-07,
+      "richardson_curvature": 0.019076271229323538,
+      "gradient_error": 2.8612359882834142e-11,
+      "hessian_curvature_error": 2.3351725983444815e-07,
+      "steps_bohr": [
+        0.001,
+        0.0005
+      ],
+      "raw": [
+        {
+          "gradient": -5.591518359437941e-07,
+          "curvature": 0.019076484392144266
+        },
+        {
+          "gradient": -5.590887752759954e-07,
+          "curvature": 0.01907632452002872
+        }
+      ]
+    },
+    {
+      "direction": "mixed internal",
+      "analytic_gradient": 5.880961192841003e-06,
+      "analytic_curvature": 0.35602837120758435,
+      "richardson_gradient": 5.880967712812435e-06,
+      "richardson_curvature": 0.3560283978742973,
+      "gradient_error": 6.5199714320541245e-12,
+      "hessian_curvature_error": 2.6666712948930638e-08,
+      "steps_bohr": [
+        0.001,
+        0.0005
+      ],
+      "raw": [
+        {
+          "gradient": 5.9187650336411934e-06,
+          "curvature": 0.3560283836634426
+        },
+        {
+          "gradient": 5.8904170430196245e-06,
+          "curvature": 0.3560283943215836
+        }
+      ]
+    }
+  ],
+  "maximum_gradient_error": 2.8612359882834142e-11,
+  "maximum_curvature_error": 2.3351725983444815e-07,
+  "finite_differences": "validation only; production gradient and Hessian analytic"
+}

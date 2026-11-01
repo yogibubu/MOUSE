@@ -1,0 +1,38 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "independent",
+  "molecule": "Criegee_Intermediate",
+  "states": [
+    {
+      "id": "I001",
+      "gap_ev": 2.022159804005219,
+      "overlap": 0.9995184477377168,
+      "margin": 0.970083163280856
+    },
+    {
+      "id": "I002",
+      "gap_ev": 4.020790883031689,
+      "overlap": 0.9995243991772799,
+      "margin": 0.9827799961487881
+    }
+  ],
+  "model": "9085c4855378d86ca56aad0b8559f462d2a4a32acce32718ca64c92e259bb749",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 169,
+  "bath_virtuals": 70,
+  "native_environment_transitions": 20,
+  "bath_transitions": 630,
+  "gauge_alignment_hartree": 0.09145012669369645,
+  "minimum_bath_gap_hartree": 0.3393273700161904,
+  "bare_DF_integral_max_error_hartree": 0.00015547947649799387,
+  "minimum_dielectric_eigenvalue": 1.0000047631597644,
+  "screened_coulomb_trace": 12.993994023078399
+}

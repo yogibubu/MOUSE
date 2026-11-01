@@ -1,0 +1,23 @@
+{
+  "errors": {
+    "I001": {
+      "energy_error_hartree": 0.0,
+      "gradient_error": 0.0,
+      "hessian_error": 0.0
+    },
+    "I002": {
+      "energy_error_hartree": 0.0,
+      "gradient_error": 0.0,
+      "hessian_error": 0.0
+    }
+  },
+  "before_seconds": 418.03626233298564,
+  "after_seconds": 397.3721247089561,
+  "ratio": 1.0520019808615524,
+  "percent_reduction": 4.943144766606289,
+  "before_peak_rss_bytes": 1058783232,
+  "after_peak_rss_bytes": 1191788544,
+  "scope": "one cold two-thread serial public-API run per version; other host tasks active, modest difference not a robust scaling claim",
+  "changes": "vectorized exact residual matrix completion; direct frozen auxiliary values without scalar jet allocation",
+  "model_changed": false
+}

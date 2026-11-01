@@ -1,0 +1,37 @@
+{
+  "molecule": "Formaldehyde",
+  "state_id": "B001",
+  "direction": "in_plane_stretch",
+  "step_bohr": 0.03,
+  "old_anchor_gap_ev": 4.400009379935135,
+  "new_anchor_gap_ev": 4.429910372688625,
+  "anchor_shift_ev": 0.029900992753490563,
+  "frozen_csf_count": 12,
+  "canonical_orbital_mapping": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "minimum_orbital_overlap": 0.9997508412014771,
+  "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+  "new_anchor": "5a8b3c458d99f0029e6f74a9c810acd48e7e50fb7956256ed534efb305a2a958",
+  "model_prepared_without_new_electronic_work": true,
+  "selected_predictions": [
+    {
+      "id": "B001",
+      "root": 0,
+      "gap_ev": 4.4299103728381555,
+      "overlap": 0.9949939811989634,
+      "margin": 0.8958658440207957,
+      "qualified": true
+    }
+  ],
+  "scope": "same transported CSF membership, re-prepared reference and W; diagnostic of anchor choice within one frozen chart"
+}

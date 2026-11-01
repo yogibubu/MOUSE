@@ -1,0 +1,232 @@
+[
+  {
+    "id": "V006",
+    "molecule": "maleimide",
+    "family": "n_pi",
+    "prediction_ev": 4.016984336823307,
+    "reference_ev": 3.81,
+    "error_ev": 0.20698433682330686,
+    "overlap": 0.9997705019401233,
+    "margin": 0.9787975868218659
+  },
+  {
+    "id": "V005",
+    "molecule": "nitrosomethane",
+    "family": "n_pi",
+    "prediction_ev": 2.146081700274071,
+    "reference_ev": 1.952,
+    "error_ev": 0.1940817002740709,
+    "overlap": 0.9999932734398198,
+    "margin": 0.9969940705775336
+  },
+  {
+    "id": "N003",
+    "molecule": "pyrazine",
+    "family": "n_pi",
+    "prediction_ev": 4.139408257916812,
+    "reference_ev": 4.144,
+    "error_ev": -0.004591742083188244,
+    "overlap": 0.9999999999999757,
+    "margin": 0.9999999999998587
+  },
+  {
+    "id": "N002",
+    "molecule": "formamide",
+    "family": "n_pi",
+    "prediction_ev": 5.380037924908574,
+    "reference_ev": 5.644,
+    "error_ev": -0.2639620750914258,
+    "overlap": 0.9974459952372412,
+    "margin": 0.9264767260241329
+  },
+  {
+    "id": "N001",
+    "molecule": "acetaldehyde",
+    "family": "n_pi",
+    "prediction_ev": 4.2549326297448244,
+    "reference_ev": 4.304,
+    "error_ev": -0.049067370255175824,
+    "overlap": 0.9997581696329703,
+    "margin": 0.9777747396021287
+  },
+  {
+    "id": "V001",
+    "molecule": "acetone",
+    "family": "n_pi",
+    "prediction_ev": 4.3913239312404,
+    "reference_ev": 4.468,
+    "error_ev": -0.07667606875959976,
+    "overlap": 0.9997337409610119,
+    "margin": 0.9767306415516053
+  },
+  {
+    "id": "V002",
+    "molecule": "glyoxal",
+    "family": "n_pi",
+    "prediction_ev": 3.1252224073223425,
+    "reference_ev": 2.877,
+    "error_ev": 0.2482224073223427,
+    "overlap": 0.999999999999994,
+    "margin": 0.9999999999999263
+  },
+  {
+    "id": "V009",
+    "molecule": "pyranone",
+    "family": "n_pi",
+    "prediction_ev": 4.227858131816277,
+    "reference_ev": 4.016,
+    "error_ev": 0.21185813181627733,
+    "overlap": 0.9974899169605455,
+    "margin": 0.9269114570003265
+  },
+  {
+    "id": "V008",
+    "molecule": "cyclopentadienone",
+    "family": "n_pi",
+    "prediction_ev": 3.005097119930485,
+    "reference_ev": 2.951,
+    "error_ev": 0.054097119930484716,
+    "overlap": 0.9993719061331808,
+    "margin": 0.9650501262728461
+  },
+  {
+    "id": "V007",
+    "molecule": "pyrimidine",
+    "family": "n_pi",
+    "prediction_ev": 4.369134912967622,
+    "reference_ev": 4.451,
+    "error_ev": -0.08186508703237738,
+    "overlap": 1.0000000000000013,
+    "margin": 0.9999999999999984
+  },
+  {
+    "id": "V011",
+    "molecule": "uracil",
+    "family": "pi_pi",
+    "prediction_ev": 5.294373501606519,
+    "reference_ev": 5.381,
+    "error_ev": -0.08662649839348102,
+    "overlap": 0.9956360603703271,
+    "margin": 0.9408438297185937
+  },
+  {
+    "id": "V010",
+    "molecule": "Furan",
+    "family": "pi_pi",
+    "prediction_ev": 6.597417028262787,
+    "reference_ev": 6.53,
+    "error_ev": 0.06741702826278662,
+    "overlap": 0.9935226362234945,
+    "margin": 0.8892292717800155
+  },
+  {
+    "id": "I005",
+    "molecule": "Hexatriene",
+    "family": "pi_pi",
+    "prediction_ev": 5.183469596720733,
+    "reference_ev": 5.341,
+    "error_ev": -0.15753040327926726,
+    "overlap": 0.9930484202084359,
+    "margin": 0.9038250583022338
+  },
+  {
+    "id": "I004",
+    "molecule": "Benzoxadiazole",
+    "family": "pi_pi",
+    "prediction_ev": 4.587791948515383,
+    "reference_ev": 4.606,
+    "error_ev": -0.018208051484617016,
+    "overlap": 0.9947814409271011,
+    "margin": 0.9428491708885423
+  },
+  {
+    "id": "I001",
+    "molecule": "Criegee_Intermediate",
+    "family": "n_pi",
+    "prediction_ev": 1.976911067285048,
+    "reference_ev": 2.403,
+    "error_ev": -0.42608893271495196,
+    "overlap": 0.9958523542939168,
+    "margin": 0.9077467569377257
+  },
+  {
+    "id": "I002",
+    "molecule": "Criegee_Intermediate",
+    "family": "pi_pi",
+    "prediction_ev": 4.390698552246031,
+    "reference_ev": 3.715,
+    "error_ev": 0.6756985522460308,
+    "overlap": 0.9948060559973534,
+    "margin": 0.9402662893244034
+  },
+  {
+    "id": "V004",
+    "molecule": "acrolein",
+    "family": "n_pi",
+    "prediction_ev": 3.5770403544640543,
+    "reference_ev": 3.723,
+    "error_ev": -0.14595964553594554,
+    "overlap": 0.9944207373126753,
+    "margin": 0.8926640458989399
+  },
+  {
+    "id": "V003",
+    "molecule": "tetrazine",
+    "family": "n_pi",
+    "prediction_ev": 2.55122252404852,
+    "reference_ev": 2.462,
+    "error_ev": 0.0892225240485196,
+    "overlap": 0.9999999999999731,
+    "margin": 0.9999999999999709
+  },
+  {
+    "id": "B003",
+    "molecule": "Butadiene",
+    "family": "pi_pi",
+    "prediction_ev": 6.292879233835124,
+    "reference_ev": 6.221999999999999,
+    "error_ev": 0.07087923383512518,
+    "overlap": 0.9964210554262725,
+    "margin": 0.9266524035678777
+  },
+  {
+    "id": "B002",
+    "molecule": "Ethylene",
+    "family": "pi_pi",
+    "prediction_ev": 8.20574864346834,
+    "reference_ev": 7.897,
+    "error_ev": 0.3087486434683395,
+    "overlap": 1.0000000000000027,
+    "margin": 1.0000000000000013
+  },
+  {
+    "id": "B001",
+    "molecule": "Formaldehyde",
+    "family": "n_pi",
+    "prediction_ev": 3.7301237187872878,
+    "reference_ev": 3.966,
+    "error_ev": -0.23587628121271242,
+    "overlap": 0.9947374249269584,
+    "margin": 0.8922963166669524
+  },
+  {
+    "id": "C001",
+    "molecule": "Furofuran",
+    "family": "pi_pi",
+    "prediction_ev": 5.532082802139128,
+    "reference_ev": 5.489,
+    "error_ev": 0.04308280213912852,
+    "overlap": 0.9976437866926756,
+    "margin": 0.9610439261230529
+  },
+  {
+    "id": "C002",
+    "molecule": "Furofuran",
+    "family": "pi_pi",
+    "prediction_ev": 7.305713626355015,
+    "reference_ev": 6.027,
+    "error_ev": 1.2787136263550147,
+    "overlap": 0.9868218567092931,
+    "margin": 0.8671514023382734
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "independent",
+  "molecule": "Benzoxadiazole",
+  "states": [
+    {
+      "id": "I004",
+      "gap_ev": 4.381795703912355,
+      "overlap": 0.9995054442101045,
+      "margin": 0.983175882274627
+    }
+  ],
+  "model": "05565213c509c5fa2e3b3376b82944a6e808c195a716a06a6a879ea063d38e1c",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 485,
+  "bath_virtuals": 194,
+  "native_environment_transitions": 371,
+  "bath_transitions": 4268,
+  "gauge_alignment_hartree": 0.1142516626290403,
+  "minimum_bath_gap_hartree": 0.34268882397428696,
+  "bare_DF_integral_max_error_hartree": 0.00037531095166720707,
+  "minimum_dielectric_eigenvalue": 1.0000072913030045,
+  "screened_coulomb_trace": 31.472463066119026
+}

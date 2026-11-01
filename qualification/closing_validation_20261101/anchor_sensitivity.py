@@ -23,7 +23,7 @@ def sensitivity(original_cohort,name,identity):
    model=PreparedNOSIModel(REPAIR/'prepared_models'/cohort/case/'model.json');calc=GFN2Calculator(symbols,temperature_kelvin=0.)
    # Use precisely the same final coordinates for both Hamiltonian anchors.
    a=original.evaluate(calc,displaced/ANGSTROM_TO_BOHR,properties=('energy',));b=model.evaluate(calc,displaced/ANGSTROM_TO_BOHR,properties=('energy',))
-   old=next(s for s in a.states if s.state_id==identity);new=b.states[0]
+   old=next(s for s in a.states if s.state_id==identity);new=next(s for s in b.states if s.state_id==identity)
    write(resultpath,dict(molecule=name,direction=direction,step_bohr=step,old_anchor_gap_ev=old.excitation_hartree*EV,new_anchor_gap_ev=new.excitation_hartree*EV,anchor_shift_ev=(new.excitation_hartree-old.excitation_hartree)*EV,old_anchor=original.fingerprint,new_anchor=model.fingerprint,old_csf_count=len(original.labels),new_csf_count=len(model.labels),new_reflection=model.manifest['provenance']['reflection_certificate'],state_overlap_original=old.overlap,state_overlap_new=new.overlap,weights=[.5,.5],lambda_exchange=.9,offset_ev=0))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('cohort');p.add_argument('name');p.add_argument('identity');a=p.parse_args()

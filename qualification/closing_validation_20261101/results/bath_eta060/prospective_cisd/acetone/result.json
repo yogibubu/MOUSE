@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "prospective_cisd",
+  "molecule": "acetone",
+  "states": [
+    {
+      "id": "V001",
+      "gap_ev": 4.391596156582439,
+      "overlap": 0.9999572607783698,
+      "margin": 0.9907309260997377
+    }
+  ],
+  "model": "14629973f1804478f037dad2556615dafc0e036fe51a3bb6450a4f7a63c43482",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 316,
+  "bath_virtuals": 128,
+  "native_environment_transitions": 95,
+  "bath_transitions": 1536,
+  "gauge_alignment_hartree": 0.06514374830933956,
+  "minimum_bath_gap_hartree": 0.3468267107811668,
+  "bare_DF_integral_max_error_hartree": 0.00011453372679307017,
+  "minimum_dielectric_eigenvalue": 1.0000021184493768,
+  "screened_coulomb_trace": 17.61961983123366
+}

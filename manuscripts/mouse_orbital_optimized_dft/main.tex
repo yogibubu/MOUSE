@@ -36,9 +36,13 @@ stationarity, spin recoupling, CSF metric, moving-ground-projector and
 state-eigenvector response. A portable MOUSE/LINK implementation follows the
 coherent spin-pure state without a TDA solve or DFT-backend import after
 one-time reference preparation. Exact contraction and configuration-block
-acceleration preserve the differentiated energy. The resulting anchored
-surface is a candidate for further independent validation of structures,
-frequencies and chemical transferability.
+acceleration preserve the differentiated energy. A three-state extension exposes
+an ethylene error of 1.182 eV. A subsequent common reference repair with one
+calibrated bath-screening efficiency reduces this error to 0.309 eV; all 23
+exposed development states then lie within 0.5 eV, with 0.217 eV MAE. The
+weights, exchange scale and zero energy offset are retained. Physical
+minimum comparisons for the predecessor are distinguished from corrected-
+model derivative checks; independent validation remains necessary.
 \end{abstract}
 
 \section{Introduction}
@@ -58,7 +62,7 @@ This perspective is particularly attractive for a semiempirical platform. A grou
 
 MOUSE, the Molecular Orbital Utility for Semiempirical Explorations, supplies a modular environment for such a development. Here its GFN2-based energy is augmented by frozen operators obtained from projected ground-state DFT information. GFN2-xTB provides the semiempirical foundation,\cite{gfn2} while restricted open-shell Kohn--Sham (ROKS) ideas provide a spin-adapted open-shell singlet construction.\cite{roks1998} The resulting method is called \emph{semiempirical orbital-optimized DFT} (OO-DFT) in the sense that a density-functional-response-informed semiempirical energy is made stationary with respect to the excited-state orbitals. It is not a full-basis Kohn--Sham calculation at each molecular geometry.
 
-Against this background, our contribution is the combination of a GFN2-based, DFT-response-informed energy, a spin-pure ROKS CSF, direct orbital stationarity with state following, and an analytic constrained response through the nuclear Hessian. The contribution concerns this explicit formulation and implementation, rather than priority for semiempirical excited-state gradients or orbital optimization in general. The final examples address vertical accuracy, numerical correctness of the derivatives, and portable state following. Earlier molecular-minimum examples belong to separately identified model generations. TDA is retained as a matched control, using semiempirical rather than DFT orbitals. No general replacement of TDA for all excited-state tasks is implied.
+Against this background, our contribution is the combination of a GFN2-based, DFT-response-informed energy, a spin-pure ROKS CSF, direct orbital stationarity with state following, and an analytic constrained response through the nuclear Hessian. The contribution concerns this explicit formulation and implementation, rather than priority for semiempirical excited-state gradients or orbital optimization in general. The final examples address vertical accuracy, numerical correctness of the derivatives, portable state following, local anchor sensitivity and final-model molecular minima. Earlier molecular-minimum examples remain separately identified. TDA is retained as a matched control, using semiempirical rather than DFT orbitals. No general replacement of TDA for all excited-state tasks is implied.
 
 
 Figure~\ref{fig:workflow} summarizes the flow from frozen reference information and the native semiempirical engine to the stationary excited-state surface and its derivatives.
@@ -167,13 +171,15 @@ subtract the stationary native ground. Finite differences enter only the
 independent validation of these analytic derivatives.
 
 \section{Computational protocol}
-The final assessment contains twenty valence transitions in eighteen
+The exposed development assessment contains twenty valence transitions in eighteen
 molecules: seven $\pi\pi^*$ and thirteen $n\pi^*$ targets. Reference energies
 are the archived QUEST theoretical best estimates, with individual method
 labels retained in the input data.\cite{quest,quest2025} Molecular geometries
 and target identities are unchanged from the frozen inputs. All twenty
 numerical labels were exposed during development of the final augmentation;
-none is presented as an independent blind test.
+none is presented as an independent blind test. The separately frozen
+three-state prospective extension and its preparation amendment are
+reported below.
 
 The prepared CAM-B3LYP references retain the archived aug-cc-pVDZ AO basis,
 numerical grid level 3, frozen core embedding, and native valence space.
@@ -242,13 +248,14 @@ the derivative-correctness checks. Earlier model-generation comparisons with
 published sTDA-xTB, molecular minima, frequencies and cost data are retained
 in the Supporting Information and are not attributed to this final model.
 
-The next scientific assessment should freeze this complete preparation and
-space-selection rule before opening new labels, include additional valence,
-CT and Rydberg states, and compare final-model excited minima and frequencies
-with suitable high-level or experimental references. Sensitivity to anchor
-geometry and larger nuclear displacements also remains to be established.
-The present finite planar-state result does not demonstrate universal
-transferability or replace those tests.
+\input{closing_validation_discussion.tex}
+\input{ethylene_repair_discussion.tex}
+
+The next scientific assessment should test the calibrated correction on
+independent molecules, additional CT and Rydberg states, corrected-model
+equilibrium structures, and larger nuclear displacements.
+The prospective and structural controls reported here limit the scope of
+the finite development result; they do not establish universal transferability.
 
 \section{Conclusions}
 MOUSE provides a semiempirical orbital-optimized route with explicit spin
@@ -272,18 +279,32 @@ The public surface retains coherent APOC state following and accepted-only
 LINK restarts, and uses the ground-state engine without a runtime TDA or DFT
 calculation. Its analytic response differentiates the defined anchored model,
 including the moving ground projector and all state-interaction terms.
-Earlier production-model minima and frequency comparisons remain separately
-identified. A broader independent test, final-model excited-state structures
-and frequencies, and direct comparisons to additional calibrated low-cost
-methods remain necessary before claiming general predictive performance or
-a replacement for multi-root TDA spectroscopy.
+The initial prospective extension exposes an ethylene outlier. The common
+reference repair with one calibrated bath efficiency, $\eta=0.60$, brings
+all 23 exposed states within 0.5 eV and gives 0.217 eV MAE. This additional
+semiempirical interaction parameter is reported explicitly; no energy offset
+is fitted. A corrected-reference TDA control gives 0.781 eV MAE, with the
+OO accuracy benefit concentrated in $\pi\pi^*$ states. Local reference-geometry changes are small
+within one transported configuration chart; re-selecting the symmetry
+space can cause a discontinuity. Minimum and frequency comparisons for the predecessor are reported
+separately from derivative validation of the corrected candidate.
+These limits, and the missing broader CT/Rydberg and calibrated-method
+benchmarks, preclude a claim of general predictive accuracy or replacement
+of multi-root TDA spectroscopy.
 
 \section*{Data and software availability}
 MOUSE source is hosted at \url{https://github.com/yogibubu/MOUSE}.
 The final symmetry-augmentation choice is frozen in \texttt{2d59ab8}; the
 portable surface and analytic response are implemented in \texttt{81897cf},
 with exact contraction/metric acceleration in \texttt{e572d50}.
-Final qualification and its complete logs are committed in \texttt{358ae21}
+The closing protocol is frozen in \texttt{94d2312}, with exact dense
+response acceleration in \texttt{67c835f}. Its new cases, reference-geometry
+controls and molecular minima are archived in
+\path{qualification/closing_validation_20261101}.
+The calibrated bath protocol is frozen in \texttt{8f95105}; its complete
+23-state ledger, matched corrected-reference TDA and ethylene derivative
+certificate are in \path{qualification/closing_validation_20261101}.
+Original twenty-state qualification and its complete logs are committed in \texttt{358ae21}
 and \texttt{7c5c7f9}. The qualification directory
 \path{qualification/pi_pi_transfer_repair_20261101}
 contains the complete twenty-state predictions, model/exposure protocol,

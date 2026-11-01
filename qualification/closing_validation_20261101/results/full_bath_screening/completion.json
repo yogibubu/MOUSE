@@ -1,0 +1,126 @@
+[
+  {
+    "cohort": "independent_challenge",
+    "molecule": "Furofuran",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "independent",
+    "molecule": "Criegee_Intermediate",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "independent",
+    "molecule": "Benzoxadiazole",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "independent",
+    "molecule": "Hexatriene",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "extra_npi",
+    "molecule": "acetaldehyde",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "extra_npi",
+    "molecule": "formamide",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "extra_npi",
+    "molecule": "pyrazine",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "prospective_cisd",
+    "molecule": "acetone",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "prospective_cisd",
+    "molecule": "glyoxal",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "post_kernel_validation",
+    "molecule": "tetrazine",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "post_kernel_validation",
+    "molecule": "acrolein",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "cid_prospective",
+    "molecule": "nitrosomethane",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "cid_prospective",
+    "molecule": "maleimide",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "additional_three",
+    "molecule": "pyrimidine",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "additional_three",
+    "molecule": "cyclopentadienone",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "additional_three",
+    "molecule": "pyranone",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "last_two",
+    "molecule": "Furan",
+    "status": "completed_reused"
+  },
+  {
+    "cohort": "last_two",
+    "molecule": "uracil",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "closing_blind",
+    "molecule": "Formaldehyde",
+    "status": "completed",
+    "returncode": 0
+  },
+  {
+    "cohort": "closing_blind",
+    "molecule": "Ethylene",
+    "status": "completed_reused"
+  },
+  {
+    "cohort": "closing_blind",
+    "molecule": "Butadiene",
+    "status": "completed",
+    "returncode": 0
+  }
+]

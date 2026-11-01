@@ -27,6 +27,10 @@ for ext in ['pdf','png']:fig.savefig(P/'figures'/f'screened_cid_validation.{ext}
 lines=[r'\begin{tabular}{llrrr}\toprule',r'ID & Molecule & Reference & Screened OO-CID & TDA \\ \midrule']
 for r in rows:lines.append(f"{r['id']} & {r['molecule'].replace('_',' ')} & {r['reference_ev']:.3f} & {r['prediction_ev']:.3f} & {r['TDA_ev']:.3f}"+r' \\')
 lines.append(r'\bottomrule\end{tabular}');(P/'tables/screened_cid_validation.tex').write_text('\n'.join(lines)+'\n')
+if (P/'data/closing_validation/prospective_summary.json').exists():
+ import runpy
+ runpy.run_path(str(P/'make_closing_assets.py'))
+ raise SystemExit(0)
 manifest=json.loads((P/'data/screened_cid/jmol_manifest.json').read_text());pdf=canvas.Canvas(str(P/'figures/screened_cid_structures_jmol.pdf'),pagesize=(540,710));pdf.setTitle('Eighteen molecular anchors in the final MOUSE OO-CID test')
 pdf.setFillColorRGB(.10,.20,.28);pdf.setFont('Helvetica-Bold',13);pdf.drawString(14,688,'Twenty transitions in eighteen molecules')
 for index,record in enumerate(manifest['molecules']):

@@ -1,0 +1,47 @@
+{
+  "model": "9085c4855378d86ca56aad0b8559f462d2a4a32acce32718ca64c92e259bb749",
+  "predictions": [
+    {
+      "excitation_ev": 2.3912788098306144,
+      "root": 1,
+      "overlap": 0.998556210711648,
+      "margin": 0.9594241719051019,
+      "qualified": true,
+      "orbitals": "own stationary corrected GFN2 ground orbitals",
+      "operator": "complete singlet TDA A including nonlocal exchange correction",
+      "lambda_exchange": 0.9,
+      "xc": "CAM-B3LYP",
+      "response_short_range_exchange": 0.171,
+      "response_long_range_exchange": 0.585,
+      "omega_bohr_inverse": 0.33,
+      "id": "I001",
+      "wall_seconds": 0.003957083041314036
+    },
+    {
+      "excitation_ev": 7.138519588380244,
+      "root": 2,
+      "overlap": 0.9806414669627481,
+      "margin": 0.8792887199673556,
+      "qualified": true,
+      "orbitals": "own stationary corrected GFN2 ground orbitals",
+      "operator": "complete singlet TDA A including nonlocal exchange correction",
+      "lambda_exchange": 0.9,
+      "xc": "CAM-B3LYP",
+      "response_short_range_exchange": 0.171,
+      "response_long_range_exchange": 0.585,
+      "omega_bohr_inverse": 0.33,
+      "id": "I002",
+      "wall_seconds": 0.003894333029165864
+    }
+  ],
+  "DFT_spatial_orbitals_used": false,
+  "same_corrected_native_reference": true,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "host": "mac-2.homenet.telecomitalia.it",
+  "scope": "Same corrected native orbitals, one-body F/Q field and charge/spin response. TDA retains its response kernel; the OO-CID screened configuration Hamiltonian is a distinct approximation."
+}
