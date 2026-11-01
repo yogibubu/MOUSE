@@ -1,0 +1,12 @@
+{
+  "PES": "prepared-model anchored auxiliary CISD",
+  "auxiliary_orbitals": "canonical ground orbitals at the anchor, frozen in its co-rotating orthonormal AO frame; no re-canonicalization away from the anchor",
+  "target_orbitals": "complete analytic stationary-ground and orthogonality-constrained ROKS first and second KKT response",
+  "native_diagonal_energy": "full semiempirical density and explicit geometry response, including fractional-spin four-open-shell charge energy",
+  "spin_completion": "analytic SU(2) Heisenberg completion of the same frozen spin response; no additional coefficient",
+  "physical_off_diagonal_operators": "h and ERI frozen in the identical co-rotating orthonormal frame",
+  "excitation_reference": "full SI excited eigenvalue minus stationary ground functional energy, with both nuclear responses retained",
+  "finite_differences": "independent validation only; never used to assemble gradients or Hessians",
+  "validation": "Criegee and Furofuran, matrix symmetry, translational invariance, independently reoptimized displaced energy values",
+  "limitations": "anchored PES, not a newly self-consistent DFA at each geometry; no near-degenerate single-root derivative claims"
+}

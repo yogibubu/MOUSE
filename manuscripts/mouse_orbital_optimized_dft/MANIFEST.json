@@ -1,19 +1,19 @@
 {
   "date": "2026-11-01",
-  "revision": "Final frozen-cohort, full-anchor, physical-curvature and prepared-cost campaign",
+  "revision": "Frozen production cohorts plus separately disclosed frontier-CISD exploratory pilot",
   "implementation_commit": "5620e2d063f510e9378a0bb438d54eb01a88493f",
   "electronic_compute_host": "oracle.sns.it",
   "new_accuracy_labels_opened": true,
   "reduced_snapshot": "14 of 14 original OO predictions and matched true-TDA controls locked before label opening; new multicsf work uses exposed labels",
-  "references": 26,
-  "figures": 15,
-  "main_pages": 30,
-  "supporting_information_pages": 19,
-  "visual_review": "Final new figures and main/SI validation pages rendered and inspected; no overfull boxes, undefined references or multiply-defined labels.",
+  "references": 27,
+  "figures": 16,
+  "main_pages": 31,
+  "supporting_information_pages": 23,
+  "visual_review": "Previous production figures/pages reviewed in the earlier campaign; new frontier-CISD PNG visually inspected. Updated PDFs compile without overfull boxes or undefined references; no new full-document visual audit claimed.",
   "standalone_asset_rebuild": "New extension tables and figure rebuilt successfully from a temporary manuscript-only copy without qualification archives; all three generated table sources match exactly.",
   "sha256": {
     ".gitignore": "950b8b8c4500045cfc77d319b1f24bdbb3217778710d2bd79439219f89fc7b06",
-    "README.md": "d32749193badbb24afb9f7a58d9c48ec7e01b280cec31dc0129e31459a70dc62",
+    "README.md": "fc2546047dcc21f9603eb4e2dfa0fde631e4bf6c35247c911f3ed586527e565f",
     "build_assets.py": "6f18dfe0ce771817ea13f42045319d13962273ea2e25997821b3b3b580f05d08",
     "build_dftb_audit.py": "b18cd0ea833856daef50175ff92992e0faaee21bcdc25d0ea5be57a019792144",
     "build_reduced_extension.py": "b1e9a89c6d673eeb539ec330ac4c4293227b30e0f152ddba16015ff995c02a98",
@@ -150,8 +150,8 @@
     "final_solver_discussion.tex": "8800dce2ca597e2ca7133cbb9baa56fc43c642eddb7b9f462dcb1f0d1533d72e",
     "final_validation_discussion.tex": "9bc4f4d3f8ff0864fab846a423821549ab1b06242a2e6d8ae7833f2cc7faefd3",
     "literature_metadata.json": "63e1338fd93331f64f868c3aba11ebd7940c7555a71a9d1af9b5ef18887f559a",
-    "main.pdf": "94351b67d82f976d4872ec245d859f92b9ff3f769867dfadad6ac52b0352376c",
-    "main.tex": "e82244b1ca66ad25a39490ebc0216015509651a95df998c9fea846c31a212bfe",
+    "main.pdf": "46d1996bea1568312e676d387209e20f873417c583c6104e3c440f34afb81c7d",
+    "main.tex": "705cf868579f16aaeefcfbc12f17c38628cf89f7274519ab93c3768d0a88782b",
     "make_anchor_rank_assets.py": "b4c8b26d447d4e90768d64f3edca7a3ab5ab316844acc5db0acb70804fe6ed78",
     "make_final_structures_jmol.py": "9dbd877ab8191a54895566624718033317324e24083859595e25ec53ae18fa5f",
     "make_final_validation_assets.py": "15fa2753f133236318852ac085726df97ffe329142713ea5e9b3651377f016fe",
@@ -164,9 +164,9 @@
     "positioning_references.json": "9cfa97c820fbac988e319f96ab7b7d003ee7b39aae88fb3905990e77876b8ff9",
     "reduced_extension_discussion.tex": "386c439be2251a492d778523356cef935974d5ed06c3cd5634977970367ec0ed",
     "reference_provenance.json": "c0b12f362c22040fe7bca7e368005fcd50f7add3d70e8b35989b45d5344e53aa",
-    "references.bib": "d8af0c73839923ed7db0e92510ad8d37cc87ac3b036a751e9c3b031508fe02f4",
-    "supporting_information.pdf": "7e72eb70ddec2105cf8006e8ed0bbfedba8aaab75132cb1713df417524606870",
-    "supporting_information.tex": "9fe8d6fa1619868a026777ddacd629a1375f859bd4d2527b22fd3fddf1b45bcb",
+    "references.bib": "bf800870a6322481360c80bdb5a48aafd43dcf300b44b2f5f225db28ebe9646d",
+    "supporting_information.pdf": "44cd246590c71f07e3e47a3e7bf80147f6ed6889cc6c11c7c48173359685157f",
+    "supporting_information.tex": "37f2af028950b27b4a50eb651235ed79ab9eb4ef2fd1b2abff6d0b3e4cb38f34",
     "tables/actual_anchor_rank.tex": "af980a4682e49ef64097e21c23dc28f54f9c9e1c1e25c8cfbda6cf7664e8b02b",
     "tables/all_stda.tex": "3965c9048506d38d090906bf0c7b80955beed283ef6ee8c30ff72b03e6404eab",
     "tables/all_vertical.tex": "d93c2573b983a4bb8f7624dd4a44b6b6d5a2479db7fa51d77f16debd5ebf4504",
@@ -192,7 +192,16 @@
     "tables/reduced_extension_all.tex": "8b4b36615618c9abf595d96d409068fe45e8053ccc7408d2ed0d5ed4acad18ec",
     "tables/statistics.tex": "f9da56caa94969531a9f8c00ae6c25b1fd5f3d380113a41b016d359219207110",
     "tables/tbe_methods.tex": "63d2e6ab2df4d7d575421aec5c78dbb506ea3ab703f9c00d4388190b9bfe32f0",
-    "tables/weight_anchor.tex": "848aa4ae1055cbb6fa3f4f6d61fcf6f6708b592b3c0ae88033f4a1e2b243c68e"
+    "tables/weight_anchor.tex": "848aa4ae1055cbb6fa3f4f6d61fcf6f6708b592b3c0ae88033f4a1e2b243c68e",
+    "figures/frontier_cisd_pilot.png": "6471d6bfd8ebdb1de6bd3a3490e837a7b257830de7818bd836428256bd676081",
+    "tables/frontier_cisd_pilot.tex": "99361958d95e1e5fb1a9ea3e12bf6e65c19047b6703f78230d46ee9785665330",
+    "figures/frontier_cisd_pilot.pdf": "f0a25d623853964194341138a4c946d2fcabb7098faeae5bf79dd496da0ad556",
+    "make_frontier_cisd_assets.py": "d1e1be1a9272ae22b7c76e9a49642e163b2c0733942b9afc62fd3d7b9624401a",
+    "data/frontier_cisd/predictions.csv": "612c266b4c15f2af2eb9b18d199d1ead806f30b36217fdfbfa40540f16a82246",
+    "frontier_cisd_discussion.tex": "ab1f46de62d109d2b860d76b28fc8f8073291041c288001582495917642fc85e",
+    "data/frontier_cisd/protocol.json": "243982af61dfa3825a01cdcf7b324f72fe17e478fbbe2f830e9a53af34820d4c",
+    "data/frontier_cisd/nuclear_protocol.json": "130038f427099692426d8c81572d340c3121d996870eb1f2fc523fda62d379a6",
+    "data/frontier_cisd/summary.json": "e0eb6548108da72144b8909c9e9bd89d5e269bb4bba90421019639fcf340ba58"
   },
   "structure_plate": "28 archived anchor geometries rendered by Jmol 14.31.10: 18 original cohort + 10 reduced extension; no optimization",
   "implementation_commits": [
@@ -229,5 +238,28 @@
   "standalone_anchor_asset_rebuild": "Temporary manuscript-only copy reproduces table S9 exactly without qualification archives or electronic calculations.",
   "final_solver_commit": "4fe3cd8",
   "final_validation": "Six anchor points; frozen primary six states with 4 accepted; separate 2-state new-molecule and 3-state higher-root challenges; full six-size cost ledger with all six analytic Hessians complete; Phthalimide 42.224 s and CPD symmetry-broken minimum.",
-  "scientific_scope": "Completed finite campaign and method implementation; universal accuracy and end-to-end speed advantage are not established."
+  "scientific_scope": "Completed finite campaign and method implementation; universal accuracy and end-to-end speed advantage are not established.",
+  "electronic_compute_hosts": [
+    "oracle.sns.it",
+    "mac-2.homenet.telecomitalia.it"
+  ],
+  "frontier_cisd_pilot": {
+    "code_commit": "5f69635",
+    "freeze_commit": "7666f7a",
+    "states": 11,
+    "development_states": 9,
+    "prospective_states": 2,
+    "MAE_ev": 0.2167444005652077,
+    "maximum_absolute_error_ev": 0.5518933673817825,
+    "prospective_MAE_ev": 0.3848567297786989,
+    "fixed_accuracy_gate_passed": false,
+    "universal_npi_correction": false,
+    "production_model_replaced": false,
+    "independent_complete_nuclear_Hessian_validation": [
+      "Criegee_Intermediate",
+      "Furofuran"
+    ],
+    "TDA_free_frontend_verified_states": 4,
+    "scope": "Prepared anchored auxiliary CISD; exact spin-adapted CSFs; stationary ground-functional reference distinct from auxiliary SI ground eigenvalue"
+  }
 }

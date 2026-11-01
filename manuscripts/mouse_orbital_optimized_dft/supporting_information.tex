@@ -144,6 +144,9 @@ The complete $48\times48$ matrix is obtained with the same Hamiltonian, orbital 
 Increasing the furofuran space to fixed rank two gives 5.39274 and 6.86288 eV for the two challenge states, against fixed references 5.489 and 6.027 eV. The corresponding baseline rank-one values are 5.52261 and 7.06733 eV. Thus a larger singles-CSF space only partly reduces the Ag error. A rank-three continuation is closed at its last accepted homotopy checkpoint without assigning an endpoint energy. Fixed-rank manifests explicitly preserve the requested rank instead of reapplying the automatic NTO rank rule.
 
 A separate bounded diagnostic replaces only the F-parent linear reference by the projected converged-DFT-ground Fock operator, preserving all response terms, weights, scaling and zero-offset policy. Its primary-cohort MAE is 0.58854 eV and its two-state furofuran MAE is 0.47656 eV. This construction was frozen before the primary baseline labels were opened; furofuran labels were already exposed. The modest improvement does not establish a universal correction or justify promoting this diagnostic over the frozen baseline. Prediction locks and exposure records are retained separately.
+\clearpage
+\input{frontier_cisd_discussion.tex}
+\clearpage
 \section{Structures of all studied molecules}
 The following Jmol renderings use archived three-dimensional molecular coordinates. Inclusion identifies a studied molecule and does not imply that every requested electronic state is representable or accurate.
 \begin{figure}[p]\centering\includegraphics[page=1,width=\linewidth,height=.86\textheight,keepaspectratio]{figures/all_studied_structures_jmol.pdf}\caption{Archived three-dimensional molecular structures, plate 1.}\end{figure}

@@ -1,0 +1,70 @@
+{
+  "stage": "candidate frozen after exposed rank-hierarchy development, before two prospective predictions",
+  "parent": "native-GFN2-orbital CAM-B3LYP reference, unchanged lambda=0.9 and F/Q mean=0.5/0.5",
+  "motivation": "complete the frontier configuration space, including the paired configurations absent from the first augmentation",
+  "augmentation": "all spin-adapted frontier configurations of excitation rank at most two relative to the native canonical ground; retained optimized ROKS singlets and pair doubles remain; exact four-spin completion",
+  "four_spin_energy": "unique SU(2)-invariant Heisenberg completion of the existing quadratic spin functional, exactly matching every collinear diagonal and the two-spin ROKS limit",
+  "four_spin_block": "replace the complete same-occupation two-singlet spin block by that Heisenberg matrix, including its off-diagonal",
+  "primary_energy_reference": "full state-interaction excited eigenvalue minus the independently stationary ground functional energy; the auxiliary SI ground lowering is reported separately and is not used as an excitation-energy offset",
+  "disclosure": "state-specific ground and excited energy approximations; not an assertion that the lowest uncorrected SI eigenvalue is the ground functional energy",
+  "controls": "retain conventional SI-ground-referenced and stationary-ground-projected spectra for the identical matrix",
+  "assignment": "unique wavefunction-overlap matching to the retained full-SI target states, not to energy labels; overlap >=0.7 and margin>=0.05",
+  "linear_dependence": "canonical metric eigenvectors below 1e-8 removed, with all metric eigenvalues recorded",
+  "new_DFT_SCF": false,
+  "energy_offset_ev": 0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_labels_used_in_model": false,
+  "cases": [
+    [
+      "independent",
+      "Criegee_Intermediate"
+    ],
+    [
+      "independent_challenge",
+      "Furofuran"
+    ],
+    [
+      "extra_npi",
+      "acetaldehyde"
+    ],
+    [
+      "extra_npi",
+      "formamide"
+    ],
+    [
+      "extra_npi",
+      "pyrazine"
+    ],
+    [
+      "independent",
+      "Benzoxadiazole"
+    ],
+    [
+      "independent",
+      "Hexatriene"
+    ]
+  ],
+  "accuracy_gate_ev": {
+    "mae": 0.3,
+    "max_absolute_error": 0.5
+  },
+  "nuclear_derivative_claims": false,
+  "selection_disclosure": "Rank two selected after inspecting the exposed nine-state hierarchy; these nine states are development, not blind validation.",
+  "prospective_cases": [
+    {
+      "id": "V001",
+      "molecule": "acetone",
+      "prepared_group": "prepared_B"
+    },
+    {
+      "id": "V002",
+      "molecule": "glyoxal",
+      "prepared_group": "prepared_C"
+    }
+  ],
+  "prospective_disclosure": "Existing geometries and old labels were exposed in historical model campaigns; new-model predictions are prospective after model freeze, not a truly blind dataset."
+}

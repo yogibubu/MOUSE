@@ -1,0 +1,58 @@
+{
+  "all": {
+    "OO": {
+      "count": 11,
+      "MAE_ev": 0.2167444005652077,
+      "max_absolute_error_ev": 0.5518933673817825,
+      "MSE_ev": -0.00564386272705705,
+      "RMSE_ev": 0.26192129350749443,
+      "all_states_assigned": true
+    },
+    "TDA": {
+      "count": 11,
+      "MAE_ev": 1.1625587963865878,
+      "max_absolute_error_ev": 3.659689340364121,
+      "MSE_ev": 1.1625587963865878,
+      "RMSE_ev": 1.5506437068733934,
+      "all_states_assigned": true
+    }
+  },
+  "exposed_development": {
+    "OO": {
+      "count": 9,
+      "MAE_ev": 0.17938610518443188,
+      "max_absolute_error_ev": 0.41450541441668687,
+      "MSE_ev": 0.03022119835650441,
+      "RMSE_ev": 0.21150217293436777,
+      "all_states_assigned": true
+    },
+    "TDA": {
+      "count": 9,
+      "MAE_ev": 1.3275625156989577,
+      "max_absolute_error_ev": 3.659689340364121,
+      "MSE_ev": 1.3275625156989577,
+      "RMSE_ev": 1.70259717708078,
+      "all_states_assigned": true
+    }
+  },
+  "prospective": {
+    "OO": {
+      "count": 2,
+      "MAE_ev": 0.3848567297786989,
+      "max_absolute_error_ev": 0.5518933673817825,
+      "MSE_ev": -0.16703663760308363,
+      "RMSE_ev": 0.4195425374830285,
+      "all_states_assigned": true
+    },
+    "TDA": {
+      "count": 2,
+      "MAE_ev": 0.420042059480924,
+      "max_absolute_error_ev": 0.479413652982021,
+      "MSE_ev": 0.420042059480924,
+      "RMSE_ev": 0.42421730026937327,
+      "all_states_assigned": true
+    }
+  },
+  "fixed_gate_passed": false,
+  "disclosure": "Nine development and two prospective predictions on historically exposed molecules; not a truly blind validation. Primary excitation energies reference the independently stationary ground functional, not the auxiliary SI lowest eigenvalue. No fitted excitation offset."
+}

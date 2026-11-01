@@ -160,3 +160,14 @@ are remeasured. The benchmark peak RSS falls to 1.07 GiB. Literal-jet tests,
 whole-matrix comparisons, controlled gradient differences, and 50 regression/
 contract/response tests qualify the unchanged mathematical model. The exact
 implementation is committed as `4fe3cd8`.
+
+
+The 1 November frontier-CISD pilot is documented separately in the SI. Its
+eleven-state MAE is 0.217 eV; the prospective-only MAE is 0.385 eV and glyoxal's
+0.552 eV discrepancy exceeds the fixed maximum-error gate. The pilot is not
+promoted as a universal correction. It has independent analytic molecular
+Hessian checks for Criegee and Furofuran and TDA-free ground-program recovery
+for all four corresponding ROKS states. Code/evidence: 5f69635; candidate
+freeze: 7666f7a. `make_frontier_cisd_assets.py` reads only the bundled
+`data/frontier_cisd` files, so its figure and table rebuild independently of
+the remote electronic calculations.
