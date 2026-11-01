@@ -6,6 +6,7 @@ instead of reading the full AO pair tensor for every configuration.
 No orbital, density, or integral singular value is discarded.
 """
 import numpy as np
+from hashlib import sha256
 from ._nosi_slater import determinant
 
 
@@ -28,7 +29,7 @@ class UnusableCore(ValueError):
 class FixedBra:
     def __init__(self,hamiltonian,bra,core,active):
         self.hamiltonian=hamiltonian;self.core=core;self.active=active
-        self.nc=core.shape[1];self.sectors=[];features=[];offset=0
+        self.nc=core.shape[1];self.sectors=[];features=[];offset=0;self.occupation_cache_hits=0;self.occupation_cache_misses=0
         for spin,a in enumerate(bra):
             if spin and np.array_equal(a,bra[0]):
                 self.sectors.append(self.sectors[0]);continue
@@ -43,7 +44,7 @@ class FixedBra:
             phase=determinant(u)*determinant(vh)
             j=density.ravel()@hamiltonian.j;jk=density.ravel()@hamiltonian.jk
             sector=dict(regular=density,null=null,left=left,r=r,prefactor=phase*float(np.prod(s)),
-                        offset=offset,count=len(pair),one=float(np.trace(hamiltonian.h@density)),
+                        occupation_cache={},offset=offset,count=len(pair),one=float(np.trace(hamiltonian.h@density)),
                         same=float(jk@density.ravel()),j=j,jk=jk,features=pair)
             self.sectors.append(sector);features.append(pair);offset+=len(pair)
         features=np.concatenate(features)
@@ -60,13 +61,20 @@ class FixedBra:
         orbitals=b[:,self.nc:];projection=self.active.T@orbitals
         ids=np.argmax(abs(projection),axis=0)
         if not np.allclose(projection,np.eye(len(self.active.T))[:,ids],atol=1e-12,rtol=0):raise UnusableCore('ket active orbitals are not canonical columns')
+        key=sha256(np.ascontiguousarray(orbitals).tobytes()).digest();cache=sector['occupation_cache']
+        if key in cache:
+            self.occupation_cache_hits+=1;return cache[key]
+        self.occupation_cache_misses+=1
         block=sector['null'].T@orbitals;first,second=spectral_cofactors(block);r=sector['r']
         q=np.zeros((len(self.active.T),r));q[ids]=first.T
         vector=np.zeros(len(self.one));lo=sector['offset'];hi=lo+sector['count'];vector[lo:hi]=q.ravel()
         index=lo+np.arange(sector['count']).reshape(len(self.active.T),r)[ids].T.ravel()
         tensor=self.integrals[np.ix_(index,index)].reshape((r,)*4)
         null_two=.5*float(np.sum(second*tensor))
-        return determinant(block),vector,null_two
+        value=(determinant(block),vector,null_two)
+        if len(cache)>=2048:cache.pop(next(iter(cache)))
+        cache[key]=value
+        return value
 
     def element(self,ket):
         values=[self._occupation(b,sector) for b,sector in zip(ket,self.sectors)]

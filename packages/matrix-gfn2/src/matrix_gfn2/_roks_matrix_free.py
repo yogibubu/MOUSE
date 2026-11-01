@@ -13,15 +13,46 @@ from ._nosi_orthogonality import ground_overlap_jet, prepare_ground_overlap_acti
 from ._nosi_refine import normalize
 
 
+def residual_subspace_step(residual,newton,action,radius):
+    """Minimize the linearized residual in a Newton/Cauchy trust subspace.
+
+    The symmetric covariant KKT action gives the gradient of its squared
+    residual norm. Only the orbital part is radius constrained; the scalar
+    Lagrange multiplier is retained in the same two-dimensional minimization.
+    No stationary equation or energy parameter is modified.
+    """
+    gradient=action(residual)
+    u,values,_=np.linalg.svd(np.column_stack([newton,-gradient]),full_matrices=False)
+    q=u[:,values>max(values[0]*1e-13,1e-15)]
+    if not q.shape[1]:raise RuntimeError('empty residual trust subspace')
+    b=np.column_stack([action(v) for v in q.T]);h=b.T@b;rhs=-b.T@residual;metric=q[:-1].T@q[:-1]
+    def candidate(shift):return np.linalg.lstsq(h+shift*metric,rhs,rcond=1e-14)[0]
+    y=candidate(0.);shift=0.
+    if np.linalg.norm(q[:-1]@y)>radius:
+        lo=0.;hi=max(float(np.linalg.norm(h)),1e-12)
+        for unused in range(80):
+            if np.linalg.norm(q[:-1]@candidate(hi))<=radius:break
+            hi*=2
+        else:raise RuntimeError('unbounded orbital trust subproblem')
+        for unused in range(60):
+            mid=.5*(lo+hi)
+            if np.linalg.norm(q[:-1]@candidate(mid))>radius:lo=mid
+            else:hi=mid
+        shift=hi;y=candidate(shift)
+    step=q@y
+    return step,dict(trust_subspace_rank=q.shape[1],trust_regularization=shift,
+                     predicted_relative_residual=float(np.linalg.norm(residual+b@y)/np.linalg.norm(residual)))
+
+
 def solve(context, coefficients, ground, transition, multiplier=0., *,
           tolerance=1e-10, maximum_iterations=80, maximum_step=.2, checkpoint=None, linearization_context=None,
-          local_state_following=False, krylov='gmres',exact_refinement=False):
+          local_state_following=False, krylov='gmres',exact_refinement=False,residual_trust_region=False):
     c=normalize(coefficients,context.state.overlap);n=len(c);no=context.state.electron_count//2
     occ=np.zeros((2,n));occ[:,:no]=1;occ[0,0]=0;occ[0,no]=1
     triplet=np.array([np.maximum(*occ),np.minimum(*occ)])
     left,right=np.triu_indices(n,1);labels=np.vstack([occ,triplet]);keep=np.any(labels[:,left]!=labels[:,right],axis=0);left,right=left[keep],right[keep]
     linear=context if linearization_context is None else linearization_context
-    mu=float(multiplier);history=[];s=context.state.overlap
+    mu=float(multiplier);history=[];s=context.state.overlap;radius=maximum_step
     reference=np.asarray(transition)
     if reference.shape==(no,n-no):reference=reference[None]
     if reference.ndim!=3 or reference.shape[1:]!=(no,n-no):raise ValueError('invalid retained ROKS transition subspace')
@@ -44,7 +75,7 @@ def solve(context, coefficients, ground, transition, multiplier=0., *,
         return float(energy),np.r_[g-mu*j,-overlap],components,j,float(fidelity),float(overlap)
     for iteration in range(maximum_iterations+1):
         energy,residual,components,j,fidelity,overlap=evaluate(c,mu)
-        error=float(np.max(abs(residual)));row=dict(iteration=iteration,energy_hartree=energy,residual=error,ground_overlap=overlap,fidelity=fidelity,multiplier=mu);history.append(row)
+        error=float(np.max(abs(residual)));row=dict(iteration=iteration,energy_hartree=energy,residual=error,residual_l2=float(np.linalg.norm(residual)),ground_overlap=overlap,fidelity=fidelity,multiplier=mu);history.append(row)
         if checkpoint is not None:checkpoint(c,mu,row)
         if error<tolerance:return c,mu,dict(converged=True,history=history,energy_hartree=energy,residual=error,ground_overlap=overlap,fidelity=fidelity,retained_transition_rank=reference.shape[1],state_following='accepted-step coherent CSF overlap' if local_state_following else 'anchor transition subspace',krylov=krylov,complete_orbital_rotations=len(left),dense_orbital_Jacobian_allocated=False,full_functional_residual=True,auxiliary_linearization=linearization_context is not None)
         if iteration==maximum_iterations:break
@@ -100,15 +131,23 @@ def solve(context, coefficients, ground, transition, multiplier=0., *,
                     vectors.append(w/hessenberg[k+1,k])
             row['full_Hessian_outer_iterations']=outer;row['full_Hessian_actions']=outer+1;row['full_linear_relative_residual']=float(np.linalg.norm(remaining)/np.linalg.norm(rhs))
         if not np.all(np.isfinite(step)):raise RuntimeError('nonfinite analytic orbital KKT step')
-        norm=np.linalg.norm(step[:-1]);row['unscaled_step_norm']=float(norm);row['step_scale']=min(1.,maximum_step/max(norm,1e-300))
+        norm=np.linalg.norm(step[:-1]);row['unscaled_step_norm']=float(norm)
+        full_action=exact_action if exact_refinement and linearization_context is not None else action
+        if residual_trust_region and norm>radius:
+            step,trust_report=residual_subspace_step(residual,step,full_action,radius);row.update(trust_report);row['trust_radius']=radius;norm=np.linalg.norm(step[:-1])
+        row['step_scale']=min(1.,radius/max(norm,1e-300))
         if checkpoint is not None:checkpoint(c,mu,row)
         step*=row['step_scale']
         accepted=False
-        for fraction in [1.,.5,.25,.125,.0625,.03125,.015625]:
+        for fraction in [2.**(-k) for k in range(17)]:
             rotation=np.zeros((n,n));rotation[left,right]=fraction*step[:-1];rotation[right,left]=-fraction*step[:-1]
             trial=c@expm(rotation);newmu=mu+fraction*step[-1];ee,rr,_,_,ff,oo=evaluate(trial,newmu)
             following=abs(csf_overlap(c,trial)) if local_state_following else ff
             if following>=.7 and np.linalg.norm(rr)<np.linalg.norm(residual):
-                c=trial;mu=newmu;accepted=True;break
+                c=trial;mu=newmu;accepted=True
+                row['accepted_fraction']=fraction;row['accepted_residual_ratio']=float(np.linalg.norm(rr)/np.linalg.norm(residual))
+                if residual_trust_region:
+                    radius=max(1e-5,min(maximum_step,radius*(2. if fraction==1. else .5)))
+                break
         if not accepted:raise RuntimeError(f'analytic ROKS KKT line search stalled: {row}')
     raise RuntimeError(f'analytic ROKS KKT residual did not converge: {history[-1]}')

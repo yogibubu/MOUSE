@@ -1,0 +1,60 @@
+{
+  "reason": "Serialize large pigment jobs to avoid memory compression; prioritize carotene convergence. Accepted orbital checkpoints preserved.",
+  "targets": [
+    {
+      "molecule": "Chlorophyllide_a",
+      "state": 1,
+      "hole": 112,
+      "particle": 113,
+      "row": {
+        "iteration": 1,
+        "energy_hartree": -125.27443022691794,
+        "residual": 0.0019072644710126658,
+        "ground_overlap": 0.0005485905378384164,
+        "fidelity": 0.24839988928505508,
+        "multiplier": 0.009977416518229339,
+        "Krylov_iterations": 40,
+        "Krylov_info": 0,
+        "linear_relative_residual": 0.00010201789296921902,
+        "full_Hessian_outer_iterations": 0,
+        "full_Hessian_actions": 1,
+        "full_linear_relative_residual": 0.009570629312149668,
+        "unscaled_step_norm": 0.7124481623780781,
+        "trust_subspace_rank": 2,
+        "trust_regularization": 0.0003260579922830758,
+        "predicted_relative_residual": 0.5760207298015692,
+        "trust_radius": 0.1,
+        "step_scale": 1.0
+      }
+    },
+    {
+      "molecule": "Chlorophyllide_a",
+      "state": 2,
+      "hole": 111,
+      "particle": 113,
+      "row": {
+        "iteration": 1,
+        "energy_hartree": -125.31553438058846,
+        "residual": 0.0008322697649431399,
+        "ground_overlap": -8.947970078938637e-06,
+        "fidelity": 0.992332849475247,
+        "multiplier": 0.008578913323358318
+      }
+    },
+    {
+      "molecule": "Chlorophyllide_a",
+      "state": 3,
+      "hole": 112,
+      "particle": 114,
+      "row": {
+        "iteration": 2,
+        "energy_hartree": -125.29109111073777,
+        "residual": 0.0032002041685066204,
+        "ground_overlap": 0.00031646259903194654,
+        "fidelity": 0.9748865243150044,
+        "multiplier": -0.030171725137058285
+      }
+    }
+  ],
+  "captured_utc": "2026-11-01T21:34:45.022250+00:00"
+}

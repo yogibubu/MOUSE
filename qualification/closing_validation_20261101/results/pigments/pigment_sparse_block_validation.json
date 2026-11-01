@@ -1,0 +1,17 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "source_CSFs": 2145,
+  "sampled_CSFs": 36,
+  "sampled_offdiagonal_pairs": 1260,
+  "Hamiltonian_max_error_hartree": 1.033895191682177e-14,
+  "overlap_max_error": 3.708144902248023e-13,
+  "scope": "Canonical off-diagonal block; native diagonal and four-spin functional overrides intentionally excluded",
+  "spin_transform": "Exact sparse recoupling instead of dense multiplication; no configuration removed",
+  "wall_seconds": 1.920788415998686,
+  "details": {
+    "determinants": 161,
+    "csfs": 36,
+    "active_orbitals": 16,
+    "closed_core_orbitals": 100
+  }
+}

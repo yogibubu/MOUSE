@@ -3,7 +3,7 @@
   "Slater_cache_max_error": 0.0,
   "affected_regressions_passed": true,
   "pytest_status": 0,
-  "wall_seconds": 21.939665124984458,
+  "wall_seconds": 22.520647249999456,
   "nuclear_Hessian_regression": "Complete ethylene analytic Hessian; equivalent complete density chart",
   "pigment_derivative_scope": "Vertical energy and orbital response only"
 }

@@ -1,5 +1,6 @@
 """Exact canonical-CSF Slater--Condon block without occupied-overlap SVDs."""
 import numpy as np
+from scipy.sparse import csc_matrix
 
 def _apply(mask,annihilate,create):
  phase=1
@@ -41,9 +42,10 @@ def block(basis,canonical,h,eri,core,active):
    if key not in rows:rows[key]=len(rows)
    expansion.append((rows[key],weight*phase))
   terms.append(expansion)
- masks=list(rows);nd=len(masks);transform=np.zeros((nd,len(basis)))
+ masks=list(rows);nd=len(masks);ti=[];tj=[];tv=[]
  for j,expansion in enumerate(terms):
-  for i,value in expansion:transform[i,j]+=value
+  for i,value in expansion:ti.append(i);tj.append(j);tv.append(value)
+ transform=csc_matrix((tv,(ti,tj)),shape=(nd,len(basis)))
  occupied={k:np.array([i for i in range(ns) if k>>i&1],dtype=int) for k in masks};hd=np.zeros((nd,nd))
  for i,bra in enumerate(masks):
   occ=occupied[bra];hd[i,i]=hs[occ,occ].sum()+.5*g[occ[:,None],occ[None,:],occ[:,None],occ[None,:]].sum()
@@ -58,5 +60,5 @@ def block(basis,canonical,h,eri,core,active):
     value=_apply(ket,[q,s],[r,p])*g[p,r,q,s]
    else:raise ValueError('duplicate determinant')
    hd[i,j]=hd[j,i]=value
- metric=transform.T@transform;matrix=transform.T@hd@transform+ec*metric
+ metric=(transform.T@transform).toarray();matrix=(transform.T@hd)@transform+ec*metric
  return metric,matrix,dict(determinants=nd,csfs=len(basis),active_orbitals=na,closed_core_orbitals=len(core))

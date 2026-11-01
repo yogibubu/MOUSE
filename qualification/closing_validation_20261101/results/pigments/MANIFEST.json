@@ -1,14 +1,14 @@
 {
   "host": "mac-2.homenet.telecomitalia.it",
-  "captured_utc": "2026-11-01T21:20:56.225090+00:00",
+  "captured_utc": "2026-11-01T21:42:30.344813+00:00",
   "files": {
     "pigment_solver_primitives.json": {
       "bytes": 532,
       "sha256": "4c82610746f119d085376f2c4ff3c5210b4fbd9cd15c370b3c0d4c1fda391354"
     },
     "matrix_free_roks_certificate.json": {
-      "bytes": 11048,
-      "sha256": "ca17e6c5010d66c7515a946d586852de5b178577789b63d9827ba1643287d96f"
+      "bytes": 23169,
+      "sha256": "5ac78bad310176edcccd261f2373e2101b941bf9369e1a6877ca6cdcde822036"
     },
     "large_deltascf_certificate.json": {
       "bytes": 857,
@@ -19,8 +19,8 @@
       "sha256": "d115d46dafdb0e09dbecc9df083ddf81ae4ca6ebe0956e6bf5339315736bef6c"
     },
     "exact_quadrature_validation/certificate.json": {
-      "bytes": 4792,
-      "sha256": "6c7e6d5a622b5782ad3dda4e171e102e15696943e792ad37ba4f4acf7dede7d4"
+      "bytes": 5251,
+      "sha256": "4ea6c3dc687030f343244c746d4030d2bc579fbea4fc0a0399f60a49328d4ef3"
     },
     "pair_contraction_benchmark.json": {
       "bytes": 407,
@@ -32,19 +32,31 @@
     },
     "pigment_runtime_qualification.json": {
       "bytes": 359,
-      "sha256": "ba08ce011eda8729f92d41713d63ef18dc085c6fdeced8114b084a4a44d2976d"
+      "sha256": "0110c5005090c661cc6ec707ff9481201fab1861d622bc8b903a49d6c0ada4cc"
     },
     "pigment_runtime_qualification.log": {
-      "bytes": 11060,
-      "sha256": "b7b9516b641215e992b1b8bb007354d3ce235bb5d4df8906b025946af28c487b"
+      "bytes": 12521,
+      "sha256": "af46564821b41639e52a52f26e5fd3715b9b139b2f4557da0b30b3b14f67f70f"
     },
     "pigment_status.json": {
       "bytes": 85364,
       "sha256": "0221b5df5d65aeebf744b607fa17f15582d88ecd7336aa3180cc9e3d2ea91694"
     },
+    "beta_carotene_convergence.json": {
+      "bytes": 22759,
+      "sha256": "3684fc07fef216cdd41ee978f6e5af98a1802b22e0230ddc106e552297a05efa"
+    },
+    "pigment_sparse_block_validation.json": {
+      "bytes": 613,
+      "sha256": "5456930cdea3c49857d2c88a193a36f03b45924e22bb234de81fa642ae1e0669"
+    },
+    "pigment_serial_queue.json": {
+      "bytes": 183,
+      "sha256": "11007a47cca8e082cca599132c088373ef5bfd049872a5032249b9d02105fb98"
+    },
     "fixed_bra_validation.json": {
-      "bytes": 4292,
-      "sha256": "4cd46de7012ef47bc318a2ed2e67213c54ffa723b8f25468c53cd7fd021a04de"
+      "bytes": 5294,
+      "sha256": "2f63dae0703ca7b51dc278f13e951a1af4d9ad08ab89a6cedbe3b9c66c274543"
     },
     "pigment_spectral_references.json": {
       "bytes": 2436,
@@ -147,20 +159,24 @@
       "sha256": "da5894ca9110bd64308cf9f40869e9ab68a41aa21d7a934502028beac8f09227"
     },
     "pigment_roks/Chlorophyllide_a/state_3/progress.json": {
-      "bytes": 643,
-      "sha256": "4b0122831acbb60134282eaca47f8626512120b7baf2cfdb28d9d5e4faf13559"
+      "bytes": 325,
+      "sha256": "0d8b9a9bd0d906e14cb52a9771f4195b8ccd4801d07c37b47533092433d06b66"
     },
     "pigment_roks/Chlorophyllide_a/state_4/progress.json": {
       "bytes": 323,
       "sha256": "5256a8c72ae477110dffe6335a74dc6cd74a3a03a5809ccf8238c988caddbe61"
     },
     "pigment_roks/Chlorophyllide_a/state_2/progress.json": {
-      "bytes": 645,
-      "sha256": "5fbf0822ffbb410c33c883f0e81e4c8ba50cd2398ab62b17c02ceb7fab611c94"
+      "bytes": 323,
+      "sha256": "658d75a31c27549ad7c179bb04e7a3c958d507d1f247b5a44850f248e631c936"
     },
     "pigment_roks/Chlorophyllide_a/state_1/progress.json": {
-      "bytes": 646,
-      "sha256": "aa04cac773a61ee1a49084f3984512df1b81c238556648bda1b1d3fa6a163809"
+      "bytes": 363,
+      "sha256": "91f7827f0bb9955463a70f2d29965d516d77c69602549cd522ea57ea0d698d3a"
+    },
+    "pigment_roks/Chlorophyllide_a/serialized_resume.json": {
+      "bytes": 1880,
+      "sha256": "2e67d3b46ae91a7de1b3fcce2c3a6e019572fe3e147f4c241a27e5f4a11c3d0a"
     },
     "pigment_cid_expansion/Beta_carotene/frontier_4/result.json": {
       "bytes": 273125,
@@ -178,6 +194,18 @@
       "bytes": 632459,
       "sha256": "59f1fba27e2d761393bc67d62a4b3296edf22e12773bef0ff0bb42c2cb19bab2"
     },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_7/result.json": {
+      "bytes": 2314258,
+      "sha256": "c3e2c77d7147055dab538f0255517fd3346495cfd6e595432c9e1bd81d6b05d3"
+    },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_6/result.json": {
+      "bytes": 1272286,
+      "sha256": "22e8535454fa7d0e38a3426ac17c87b2cc5c9f0f0876b34d81094ba01b5134ee"
+    },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_8/result.json": {
+      "bytes": 3900955,
+      "sha256": "28b74e2e5d9f05381ca83f74fac77dc4b5de27159888d898ca6733dfc2bd28c1"
+    },
     "pigment_cid_expansion/Beta_carotene/frontier_4/analysis.json": {
       "bytes": 69398,
       "sha256": "91b7e93180a8bc89c3dba485853ea13d1f9f3897ef554b6e34844d2225dba318"
@@ -187,12 +215,24 @@
       "sha256": "820e5e5b38b0dcc32ff03c0ec7238a742c26a6c20953107449f4316d09aed3e5"
     },
     "pigment_cid_expansion/Beta_carotene/screening_6/frontier_6/analysis.json": {
-      "bytes": 319649,
-      "sha256": "d551947dab372359ff6d969f1f21c34ccd377f73eb0323d72dcd25d15f555972"
+      "bytes": 324268,
+      "sha256": "3e6261cd6944e4da73c8b9f6de057a3d9807b233a4ffe957abd37b69651983a4"
     },
     "pigment_cid_expansion/Beta_carotene/screening_6/frontier_5/analysis.json": {
       "bytes": 159468,
       "sha256": "77ba027f37805680154f0ed6d8e4df89f73f8f60309ddf365046dd7db54e8eca"
+    },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_7/analysis.json": {
+      "bytes": 585612,
+      "sha256": "1753f2d6643b218b455497a4b9d89495a6ba3e2e1ae3848666799a3fb1e00707"
+    },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_6/analysis.json": {
+      "bytes": 324177,
+      "sha256": "e44bc75f37c38d2bafce453759f57343a91e7624c9671fa9249a30e09ff985b2"
+    },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_8/analysis.json": {
+      "bytes": 983759,
+      "sha256": "c3820c97f9c0f3a1583b854de26a42f3cea1517ce2863cce3d845625f16ecb5d"
     },
     "pigment_cid_expansion/Beta_carotene/frontier_4/matrices.npz": {
       "bytes": 375300,
@@ -210,6 +250,18 @@
       "bytes": 1971972,
       "sha256": "b8cd86ac2f5284465881905f512ac0dc58a2421e2e2dde8b13ce02adba5452c7"
     },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_7/matrices.npz": {
+      "bytes": 26010756,
+      "sha256": "7604a8d03b66a601d4332915bc58f5993750a00572737e16ca22dfb2b9ce6907"
+    },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_6/matrices.npz": {
+      "bytes": 7908100,
+      "sha256": "8b628a5049c8759aeec129d209db2cfc18c115f30a687d9c0ae7e84e6e06094d"
+    },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_8/matrices.npz": {
+      "bytes": 73617156,
+      "sha256": "78d4a8093306f2151e7bccced08a20096c371e0f66eb76516d1e7c52cec35fb3"
+    },
     "pigment_cid_expansion/Beta_carotene/frontier_4/eigenstates.npz": {
       "bytes": 379202,
       "sha256": "b40b9a94baebdae7d182dc55f2de1ccdc9e7e513689645baefa67b3fb608eea8"
@@ -226,17 +278,37 @@
       "bytes": 1980626,
       "sha256": "cccd9cd3dcfe6ff90f21f8ba145422875a2eaac07f23a4772cf1661912833072"
     },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_7/eigenstates.npz": {
+      "bytes": 26041586,
+      "sha256": "ceb2e8271c7f5d549b6c183d8e369e6fe2a6bfaa281208949dc29296ae97eec1"
+    },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_6/eigenstates.npz": {
+      "bytes": 7925202,
+      "sha256": "a21228cef6f95eb2de957a7fa9cba018c64a51de84dddca78390dc35a7eb67fb"
+    },
+    "pigment_cid_expansion/Beta_carotene/screening_8/frontier_8/eigenstates.npz": {
+      "bytes": 73668866,
+      "sha256": "6174a367973d00faf74fcb6287f18d8f152d0ac4f604366c3e0f4f487ed35f8a"
+    },
     "pigment_screening_expansion/Beta_carotene/frontier_6/certificate.json": {
       "bytes": 776,
       "sha256": "03b93d3ba51b572b6c8f88abe68304a10e7f10563819fbc13726e7e8c87b4b90"
+    },
+    "pigment_screening_expansion/Beta_carotene/frontier_8/certificate.json": {
+      "bytes": 776,
+      "sha256": "34c61930158d83b75c845c3b0d32adc97a85069c054c563417307711f6f3bc37"
+    },
+    "pigment_screening_expansion/Beta_carotene/frontier_10/certificate.json": {
+      "bytes": 779,
+      "sha256": "4245e7acc8c4fcabd40eeb5a24a0b27a831db4e7932a0ce432cec82972a3c4b3"
     }
   },
   "qualified_source_sha256": {
-    "_nosi_canonical.py": "f8e5f1662af0e3264ee0b089e5ae26873d18b527055b02fd9a7e2332afab89a8",
-    "_nosi_fixed_bra.py": "1528ae0be448c59b5d7b2eedbe0d794563f7f81320a5d87b82c0c31a1e84e47a",
+    "_nosi_canonical.py": "5b556244ceed89be76b2f5c802f1733a4ea7dd28453f0bfbdd6e6b48221c1749",
+    "_nosi_fixed_bra.py": "33148501404a27189bbce7fca5fb96a75cd549ec8e9b60154e3b4b86cb42a586",
     "_angular_transport.py": "397a5be9c650dd0addf83a9662029e67ab5b56318c0fc48353b50e40a96cf856",
     "_quadrature_xc.py": "25aad6ef8e65b26a45692ea5aa39df398af0c16741a1ac4582a2a921421801fb",
-    "_roks_matrix_free.py": "9596b4a404212000eac6d958b2ebeda1182b7e63c8c514c79bd5cfe1cc5bcf34",
+    "_roks_matrix_free.py": "9b4f616ee05f1a557df325a5a333f1aa94f124068c9b94f68f565c4887daad59",
     "_nosi_mixed_fock.py": "bbf6d92a7106ad8c190c6daf2750a005374f989ddb5eda802bba83b075fb0a12",
     "_nosi_orthogonality.py": "ae90c50034f256d0cff4f2e71f34089242e6f0f6f7b828b050832dc4ec8306b8",
     "_nosi_slater.py": "85ba8daea73e2f2c0aa334b526eca3cc84610b08f3a40146eb21ddc9ca29b7bb",

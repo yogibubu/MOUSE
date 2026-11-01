@@ -27,6 +27,9 @@ with threadpool_limits(2):
    occupations=[indices for indices in itertools.combinations(range(n-nc),no-nc) if sum(j>=no-nc for j in indices)<=2];ids=rng.integers(len(occupations),size=(12,2));start=time.monotonic()
    for ia,ib in ids:
     ket=tuple(np.column_stack([core,active[:,occupations[index]]]) for index in [ia,ib]);actual=engine.element(ket);expected=ham.element(bra,ket);error=max(error,float(np.max(abs(np.array(actual)-expected))))
-   assert error<1e-9,(n,no,nc,error);rows.append(dict(orbitals=n,occupied_per_spin=no,common_core=nc,general_Hermitian_tensor=general,identical_alpha_beta=same_spin,maximum_overlap_or_energy_error=error,cases=len(ids),wall_seconds=time.monotonic()-start))
+   # Repeat a ket to exercise exact occupation reuse.
+   cached=engine.element(ket);assert np.max(abs(np.array(cached)-expected))<1e-9
+   assert engine.occupation_cache_hits>0
+   assert error<1e-9,(n,no,nc,error);rows.append(dict(orbitals=n,occupied_per_spin=no,common_core=nc,general_Hermitian_tensor=general,identical_alpha_beta=same_spin,maximum_overlap_or_energy_error=error,cases=len(ids),occupation_cache_hits=engine.occupation_cache_hits,occupation_cache_misses=engine.occupation_cache_misses,wall_seconds=time.monotonic()-start))
  report=dict(host=socket.getfqdn(),rows=rows,cofactor_max_error=cofactor_error,orbital_truncation=False,density_truncation=False,integral_truncation=False)
  (HERE/'fixed_bra_validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2),flush=True)
