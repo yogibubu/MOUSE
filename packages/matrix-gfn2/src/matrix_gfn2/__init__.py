@@ -933,3 +933,8 @@ from .multicsf_surface import (MultiCSFModel,MultiCSFSurfaceResult,effective_tra
     write_multicsf_model,evaluate_multicsf_surface,save_multicsf_result,load_multicsf_result)
 __all__ += ['MultiCSFModel','MultiCSFSurfaceResult','effective_transition_rank',
     'write_multicsf_model','evaluate_multicsf_surface','save_multicsf_result','load_multicsf_result']
+
+from .nosi_surface import (PreparedNOSIModel,NOSIStateResult,NOSISurfaceResult,
+                           save_nosi_result,load_nosi_result)
+__all__ += ['PreparedNOSIModel','NOSIStateResult','NOSISurfaceResult',
+            'save_nosi_result','load_nosi_result']

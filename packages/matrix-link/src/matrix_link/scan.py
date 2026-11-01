@@ -301,6 +301,8 @@ class QMScanBackend:
     tda_virtual_count: int | None = None
     tda_shift_model: str = "grimme_diagonal"
     native_excited_method: str = "tda"
+    native_nosi_model_path: Path | None = None
+    native_nosi_model_sha256: str | None = None
     native_multicsf_model_path: Path | None = None
     native_multicsf_model_sha256: str | None = None
     deltascf_promotion: tuple[int, int] | None = None
@@ -342,14 +344,14 @@ class QMScanBackend:
     std2_hessian_step_bohr: float = 0.01
 
     def __post_init__(self) -> None:
-        if self.native_excited_method not in {"tda", "deltascf", "roks", "roks_50_50", "multicsf_50_50"}:
-            raise ValueError("native excited method must be tda, deltascf, roks, roks_50_50 or multicsf_50_50")
+        if self.native_excited_method not in {"tda", "deltascf", "roks", "roks_50_50", "multicsf_50_50", "nosi_50_50"}:
+            raise ValueError("native excited method must be tda, deltascf, roks, roks_50_50 or multicsf_50_50 or nosi_50_50")
         if self.native_excited_method != "tda":
             if (_normalized_backend_name(self.name) != "matrix_gfn2"
                     or self.electronic_state < 1 or self.multiplicity != 1
                     or self.state_spin != "singlet" or self.state_tracking != "apoc"):
                 raise ValueError("DeltaSCF/ROKS requires an explicit native singlet with APOC tracking")
-            if self.native_excited_method!='multicsf_50_50':
+            if self.native_excited_method not in {'multicsf_50_50','nosi_50_50'}:
                 pair = self.deltascf_promotion
                 if (not isinstance(pair, (tuple, list)) or len(pair) != 2 or pair[0] == pair[1]
                         or any(isinstance(i, (bool, np.bool_)) or not isinstance(i, (int, np.integer)) or i < 0 for i in pair)):
@@ -360,6 +362,13 @@ class QMScanBackend:
                 raise ValueError("TDA virtual truncation is incompatible with DeltaSCF/ROKS")
         elif self.deltascf_promotion is not None:
             raise ValueError("orbital promotion requires native DeltaSCF or ROKS")
+        if self.native_excited_method=='nosi_50_50':
+            if self.native_nosi_model_path is None:raise ValueError('NOSI surface requires a frozen model manifest')
+            path=Path(self.native_nosi_model_path).expanduser().resolve();digest=hashlib.sha256(path.read_bytes()).hexdigest()
+            if self.native_nosi_model_sha256 is not None and self.native_nosi_model_sha256!=digest:raise ValueError('NOSI model checksum differs from backend contract')
+            if self.matrix_gfn2_alpb_solvent is not None:raise ValueError('frozen NOSI surface is qualified in gas phase only')
+            object.__setattr__(self,'native_nosi_model_path',path);object.__setattr__(self,'native_nosi_model_sha256',digest)
+        elif self.native_nosi_model_path is not None or self.native_nosi_model_sha256 is not None:raise ValueError('NOSI model requires native_excited_method=nosi_50_50')
         if self.native_excited_method=='multicsf_50_50':
             if self.native_multicsf_model_path is None:raise ValueError('multi-CSF surface requires a frozen model manifest')
             path=Path(self.native_multicsf_model_path).expanduser().resolve();digest=hashlib.sha256(path.read_bytes()).hexdigest()
@@ -1105,7 +1114,7 @@ def run_qm_scan_points(
         reuse_center_state and name in {"gaussian", "gdv"}
     )
     evaluation_points = prepared_points
-    if name=='matrix_gfn2' and spec.native_excited_method in {'roks_50_50','multicsf_50_50'}:
+    if name=='matrix_gfn2' and spec.native_excited_method in {'roks_50_50','multicsf_50_50','nosi_50_50'}:
         centers=[p for p in prepared_points if abs(float(p.displacement))<=1e-14]
         if len(centers)!=1:raise ValueError('ROKS 50/50 scans require one undisplaced reference point')
         center=centers[0];evaluation_points=(center,)+tuple(p for p in prepared_points if p is not center)
@@ -2264,7 +2273,7 @@ def _composite_restart_json_value(value: object) -> object:
             item.name: _composite_restart_json_value(getattr(value, item.name))
             for item in fields(value)
             if item.name != "resume_completed_composite_terms"
-            and not (item.name in {"native_multicsf_model_path","native_multicsf_model_sha256","native_roks_anchor_path","native_roks_anchor_sha256","native_roks_response_path","native_roks_response_sha256","native_roks_composite_response_paths","native_roks_composite_response_sha256","native_roks_composite_seed_paths","native_roks_composite_seed_sha256","native_roks_composite_saddle_indices","native_roks_composite_following","native_roks_composite_ground_recovery","native_roks_composite_reference_policy","native_roks_composite_component_tracking","native_roks_composite_ground_surface","native_roks_composite_orbital_coupling"}
+            and not (item.name in {"native_nosi_model_path","native_nosi_model_sha256","native_multicsf_model_path","native_multicsf_model_sha256","native_roks_anchor_path","native_roks_anchor_sha256","native_roks_response_path","native_roks_response_sha256","native_roks_composite_response_paths","native_roks_composite_response_sha256","native_roks_composite_seed_paths","native_roks_composite_seed_sha256","native_roks_composite_saddle_indices","native_roks_composite_following","native_roks_composite_ground_recovery","native_roks_composite_reference_policy","native_roks_composite_component_tracking","native_roks_composite_ground_surface","native_roks_composite_orbital_coupling"}
                      and getattr(value,item.name) is None)
         }
     if isinstance(value, Mapping):
@@ -4424,7 +4433,7 @@ def _run_matrix_gfn2_scan_point(
     session: object | None,
     *, run_dir: Path | None = None,
 ) -> PointEvaluationResult:
-    if spec.native_excited_method in {'roks_50_50','multicsf_50_50'}:
+    if spec.native_excited_method in {'roks_50_50','multicsf_50_50','nosi_50_50'}:
         if session is None or run_dir is None:raise ValueError('ROKS 50/50 requires a resident scan session and restart directory')
         from .qmqm_component import CappedQMComponent
         from .composite_roks_component import _contract

@@ -1718,7 +1718,7 @@ class GeometryEvaluationService:
             self.backend is not None
             and _normalized_backend_name(self.backend.name) == "matrix_gfn2"
         ):
-            if self.backend.native_excited_method not in {'tda','roks_50_50','multicsf_50_50'}:
+            if self.backend.native_excited_method not in {'tda','roks_50_50','multicsf_50_50','nosi_50_50'}:
                 raise NotImplementedError('use DeltaSCF/ROKS through capped_subtractive components or CappedQMComponent')
             from .resident_calculators import create_resident_calculator
 
@@ -1759,7 +1759,7 @@ class GeometryEvaluationService:
                     2.0e-5, 0.01 * self.settings.max_force_tolerance,
                 ),
             )
-        if self._matrix_gfn2_session is not None and self.backend.native_excited_method in {'roks_50_50','multicsf_50_50'}:
+        if self._matrix_gfn2_session is not None and self.backend.native_excited_method in {'roks_50_50','multicsf_50_50','nosi_50_50'}:
             from .qmqm_component import CappedQMComponent
             self._matrix_gfn2_session._calculator.temperature_kelvin=0.
             self._orbital_component=CappedQMComponent(self.backend,self._matrix_gfn2_session,self.run_dir/'roks_50_50')
@@ -5369,7 +5369,9 @@ class GeometryEvaluationService:
         vector = np.asarray(q, dtype=float).reshape(-1)
         if getattr(self,'_orbital_component',None) is not None:
             from .composite_roks_component import _models
-            if self._orbital_component.backend.native_excited_method=='multicsf_50_50':
+            if self._orbital_component.backend.native_excited_method=='nosi_50_50':
+                self._orbital_component._nosi_model.validate_files()
+            elif self._orbital_component.backend.native_excited_method=='multicsf_50_50':
                 self._orbital_component._multicsf_model.validate_files()
             else:_models(self._orbital_component.backend)  # validate bytes before cache hits too
         if use_cache:
@@ -8003,7 +8005,7 @@ def _restart_identity_value(value: object) -> object:
             item.name: _restart_identity_value(getattr(value, item.name))
             for item in fields(value)
             if item.name != "resume_completed_composite_terms"
-            and not (item.name in {"native_multicsf_model_path","native_multicsf_model_sha256","native_roks_anchor_path","native_roks_anchor_sha256","native_roks_response_path","native_roks_response_sha256","native_roks_composite_response_paths","native_roks_composite_response_sha256","native_roks_composite_saddle_indices","native_roks_composite_following","native_roks_composite_ground_recovery","native_roks_composite_reference_policy","native_roks_composite_component_tracking"}
+            and not (item.name in {"native_nosi_model_path","native_nosi_model_sha256","native_multicsf_model_path","native_multicsf_model_sha256","native_roks_anchor_path","native_roks_anchor_sha256","native_roks_response_path","native_roks_response_sha256","native_roks_composite_response_paths","native_roks_composite_response_sha256","native_roks_composite_saddle_indices","native_roks_composite_following","native_roks_composite_ground_recovery","native_roks_composite_reference_policy","native_roks_composite_component_tracking"}
                      and getattr(value,item.name) is None)
         }
     if isinstance(value, Mapping):
@@ -8051,7 +8053,7 @@ def _electronic_restart_artifact_identity(backend: object | None) -> object:
         }
 
     payload: dict[str, object] = {}
-    for name in ("restart_artifact", "initial_scf_density_artifact", "native_roks_anchor_path", "native_roks_response_path", "native_multicsf_model_path"):
+    for name in ("restart_artifact", "initial_scf_density_artifact", "native_roks_anchor_path", "native_roks_response_path", "native_multicsf_model_path", "native_nosi_model_path"):
         value = getattr(backend, name, None)
         if value is not None:
             payload[name] = record(value)
@@ -14868,7 +14870,7 @@ def _write_final_matrix_gfn2_scaling_observables(
     if backend_name != "matrix_gfn2" or session is None:
         return None
     if (backend.electronic_state > 0
-            and backend.native_excited_method in {"deltascf","roks","roks_50_50","multicsf_50_50"}):
+            and backend.native_excited_method in {"deltascf","roks","roks_50_50","multicsf_50_50","nosi_50_50"}):
         # These SCC/Mayer descriptors describe S0 and require a fresh S0 solve.
         # They do not describe the optimized determinant/CSF (or the two
         # separate 50/50 states), and must not abort its completed optimizer.

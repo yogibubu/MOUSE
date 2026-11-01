@@ -5,6 +5,8 @@ import numpy as np
 
 
 def _contract(backend):
+    if backend.native_excited_method=='nosi_50_50':
+        return hashlib.sha256(json.dumps(dict(method='nosi_50_50.v1',model_sha256=backend.native_nosi_model_sha256,state=backend.electronic_state,charge=backend.charge,multiplicity=backend.multiplicity,minimum_overlap=backend.state_tracking_minimum_overlap,ambiguity_margin=backend.state_tracking_ambiguity_margin),sort_keys=True).encode()).hexdigest()
     if backend.native_excited_method=='multicsf_50_50':
         return hashlib.sha256(json.dumps(dict(method='multicsf_50_50.v1',model_sha256=backend.native_multicsf_model_sha256,state=backend.electronic_state,charge=backend.charge,multiplicity=backend.multiplicity,minimum_overlap=backend.state_tracking_minimum_overlap),sort_keys=True).encode()).hexdigest()
     payload=dict(method='roks_50_50.v1',weights=[.5,.5],state=backend.electronic_state,
