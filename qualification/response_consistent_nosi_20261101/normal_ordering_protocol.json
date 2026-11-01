@@ -1,0 +1,24 @@
+{
+  "stage": "normal-ordering amendment frozen after eleven-state kernel pilot",
+  "problem": "Bare-HF off-diagonal couplings between singly excited CSFs are inconsistent with the DFT-derived response used by their diagonal ROKS energies. Glyoxal mixes two orthogonal single excitations with a bare coupling of 2.741 eV.",
+  "correction": "Replace the bare physical one-body h by h+delta_h with delta_h=F_model-F_HF(P_ground), evaluated exactly between all CSFs. Add only the projected two-electron response-kernel difference. Restore original diagonal energies with the identical overlap-weighted residual construction. No offsets or per-molecule branches.",
+  "primary_ground_reference": "unchanged moving stationary-ground projection",
+  "controls": "retain both full SI eigenvalue minus stationary ground and conventional full-SI ground-referenced gaps",
+  "implementation_scope": "first an operator audit with explicit small TDA matrices; a successful implementation must contract response on the few CSF transition vectors without diagonalizing or constructing a full TDA matrix",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "fitted_energy_offset_ev": 0,
+  "target_energies_in_model": false,
+  "development": "All eleven previous predictions and labels are exposed development; no claim of blind validation",
+  "accuracy_gate_ev": {
+    "mae": 0.3,
+    "max_absolute_error": 0.5
+  },
+  "nuclear_derivative_claims": false,
+  "new_DFT_or_SCC_calls": false,
+  "no_per_molecule_rule_or_parameter": true,
+  "reason": "The first response correction projected both one-body and two-body differences through the singles transition vectors, although relaxed CSFs contain higher-excitation components. Apply the one-body reference correction exactly on the full CSFs, not through a singles-only approximation."
+}
