@@ -78,32 +78,43 @@ $\lambda$, $\eta$, geometry and zero offset remain fixed. The resulting
 Supporting Information, including the initial ordering.
 
 With five occupied and five virtual frontier orbitals, the first state
-becomes weak (2.561 eV, $f=0.0238$), followed by the intense state
-(2.728 eV, $f=3.127$). This initial ordering repair motivates further
+becomes weak at 2.561 eV, followed by an intense state at 2.728 eV. This initial ordering repair motivates further
 configuration-space checks rather than an absolute-energy convergence claim.
 
-Larger fixed-screening calculations with $W=10$ use 2,145, 3,403 and
-5,151 CSFs for $N=8,9,10$ (Figure~\ref{fig:carotenespace}). Their lowest weak state lies at 2.189,
-2.145 and 2.084 eV, respectively. The frontier bright character fragments
-between roots 2 and 3: at $N=9$ their individual native-target weights
-are 0.420 and 0.385, while their combined projector coverage is 0.805.
-Requiring a single root to carry 0.49 would therefore reject a resolved
-mixed target. The subspace criterion retains both roots with the same
-coverage threshold, without changing any matrix element or energy.
-Across $N=9$ to 10, the squared principal cosines of the roots 2--3
-subspace are 0.998 and 0.993, supporting its continuity through the
-intensity redistribution.
+The screening window $W$ defines the native transitions excluded from
+polarization; it is an active partition, not a numerical polarization cutoff.
+For the final sequence we set $W=N$, matching the represented canonical
+CI frontier and its polarization exclusion. At fixed $N$, increasing $W$
+removes additional response channels without adding their CI configurations
+and changes the effective model. Such sensitivity checks are retained
+separately in the Supporting Information.
 
-At $N=10$, the lowest root has $f=0.00883$; roots 2 and 3 lie at
-2.467 and 2.532 eV with $f=0.529$ and 2.310. Thus weak $S_1$ remains
-below the absorbing pair, but the dominant frontier intensity is now on
-the third energy-ordered root. Energy labels and the bright target must
-be distinguished through this mixing. The last increments of the three
-ordered gaps are $-0.061$, $-0.058$ and $-0.041$ eV. These do not
-establish absolute energy convergence. Screening-window effects are
-smaller: at fixed $N=8$, increasing $W=8$ to 10 changes the first two
-gaps by $-0.009$ and $+0.004$ eV. The complete sequence, transition
-strengths and overlap controls are given in the Supporting Information.
+We require the first three ordered gaps to change by less than 0.02 eV
+in each of two consecutive frontier increments. The coherent $W=N$
+sequence uses 7,503, 10,585 and 14,535 CSFs at $N=11,12,13$
+(Figure~\ref{fig:carotenespace}). At $N=13$, the three gaps are
+1.950, 2.338 and 2.478 eV, with oscillator strengths 0.00117,
+0.132 and 4.796. The largest change across either final increment is
+0.0054 eV. The lowest state remains weak and the dominant intensity
+belongs to the third energy-ordered state.
+
+An independent fixed-Hamiltonian check at $W=16$, with the same three
+CI windows, gives a maximum increment of 0.0021 eV. Nested principal
+blocks agree within $7.7\times10^{-13}$ Ha, their metrics within
+$6.8\times10^{-15}$, and the ground energies are identical. The final
+squared principal cosines of the roots 2--3 subspace exceed 0.9998.
+Numerical dielectric residuals are below $3.4\times10^{-15}$.
+These tests establish frontier convergence at the stated tolerance for
+the prepared rank-two model, with unchanged geometry, F/Q weights,
+$\lambda$, $\eta$ and zero energy offset.
+
+The development sequence also illustrates target fragmentation. At
+$N=9$, $W=10$, roots 2 and 3 carry individual native-target weights
+0.420 and 0.385 but joint coverage 0.805. Collective target tracking
+retains this resolved mixed subspace without changing the Hamiltonian.
+Energy indices and bright character must be distinguished through mixing.
+The full window sequence and transition strengths are archived in the
+Supporting Information.
 
 The first state is weak rather than strictly forbidden on the unoptimized
 source geometry. Room-temperature fluorescence-derived $S_1$ energies
@@ -119,13 +130,14 @@ excited minima nor pigment nuclear Hessians are reported.
 
 \begin{figure}[!htbp]\centering
 \includegraphics[width=\linewidth]{figures/beta_carotene_convergence.pdf}
-\caption{Fixed-screening configuration-window sensitivity of
-$\beta$-carotene at $W=10$. The weak first singlet remains below an
-absorbing pair, whose intensity redistributes between roots 2 and 3.
-Lines connect energy-ordered roots and do not assert continuous diabatic
-identity. The Hamiltonian parameters and unoptimized source geometry
-remain unchanged. The initial 15--703 CSF ordering repair and the full
-window sequence are retained in the Supporting Information.}
+\caption{Convergence of $\beta$-carotene with 11--13 occupied and virtual
+frontier orbitals. Solid lines use matched CI and polarization exclusion
+($W=N$); dashed lines show the independent fixed-Hamiltonian check
+at $W=16$. Bars show the coherent-window oscillator strengths.
+The weak first singlet lies below an absorbing pair, with the dominant
+intensity on root 3. Lines connect energy-ordered roots; subspace overlaps
+are tracked separately. Parameters and source geometry remain fixed.
+The initial 15--703 CSF ordering repair is retained in the Supporting Information.}
 \label{fig:carotenespace}
 \end{figure}
 

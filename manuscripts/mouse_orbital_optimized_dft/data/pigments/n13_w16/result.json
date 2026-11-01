@@ -1,0 +1,212 @@
+{
+  "molecule": "Beta_carotene",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "states": [
+    {
+      "root": 1,
+      "excitation_ev": 1.9092708180321056,
+      "oscillator_strength": 0.0010233804466995239,
+      "transition_dipole_au": [
+        -0.14684006356257692,
+        -0.01453650966733941,
+        0.01024116621014825
+      ],
+      "retained_subspace_weight": 0.0003976453387275979,
+      "native_frontier_subspace_weight": 0.0009284331045742213,
+      "selected": false
+    },
+    {
+      "root": 2,
+      "excitation_ev": 2.2911572805575835,
+      "oscillator_strength": 0.07788541640377826,
+      "transition_dipole_au": [
+        1.1738233732093222,
+        0.06763335592191404,
+        -0.07139280329878799
+      ],
+      "retained_subspace_weight": 0.013408797531464985,
+      "native_frontier_subspace_weight": 0.016854763036531592,
+      "selected": false
+    },
+    {
+      "root": 3,
+      "excitation_ev": 2.4659955997467033,
+      "oscillator_strength": 4.817033309759985,
+      "transition_dipole_au": [
+        8.857345685947335,
+        0.9090328071907318,
+        -0.672656094999942
+      ],
+      "retained_subspace_weight": 0.8030364589048067,
+      "native_frontier_subspace_weight": 0.7822731831875086,
+      "selected": true
+    },
+    {
+      "root": 4,
+      "excitation_ev": 2.8095449445004346,
+      "oscillator_strength": 0.0018390454525452125,
+      "transition_dipole_au": [
+        0.16316641325771777,
+        -0.009339609631143475,
+        -0.0026744024869101643
+      ],
+      "retained_subspace_weight": 0.00017900820078241422,
+      "native_frontier_subspace_weight": 0.00016087988726052577,
+      "selected": false
+    },
+    {
+      "root": 5,
+      "excitation_ev": 3.146926768339582,
+      "oscillator_strength": 0.07561120934039735,
+      "transition_dipole_au": [
+        -0.9065579725730927,
+        -0.3885777509781272,
+        0.08872394388564145
+      ],
+      "retained_subspace_weight": 0.010232924215152301,
+      "native_frontier_subspace_weight": 0.008941956869326055,
+      "selected": false
+    },
+    {
+      "root": 6,
+      "excitation_ev": 3.363712310353401,
+      "oscillator_strength": 0.0014718859938211554,
+      "transition_dipole_au": [
+        0.042739371734109084,
+        -0.11837325164361188,
+        0.04496408731612213
+      ],
+      "retained_subspace_weight": 2.968282651098927e-06,
+      "native_frontier_subspace_weight": 1.6191235440524706e-05,
+      "selected": false
+    },
+    {
+      "root": 7,
+      "excitation_ev": 3.4282973021901624,
+      "oscillator_strength": 0.0020016407631038876,
+      "transition_dipole_au": [
+        -0.03198472295001418,
+        -0.13794501409911455,
+        0.06147806281307584
+      ],
+      "retained_subspace_weight": 1.9944976391864893e-06,
+      "native_frontier_subspace_weight": 2.4669619949646242e-06,
+      "selected": false
+    },
+    {
+      "root": 8,
+      "excitation_ev": 3.6121790968407463,
+      "oscillator_strength": 0.0061190009321307635,
+      "transition_dipole_au": [
+        -0.038939033323149325,
+        -0.24077241640782843,
+        0.09826588147557998
+      ],
+      "retained_subspace_weight": 4.255169111449691e-05,
+      "native_frontier_subspace_weight": 1.8801294923636767e-05,
+      "selected": false
+    },
+    {
+      "root": 9,
+      "excitation_ev": 3.767304730750544,
+      "oscillator_strength": 0.006350693746925723,
+      "transition_dipole_au": [
+        0.23420086956829603,
+        0.09998791178883501,
+        -0.06292317661080604
+      ],
+      "retained_subspace_weight": 0.004019284017187803,
+      "native_frontier_subspace_weight": 0.0030343422699307745,
+      "selected": false
+    },
+    {
+      "root": 10,
+      "excitation_ev": 3.958589692602951,
+      "oscillator_strength": 0.058382151526353135,
+      "transition_dipole_au": [
+        0.7102345753528209,
+        0.20355288996834328,
+        -0.23688042068657472
+      ],
+      "retained_subspace_weight": 0.04537243380766898,
+      "native_frontier_subspace_weight": 0.03459302552984795,
+      "selected": false
+    }
+  ],
+  "selected_states": [
+    {
+      "root": 3,
+      "excitation_ev": 2.4659955997467033,
+      "oscillator_strength": 4.817033309759985,
+      "transition_dipole_au": [
+        8.857345685947335,
+        0.9090328071907318,
+        -0.672656094999942
+      ],
+      "retained_subspace_weight": 0.8030364589048067,
+      "native_frontier_subspace_weight": 0.7822731831875086,
+      "selected": true
+    }
+  ],
+  "basis_size": 14535,
+  "retained_ROKS_ordinals": [
+    1
+  ],
+  "minimum_projected_metric_eigenvalue": null,
+  "projected_metric_Gershgorin_lower_bound": 0.11968110902975404,
+  "metric_positive_definiteness_certificate": {
+    "method": "Gershgorin",
+    "lower_bound": 0.11968110902975404,
+    "certified_shift": 1e-08
+  },
+  "eigensolver_certificate": {
+    "method": "ARPACK with exact sparse metric inverse and rank-one ground projection",
+    "roots": 50,
+    "maximum_residual_hartree": 2.2873769237911684e-13,
+    "maximum_metric_orthonormality_error": 1.4432899320127035e-14,
+    "configurations_discarded": 0
+  },
+  "eigenstates_requested": 50,
+  "spin_squared": 0.0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "bath_efficiency_eta": 0.6,
+  "energy_offset_ev": 0,
+  "DFT_imports": 0,
+  "TDA_solves": 0,
+  "current_process_wall_seconds": 433.51960545795737,
+  "matrix_checkpoint_reused": false,
+  "timing_scope": "Current process only; excludes previous matrix construction when resumed and all DFT preparation",
+  "model_sha256": "14bd49b32ea9268cbddf416fb84aeabb275139378565cd9f304ce2afb87dadcf",
+  "scope": "Vertical examples on source geometries; no excited geometry or pigment nuclear derivative qualification",
+  "target_coverage": {
+    "minimum_target_coverage": 0.7822731831875086,
+    "required_target_coverage": 0.49,
+    "target_rank": 1,
+    "retained_roots": 1,
+    "fragmented": false,
+    "complete_target_coverage": 0.8844642106435876
+  },
+  "target_rule": "Retain eigenstates until every fixed native-frontier target direction has at least 0.49 projector coverage; fragmented targets remain a subspace; ROKS weights reported separately",
+  "numerical_quadrature": "Full frozen XC quadrature; RI used only in orbital Newton step",
+  "inherited_scalar_elements": {
+    "parent_frontier": 11,
+    "scalar_elements": 22506,
+    "identity_verified": true
+  },
+  "scalar_checkpoint_batch_size": 32,
+  "frontier_occupied": 13,
+  "frontier_virtual": 13,
+  "screened_interaction_reused": true,
+  "screening_active_frontier": 16,
+  "role": "Post-exposure active-space convergence diagnostic; no parameter retuning",
+  "observable_phase_convention": "Identical to MatrixResponse opened singlet: excited determinant core+[particle], ground determinant in original column order",
+  "corrected_observables_checkpoint": "observables_phase_corrected.npz",
+  "observable_refresh_wall_seconds": 5.32057962496765,
+  "energy_and_CI_checkpoints_reused_unchanged": true,
+  "compact_view": "Lowest ten roots; all calculated roots and configurations in qualification archive",
+  "source_sha256": "01ccd2d92e8ed5fb7f4c60c904483962cd27ddca14c196f49a9548b6833b75b1"
+}

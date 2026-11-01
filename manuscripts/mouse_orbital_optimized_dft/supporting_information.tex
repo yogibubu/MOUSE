@@ -275,8 +275,8 @@ their corresponding atomic units; the completed singlet CI matrix agrees
 within $3.6\times10^{-15}$ Ha. The complete analytic ethylene Hessian,
 under an invertible complete response-chart change, agrees within
 $1.1\times10^{-15}$ Ha/bohr$^2$. Fifteen existing algebra, spin and
-restart-contract tests and two target-subspace invariance/fragmentation
-tests pass. Cached Slater contractions reproduce their
+restart-contract tests, two target-subspace invariance/fragmentation
+tests and three independent observable-phase tests pass. Cached Slater contractions reproduce their
 direct contractions exactly in the numerical control. Detailed certificates
 and the qualified implementation snapshot are archived under
 \path{qualification/closing_validation_20261101/results/pigments/}.
@@ -297,7 +297,7 @@ constitute pigment gradient or Hessian validation.
 \caption{Initial ordering repair from 15 to 703 spin-singlet configurations.
 Energy-ordered roots are shown with their oscillator strengths; screening
 window $W$ and CI window $N$ are specified separately. The larger
-$W=10$ sequence and its intensity exchange are shown in the main text.}
+$W=N$ sequence and the fixed-$W=16$ control are shown in the main text.}
 \end{figure}
 The brightest state is not constrained to retain the same energy index.
 At $N=9$, the frontier target is shared by roots 2 and 3, each below the
@@ -305,8 +305,10 @@ original 0.49 individual-weight threshold. Their joint coverage is 0.805;
 retaining the target subspace resolves assignment without changing energies.
 At $N=10$, the dominant intensity belongs to root 3. Thus the robust
 observation is weak $S_1$ below an absorbing pair, rather than a fixed
-single-root bright label. The last three ordered energy increments are
-$-0.061$, $-0.058$ and $-0.041$ eV; no asymptotic convergence is claimed.
+single-root bright label. The final $N=11,12,13$ sequence uses matched
+$W=N$ and reaches maximum consecutive increments of 0.0054 eV.
+At fixed $W=16$, the corresponding maximum is 0.0021 eV.
+Both satisfy the two-increment 0.02 eV criterion for the prepared rank-two model.
 
 All rows use the same source geometry, F/Q weights 50/50, exchange scale
 0.9, bath efficiency 0.60 and zero energy offset. $W$ is the occupied and
@@ -320,17 +322,36 @@ $2.61\times10^{-15}$. The largest $N=9$ to 10 comparison at $W=10$ reproduces th
 $2.60\times10^{-15}$ in its metric. The absorbing pair has squared
 principal cosines 0.998 and 0.993. Ground energies are identical and
 the lowest roots satisfy the Rayleigh--Ritz bound. Changing $W$ changes the screened
-interaction and is not a same-Hamiltonian variational test.
+interaction and is not a same-Hamiltonian variational test. In particular,
+$W$ specifies which native response channels are excluded, rather than
+truncating a numerical polarization expansion. At fixed $N=10$, changing
+$W=14$ to 16 shifts the first two gaps by $-0.0233$ and $-0.0269$ eV.
+The production sequence therefore ties $W$ to the represented CI frontier;
+robustness to arbitrary mismatched partitions is not claimed.
+The final fixed-$W=16$, $N=12$ to 13 comparison reproduces its
+10,585-CSF parent block within $7.7\times10^{-13}$ Ha and
+$6.8\times10^{-15}$ in the metric. The absorbing-subspace squared
+principal cosines are 0.99991 and 0.99986.
 
 Fixed-bra contractions are also compared with direct elements for
-physical and general fourfold-Hermitian tensors, including six active
-electrons per spin. Exact sparse spin recoupling is checked on 1,260 off-diagonal elements
+physical and general fourfold-Hermitian tensors, including up to sixteen
+active electrons per spin in the physical-tensor cases. Exact sparse spin recoupling is checked on 1,260 off-diagonal elements
 of the archived 2,145-CSF carotene block, with maximum Hamiltonian
 difference $1.04\times10^{-14}$ Ha and overlap difference
 $3.71\times10^{-13}$. Product cofactors are compared with explicit minors
 at full and deficient ranks. The exact full-quadrature Hessian refinement
 is exercised by a small-molecule solve and density-span energy shortcuts
-are checked against full evaluation. These implementation controls do not
-establish convergence of the carotene absolute excitation energies.
+are checked against full evaluation. Twenty regressions include the
+small-molecule analytic Hessian and independent CSF phase checks.
+Observable contractions share the Hamiltonian determinant ordering and
+are checked against direct overlaps with its stored metric. Legacy
+observable arrays are retained separately; energies and CI vectors were
+reused unchanged when refreshing intensities. Screened reassembly from
+cached native functional values recovers an archived matrix within
+$2.0\times10^{-11}$ Ha. Three independent checks at each screening
+window give dielectric residuals below $3.4\times10^{-15}$ and
+auxiliary-factor row errors below $3.3\times10^{-18}$. These algebraic
+controls and the frontier convergence tests address different errors;
+neither is an experimental accuracy validation.
 
 \end{document}

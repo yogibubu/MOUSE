@@ -1,0 +1,37 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "rows": [
+    {
+      "W": 11,
+      "quadratic_form_relative_error": 4.163336342344337e-17,
+      "dielectric_solve_relative_residual": 3.01761061984828e-15,
+      "factorized_screened_row_max_error": 1.4399560103323106e-20,
+      "positive_dielectric_by_construction": true
+    },
+    {
+      "W": 12,
+      "quadratic_form_relative_error": 1.1102230246251565e-16,
+      "dielectric_solve_relative_residual": 3.02015263900281e-15,
+      "factorized_screened_row_max_error": 3.2526065174565133e-18,
+      "positive_dielectric_by_construction": true
+    },
+    {
+      "W": 13,
+      "quadratic_form_relative_error": 6.938893903907228e-17,
+      "dielectric_solve_relative_residual": 3.3286984996760504e-15,
+      "factorized_screened_row_max_error": 4.743384504624082e-20,
+      "positive_dielectric_by_construction": true
+    },
+    {
+      "W": 16,
+      "quadratic_form_relative_error": 5.551115123125783e-17,
+      "dielectric_solve_relative_residual": 2.9339700476077574e-15,
+      "factorized_screened_row_max_error": 3.144186300207963e-18,
+      "positive_dielectric_by_construction": true
+    }
+  ],
+  "threshold": 1e-09,
+  "random_checks_each": 3,
+  "SCF_calls": 0,
+  "physical_parameters_retuned": false
+}
