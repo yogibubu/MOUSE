@@ -8,16 +8,24 @@ from ._nosi_nuclear import closed,opened,csf_element,square_root_jet,DensityEner
 from ._nosi_orbital_response import GroundResponse,ROKSResponse
 from ._nosi_slater import Hamiltonian
 from ._nosi_spin import spin_vectors,ASSIGNMENTS,matrix as spin_matrix
+from ._nosi_configurations import basis as configuration_basis,common_core_and_active
+from ._nosi_canonical import block as canonical_block
 
 class MatrixResponse:
-    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True):
+    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True,auxiliary_records=None):
         self.context=context;self.s=context.state;self.reference=reference;self.no=context.state.electron_count//2
         self.nr=context.state.coordinates_bohr.size if derivatives else 0;self.labels=list(labels)
         self.ycanonical=np.asarray(canonical_frame);self.h=np.asarray(h);self.w=np.asarray(eri);self.nbase=1+2*len(state_coefficients)
+        self.auxiliary_records=auxiliary_records
         self.scalar=Hamiltonian(self.h,self.w);self.constant_elements={};self.spin_map=np.zeros((4,4,2,2))
         for i in range(4):
             for j in range(4):
                 m=np.zeros((4,4));m[i,j]=1.;self.spin_map[i,j]=spin_matrix(0.,m)
+        if auxiliary_records is not None:
+            core,active=common_core_and_active(auxiliary_records)
+            metric,matrix,_=canonical_block(configuration_basis(self.ycanonical,auxiliary_records),self.ycanonical,self.h,self.w,core,active)
+            for i in range(len(auxiliary_records)):
+                for j in range(i+1):self.constant_elements[(self.nbase+i,self.nbase+j)]=(metric[i,j],matrix[i,j])
         if derivatives:
             self.ground=GroundResponse(context,ground_coefficients);self.states=[]
             for c,mu in zip(state_coefficients,multipliers):
@@ -45,36 +53,65 @@ class MatrixResponse:
         for c,y in zip(cs,ys):
             basis.append(closed(y,list(range(1,self.no))+[self.no]));diagonal.append(self.energy.evaluate(c,occ,direction))
         y=Jet.constant(self.ycanonical,self.nr);c=inverse(root)@u@y;core=list(range(self.no-2))
-        for label in self.labels[self.nbase:-2]:
-            occupation=np.zeros((2,len(self.s.overlap)))
-            if label.startswith('pair_'):
-                pair=ast.literal_eval(label[5:]);indices=core+list(pair);occupation[:,indices]=1
-                basis.append(closed(y,indices));diagonal.append(self.energy.evaluate(c,occupation,direction))
-            else:
-                _,paired,opens=label.split('_',2);paired=int(paired);opens=ast.literal_eval(opens);indices=core+[paired]
-                first=y[:,indices+[opens[0]]];second=y[:,indices+[opens[1]]]
-                basis.append([(2**-.5,(first,second)),(2**-.5,(second,first))]);occupation[:,indices]=1;occupation[0,opens[0]]=1;occupation[1,opens[1]]=1
-                triplet=np.zeros_like(occupation);triplet[:,indices]=1;triplet[0,list(opens)]=1
-                diagonal.append(2*self.energy.evaluate(c,occupation,direction)-self.energy.evaluate(c,triplet,direction))
-        vectors,phases=spin_vectors();sites=list(range(self.no-2,self.no+2))
-        for column in range(2):
-            csf=[]
-            for row,alpha in enumerate(ASSIGNMENTS):
-                weight=vectors[row,column]*phases[row]
-                if weight:csf.append((float(weight),(y[:,core+[sites[i] for i in alpha]],y[:,core+[sites[i] for i in range(4) if i not in alpha]])))
-            basis.append(csf)
-        balanced=self.ground.occupations.copy();balanced[:,self.no-2:self.no+2]=.5;charge=self.energy.evaluate(c,balanced,direction)
-        original=self.reference.operators
-        q=[]
-        for i in sites:
-            density=contract('i,j->ij',c[:,i],c[:,i]);pulled=u.T@(.5*(s@density+density@s))@u
-            q.append(contract('aij,ij->a',original,pulled))
-        # Four-spin SU(2) completion of the identical quadratic spin functional.
-        four=Jet.constant(np.zeros((2,2)),self.nr)
-        for i in range(4):
-            for j in range(4):
-                value=contract('i,ij,j->',q[i],self.reference.pair_spin_hartree,q[j]);four=four+value[...,None,None]*self.spin_map[i,j]
-        four=four+charge[...,None,None]*np.eye(2);diagonal.extend([four[0,0],four[1,1]])
+        four_overrides=[]
+        if self.auxiliary_records is not None:
+            basis.extend(configuration_basis(y,self.auxiliary_records))
+            pending=None;q_cache={};pair_cache={}
+            for i,record in enumerate(self.auxiliary_records):
+                occupation=np.zeros_like(self.ground.occupations);core=record['closed'];sites=record.get('open',[]);occupation[:,core]=1
+                if record['kind']=='closed':diagonal.append(self.energy.evaluate(c,occupation,direction))
+                elif record['kind']=='open':
+                    occupation[0,sites[0]]=1;occupation[1,sites[1]]=1
+                    triplet=np.zeros_like(occupation);triplet[:,core]=1;triplet[0,sites]=1
+                    diagonal.append(2*self.energy.evaluate(c,occupation,direction)-self.energy.evaluate(c,triplet,direction))
+                else:
+                    if record['component']==0:
+                        occupation[:,sites]=.5;charge=self.energy.evaluate(c,occupation,direction);q=[]
+                        for site in sites:
+                            if site not in q_cache:
+                                density=contract('i,j->ij',c[:,site],c[:,site]);pulled=u.T@(.5*(s@density+density@s))@u
+                                q_cache[site]=contract('aij,ij->a',self.reference.operators,pulled)
+                            q.append(q_cache[site])
+                        pending=Jet.constant(np.zeros((2,2)),self.nr)
+                        for j in range(4):
+                            for k in range(4):
+                                key=tuple(sorted((sites[j],sites[k])))
+                                if key not in pair_cache:pair_cache[key]=contract('i,ij,j->',q[j],self.reference.pair_spin_hartree,q[k])
+                                pending=pending+pair_cache[key][...,None,None]*self.spin_map[j,k]
+                        pending=pending+charge[...,None,None]*np.eye(2);four_overrides.append((self.nbase+i,pending))
+                    diagonal.append(pending[record['component'],record['component']])
+        else:
+            for label in self.labels[self.nbase:-2]:
+                occupation=np.zeros((2,len(self.s.overlap)))
+                if label.startswith('pair_'):
+                    pair=ast.literal_eval(label[5:]);indices=core+list(pair);occupation[:,indices]=1
+                    basis.append(closed(y,indices));diagonal.append(self.energy.evaluate(c,occupation,direction))
+                else:
+                    _,paired,opens=label.split('_',2);paired=int(paired);opens=ast.literal_eval(opens);indices=core+[paired]
+                    first=y[:,indices+[opens[0]]];second=y[:,indices+[opens[1]]]
+                    basis.append([(2**-.5,(first,second)),(2**-.5,(second,first))]);occupation[:,indices]=1;occupation[0,opens[0]]=1;occupation[1,opens[1]]=1
+                    triplet=np.zeros_like(occupation);triplet[:,indices]=1;triplet[0,list(opens)]=1
+                    diagonal.append(2*self.energy.evaluate(c,occupation,direction)-self.energy.evaluate(c,triplet,direction))
+            vectors,phases=spin_vectors();sites=list(range(self.no-2,self.no+2))
+            for column in range(2):
+                csf=[]
+                for row,alpha in enumerate(ASSIGNMENTS):
+                    weight=vectors[row,column]*phases[row]
+                    if weight:csf.append((float(weight),(y[:,core+[sites[i] for i in alpha]],y[:,core+[sites[i] for i in range(4) if i not in alpha]])))
+                basis.append(csf)
+            balanced=self.ground.occupations.copy();balanced[:,self.no-2:self.no+2]=.5;charge=self.energy.evaluate(c,balanced,direction)
+            original=self.reference.operators
+            q=[]
+            for i in sites:
+                density=contract('i,j->ij',c[:,i],c[:,i]);pulled=u.T@(.5*(s@density+density@s))@u
+                q.append(contract('aij,ij->a',original,pulled))
+            # Four-spin SU(2) completion of the identical quadratic spin functional.
+            four=Jet.constant(np.zeros((2,2)),self.nr)
+            for i in range(4):
+                for j in range(4):
+                    value=contract('i,ij,j->',q[i],self.reference.pair_spin_hartree,q[j]);four=four+value[...,None,None]*self.spin_map[i,j]
+            four=four+charge[...,None,None]*np.eye(2);diagonal.extend([four[0,0],four[1,1]])
+            four_overrides.append((len(basis)-2,four))
         size=len(basis);metric=Jet.constant(np.zeros((size,size)),self.nr);hf=Jet.constant(np.zeros((size,size)),self.nr)
         for i in range(size):
             for j in range(i+1):
@@ -93,6 +130,6 @@ class MatrixResponse:
         h=Jet.constant(np.zeros((size,size)),self.nr)
         for i in range(size):
             for j in range(size):h[i,j]=hf[i,j]+.5*metric[i,j]*(residual[i]+residual[j])
-        h[-2:,-2:]=four
+        for index,four in four_overrides:h[index:index+2,index:index+2]=four
         self.current_basis=basis
         return h,metric,diagonal[0]

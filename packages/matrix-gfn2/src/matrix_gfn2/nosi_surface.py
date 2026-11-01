@@ -22,6 +22,7 @@ from ._nosi_refine import ground as refine_ground,roks as refine_roks
 from ._nosi_surface_response import MatrixResponse
 from ._nosi_nuclear import projected_eigen_jet
 from ._nosi_spin import csfs as four_singlets
+from ._nosi_configurations import from_labels as configuration_records,validate as validate_configurations,basis as configuration_basis
 
 
 def _sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -33,9 +34,10 @@ def _open(c,no):
     return [(2**-.5,(a,b)),(2**-.5,(b,a))]
 
 
-def _basis(ground,states,auxiliary,labels,no):
+def _basis(ground,states,auxiliary,labels,no,auxiliary_records=None):
     basis=[_closed(ground,list(range(no)))]+[_open(c,no) for c in states]
     basis.extend(_closed(c,list(range(1,no))+[no]) for c in states)
+    if auxiliary_records is not None:return basis+configuration_basis(auxiliary,auxiliary_records)
     core=list(range(no-2))
     for label in labels[1+2*len(states):-2]:
         if label.startswith('pair_'):basis.append(_closed(auxiliary,core+list(ast.literal_eval(label[5:]))))
@@ -89,13 +91,15 @@ class PreparedNOSIModel:
     def __init__(self,path):
         self.path=Path(path).expanduser().resolve();self.root=self.path.parent;self.fingerprint=_sha(self.path)
         self.manifest=json.loads(self.path.read_text());m=self.manifest
-        if m.get('schema')!='mouse.nosi.selected_cid.v1' or m.get('weights')!=[.5,.5] or m.get('lambda_exchange')!=.9 or m.get('energy_offset_ev')!=0:raise ValueError('unsupported NOSI model contract')
+        if m.get('schema') not in ('mouse.nosi.selected_cid.v1','mouse.nosi.screened_even_cid.v1') or m.get('weights')!=[.5,.5] or m.get('lambda_exchange')!=.9 or m.get('energy_offset_ev')!=0:raise ValueError('unsupported NOSI model contract')
         if set(m.get('sha256',{}))!={'template.npz','response.npz','arrays.npz'}:raise ValueError('incomplete NOSI model')
         self.validate_files();self.template=_load_point(self.root/'template.npz');self.anchor=self.template.reference_state
         self.response=load_response_reference(self.root/'response.npz')
         if not isinstance(self.response,FrozenNonlocalResponseReference):raise ValueError('NOSI requires its full nonlocal reference')
         if abs(self.response.response_exchange_scale-.9)>1e-12:raise ValueError('NOSI response exchange scale differs')
         with np.load(self.root/'arrays.npz',allow_pickle=False) as z:self.arrays={k:z[k].copy() for k in z.files}
+        self.extended=m['schema']=='mouse.nosi.screened_even_cid.v1'
+        if self.extended and (m.get('active_space_size')!=5 or m.get('interaction')!='static_constrained_RPA' or m.get('augmentation')!='frozen_reflection_even'):raise ValueError('unsupported screened CID preparation')
         self.no=self.anchor.electron_count//2;self.labels=m['labels'];self.state_ids=tuple(m['state_ids']);a=self.arrays;n=len(self.anchor.overlap);ns=len(self.state_ids)
         expected={'h':(n,n),'eri':(n,n,n,n),'ground':(n,n),'states':(ns,n,n),'multipliers':(ns,),'auxiliary_frame':(n,n),'reference_ci':(len(self.labels),ns)}
         if self.no<2 or n-self.no<2:raise ValueError('NOSI frontier requires two occupied and two virtual orbitals')
@@ -104,7 +108,9 @@ class PreparedNOSIModel:
         for name,shape in expected.items():
             if a[name].shape!=shape or not np.all(np.isfinite(a[name])):raise ValueError('invalid NOSI array '+name)
             a[name].setflags(write=False)
-        if self.labels[:1+ns]!=['S0',*self.state_ids] or len(self.labels)<1+2*ns+2 or self.labels[-2:]!=['four_spin_0','four_spin_1']:raise ValueError('invalid NOSI CSF structure')
+        if self.labels[:1+ns]!=['S0',*self.state_ids] or len(self.labels)<1+2*ns+2:raise ValueError('invalid NOSI CSF structure')
+        if not self.extended and self.labels[-2:]!=['four_spin_0','four_spin_1']:raise ValueError('invalid NOSI frontier recoupling')
+        self.auxiliary_records=validate_configurations(configuration_records(self.labels[1+2*ns:],self.no),self.no,n) if self.extended else None
         for c in [a['ground'],*a['states']]:
             if not np.allclose(c.T@self.anchor.overlap@c,np.eye(n),atol=1e-8,rtol=0):raise ValueError('invalid prepared orbitals')
         if not np.allclose(a['auxiliary_frame'].T@a['auxiliary_frame'],np.eye(n),atol=1e-8,rtol=0):raise ValueError('invalid auxiliary anchor frame')
@@ -112,7 +118,7 @@ class PreparedNOSIModel:
         w=a['eri']
         if not np.allclose(w,w.transpose(2,3,0,1),atol=1e-9,rtol=0) or not np.allclose(w,w.transpose(1,0,3,2),atol=1e-9,rtol=0):raise ValueError('non-Hermitian two-body operator')
         self._anchor_sqrt=metric_power(self.anchor.overlap,.5)
-        self.anchor_basis=_basis(self._anchor_sqrt@a['ground'],[self._anchor_sqrt@c for c in a['states']],a['auxiliary_frame'],self.labels,self.no)
+        self.anchor_basis=_basis(self._anchor_sqrt@a['ground'],[self._anchor_sqrt@c for c in a['states']],a['auxiliary_frame'],self.labels,self.no,self.auxiliary_records)
         gram=_cross_metric(self.anchor_basis,self.anchor_basis)
         if not np.allclose(a['reference_ci'].T@gram@a['reference_ci'],np.eye(ns),atol=1e-7,rtol=0):raise ValueError('invalid prepared CI normalization')
 
@@ -136,13 +142,13 @@ class PreparedNOSIModel:
             mapping=metric_power(s,-.5)@u@reference_result.transport_u.T@metric_power(reference_result.overlap,.5)
             ground=mapping@reference_result.ground_coefficients;states=np.array([mapping@c for c in reference_result.state_coefficients]);multipliers=reference_result.multipliers.copy()
             old=reference_result.transport_u.T@metric_power(reference_result.overlap,.5)
-            reference_basis=_basis(old@reference_result.ground_coefficients,[old@c for c in reference_result.state_coefficients],self.arrays['auxiliary_frame'],self.labels,self.no);reference_ci=reference_result.ci_coefficients
+            reference_basis=_basis(old@reference_result.ground_coefficients,[old@c for c in reference_result.state_coefficients],self.arrays['auxiliary_frame'],self.labels,self.no,self.auxiliary_records);reference_ci=reference_result.ci_coefficients
         ground,eg,ground_residual,_=refine_ground(context,ground);residuals=[ground_residual]
         for i,c in enumerate(states):
             q=np.outer(ground[:,:self.no].T@s@c[:,0],ground[:,self.no:].T@s@c[:,self.no]);norm=np.linalg.norm(q)
             if norm<1e-8:raise ValueError('lost retained NOSI orbital character')
             c,mu,energy,residual,_=refine_roks(context,self.arrays['eri'],c,ground,q/norm,multipliers[i]);states[i]=c;multipliers[i]=mu;residuals.append(residual)
-        response=MatrixResponse(context,self.response,ground,states,multipliers,self.arrays['auxiliary_frame'],self.labels,self.arrays['h'],self.arrays['eri'],derivatives=derivatives)
+        response=MatrixResponse(context,self.response,ground,states,multipliers,self.arrays['auxiliary_frame'],self.labels,self.arrays['h'],self.arrays['eri'],derivatives=derivatives,auxiliary_records=self.auxiliary_records)
         zero=np.zeros(xyz.size if derivatives else 0);h,sjet,egjet=response.matrices(zero)
         p=np.eye(len(self.labels))[:,1:];p[0]-=sjet.v[0,1:]/sjet.v[0,0];sp=p.T@sjet.v@p
         if np.linalg.eigvalsh(sp).min()<1e-8:raise ValueError('unresolved NOSI metric linear dependence')
@@ -174,7 +180,7 @@ class PreparedNOSIModel:
         from matrix_apoc import NonOrthogonalSingletCIState
         if result.model_fingerprint!=self.fingerprint:raise ValueError('NOSI state belongs to another model')
         auxiliary=metric_power(result.overlap,-.5)@result.transport_u@self.arrays['auxiliary_frame']
-        basis=_basis(result.ground_coefficients,result.state_coefficients,auxiliary,self.labels,self.no);answer=[]
+        basis=_basis(result.ground_coefficients,result.state_coefficients,auxiliary,self.labels,self.no,self.auxiliary_records);answer=[]
         for index,state in enumerate(result.states):
             determinants=[];coefficients=[]
             for ci,csf in zip(result.ci_coefficients[:,index],basis):
