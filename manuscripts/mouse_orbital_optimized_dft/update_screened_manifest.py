@@ -8,6 +8,6 @@ manifest=dict(date='2026-11-01',revision='Final screened symmetry-augmented OO-C
 allowed={'.tex','.bib','.py','.json','.csv','.tsv','.xyz','.pdf','.png','.svg','.md','.txt','.toml'}
 for file in sorted(P.rglob('*')):
  if not file.is_file() or file==P/'MANIFEST.json' or 'tmp' in file.relative_to(P).parts or '__pycache__' in file.parts:continue
- if file.suffix in allowed or file.name=='.gitignore':manifest['sha256'][str(file.relative_to(P))]=hashlib.sha256(file.read_bytes()).hexdigest()
+ if file.suffix in allowed or file.name in ('.gitignore','.gitattributes'):manifest['sha256'][str(file.relative_to(P))]=hashlib.sha256(file.read_bytes()).hexdigest()
 (P/'MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print({key:manifest[key] for key in ['main_pages','supporting_information_pages','main_figures','figures','references','bibliography_entries']})

@@ -55,6 +55,7 @@
     "All-inclusive final-model size-scaling comparisons"
   ],
   "sha256": {
+    ".gitattributes": "9618185d97a7b73972851bc179ac276080c298f79adbc1847951e647f4254c27",
     ".gitignore": "950b8b8c4500045cfc77d319b1f24bdbb3217778710d2bd79439219f89fc7b06",
     "README.md": "cb8114ff2384b121b5d6b2f1c876b740d062d2681304fc163f0c0fec65edf2fb",
     "README_development_history.md": "bc2e40da91203f74b11b161cfe2e155c9c5785b3bfd5b4dd88f04fc99fcbe880",
@@ -302,6 +303,6 @@
     "tables/statistics.tex": "f9da56caa94969531a9f8c00ae6c25b1fd5f3d380113a41b016d359219207110",
     "tables/tbe_methods.tex": "63d2e6ab2df4d7d575421aec5c78dbb506ea3ab703f9c00d4388190b9bfe32f0",
     "tables/weight_anchor.tex": "848aa4ae1055cbb6fa3f4f6d61fcf6f6708b592b3c0ae88033f4a1e2b243c68e",
-    "update_screened_manifest.py": "b6f6d0ed03c62437b7be02c9e7a7d9910aa2a56d914323b1b87b5c6b428f9edf"
+    "update_screened_manifest.py": "de9de9707b16def8dc7ae03a0161108f60201024b9032ab2c7b1cd9cab2d4d4a"
   }
 }
