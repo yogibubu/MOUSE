@@ -21,7 +21,7 @@ class MatrixResponse:
         self.scalar_elements={} if scalar_elements is None else scalar_elements
         self.scalar_checkpoint=scalar_checkpoint
         self.scalar=Hamiltonian(self.h,self.w);self.constant_elements={};self.spin_map=np.zeros((4,4,2,2))
-        self.fixed_bra=None
+        self.fixed_bra=None;self.canonical_block=None
         for i in range(4):
             for j in range(4):
                 m=np.zeros((4,4));m[i,j]=1.;self.spin_map[i,j]=spin_matrix(0.,m)
@@ -31,8 +31,7 @@ class MatrixResponse:
                 from ._nosi_fixed_bra import FixedBraCSF
                 self.fixed_bra=FixedBraCSF(self.scalar,self.ycanonical[:,core],self.ycanonical[:,active])
             metric,matrix,_=canonical_block(configuration_basis(self.ycanonical,auxiliary_records),self.ycanonical,self.h,self.w,core,active)
-            for i in range(len(auxiliary_records)):
-                for j in range(i+1):self.constant_elements[(self.nbase+i,self.nbase+j)]=(metric[i,j],matrix[i,j])
+            self.canonical_block=(metric,matrix)
         if derivatives:
             self.ground=GroundResponse(context,ground_coefficients);self.states=[]
             for c,mu in zip(state_coefficients,multipliers):
@@ -123,10 +122,14 @@ class MatrixResponse:
             four=four+charge[...,None,None]*np.eye(2);diagonal.extend([four[0,0],four[1,1]])
             four_overrides.append((len(basis)-2,four))
         size=len(basis);metric=Jet.constant(np.zeros((size,size)),self.nr);hf=Jet.constant(np.zeros((size,size)),self.nr)
+        if self.canonical_block is not None:
+            metric.v[self.nbase:,self.nbase:]=self.canonical_block[0]
+            hf.v[self.nbase:,self.nbase:]=self.canonical_block[1]
         # Frozen auxiliary values have identically zero nuclear jets. Fill
         # their dense block directly, without allocating scalar jets per pair.
         for i in range(size):
-            for j in range(i+1):
+            stop=min(i+1,self.nbase) if self.canonical_block is not None else i+1
+            for j in range(stop):
                 if i>=self.nbase and j>=self.nbase:
                     key=(i,j)
                     if key not in self.constant_elements:

@@ -1,5 +1,6 @@
 """Remote equivalence checks for polynomial enumeration and selected-root solves."""
 from run_pigment_cid import *
+from scipy.linalg import cho_factor,cho_solve
 from matrix_gfn2._nosi_configurations import frontier_rank_two
 
 def brute(no,nf):
@@ -52,5 +53,12 @@ with threadpool_limits(8):
    if len(holes)==1 and rec['open'][0]==holes[0] and rec['open'][1]>=no:transition[len(retained)+j]=2**.5*mu_mo[:,holes[0],rec['open'][1]]
  with np.load(folder/'eigenstates.npz') as a:moment_error=float(np.max(abs(oldci.T@transition-a['transition_dipoles'][:20])))
  assert moment_error<1e-8,moment_error
- report=dict(host=socket.getfqdn(),enumeration_identical_frontiers=[2,3,4,5],canonical_transition_max_error=error,archived_pigment_transition_max_error_au=moment_error,projected_selected_root_energy_error_ev=ee,minimum_squared_old_new_overlap=ov,parameters_changed=False)
+ nbase=len(retained);indices=list(range(1+len(ys),nbase))
+ for j,rec in enumerate(records):
+  if 2*sum(k>=no for k in rec['closed'])+sum(k>=no for k in rec.get('open',[]))==2:indices.append(nbase+j)
+ gram=s[np.ix_(indices,indices)]-np.outer(s[indices,0],s[0,indices])/s[0,0];cross=(s[indices]-np.outer(s[indices,0]/s[0,0],s[0]))@oldci
+ population=np.sum(cross*cho_solve(cho_factor(gram,lower=True),cross),axis=0)
+ previous=json.loads((folder/'analysis.json').read_text());population_error=float(np.max(abs(population-np.array([r['double_subspace_weight'] for r in previous['states'][:20]]))))
+ assert population_error<1e-9,population_error
+ report=dict(host=socket.getfqdn(),enumeration_identical_frontiers=[2,3,4,5],projector_population_error=population_error,canonical_transition_max_error=error,archived_pigment_transition_max_error_au=moment_error,projected_selected_root_energy_error_ev=ee,minimum_squared_old_new_overlap=ov,parameters_changed=False)
  write(HERE/'frontier_convergence_qualification.json',report);print(json.dumps(report),flush=True)

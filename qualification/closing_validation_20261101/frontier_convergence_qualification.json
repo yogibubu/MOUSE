@@ -6,6 +6,7 @@
     4,
     5
   ],
+  "projector_population_error": 1.9984014443252818e-15,
   "canonical_transition_max_error": 0.0,
   "archived_pigment_transition_max_error_au": 7.44737604918555e-13,
   "projected_selected_root_energy_error_ev": 1.546788226163926e-12,

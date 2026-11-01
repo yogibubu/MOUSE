@@ -72,7 +72,7 @@ class FixedBra:
         tensor=self.integrals[np.ix_(index,index)].reshape((r,)*4)
         null_two=.5*float(np.sum(second*tensor))
         value=(determinant(block),vector,null_two)
-        if len(cache)>=2048:cache.pop(next(iter(cache)))
+        if len(cache)>=16384:cache.pop(next(iter(cache)))
         cache[key]=value
         return value
 
