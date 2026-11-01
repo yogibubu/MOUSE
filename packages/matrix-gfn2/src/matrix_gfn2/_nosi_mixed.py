@@ -8,6 +8,7 @@ This is an element-jet building block, not a complete nuclear-response API.
 """
 from itertools import permutations
 import numpy as np
+from ._einsum_cached import einsum as cached_einsum
 from ._mixed_jet import MixedJet as Jet,contract,stack
 
 def inverse(a):
@@ -18,8 +19,8 @@ def inverse(a):
 def regular_determinant(a):
     if not len(a.v):return Jet.constant(1.,a.n)
     inv=inverse(a);value=float(np.linalg.det(a.v))
-    first=np.einsum('ij,aji->a',inv.v,a.a);tangent=np.trace(inv.v@a.b)
-    mixed=np.einsum('ij,aji->a',inv.v,a.ab)-np.einsum('ij,ajk,kl,li->a',inv.v,a.a,inv.v,a.b)
+    first=cached_einsum('ij,aji->a',inv.v,a.a);tangent=np.trace(inv.v@a.b)
+    mixed=cached_einsum('ij,aji->a',inv.v,a.ab)-cached_einsum('ij,ajk,kl,li->a',inv.v,a.a,inv.v,a.b)
     return Jet(value,value*first,value*tangent,value*(mixed+first*tangent))
 
 def small_determinant(a):
@@ -72,28 +73,28 @@ def schur(bra,ket,threshold=.1):
 
 def bilinear(w,x,y,exchange=False):
     expression='pqrs,sp,qr->' if exchange else 'pqrs,qp,sr->'
-    def value(a,b):return np.einsum(expression,w,a,b,optimize=True)
+    def value(a,b):return cached_einsum(expression,w,a,b,optimize=True)
     # Constants carry no large derivative arrays (the AO ERI tensor is fixed).
     first_expression='pqrs,asp,qr->a' if exchange else 'pqrs,aqp,sr->a'
     second_expression='pqrs,sp,aqr->a' if exchange else 'pqrs,qp,asr->a'
-    one=lambda a,b:np.einsum(first_expression,w,a,b,optimize=True)
-    two=lambda a,b:np.einsum(second_expression,w,a,b,optimize=True)
+    one=lambda a,b:cached_einsum(first_expression,w,a,b,optimize=True)
+    two=lambda a,b:cached_einsum(second_expression,w,a,b,optimize=True)
     return Jet(value(x.v,y.v),one(x.a,y.v)+two(x.v,y.a),value(x.b,y.v)+value(x.v,y.b),
         one(x.ab,y.v)+two(x.v,y.ab)+one(x.a,y.b)+two(x.b,y.a))
 
 def trace(h,p):
-    return Jet(np.einsum('pq,qp->',h,p.v),np.einsum('pq,aqp->a',h,p.a),np.einsum('pq,qp->',h,p.b),np.einsum('pq,aqp->a',h,p.ab))
+    return Jet(cached_einsum('pq,qp->',h,p.v),cached_einsum('pq,aqp->a',h,p.a),cached_einsum('pq,qp->',h,p.b),cached_einsum('pq,aqp->a',h,p.ab))
 
 def null_pair(w,left,right,second):
     n=left.v.shape[1]
     if not n:return Jet.constant(0.,left.n)
     pairs=contract('pi,qj->ijpq',right,left)
-    def contraction(a,b):return np.einsum('pqrs,ijpq,klrs->ijkl',w,a,b,optimize=True)
+    def contraction(a,b):return cached_einsum('pqrs,ijpq,klrs->ijkl',w,a,b,optimize=True)
     val=contraction(pairs.v,pairs.v)
-    first=np.einsum('pqrs,aijpq,klrs->aijkl',w,pairs.a,pairs.v,optimize=True)+np.einsum('pqrs,ijpq,aklrs->aijkl',w,pairs.v,pairs.a,optimize=True)
+    first=cached_einsum('pqrs,aijpq,klrs->aijkl',w,pairs.a,pairs.v,optimize=True)+cached_einsum('pqrs,ijpq,aklrs->aijkl',w,pairs.v,pairs.a,optimize=True)
     tangent=contraction(pairs.b,pairs.v)+contraction(pairs.v,pairs.b)
-    mixed=np.einsum('pqrs,aijpq,klrs->aijkl',w,pairs.ab,pairs.v,optimize=True)+np.einsum('pqrs,ijpq,aklrs->aijkl',w,pairs.v,pairs.ab,optimize=True)
-    mixed+=np.einsum('pqrs,aijpq,klrs->aijkl',w,pairs.a,pairs.b,optimize=True)+np.einsum('pqrs,ijpq,aklrs->aijkl',w,pairs.b,pairs.a,optimize=True)
+    mixed=cached_einsum('pqrs,aijpq,klrs->aijkl',w,pairs.ab,pairs.v,optimize=True)+cached_einsum('pqrs,ijpq,aklrs->aijkl',w,pairs.v,pairs.ab,optimize=True)
+    mixed+=cached_einsum('pqrs,aijpq,klrs->aijkl',w,pairs.a,pairs.b,optimize=True)+cached_einsum('pqrs,ijpq,aklrs->aijkl',w,pairs.b,pairs.a,optimize=True)
     return .5*contract('ijkl,ijkl->',second,Jet(val,first,tangent,mixed))
 
 def element(bra,ket,h,w):

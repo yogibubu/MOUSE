@@ -1,6 +1,7 @@
 """Scalar Schur Slater--Condon elements; no occupied four-index transform."""
 from itertools import permutations
 import numpy as np
+from ._einsum_cached import einsum as cached_einsum
 
 def determinant(a):return float(np.linalg.det(a)) if len(a) else 1.
 def cofactors(a):
@@ -39,7 +40,7 @@ class Hamiltonian:
             one=d*np.trace(self.h@r)+np.trace(self.h@q)
             two=.5*d*self.same(r,r)+self.same(r,q)
             if l.shape[1]:
-                pairs=np.einsum('pi,qj->ijpq',v,l).reshape(l.shape[1]**2,-1)
+                pairs=cached_einsum('pi,qj->ijpq',v,l).reshape(l.shape[1]**2,-1)
                 tensor=(pairs@self.j@pairs.T).reshape(second.shape);two+=.5*float(np.sum(second*tensor))
             total+=other*(one+two)
         _,da,ra,qa,*_=p[0];_,db,rb,qb,*_=p[1]

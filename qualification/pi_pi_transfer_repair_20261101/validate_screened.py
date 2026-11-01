@@ -36,5 +36,7 @@ with threadpool_limits(2):
  if args.spin:
   spin_states=model.apoc_states(result)
   spin_report=[dict(state_id=r.state_id,spin_squared=float(state.spin_squared)) for r,state in zip(result.states,spin_states)]
- report=dict(spin=spin_report,host=socket.getfqdn(),properties=properties,wall_seconds=wall,peak_rss_native=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,prediction_errors_ev=errors,derivative_errors=derivative_errors,restart_error_hartree=restart_error,DFT_imports=0,new_SCC_calls=0,TDA_input_reads=0,read_paths=sorted(set(reads)),model_fingerprint=model.fingerprint)
+ import hashlib
+ runtime_sources={name:hashlib.sha256(Path(module.__file__).read_bytes()).hexdigest() for name,module in sys.modules.items() if name.startswith('matrix_gfn2._nosi_') or name in ['matrix_gfn2.nosi_surface','matrix_gfn2._mixed_jet','matrix_gfn2._einsum_cached']}
+ report=dict(runtime_sources=runtime_sources,spin=spin_report,host=socket.getfqdn(),properties=properties,wall_seconds=wall,peak_rss_native=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,prediction_errors_ev=errors,derivative_errors=derivative_errors,restart_error_hartree=restart_error,DFT_imports=0,new_SCC_calls=0,TDA_input_reads=0,read_paths=sorted(set(reads)),model_fingerprint=model.fingerprint)
  (destination/('hessian.json' if args.hessian else 'gradient.json' if args.gradient else 'energy.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2),flush=True)

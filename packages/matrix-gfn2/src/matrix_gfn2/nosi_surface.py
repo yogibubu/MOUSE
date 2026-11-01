@@ -49,10 +49,12 @@ def _basis(ground,states,auxiliary,labels,no,auxiliary_records=None):
     return basis+four_singlets(auxiliary,no)
 
 
-def _cross_metric(left,right):
+def _cross_metric(left,right,*,nbase=None,auxiliary_gram=None):
     result=np.zeros((len(left),len(right)))
     for i,a in enumerate(left):
         for j,b in enumerate(right):
+            if auxiliary_gram is not None and i>=nbase and j>=nbase:
+                result[i,j]=auxiliary_gram[i-nbase,j-nbase];continue
             for wa,(aa,ab) in a:
                 for wb,(ba,bb) in b:result[i,j]+=wa*wb*np.linalg.det(aa.T@ba)*np.linalg.det(ab.T@bb)
     return result
@@ -120,6 +122,7 @@ class PreparedNOSIModel:
         self._anchor_sqrt=metric_power(self.anchor.overlap,.5)
         self.anchor_basis=_basis(self._anchor_sqrt@a['ground'],[self._anchor_sqrt@c for c in a['states']],a['auxiliary_frame'],self.labels,self.no,self.auxiliary_records)
         gram=_cross_metric(self.anchor_basis,self.anchor_basis)
+        self._auxiliary_gram=gram[1+2*ns:,1+2*ns:].copy()
         if not np.allclose(a['reference_ci'].T@gram@a['reference_ci'],np.eye(ns),atol=1e-7,rtol=0):raise ValueError('invalid prepared CI normalization')
 
     def validate_files(self):
@@ -154,7 +157,7 @@ class PreparedNOSIModel:
         if np.linalg.eigvalsh(sp).min()<1e-8:raise ValueError('unresolved NOSI metric linear dependence')
         energies,z=eigh(p.T@h.v@p,sp);ci=p@z
         current_basis=[[(w,(a.v,b.v)) for w,(a,b) in csf] for csf in response.current_basis]
-        overlaps=abs(reference_ci.T@_cross_metric(reference_basis,current_basis)@ci);ii,jj=linear_sum_assignment(-overlaps)
+        overlaps=abs(reference_ci.T@_cross_metric(reference_basis,current_basis,nbase=1+2*len(self.state_ids),auxiliary_gram=self._auxiliary_gram)@ci);ii,jj=linear_sum_assignment(-overlaps)
         roots=np.empty(len(self.state_ids),dtype=int);weights=np.empty(len(roots));margins=np.empty(len(roots))
         for i,j in zip(ii,jj):
             ov=float(overlaps[i,j]);margin=ov-float(np.max(np.delete(overlaps[i],j),initial=0.))
