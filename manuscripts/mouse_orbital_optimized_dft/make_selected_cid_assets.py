@@ -14,13 +14,13 @@ r=np.array([float(x['reference_ev']) for x in rows]);o=np.array([float(x['OO_ev'
 ax.plot([1.5,9],[1.5,9],color='#94a3b8',lw=1)
 ax.scatter(r,t,c='#a1a8b2',marker='x',s=35,label='TDA: same native orbitals/kernel')
 for i,row in enumerate(rows):
- prospective=row['cohort'] in {'cid_prospective','additional_three'}
+ prospective=row['cohort'] in {'cid_prospective','additional_three','last_two'}
  ax.scatter(r[i],o[i],marker='s' if prospective else 'o',s=40,facecolor='#147d92' if prospective else '#254c7b',edgecolor='white',lw=.5,label='Selected OO-CID' if i==0 else None)
-ax.set(xlabel='Reference excitation / eV',ylabel='Calculated excitation / eV',xlim=(1.5,6.5),ylim=(1.5,max(9.2,float(t.max())+.3)))
+ax.set(xlabel='Reference excitation / eV',ylabel='Calculated excitation / eV',xlim=(1.5,max(6.5,float(r.max())+.2)),ylim=(1.5,max(9.2,float(t.max())+.3)))
 ax.legend(frameon=False,fontsize=8,loc='upper left');ax.set_title('(a) Matched native-orbital comparison',loc='left',fontweight='bold',fontsize=10)
 bx.axvspan(-.5,.5,color='#eef3f7');bx.axvline(0,c='#8998aa',lw=.8)
 for i,row in enumerate(rows):
- prospective=row['cohort'] in {'cid_prospective','additional_three'};color='#147d92' if prospective else '#254c7b'
+ prospective=row['cohort'] in {'cid_prospective','additional_three','last_two'};color='#147d92' if prospective else '#254c7b'
  bx.plot([0,o[i]-r[i]],[i,i],c=color,lw=2)
  bx.scatter(o[i]-r[i],i,c=color,marker='s' if prospective else 'o',s=32,zorder=3)
 bx.set(yticks=np.arange(len(rows)),yticklabels=[x['id']+'  '+x['molecule'].replace('_Intermediate','').replace('_',' ') for x in rows],xlabel='Selected OO-CID signed error / eV',xlim=(-max(.55,float(abs(o-r).max())+.05),max(.55,float(abs(o-r).max())+.05)));bx.invert_yaxis();bx.axhline(nd-.5,c='#64748b',ls='--',lw=.8)

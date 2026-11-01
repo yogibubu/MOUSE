@@ -1,0 +1,19 @@
+{
+ "stage":"last two molecular checks of the unchanged selected OO-CID candidate",
+ "candidate_freeze_commit":"467a9e5",
+ "public_implementation_commit":"ecb6644",
+ "previous_extension_commit":"f302198",
+ "cohort":"last_two",
+ "cases":[
+  {"id":"V010","molecule":"Furan","family":"pi_pi","legacy_state":"B022","reference_root":5,"symmetry":"A1","reason":"Small oxygen aromatic ring, complementary pi-to-pi target after three lone-pair tests."},
+  {"id":"V011","molecule":"uracil","family":"pi_pi","legacy_state":"pi_pi","reference_root":2,"symmetry":"A'","reason":"Nucleobase pi-to-pi state and a chemically larger conjugated carbonyl system."}
+ ],
+ "weights":[0.5,0.5],"lambda_exchange":0.9,"energy_offset_ev":0,
+ "model_changed":false,
+ "assignment":"Unchanged coherent overlap >=0.7 and margin>=0.05; no energy-label matching.",
+ "accuracy_gate_ev":{"mae":0.3,"max_absolute_error":0.5},
+ "comparison":"Same-reference TDA on identical native GFN2 spatial orbitals.",
+ "exposure":"Both molecules and old labels were used by earlier models. This is post-freeze validation of this candidate, not a blind benchmark.",
+ "all_selected_cases_reported":true,
+ "compute":"Verified Oracle/MAC-STUDIO only. Reuse archived native ground, Gaussian reference, embeddings and ROKS seeds; prepare missing CAM stages and preserve every completed checkpoint."
+}

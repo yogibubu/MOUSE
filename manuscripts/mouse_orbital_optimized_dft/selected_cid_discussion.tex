@@ -55,7 +55,7 @@ TDA control. This subset therefore exceeds the 0.3 eV mean-error criterion;
 its successful individual assignments and maximum-error checks must not be
 presented as passing every accuracy gate.
 
-Pooling these cases with the original fifteen gives eighteen states in
+Pooling these cases with the original fifteen gave eighteen states in
 sixteen molecules, with 0.247 eV MAE and 0.498 eV maximum error. The pooled
 mean and maximum meet the original numerical limits, but all five predictions
 made after freezing the candidate give 0.309 eV MAE, slightly exceeding the
@@ -69,11 +69,39 @@ explicit determinant-sum checks verify $S=0$ for each new state. No additional
 nuclear Hessian qualification is claimed for this energy-only extension.
 Their archived geometries match the existing Jmol structure plates.
 
+
+Two final $\pi\pi^*$ targets were registered in commit \texttt{a474e68}:
+the $^1A_1$ valence state of furan and the retained uracil target.
+The frozen model predicts 5.804 and 6.080 eV, against 6.530 and 5.381 eV,
+respectively. Their errors are $-0.726$ and $+0.699$ eV, so both fail the
+unchanged 0.5 eV individual-error gate. Coherent state-assignment overlaps
+are 0.842 and 0.994, with margins 0.450 and 0.952; numerical convergence
+and state assignment pass. Independent portable evaluation reproduces the
+same energies with no DFT import, SCC call or TDA read, and explicit
+$S^2$ checks confirm pure singlets. This establishes an energy-model
+transferability limitation rather than correcting it by numerical convergence.
+The opposite deviations are separated by 1.425 eV; no common energy offset
+could bring both inside $\pm0.5$ eV. No offset or state-specific rule is applied.
+
+The complete final set contains twenty states in eighteen molecules:
+thirteen development states and seven predictions made after freezing the
+candidate on historically exposed molecules. Its MAE is 0.293 eV and its
+maximum absolute error is 0.726 eV. The seven post-freeze states give
+0.425 eV MAE; the two final $\pi\pi^*$ states alone give 0.712 eV MAE.
+The pooled mean meets 0.3 eV but the pooled maximum and post-freeze mean
+do not meet their original limits. The matched native-orbital TDA control
+gives 0.925 eV overall MAE, 0.691 eV on the seven post-freeze states, and
+1.313 eV for these last two targets. Improvement relative to this particular
+control does not make the final candidate universally accurate. All twenty
+predictions, including these two accuracy failures, remain in the figure
+and machine-readable table. No new nuclear-derivative claim is added.
+
 \begin{figure}[tbp]\centering
 \includegraphics[width=\linewidth]{figures/selected_cid_validation.pdf}
 \caption{Final selected OO-CID predictions. The shaded error interval is
 $\pm0.5$ eV. Thirteen states informed model selection; squares identify the
-five predictions made after the final candidate freeze. All controls use
+seven predictions made after the final candidate freeze. The two last
+$\pi\pi^*$ errors lie outside the shaded interval. All controls use
 native GFN2 spatial orbitals.}\end{figure}
 
 The public class \texttt{PreparedNOSIModel} evaluates a portable, checksummed
@@ -106,7 +134,7 @@ speed advantage over TDA. The earlier 42.22 s phthalimide Hessian belongs
 to the preceding production model, not this final selected candidate.
 
 This completes the finite extension and automatic derivative integration,
-while the post-freeze mean errors remain a limitation.
+while the final $\pi\pi^*$ accuracy failures remain unresolved.
 It does not demonstrate an independent broad CT/Rydberg benchmark, final-model
 excited minima and frequencies against coupled-cluster theory, or universal
 chemical transferability. Those claims require additional evidence beyond

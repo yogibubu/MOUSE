@@ -84,3 +84,15 @@ in 16 molecules, MAE 0.246774 eV and maximum 0.497948 eV. The new three-state
 MAE is 0.381118 eV and the five post-freeze predictions give 0.309468 eV:
 these means exceed the 0.3 eV gate despite every individual error remaining
 below 0.5 eV. The original fifteen-state `results/` archive remains frozen.
+
+## Final two pi→pi* cases
+
+Registered as a474e68 and completed in 6714401: furan and uracil add the
+last two cases of the frozen model. The set is now 20 states in 18 molecules.
+The full MAE is 0.293336 eV and maximum 0.725671 eV; the seven post-freeze
+predictions give 0.424590 eV MAE. Furan (-0.725671 eV) and uracil
+(+0.699116 eV) both fail the unchanged 0.5 eV accuracy gate despite passing
+convergence, state assignment, portable restart and exact singlet checks.
+The maximum-error and post-freeze mean gates therefore fail on extension.
+All values are retained; no model/weight/offset change or control substitution
+is made. `last_two_results/README.md` and its transfer audit give full details.
