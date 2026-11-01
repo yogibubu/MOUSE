@@ -1,0 +1,59 @@
+"""A soft indefinite KKT system must retain useful non-Newton directions."""
+import numpy as np
+from scipy.optimize import brentq
+from matrix_gfn2._roks_matrix_free import residual_subspace_step
+
+def test_soft_kkt_trust_subspace_matches_full_constrained_minimum():
+ rng=np.random.default_rng(184);n=24;q=np.linalg.qr(rng.normal(size=(n,n)))[0];values=np.r_[-2.,-.3,-1e-6,np.geomspace(.002,3,n-3)];a=(q*values)@q.T;r=rng.normal(size=n);newton=np.linalg.solve(a,-r);radius=.15
+ step,report=residual_subspace_step(r,newton,lambda x:a@x,radius,directions=np.eye(n))
+ g=np.eye(n);g[-1,-1]=0.;h=a@a;rhs=-a@r
+ def candidate(shift):return np.linalg.solve(h+shift*g,rhs)
+ shift=brentq(lambda z:np.linalg.norm(candidate(z)[:-1])-radius,1e-8,1e4,xtol=1e-12);reference=candidate(shift)
+ assert np.linalg.norm(step[:-1])<=radius*(1+1e-10)
+ assert np.linalg.norm(step-reference)<1e-8
+ old,_=residual_subspace_step(r,newton,lambda x:a@x,radius)
+ assert np.linalg.norm(r+a@step)<np.linalg.norm(r+a@old)-1e-3
+ assert report['trust_subspace_rank']==n
+
+
+def test_ground_retraction_preserves_orthonormality_and_tangent():
+ from scipy.linalg import expm
+ from matrix_gfn2._roks_matrix_free import retract_ground_overlap
+ from matrix_gfn2._nosi_orthogonality import ground_overlap_jet
+ n=6;no=3;ground=np.eye(n);occ=np.zeros((2,n));occ[:,:no]=1;occ[0,0]=0;occ[0,no]=1
+ left,right=np.triu_indices(n,1);rng=np.random.default_rng(71);k=rng.normal(size=(n,n));k=.02*(k-k.T)
+ seed=expm(k);before=ground_overlap_jet(ground,seed,np.eye(n),occ,left,right)[0]
+ result=retract_ground_overlap(seed,ground,np.eye(n),occ,left,right)
+ assert abs(before)>1e-3
+ assert abs(ground_overlap_jet(ground,result,np.eye(n),occ,left,right)[0])<1e-12
+ assert np.max(abs(result.T@result-np.eye(n)))<1e-13
+ _,j=ground_overlap_jet(ground,result,np.eye(n),occ,left,right)
+ direction=rng.normal(size=len(left));direction-=j*(j@direction)/(j@j);direction/=np.linalg.norm(direction)
+ rotation=np.zeros((n,n));rotation[left,right]=direction;rotation[right,left]=-direction
+ epsilon=1e-4;trial=result@expm(epsilon*rotation);retracted=retract_ground_overlap(trial,ground,np.eye(n),occ,left,right)
+ assert np.linalg.norm(retracted-trial)<10*epsilon**2
+
+
+def test_moving_frame_kkt_connection_away_from_stationarity():
+ from scipy.linalg import expm
+ from matrix_gfn2.roks_orbital_response import orbital_residual_jacobian,roks_residual_action
+ from matrix_gfn2._nosi_orthogonality import ground_overlap_jet,prepare_ground_overlap_action
+ class Spin:
+  def response_batch(self,p):
+   difference=.3*(p[:,0]-p[:,1]);return np.stack([difference,-difference],axis=1)
+ rng=np.random.default_rng(93);n=6;no=3;k=rng.normal(size=(n,n));c=expm(.2*(k-k.T));ground=np.eye(n);occ=np.zeros((2,n));occ[:,:no]=1;occ[0,0]=0;occ[0,no]=1;triplet=np.array([np.maximum(*occ),np.minimum(*occ)])
+ left,right=np.triu_indices(n,1);keep=np.any(np.vstack([occ,triplet])[:,left]!=np.vstack([occ,triplet])[:,right],axis=0);left,right=left[keep],right[keep]
+ h=rng.normal(size=(n,n));h=.5*(h+h.T);kernel=lambda p:.2*p;spin=Spin();components=[];jac=np.zeros((len(left),len(left)));g=np.zeros(len(left))
+ for weight,o in [(2.,occ),(-1.,triplet)]:
+  p=np.array([(c*x)@c.T for x in o]);f=h[None]+kernel(p.sum(axis=0))[None]+spin.response_batch(p[None])[0];components.append((weight,o,f));jac+=weight*orbital_residual_jacobian(c,o,f,kernel,spin,left,right)
+  q=sum((c.T@ff@c)*x[None,:] for ff,x in zip(f,o));g+=2*weight*(q[left,right]-q[right,left])
+ mu=.37;_,j=ground_overlap_jet(ground,c,np.eye(n),occ,left,right);r=g-mu*j;matrix=np.zeros((n,n));matrix[left,right]=r;matrix[right,left]=-r
+ symmetric=prepare_ground_overlap_action(ground,c,np.eye(n),occ,left,right);moving=prepare_ground_overlap_action(ground,c,np.eye(n),occ,left,right,symmetric=False)
+ for unused in range(4):
+  v=rng.normal(size=len(left));rotation=np.zeros((n,n));rotation[left,right]=v;rotation[right,left]=-v
+  connection=.5*(rotation@matrix-matrix@rotation)[left,right]
+  hv=roks_residual_action(c,components,kernel,spin,left,right,v)-mu*symmetric(v)[1]
+  expected=jac@v-mu*moving(v)[1]
+  assert np.max(abs(hv-connection-expected))<1e-12
+ # Its skew connection annihilates the residual: J*r == J.T*r.
+ rotation=matrix.copy();assert np.max(abs(rotation@matrix-matrix@rotation))==0.

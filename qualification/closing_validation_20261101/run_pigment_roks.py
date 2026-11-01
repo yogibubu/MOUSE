@@ -36,22 +36,27 @@ def load(name):
  base=prepare_gfn2_deltascf(calc,s.coordinates_bohr/ANGSTROM_TO_BOHR,orbital_reference=s,spin_reference=reference,allow_large=True);context=FrozenQuadratureXC(base,model/'quadrature/manifest.json',model/'xc_charge.npy',model/'xc_spin.npy',reference)
  return model,s,reference,calc,base,context
 
-def run(name,requested_state=None):
+def run(name,requested_state=None,trust_krylov_dimension=16,maximum_step=.5,retract_constraint=True,moving_frame_jacobian=False,initial_trust_radius=None):
  model,s,reference,calc,base,context=load(name);out=HERE/'pigment_roks'/name;out.mkdir(parents=True,exist_ok=True);c=s.coefficients;no=s.electron_count//2;n=len(c);p=c[:,:no]@c[:,:no].T;fg,eg=context.fock_and_energy(np.array([p,p]));ground_residual=float(np.max(abs((c.T@fg[0]@c)[:no,no:])));assert ground_residual<1e-8
  promotions=[(no-1,no)] if name=='Beta_carotene' else [(no-1,no),(no-2,no),(no-1,no+1),(no-2,no+1)];states=[];start=time.monotonic()
  for ordinal,(hole,particle) in enumerate(promotions):
   if requested_state is not None and requested_state!=ordinal+1:continue
   folder=out/f'state_{ordinal+1}';folder.mkdir(exist_ok=True);checkpoint=folder/'checkpoint.npz';certificate=folder/'certificate.json'
   if certificate.exists():states.append(json.loads(certificate.read_text()));continue
-  order=[hole]+[i for i in range(no) if i!=hole]+[particle]+[i for i in range(no,n) if i!=particle];seed=c[:,order];mu=0.
+  order=[hole]+[i for i in range(no) if i!=hole]+[particle]+[i for i in range(no,n) if i!=particle];seed=c[:,order];mu=0.;resume_radius=None
   if checkpoint.exists():
-   with np.load(checkpoint) as z:assert str(z['model_sha256'])==hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest();seed=z['coefficients'].copy();mu=float(z['multiplier'])
+   with np.load(checkpoint) as z:assert str(z['model_sha256'])==hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest();seed=z['coefficients'].copy();mu=float(z['multiplier']);resume_radius=float(z['trust_radius']) if 'trust_radius' in z else None
+   progress=folder/'progress.json'
+   if progress.exists() and resume_radius is None:
+    row=json.loads(progress.read_text())['row'];resume_radius=row.get('trust_radius')
+    if resume_radius is None and row.get('previous_accepted_fraction',1.)<.5:resume_radius=max(1e-5,2*row['previous_accepted_fraction']*maximum_step)
+  if initial_trust_radius is not None:resume_radius=initial_trust_radius
   transition=np.zeros((len(promotions),no,n-no))
   for k,(hh,pp) in enumerate(promotions):transition[k,hh,pp-no]=1.
   history=[]
   def callback(coefficient,multiplier,row):
-   temporary=checkpoint.with_suffix('.tmp.npz');np.savez_compressed(temporary,coefficients=coefficient,multiplier=multiplier,model_sha256=hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest());temporary.replace(checkpoint);history.append(row);write(folder/'progress.json',dict(molecule=name,state=ordinal+1,hole=hole,particle=particle,row=row));print(name,ordinal+1,row,flush=True)
-  state,mu,report=solve(context,seed,c,transition,mu,tolerance=1e-10,maximum_iterations=100,checkpoint=callback,linearization_context=base,local_state_following=True,krylov='minres',exact_refinement=True,residual_trust_region=True)
+   temporary=checkpoint.with_suffix('.tmp.npz');np.savez_compressed(temporary,coefficients=coefficient,multiplier=multiplier,trust_radius=row['trust_radius'],model_sha256=hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest());temporary.replace(checkpoint);history.append(row);write(folder/'progress.json',dict(molecule=name,state=ordinal+1,hole=hole,particle=particle,row=row));print(name,ordinal+1,row,flush=True)
+  state,mu,report=solve(context,seed,c,transition,mu,tolerance=1e-10,maximum_iterations=100,checkpoint=callback,linearization_context=base,local_state_following=True,krylov='gmres' if moving_frame_jacobian else 'minres',exact_refinement=True,residual_trust_region=True,trust_krylov_dimension=trust_krylov_dimension,maximum_step=maximum_step,retract_constraint=retract_constraint,moving_frame_jacobian=moving_frame_jacobian,initial_trust_radius=resume_radius)
   result=dict(molecule=name,ordinal=ordinal+1,hole=hole,particle=particle,excitation_ev=(report['energy_hartree']-eg)*27.211386245988,ground_energy_hartree=eg,report=report,spin_squared=0.,spin_definition='coherent shared-orbital two-determinant singlet; ROKS multiplet-sum energy',DFT_imports=0,new_SCC_calls=0,TDA_solves=0,full_XC_quadrature_energy=True,RI_role='orbital KKT linearization only',model_sha256=hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest());write(certificate,result);states.append(result)
  certificates=[out/f'state_{i+1}'/'certificate.json' for i in range(len(promotions))]
  if all(path.exists() for path in certificates):
@@ -59,8 +64,8 @@ def run(name,requested_state=None):
  else:print(name,'requested ROKS target complete; other target workers pending',flush=True)
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--wait-for-model',action='store_true');p.add_argument('--state',type=int,choices=[1,2,3,4]);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--wait-for-model',action='store_true');p.add_argument('--trust-krylov-dimension',type=int,default=16);p.add_argument('--initial-trust-radius',type=float);p.add_argument('--moving-frame-jacobian',action='store_true');p.add_argument('--retract-constraint',action=argparse.BooleanOptionalAction,default=True);p.add_argument('--maximum-step',type=float,default=.5);p.add_argument('--state',type=int,choices=[1,2,3,4]);a=p.parse_args()
  while not (HERE/'pigment_models'/a.name/'manifest.json').exists():
   if not a.wait_for_model:raise RuntimeError('Prepared model incomplete')
   time.sleep(20)
- with threadpool_limits(8):run(a.name,a.state)
+ with threadpool_limits(8):run(a.name,a.state,a.trust_krylov_dimension,a.maximum_step,a.retract_constraint,a.moving_frame_jacobian,a.initial_trust_radius)

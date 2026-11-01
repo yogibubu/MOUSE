@@ -362,7 +362,7 @@
     "final_validation_discussion.tex": "9bc4f4d3f8ff0864fab846a423821549ab1b06242a2e6d8ae7833f2cc7faefd3",
     "frontier_cisd_discussion.tex": "ab1f46de62d109d2b860d76b28fc8f8073291041c288001582495917642fc85e",
     "literature_metadata.json": "63e1338fd93331f64f868c3aba11ebd7940c7555a71a9d1af9b5ef18887f559a",
-    "main.pdf": "72ee2ef21301adcbf103e74c2ee8fc507cc924588ef49292c24cf67c417d48ed",
+    "main.pdf": "b8e1434736967f754792a902221088916382850c8a9658fc7ef9680361db07d7",
     "main.tex": "0721de4b9a9a727ef138207d23b34840383407fe14874adb2778b9d599d2f5b1",
     "make_anchor_rank_assets.py": "b4c8b26d447d4e90768d64f3edca7a3ab5ab316844acc5db0acb70804fe6ed78",
     "make_carotene_ordering_assets.py": "d23ae88e2ba38049350f0f59fd03c0d103dad217a881af56335eaba6e06a09e8",
@@ -382,7 +382,7 @@
     "make_solver_figure.py": "e42f9cbb56fdbba463ce2aa4b64bbff416253dc5df9ea0ac86166e6038e80653",
     "make_spectral_block_assets.py": "66b64942c851e01361849e0551dc066c151151a61d0860b64e5f6f2adaf184fb",
     "make_structures_jmol.py": "efecf3deb63684a48970ddb621b1296b87f91dd2b4949009deb1de316496f7bc",
-    "pigment_implementation.tex": "9513b758be21f251c52f0ddc27df2a51c21b54e5e7f64a667e9a4068b39d6bd6",
+    "pigment_implementation.tex": "efc4b2df69360ae4f35c2277bceb13a0cb1f843eef9ccdbc3db11b6f40ebbf18",
     "positioning_references.json": "9cfa97c820fbac988e319f96ab7b7d003ee7b39aae88fb3905990e77876b8ff9",
     "reduced_extension_discussion.tex": "386c439be2251a492d778523356cef935974d5ed06c3cd5634977970367ec0ed",
     "reference_provenance.json": "c0b12f362c22040fe7bca7e368005fcd50f7add3d70e8b35989b45d5344e53aa",
@@ -579,5 +579,11 @@
       "energy_ev": 2.478190666652836,
       "oscillator_strength": 4.795981564768285
     }
-  ]
+  ],
+  "pigment_solver_repair_controls_20261102": {
+    "pytest_tests": 23,
+    "molecular_root_recovery_cases": 10,
+    "convergence_scope": "Small-system controls only; chlorophyllide production continuation recorded separately",
+    "host": "MAC-STUDIO"
+  }
 }

@@ -21,11 +21,36 @@ The large-system XC response is evaluated on its full frozen quadrature.
 A density-fitted approximation preconditions the Newton linear system.
 When its step fails the full-response inexact-Newton tolerance, flexible
 GMRES refines it with analytic full-quadrature Hessian actions. The
-ground-constraint factorization is cached within each linear solve. For
-large Newton steps, a two-dimensional trust subspace spans the Newton
-and squared-residual descent directions. Minimizing the predicted residual
-in this subspace limits the orbital step without changing the stationarity
-equations; the scalar ground-constraint multiplier is optimized jointly.
+ground-constraint factorization is cached within each linear solve.
+The moving-frame Jacobian is also available to GMRES by subtracting the
+analytic skew connection from the covariant action. The physical orbital
+Hessian remains the symmetric covariant response. A Newton step that
+already exceeds the trust radius need not be refined before the bounded
+subspace problem; its full-response descent direction and predicted
+reduction are still evaluated explicitly. For
+large Newton steps, a residual-minimizing trust subspace contains the
+Newton and full-response squared-residual descent directions, augmented
+by directions retained from the auxiliary Krylov solve. Twice-applied
+orthogonalization removes redundant directions. The small constrained
+least-squares problem bounds the orbital rotation while optimizing the
+scalar ground-constraint multiplier jointly. The auxiliary response
+proposes the enlarged-subspace step; its predicted reduction is then
+recomputed with the full quadrature action, and acceptance requires an
+actual decrease of the full functional residual. The trust radius adapts
+to the ratio of actual and predicted squared-residual reduction. This
+avoids excessively small steps along soft orbital modes without changing
+the energy or stationarity equations. The adapted radius is saved with
+the accepted orbital checkpoint and restored on continuation.
+For the constrained search, each trial can additionally be retracted onto
+the original zero ground-overlap manifold by short orbital rotations
+along its analytic cofactor gradient. No energy evaluation enters this
+geometric correction. At fixed trial orbitals the scalar multiplier is
+eliminated by least squares, $\mu=(\mathbf j^{\mathsf T}\mathbf g)/
+(\mathbf j^{\mathsf T}\mathbf j)$ when the constraint gradient
+$\mathbf j$ is nonzero. The full KKT residual, including the overlap,
+remains the convergence criterion. This avoids rejecting an otherwise
+useful tangent step solely because its finite rotation creates a
+second-order overlap; it does not replace ROKS by a projected energy.
 Writing $a=c,s$ for charge and spin channels, the actual energy is
 \begin{equation}
  E=E_{\mathrm{RI}}+\frac12\sum_a
