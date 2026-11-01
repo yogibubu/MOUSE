@@ -1,0 +1,10 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+Criegee_Intermediate I001 0 0.001 3.8420221983026526e-08 3.42720513635264e-07
+Criegee_Intermediate I002 0 0.001 5.359765152188056e-08 6.702997690233303e-08
+Criegee_Intermediate I001 0 0.0005 9.605937691115063e-09 1.8927132083845777e-09
+Criegee_Intermediate I002 0 0.0005 1.3416459814646897e-08 1.0186558041525018e-08
+Criegee_Intermediate I001 1 0.001 6.138136047530163e-08 3.4011736562145067e-06
+Criegee_Intermediate I002 1 0.001 3.4995601123216646e-07 1.837852488956182e-05
+Criegee_Intermediate I001 1 0.0005 1.5329309413850134e-08 9.284849357693581e-07
+Criegee_Intermediate I002 1 0.0005 8.744333297033835e-08 4.6064303136916784e-06

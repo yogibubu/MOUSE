@@ -1,0 +1,2 @@
+nitrosomethane [{'id': 'V005', 'root': 0, 'gap_ev': 1.9498281460144495, 'overlap': 0.998428123605625, 'margin': 0.9491861653136622, 'qualified': True}] [{'id': 'V005', 'root': 1, 'gap_ev': 1.9498281460144253, 'overlap': 0.9984281236056247, 'margin': 0.949186165313664, 'qualified': True}]
+maleimide [{'id': 'V006', 'root': 0, 'gap_ev': 4.211816136539144, 'overlap': 0.9949683036991962, 'margin': 0.9032644109549329, 'qualified': True}] [{'id': 'V006', 'root': 1, 'gap_ev': 4.211816136539171, 'overlap': 0.9949683036991961, 'margin': 0.9032644109549315, 'qualified': True}]

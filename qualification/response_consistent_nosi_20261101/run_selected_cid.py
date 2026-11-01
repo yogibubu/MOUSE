@@ -10,7 +10,9 @@ assert socket.getfqdn()=='oracle.sns.it'
 ROOT=Path('/home/enzo/MOUSE-response-consistent-nosi-20261101');BASE=Path('/home/enzo/MOUSE-frontier-cisd-20261101');NATIVE=Path('/home/enzo/MOUSE-native-reference-20261101')
 with threadpool_limits(2):
  p=json.loads((BASE/'protocol.json').read_text());cases=p['cases']+[['prospective_cisd',r['molecule']] for r in p['prospective_cases']]+[['post_kernel_validation',r['molecule']] for r in json.loads((ROOT/'prospective_protocol.json').read_text())['cases']]
+ cases+=[['cid_prospective',r['molecule']] for r in json.loads((ROOT/'cid_prospective_protocol.json').read_text())['cases']]
  for cohort,name in cases:
+    if (ROOT/'selected_cid'/cohort/name/'result.json').exists():continue
     source=BASE/cohort/name;report=json.loads((source/'result.json').read_text());labels=report['labels']
     with np.load(NATIVE/cohort/name/'coherent_common/ground/stationary.npz') as z:no=int(np.count_nonzero(z['result_occupations'][0]))
     keep=[]

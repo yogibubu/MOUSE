@@ -1,0 +1,6 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+glyoxal V002 0 0.001 2.900317661348739e-07 6.751078533984156e-07
+glyoxal V002 0 0.0005 7.249022579772224e-08 2.52334925621156e-07
+glyoxal V002 1 0.001 1.038168983419352e-08 3.296779269024164e-08
+glyoxal V002 1 0.0005 2.612793197076524e-09 4.341555140396913e-08

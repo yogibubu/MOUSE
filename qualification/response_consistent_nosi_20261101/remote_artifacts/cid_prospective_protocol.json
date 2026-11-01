@@ -1,0 +1,15 @@
+{
+  "stage": "selected OO-CID candidate frozen after thirteen exposed development states",
+  "candidate": "Optimized requested ROKS singlets and their pair doubles plus frontier canonical double excitations and exact four-spin singlets. No unoptimized auxiliary canonical singles. Unchanged baseline physical off-diagonal interaction and native diagonal energy, moving-ground projection.",
+  "weights": [0.5,0.5], "lambda_exchange": 0.9, "fitted_offsets_or_coefficients": false,
+  "cases": [
+    {"id":"V005","molecule":"nitrosomethane","prepared_group":"prepared_D","family":"n_pi"},
+    {"id":"V006","molecule":"maleimide","prepared_group":"prepared_F","family":"n_pi"}
+  ],
+  "selection_reason": "A low-energy nitroso excitation and a conjugated imide, adding two lone-pair environments beyond the carbonyl and aromatic-diazine development cases.",
+  "exposure": "These molecules and labels occurred in historical campaigns; predictions are prospective for this frozen candidate, not truly blind validation.",
+  "numeric_reference_excitation_energies_used_before_predictions": false,
+  "accuracy_gate_ev":{"mae":0.3,"max_absolute_error":0.5},
+  "no_molecule_specific_rules":true,
+  "checkpoints":"Reuse every existing native/DFT point; prepare missing CAM reference only and preserve all completed stages."
+}

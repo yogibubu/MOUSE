@@ -1,0 +1,25 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+nitrosomethane stationary embedded DFT verified
+nitrosomethane stationary response block 1 / 2
+nitrosomethane stationary response block 2 / 2
+nitrosomethane stationary F/Q calibration certified
+nitrosomethane coherent M06 reference and Q model retained
+nitrosomethane V005 True
+nitrosomethane [{'id': 'V005', 'root': 1, 'gap_ev': 2.0945571559194605, 'overlap': 1.0000000000000082, 'margin': 1.000000000000004, 'qualified': True}]
+nitrosomethane [{'id': 'V005', 'root': 1, 'gap_ev': 1.9994889286878796, 'overlap': 1.0000000000000084, 'margin': 1.0000000000000044, 'qualified': True}]
+nitrosomethane [{'id': 'V005', 'gap_ev': 1.9498080210076976, 'conventional_si_gap_ev': 2.1837795484416187, 'root': 1, 'overlap': 0.9984296697963505, 'margin': 0.9490491138691018, 'qualified': True}]
+nitrosomethane CID inputs and stationary states complete
+maleimide stationary embedded DFT verified
+maleimide stationary response block 1 / 5
+maleimide stationary response block 2 / 5
+maleimide stationary response block 3 / 5
+maleimide stationary response block 4 / 5
+maleimide stationary response block 5 / 5
+maleimide stationary F/Q calibration certified
+maleimide coherent M06 reference and Q model retained
+maleimide V006 True
+maleimide [{'id': 'V006', 'root': 1, 'gap_ev': 4.331329817550827, 'overlap': 0.9999999999999888, 'margin': 0.9999999999999882, 'qualified': True}]
+maleimide [{'id': 'V006', 'root': 1, 'gap_ev': 4.325894101541205, 'overlap': 0.9999999999999888, 'margin': 0.9999999999999882, 'qualified': True}]
+maleimide [{'id': 'V006', 'gap_ev': 4.211816136539168, 'conventional_si_gap_ev': 4.4782639821082695, 'root': 1, 'overlap': 0.9949683036991961, 'margin': 0.9032644109549322, 'qualified': True}]
+maleimide CID inputs and stationary states complete

@@ -1,0 +1,21 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "properties": [
+    "energy"
+  ],
+  "wall_seconds": 0.13461854204069823,
+  "peak_rss_native": 111034368,
+  "prediction_errors_ev": {
+    "I001": 4.076738946423575e-13,
+    "I002": 1.6699708282885695e-10
+  },
+  "derivative_errors": {},
+  "restart_error_hartree": 2.1316282072803006e-14,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_input_reads": 0,
+  "read_paths": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/portable_validation/independent/Criegee_Intermediate/checkpoint.npz"
+  ],
+  "model_fingerprint": "64eafb6dcd9203fa5442573fc309a2a0298c4345e0f852551631dec28cb0c9f0"
+}

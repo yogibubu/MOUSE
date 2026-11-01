@@ -1,0 +1,8 @@
+{
+  "stage": "frozen two-body-only response control on thirteen exposed states",
+  "motivation": "The diagonal native functional already contains its full F/Q one-body reference. Test changing only two-electron inter-CSF couplings, without additionally projecting a difference of one-body Focks through the singles transition vectors.",
+  "correction": "t_i^T[(A_model-A_HF)-(A_model_one-A_HF_one)]t_j, with diagonal residual restoration. Preserve the original physical one-body operator. An explicit control applies this correction only within the optimized/canonical rank-one singlet block, leaving double-configuration transition tails untouched.",
+  "lambda_exchange": 0.9, "weights": [0.5,0.5], "fitted_parameters": false,
+  "energy_reference": "unchanged stationary-ground projection",
+  "all_results_retained": true, "nuclear_derivative_claims": false
+}

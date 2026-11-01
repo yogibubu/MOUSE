@@ -1,0 +1,19 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "states": {
+    "I001": {
+      "energy_hartree": -10.462741476892418,
+      "raw_symmetry_error": 2.3800406090401793e-15,
+      "translation_error": 1.1718057080223332e-15
+    },
+    "I002": {
+      "energy_hartree": -10.391926673474902,
+      "raw_symmetry_error": 3.271308301180416e-15,
+      "translation_error": 8.382183835919932e-14
+    }
+  },
+  "wall_seconds": 44.45752754097339,
+  "peak_rss_native": 269533184,
+  "source_sha256": "62a7c06d40bfe7e9dbd5cc408846bc619fb0087b2e76f6a478328d9a8cae969f",
+  "protocol_sha256": "d7a976193f07c3fa641df634423274774b58ac5cd76d3f35ca5d68305707faf5"
+}

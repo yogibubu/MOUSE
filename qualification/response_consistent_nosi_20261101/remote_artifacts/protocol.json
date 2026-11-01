@@ -1,0 +1,17 @@
+{
+  "stage": "frozen before response-consistent SI evaluation",
+  "problem": "Bare-HF off-diagonal couplings between singly excited CSFs are inconsistent with the DFT-derived response used by their diagonal ROKS energies. Glyoxal mixes two orthogonal single excitations with a bare coupling of 2.741 eV.",
+  "correction": "For each CSF obtain its exact one-body singlet transition vector t from the stationary ground determinant. Add Delta_ij=t_i^T(A_model-A_HF)t_j and subtract one half S_ij(Delta_ii/S_ii+Delta_jj/S_jj), retaining every diagonal energy. A_model is the same prepared native-ground response used by the matched TDA control; A_HF is the exact bare physical single-excitation Hamiltonian in the identical native orbitals.",
+  "primary_ground_reference": "Stationary-ground projected SI: Q=1-|g><g|, with the independently stationary ground functional energy and its complete moving-projector response. Do not reference or fit the auxiliary SI ground correlation lowering.",
+  "controls": "retain both full SI eigenvalue minus stationary ground and conventional full-SI ground-referenced gaps",
+  "implementation_scope": "first an operator audit with explicit small TDA matrices; a successful implementation must contract response on the few CSF transition vectors without diagonalizing or constructing a full TDA matrix",
+  "weights": [0.5,0.5],
+  "lambda_exchange": 0.9,
+  "fitted_energy_offset_ev": 0,
+  "target_energies_in_model": false,
+  "development": "All eleven previous predictions and labels are exposed development; no claim of blind validation",
+  "accuracy_gate_ev": {"mae": 0.3, "max_absolute_error": 0.5},
+  "nuclear_derivative_claims": false,
+  "new_DFT_or_SCC_calls": false,
+  "no_per_molecule_rule_or_parameter": true
+}

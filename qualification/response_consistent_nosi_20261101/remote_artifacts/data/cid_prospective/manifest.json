@@ -1,0 +1,19 @@
+{
+  "states": [
+    {
+      "id": "V005",
+      "molecule": "nitrosomethane",
+      "family": "n_pi",
+      "symmetry": "A''",
+      "ordinal_same_symmetry": 1
+    },
+    {
+      "id": "V006",
+      "molecule": "maleimide",
+      "family": "n_pi",
+      "symmetry": "B_1",
+      "ordinal_same_symmetry": 1
+    }
+  ],
+  "energy_labels_included": false
+}

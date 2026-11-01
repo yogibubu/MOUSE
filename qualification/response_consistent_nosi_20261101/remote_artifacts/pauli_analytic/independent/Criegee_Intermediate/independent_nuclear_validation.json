@@ -1,0 +1,102 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "states": {
+    "I001": [
+      {
+        "direction": 0,
+        "epsilon_bohr": 0.001,
+        "gradient_error": 3.8420221983026526e-08,
+        "hessian_direction_error": 3.42720513635264e-07,
+        "independent_gradient": -0.0622548512527743,
+        "analytic_gradient": -0.06225481283255232,
+        "independent_curvature": 0.8127880199992887,
+        "analytic_curvature": 0.8127876772787751
+      },
+      {
+        "direction": 0,
+        "epsilon_bohr": 0.0005,
+        "gradient_error": 9.605937691115063e-09,
+        "hessian_direction_error": 1.8927132083845777e-09,
+        "independent_gradient": -0.06225482243849001,
+        "analytic_gradient": -0.06225481283255232,
+        "independent_curvature": 0.8127876753860619,
+        "analytic_curvature": 0.8127876772787751,
+        "richardson_gradient_error": 1.1762604779086416e-12,
+        "richardson_hessian_error": 1.1676378885994154e-07
+      },
+      {
+        "direction": 1,
+        "epsilon_bohr": 0.001,
+        "gradient_error": 6.138136047530163e-08,
+        "hessian_direction_error": 3.4011736562145067e-06,
+        "independent_gradient": 7.063452045485974e-07,
+        "analytic_gradient": 6.449638440732958e-07,
+        "independent_curvature": 0.26465551172805135,
+        "analytic_curvature": 0.26465891290170757
+      },
+      {
+        "direction": 1,
+        "epsilon_bohr": 0.0005,
+        "gradient_error": 1.5329309413850134e-08,
+        "hessian_direction_error": 9.284849357693581e-07,
+        "independent_gradient": 6.602931534871459e-07,
+        "analytic_gradient": 6.449638440732958e-07,
+        "independent_curvature": 0.2646579844167718,
+        "analytic_curvature": 0.26465891290170757,
+        "richardson_gradient_error": 2.1374273300399045e-11,
+        "richardson_hessian_error": 1.0425536228764187e-07
+      }
+    ],
+    "I002": [
+      {
+        "direction": 0,
+        "epsilon_bohr": 0.001,
+        "gradient_error": 5.359765152188056e-08,
+        "hessian_direction_error": 6.702997690233303e-08,
+        "independent_gradient": -0.026109715330235872,
+        "analytic_gradient": -0.02610966173258435,
+        "independent_curvature": 0.647035271583718,
+        "analytic_curvature": 0.6470352045537411
+      },
+      {
+        "direction": 0,
+        "epsilon_bohr": 0.0005,
+        "gradient_error": 1.3416459814646897e-08,
+        "hessian_direction_error": 1.0186558041525018e-08,
+        "independent_gradient": -0.026109675149044165,
+        "analytic_gradient": -0.02610966173258435,
+        "independent_curvature": 0.6470352147402991,
+        "analytic_curvature": 0.6470352045537411,
+        "richardson_gradient_error": 2.2729245569008683e-11,
+        "richardson_hessian_error": 8.761248282418421e-09
+      },
+      {
+        "direction": 1,
+        "epsilon_bohr": 0.001,
+        "gradient_error": 3.4995601123216646e-07,
+        "hessian_direction_error": 1.837852488956182e-05,
+        "independent_gradient": -0.03064945887221171,
+        "analytic_gradient": -0.030649108916200478,
+        "independent_curvature": 0.32565918139937367,
+        "analytic_curvature": 0.3256408028744841
+      },
+      {
+        "direction": 1,
+        "epsilon_bohr": 0.0005,
+        "gradient_error": 8.744333297033835e-08,
+        "hessian_direction_error": 4.6064303136916784e-06,
+        "independent_gradient": -0.030649196359533448,
+        "analytic_gradient": -0.030649108916200478,
+        "independent_curvature": 0.3256454093047978,
+        "analytic_curvature": 0.3256408028744841,
+        "richardson_gradient_error": 6.089311693768806e-11,
+        "richardson_hessian_error": 1.5732121716460767e-08
+      }
+    ]
+  },
+  "implementation": "analytic molecular Hessian; displaced calculations used only for independent validation",
+  "SCC_runs": 0,
+  "source_sha256": "0a74a7114bc4d36b3ed0c05e83baf6a2930ea39637c5a10e11d8fff1ab993694",
+  "response_sha256": "564c9bf2af7358c533efd1ba559a5503b5bdd32a75f0b89458ea8d7b3c599531",
+  "protocol_sha256": "d7a976193f07c3fa641df634423274774b58ac5cd76d3f35ca5d68305707faf5"
+}

@@ -1,0 +1,13 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+Criegee_Intermediate [{'id': 'I001', 'root': 0, 'gap_ev': 2.115016078683651, 'overlap': 0.9909927742563538, 'margin': 0.87274741252256, 'qualified': True}, {'id': 'I002', 'root': 1, 'gap_ev': 4.810058451024352, 'overlap': 0.91666733783941, 'margin': 0.6524342244560399, 'qualified': True}]
+Furofuran [{'id': 'C001', 'root': 0, 'gap_ev': 6.070302309565397, 'overlap': 0.9978219020670293, 'margin': 0.9484888299108183, 'qualified': True}, {'id': 'C002', 'root': 1, 'gap_ev': 7.448980417474571, 'overlap': 0.9794885004383223, 'margin': 0.8625075486046544, 'qualified': True}]
+acetaldehyde [{'id': 'N001', 'root': 0, 'gap_ev': 4.656568252923643, 'overlap': 0.9976587333395317, 'margin': 0.9330759972305587, 'qualified': True}]
+formamide [{'id': 'N002', 'root': 0, 'gap_ev': 5.8551829708434635, 'overlap': 0.9958737273200057, 'margin': 0.91615920246114, 'qualified': True}]
+pyrazine [{'id': 'N003', 'root': 0, 'gap_ev': 4.314510348382954, 'overlap': 1.0000000000000013, 'margin': 0.9999999999999889, 'qualified': True}]
+Benzoxadiazole [{'id': 'I004', 'root': 0, 'gap_ev': 4.811314947381935, 'overlap': 0.9771788468251424, 'margin': 0.8002062597804576, 'qualified': True}]
+Hexatriene [{'id': 'I005', 'root': 1, 'gap_ev': 5.462581355921245, 'overlap': 0.9830083985988374, 'margin': 0.8073640523233211, 'qualified': True}]
+acetone [{'id': 'V001', 'root': 0, 'gap_ev': 4.606749467383472, 'overlap': 0.9966956918442503, 'margin': 0.9155063265496991, 'qualified': True}]
+glyoxal [{'id': 'V002', 'root': 0, 'gap_ev': 2.6759421427873744, 'overlap': 0.9522993864152622, 'margin': 0.6471340564167262, 'qualified': True}]
+tetrazine [{'id': 'V003', 'root': 0, 'gap_ev': 2.473363678514446, 'overlap': 1.0000000000000018, 'margin': 0.9999999999999878, 'qualified': True}]
+acrolein [{'id': 'V004', 'root': 0, 'gap_ev': 4.010172708603065, 'overlap': 0.9814010107956631, 'margin': 0.8688904552098087, 'qualified': True}]

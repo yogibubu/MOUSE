@@ -1,0 +1,41 @@
+{
+  "schema": "mouse.nosi.selected_cid.v1",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "state_ids": [
+    "I001",
+    "I002"
+  ],
+  "labels": [
+    "S0",
+    "I001",
+    "I002",
+    "I001_pair_double",
+    "I002_pair_double",
+    "pair_(7, 10)",
+    "pair_(8, 10)",
+    "open_7_(9, 10)",
+    "open_8_(9, 10)",
+    "open_9_(7, 8)",
+    "open_10_(7, 8)",
+    "four_spin_0",
+    "four_spin_1"
+  ],
+  "sha256": {
+    "template.npz": "d7b7d37c0f393891ea0ddcdb142fb91525823332301383f382b6384e20cf774f",
+    "response.npz": "bdcb86293ccf5972c069684b2aea7568dfce313a49ab605fe44b148ea73daefa",
+    "arrays.npz": "d32a107e6abf646c5ea8526617b2f870ad79d861413f7cca03c24dc9629bbb62"
+  },
+  "provenance": {
+    "candidate_freeze_commit": "467a9e5",
+    "native_model_sha256": "021d955b12bfbb20883cff39e26cb7264548b7d83be5b085b11cb7dd03da66fb",
+    "selected_matrix_sha256": "56f0fbca56f51b9e5172db3edd27ba0060376b26bd4723b4f2af127901417245",
+    "runtime_DFT_backend_required": false,
+    "runtime_TDA_required": false,
+    "source_sha256": "799ae035ab22f0ac1ce563f79562d352109b57fff1a06301c2ae2df8c755c54b"
+  }
+}

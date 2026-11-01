@@ -1,0 +1,12 @@
+{
+  "stage": "frozen self-consistent Pauli-functional diagnostic after thirteen exposed off-diagonal tests",
+  "problem": "Correcting only off-diagonal matrix elements leaves their response incompatible with the unchanged ROKS diagonal functional.",
+  "functional": "Preserve native spin response S exactly; remove the Pauli-incompatible fully symmetric component from charge response C. Apply this same charge correction to the native diagonal energy functional, centered at its prepared ground feature moments. Preserve the native ground Fock, the original F/Q orbital levels and lambda. No excitation-energy shift or fitted coefficient.",
+  "off_diagonal": "Identical reconstructed Pauli-compatible interaction and normal-ordered one-body operator. Restore only the residual between the consistent native diagonal functional and this operator.",
+  "primary_reference": "Full SI excited eigenvalue minus full SI ground eigenvalue of the same matrix. Retain stationary-ground-projected energies as an explicit control.",
+  "initial_diagnostic": "Retained orbitals only, before deciding whether to launch consistent orbital reoptimization. These values are not final OO energies.",
+  "weights": [0.5,0.5], "lambda_exchange": 0.9, "fitted_offset_ev": 0,
+  "energy_labels_used_in_model": false,
+  "exposure": "All thirteen states exposed development",
+  "nuclear_derivative_claims": false
+}

@@ -1,0 +1,43 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+tetrazine stationary embedded DFT verified
+tetrazine stationary response block 1 / 3
+tetrazine stationary response block 2 / 3
+tetrazine stationary response block 3 / 3
+tetrazine stationary F/Q calibration certified
+tetrazine coherent M06 reference and Q model retained
+tetrazine V003 True
+tetrazine [{'id': 'V003', 'root': 1, 'gap_ev': 2.508576500899761, 'overlap': 1.000000000000016, 'margin': 1.000000000000014, 'qualified': True}]
+tetrazine [{'id': 'V003', 'root': 1, 'gap_ev': 2.4733636785143296, 'overlap': 1.0000000000000162, 'margin': 1.0000000000000147, 'qualified': True}]
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prospective.py", line 25, in <module>
+    spec=importlib.util.spec_from_file_location('cisd_builder',Path('/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/run.py'));builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder);builder.run(cohort,name)
+                                                                                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/run.py", line 10, in <module>
+    from fast_slater import Hamiltonian
+ModuleNotFoundError: No module named 'fast_slater'
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+tetrazine [{'id': 'V003', 'gap_ev': 2.4733636785143207, 'conventional_si_gap_ev': 2.524823345960644, 'root': 1, 'overlap': 1.000000000000003, 'margin': 0.9999999999999699, 'qualified': True}]
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prospective.py", line 27, in <module>
+    from run_pauli import run
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/run_pauli.py", line 2, in <module>
+    from run import spectrum
+ImportError: cannot import name 'spectrum' from 'run' (/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/run.py)
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+tetrazine [{'id': 'V003', 'root': 0, 'gap_ev': 2.473363678514376, 'overlap': 1.0000000000000018, 'margin': 0.9999999999999883, 'qualified': True}]
+acrolein stationary embedded DFT verified
+acrolein stationary response block 1 / 3
+acrolein stationary response block 2 / 3
+acrolein stationary response block 3 / 3
+acrolein stationary F/Q calibration certified
+acrolein coherent M06 reference and Q model retained
+acrolein V004 True
+acrolein [{'id': 'V004', 'root': 1, 'gap_ev': 4.3685844514301415, 'overlap': 1.0000000000000007, 'margin': 1.0000000000000002, 'qualified': True}]
+acrolein [{'id': 'V004', 'root': 1, 'gap_ev': 4.360543094891278, 'overlap': 1.0000000000000007, 'margin': 1.0, 'qualified': True}]
+acrolein [{'id': 'V004', 'gap_ev': 3.4688956985616115, 'conventional_si_gap_ev': 4.817812450297578, 'root': 1, 'overlap': 0.9450001600788115, 'margin': 0.7141004509434544, 'qualified': True}]
+acrolein [{'id': 'V004', 'root': 0, 'gap_ev': 2.8689824805656574, 'overlap': 0.8423043647169868, 'margin': 0.33190278929039607, 'qualified': True}]

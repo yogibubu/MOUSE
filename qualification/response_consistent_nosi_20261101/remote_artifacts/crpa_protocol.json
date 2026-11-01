@@ -1,0 +1,15 @@
+{
+  "stage": "frozen constrained-screening diagnostic after thirteen exposed Pauli tests",
+  "motivation": "Bare inter-configuration Coulomb couplings neglect polarization outside the explicitly interacting frontier/optimized-state space. A global exchange factor cannot represent molecule- and orbital-dependent screening.",
+  "interaction": "Static constrained RPA screened Coulomb W = V - V T (D + T^T V T)^-1 T^T V, using identical native GFN2 ground spatial orbitals and the unchanged F/Q one-body levels. T contains twice the symmetrized occupied-virtual transition densities weighted by the square root of the excluded-space fraction; D contains positive orbital gaps.",
+  "exclusion": "Remove internal polarization of the frontier two-occupied/two-virtual space and retained optimized hole/particle subspaces; use orbital projection weights for entangled canonical transitions.",
+  "one_body": "Normal-order the screened interaction to the identical prepared stationary native ground Fock, retaining a bare-physical-one-body control.",
+  "diagonal_functional": "unchanged native ROKS and paired-CSF energies; exact native four-spin block; same overlap residual construction",
+  "primary_reference": "stationary-ground projected state interaction; retain both full-SI reference controls",
+  "lambda_exchange": 0.9, "weights": [0.5,0.5], "fitted_offsets_or_screening_parameters": false,
+  "energy_labels_used_in_model": false,
+  "new_DFT_or_SCC_calls": false,
+  "TDA_eigenproblem": false,
+  "exposure": "all thirteen cases are development at this point",
+  "nuclear_derivative_claims": false
+}

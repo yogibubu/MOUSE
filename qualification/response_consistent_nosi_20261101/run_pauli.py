@@ -1,5 +1,5 @@
 """Pauli-compatible common off-diagonal response, frozen diagonal functional."""
-from run import spectrum
+from nosi_spectrum import spectrum
 from basis import *
 from pauli import project,normal_ordered_one_body,fock
 from matrix_gfn2.state_interaction import Hamiltonian

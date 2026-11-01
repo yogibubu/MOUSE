@@ -30,3 +30,21 @@ def fock(w,h,p):
 
 def normal_ordered_one_body(w,target,p):
     return target-fock(w,np.zeros_like(target),p)
+
+def project_preserving_spin(charge,spin):
+    """Repair charge response while retaining the physical spin kernel exactly."""
+    incompatible=fully_symmetric(charge+spin)
+    c=charge-incompatible;s=spin.copy()
+    v=c-s;d=-2*s-exchange(v);x=-(2/3)*d
+    w=v+x.transpose(0,2,1,3)-x.transpose(0,2,3,1)
+    return w,c,s,incompatible
+
+def project_atomic_spin(charge,spin,atom):
+    """Closest Pauli response with exact one-center atomic spin blocks."""
+    atom=np.asarray(atom)
+    local=(atom[:,None,None,None]==atom[None,:,None,None])&(atom[:,None,None,None]==atom[None,None,:,None])&(atom[:,None,None,None]==atom[None,None,None,:])
+    incompatible=fully_symmetric(charge+spin);protected=incompatible*local
+    c=charge-.5*(incompatible+protected);s=spin-.5*(incompatible-protected)
+    v=c-s;d=-2*s-exchange(v);x=-(2/3)*d;w=v+x.transpose(0,2,1,3)-x.transpose(0,2,3,1)
+    assert np.max(abs((s-spin)*local))<1e-12
+    return w,c,s,incompatible

@@ -1,0 +1,28 @@
+{
+  "stage": "spin-preserving Pauli projection frozen after thirteen exposed predictions",
+  "problem": "Bare-HF off-diagonal couplings between singly excited CSFs are inconsistent with the DFT-derived response used by their diagonal ROKS energies. Glyoxal mixes two orthogonal single excitations with a bare coupling of 2.741 eV.",
+  "correction": "C_prime = C - fully_symmetric(C+S), S_prime = S. Reconstruct the unique adopted general-nonlocal interaction with the existing algebra, normal-order to the unchanged ground Fock, restore native diagonal energies. The four-spin off-diagonal must match the native Heisenberg completion without overriding it.",
+  "primary_ground_reference": "Stationary-ground projected SI: Q=1-|g><g|, with the independently stationary ground functional energy and its complete moving-projector response. Do not reference or fit the auxiliary SI ground correlation lowering.",
+  "controls": "retain both full SI eigenvalue minus stationary ground and conventional full-SI ground-referenced gaps",
+  "implementation_scope": "first an operator audit with explicit small TDA matrices; a successful implementation must contract response on the few CSF transition vectors without diagonalizing or constructing a full TDA matrix",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "fitted_energy_offset_ev": 0,
+  "target_energies_in_model": false,
+  "development": "All eleven previous predictions and labels are exposed development; no claim of blind validation",
+  "accuracy_gate_ev": {
+    "mae": 0.3,
+    "max_absolute_error": 0.5
+  },
+  "nuclear_derivative_claims": false,
+  "new_DFT_or_SCC_calls": false,
+  "no_per_molecule_rule_or_parameter": true,
+  "reason": "The equal-metric nearest projection changes the spin kernel, although native ROKS diagonals and the four-spin block keep the original spin polarization. Eliminate this inconsistency by preserving the physical spin response exactly and correcting only the Pauli-incompatible charge component.",
+  "no_full_TDA_matrix": true,
+  "previous_diagnostic": "Earlier PBE0/M06 CASCI projection used raw Hamiltonian diagonals, different anchors and unoptimized states; those spectra were poor. This is a separate native-orbital CAM response/off-diagonal-only control with exact ROKS diagonal residuals.",
+  "no_new_DFT_or_SCC_calls": true,
+  "fitted_parameters": false
+}

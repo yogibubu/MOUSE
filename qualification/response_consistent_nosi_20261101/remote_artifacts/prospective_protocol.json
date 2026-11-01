@@ -1,0 +1,19 @@
+{
+  "stage": "frozen after all eleven exposed Pauli-compatible SI predictions, before two new-model predictions",
+  "candidate": "run_pauli.py with nearest Pauli-compatible native-ground charge/spin response, exact shared one-body normal ordering, unchanged native diagonal residuals and exact four-spin block, stationary-ground projection",
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "cases": [
+    {"id": "V003", "molecule": "tetrazine", "prepared_group": "prepared_C", "family": "n_pi"},
+    {"id": "V004", "molecule": "acrolein", "prepared_group": "prepared_D", "family": "n_pi"}
+  ],
+  "selection_reason": "A more electron-poor aromatic lone-pair system and a conjugated unsaturated carbonyl, testing two distinct n-to-pi environments beyond the eleven-state development set.",
+  "exposure": "Molecules and labels appeared in historical campaigns. Predictions are prospective for this frozen candidate, not truly blind validation.",
+  "new_energy_labels_read_before_predictions": false,
+  "geometry_and_PBE0_inputs": "reuse retained checkpoints and embeddings; prepare CAM reference only when absent; no restart of completed jobs",
+  "state_assignment": "same fixed overlap thresholds, no target-energy matching",
+  "accuracy_gate_ev": {"mae": 0.3, "max_absolute_error": 0.5},
+  "all_cases_reported": true,
+  "no_molecule_specific_tuning": true
+}

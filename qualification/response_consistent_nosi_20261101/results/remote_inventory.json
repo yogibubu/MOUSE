@@ -1,0 +1,210 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "computer_name": "Mac Studio di Vincenzo",
+  "large_remote_operators": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/extra_npi/acetaldehyde/operators.npz": {
+      "bytes": 1856809,
+      "sha256": "b81f3ad14e715420ad5c77a6cd9e0f8d71769304ee257b8107b740d476cbe4a9"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/extra_npi/formamide/operators.npz": {
+      "bytes": 1446446,
+      "sha256": "787c5a0abad7f4281095ba23350e597bc9a8b8396b477a881b66226b40a7b9d9"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/extra_npi/pyrazine/operators.npz": {
+      "bytes": 19575716,
+      "sha256": "bb8bc5ebe7aa97290ac64607fc6a6c8dc3ba6bc8ed20bf076b8264ee687179fb"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/independent/Benzoxadiazole/operators.npz": {
+      "bytes": 85591019,
+      "sha256": "df7399d01623602a5cdb3ae62327679d418bc069f9a54094afbd108638de70ad"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/independent/Criegee_Intermediate/operators.npz": {
+      "bytes": 1072109,
+      "sha256": "811e80223cd4f901451040e930d2f93167a39c663138f160ec5520c875e7cab7"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/independent/Hexatriene/operators.npz": {
+      "bytes": 34699257,
+      "sha256": "407bc6157148e4829214164f74e50c1d08cc3b10f6580c5c1acf4a41e8ad8954"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/independent_challenge/Furofuran/operators.npz": {
+      "bytes": 56006116,
+      "sha256": "af2b0982557d26a7b8f80b726bd3845a2b254a05e036cabbb607205ab4e47859"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/post_kernel_validation/acrolein/operators.npz": {
+      "bytes": 5062603,
+      "sha256": "a1f883b824f842a3cb8312528c01c4192a0832533b95979492bf487d0457c591"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/post_kernel_validation/tetrazine/operators.npz": {
+      "bytes": 14281846,
+      "sha256": "0682351afac592f45d0297269d03d084a671d098d1a0fe2d50e407f74846bfd1"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/prospective_cisd/acetone/operators.npz": {
+      "bytes": 6842925,
+      "sha256": "6a5672ce6808c1ddac21a79048100178c75ee834e2cec09d7b6a7b282a9e8f38"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/atomic_spin/prospective_cisd/glyoxal/operators.npz": {
+      "bytes": 3218906,
+      "sha256": "b4195c80ec87c43308e81a376d24eddae626efefb567c36e8537abb6037396ff"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/extra_npi/acetaldehyde/operators.npz": {
+      "bytes": 392196,
+      "sha256": "5b62fb7fbfa15a00fcda4cb61ee1c7c246b79b142dc30019a96b96340c89f3e0"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/extra_npi/formamide/operators.npz": {
+      "bytes": 279839,
+      "sha256": "733ebe3bbc31e9d690fa210b35837f733fd65a4b37c63b02df2073c17aa07a3b"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/extra_npi/pyrazine/operators.npz": {
+      "bytes": 3720534,
+      "sha256": "11714aaba33486dfc0d200acc83744d0f9d2fcd129996e21304bb543a00080f6"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/independent/Benzoxadiazole/operators.npz": {
+      "bytes": 16395809,
+      "sha256": "0480e502cbf3318f11a97d95137c0b0dd87cfb3fe14587f3d28ff77fd9abfecb"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/independent/Criegee_Intermediate/operators.npz": {
+      "bytes": 204949,
+      "sha256": "f3e9b9445495f579d4dae99aa60dc06d7f8dd862c994dbe3b49a58d8a029bbd0"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/independent/Hexatriene/operators.npz": {
+      "bytes": 6659778,
+      "sha256": "2998834f9e01ae5ccb2d627ba732e2c8247d94e4886244ed36c55517229263ac"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/independent_challenge/Furofuran/operators.npz": {
+      "bytes": 10535583,
+      "sha256": "9ad39d6f7f7e6833439d4f0eda33a0a058dcecce6c324fb8aaab1d7727a6e0a0"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/post_kernel_validation/acrolein/operators.npz": {
+      "bytes": 970806,
+      "sha256": "1da346d7dfbafe6e5ac9a468e1476e2fb19270667119d12586472033390135a8"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/post_kernel_validation/tetrazine/operators.npz": {
+      "bytes": 2697695,
+      "sha256": "348b35edcbcfd44602d3571fe6eccb392a26081e7af0b0685d9478ab58116da5"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/prospective_cisd/acetone/operators.npz": {
+      "bytes": 1415897,
+      "sha256": "903f520a20ed110351469406945a996db0fa0e7637ac94d5ff9a8e7b86ad9068"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/constrained_screening/prospective_cisd/glyoxal/operators.npz": {
+      "bytes": 610146,
+      "sha256": "b427ade8defab38aa943caa08755ac2b91e2c2f724be1489266fd5f3dc38f922"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/extra_npi/acetaldehyde/operators.npz": {
+      "bytes": 1856915,
+      "sha256": "ab89e9ed45a1a62f5f606097bd17e9ad87bc9050b23d13c94052a572ede8722c"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/extra_npi/formamide/operators.npz": {
+      "bytes": 1446554,
+      "sha256": "538b67eeeffe0997fae1c8d38b81c709efcef262d6c3357c8856fc64f7353e71"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/extra_npi/pyrazine/operators.npz": {
+      "bytes": 19575745,
+      "sha256": "7bdf70bc21a6c90e056c992d986fed5d23f889a5bf7eb94ea395e9db37857f3f"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/independent/Benzoxadiazole/operators.npz": {
+      "bytes": 85591148,
+      "sha256": "1d1c2749c24fcc97a2a640d9e446221e5e1397db73866664f4535ce8dd6b2fbb"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/independent/Criegee_Intermediate/operators.npz": {
+      "bytes": 1072137,
+      "sha256": "4befca0e164018550a3c43c75448241dc0446651f2732d90d72e68468c34cdd7"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/independent/Hexatriene/operators.npz": {
+      "bytes": 34699240,
+      "sha256": "8ef5efe156a35bd9357c142ba3bf6f34e08a2c5114cfa238347743911d04f088"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/independent_challenge/Furofuran/operators.npz": {
+      "bytes": 56006129,
+      "sha256": "ef2e3f010d6f17e64bb72c75a8ce797108a3ac6b53155fc64ce6206564bf987c"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/post_kernel_validation/acrolein/operators.npz": {
+      "bytes": 5062632,
+      "sha256": "90238604b3265d1cdeb3d4dd34c4256f758a99b2b11369b23cb4cb72b9a54fcd"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/post_kernel_validation/tetrazine/operators.npz": {
+      "bytes": 14281931,
+      "sha256": "c51c99f1ac769173d4cc0221414d26b179315afd6f512d4695318077937f844e"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/prospective_cisd/acetone/operators.npz": {
+      "bytes": 6842996,
+      "sha256": "e593ed697e3b68196c174ea49b823153978b1b1bdb40b0e8174cfffbf61057b3"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/pauli_common/prospective_cisd/glyoxal/operators.npz": {
+      "bytes": 3218934,
+      "sha256": "f2c81b01cc8f081c4e1c8457e8dde2738b1bf2eb3fc8cc5fc82cbf59cdd5cd0d"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/extra_npi/acetaldehyde/operators.npz": {
+      "bytes": 1851151,
+      "sha256": "adde5ac73bf0a464c200b78b84a9e66fc92de68828deaab01c7c2bd17307d466"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/extra_npi/formamide/operators.npz": {
+      "bytes": 1442635,
+      "sha256": "69f9c05cf18e1ae52a9e60dc4b9a56debdc010c1736f06205dd005998edceca6"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/extra_npi/pyrazine/operators.npz": {
+      "bytes": 19516924,
+      "sha256": "b26356c17c87b5cb4ef1b0c65689d079a611049782397887ab95596f080f9e0b"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/independent/Benzoxadiazole/operators.npz": {
+      "bytes": 85322157,
+      "sha256": "3c1bf07cbbbcd0f3cea0d557c05af3b20b1bf46d1a31ba4942df94d86f074e35"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/independent/Criegee_Intermediate/operators.npz": {
+      "bytes": 1069414,
+      "sha256": "e8b255fc18097e122d64950d91e6529144ad08098595ca3e679e2a7fe019f5d5"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/independent/Hexatriene/operators.npz": {
+      "bytes": 34588292,
+      "sha256": "0fd9249cf742f115d68cb56ac6c94c2e3fb5cf04bb4b261fb0827544105f36df"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/independent_challenge/Furofuran/operators.npz": {
+      "bytes": 55828010,
+      "sha256": "c959025706b593ea56ca9292d8e89cb30ca9c7560f43ce687e5402dd5fde27a2"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/post_kernel_validation/acrolein/operators.npz": {
+      "bytes": 5050927,
+      "sha256": "c2450deba33607e94f3772705f2a7e82f056af942b4582c2427f7413a9340548"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/post_kernel_validation/tetrazine/operators.npz": {
+      "bytes": 14243403,
+      "sha256": "14f3963a81c291315fd1bdd77a50e854c8ead4b7c13f9dd2d9749885516ba465"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/prospective_cisd/acetone/operators.npz": {
+      "bytes": 6823886,
+      "sha256": "6800450df0b94e5590e178e51f74b2bb7dfd5f7119c5de7761a7fe5c2a7fae4e"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/spin_preserving/prospective_cisd/glyoxal/operators.npz": {
+      "bytes": 3212068,
+      "sha256": "cf91576df3fea2c47b854daa7a5f453ed1b14ec2c8677769eae9154217b8a8c6"
+    }
+  },
+  "public_source_hashes": {
+    "matrix-apoc/src/matrix_apoc/__init__.py": "7e53203836d45638cfb212b7fbed6fcd4415a1814848ceb8422ea80ccb1e13ce",
+    "matrix-apoc/src/matrix_apoc/nonorthogonal_ci.py": "78e94cb6664981774326b3877a230db497e02d8ccafeb65c7823e8a281e6b27b",
+    "matrix-chem/src/matrix_chem/__init__.py": "c200832d84962c5f4c4230e870afc9ffc778c56c5b7892597cc383aeac77bcb5",
+    "matrix-core/src/matrix_core/__init__.py": "2cfeabef9fb356cfee189e9315a164ae07e5a3847203d692912fd25abd3bc01a",
+    "matrix-gfn2/src/matrix_gfn2/__init__.py": "181da5bfcd4dddb5f2e434c25e019a3d275eb9babc93da9da017c577b88d8658",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_determinant.py": "cba68b479bcf88d5d8c1f3652b7127e8f6dd6d434d4a9985afc5f1a1a968fc61",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_eigen.py": "15ba844857ee8005f126d97b7b2dffdf53b0fbf9949036bb417d951b506d65b6",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_mixed.py": "dae5aec38af8d598fdb0b96739810f4a7aa8e482454e4b0778e0ca0434342816",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_mixed_fock.py": "75eebcc186d31df8bed4a1fe08ad97dffb2cd63e1583f3ed4999ddaf7ff4a205",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_nuclear.py": "bcb6d3de99074513f915b1d55a0b245c28e6681408984617543704c92b375061",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_orbital_response.py": "54086f5d093721063fef6fa95ae0a83cbec1c9cc5f2c5bdbf96fa115ee6a441b",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_orthogonality.py": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_refine.py": "2904f163ba115ae60b70ace8282bcc8d4b8a9264be6ecb7020e5c0f8d070b60f",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_slater.py": "f4442a58b23dd7b404444e4e2c70a7c0ac25719cf97c2fab9364b1ca1abc92d4",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_spin.py": "2efd5e457bc115a3d3451ac6f4ae30a9e569dfb2b107e4261b35c7a9422392d2",
+    "matrix-gfn2/src/matrix_gfn2/_nosi_surface_response.py": "f644357cbb775122d43976dc48a66c9a3fdb3fb18affd674f13fb7d38820352b",
+    "matrix-gfn2/src/matrix_gfn2/nosi_surface.py": "e763f5b7a6b1c29d296700cc1a5146e6097405a854ecd95a6c54fd58602360c4",
+    "matrix-link/src/matrix_link/__init__.py": "90aea1fe1ff8ce72460d7779b20e05c0da736255f1e42a32e63907ea45ba8a98",
+    "matrix-link/src/matrix_link/composite_roks_component.py": "11ec70fee95e228a54cdbe37188f8539e32e1b253ccf858b5332108d426b03ad",
+    "matrix-link/src/matrix_link/nosi_component.py": "195acf9863ebf175abf4e3c6ecabcfbed686bed23157b275d48685cdcf90b81a",
+    "matrix-link/src/matrix_link/optimizer.py": "7eadf304fa93cd41fe86f1603adb03a1fb048b45945ed84488e1eca771ccbc97",
+    "matrix-link/src/matrix_link/qmqm_component.py": "024a55cd6cb0e6f6d9c837e9031d0e143b083481eb3d7460e79404df4283a683",
+    "matrix-link/src/matrix_link/scan.py": "d369c5f99735e6da462123ce8688e7b62fe03146db6de30a8aadbd9e2faafb79",
+    "matrix-numerics/src/matrix_numerics/__init__.py": "15df916e1c1be6abb5bd58268a32bcd2c669c8e897e85ab0b439cbd993eaec45",
+    "matrix-qm/src/matrix_qm/__init__.py": "b8383a6c7565b7bfd9b2bbee290be0c476a550d1aff6ff419595fd721fa38aa6",
+    "matrix-qm/src/oracle_qm/__init__.py": "a464d69874f96c5e6cd1038c96b7fa0c8b6413818de940e217442c6048221f3d"
+  }
+}
