@@ -1,0 +1,22 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "method": "analytic projected-NOSI including complete mixed orbital KKT and generalized-eigenvector response",
+  "states": {
+    "C001": {
+      "energy_hartree": -20.88341165069966,
+      "raw_symmetry_error": 7.93809462606987e-15,
+      "translation_error": 1.4524353941780532e-12
+    },
+    "C002": {
+      "energy_hartree": -20.88122555162892,
+      "raw_symmetry_error": 1.3322676295501878e-14,
+      "translation_error": 1.4857559627046157e-12
+    }
+  },
+  "wall_seconds": 121.25602054101182,
+  "peak_rss_kib": 2033483776,
+  "source_sha256": "239c3684ab3fd0ad0665926fc7970275da0290269e369e890bffe0e709c0441a",
+  "implementation_sha256": "8299cd85bbfa834b653711ca861b4b21614d53b3d201416de64cf961acd57546",
+  "protocol_sha256": "49c0bae237d52e85ec9ea7a153e1ad6b4723bf532c74706bf42e14206d919796",
+  "independent_energy_derivative_validation": "pending; this certificate records internal consistency only"
+}

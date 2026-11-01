@@ -1,0 +1,9 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+Criegee_Intermediate [{'id': 'I001', 'gap_ev': 2.2800507517092, 'conventional_si_gap_ev': 3.977213604368255, 'root': 1, 'overlap': 0.9963898408380721, 'margin': 0.9275805766867248, 'qualified': True}, {'id': 'I002', 'gap_ev': 3.550802972485165, 'conventional_si_gap_ev': 5.24796582514422, 'root': 2, 'overlap': 0.9971376354182757, 'margin': 0.951418977631903, 'qualified': True}]
+Furofuran [{'id': 'C001', 'gap_ev': 4.956883693509328, 'conventional_si_gap_ev': 5.945624312336309, 'root': 1, 'overlap': 0.8269740621066889, 'margin': 0.3010938893077334, 'qualified': True}, {'id': 'C002', 'gap_ev': 5.764051982039778, 'conventional_si_gap_ev': 6.75279260086676, 'root': 2, 'overlap': 0.9511567994503024, 'margin': 0.755563252420117, 'qualified': True}]
+acetaldehyde [{'id': 'N001', 'gap_ev': 4.710223709765769, 'conventional_si_gap_ev': 4.978994006146957, 'root': 1, 'overlap': 0.9996647740660856, 'margin': 0.9819506528461458, 'qualified': True}]
+formamide [{'id': 'N002', 'gap_ev': 5.891676254397416, 'conventional_si_gap_ev': 6.532890598995144, 'root': 1, 'overlap': 0.9989037366713999, 'margin': 0.9685279748600388, 'qualified': True}]
+pyrazine [{'id': 'N003', 'gap_ev': 3.724191490527207, 'conventional_si_gap_ev': 4.504456874077024, 'root': 1, 'overlap': 0.9795763751767587, 'margin': 0.7785039374943039, 'qualified': True}]
+Benzoxadiazole [{'id': 'I004', 'gap_ev': 4.523142144083557, 'conventional_si_gap_ev': 5.824198310969808, 'root': 2, 'overlap': 0.9837009683023199, 'margin': 0.8347749497170648, 'qualified': True}]
+Hexatriene [{'id': 'I005', 'gap_ev': 4.792653570755337, 'conventional_si_gap_ev': 7.366665213341104, 'root': 2, 'overlap': 0.9542200002935491, 'margin': 0.7034355892391934, 'qualified': True}]

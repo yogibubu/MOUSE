@@ -1,0 +1,32 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+acetone stationary embedded DFT verified
+acetone stationary response block 1 / 3
+acetone stationary response block 2 / 3
+acetone stationary response block 3 / 3
+acetone stationary F/Q calibration certified
+acetone coherent M06 reference and Q model retained
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/prospective.py", line 21, in <module>
+    engine.prepare_native(cohort,name);hp.DEST=NATIVE;nc.DEST=NATIVE;nc.HERE=NATIVE/'nosi_coherent';npj.HERE=nc.HERE
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/run.py", line 17, in prepare_native
+    for filename in ['F/model.npz','native_response.npz','embedded_ground.npz']:link(source/filename,out/filename)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/run.py", line 11, in link
+    assert source.exists(),source;target.parent.mkdir(parents=True,exist_ok=True)
+           ^^^^^^^^^^^^^^^
+AssertionError: /Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/acetone/native_response.npz
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+acetone V001 True
+acetone [{'id': 'V001', 'root': 1, 'gap_ev': 4.70007312047217, 'overlap': 1.000000000000009, 'margin': 0.9999999999999963, 'qualified': True}]
+acetone [{'id': 'V001', 'root': 1, 'gap_ev': 4.691108202242205, 'overlap': 1.0000000000000089, 'margin': 0.9999999999999968, 'qualified': True}]
+glyoxal stationary embedded DFT verified
+glyoxal stationary response block 1 / 2
+glyoxal stationary response block 2 / 2
+glyoxal stationary F/Q calibration certified
+glyoxal coherent M06 reference and Q model retained
+glyoxal V002 True
+glyoxal [{'id': 'V002', 'root': 1, 'gap_ev': 3.3894059169128, 'overlap': 0.9999999999999967, 'margin': 0.9999999999999967, 'qualified': True}]
+glyoxal [{'id': 'V002', 'root': 1, 'gap_ev': 3.3749480428797973, 'overlap': 0.9999999999999967, 'margin': 0.9999999999999967, 'qualified': True}]

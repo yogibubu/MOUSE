@@ -1,0 +1,45 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "labels": [
+    "S0",
+    "N003",
+    "N003_pair_double"
+  ],
+  "predictions": [
+    {
+      "id": "N003",
+      "root": 1,
+      "gap_ev": 4.870634214693194,
+      "overlap": 0.9999999999999993,
+      "margin": 0.9999999999999988,
+      "qualified": true
+    }
+  ],
+  "ground_character": 0.9990002126083078,
+  "metric_eigenvalues": [
+    0.9999999999999967,
+    0.9999999999999983,
+    0.9999999999999994
+  ],
+  "all_gaps_ev": [
+    0.0,
+    4.870634214693194,
+    10.388688007674864
+  ],
+  "uncoupled_diagonal_ev": [
+    0.0,
+    4.849871640391659,
+    10.347162859071803
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "energy_labels_used": false,
+  "driver_sha256": "61c4fa7b898519d5fdf9bb4c161e8f3d8353496f4ef6bb5dd1a7561e69ac1807",
+  "slater_condon_sha256": "13a380f4b39e61c83bf037405731703f5140a6f35d90c71cf526663b4ec1e6c6",
+  "protocol_sha256": "b6f2d3f4662c89dea6416527c310a311793f5301240bf32ab31a4cd87680ce15",
+  "scope": "new CSF-level overlap-weighted residual functional; unoptimized pair-double configurations; no nuclear derivative claim"
+}

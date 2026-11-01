@@ -1,0 +1,637 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 17:06:14) [Clang 19.1.7 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.18.0",
+  "pyscf": "2.14.0",
+  "sources": [
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/validate_nuclear.py",
+      "bytes": 7758,
+      "sha256": "2af042fa173188291cab5d7df886569d0c896ec214dfe1143e8c50051fcde5b4"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/run.py",
+      "bytes": 7510,
+      "sha256": "e08de0012746bd5489b4aaeb7f6c558041cd1f448cbbf45abb9602acca15294d"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/prepare_inputs.py",
+      "bytes": 2447,
+      "sha256": "dd80d541d610932532c8666e8f58134e639da8a9b89493ec56cfe170d6226308"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/spin_four.py",
+      "bytes": 1802,
+      "sha256": "2efd5e457bc115a3d3451ac6f4ae30a9e569dfb2b107e4261b35c7a9422392d2"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/test_core.py",
+      "bytes": 1793,
+      "sha256": "552d3d2fb2579a7d8cf3d66270fc95e5ce4b239e412c10e4b84db36f79e54ef9"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/frontend.py",
+      "bytes": 4568,
+      "sha256": "707b6d3aa6fbe70e9b37b9462ab1ec6fa5f7045e5d0ebfea06b72cd9330f0bfa"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/prospective.py",
+      "bytes": 1615,
+      "sha256": "1eba150a7cab66355794821acad3449751bf734db1e587b8bb54ee3a0a1235e0"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/fast_slater.py",
+      "bytes": 2676,
+      "sha256": "f4442a58b23dd7b404444e4e2c70a7c0ac25719cf97c2fab9364b1ca1abc92d4"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/parallel_hessian.py",
+      "bytes": 2675,
+      "sha256": "f8a73e3177d0c847fd78d626f764cb6450ea24faf9a3aa60b7b7aaf583bc3135"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/archive_identity.py",
+      "bytes": 1629,
+      "sha256": "700ce0bc311aef6d43c93567f6e9c9a2bff04d7390df4edfb602605d671bedf6"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/nuclear.py",
+      "bytes": 8701,
+      "sha256": "e3d1a249d3508a441dbf86def05724aba141e7061bbd425bd1b4a33fac27792c"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/tda_control.py",
+      "bytes": 2332,
+      "sha256": "9a092d5b2c1e8fa3df416d7f10bbea3cf0c31d77f340423d1c2bca0e2448c6c1"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/projected.py",
+      "bytes": 1802,
+      "sha256": "51dd3c7132c0a31514d83f5434693bcd562eeeb0cd72d2c81c86093d69e3e266"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/validate_nuclear.py",
+      "bytes": 5870,
+      "sha256": "2d24a3e47943cdd50f9f729e901a73fda8937877bf0413e314b337a014a555e5"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/validate_orbital_mixed.py",
+      "bytes": 5500,
+      "sha256": "381b5db2cf657e5d05c6426d6b8f7c86ada961ec618cee092d689d335bfe5042"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/score_cached_nuclear.py",
+      "bytes": 2078,
+      "sha256": "29eedee0fbb6a554345e9ed0ad40eeb0c8c42c4acdb8e191dbab68a4205ea4ee"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/eigen_response.py",
+      "bytes": 2573,
+      "sha256": "15ba844857ee8005f126d97b7b2dffdf53b0fbf9949036bb417d951b506d65b6"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/nuclear_assembly.py",
+      "bytes": 10881,
+      "sha256": "8299cd85bbfa834b653711ca861b4b21614d53b3d201416de64cf961acd57546"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/mixed_fock.py",
+      "bytes": 3083,
+      "sha256": "718c0995569dc24ea03aee116d818503b2b9f50c1f9c4c4127c72dee238d4aa9"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/refine.py",
+      "bytes": 2584,
+      "sha256": "363a4a876ee1dd5b0315203aee32031374df6b50ef7472ed8a70405a8052b09d"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/validate_mixed_fock.py",
+      "bytes": 2779,
+      "sha256": "e9df5092ab9391dcf2d5d03294a928ae47b0f9778cb3877091c41e829bd03bd9"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/elements_mixed.py",
+      "bytes": 5687,
+      "sha256": "eb06f863e0f44c5dda39a9140b6ab62e4d8fb4737a8178d1507f06d242f21e66"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/test_determinant_mixed.py",
+      "bytes": 1347,
+      "sha256": "a2361f240afd36444caa8955dfdea2312ff7edbef6ebb7e639ff60362f922eb1"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/orbital_mixed.py",
+      "bytes": 7517,
+      "sha256": "eb9682885bd03da0ea8803fc8dac253ecdfcc18a19eed1338c2bc82c4e99ca8d"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/diagnostic.py",
+      "bytes": 4965,
+      "sha256": "a615f2dd32a9a19694f42fc46b66cd9cb884904a96542bd0903fddd3eca61e02"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/original.py",
+      "bytes": 5383,
+      "sha256": "d5dce1b1e4bc1fb597c38d1fb8901d8bc0c7402a925b48d4b0506730505f7662"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/test_elements_mixed.py",
+      "bytes": 1891,
+      "sha256": "75ae2214e37c2b6e0a00b6587d84dd27449b535dc5cc1fcd9fbd0af6c3f0ca04"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/run_nuclear.py",
+      "bytes": 1193,
+      "sha256": "239c3684ab3fd0ad0665926fc7970275da0290269e369e890bffe0e709c0441a"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/test_slater_condon.py",
+      "bytes": 1593,
+      "sha256": "5253168ab47df304c0a599f74f39988390701a909563429ca092e2bf72975e90"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/test_eigen_response.py",
+      "bytes": 2024,
+      "sha256": "b601b4eb512443f5c7d61c80ee61a6697f101f4e1083c2d5995b10a5a6a96109"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/frontier.py",
+      "bytes": 4569,
+      "sha256": "be45b254c33e5aa0cb922179e411d0de48dc52fcd5000962e28d5e12f80543fe"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/slater_condon.py",
+      "bytes": 1623,
+      "sha256": "13a380f4b39e61c83bf037405731703f5140a6f35d90c71cf526663b4ec1e6c6"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/determinant_mixed.py",
+      "bytes": 1668,
+      "sha256": "a865b61ecc2c57471746868d3df9b98e9e157730fb9582b4f319548ffbf1922d"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/heldout_predict.py",
+      "bytes": 5581,
+      "sha256": "6d6d420a2b58371421d7846f4870b8c3494bbcf86ef5f277b9c20189eb3e2c47"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/run.py",
+      "bytes": 1220,
+      "sha256": "8e4d40aa768b154e7af8c4501b6bb9c2ad927faaa73933ff2fa54726fdfb77cd"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/anchor.py",
+      "bytes": 8810,
+      "sha256": "7017584d34fe3aa371efc48a0018e57248c82a1692fd1f5214824bfcda5b96f4"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/nosi_projected.py",
+      "bytes": 1929,
+      "sha256": "de15483e3d1957c57eaa85689dd6a8745b680fa8ee706a59c15c0e1d4017005c"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/predict.py",
+      "bytes": 8833,
+      "sha256": "3d892c3a40079b23e69e963aa77ec27ce3a9e0533e397ed57f80b688ed3199a9"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/native_batch.py",
+      "bytes": 3402,
+      "sha256": "7f3ef82aaa401fdcc8d5e1f30dee2cd768b050186d24b2272abd309bc40fa927"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/nosi_coherent.py",
+      "bytes": 5243,
+      "sha256": "61c4fa7b898519d5fdf9bb4c161e8f3d8353496f4ef6bb5dd1a7561e69ac1807"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/calibrate.py",
+      "bytes": 7416,
+      "sha256": "98a820f161bdd43ce54ad0ee2ab60c37964769cdd7b892d8806b2e423eba2ed5"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/full_reference.py",
+      "bytes": 4388,
+      "sha256": "30e9b7235f8247ecae350648aa6e0c21eec0bd7bf3123b233397f4a94b6b358b"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Criegee_Intermediate/coherent_common/model.npz",
+      "bytes": 136955,
+      "sha256": "021d955b12bfbb20883cff39e26cb7264548b7d83be5b085b11cb7dd03da66fb"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Criegee_Intermediate/coherent_common/ground/stationary.npz",
+      "bytes": 16684,
+      "sha256": "19664feef2cb8e05684974028070251c4f3c293bc75796d47d5595f3b6ca9419"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Criegee_Intermediate/coherent_common/reference_certificate.json",
+      "bytes": 2627,
+      "sha256": "fdc6c1d9649779691287ea926d673879b6a7f91f0507730eb1149d0df3a9d1fa"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Criegee_Intermediate/coherent_states/I002/final/final.npz",
+      "bytes": 1802,
+      "sha256": "b00fa8715d9ffec416acf818a8a96f8c128a26ed2225f7ea036d24977a799fc4"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Criegee_Intermediate/coherent_states/I001/final/final.npz",
+      "bytes": 1798,
+      "sha256": "1a420e70533895a38d5fae1e792fffc14c8d1f05fa0032807c1537338015dc58"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Criegee_Intermediate/CAM_full_reference/reference.npz",
+      "bytes": 128215,
+      "sha256": "7cea8a886721e553071b1f78a8afd9e96b21a003e61d3f5af51f3ec6f64e1048"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Criegee_Intermediate/F/model.npz",
+      "bytes": 136953,
+      "sha256": "f05d8a325f17c1842ee5ebca2a5e3574927194249d170ba985fcca24c8226581"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Criegee_Intermediate/native_response.npz",
+      "bytes": 68967,
+      "sha256": "50061afc29a2d438bc7e025f17ee912ebec568d4981b95a6967a7bb8a068119d"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Criegee_Intermediate/embedded_ground.npz",
+      "bytes": 6349,
+      "sha256": "5f5352d8828177b2a83f5391677fd2d6e314b46b2a707c655af491ea7955dccf"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Criegee_Intermediate/range_eri.npz",
+      "bytes": 195626,
+      "sha256": "18f12f2c7349fe8f43bc954f8d6c49f119344ba6ae56d158913f69e1aada24ac"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent_challenge/Furofuran/coherent_common/model.npz",
+      "bytes": 6774982,
+      "sha256": "97f373358d66ccadeba7fa0d0ce68cf8a79ecbf9e5d1ad8783768d47dc8355f0"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent_challenge/Furofuran/coherent_common/ground/stationary.npz",
+      "bytes": 50276,
+      "sha256": "4fbd4077cc0cb06fc9c6a480250ea3e7d7bd6df3f954e208666a5ac680118628"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent_challenge/Furofuran/coherent_common/reference_certificate.json",
+      "bytes": 5728,
+      "sha256": "52068789f8d6cb225ae40cf0c90e3e982333ae448973af0d46d311db740f56ae"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent_challenge/Furofuran/coherent_states/C002/final/final.npz",
+      "bytes": 8557,
+      "sha256": "599500a0f8d8059f66f092cfc72cfe500337c64e15ff22b9a6bfba5029765d3b"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent_challenge/Furofuran/coherent_states/C001/final/final.npz",
+      "bytes": 8818,
+      "sha256": "f15d0e03a6cdb4523498af26b4dfde93583b746621376011d782939f64b37b42"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent_challenge/Furofuran/CAM_full_reference/reference.npz",
+      "bytes": 861941,
+      "sha256": "3cbe0249c5f29615acf7d596bffc12efe989cb53fcd52715183edb1f6dc7412f"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent_challenge/Furofuran/F/model.npz",
+      "bytes": 6775139,
+      "sha256": "b2517514db7c7f41143b33da5bc52e2727b94ae9db318948dc1d449726a3f000"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent_challenge/Furofuran/native_response.npz",
+      "bytes": 3416842,
+      "sha256": "75e40263c7603facefc3fa2a20ebc6b98316afe7934d6397df17e0771c39a2d8"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent_challenge/Furofuran/embedded_ground.npz",
+      "bytes": 29798,
+      "sha256": "259fea99aa1275237d5ee8896bd104d8a9d6449cd9f49395a202730d21718da0"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent_challenge/Furofuran/range_eri.npz",
+      "bytes": 9753654,
+      "sha256": "e99669b1a0289208f179a678433073921d03fad36e0541564ceea8d74525a6ec"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/acetaldehyde/coherent_common/model.npz",
+      "bytes": 221184,
+      "sha256": "aa3e90381a366c0771193444c18183e91ebb2e3bc32d54023b95f115b6b58034"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/acetaldehyde/coherent_common/ground/stationary.npz",
+      "bytes": 18789,
+      "sha256": "522be97af9077d54307a9002857d673caf3a34e9304d39935f2d872c44fef91b"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/acetaldehyde/coherent_common/reference_certificate.json",
+      "bytes": 2905,
+      "sha256": "8b34594b08baaf46639175dec5743dbeddf2f61dac65e0db923f8a49cf48bbaf"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/acetaldehyde/coherent_states/N001/final/final.npz",
+      "bytes": 2208,
+      "sha256": "20892d59196c3ae01002b8236c47645e5ba9f3d21ae1c687640b8a636272f6c5"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/acetaldehyde/CAM_full_reference/reference.npz",
+      "bytes": 286437,
+      "sha256": "d6eb230a543d33c1c0e7a1cc65b5ccc4bd4d9a443d6cb26fbdfa8943abcd9f65"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/acetaldehyde/F/model.npz",
+      "bytes": 221195,
+      "sha256": "8364c0489e2b3258989d3d7068e4b9fa57892ef62881af86b15b2a9f5831e78c"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/acetaldehyde/native_response.npz",
+      "bytes": 101562,
+      "sha256": "6d39db033dc38829418d37496558fdc545ac39e6fbaef83f44de0e9c67f337b2"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/acetaldehyde/embedded_ground.npz",
+      "bytes": 7842,
+      "sha256": "43217b713eaa364a6f4b98fce5146a1196fef076d94ee339f60ebe9ac6cd7617"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/acetaldehyde/range_eri.npz",
+      "bytes": 371534,
+      "sha256": "a225eac8524fbeb4db9072e7adbb940c9efd72efb5a656309d82d1ccd49aafa9"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/formamide/coherent_common/model.npz",
+      "bytes": 185286,
+      "sha256": "17b87aa79bcc8b91e10eb34f836ce7a3277edf057489b841fd1a31569c1b8350"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/formamide/coherent_common/ground/stationary.npz",
+      "bytes": 18074,
+      "sha256": "5005aa0c6fa8f435a9b5c7d7b7bc83870b62a2159f3af075bd5d24229accc922"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/formamide/coherent_common/reference_certificate.json",
+      "bytes": 2773,
+      "sha256": "542ce5679e9b4a8dcd16f7f590dde4ff39e040280e6425455365d085828e662d"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/formamide/coherent_states/N002/final/final.npz",
+      "bytes": 2015,
+      "sha256": "8d4a0e5efcc434c17b12ecd04a1d90721728cef410c42f52ae9b3d1995896099"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/formamide/CAM_full_reference/reference.npz",
+      "bytes": 247939,
+      "sha256": "99ad0b0dc200b398777343337591cb66202a1d3c98cbf446746fdde473cb5876"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/formamide/F/model.npz",
+      "bytes": 185290,
+      "sha256": "15a875e05348b33c1429328341b8159346e1261c0bdb2c56d41ce0f5a62ff0ec"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/formamide/native_response.npz",
+      "bytes": 94551,
+      "sha256": "cb9068dd260533f205594ee0fc597b2eb7113bf285eb6d97f7313a8a737856b7"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/formamide/embedded_ground.npz",
+      "bytes": 7060,
+      "sha256": "a580a34627082fa8ba4944ba2c3d182fe890eb540eaef621dd07be2ebc0e3c73"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/formamide/range_eri.npz",
+      "bytes": 263107,
+      "sha256": "5551d44b1e2d1336d6398579467de75071b88a7d007f0c57b601a7feba60cd70"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/pyrazine/coherent_common/model.npz",
+      "bytes": 2269000,
+      "sha256": "6b748af23eef7ce02458936f6bcfa85edca7a7bf4a360303b0dc6b80a1c1b903"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/pyrazine/coherent_common/ground/stationary.npz",
+      "bytes": 31483,
+      "sha256": "e967c6fc46d7d1628712d77c62c3a3a56af264d5967317e588679277cc33e07b"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/pyrazine/coherent_common/reference_certificate.json",
+      "bytes": 4597,
+      "sha256": "6fb33d068b1dd2c8ae3a68241c1eb7f0a545178650533196f09f1f66b42c4064"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/extra_npi/pyrazine/coherent_states/N003/final/final.npz",
+      "bytes": 6165,
+      "sha256": "3151f0a6b8b642c89c48e2a4899951c7ea98747bd53c494c4709dcee06931c01"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/pyrazine/CAM_full_reference/reference.npz",
+      "bytes": 828786,
+      "sha256": "cdf15dd98c12ba6e349f75ca29909212bdcb9a28bae951caa864792f0a747d3d"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/pyrazine/F/model.npz",
+      "bytes": 2269092,
+      "sha256": "74df4704d28f67fe92791dd62dd85d29bf1d129c9afa06a84c2ec2ada9538268"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/pyrazine/native_response.npz",
+      "bytes": 1212084,
+      "sha256": "13c4189532cb377bbbffe70288c5989843ae31bb90e62c219b68aa2aafc5e3bc"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/pyrazine/embedded_ground.npz",
+      "bytes": 17463,
+      "sha256": "3ee4fe9d1abe24d21cd1a9a52fbb9bd147631158670dea7ddaa9efdfa309eb84"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/extra_npi/pyrazine/range_eri.npz",
+      "bytes": 3414833,
+      "sha256": "7a0fd215985babf2de29e49e63a6c2057d0370d7cbeaa94614e1908f779f39b9"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Benzoxadiazole/coherent_common/model.npz",
+      "bytes": 9711596,
+      "sha256": "10b5feedd587c6f52185d18108f67ac00efad4c5573e21e928897de3a955ce05"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Benzoxadiazole/coherent_common/ground/stationary.npz",
+      "bytes": 60246,
+      "sha256": "6f5cbb4d668aa0e3462fdc56410a84c7b8c5fb8216a497c8c4e9af6253393890"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Benzoxadiazole/coherent_common/reference_certificate.json",
+      "bytes": 6302,
+      "sha256": "d02de94d321ad8f237508b6c030605ae51f009c7ec8974c550c2e6a33899fb96"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Benzoxadiazole/coherent_states/I004/final/final.npz",
+      "bytes": 10997,
+      "sha256": "bc4be4feafb58a209640d3675733b8eefc8e693584a86d1bb6bd1a67bc73a7cf"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Benzoxadiazole/CAM_full_reference/reference.npz",
+      "bytes": 946881,
+      "sha256": "5905bb1be4c7a704d165a638e85834d9714157d1ada48d4d21ac2a347be736d6"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Benzoxadiazole/F/model.npz",
+      "bytes": 9711982,
+      "sha256": "1b7772c1aedf6effb859993c7e9da4224dc7eff919ab69fe56f53504bb49131e"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Benzoxadiazole/native_response.npz",
+      "bytes": 5085286,
+      "sha256": "b0c2c2a85b8d25d64350ce9f38e1e0403e0c17ef59215612ad3050b04c6c2b57"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Benzoxadiazole/embedded_ground.npz",
+      "bytes": 36993,
+      "sha256": "6f0b9d9f9c0e2e0cae3adf2e53a6de59c025dc880852fc29324d77216518bc06"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Benzoxadiazole/range_eri.npz",
+      "bytes": 14898326,
+      "sha256": "8d27c1fdf2d9154ecc41432f1e8e2a2e0c32b23bbcc907c96ec436efacc8f0d2"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Hexatriene/coherent_common/model.npz",
+      "bytes": 4242706,
+      "sha256": "8007b611d0b6f76e162a3d1a51bec51ae01625fb6a42b9c4144a3d9a1cb7ace5"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Hexatriene/coherent_common/ground/stationary.npz",
+      "bytes": 41549,
+      "sha256": "21bbbefb8ff4c0c17c8ee3100bdd36d8e094f6b3bb9873582d2820387ea3457a"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Hexatriene/coherent_common/reference_certificate.json",
+      "bytes": 5170,
+      "sha256": "e17ff8e8348e60cd7fe5abe9f48b739486f7557173ee9367bfe2a90b593d5f1c"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/independent/Hexatriene/coherent_states/I005/final/final.npz",
+      "bytes": 6825,
+      "sha256": "f1e2f2bcd525e0e26a232b784f927e7637642fdec584b6f8341ff8b092af1019"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Hexatriene/CAM_full_reference/reference.npz",
+      "bytes": 758100,
+      "sha256": "0643576113f9bb445c059242335b24168d962fb1d7d015afc530d89d61e88ad2"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Hexatriene/F/model.npz",
+      "bytes": 4243002,
+      "sha256": "144a68b3e313bd8e916f6a31db1d7ce9e241e9e3775906d71d9dc0da988ac2ee"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Hexatriene/native_response.npz",
+      "bytes": 2129255,
+      "sha256": "0bf318082863ba7a9cf78ec9beacc446851efd1a337e0a8d04b2671e089c51c9"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Hexatriene/embedded_ground.npz",
+      "bytes": 24127,
+      "sha256": "902b87af8cc94b9ade914badd7b58de6223d450b88fd5c767942540ce96fd41e"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/independent/Hexatriene/range_eri.npz",
+      "bytes": 6175499,
+      "sha256": "39c60fc9bf5723e72f926fe3ba502d0daa6637de610c249ec5aa70de98ae0276"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/prospective_cisd/acetone/coherent_common/model.npz",
+      "bytes": 748477,
+      "sha256": "056e53c4d0f33eb5d3eea1044b8d3a1cdcb4ef56a11712d85804ace21fca0ba6"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/prospective_cisd/acetone/coherent_common/ground/stationary.npz",
+      "bytes": 24226,
+      "sha256": "71293e341c40325dab1053ecb3cd17e1748948f3de483b865f2eafb7635d7156"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/prospective_cisd/acetone/coherent_common/reference_certificate.json",
+      "bytes": 3744,
+      "sha256": "7308ef50dd93c2e517f027402c10480a6ac999be30dfc9c4e9b86d77de646a2a"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/prospective_cisd/acetone/coherent_states/V001/final/final.npz",
+      "bytes": 3737,
+      "sha256": "fd634269e50a0dcbb58c5fa662f65445bf615291bc2d67b1515151f7382dc4e0"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/acetone/CAM_full_reference/reference.npz",
+      "bytes": 504457,
+      "sha256": "72dc04132a35a44047af445f44366d2cd6c8463f8fba7a18156d85c41694ec20"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/acetone/F/model.npz",
+      "bytes": 748668,
+      "sha256": "f7426273c2d92c284e7c129c17d33b3f59b11cfc2c19a971ebf25176c6f043b7"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/acetone/native_response.npz",
+      "bytes": 335226,
+      "sha256": "86e4f1a67efb424ab6f015a7b2152a35594cd39a9dd927868cdd410a10e92385"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/acetone/embedded_ground.npz",
+      "bytes": 12097,
+      "sha256": "4c5df7f48a135b81024be7427b3ada3e4c483f3882f2a3739645032c72fa0dac"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/acetone/range_eri.npz",
+      "bytes": 1307070,
+      "sha256": "52acb1b88d1e2a33d6b255ed8ac652e859a1ce9f3c6c67101dc7647898b918dc"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/prospective_cisd/glyoxal/coherent_common/model.npz",
+      "bytes": 403289,
+      "sha256": "7f119005b6c21ff85a88c633812468cedb128fa85483380bafc15db9426082dd"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/prospective_cisd/glyoxal/coherent_common/ground/stationary.npz",
+      "bytes": 19430,
+      "sha256": "96ba85cf6dfe4e3479491e553c1aba453eda0f75dff4a71c63ba709fded916b7"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/prospective_cisd/glyoxal/coherent_common/reference_certificate.json",
+      "bytes": 3194,
+      "sha256": "394865f1efb1b64066f225a879269ddd8643befada67e7492539aef8d31aa82f"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/prospective_cisd/glyoxal/coherent_states/V002/final/final.npz",
+      "bytes": 2733,
+      "sha256": "c0b9b4671b07aba0294665984e420e70a7231fd0babf3ef6943161136f404f17"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/glyoxal/CAM_full_reference/reference.npz",
+      "bytes": 303849,
+      "sha256": "976c96d39cfbe60a47174061b34d7f72aad92ad72bd623d1155354d472b1984c"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/glyoxal/F/model.npz",
+      "bytes": 403355,
+      "sha256": "601263fbb4110014bb40f324d9c5839aa260aa3483e26c09fb2105d8346ac161"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/glyoxal/native_response.npz",
+      "bytes": 201140,
+      "sha256": "ad5056aa07cfe75aa1f37691e7611a1e8de3e9a352511f51b4a3d9f7a69044cd"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/glyoxal/embedded_ground.npz",
+      "bytes": 8491,
+      "sha256": "038e40d30254f884e3ea4b6ef82cc9942b19d81a03bfd07d7061910b03ee6ac9"
+    },
+    {
+      "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/prospective_cisd/glyoxal/range_eri.npz",
+      "bytes": 573787,
+      "sha256": "bd82ede831e3c902d3481f01cbf2a6a561af7c793a4bdd75e98926a9ea824af2"
+    }
+  ]
+}

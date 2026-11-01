@@ -1,0 +1,80 @@
+{
+  "predictions": [
+    {
+      "id": "N003",
+      "gap_ev": 4.31451034838297,
+      "conventional_si_gap_ev": 4.335492162390245,
+      "root": 1,
+      "overlap": 1.0000000000000016,
+      "margin": 0.9999999999998771,
+      "qualified": true
+    }
+  ],
+  "labels": [
+    "S0",
+    "N003",
+    "N003_pair_double",
+    "canonical_13_15",
+    "canonical_13_16",
+    "canonical_14_16",
+    "four_spin_0",
+    "four_spin_1"
+  ],
+  "metric_eigenvalues": [
+    0.9999999999999768,
+    0.9999999999999827,
+    0.9999999999999897,
+    0.9999999999999903,
+    0.9999999999999932,
+    0.999999999999995,
+    0.9999999999999991,
+    1.0000000000000127
+  ],
+  "auxiliary_si_ground_lowering_ev": -0.020981814007274224,
+  "ground_character": 0.9989144372369999,
+  "retained_block_errors": {
+    "metric": 2.3314683517128287e-15,
+    "matrix": 1.7543116682964645e-16
+  },
+  "additions": [
+    {
+      "hole": 13,
+      "particle": 15,
+      "maximum_retained_overlap": 2.305819401824163e-15,
+      "added": true
+    },
+    {
+      "hole": 13,
+      "particle": 16,
+      "maximum_retained_overlap": 1.2168216554773285e-15,
+      "added": true
+    },
+    {
+      "hole": 14,
+      "particle": 15,
+      "maximum_retained_overlap": 0.9978867019751537,
+      "added": false
+    },
+    {
+      "hole": 14,
+      "particle": 16,
+      "maximum_retained_overlap": 1.4458907254356568e-14,
+      "added": true
+    }
+  ],
+  "all_eigenvalues_ev": [
+    -0.020981814007274224,
+    4.31451034838297,
+    6.202292563796865,
+    7.720951725599922,
+    7.786904326084389,
+    9.64829270685677,
+    10.479333378151866,
+    12.405973055276895
+  ],
+  "source_sha256": "08e53397c70d25f11cc11e1607a81284e7203fafc539141e529c990eeb2e7a3b",
+  "protocol_sha256": "029187bce9eeaa354791728f20d6d7cf5ad7712739443ac04f5488a874b3993f",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "energy_labels_used": false,
+  "offset_ev": 0
+}

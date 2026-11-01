@@ -1,0 +1,71 @@
+{
+  "states": {
+    "I001": [
+      {
+        "direction": 0,
+        "raw_estimates": [
+          [
+            -0.04151584837330802,
+            0.9158726399505213
+          ],
+          [
+            -0.04151581769207269,
+            0.9158724054714185
+          ]
+        ],
+        "richardson_gradient_error": 3.230106460083704e-11,
+        "richardson_hessian_error": 5.932875746239574e-09
+      },
+      {
+        "direction": 1,
+        "raw_estimates": [
+          [
+            -0.005055948528287502,
+            0.1326130583123586
+          ],
+          [
+            -0.0050586349527037555,
+            0.13286413746982362
+          ]
+        ],
+        "richardson_gradient_error": 2.1327966337469917e-09,
+        "richardson_hessian_error": 2.077819341028686e-07
+      }
+    ],
+    "I002": [
+      {
+        "direction": 0,
+        "raw_estimates": [
+          [
+            -0.02085090385683941,
+            0.7853921779599204
+          ],
+          [
+            -0.020850849852038777,
+            0.7853922099343436
+          ]
+        ],
+        "richardson_gradient_error": 2.835875978490776e-11,
+        "richardson_hessian_error": 1.232164075215536e-07
+      },
+      {
+        "direction": 1,
+        "raw_estimates": [
+          [
+            -0.029483191976709122,
+            0.9360538122393791
+          ],
+          [
+            -0.029470998081038147,
+            0.9349159526550466
+          ]
+        ],
+        "richardson_gradient_error": 9.754117118176975e-09,
+        "richardson_hessian_error": 3.3255173992330356e-07
+      }
+    ]
+  },
+  "analytic_implementation_unchanged": true,
+  "independent_displaced_energies_reused": true,
+  "note": "Richardson extrapolation is used only to remove central-difference truncation in the validation; the delivered Hessian is analytic"
+}

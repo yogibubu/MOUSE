@@ -1,0 +1,58 @@
+[
+  {
+    "maximum_rank": 1,
+    "predictions": [
+      {
+        "id": "N002",
+        "gap_ev": 5.949630000266709,
+        "overlap": 0.9999762589133,
+        "margin": 0.9930855688345257,
+        "qualified": true
+      }
+    ],
+    "dimension": 6,
+    "aux_ground_ev": -0.0820092650658867
+  },
+  {
+    "maximum_rank": 2,
+    "predictions": [
+      {
+        "id": "N002",
+        "gap_ev": 5.916958349351602,
+        "overlap": 0.9992413232854478,
+        "margin": 0.9719404356692294,
+        "qualified": true
+      }
+    ],
+    "dimension": 15,
+    "aux_ground_ev": -0.6390330170791619
+  },
+  {
+    "maximum_rank": 3,
+    "predictions": [
+      {
+        "id": "N002",
+        "gap_ev": 5.891676254397411,
+        "overlap": 0.9989037366714001,
+        "margin": 0.9685279748600393,
+        "qualified": true
+      }
+    ],
+    "dimension": 19,
+    "aux_ground_ev": -0.6410065166499137
+  },
+  {
+    "maximum_rank": 4,
+    "predictions": [
+      {
+        "id": "N002",
+        "gap_ev": 5.891676254397416,
+        "overlap": 0.9989037366713999,
+        "margin": 0.9685279748600388,
+        "qualified": true
+      }
+    ],
+    "dimension": 20,
+    "aux_ground_ev": -0.6412143445977275
+  }
+]

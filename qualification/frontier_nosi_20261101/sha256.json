@@ -1,0 +1,20 @@
+{
+  "extra_npi/acetaldehyde/checkpoint.npz": "31c860af0cd537b8e7c4fd7195f4f7d1839c7b6eebfdc95c3657062e71745677",
+  "extra_npi/acetaldehyde/result.json": "8f5a5778983a02dfa0c6b60f3625563119f069f08338327c14c2cabd7800307f",
+  "extra_npi/formamide/checkpoint.npz": "5026931604b014cdf7f4a7a3018d5a2a50e401fe047abe3dd9758c9263c9723c",
+  "extra_npi/formamide/result.json": "92011f2e56c8747563f04132b542a7b4f61ed42c775ffec12eab7c10c28a5949",
+  "extra_npi/pyrazine/checkpoint.npz": "09e9ebb2f93b131ad16f6534d45879b5a1f98f34291399757ddf2d642bec67eb",
+  "extra_npi/pyrazine/result.json": "e1d54bfd889210c0291150655481c3c2284fba8cb22c3e0a66ffbd0c20cf6919",
+  "fast_slater.py": "7a3aa922f8577e4192fa53b361855c9c84e5b53cafb6f89b91f0a8daecafd827",
+  "independent/Benzoxadiazole/checkpoint.npz": "9ca68bdc3d5e3c69130884b766c46288f1f47db36973b2124d3a84295e7901b6",
+  "independent/Benzoxadiazole/result.json": "4847ca86d43b95ac8d443c79ec4a3e8d7e1622535b7a753d23d9b39cd1584148",
+  "independent/Criegee_Intermediate/checkpoint.npz": "1b4b19705f33d677a25e89d152ec7afdf0ba51a47f9de745664855958bfba660",
+  "independent/Criegee_Intermediate/result.json": "4b12c2fdae9f4210bcba910a896e3ed1d9297d2a7e37f990aaafd028a229a122",
+  "independent_challenge/Furofuran/checkpoint.npz": "6cf0f965fd6c006ebc6d03b60acc3ab9dc9ccc7ed8b6c6c9598cc86821144903",
+  "independent_challenge/Furofuran/result.json": "a414dbae7a92cce70449808f1ad1762a4d8dbb1585e617f4a7c67e7afbfc51e4",
+  "protocol.json": "029187bce9eeaa354791728f20d6d7cf5ad7712739443ac04f5488a874b3993f",
+  "run.log": "dcb06433d2bf306eb82769642f824666ebe32e077e4109b87836ca85915830a7",
+  "run.py": "d0b74aa241ad065110a5b62c12b6124e9ed2e4138cd3a78787280e0da8ef5764",
+  "spin_four.py": "2efd5e457bc115a3d3451ac6f4ae30a9e569dfb2b107e4261b35c7a9422392d2",
+  "test_core.py": "92b832b425e66b5b4a3cb5c89bfa53273ab3d208b4a03cf3bd310e344dbdae44"
+}

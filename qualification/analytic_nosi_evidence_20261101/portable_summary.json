@@ -1,0 +1,25 @@
+{
+  "note": "Original raw certificates preserved. peak_rss_kib is a legacy field; converted using actual operating-system units. Independent validation supersedes pending status in the earlier Hessian certificate.",
+  "calculations": [
+    {
+      "host": "oracle.sns.it",
+      "molecule": "Criegee_Intermediate",
+      "wall_seconds": 41.492237103986554,
+      "peak_rss_bytes": 186593280,
+      "raw_rss_unit": "KiB",
+      "certificate": "Oracle/Criegee_Intermediate/hessian_certificate.json",
+      "independent_validation": "Oracle/Criegee_Intermediate/independent_nuclear_validation.json",
+      "validation_status": "completed"
+    },
+    {
+      "host": "mac-2.homenet.telecomitalia.it",
+      "molecule": "Furofuran",
+      "wall_seconds": 121.25602054101182,
+      "peak_rss_bytes": 2033483776,
+      "raw_rss_unit": "bytes",
+      "certificate": "MAC-STUDIO/Furofuran/hessian_certificate.json",
+      "independent_validation": "MAC-STUDIO/Furofuran/independent_nuclear_validation.json",
+      "validation_status": "completed"
+    }
+  ]
+}

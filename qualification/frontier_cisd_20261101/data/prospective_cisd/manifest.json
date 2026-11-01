@@ -1,0 +1,19 @@
+{
+  "states": [
+    {
+      "id": "V001",
+      "molecule": "acetone",
+      "family": "n_pi",
+      "symmetry": "A_2",
+      "ordinal_same_symmetry": 1
+    },
+    {
+      "id": "V002",
+      "molecule": "glyoxal",
+      "family": "n_pi",
+      "symmetry": "A_u",
+      "ordinal_same_symmetry": 1
+    }
+  ],
+  "energy_labels_included": false
+}

@@ -1,0 +1,61 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "labels": [
+    "S0",
+    "I001",
+    "I002",
+    "I001_pair_double",
+    "I002_pair_double"
+  ],
+  "predictions": [
+    {
+      "id": "I001",
+      "root": 1,
+      "gap_ev": 3.919858974525473,
+      "overlap": 0.9999999999999953,
+      "margin": 0.9999999999999868,
+      "qualified": true
+    },
+    {
+      "id": "I002",
+      "root": 2,
+      "gap_ev": 5.361014281306055,
+      "overlap": 0.9178559163289417,
+      "margin": 0.5540023968043568,
+      "qualified": true
+    }
+  ],
+  "ground_character": 0.9333616769665748,
+  "metric_eigenvalues": [
+    0.9999999999999887,
+    0.9999999999999907,
+    0.9999999999999956,
+    1.000000000000001,
+    1.0000000000000053
+  ],
+  "all_gaps_ev": [
+    0.0,
+    3.919858974525473,
+    5.361014281306055,
+    16.86365849929716,
+    20.14326222950819
+  ],
+  "uncoupled_diagonal_ev": [
+    0.0,
+    2.326114276648664,
+    5.411652146163305,
+    18.29332298420926,
+    12.287981088231575
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "energy_labels_used": false,
+  "driver_sha256": "61c4fa7b898519d5fdf9bb4c161e8f3d8353496f4ef6bb5dd1a7561e69ac1807",
+  "slater_condon_sha256": "13a380f4b39e61c83bf037405731703f5140a6f35d90c71cf526663b4ec1e6c6",
+  "protocol_sha256": "b6f2d3f4662c89dea6416527c310a311793f5301240bf32ab31a4cd87680ce15",
+  "scope": "new CSF-level overlap-weighted residual functional; unoptimized pair-double configurations; no nuclear derivative claim"
+}

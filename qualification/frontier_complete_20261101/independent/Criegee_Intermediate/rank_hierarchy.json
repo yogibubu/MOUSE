@@ -1,0 +1,86 @@
+[
+  {
+    "maximum_rank": 1,
+    "predictions": [
+      {
+        "id": "I001",
+        "gap_ev": 2.424703294351153,
+        "overlap": 0.9999901882498352,
+        "margin": 0.9955603570950357,
+        "qualified": true
+      },
+      {
+        "id": "I002",
+        "gap_ev": 3.630817105877736,
+        "overlap": 0.9997836104897024,
+        "margin": 0.979007439066533,
+        "qualified": true
+      }
+    ],
+    "dimension": 7,
+    "aux_ground_ev": -1.6497042513771338
+  },
+  {
+    "maximum_rank": 2,
+    "predictions": [
+      {
+        "id": "I001",
+        "gap_ev": 2.2986019516819964,
+        "overlap": 0.9967670885806068,
+        "margin": 0.9305347484911454,
+        "qualified": true
+      },
+      {
+        "id": "I002",
+        "gap_ev": 3.583386887604573,
+        "overlap": 0.9977826032459538,
+        "margin": 0.9502428341686165,
+        "qualified": true
+      }
+    ],
+    "dimension": 15,
+    "aux_ground_ev": -1.690123448812817
+  },
+  {
+    "maximum_rank": 3,
+    "predictions": [
+      {
+        "id": "I001",
+        "gap_ev": 2.2800507517092097,
+        "overlap": 0.9963898408380722,
+        "margin": 0.9275805766867251,
+        "qualified": true
+      },
+      {
+        "id": "I002",
+        "gap_ev": 3.5586524577195298,
+        "overlap": 0.9973439397369918,
+        "margin": 0.9503258549056757,
+        "qualified": true
+      }
+    ],
+    "dimension": 19,
+    "aux_ground_ev": -1.6929803068917293
+  },
+  {
+    "maximum_rank": 4,
+    "predictions": [
+      {
+        "id": "I001",
+        "gap_ev": 2.2800507517092,
+        "overlap": 0.9963898408380721,
+        "margin": 0.9275805766867248,
+        "qualified": true
+      },
+      {
+        "id": "I002",
+        "gap_ev": 3.550802972485165,
+        "overlap": 0.9971376354182757,
+        "margin": 0.951418977631903,
+        "qualified": true
+      }
+    ],
+    "dimension": 20,
+    "aux_ground_ev": -1.6971628526590552
+  }
+]

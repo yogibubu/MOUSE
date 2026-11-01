@@ -1,0 +1,19 @@
+{
+  "stage": "exposed nine-state development; frozen before native-density response predictions",
+  "reference_consistency": "compute the DFT Fock and full charge/spin response at the identical native GFN2 density whose orbitals are preserved; do not transfer a kernel from the separately stationary embedded-DFT density",
+  "ground_reference": "native GFN2 canonical spatial orbitals, positive restricted curvature, unchanged occupied projector",
+  "functional": "standard CAM-B3LYP, omega=0.33, short/long exact exchange 0.19/0.65",
+  "F_reference": "native-orbital diagonal Rayleigh quotients of the DFT Fock at the native density",
+  "Q_reference": "qualified full DFT orbital energies on the same native orbitals, using unchanged matching and molecular gap safety rules",
+  "common_functional": "same fixed 50/50 F/Q one-body average and the full native-density DFT charge/spin response; native GFN2 higher-order terms retained",
+  "state_interaction": "unchanged stationary-ground-projected spin-pure NOSI with paired doubles",
+  "lambda_exchange": 0.9,
+  "weights": [0.5, 0.5],
+  "energy_offset_ev": 0,
+  "orbital_gap_scale": 1,
+  "new_DFT_SCF": false,
+  "energy_labels_used_in_model": false,
+  "cases": [["independent","Criegee_Intermediate"],["independent_challenge","Furofuran"],["extra_npi","acetaldehyde"],["extra_npi","formamide"],["extra_npi","pyrazine"],["independent","Benzoxadiazole"],["independent","Hexatriene"]],
+  "accuracy_gate_ev": {"mae": 0.3, "max_absolute_error": 0.5},
+  "comparison": "complete singlet TDA of the identical prepared functional on native GFN2 orbitals, with the full range-separated exchange correction"
+}

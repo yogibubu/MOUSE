@@ -1,0 +1,26 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+Furofuran analytic projected-NOSI Hessian 1 / 36
+Furofuran analytic projected-NOSI Hessian 2 / 36
+Furofuran analytic projected-NOSI Hessian 3 / 36
+Furofuran analytic projected-NOSI Hessian 4 / 36
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/nuclear.py", line 120, in <module>
+    na.projected_eigen_jet=eigen_jet;result=candidate.hessian()
+                                            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-nosi-20261101/nuclear_assembly.py", line 140, in hessian
+    direction=np.zeros(self.nr);direction[column]=1.;h,s,eg=self.matrices(direction);ground_hessian[:,column]=eg.ab
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/nuclear.py", line 82, in matrices
+    q.append(contract('aij,ij->a',original,pulled))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_mixed_jet.py", line 199, in contract
+    values = [reference.coerce(x) for x in values]
+              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_mixed_jet.py", line 39, in coerce
+    return self.constant(other, self.n)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_mixed_jet.py", line 28, in constant
+    return cls(value, np.zeros((dimension, *value.shape)))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

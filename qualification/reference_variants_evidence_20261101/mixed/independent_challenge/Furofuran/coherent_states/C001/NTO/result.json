@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "energy_hartree": -21.636231616750415,
+  "ground_overlap_squared": 4.998990276496279e-36,
+  "fidelity": 0.9713397113119163,
+  "kkt_max": 2.30528478251113e-11,
+  "multiplier": 5.851838396197153e-16,
+  "qualified": true,
+  "iterations": 4,
+  "solver": "KKT stationary point, residual merit, state-overlap guarded",
+  "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+  "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+  "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "threads": 2,
+  "checkpoint_resumed": true
+}

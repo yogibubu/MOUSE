@@ -1,0 +1,4 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '

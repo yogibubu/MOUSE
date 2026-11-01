@@ -1,0 +1,22 @@
+{
+  "host": "oracle.sns.it",
+  "method": "analytic projected-NOSI including complete mixed orbital KKT and generalized-eigenvector response",
+  "states": {
+    "I001": {
+      "energy_hartree": -10.367989478476565,
+      "raw_symmetry_error": 3.608224830031759e-16,
+      "translation_error": 1.1690648449302898e-13
+    },
+    "I002": {
+      "energy_hartree": -10.33272589477028,
+      "raw_symmetry_error": 6.927791673660977e-14,
+      "translation_error": 1.3722356584366935e-13
+    }
+  },
+  "wall_seconds": 41.492237103986554,
+  "peak_rss_kib": 182220,
+  "source_sha256": "239c3684ab3fd0ad0665926fc7970275da0290269e369e890bffe0e709c0441a",
+  "implementation_sha256": "c8518eaa9e75fdf21881d1cf6434c04f4ff97f99f911320d1e5f96e506d7a1ba",
+  "protocol_sha256": "49c0bae237d52e85ec9ea7a153e1ad6b4723bf532c74706bf42e14206d919796",
+  "independent_energy_derivative_validation": "pending; this certificate records internal consistency only"
+}

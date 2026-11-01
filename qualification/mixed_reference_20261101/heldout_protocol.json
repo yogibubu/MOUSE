@@ -1,0 +1,55 @@
+{
+  "stage": "exposed nine-state development; frozen before mixed-reference predictions",
+  "model": "one-body CAM-B3LYP orbital-energy reference and M06-2X charge/spin response in one explicit semiempirical energy functional",
+  "reason": "separate orbital-level reference information from the response model, as in reference-informed semiempirical Hamiltonians; no state/family-dependent switching",
+  "spatial_ground_orbitals": "native GFN2, preserved and certified stationary with positive restricted curvature",
+  "one_body": "same native-orbital CAM F-diagonal/Q-spectral mean, fixed weights 0.5/0.5",
+  "two_body_response": "prepared full M06-2X charge/spin matrices, same complete AO-pair chart; re-center at the native density and retain native GFN2 higher-order terms",
+  "reference_density_disclosure": "M06-2X response was prepared at its stationary embedded density; this is a defined mixed-reference model, not an exact representation of either parent DFA",
+  "state_interaction": "unchanged ground-projected spin-pure NOSI, same open and paired-double basis",
+  "lambda_exchange": 0.9,
+  "response_exact_exchange": 0.486,
+  "orbital_gap_scale": 1,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "energy_offset_ev": 0,
+  "energy_labels_used_in_model": false,
+  "new_DFT_SCF": false,
+  "cases": [
+    [
+      "independent",
+      "Criegee_Intermediate"
+    ],
+    [
+      "independent_challenge",
+      "Furofuran"
+    ],
+    [
+      "extra_npi",
+      "acetaldehyde"
+    ],
+    [
+      "extra_npi",
+      "formamide"
+    ],
+    [
+      "extra_npi",
+      "pyrazine"
+    ],
+    [
+      "independent",
+      "Benzoxadiazole"
+    ],
+    [
+      "independent",
+      "Hexatriene"
+    ]
+  ],
+  "accuracy_gate_ev": {
+    "mae": 0.3,
+    "max_absolute_error": 0.5
+  },
+  "TDA_control": "identical mixed-reference functional, native GFN2 spatial orbitals and complete M06-2X nonlocal-exchange correction"
+}

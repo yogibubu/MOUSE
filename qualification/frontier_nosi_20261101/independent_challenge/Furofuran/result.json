@@ -1,0 +1,92 @@
+{
+  "predictions": [
+    {
+      "id": "C001",
+      "gap_ev": 5.462867358886262,
+      "conventional_si_gap_ev": 6.18680828018311,
+      "root": 1,
+      "overlap": 0.8872227322660523,
+      "margin": 0.44838756886368747,
+      "qualified": true
+    },
+    {
+      "id": "C002",
+      "gap_ev": 6.6221508232161685,
+      "conventional_si_gap_ev": 7.346091744513016,
+      "root": 2,
+      "overlap": 0.9989627253296312,
+      "margin": 0.9573545830712012,
+      "qualified": true
+    }
+  ],
+  "labels": [
+    "S0",
+    "C001",
+    "C002",
+    "C001_pair_double",
+    "C002_pair_double",
+    "canonical_18_20",
+    "canonical_18_21",
+    "four_spin_0",
+    "four_spin_1"
+  ],
+  "metric_eigenvalues": [
+    0.7916713441254564,
+    0.8590828927087865,
+    0.9999999999999926,
+    0.999999999999995,
+    0.9999999999999993,
+    1.0000000000000067,
+    1.0000000000000182,
+    1.1409171072912088,
+    1.208328655874544
+  ],
+  "auxiliary_si_ground_lowering_ev": -0.7239409212968471,
+  "ground_character": 0.9743748416161961,
+  "retained_block_errors": {
+    "metric": 9.769962616701378e-15,
+    "matrix": 5.339478859056612e-15
+  },
+  "additions": [
+    {
+      "hole": 18,
+      "particle": 20,
+      "maximum_retained_overlap": 0.1381558635677733,
+      "added": true
+    },
+    {
+      "hole": 18,
+      "particle": 21,
+      "maximum_retained_overlap": 0.20832865587454863,
+      "added": true
+    },
+    {
+      "hole": 19,
+      "particle": 20,
+      "maximum_retained_overlap": 0.9785450103137355,
+      "added": false
+    },
+    {
+      "hole": 19,
+      "particle": 21,
+      "maximum_retained_overlap": 0.9685776109981091,
+      "added": false
+    }
+  ],
+  "all_eigenvalues_ev": [
+    -0.7239409212968471,
+    5.462867358886262,
+    6.6221508232161685,
+    7.499928550293579,
+    10.392282917195068,
+    11.949790187871182,
+    16.265345480380265,
+    18.27119341950763,
+    19.3304808396968
+  ],
+  "source_sha256": "08e53397c70d25f11cc11e1607a81284e7203fafc539141e529c990eeb2e7a3b",
+  "protocol_sha256": "029187bce9eeaa354791728f20d6d7cf5ad7712739443ac04f5488a874b3993f",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "energy_labels_used": false,
+  "offset_ev": 0
+}

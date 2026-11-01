@@ -1,0 +1,24 @@
+{
+  "Furofuran": {
+    "cartesian_coordinates": 36,
+    "state_count": 2,
+    "maximum_raw_symmetry_error": 1.1562972801471005e-13,
+    "maximum_translation_error": 7.194453366388132e-13,
+    "maximum_richardson_gradient_error": 1.307964500596448e-11,
+    "maximum_richardson_hessian_error": 4.029297807628396e-07,
+    "wall_seconds": 126.83004208299099,
+    "parallel_workers": 8,
+    "timing_scope": "parallel completion wall time; initial sequential prefix recorded separately"
+  },
+  "Criegee_Intermediate": {
+    "cartesian_coordinates": 15,
+    "state_count": 2,
+    "maximum_raw_symmetry_error": 3.916096936639411e-15,
+    "maximum_translation_error": 1.942890293094024e-14,
+    "maximum_richardson_gradient_error": 1.1152741230535668e-10,
+    "maximum_richardson_hessian_error": 1.8807874624382492e-07,
+    "wall_seconds": 44.68584904196905,
+    "parallel_workers": 1,
+    "timing_scope": "complete two-thread calculation"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "predictions": [
+    {
+      "id": "N002",
+      "root": 1,
+      "gap_ev": 6.169609306233186,
+      "overlap": 0.999999999999999,
+      "margin": 0.9999999999999979,
+      "qualified": true
+    }
+  ],
+  "host": "mac-2.homenet.telecomitalia.it",
+  "all_gaps_ev": [
+    6.169609306233186,
+    18.51409889646288
+  ],
+  "ground_overlap_max": 4.156519598482761e-32,
+  "energy_labels_used": false,
+  "offset_ev": 0,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "protocol_sha256": "c704547e1915dc99896313dfd92265210088446e02deb4c9295a13cf798038e0",
+  "source_sha256": "de15483e3d1957c57eaa85689dd6a8745b680fa8ee706a59c15c0e1d4017005c",
+  "base_checkpoint_sha256": "9ea3d5dba04325fd6006c2c6c454229590af793a4b44159d3626f32f6180433c"
+}

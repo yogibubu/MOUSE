@@ -1,0 +1,15 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+Criegee_Intermediate [{'id': 'I001', 'gap_ev': 2.2986019516819964, 'conventional_si_gap_ev': 3.9887254004948134, 'root': 1, 'overlap': 0.9967670885806068, 'margin': 0.9305347484911454, 'qualified': True}, {'id': 'I002', 'gap_ev': 3.583386887604573, 'conventional_si_gap_ev': 5.27351033641739, 'root': 2, 'overlap': 0.9977826032459538, 'margin': 0.9502428341686165, 'qualified': True}]
+Furofuran [{'id': 'C001', 'gap_ev': 5.27352409135132, 'conventional_si_gap_ev': 6.246849266991068, 'root': 1, 'overlap': 0.8758619140121053, 'margin': 0.42854834933961383, 'qualified': True}, {'id': 'C002', 'gap_ev': 6.051935863761658, 'conventional_si_gap_ev': 7.025261039401405, 'root': 2, 'overlap': 0.9598582218672562, 'margin': 0.735087285656849, 'qualified': True}]
+acetaldehyde [{'id': 'N001', 'gap_ev': 4.718505414416687, 'conventional_si_gap_ev': 4.985501842737442, 'root': 1, 'overlap': 0.999772662146373, 'margin': 0.9789216179535217, 'qualified': True}]
+formamide [{'id': 'N002', 'gap_ev': 5.916958349351602, 'conventional_si_gap_ev': 6.5559913664307645, 'root': 1, 'overlap': 0.9992413232854478, 'margin': 0.9719404356692294, 'qualified': True}]
+pyrazine [{'id': 'N003', 'gap_ev': 4.31451034838295, 'conventional_si_gap_ev': 5.09273237437154, 'root': 1, 'overlap': 1.000000000000001, 'margin': 0.9999999999998771, 'qualified': True}]
+Benzoxadiazole [{'id': 'I004', 'gap_ev': 4.666322890021316, 'conventional_si_gap_ev': 5.93074760619025, 'root': 2, 'overlap': 0.9833464552830771, 'margin': 0.8372367789173403, 'qualified': True}]
+Hexatriene [{'id': 'I005', 'gap_ev': 5.121244988636437, 'conventional_si_gap_ev': 7.54933857264397, 'root': 2, 'overlap': 0.9639592242555756, 'margin': 0.7580144133264052, 'qualified': True}]
+Awaiting acetone
+Awaiting glyoxal
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+acetone [{'id': 'V001', 'gap_ev': 4.685820092175615, 'conventional_si_gap_ev': 5.11251752725707, 'root': 1, 'overlap': 0.9998376030656486, 'margin': 0.9834071458566005, 'qualified': True}]
+glyoxal [{'id': 'V002', 'gap_ev': 2.3251066326182173, 'conventional_si_gap_ev': 2.375551380508379, 'root': 1, 'overlap': 0.9338579813506955, 'margin': 0.57621392552479, 'qualified': True}]

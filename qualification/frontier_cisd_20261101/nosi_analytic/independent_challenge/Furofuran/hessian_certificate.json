@@ -1,0 +1,55 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "states": {
+    "C001": {
+      "energy_hartree": -21.67423136060105,
+      "raw_symmetry_error": 1.1562972801471005e-13,
+      "translation_error": 5.197222860409134e-13
+    },
+    "C002": {
+      "energy_hartree": -21.645625255592375,
+      "raw_symmetry_error": 1.0191847366058937e-13,
+      "translation_error": 7.194453366388132e-13
+    }
+  },
+  "wall_seconds": 126.83004208299099,
+  "source_sha256": "e3d1a249d3508a441dbf86def05724aba141e7061bbd425bd1b4a33fac27792c",
+  "parallel_workers": 8,
+  "BLAS_threads_per_worker": 2,
+  "preserved_sequential_columns": 4,
+  "parallel_missing_columns": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "scope": "parallel completion wall time; initial sequential prefix recorded separately"
+}
