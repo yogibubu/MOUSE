@@ -1,0 +1,11 @@
+{
+  "stage": "frozen selected-OO-CID space diagnostic on thirteen exposed states",
+  "basis": "Keep the optimized requested ROKS singlets and their paired doubles, plus canonical frontier configurations of excitation rank two. Omit unoptimized auxiliary canonical rank-one singles. The latter were introduced as a full-space diagnostic, not as optimized state-specific surfaces.",
+  "motivation": "Test a compact orbital-optimized targets plus double-excitation correlation model instead of extending it with a separate unoptimized singles response manifold.",
+  "Hamiltonian": "unchanged baseline physical Slater-Condon couplings and native diagonal functional; no Pauli projection, screening or numerical excitation offsets",
+  "primary_reference": "moving stationary-ground projection, with both full-SI reference controls retained",
+  "weights": [0.5,0.5], "lambda_exchange": 0.9,
+  "fitted_coefficients": false,
+  "exposure": "All thirteen cases are exposed development; a successful candidate requires new prospective checks before promotion",
+  "nuclear_derivative_claims": false
+}
