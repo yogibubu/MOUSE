@@ -256,4 +256,57 @@ checkpoint reuse, numerical reference preparation, and the remaining
 state-assignment qualifications. Pigments are not included in these scores.\par\endgroup
 \input{spectral_block_table.tex}
 
+\section{Large-system orbital-solver qualification}
+The verified Mac Studio executes every new numerical calculation. The
+matrix-free orbital Jacobian action agrees with the dense expression within
+$8.9\times10^{-16}$; the determinant constraint action agrees within
+$1.2\times10^{-16}$. After finite orbital perturbations, both GMRES and
+MINRES recover the prepared ethylene and pyrrole roots within
+$1.1\times10^{-14}$ Ha. The real-d harmonic transport agrees with direct
+polynomial rotation within $5.4\times10^{-15}$. Independent directional
+checks of the first and second frame derivatives give discrepancies
+$6.6\times10^{-12}$ and $9.3\times10^{-8}$, respectively.
+
+The full frozen-quadrature correction is checked against the established
+ethylene functional for arbitrary perturbed spin densities. Energy, Fock,
+charge response and spin response agree within $2.5\times10^{-15}$ in
+their corresponding atomic units; the completed singlet CI matrix agrees
+within $3.6\times10^{-15}$ Ha. The complete analytic ethylene Hessian,
+under an invertible complete response-chart change, agrees within
+$1.1\times10^{-15}$ Ha/bohr$^2$. Fifteen existing algebra, spin and
+restart-contract tests pass. Cached Slater contractions reproduce their
+direct contractions exactly in the numerical control. Detailed certificates
+and the qualified implementation snapshot are archived under
+\path{qualification/closing_validation_20261101/results/pigments/}.
+
+The carotene 15-CSF matrices and eigensystem are saved separately from
+the expensive reference arrays. The reported 63.73 s final resumed process
+reuses its completed CI matrix and must not be interpreted as a total
+calculation time. PBE0 and CAM reference preparations alone take 1734.10
+and 1534.74 s. Full tensor storage and one-time reference preparation
+remain substantial costs. The current pigment quadrature adapter rejects
+nuclear-derivative requests; these small-molecule Hessian controls do not
+constitute pigment gradient or Hessian validation.
+
+\section{Carotene configuration-space control}
+\input{tables/beta_carotene_expansion.tex}
+All rows use the same source geometry, F/Q weights 50/50, exchange scale
+0.9, bath efficiency 0.60 and zero energy offset. $W$ is the occupied and
+virtual screening-exclusion window; $N$ is the occupied and virtual CI
+window. The 15-CSF baseline uses $N=2$ and $W=5$. No state-specific
+parameter is introduced. Spectra were exposed before the expansion.
+The $W=6$, $N=6$ CI contains the $N=5$ principal block with maximum
+Hamiltonian discrepancy $3.13\times10^{-13}$ Ha and overlap discrepancy
+$2.61\times10^{-15}$. Ground energies are identical and the lowest roots
+satisfy the Rayleigh--Ritz bound. Changing $W$ changes the screened
+interaction and is not a same-Hamiltonian variational test.
+
+Fixed-bra contractions are also compared with direct elements for
+physical and general fourfold-Hermitian tensors, including six active
+electrons per spin. Product cofactors are compared with explicit minors
+at full and deficient ranks. The exact full-quadrature Hessian refinement
+is exercised by a small-molecule solve and density-span energy shortcuts
+are checked against full evaluation. These implementation controls do not
+establish convergence of the carotene absolute excitation energies.
+
 \end{document}

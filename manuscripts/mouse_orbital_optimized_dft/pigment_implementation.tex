@@ -1,0 +1,57 @@
+\subsection{Matrix-free orbital response for larger valence spaces}
+For the pigment examples, the constrained ROKS orbital residual is solved
+by Newton--Krylov iterations. An analytic Jacobian action differentiates the
+native Fock and spin response, the orbital rotations, and the determinant
+ground-overlap constraint. The covariant orbital action is symmetric; the
+ground constraint is differentiated with singular-safe determinant
+cofactors. No dense orbital Jacobian is allocated and no finite difference
+enters the production orbital solver. All nonredundant orbital rotations
+are retained. A residual-decreasing line search controls each accepted
+step, while checkpointed overlap tracking follows the coherent singlet
+between accepted steps. Its character relative to the initial transition
+is reported separately. Final CI targets are assigned by collective
+overlap with the frozen native-frontier singlet subspace; this allows
+mixed frontier excitations without identifying a state by its energy.
+
+The large-system XC response is evaluated on its full frozen quadrature.
+A density-fitted approximation preconditions the Newton linear system.
+When its step fails the full-response inexact-Newton tolerance, flexible
+GMRES refines it with analytic full-quadrature Hessian actions. The
+ground-constraint factorization is cached within each linear solve.
+Writing $a=c,s$ for charge and spin channels, the actual energy is
+\begin{equation}
+ E=E_{\mathrm{RI}}+\frac12\sum_a
+ \left[\int \delta\bm\rho_a(\mathbf r)^{\mathsf T}
+ f_{\mathrm{xc},a}(\mathbf r)\delta\bm\rho_a(\mathbf r)\,d\mathbf r
+ -\mathbf q_a^{\mathsf T}K_{\mathrm{xc},a}^{\mathrm{RI}}\mathbf q_a\right],
+\end{equation}
+where $\bm\rho$ contains the density and its three Cartesian derivatives.
+The charge deviation is measured from the anchored native ground density;
+the spin deviation is the spin density itself. Thus the approximate XC
+quadratic form is subtracted and the full quadrature form restored in
+both the energy and the convergence residual. Stored basis values,
+quadrature weights and XC kernels suffice for evaluation without a DFT
+backend. On ethylene, energy, Fock and response equivalence errors are
+below $2.5\times10^{-15}$ in the corresponding atomic units; the spin-pure
+CI matrix agrees within $3.6\times10^{-15}$ Ha. These controls distinguish
+an acceleration of the stationarity search from a change of energy model.
+
+CI assembly likewise preserves the Hamiltonian while avoiding a full
+four-index molecular-orbital transformation: the common closed-shell core
+is contracted first and only the active integral block is transformed.
+Fixed-bra Schur contractions reuse the common core in nonorthogonal
+couplings. Singular cofactors are evaluated as products of the remaining
+singular values without division. Registered density spans accelerate the
+quadratic native energy only when the requested density lies in that span;
+otherwise evaluation falls back to the full expression.
+
+Native real d functions are included in the molecular-frame transport
+with analytic first and second rotation derivatives. Large-system native
+response also uses the same D4 and electrostatic cutoffs as its ground
+functional. Dense pair tensors and screened interactions are still stored:
+matrix-free orbital stationarity does not make this implementation
+linear-scaling or inexpensive in memory. The present quadrature adapter
+supports vertical energies and orbital response only; it explicitly rejects
+nuclear-derivative requests. The analytic nuclear Hessian qualifications
+reported for the small-molecule anchored surface therefore do not extend
+to these pigment calculations.

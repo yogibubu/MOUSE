@@ -41,7 +41,8 @@ surface follows coherent singlets without a runtime TDA solve, new SCC call
 or DFT-backend import. Independent scalar-energy checks verify the analytic
 derivatives; ethylene's full Hessian takes 10.68 s in one two-thread run.
 Earlier-model minimum and frequency comparisons are identified separately.
-Larger pigment structures are prepared but excluded from accuracy claims.
+A larger carotene vertical example is calculated and pigment structures are
+prepared; these remain excluded from accuracy claims.
 Independent transferability, equilibrium-structure and complete-cost
 benchmarks remain necessary.
 \end{abstract}
@@ -264,39 +265,38 @@ MOUSE provides a semiempirical orbital-optimized route with explicit spin
 polarization, spin-pure singlet CSFs, and analytic nuclear gradients and
 Hessians. Ground-program Fock, energy and derivative primitives are reused
 through constrained electronic saddle optimization and implicit response.
-The final screened OO-CID model retains the original frontier space in both
-reflection parities and adds its larger reflection-even valence sector.
-The F/Q weights remain 50/50, the exchange-response scale remains 0.9,
-and no excitation-energy offset is introduced.
+The current candidate combines a spectral-block orbital reference and
+selected screened double excitations with fixed F/Q weights of 50/50,
+exchange-response scale 0.9 and one calibrated bath efficiency,
+$\eta=0.60$. No excitation-energy offset is fitted. Across 26 exposed
+development states in 24 molecules it gives 0.198 eV MAE and 0.446 eV
+maximum error. The twelve $\pi\pi^*$ states give 0.216 eV MAE, compared
+with 1.514 eV for TDA on the same corrected native GFN2 orbitals. For the
+fourteen $n\pi^*$ states, TDA retains the smaller mean error, 0.168 versus
+0.183 eV. These results establish an improvement on this finite
+development ledger, rather than a universal correction of either family.
 
-All seven $\pi\pi^*$ development targets now meet the fixed individual
-accuracy criterion, with 0.180 eV MAE and 0.349 eV maximum error. The thirteen
-$n\pi^*$ controls also remain within 0.5 eV; all twenty states give 0.225 eV
-MAE. These results resolve the previous furan and uracil outliers on this
-finite set. They do not establish universal accuracy: all twenty numerical
-labels were exposed during model development, and the symmetry augmentation
-has been assessed here on planar valence states.
+The prepared surface retains coherent APOC state following and accepted-only
+LINK restarts without a runtime TDA solve, new SCC call or DFT-backend
+import. Complete implicit response differentiates the anchored energy,
+the moving ground projector and the state-interaction eigensystem.
+Independent energy checks support the analytic derivatives; the current
+ethylene full Hessian takes 10.68 s in one two-thread run. Molecular minima
+and physical frequency comparisons from earlier model generations remain
+separate from this corrected candidate's derivative qualifications.
 
-The public surface retains coherent APOC state following and accepted-only
-LINK restarts, and uses the ground-state engine without a runtime TDA or DFT
-calculation. Its analytic response differentiates the defined anchored model,
-including the moving ground projector and all state-interaction terms.
-The initial prospective extension exposes an ethylene outlier. The common
-reference repair with one calibrated bath efficiency, $\eta=0.60$, brings
-all 23 exposed states within 0.5 eV and gives 0.217 eV MAE. This additional
-semiempirical interaction parameter is reported explicitly; no energy offset
-is fitted. A corrected-reference TDA control gives 0.781 eV MAE, with the
-OO accuracy benefit concentrated in $\pi\pi^*$ states. Local reference-geometry changes are small
-within one transported configuration chart; re-selecting the symmetry
-space can cause a discontinuity. Minimum and frequency comparisons for the predecessor are reported
-separately from derivative validation of the corrected candidate. The later
-spectral-block amendment reduces the 26-state development MAE to 0.198 eV
-without retuning $\eta$, and leaves no error above 0.446 eV on this ledger.
-Pigment source structures and preparation are identified separately from
-validated excitations.
-These limits, and the missing broader CT/Rydberg and calibrated-method
-benchmarks, preclude a claim of general predictive accuracy or replacement
-of multi-root TDA spectroscopy.
+Matrix-free orbital stationarity and exact frozen-quadrature XC correction
+extend the numerical implementation to larger native valence spaces. The
+carotene configuration expansion recovers weak $S_1$ below intense $S_2$
+at 2.446 and 2.671 eV on its source geometry, without parameter adjustment.
+The ordering survives successive CI and screening-window expansions,
+although absolute gaps retain active-space sensitivity. Pigment predictions are excluded from the accuracy
+ledger, and their nuclear derivatives are not yet qualified. Full pair
+storage and DFT-reference preparation remain significant costs. Independent
+frozen-label validation, corrected-model equilibrium structures, broader
+CT/Rydberg and nonplanar cases, and matched calibrated sTDA-xTB/DFTB
+comparisons are required before claiming general predictive accuracy or
+replacement of multi-root TDA spectroscopy.
 
 \section*{Data and software availability}
 MOUSE source is hosted at \url{https://github.com/yogibubu/MOUSE}.

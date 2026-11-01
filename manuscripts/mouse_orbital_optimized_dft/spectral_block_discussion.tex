@@ -54,7 +54,9 @@ nor the F/Q weights are retuned for the three added molecules.}
 \label{fig:spectralblocks}
 \end{figure}
 
-\subsection{Larger pigment structures: preparation scope}
+\input{pigment_implementation.tex}
+
+\subsection{Larger pigment structures and a carotene vertical example}
 We select all-trans $\beta$-carotene and chlorophyllide a as larger
 chromophore tests. Chlorophyllide a retains Mg and the conjugated
 substituents while removing the phytyl chain. Figure~\ref{fig:pigmentstructures}
@@ -65,11 +67,54 @@ Raw Gaussian-overlap discrepancies and subsequent numerical metric
 reconciliation are archived separately; agreement after reconciliation is
 $2.5\times10^{-13}$ or better. The one-time PBE0/CAM-B3LYP reference
 preparation uses checkpointed RI-JK calculations on the verified Mac Studio.
-No pigment excitation energy, excited minimum or Hessian is claimed here,
-and these molecules are excluded from the 26-state accuracy pool.
-Nonplanar configuration selection, the distinction between dark and bright
-carotenoid states, and mixing of chlorophyll Q-band targets require explicit
-qualification before extending the model's demonstrated scope.
+The carotene ROKS target converges at 3.518 eV, with orbital KKT residual
+$4.73\times10^{-12}$ and ground-CSF overlap $1.32\times10^{-13}$.
+The initial 15-CSF screened-CID space incorrectly places an intense state
+at 3.269 eV below a weak state at 3.680 eV. We therefore expand the native
+frontier window with all spin-singlet configurations of excitation rank
+at most two, retaining the optimized ROKS configurations. The F/Q weights,
+$\lambda$, $\eta$, geometry and zero offset remain fixed. The resulting
+15, 153, 351 and 703-CSF calculations are reported in
+Figure~\ref{fig:carotenespace}, including the initial ordering.
+
+With five occupied and five virtual frontier orbitals, the first state
+becomes weak (2.561 eV, $f=0.0238$), followed by the intense state
+(2.728 eV, $f=3.127$). Expanding the consistently excluded screening
+window to six occupied and six virtual orbitals changes these values to
+2.550 and 2.728 eV, respectively. With this same screened interaction,
+the six-plus-six CI gives $S_1=2.446$ eV ($f=0.0210$) and
+$S_2=2.671$ eV ($f=3.063$): the second is about 146 times more intense.
+The double-configuration subspace populations are 0.489 and 0.072,
+respectively; the intense state retains native-frontier singlet weight
+0.807. These populations are metric-projector weights, not unique
+configuration probabilities. The 351-CSF principal block is unchanged
+within $3.2\times10^{-13}$ Ha on expansion to 703 CSFs.
+
+This recovers the expected weak-below-intense ordering, while the
+0.103/0.057 eV changes on the last CI expansion show that absolute
+energies are not yet converged. The first state is weak rather than
+strictly forbidden on this source geometry. Room-temperature
+fluorescence-derived $S_1$ energies and solvent absorption maxima are
+different observables and cannot validate these vertical gaps directly.
+The known low-lying dark state motivates the expanded configuration
+space~\cite{Bondarev1994}; pigment absorption data provide experimental
+context~\cite{Clementson2019}. The expansion follows exposure of the
+spectra and is a development test, not blind validation. The
+chlorophyllide frontier calculations are still being qualified.
+Both pigments remain excluded from the 26-state accuracy pool; neither
+excited minima nor pigment nuclear Hessians are reported.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{figures/beta_carotene_state_ordering.pdf}
+\caption{Recovery of weak $S_1$ below intense $S_2$ through configuration
+expansion, without parameter adjustment. Each group shows energy-ordered
+roots; colors do not assert continuous root identity. The screening
+exclusion window $W$ is specified separately from the CI window.
+The comparison at fixed $W=6$ isolates CI expansion. Intensities use a
+logarithmic scale. These are vertical calculations on the same unoptimized
+source structure, excluded from the small-molecule accuracy ledger.}
+\label{fig:carotenespace}
+\end{figure}
 
 \begin{figure}[p]\centering
 \includegraphics[width=.92\linewidth,height=.80\textheight,keepaspectratio]{figures/pigment_test_structures_jmol.pdf}

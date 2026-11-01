@@ -12,11 +12,11 @@ All 26 states in 24 molecules meet the individual 0.5 eV criterion. Matched TDA 
 
 The three added molecules are cyclopropene, cyclopentadiene and pyrrole. Their original fixed-model predictions were archived before numerical reference extraction. The pyrrole discrepancy motivated a generic spectral-block amendment, applied to every unresolved orbital of every molecule. Pyrrole now gives 6.302 eV versus 6.247 eV, with no retuning of eta. All 26 labels are exposed: this is **not blind validation or a universal-accuracy claim**. Eta was calibrated only on furan V010 and furofuran C002. Original 20- and 23-state generations and their predictions remain separately archived; earlier physical minima are not assigned to the latest candidate.
 
-Beta-carotene and chlorophyllide a (with Mg and conjugated substituents, without phytyl chain) have source structures, Jmol renders, native ground checkpoints and certified s/p/d embeddings. One-time DFT reference preparation is running on MAC-STUDIO with resumable checkpoints. Pigment excitation energies are not yet validated, and pigments are excluded from the 26-state pool.
+Beta-carotene and chlorophyllide a (with Mg and conjugated substituents, without phytyl chain) have source structures, Jmol renders, native ground checkpoints and certified s/p/d embeddings. One-time PBE0/CAM reference preparations are completed on MAC-STUDIO. For beta-carotene, expanding the spin-singlet rank-two CI to 703 configurations recovers weak S1 (2.446 eV, f=0.0210) below intense S2 (2.671 eV, f=3.063), without retuning 50/50, lambda=0.9, eta=0.60 or an offset. The ordering survives five/six-orbital CI and screening windows; absolute gaps remain active-space sensitive. Chlorophyllide frontier stationarity is still being qualified. Pigments remain excluded from the 26-state pool. Their runtime quadrature adapter supports vertical energies/orbital response and explicitly rejects nuclear derivatives.
 
 ## Read
 
-- `main.pdf` / `main.tex`: current 18-page method manuscript, with Levi's saddle-optimization motivation and positioning relative to Grimme's simplified response methods and other semiempirical alternatives.
+- `main.pdf` / `main.tex`: current method manuscript, with Levi's saddle-optimization motivation and positioning relative to Grimme's simplified response methods and other semiempirical alternatives.
 - `supporting_information.pdf`: complete original, corrected 23-state and current 26-state tables and separately identified earlier-model evidence.
 - `data/screened_cid/`: final predictions, aggregate scores, derivative certificates and Jmol coordinate/render checksums.
 - `figures/screened_cid_validation.pdf`: all seven pi-to-pi* targets and thirteen controls, before/after the new construction.
@@ -51,6 +51,7 @@ python make_screened_workflow.py
 python make_ethylene_repair_assets.py
 python make_spectral_block_assets.py
 python make_pigment_structure_plate.py
+python make_carotene_ordering_assets.py
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 latexmk -pdf -interaction=nonstopmode -halt-on-error supporting_information.tex
 ```
@@ -62,3 +63,7 @@ Historical asset scripts rebuild earlier generations and should not overwrite th
 The candidate choice is frozen in `2d59ab8`; the public response is `81897cf`; exact contraction/metric acceleration is `e572d50`; final molecular/runtime qualification is `358ae21`, with complete logs in `7c5c7f9`.
 
 The associated repository archive `qualification/pi_pi_transfer_repair_20261101` retains 981 verified transferred artifacts, 21 matching public implementation files, three portable numerical examples and the full remote inventory. Electronic calculations ran only on verified Oracle or MAC-STUDIO. The laptop performed orchestration, file checks, editing, plotting and PDF review.
+
+The pigment implementation uses full-quadrature analytic orbital Hessian actions with an RI preconditioner, cached constraint cofactors, common-core/active-only integral transformations and exact fixed-bra contractions. `data/pigments/ordering_summary.json` and `figures/beta_carotene_state_ordering.pdf` retain the complete configuration-space sequence; executable qualification and compact matrices are in `qualification/closing_validation_20261101/results/pigments/`. The final affected regressions (15 tests), six-active-electron fixed-bra checks and small-molecule analytic response controls pass on MAC-STUDIO. Reference preparation, screening, loading and runtime CI costs must be reported separately; no all-inclusive speedup over TDA is established.
+
+Implementation, exact accelerations and archived carotene matrices: commit `3d04cc5` (on top of `d05afa6`).
