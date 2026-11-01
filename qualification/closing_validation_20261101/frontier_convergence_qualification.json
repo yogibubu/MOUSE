@@ -7,7 +7,7 @@
     5
   ],
   "iterative_selected_root_error_ev": 1.9334852827049077e-12,
-  "iterative_wall_seconds": 0.2482515419833362,
+  "iterative_wall_seconds": 0.24944654200226068,
   "iterative_certificate": {
     "method": "ARPACK with exact sparse metric inverse and rank-one ground projection",
     "roots": 20,
@@ -29,7 +29,8 @@
   },
   "projector_population_error": 1.9984014443252818e-15,
   "canonical_transition_max_error": 0.0,
-  "archived_pigment_transition_max_error_au": 7.44737604918555e-13,
+  "corrected_pigment_transition_max_error_au": 0.0,
+  "legacy_transition_phase_difference_au": 14.142780722792187,
   "projected_selected_root_energy_error_ev": 1.546788226163926e-12,
   "minimum_squared_old_new_overlap": 0.9999999999999925,
   "parameters_changed": false

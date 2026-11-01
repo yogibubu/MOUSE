@@ -20,6 +20,6 @@ with threadpool_limits(2):
  for filename in ['validate_fixed_bra.py','validate_pigment_solver_primitives.py','validate_matrix_free_roks.py','validate_density_pair_chart.py','validate_exact_quadrature.py']:
   print('QUALIFY',filename,flush=True);subprocess.run(['/Users/vincenzobarone/.venvs/matrix/bin/python',str(HERE/filename)],cwd=HERE,check=True,env=dict(os.environ,VECLIB_MAXIMUM_THREADS='2'))
  import pytest
- paths=[str(BASE/'source/qualification'/filename) for filename in ['test_nosi_contracts.py','test_state_interaction.py','test_screened_cid.py']];status=pytest.main(['-q']+paths+[str(HERE/'test_target_subspace.py')]);assert status==0
- report=dict(host=socket.getfqdn(),Slater_cache_max_error=error,affected_regressions_passed=True,pytest_status=int(status),pytest_tests=17,wall_seconds=time.monotonic()-start,nuclear_Hessian_regression='Complete ethylene analytic Hessian; equivalent complete density chart',pigment_derivative_scope='Vertical energy and orbital response only')
+ paths=[str(BASE/'source/qualification'/filename) for filename in ['test_nosi_contracts.py','test_state_interaction.py','test_screened_cid.py']];status=pytest.main(['-q']+paths+[str(HERE/'test_target_subspace.py'),str(HERE/'test_pigment_phase.py')]);assert status==0
+ report=dict(host=socket.getfqdn(),Slater_cache_max_error=error,affected_regressions_passed=True,pytest_status=int(status),pytest_tests=20,wall_seconds=time.monotonic()-start,nuclear_Hessian_regression='Complete ethylene analytic Hessian; equivalent complete density chart',pigment_derivative_scope='Vertical energy and orbital response only')
  (HERE/'pigment_runtime_qualification.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2),flush=True)

@@ -12,7 +12,7 @@ from ._nosi_configurations import basis as configuration_basis,common_core_and_a
 from ._nosi_canonical import block as canonical_block
 
 class MatrixResponse:
-    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True,auxiliary_records=None,scalar_elements=None,scalar_checkpoint=None,fixed_bra=False):
+    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True,auxiliary_records=None,scalar_elements=None,scalar_checkpoint=None,fixed_bra=False,coulomb_factors=None):
         if derivatives and getattr(context,'vertical_only',False):raise NotImplementedError('this quadrature adapter supports vertical energies only')
         self.context=context;self.s=context.state;self.reference=reference;self.no=context.state.electron_count//2
         self.nr=context.state.coordinates_bohr.size if derivatives else 0;self.labels=list(labels)
@@ -20,7 +20,7 @@ class MatrixResponse:
         self.auxiliary_records=auxiliary_records
         self.scalar_elements={} if scalar_elements is None else scalar_elements
         self.scalar_checkpoint=scalar_checkpoint
-        self.scalar=Hamiltonian(self.h,self.w);self.constant_elements={};self.spin_map=np.zeros((4,4,2,2))
+        self.scalar=Hamiltonian(self.h,self.w);self.scalar.coulomb_factors=coulomb_factors;self.constant_elements={};self.spin_map=np.zeros((4,4,2,2))
         self.fixed_bra=None;self.canonical_block=None
         for i in range(4):
             for j in range(4):

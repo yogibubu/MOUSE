@@ -22,6 +22,7 @@ with threadpool_limits(2):
    eri=rng.normal(size=(n,)*4);eri=.5*(eri+eri.transpose(2,3,0,1));eri=.5*(eri+eri.transpose(1,0,3,2));ham=Hamiltonian(h,eri)
   for spin in range(2):
    k=.1*rng.normal(size=(n,n));rotations.append(expm(k-k.T)[:,:no])
+  if not general:ham.coulomb_factors=(factors.reshape(25,-1),factors.reshape(25,-1))
   for same_spin in [False,True]:
    bra=tuple(rotations) if not same_spin else (rotations[0],rotations[0]);engine=FixedBra(ham,bra,core,active);error=0.
    occupations=[indices for indices in itertools.combinations(range(n-nc),no-nc) if sum(j>=no-nc for j in indices)<=2];ids=rng.integers(len(occupations),size=(12,2));start=time.monotonic()

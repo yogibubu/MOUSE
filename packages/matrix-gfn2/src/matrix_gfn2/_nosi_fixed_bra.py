@@ -50,7 +50,8 @@ class FixedBra:
         features=np.concatenate(features)
         # Only simultaneous pair transposition is required, as in the
         # parent Hamiltonian contract; separate pair symmetry is unnecessary.
-        self.integrals=(features@hamiltonian.j)@features.T
+        factors=getattr(hamiltonian,'coulomb_factors',None)
+        self.integrals=((features@factors[0].T)@(factors[1]@features.T) if factors is not None else (features@hamiltonian.j)@features.T)
         self.one=features@hamiltonian.h.T.ravel()
         self.j_fields=[features@sector['j'] for sector in self.sectors]
         self.same_fields=[features@sector['jk'] for sector in self.sectors]

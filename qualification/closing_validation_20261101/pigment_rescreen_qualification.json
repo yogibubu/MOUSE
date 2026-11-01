@@ -1,0 +1,18 @@
+{
+  "native_functional_values_reused": true,
+  "screened_operator_recomputed": true,
+  "maximum_metric_identity_error": 3.97015753605956e-13,
+  "canonical_block": {
+    "compiled_integer_kernel": true,
+    "determinants": 23,
+    "csfs": 12,
+    "active_orbitals": 4,
+    "closed_core_orbitals": 106
+  },
+  "host": "mac-2.homenet.telecomitalia.it",
+  "Hamiltonian_error_hartree": 1.9397816686250735e-11,
+  "metric_error": 0.0,
+  "reference": "Archived full native-functional CI matrix",
+  "DFT_imports": 0,
+  "new_SCC_calls": 0
+}

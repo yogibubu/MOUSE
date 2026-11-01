@@ -62,7 +62,8 @@ with threadpool_limits(8):
   if rec['kind']=='open':
    holes=[i for i in range(no) if i not in rec['closed']]
    if len(holes)==1 and rec['open'][0]==holes[0] and rec['open'][1]>=no:transition[len(retained)+j]=2**.5*mu_mo[:,holes[0],rec['open'][1]]
- with np.load(folder/'eigenstates.npz') as a:moment_error=float(np.max(abs(oldci.T@transition-a['transition_dipoles'][:20])))
+ with np.load(folder/'eigenstates.npz') as a:legacy_moment_difference=float(np.max(abs(oldci.T@transition-a['transition_dipoles'][:20])))
+ with np.load(folder/'observables_phase_corrected.npz') as a:moment_error=float(np.max(abs(oldci.T@transition-a['transition_dipoles'][:20])))
  assert moment_error<1e-8,moment_error
  nbase=len(retained);indices=list(range(1+len(ys),nbase))
  for j,rec in enumerate(records):
@@ -71,5 +72,5 @@ with threadpool_limits(8):
  population=np.sum(cross*cho_solve(cho_factor(gram,lower=True),cross),axis=0)
  previous=json.loads((folder/'analysis.json').read_text());population_error=float(np.max(abs(population-np.array([r['double_subspace_weight'] for r in previous['states'][:20]]))))
  assert population_error<1e-9,population_error
- report=dict(host=socket.getfqdn(),enumeration_identical_frontiers=[2,3,4,5],iterative_selected_root_error_ev=ar_error,iterative_wall_seconds=ar_wall,iterative_certificate=ar_cert,metric_certificate=metric_cert,Schur_metric_certificate=border_cert,projector_population_error=population_error,canonical_transition_max_error=error,archived_pigment_transition_max_error_au=moment_error,projected_selected_root_energy_error_ev=ee,minimum_squared_old_new_overlap=ov,parameters_changed=False)
+ report=dict(host=socket.getfqdn(),enumeration_identical_frontiers=[2,3,4,5],iterative_selected_root_error_ev=ar_error,iterative_wall_seconds=ar_wall,iterative_certificate=ar_cert,metric_certificate=metric_cert,Schur_metric_certificate=border_cert,projector_population_error=population_error,canonical_transition_max_error=error,corrected_pigment_transition_max_error_au=moment_error,legacy_transition_phase_difference_au=legacy_moment_difference,projected_selected_root_energy_error_ev=ee,minimum_squared_old_new_overlap=ov,parameters_changed=False)
  write(HERE/'frontier_convergence_qualification.json',report);print(json.dumps(report),flush=True)
