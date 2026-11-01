@@ -63,16 +63,23 @@ def run(item,m):
   oh=sector(hs,no);ov=sector(ps,n-no);wh=np.sum(oh**2,axis=1);wp=np.sum(ov**2,axis=1);ex=np.clip(1-wh[:,None]*wp[None,:],0,1)
   ii=np.repeat(np.arange(no),n-no);aa=np.tile(np.arange(no,n),no);fg,_=ctx.fock_and_energy(np.array([co@co.T]*2));levels=np.diag(c.T@fg[0]@c);gap=levels[aa]-levels[ii];valid=ex.ravel()>1e-10;ii=ii[valid];aa=aa[valid];gap=gap[valid]
   transition=np.einsum('pi,qi->ipq',y[:,ii],y[:,aa]);transition+=transition.transpose(0,2,1).copy();t=transition.reshape(len(transition),-1).T*np.sqrt(ex.ravel()[valid])[None,:];v=d['eri'].reshape(n*n,n*n);vt=v@t;w=v-vt@solve(np.diag(gap)+t.T@vt,vt.T,assume_a='pos');w=.5*(w+w.T);w=w.reshape((n,)*4);pg=2*y[:,:no]@y[:,:no].T;h=normal_ordered_one_body(w,d['si']@fg[0]@d['si'],pg);np.savez_compressed(op,h=h,eri=w)
- ham=Hamiltonian(h,w);matrix=np.zeros((len(basis),)*2);metric=np.zeros_like(matrix)
- for i in range(len(basis)):
+ ham=Hamiltonian(h,w);matrix=np.zeros((len(basis),)*2);metric=np.zeros_like(matrix);completed=0
+ partial=out/'matrix_partial.npz';fingerprint=sha(__file__)+sha(op)
+ if partial.exists():
+  with np.load(partial) as z:
+   assert str(z['fingerprint'])==fingerprint,'partial matrix belongs to another source/operator'
+   matrix=z['matrix'].copy();metric=z['metric'].copy();completed=int(z['completed'])
+ for i in range(completed,len(basis)):
   for j in range(i+1):ov,value=ham.csf(basis[i],basis[j]);metric[i,j]=metric[j,i]=ov;matrix[i,j]=matrix[j,i]=value
+  if i%5==0 or i==len(basis)-1:
+   np.savez_compressed(out/'matrix_partial.tmp.npz',matrix=matrix,metric=metric,completed=i+1,fingerprint=fingerprint);(out/'matrix_partial.tmp.npz').replace(partial)
  matrix-=matrix[0,0]*metric;residual=np.array(diagonal)/np.diag(metric)-np.diag(matrix)/np.diag(metric);matrix+=.5*metric*(residual[:,None]+residual[None,:])
  for start,block in four_blocks:matrix[start:start+2,start:start+2]=block
  old=d['old'];rows=json.loads((old/'result.json').read_text())['predictions']
  with np.load(old/'checkpoint.npz') as z:ref=np.column_stack([z['coefficients'][:,r['root']] for r in rows])
  pad=np.zeros((len(basis),len(rows)));pad[:len(ref)]=ref;primary,e,v=spectrum(matrix,metric,pad,rows,True)
  np.savez_compressed(out/'checkpoint.npz',matrix=matrix,metric=metric,energies=e,coefficients=v)
- write(out/'result.json',dict(primary=primary,labels=labels,active_holes=holes,active_particles=particles,added_records=records,weights=[.5,.5],lambda_exchange=.9,offset_ev=0));print(name,m,len(basis),primary['predictions'],flush=True)
+ write(out/'result.json',dict(primary=primary,labels=labels,active_holes=holes,active_particles=particles,added_records=records,source_sha256=sha(__file__),operator_sha256=sha(op),weights=[.5,.5],lambda_exchange=.9,offset_ev=0));print(name,m,len(basis),primary['predictions'],flush=True)
 if __name__=='__main__':
  import argparse
  parser=argparse.ArgumentParser();parser.add_argument('--molecule');parser.add_argument('--active',type=int,default=3);args=parser.parse_args()

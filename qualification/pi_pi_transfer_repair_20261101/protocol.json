@@ -44,5 +44,16 @@
       "regression": "At m=2 reproduce the completed constrained-screened selected-CID Furan result before running m=3.",
       "selection": "One common active size for every molecule; no per-molecule choice and no nuclear derivative claim before completing the new response algebra."
     }
-  ]
+  ],
+  "active_space_convergence": {
+    "sequence": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "rule": "Apply a common active size to all states, with complete rank-two singlet CSFs and matching environmental exclusion. Inspect basis completeness, not molecular offsets. No state-family-dependent Hamiltonian.",
+    "production_promotion": "Requires all seven pi states and thirteen n-pi controls, exact fast-matrix regression, spin identity, analytic derivative validation and portable runtime before a completion claim.",
+    "acceleration": "Replace only the canonical auxiliary Slater-Condon block by exact frozen-core occupation-bitstring algebra. Keep nonorthogonal optimized-state cross terms and every original functional diagonal. Compare to the independent Schur/cofactor code before use."
+  }
 }
