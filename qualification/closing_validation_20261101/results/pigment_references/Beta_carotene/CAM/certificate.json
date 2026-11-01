@@ -1,0 +1,17 @@
+{
+  "molecule": "Beta_carotene",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "xc": "CAM-B3LYP",
+  "basis": "aug-cc-pVDZ",
+  "auxiliary_basis": "def2-universal-jkfit",
+  "density_fitting": true,
+  "nao": 1424,
+  "electrons": 296,
+  "energy_hartree": -1557.057551522059,
+  "wall_seconds": 1534.7438320830115,
+  "geometry_sha256": "5bd7714938e3eaaf3fe50dfb5f0af139ba307971bc228246d319381ab661b71c",
+  "reference_sha256": "0b8ca118be32966bac67dfe890d0d2dd50b433d8c64c9427d9a1f9bf2e339867",
+  "converged": true,
+  "excitation_energies_read": false,
+  "geometry_status": "Fixed source starting geometry; not an optimized MOUSE geometry"
+}

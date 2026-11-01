@@ -9,7 +9,10 @@ for name in ['Beta_carotene','Chlorophyllide_a']:
  for label in ['PBE0','CAM']:
   r=P/'pigment_dft_reference'/name/label;cert=r/'certificate.json';progress=r/'progress.json'
   row['references'][label]=dict(converged_reference_exists=(r/'reference.npz').exists(),restart_checkpoint_exists=(r/'backend.chk').exists(),progress=json.loads(progress.read_text()) if progress.exists() else None,certificate=json.loads(cert.read_text()) if cert.exists() else None)
+ embedding=P/'pigment_embedding'/name
+ row['compact_embedding_certificate']=json.loads((embedding/'certificate.json').read_text()) if (embedding/'certificate.json').exists() else None
+ row['compact_embedding_status']=json.loads((embedding/'status.json').read_text()) if (embedding/'status.json').exists() else None
  report['pigments'].append(row)
-report['sources']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [P/n for n in ['pigment_dft_reference.py','pigment_preflight.py','gaussian_embedding_basis.py','check_pigment_basis.py']]}
+report['sources']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [P/n for n in ['pigment_dft_reference.py','pigment_preflight.py','gaussian_embedding_basis.py','check_pigment_basis.py','pigment_reference_embedding.py']]}
 (P/'pigment_status.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({r['name']:r['references'] for r in report['pigments']},indent=2))

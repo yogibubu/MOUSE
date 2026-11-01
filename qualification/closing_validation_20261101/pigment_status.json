@@ -1,5 +1,5 @@
 {
-  "captured_utc": "2026-11-01T18:41:41.871014+00:00",
+  "captured_utc": "2026-11-01T19:35:46.577334+00:00",
   "host": "mac-2.homenet.telecomitalia.it",
   "pigments": [
     {
@@ -43,23 +43,106 @@
       "native_checkpoint_sha256": "db18fe54631aa9620d01af6182740db04d03dee7390c5b66f0251f713fee6933",
       "references": {
         "PBE0": {
-          "converged_reference_exists": false,
+          "converged_reference_exists": true,
           "restart_checkpoint_exists": true,
           "progress": {
-            "cycle": 5,
-            "energy_hartree": -1556.1455520074314,
-            "gradient_norm": 0.006580255782679358,
-            "density_norm": 0.2745407317838665,
-            "elapsed_seconds": 660.8949223340023
+            "cycle": 17,
+            "energy_hartree": -1556.1455638925736,
+            "gradient_norm": 6.791930024154241e-08,
+            "density_norm": 1.8774790158552308e-06,
+            "elapsed_seconds": 1652.994622334023
           },
-          "certificate": null
+          "certificate": {
+            "molecule": "Beta_carotene",
+            "host": "mac-2.homenet.telecomitalia.it",
+            "xc": "PBE0",
+            "basis": "aug-cc-pVDZ",
+            "auxiliary_basis": "def2-universal-jkfit",
+            "density_fitting": true,
+            "nao": 1424,
+            "electrons": 296,
+            "energy_hartree": -1556.1455638925672,
+            "wall_seconds": 1734.101385749993,
+            "geometry_sha256": "5bd7714938e3eaaf3fe50dfb5f0af139ba307971bc228246d319381ab661b71c",
+            "reference_sha256": "cb484d7c77ad6cdc39744eb866a65e573c28d5554841c947788b5847e81f32d0",
+            "converged": true,
+            "excitation_energies_read": false,
+            "geometry_status": "Fixed source starting geometry; not an optimized MOUSE geometry"
+          }
         },
         "CAM": {
-          "converged_reference_exists": false,
-          "restart_checkpoint_exists": false,
-          "progress": null,
-          "certificate": null
+          "converged_reference_exists": true,
+          "restart_checkpoint_exists": true,
+          "progress": {
+            "cycle": 14,
+            "energy_hartree": -1557.0575515220698,
+            "gradient_norm": 5.9366380190975674e-08,
+            "density_norm": 2.825468773588313e-06,
+            "elapsed_seconds": 1451.798397125036
+          },
+          "certificate": {
+            "molecule": "Beta_carotene",
+            "host": "mac-2.homenet.telecomitalia.it",
+            "xc": "CAM-B3LYP",
+            "basis": "aug-cc-pVDZ",
+            "auxiliary_basis": "def2-universal-jkfit",
+            "density_fitting": true,
+            "nao": 1424,
+            "electrons": 296,
+            "energy_hartree": -1557.057551522059,
+            "wall_seconds": 1534.7438320830115,
+            "geometry_sha256": "5bd7714938e3eaaf3fe50dfb5f0af139ba307971bc228246d319381ab661b71c",
+            "reference_sha256": "0b8ca118be32966bac67dfe890d0d2dd50b433d8c64c9427d9a1f9bf2e339867",
+            "converged": true,
+            "excitation_energies_read": false,
+            "geometry_status": "Fixed source starting geometry; not an optimized MOUSE geometry"
+          }
         }
+      },
+      "compact_embedding_certificate": {
+        "molecule": "Beta_carotene",
+        "host": "mac-2.homenet.telecomitalia.it",
+        "input_sha256": {
+          "native_ground": "db18fe54631aa9620d01af6182740db04d03dee7390c5b66f0251f713fee6933",
+          "PBE0": "cb484d7c77ad6cdc39744eb866a65e573c28d5554841c947788b5847e81f32d0",
+          "CAM": "0b8ca118be32966bac67dfe890d0d2dd50b433d8c64c9427d9a1f9bf2e339867"
+        },
+        "output_sha256": "6413f6fc7cb37d583e672b04520aab95caa63cecd0b7d6dbca85fd7c1c425b19",
+        "native_orbitals": 216,
+        "frozen_core_orbitals": 40,
+        "embedding_overlap_max_error": 2.5635049638594865e-13,
+        "core_overlap_max_error": 8.848380791092455e-15,
+        "basis_reconstruction": {
+          "reconstruction": "explicit_normalized_cartesian_spd",
+          "primitive_AO_max_error": 1.6653345369377348e-16,
+          "raw_overlap_max_error": 0.000512218518034676,
+          "metric_calibration": true,
+          "metric_calibration_operator_norm": 0.0010053320305754637,
+          "corrected_overlap_max_error": 2.48245868306185e-13,
+          "minimum_raw_overlap_eigenvalue": 0.29077147280732796,
+          "minimum_native_overlap_eigenvalue": 0.2908426388135188
+        },
+        "references": {
+          "PBE0": {
+            "projected_fock_asymmetry": 1.1102230246251565e-16,
+            "spectral_norm_max_error": 4.953815135877448e-13,
+            "full_retained_MOs": 1418
+          },
+          "CAM": {
+            "projected_fock_asymmetry": 1.1102230246251565e-16,
+            "spectral_norm_max_error": 4.923839114212569e-13,
+            "full_retained_MOs": 1418
+          }
+        },
+        "new_SCC_calls": 0,
+        "new_DFT_SCF_calls": 0,
+        "excitation_labels_read": false,
+        "status": "Native embedding and projected reference operators complete; OO response and state calculations still required"
+      },
+      "compact_embedding_status": {
+        "pid": 11331,
+        "status": "Complete",
+        "certificate": "certificate.json"
       }
     },
     {
@@ -103,24 +186,48 @@
       "native_checkpoint_sha256": "a9fbe7674696af9bc6b765a046b323c7735c900005c2e39197650298a0bffc28",
       "references": {
         "PBE0": {
+          "converged_reference_exists": true,
+          "restart_checkpoint_exists": true,
+          "progress": {
+            "cycle": 24,
+            "energy_hartree": -2147.0586426293457,
+            "gradient_norm": 8.393531468742329e-08,
+            "density_norm": 2.8672338577179275e-06,
+            "elapsed_seconds": 3090.5066911249887
+          },
+          "certificate": {
+            "molecule": "Chlorophyllide_a",
+            "host": "mac-2.homenet.telecomitalia.it",
+            "xc": "PBE0",
+            "basis": "aug-cc-pVDZ",
+            "auxiliary_basis": "def2-universal-jkfit",
+            "density_fitting": true,
+            "nao": 1345,
+            "electrons": 324,
+            "energy_hartree": -2147.0586426293194,
+            "wall_seconds": 3203.2906872079475,
+            "geometry_sha256": "3aa59de1260b3257545781c3486c3b108a66d1b26440da8bd45a832f21f6b13c",
+            "reference_sha256": "4f1cd70f37fd91e2159a896106361f9ef102c39fe90220bb3789beaf2603ee0e",
+            "converged": true,
+            "excitation_energies_read": false,
+            "geometry_status": "Fixed source starting geometry; not an optimized MOUSE geometry"
+          }
+        },
+        "CAM": {
           "converged_reference_exists": false,
           "restart_checkpoint_exists": true,
           "progress": {
             "cycle": 3,
-            "energy_hartree": -2147.0413490285973,
-            "gradient_norm": 0.24233292549155394,
-            "density_norm": 5.3592664959050795,
-            "elapsed_seconds": 679.3366172909737
+            "energy_hartree": -2148.362110713034,
+            "gradient_norm": 0.007938901433858442,
+            "density_norm": 0.19211976475299244,
+            "elapsed_seconds": 732.3346212499891
           },
           "certificate": null
-        },
-        "CAM": {
-          "converged_reference_exists": false,
-          "restart_checkpoint_exists": false,
-          "progress": null,
-          "certificate": null
         }
-      }
+      },
+      "compact_embedding_certificate": null,
+      "compact_embedding_status": null
     }
   ],
   "accuracy_pool_member": false,
@@ -128,6 +235,7 @@
     "pigment_dft_reference.py": "0dd3ec4b0b64b3bc3f8b91aa43c144e657d5d6f6d3239dc2c62ae0c696c2a5c8",
     "pigment_preflight.py": "9683896ba61baf05ead38f13bd222f474acbefa368a701e5a149b184e00b0f25",
     "gaussian_embedding_basis.py": "e5d9f65687c2373733799b390691e2cc183257399fd40a96189d62be3f80abb4",
-    "check_pigment_basis.py": "0902cf6f2bd03826945fe28577b2a053a05ca01f609a00e60045893c656f09b0"
+    "check_pigment_basis.py": "0902cf6f2bd03826945fe28577b2a053a05ca01f609a00e60045893c656f09b0",
+    "pigment_reference_embedding.py": "245e361ff9ca18fbf972e0d7aa6b460fb5fd9e34c24f8d5a17622ff22375c747"
   }
 }

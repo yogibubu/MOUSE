@@ -1,0 +1,40 @@
+{
+  "molecule": "Beta_carotene",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "input_sha256": {
+    "native_ground": "db18fe54631aa9620d01af6182740db04d03dee7390c5b66f0251f713fee6933",
+    "PBE0": "cb484d7c77ad6cdc39744eb866a65e573c28d5554841c947788b5847e81f32d0",
+    "CAM": "0b8ca118be32966bac67dfe890d0d2dd50b433d8c64c9427d9a1f9bf2e339867"
+  },
+  "output_sha256": "6413f6fc7cb37d583e672b04520aab95caa63cecd0b7d6dbca85fd7c1c425b19",
+  "native_orbitals": 216,
+  "frozen_core_orbitals": 40,
+  "embedding_overlap_max_error": 2.5635049638594865e-13,
+  "core_overlap_max_error": 8.848380791092455e-15,
+  "basis_reconstruction": {
+    "reconstruction": "explicit_normalized_cartesian_spd",
+    "primitive_AO_max_error": 1.6653345369377348e-16,
+    "raw_overlap_max_error": 0.000512218518034676,
+    "metric_calibration": true,
+    "metric_calibration_operator_norm": 0.0010053320305754637,
+    "corrected_overlap_max_error": 2.48245868306185e-13,
+    "minimum_raw_overlap_eigenvalue": 0.29077147280732796,
+    "minimum_native_overlap_eigenvalue": 0.2908426388135188
+  },
+  "references": {
+    "PBE0": {
+      "projected_fock_asymmetry": 1.1102230246251565e-16,
+      "spectral_norm_max_error": 4.953815135877448e-13,
+      "full_retained_MOs": 1418
+    },
+    "CAM": {
+      "projected_fock_asymmetry": 1.1102230246251565e-16,
+      "spectral_norm_max_error": 4.923839114212569e-13,
+      "full_retained_MOs": 1418
+    }
+  },
+  "new_SCC_calls": 0,
+  "new_DFT_SCF_calls": 0,
+  "excitation_labels_read": false,
+  "status": "Native embedding and projected reference operators complete; OO response and state calculations still required"
+}
