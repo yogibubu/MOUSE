@@ -5,1977 +5,1977 @@
     {
       "root": 1,
       "excitation_ev": 2.8388128921613776,
-      "oscillator_strength": 1.378367702572168,
+      "oscillator_strength": 2.1153273584878898,
       "transition_dipole_au": [
-        -4.359972861777298,
-        -0.8617429031401971,
-        0.2578979854951872
+        5.479738542263932,
+        0.46292401616857387,
+        -0.41570576269506715
       ],
       "retained_subspace_weight": 0.3129898299634277,
-      "native_frontier_subspace_weight": 0.3190386284967778,
+      "native_frontier_subspace_weight": 0.319038628496895,
       "selected": false
     },
     {
       "root": 2,
       "excitation_ev": 2.859962003503646,
-      "oscillator_strength": 1.9702637376872716,
+      "oscillator_strength": 3.659780309876097,
       "transition_dipole_au": [
-        5.191747476797724,
-        1.0391333512146033,
-        -0.292161849320906
+        -7.178591817917086,
+        -0.626218260378789,
+        0.554682796131063
       ],
       "retained_subspace_weight": 0.5221896548346384,
-      "native_frontier_subspace_weight": 0.504245198183147,
+      "native_frontier_subspace_weight": 0.5042451981830429,
       "selected": true
     },
     {
       "root": 3,
       "excitation_ev": 3.406599273404751,
-      "oscillator_strength": 0.0169094994583441,
+      "oscillator_strength": 0.0768994134929286,
       "transition_dipole_au": [
-        -0.41874462121153144,
-        0.16384225017995718,
-        0.02035546364145362
+        0.8947064125454314,
+        0.34066503116460717,
+        -0.06956033805977221
       ],
       "retained_subspace_weight": 0.009356854411972731,
-      "native_frontier_subspace_weight": 0.0056846839093768215,
+      "native_frontier_subspace_weight": 0.005684683909377123,
       "selected": false
     },
     {
       "root": 4,
       "excitation_ev": 3.873894791242558,
-      "oscillator_strength": 0.007031683395586848,
+      "oscillator_strength": 0.006437793193808548,
       "transition_dipole_au": [
-        0.040724604174006314,
-        0.24628835318816858,
-        -0.10850114741652006
+        -0.02457252086444567,
+        0.23749775579020277,
+        -0.1040310581663148
       ],
       "retained_subspace_weight": 1.3127167709642477e-05,
-      "native_frontier_subspace_weight": 1.4049687619709475e-05,
+      "native_frontier_subspace_weight": 1.4049687619583042e-05,
       "selected": false
     },
     {
       "root": 5,
       "excitation_ev": 4.196552594453574,
-      "oscillator_strength": 0.005113968546238219,
+      "oscillator_strength": 0.001944562172163139,
       "transition_dipole_au": [
-        0.15476222717223448,
-        0.13658182193962898,
-        -0.08446439403925851
+        0.0013900037279044005,
+        0.1159341522676838,
+        -0.07396488848076953
       ],
       "retained_subspace_weight": 6.250568941209318e-05,
-      "native_frontier_subspace_weight": 7.751254118524634e-05,
+      "native_frontier_subspace_weight": 7.751254118542009e-05,
       "selected": false
     },
     {
       "root": 6,
       "excitation_ev": 4.560384571717946,
-      "oscillator_strength": 2.412172677846206,
+      "oscillator_strength": 0.07110445090769651,
       "transition_dipole_au": [
-        -4.618596515936504,
-        -0.1153541017034205,
-        0.49504670069385814
+        -0.6405031166684425,
+        0.4201950126500958,
+        0.22271568260139385
       ],
       "retained_subspace_weight": 0.06632252891783229,
-      "native_frontier_subspace_weight": 0.05214690035530306,
+      "native_frontier_subspace_weight": 0.052146900355299626,
       "selected": false
     },
     {
       "root": 7,
       "excitation_ev": 4.622858416144247,
-      "oscillator_strength": 0.01649996307365423,
+      "oscillator_strength": 0.00022908760196365186,
       "transition_dipole_au": [
-        0.3750468346901291,
-        0.05047995818758172,
-        -0.04976411291685557
+        0.03597683959914341,
+        0.004832805808433053,
+        -0.026552169983405326
       ],
       "retained_subspace_weight": 0.0005756661484823838,
-      "native_frontier_subspace_weight": 0.000378841256064105,
+      "native_frontier_subspace_weight": 0.0003788412560665944,
       "selected": false
     },
     {
       "root": 8,
       "excitation_ev": 4.783799062889342,
-      "oscillator_strength": 0.5372353131337442,
+      "oscillator_strength": 0.4833114426049788,
       "transition_dipole_au": [
-        -1.2644084915152072,
-        1.7275371152693844,
-        0.02774772396464042
+        0.5023504725090286,
+        1.9653862815637462,
+        -0.09320048390927148
       ],
       "retained_subspace_weight": 0.01455169635526826,
-      "native_frontier_subspace_weight": 0.010285683459799659,
+      "native_frontier_subspace_weight": 0.010285683459801019,
       "selected": false
     },
     {
       "root": 9,
       "excitation_ev": 4.960708171243115,
-      "oscillator_strength": 0.006749187514037619,
+      "oscillator_strength": 0.0022374724726718824,
       "transition_dipole_au": [
-        0.21101323646548634,
-        -0.1047067200569498,
-        0.006537470674100729
+        -0.005630312809221975,
+        -0.13387226477887826,
+        0.02136838398246255
       ],
       "retained_subspace_weight": 2.600875777409546e-05,
-      "native_frontier_subspace_weight": 0.00015465717469147105,
+      "native_frontier_subspace_weight": 0.0001546571746876325,
       "selected": false
     },
     {
       "root": 10,
       "excitation_ev": 5.143502993531907,
-      "oscillator_strength": 0.49089447247865775,
+      "oscillator_strength": 0.08160280119873256,
       "transition_dipole_au": [
-        -1.9107259690397014,
-        0.47005664551204934,
-        0.1540894024077774
+        -0.4467550514839737,
+        0.6671431011693609,
+        0.05386935968353807
       ],
       "retained_subspace_weight": 0.010221814861656206,
-      "native_frontier_subspace_weight": 0.0070622558427374926,
+      "native_frontier_subspace_weight": 0.007062255842738281,
       "selected": false
     },
     {
       "root": 11,
       "excitation_ev": 5.354449445390593,
-      "oscillator_strength": 0.00022898810956894938,
+      "oscillator_strength": 0.00016676500102926197,
       "transition_dipole_au": [
-        0.027048792770555594,
-        -0.030679184952045285,
-        0.008528278674589716
+        0.0015938914376563966,
+        -0.03410604010513026,
+        0.010270861992690576
       ],
       "retained_subspace_weight": 3.5328611696025777e-06,
-      "native_frontier_subspace_weight": 2.13511555169163e-06,
+      "native_frontier_subspace_weight": 2.1351155517388028e-06,
       "selected": false
     },
     {
       "root": 12,
       "excitation_ev": 5.695384076046493,
-      "oscillator_strength": 0.0011733128999899818,
+      "oscillator_strength": 0.0012769216820059184,
       "transition_dipole_au": [
-        -0.047837614759141396,
-        0.07734528925364739,
-        -0.011749225019307408
+        -0.056843201202490506,
+        0.07613291604869943,
+        -0.01113272352511998
       ],
       "retained_subspace_weight": 8.842985416848553e-07,
-      "native_frontier_subspace_weight": 2.6724066670705613e-07,
+      "native_frontier_subspace_weight": 2.6724066666455837e-07,
       "selected": false
     },
     {
       "root": 13,
       "excitation_ev": 5.82220837463758,
-      "oscillator_strength": 3.358959954554738e-05,
+      "oscillator_strength": 0.00029332351528199357,
       "transition_dipole_au": [
-        -0.0051657938004217915,
-        -0.01013066131908389,
-        -0.010303736026132493
+        -0.04204728162439474,
+        -0.015095815768142328,
+        -0.007778915183631395
       ],
       "retained_subspace_weight": 3.506153380441121e-07,
-      "native_frontier_subspace_weight": 4.482243156624097e-06,
+      "native_frontier_subspace_weight": 4.482243156739274e-06,
       "selected": false
     },
     {
       "root": 14,
       "excitation_ev": 5.858769455530788,
-      "oscillator_strength": 0.006834906954783486,
+      "oscillator_strength": 0.00638695871198916,
       "transition_dipole_au": [
-        0.20091245929000368,
-        0.06102462078794935,
-        -0.05939568588347171
+        0.1934601245584453,
+        0.060021353427228634,
+        -0.05888551638744263
       ],
       "retained_subspace_weight": 0.00025580974147088097,
-      "native_frontier_subspace_weight": 1.830051262078325e-07,
+      "native_frontier_subspace_weight": 1.8300512620917245e-07,
       "selected": false
     },
     {
       "root": 15,
       "excitation_ev": 6.071796465038016,
-      "oscillator_strength": 0.048529852062271436,
+      "oscillator_strength": 0.05730010323500725,
       "transition_dipole_au": [
-        0.14500724734861922,
-        0.4402864901866441,
-        0.3337035518584539
+        0.2661295962811165,
+        0.4565925343611258,
+        0.3254117976716193
       ],
       "retained_subspace_weight": 0.0002511252801419949,
-      "native_frontier_subspace_weight": 4.834227860690719e-05,
+      "native_frontier_subspace_weight": 4.834227860689393e-05,
       "selected": false
     },
     {
       "root": 16,
       "excitation_ev": 6.292870980294862,
-      "oscillator_strength": 0.00028884661980467595,
+      "oscillator_strength": 0.00016747906879122846,
       "transition_dipole_au": [
-        -0.03975570985048631,
-        -0.016636273817161477,
-        0.004030730665970987
+        0.03220600030231249,
+        -0.006948459512236764,
+        -0.0008956005743149941
       ],
       "retained_subspace_weight": 4.775565722314768e-07,
-      "native_frontier_subspace_weight": 1.7064025808505748e-05,
+      "native_frontier_subspace_weight": 1.7064025809000924e-05,
       "selected": false
     },
     {
       "root": 17,
       "excitation_ev": 6.349738824299989,
-      "oscillator_strength": 0.08148583208245468,
+      "oscillator_strength": 0.046654497742872475,
       "transition_dipole_au": [
-        -0.7005365613455913,
-        -0.1637328514031456,
-        0.07901458613911697
+        -0.5251459127102713,
+        -0.14012096070194555,
+        0.06700775042340054
       ],
       "retained_subspace_weight": 0.0002093438940487358,
-      "native_frontier_subspace_weight": 0.0001013657916110543,
+      "native_frontier_subspace_weight": 0.00010136579161110725,
       "selected": false
     },
     {
       "root": 18,
       "excitation_ev": 6.488472799911254,
-      "oscillator_strength": 0.26501693649527497,
+      "oscillator_strength": 0.08388209237777362,
       "transition_dipole_au": [
-        0.9948706755294753,
-        0.8220114130129362,
-        -0.04090716404537273
+        0.1565506057046307,
+        0.7091529338673022,
+        0.01648227737514607
       ],
       "retained_subspace_weight": 0.0013351146210331727,
-      "native_frontier_subspace_weight": 0.0023157852046851333,
+      "native_frontier_subspace_weight": 0.0023157852046849564,
       "selected": false
     },
     {
       "root": 19,
       "excitation_ev": 6.862159234652636,
-      "oscillator_strength": 0.005281160774349472,
+      "oscillator_strength": 0.00012337829699395013,
       "transition_dipole_au": [
-        -0.17129194920002946,
-        -0.031104063342571545,
-        0.03323681088706138
+        0.01692414962117544,
+        -0.0057655519216519525,
+        0.020351974693216743
       ],
       "retained_subspace_weight": 6.23317878382477e-05,
-      "native_frontier_subspace_weight": 0.00011673257961679387,
+      "native_frontier_subspace_weight": 0.00011673257961649811,
       "selected": false
     },
     {
       "root": 20,
       "excitation_ev": 6.907623709302522,
-      "oscillator_strength": 0.3632961363692397,
+      "oscillator_strength": 0.05721457632154535,
       "transition_dipole_au": [
-        1.4544911455350744,
-        0.09189732348089225,
-        -0.1507435688562835
+        -0.5532444003073146,
+        -0.17839321158547952,
+        -0.0132986648828786
       ],
       "retained_subspace_weight": 0.006556778057530338,
-      "native_frontier_subspace_weight": 0.013282859041204515,
+      "native_frontier_subspace_weight": 0.013282859041204936,
       "selected": false
     },
     {
       "root": 21,
       "excitation_ev": 6.982693821651298,
-      "oscillator_strength": 0.0035377589715050064,
+      "oscillator_strength": 0.0014850530322924706,
       "transition_dipole_au": [
-        -0.14198578701367157,
-        0.013287058490054645,
-        0.018529167205900407
+        0.08233874837073532,
+        0.04348665266625354,
+        0.0031724314601800875
       ],
       "retained_subspace_weight": 6.294815703655198e-05,
-      "native_frontier_subspace_weight": 0.00016581816383906466,
+      "native_frontier_subspace_weight": 0.00016581816383792167,
       "selected": false
     },
     {
       "root": 22,
       "excitation_ev": 7.09174034543401,
-      "oscillator_strength": 0.002481892639057365,
+      "oscillator_strength": 0.00018001210700170007,
       "transition_dipole_au": [
-        -0.11081599786068025,
-        -0.04073441845547849,
-        0.018581000290355722
+        -0.011999093958605211,
+        -0.027431235232648454,
+        0.011816224971264203
       ],
       "retained_subspace_weight": 2.1015538872562004e-06,
-      "native_frontier_subspace_weight": 3.2176665305220365e-05,
+      "native_frontier_subspace_weight": 3.217666530492782e-05,
       "selected": false
     },
     {
       "root": 23,
       "excitation_ev": 7.413015806237743,
-      "oscillator_strength": 0.001492980428060125,
+      "oscillator_strength": 0.003575178378319404,
       "transition_dipole_au": [
-        0.02307884877958211,
-        -0.028096258555851454,
-        -0.08305733874248214
+        0.10730804664876928,
+        -0.016756938988868243,
+        -0.08882347364844517
       ],
       "retained_subspace_weight": 1.680689135452392e-05,
-      "native_frontier_subspace_weight": 2.3377812849595257e-05,
+      "native_frontier_subspace_weight": 2.3377812849606326e-05,
       "selected": false
     },
     {
       "root": 24,
       "excitation_ev": 7.431766141534245,
-      "oscillator_strength": 0.00016910894203381064,
+      "oscillator_strength": 4.355960958346734e-05,
       "transition_dipole_au": [
-        -0.027618711289700858,
-        -0.012875163724765068,
-        0.00047398618971392195
+        0.013406563561642394,
+        -0.007352153727863023,
+        -0.002334508671125744
       ],
       "retained_subspace_weight": 8.361749339302178e-08,
-      "native_frontier_subspace_weight": 5.546021470361854e-06,
+      "native_frontier_subspace_weight": 5.546021470306362e-06,
       "selected": false
     },
     {
       "root": 25,
       "excitation_ev": 7.6883481308786505,
-      "oscillator_strength": 0.00040568551497307783,
+      "oscillator_strength": 0.00011611895650792179,
       "transition_dipole_au": [
-        -0.04589133733497857,
-        -0.006114550228535766,
-        -0.0032191289157475584
+        0.023300891465351904,
+        0.0032004238394449775,
+        -0.007955867906526443
       ],
       "retained_subspace_weight": 2.006609592110202e-05,
-      "native_frontier_subspace_weight": 1.577586525813137e-05,
+      "native_frontier_subspace_weight": 1.5775865257811696e-05,
       "selected": false
     },
     {
       "root": 26,
       "excitation_ev": 7.697395346939242,
-      "oscillator_strength": 0.012692035351443755,
+      "oscillator_strength": 0.013178694153547386,
       "transition_dipole_au": [
-        -0.19027278459761157,
-        0.14975724936300902,
-        0.09311958012453919
+        0.16199085680135564,
+        0.19718059070655078,
+        0.0690044308631148
       ],
       "retained_subspace_weight": 0.000391788007439955,
-      "native_frontier_subspace_weight": 0.00040889724852579925,
+      "native_frontier_subspace_weight": 0.0004088972485262255,
       "selected": false
     },
     {
       "root": 27,
       "excitation_ev": 7.846855167994906,
-      "oscillator_strength": 0.02952373231427617,
+      "oscillator_strength": 0.03101389609668626,
       "transition_dipole_au": [
-        0.1481049673399264,
-        -0.2801133124927025,
-        -0.230597915230534
+        -0.12625193749669866,
+        -0.31704849290569836,
+        -0.21181607988476578
       ],
       "retained_subspace_weight": 0.00015678907807120706,
-      "native_frontier_subspace_weight": 0.00024803349753058475,
+      "native_frontier_subspace_weight": 0.00024803349753045286,
       "selected": false
     },
     {
       "root": 28,
       "excitation_ev": 7.971326234177783,
-      "oscillator_strength": 8.617981441685485e-05,
+      "oscillator_strength": 6.314325304658174e-05,
       "transition_dipole_au": [
-        0.011103574228783851,
-        0.0005023841155193514,
-        -0.017825289472024664
+        0.0045963561864860135,
+        -0.0003736473170503928,
+        -0.017379820465501013
       ],
       "retained_subspace_weight": 3.855329144510811e-06,
-      "native_frontier_subspace_weight": 1.3953053721833354e-07,
+      "native_frontier_subspace_weight": 1.3953053720083932e-07,
       "selected": false
     },
     {
       "root": 29,
       "excitation_ev": 8.051288707569318,
-      "oscillator_strength": 3.5291358442557995e-05,
+      "oscillator_strength": 0.0017597743550004023,
       "transition_dipole_au": [
-        -0.004938439132115437,
-        -0.011969877588371165,
-        -0.003353816748374084
+        -0.09141820869583103,
+        -0.02361217940256685,
+        0.002566387059314296
       ],
       "retained_subspace_weight": 2.252306785283776e-06,
-      "native_frontier_subspace_weight": 2.4643795447135973e-05,
+      "native_frontier_subspace_weight": 2.4643795446883377e-05,
       "selected": false
     },
     {
       "root": 30,
       "excitation_ev": 8.086977092954447,
-      "oscillator_strength": 0.0036016409286312567,
+      "oscillator_strength": 0.015877266592901344,
       "transition_dipole_au": [
-        0.01594459941852231,
-        -0.11924880781576612,
-        -0.060859767308063695
+        -0.2341769488335199,
+        -0.15292131376337373,
+        -0.043737028084559974
       ],
       "retained_subspace_weight": 2.2087434635280607e-05,
-      "native_frontier_subspace_weight": 0.00020614877787750163,
+      "native_frontier_subspace_weight": 0.00020614877787780166,
       "selected": false
     },
     {
       "root": 31,
       "excitation_ev": 8.192305488994483,
-      "oscillator_strength": 0.003997091619249458,
+      "oscillator_strength": 0.003950031530972669,
       "transition_dipole_au": [
-        -0.0358699453745281,
-        0.131236065769638,
-        0.03748896878308508
+        -0.002033847945324664,
+        0.13579123584546032,
+        0.035172628281146055
       ],
       "retained_subspace_weight": 6.937533253556437e-06,
-      "native_frontier_subspace_weight": 3.7725854160792053e-06,
+      "native_frontier_subspace_weight": 3.7725854160267516e-06,
       "selected": false
     },
     {
       "root": 32,
       "excitation_ev": 8.223340190154188,
-      "oscillator_strength": 0.02643315670622966,
+      "oscillator_strength": 0.0235083597961986,
       "transition_dipole_au": [
-        -0.16694752347979283,
-        0.2995096132313176,
-        0.11672700634397583
+        0.02060315342833935,
+        0.3247585425130167,
+        0.10388772338599886
       ],
       "retained_subspace_weight": 1.1055668660513122e-05,
-      "native_frontier_subspace_weight": 0.0001159086425807618,
+      "native_frontier_subspace_weight": 0.00011590864258080259,
       "selected": false
     },
     {
       "root": 33,
       "excitation_ev": 8.346454710106821,
-      "oscillator_strength": 0.0007607047729694329,
+      "oscillator_strength": 0.003804750718835365,
       "transition_dipole_au": [
-        0.0598374536874862,
-        -0.00739976187805017,
-        -0.009210578299794096
+        -0.13223097842685666,
+        -0.03325689201305964,
+        0.003937979667884987
       ],
       "retained_subspace_weight": 1.188470298324464e-05,
-      "native_frontier_subspace_weight": 0.0001215599548909805,
+      "native_frontier_subspace_weight": 0.00012155995489050156,
       "selected": false
     },
     {
       "root": 34,
       "excitation_ev": 8.378521541046808,
-      "oscillator_strength": 0.0011860866139424785,
+      "oscillator_strength": 0.0008816510931108353,
       "transition_dipole_au": [
-        0.0749252480265703,
-        0.012768560156287224,
-        -0.0011616334405756899
+        -0.06471620634947435,
+        -0.006030610630381306,
+        0.008397895615510652
       ],
       "retained_subspace_weight": 3.2241500403579914e-07,
-      "native_frontier_subspace_weight": 6.425505129816836e-05,
+      "native_frontier_subspace_weight": 6.425505129852223e-05,
       "selected": false
     },
     {
       "root": 35,
       "excitation_ev": 8.703213463381054,
-      "oscillator_strength": 0.04224669071605618,
+      "oscillator_strength": 0.01916190943239779,
       "transition_dipole_au": [
-        -0.401327568344891,
-        -0.18829951626786742,
-        -0.040145240045885634
+        -0.24363835846759402,
+        -0.1670706741525382,
+        -0.050940276450984305
       ],
       "retained_subspace_weight": 0.0005870274221810761,
-      "native_frontier_subspace_weight": 8.193746095302732e-05,
+      "native_frontier_subspace_weight": 8.193746095304793e-05,
       "selected": false
     },
     {
       "root": 36,
       "excitation_ev": 8.750064063092587,
-      "oscillator_strength": 0.0004038891044922113,
+      "oscillator_strength": 0.00044512733247085035,
       "transition_dipole_au": [
-        0.03319081444341966,
-        0.022091066501361646,
-        0.01715827443379829
+        0.035837317132695244,
+        0.022447350788604197,
+        0.01697710101742903
       ],
       "retained_subspace_weight": 2.8837897340845515e-05,
-      "native_frontier_subspace_weight": 2.3079331601674565e-08,
+      "native_frontier_subspace_weight": 2.307933160988929e-08,
       "selected": false
     },
     {
       "root": 37,
       "excitation_ev": 8.893561748588333,
-      "oscillator_strength": 0.06675050207712396,
+      "oscillator_strength": 0.0034542429073804713,
       "transition_dipole_au": [
-        -0.5468868002555788,
-        -0.06744373533717711,
-        0.052136195757803254
+        0.123665977303904,
+        0.02282914418231002,
+        0.006231712813515181
       ],
       "retained_subspace_weight": 0.0005313709362688183,
-      "native_frontier_subspace_weight": 0.0014816460906434414,
+      "native_frontier_subspace_weight": 0.0014816460906427026,
       "selected": false
     },
     {
       "root": 38,
       "excitation_ev": 9.009768299915356,
-      "oscillator_strength": 0.0010161005120835726,
+      "oscillator_strength": 0.0003627000820918458,
       "transition_dipole_au": [
-        0.06566698054165199,
-        0.01140922060593712,
-        -0.012685886491718095
+        -0.04006853463405774,
+        -0.0028253776864216023,
+        -0.005447479142701058
       ],
       "retained_subspace_weight": 1.956275238742583e-05,
-      "native_frontier_subspace_weight": 3.6840059180201334e-05,
+      "native_frontier_subspace_weight": 3.6840059180928285e-05,
       "selected": false
     },
     {
       "root": 39,
       "excitation_ev": 9.079135004421312,
-      "oscillator_strength": 0.003610936786654866,
+      "oscillator_strength": 0.007776243848416911,
       "transition_dipole_au": [
-        0.09066502770599695,
-        0.08210159074468187,
-        -0.03567737215928286
+        -0.18052171916908413,
+        0.04559319148481413,
+        -0.01711255845146906
       ],
       "retained_subspace_weight": 0.0005176723836743974,
-      "native_frontier_subspace_weight": 0.00024233462481716597,
+      "native_frontier_subspace_weight": 0.00024233462481704218,
       "selected": false
     },
     {
       "root": 40,
       "excitation_ev": 9.296359967550647,
-      "oscillator_strength": 0.0022568640565062375,
+      "oscillator_strength": 0.0007021083893815081,
       "transition_dipole_au": [
-        -0.09267845399329187,
-        -0.03558866966270012,
-        0.0072975973415944796
+        0.0531105868000195,
+        -0.01596188269642873,
+        -0.0026827811767325036
       ],
       "retained_subspace_weight": 3.9500781744202234e-05,
-      "native_frontier_subspace_weight": 7.003712417551797e-05,
+      "native_frontier_subspace_weight": 7.003712417551593e-05,
       "selected": false
     },
     {
       "root": 41,
       "excitation_ev": 9.355272247737524,
-      "oscillator_strength": 0.0051032223098797245,
+      "oscillator_strength": 0.0016731663784020933,
       "transition_dipole_au": [
-        -0.13685814673319432,
-        -0.05929544803145373,
-        -0.004389867590119126
+        0.07752599761307215,
+        -0.030434074727017923,
+        -0.019066107294146668
       ],
       "retained_subspace_weight": 3.0595322423269325e-05,
-      "native_frontier_subspace_weight": 0.0001514481150071267,
+      "native_frontier_subspace_weight": 0.00015144811500724615,
       "selected": false
     },
     {
       "root": 42,
       "excitation_ev": 9.406599019571651,
-      "oscillator_strength": 0.5853024724532337,
+      "oscillator_strength": 0.16830749244331228,
       "transition_dipole_au": [
-        -1.5230476520418452,
-        -0.45104762132108034,
-        0.12893485785859995
+        0.8436144714659208,
+        -0.13243674997938817,
+        -0.03308132449001096
       ],
       "retained_subspace_weight": 0.012125265277987896,
-      "native_frontier_subspace_weight": 0.018456573159263304,
+      "native_frontier_subspace_weight": 0.01845657315926353,
       "selected": false
     },
     {
       "root": 43,
       "excitation_ev": 9.459435348920003,
-      "oscillator_strength": 0.006846028288857056,
+      "oscillator_strength": 0.006966814067999288,
       "transition_dipole_au": [
-        0.15915379284502953,
-        -0.012406020706156486,
-        -0.06369061871580255
+        -0.15891702172943517,
+        -0.05522616743233464,
+        -0.041916230820699125
       ],
       "retained_subspace_weight": 0.0015418449472342096,
-      "native_frontier_subspace_weight": 0.0003333697505664123,
+      "native_frontier_subspace_weight": 0.00033336975056622676,
       "selected": false
     },
     {
       "root": 44,
       "excitation_ev": 9.479112595955852,
-      "oscillator_strength": 0.013980984651260674,
+      "oscillator_strength": 0.0055159974409618884,
       "transition_dipole_au": [
-        0.24011705624261132,
-        0.005971165717187342,
-        -0.05010284094822546
+        -0.14519663784343143,
+        -0.045901524766675375,
+        -0.023725161979012477
       ],
       "retained_subspace_weight": 0.0010746559924182575,
-      "native_frontier_subspace_weight": 0.0004892236417936928,
+      "native_frontier_subspace_weight": 0.0004892236417942489,
       "selected": false
     },
     {
       "root": 45,
       "excitation_ev": 9.590190702726163,
-      "oscillator_strength": 0.1773650971479045,
+      "oscillator_strength": 0.04322738589328611,
       "transition_dipole_au": [
-        0.8422510898366296,
-        0.20439270273016172,
-        -0.06103510889022879
+        -0.4268352114722188,
+        0.03354250478620002,
+        0.025843586453160344
       ],
       "retained_subspace_weight": 0.0013503434034380119,
-      "native_frontier_subspace_weight": 0.0053071438642774285,
+      "native_frontier_subspace_weight": 0.005307143864277325,
       "selected": false
     },
     {
       "root": 46,
       "excitation_ev": 9.733302859251111,
-      "oscillator_strength": 0.0005305379124422693,
+      "oscillator_strength": 0.00017796641841601136,
       "transition_dipole_au": [
-        -0.045073396923362,
-        0.012784299896218057,
-        -0.005457758605259673
+        0.014839396287447014,
+        0.02085003393563889,
+        -0.00955924902648775
       ],
       "retained_subspace_weight": 7.56542268413173e-06,
-      "native_frontier_subspace_weight": 1.1828173403370233e-05,
+      "native_frontier_subspace_weight": 1.1828173403471689e-05,
       "selected": false
     },
     {
       "root": 47,
       "excitation_ev": 9.806566838379462,
-      "oscillator_strength": 0.0005200789062126511,
+      "oscillator_strength": 0.0009491930661909244,
       "transition_dipole_au": [
-        -0.026589225343495955,
-        0.0025565750115835876,
-        -0.038094085550423366
+        -0.051231752041735405,
+        -0.0007609145554345093,
+        -0.03640711550960114
       ],
       "retained_subspace_weight": 1.573332431058303e-05,
-      "native_frontier_subspace_weight": 2.0010088959403257e-06,
+      "native_frontier_subspace_weight": 2.001008895966107e-06,
       "selected": false
     },
     {
       "root": 48,
       "excitation_ev": 9.878169414473623,
-      "oscillator_strength": 0.006148170943785769,
+      "oscillator_strength": 0.0018499611526164156,
       "transition_dipole_au": [
-        -0.15415683371800812,
-        0.03973099412213002,
-        0.007852509138811999
+        0.05475529832618326,
+        0.06785570012187038,
+        -0.006449129335014199
       ],
       "retained_subspace_weight": 0.00014933632572603858,
-      "native_frontier_subspace_weight": 0.00014381555792234376,
+      "native_frontier_subspace_weight": 0.00014381555792266433,
       "selected": false
     },
     {
       "root": 49,
       "excitation_ev": 9.898845266616284,
-      "oscillator_strength": 0.0003216851856380668,
+      "oscillator_strength": 0.00029421183927460674,
       "transition_dipole_au": [
-        -0.01983169939144249,
-        0.030508936247034487,
-        0.0015333225927797883
+        -0.015702599602826137,
+        0.03106481453165302,
+        0.0012506540286272324
       ],
       "retained_subspace_weight": 1.3950023909477983e-06,
-      "native_frontier_subspace_weight": 5.618097929483011e-08,
+      "native_frontier_subspace_weight": 5.6180979314339395e-08,
       "selected": false
     },
     {
       "root": 50,
       "excitation_ev": 9.974571207730586,
-      "oscillator_strength": 0.028081112600122263,
+      "oscillator_strength": 0.01631189440439065,
       "transition_dipole_au": [
-        -0.3035065727809898,
-        0.14218087361190374,
-        0.050788430739712884
+        0.15711478460843573,
+        0.2041918259056475,
+        0.019255364362717353
       ],
       "retained_subspace_weight": 0.000907983055254139,
-      "native_frontier_subspace_weight": 0.0006991440878552917,
+      "native_frontier_subspace_weight": 0.0006991440878548247,
       "selected": false
     },
     {
       "root": 51,
       "excitation_ev": 10.096928000579341,
-      "oscillator_strength": 0.01322219138753881,
+      "oscillator_strength": 0.0022329793875489994,
       "transition_dipole_au": [
-        0.22629889850635013,
-        -0.008447439264257254,
-        -0.046566969573257455
+        -0.07702212995700722,
+        -0.049281902373704604,
+        -0.025802317716289123
       ],
       "retained_subspace_weight": 3.1302660929858104e-05,
-      "native_frontier_subspace_weight": 0.00030316815980368784,
+      "native_frontier_subspace_weight": 0.0003031681598038891,
       "selected": false
     },
     {
       "root": 52,
       "excitation_ev": 10.111550605627912,
-      "oscillator_strength": 0.05342566401678712,
+      "oscillator_strength": 0.011489498617661882,
       "transition_dipole_au": [
-        0.45628932781350634,
-        -0.028142293300775757,
-        -0.08167185713621979
+        -0.17889618806705093,
+        -0.11365387041522672,
+        -0.038188534635748624
       ],
       "retained_subspace_weight": 0.0003521625033400786,
-      "native_frontier_subspace_weight": 0.0013294736085407907,
+      "native_frontier_subspace_weight": 0.0013294736085403866,
       "selected": false
     },
     {
       "root": 53,
       "excitation_ev": 10.142617992680758,
-      "oscillator_strength": 0.008853594108030136,
+      "oscillator_strength": 0.002031101541859312,
       "transition_dipole_au": [
-        0.18665104522011847,
-        -0.010244606302355394,
-        -0.02619308861126614
+        -0.07752162875820864,
+        -0.04580873901264343,
+        -0.008108442013987383
       ],
       "retained_subspace_weight": 7.445521036415504e-05,
-      "native_frontier_subspace_weight": 0.00022996107610102835,
+      "native_frontier_subspace_weight": 0.0002299610761012119,
       "selected": false
     },
     {
       "root": 54,
       "excitation_ev": 10.27031565718153,
-      "oscillator_strength": 0.0009160326865941075,
+      "oscillator_strength": 5.642657826297445e-06,
       "transition_dipole_au": [
-        0.06002755426561218,
-        0.006102475113518771,
-        -0.00014202180140400892
+        -0.0012018513751897834,
+        -0.002140507308505201,
+        0.00404960084335744
       ],
       "retained_subspace_weight": 1.611788489135304e-05,
-      "native_frontier_subspace_weight": 1.2353745078071685e-05,
+      "native_frontier_subspace_weight": 1.2353745077865275e-05,
       "selected": false
     },
     {
       "root": 55,
       "excitation_ev": 10.300779998860303,
-      "oscillator_strength": 0.0006046098513394754,
+      "oscillator_strength": 0.01955430809275796,
       "transition_dipole_au": [
-        -0.04787665506000732,
-        0.009810999495597553,
-        -0.0027112231981827697
+        -0.27725746272643825,
+        -0.021069293163727205,
+        0.012991653183291386
       ],
       "retained_subspace_weight": 0.00010582330103009352,
-      "native_frontier_subspace_weight": 0.00017337748669745152,
+      "native_frontier_subspace_weight": 0.00017337748669742726,
       "selected": false
     },
     {
       "root": 56,
       "excitation_ev": 10.325920832605005,
-      "oscillator_strength": 0.0001731646658180719,
+      "oscillator_strength": 0.00022672211701409338,
       "transition_dipole_au": [
-        -0.010756055126656013,
-        0.023837760663401708,
-        -0.0007528664430720255
+        -0.019573657159902294,
+        0.022650694778893952,
+        -0.00014923392421429282
       ],
       "retained_subspace_weight": 3.67200682259025e-06,
-      "native_frontier_subspace_weight": 2.5620024195089407e-07,
+      "native_frontier_subspace_weight": 2.5620024194858225e-07,
       "selected": false
     },
     {
       "root": 57,
       "excitation_ev": 10.452871065937867,
-      "oscillator_strength": 0.01856197933826719,
+      "oscillator_strength": 0.00907787820641374,
       "transition_dipole_au": [
-        -0.2588187313359124,
-        -0.07380181220008764,
-        -0.006944909030466746
+        0.18400643506753128,
+        -0.014186664470125504,
+        -0.03725968957979666
       ],
       "retained_subspace_weight": 0.0012159270728952386,
-      "native_frontier_subspace_weight": 0.0006461645632510822,
+      "native_frontier_subspace_weight": 0.0006461645632512725,
       "selected": false
     },
     {
       "root": 58,
       "excitation_ev": 10.495048866287,
-      "oscillator_strength": 0.00020879387487048617,
+      "oscillator_strength": 0.00013506128121283867,
       "transition_dipole_au": [
-        -0.017254264463394335,
-        -0.021871587195881833,
-        0.005996657718398022
+        0.014104425017422354,
+        -0.017649937100421183,
+        0.0038499148003131997
       ],
       "retained_subspace_weight": 1.8727903188980463e-05,
-      "native_frontier_subspace_weight": 3.240368168405125e-06,
+      "native_frontier_subspace_weight": 3.2403681684116577e-06,
       "selected": false
     },
     {
       "root": 59,
       "excitation_ev": 10.545177578858937,
-      "oscillator_strength": 0.003811251803797904,
+      "oscillator_strength": 0.0019710102185203885,
       "transition_dipole_au": [
-        -0.10048167503375333,
-        -0.06170956537366157,
-        0.02911227348957765
+        -0.061215430567489716,
+        -0.05642336408642323,
+        0.026424197756071018
       ],
       "retained_subspace_weight": 1.2535779001793995e-06,
-      "native_frontier_subspace_weight": 5.0806266287620626e-06,
+      "native_frontier_subspace_weight": 5.080626628767702e-06,
       "selected": false
     },
     {
       "root": 60,
       "excitation_ev": 10.584388626800592,
-      "oscillator_strength": 0.056328067949095756,
+      "oscillator_strength": 0.004767340068009663,
       "transition_dipole_au": [
-        0.42733403038967216,
-        0.18597978585642316,
-        0.004212253721706729
+        -0.04570130886544393,
+        0.12229760658861577,
+        0.03659515241299611
       ],
       "retained_subspace_weight": 0.0009766667502066418,
-      "native_frontier_subspace_weight": 0.0007373364808969391,
+      "native_frontier_subspace_weight": 0.0007373364808973736,
       "selected": false
     },
     {
       "root": 61,
       "excitation_ev": 10.600777251195828,
-      "oscillator_strength": 0.028257773928493466,
+      "oscillator_strength": 0.002317575526589917,
       "transition_dipole_au": [
-        0.30281742850452115,
-        0.13076513477118915,
-        0.0023256091017490772
+        -0.030098925798795466,
+        0.08594641363861524,
+        0.02511628810483055
       ],
       "retained_subspace_weight": 0.000566907279350667,
-      "native_frontier_subspace_weight": 0.00036521516961369744,
+      "native_frontier_subspace_weight": 0.0003652151696135423,
       "selected": false
     },
     {
       "root": 62,
       "excitation_ev": 10.73273163373381,
-      "oscillator_strength": 0.0049283463941052355,
+      "oscillator_strength": 0.0003771331323167013,
       "transition_dipole_au": [
-        0.13213112330523347,
-        0.035832207734594716,
-        -0.0003879658431194258
+        0.03004599746585408,
+        0.022089041537932712,
+        0.006600544345463003
       ],
       "retained_subspace_weight": 7.689277126410543e-06,
-      "native_frontier_subspace_weight": 3.434025255369644e-05,
+      "native_frontier_subspace_weight": 3.434025255347552e-05,
       "selected": false
     },
     {
       "root": 63,
       "excitation_ev": 10.745319773545951,
-      "oscillator_strength": 0.0018027917599844835,
+      "oscillator_strength": 0.005606491768957329,
       "transition_dipole_au": [
-        -0.050068424422350905,
-        -0.06488696628110527,
-        -0.011441318663176828
+        -0.12503988636705257,
+        -0.07497996712759074,
+        -0.006308946818148461
       ],
       "retained_subspace_weight": 1.9184561340271156e-05,
-      "native_frontier_subspace_weight": 1.8521259099323154e-05,
+      "native_frontier_subspace_weight": 1.8521259099200202e-05,
       "selected": false
     },
     {
       "root": 64,
       "excitation_ev": 10.932311509026377,
-      "oscillator_strength": 0.033374526645318967,
+      "oscillator_strength": 0.02979722255664326,
       "transition_dipole_au": [
-        0.34067396244008574,
-        0.06526377779644878,
-        -0.065495322646159
+        -0.3320142267059934,
+        -0.025296580590237552,
+        -0.019444654393209804
       ],
       "retained_subspace_weight": 0.0007135612090315288,
-      "native_frontier_subspace_weight": 0.0014910978808058818,
+      "native_frontier_subspace_weight": 0.001491097880805325,
       "selected": false
     },
     {
       "root": 65,
       "excitation_ev": 10.95545084629553,
-      "oscillator_strength": 0.013944588199560726,
+      "oscillator_strength": 0.007061410477444801,
       "transition_dipole_au": [
-        -0.22024777886770916,
-        -0.04764568192254966,
-        0.03427259076777458
+        0.16195272856746548,
+        0.0038078971462940855,
+        0.008108033313082333
       ],
       "retained_subspace_weight": 0.00024578938013419485,
-      "native_frontier_subspace_weight": 0.0004813501001734086,
+      "native_frontier_subspace_weight": 0.0004813501001743068,
       "selected": false
     },
     {
       "root": 66,
       "excitation_ev": 11.012561595294153,
-      "oscillator_strength": 0.006120742103275536,
+      "oscillator_strength": 0.0011663235602041625,
       "transition_dipole_au": [
-        -0.1424014831776424,
-        -0.04762539510626605,
-        -0.011816308765606307
+        -0.05233769767053225,
+        -0.03550059668584814,
+        -0.017981865965668836
       ],
       "retained_subspace_weight": 1.7343668130484176e-05,
-      "native_frontier_subspace_weight": 2.6728768030688468e-05,
+      "native_frontier_subspace_weight": 2.6728768030627214e-05,
       "selected": false
     },
     {
       "root": 67,
       "excitation_ev": 11.06376208912017,
-      "oscillator_strength": 0.0020951454033174563,
+      "oscillator_strength": 0.027504241231978265,
       "transition_dipole_au": [
-        -0.005775855025108736,
-        0.07577350638578254,
-        0.044210274977079245
+        0.29559761652478544,
+        0.11634578048267827,
+        0.02357894833492801
       ],
       "retained_subspace_weight": 0.0001946909414977561,
-      "native_frontier_subspace_weight": 0.0002992875075763773,
+      "native_frontier_subspace_weight": 0.00029928750757626934,
       "selected": false
     },
     {
       "root": 68,
       "excitation_ev": 11.161019813805243,
-      "oscillator_strength": 0.06591342403747827,
+      "oscillator_strength": 0.01977727936602292,
       "transition_dipole_au": [
-        -0.4882335321201315,
-        0.0010520291503721489,
-        0.051764529447137185
+        0.2495036053478939,
+        0.10036957425111843,
+        0.0012607615445968034
       ],
       "retained_subspace_weight": 0.001930046639032816,
-      "native_frontier_subspace_weight": 0.0017934193053138732,
+      "native_frontier_subspace_weight": 0.0017934193053139192,
       "selected": false
     },
     {
       "root": 69,
       "excitation_ev": 11.180249873650693,
-      "oscillator_strength": 0.001956055906881993,
+      "oscillator_strength": 0.00353048980176794,
       "transition_dipole_au": [
-        -0.08289654461374035,
-        0.008632267712413147,
-        0.013959039657068763
+        0.10820293956401665,
+        0.03435895364785715,
+        0.0008768136106296819
       ],
       "retained_subspace_weight": 9.682110561818168e-05,
-      "native_frontier_subspace_weight": 0.00012033655587309246,
+      "native_frontier_subspace_weight": 0.0001203365558735461,
       "selected": false
     },
     {
       "root": 70,
       "excitation_ev": 11.207061977655796,
-      "oscillator_strength": 0.008183546078718342,
+      "oscillator_strength": 0.004420291039574002,
       "transition_dipole_au": [
-        -0.17075170004445092,
-        -0.0176777523834004,
-        0.018344742240213804
+        0.12492341934477405,
+        0.022127383502665052,
+        -0.0018964884716350565
       ],
       "retained_subspace_weight": 0.0002855534622957654,
-      "native_frontier_subspace_weight": 0.00028807668418601726,
+      "native_frontier_subspace_weight": 0.0002880766841868162,
       "selected": false
     },
     {
       "root": 71,
       "excitation_ev": 11.241216184632998,
-      "oscillator_strength": 0.32926918926268184,
+      "oscillator_strength": 0.17707680210689122,
       "transition_dipole_au": [
-        1.0715298051640394,
-        0.16440607376785843,
-        -0.14274974432651324
+        -0.7969667303405431,
+        -0.08713946936761809,
+        -0.01483681902671994
       ],
       "retained_subspace_weight": 0.010399471708989123,
-      "native_frontier_subspace_weight": 0.011504377969608239,
+      "native_frontier_subspace_weight": 0.01150437796960707,
       "selected": false
     },
     {
       "root": 72,
       "excitation_ev": 11.341473493019492,
-      "oscillator_strength": 0.0001315843393132093,
+      "oscillator_strength": 0.0002727741207373611,
       "transition_dipole_au": [
-        0.01818168998541882,
-        0.009207662203831663,
-        -0.007629344014743814
+        -0.03093130352676416,
+        0.0025958465577823457,
+        -0.004267182752464843
       ],
       "retained_subspace_weight": 4.120561793974506e-06,
-      "native_frontier_subspace_weight": 7.948247087907922e-06,
+      "native_frontier_subspace_weight": 7.948247087892589e-06,
       "selected": false
     },
     {
       "root": 73,
       "excitation_ev": 11.42544140079333,
-      "oscillator_strength": 0.01697451766403657,
+      "oscillator_strength": 0.020416686687254788,
       "transition_dipole_au": [
-        0.20645637568316824,
-        0.12716243730871155,
-        -0.04297072514862447
+        -0.26213224417235287,
+        0.06407889572917515,
+        -0.010892238521014256
       ],
       "retained_subspace_weight": 0.00042592076595052256,
-      "native_frontier_subspace_weight": 0.0007235391279709985,
+      "native_frontier_subspace_weight": 0.0007235391279709337,
       "selected": false
     },
     {
       "root": 74,
       "excitation_ev": 11.576060741207359,
-      "oscillator_strength": 0.055024657516966946,
+      "oscillator_strength": 0.014026325670256998,
       "transition_dipole_au": [
-        -0.41946669323711044,
-        -0.13110000033000865,
-        0.029612478692456683
+        0.21726003333509744,
+        -0.04538093838844165,
+        -0.013976351505938326
       ],
       "retained_subspace_weight": 0.0004392910465905547,
-      "native_frontier_subspace_weight": 0.0013359330907810672,
+      "native_frontier_subspace_weight": 0.0013359330907817626,
       "selected": false
     },
     {
       "root": 75,
       "excitation_ev": 11.58487707856142,
-      "oscillator_strength": 0.0690551049051237,
+      "oscillator_strength": 0.02103543074056988,
       "transition_dipole_au": [
-        -0.48226119971956316,
-        -0.09375848699026977,
-        0.04399796597699422
+        0.27202078667270146,
+        0.00778640128703659,
+        -0.007638423787200843
       ],
       "retained_subspace_weight": 0.000735990960232103,
-      "native_frontier_subspace_weight": 0.0018747614733239028,
+      "native_frontier_subspace_weight": 0.0018747614733233193,
       "selected": false
     },
     {
       "root": 76,
       "excitation_ev": 11.625994021194028,
-      "oscillator_strength": 0.010724479618467776,
+      "oscillator_strength": 0.0020584009287140585,
       "transition_dipole_au": [
-        -0.19276097245868482,
-        -0.011091038084038987,
-        0.019292411353718487
+        0.08100974808858333,
+        0.025765227520994798,
+        0.0005507048205703324
       ],
       "retained_subspace_weight": 0.00013243107329029253,
-      "native_frontier_subspace_weight": 0.0002469747451172511,
+      "native_frontier_subspace_weight": 0.0002469747451171068,
       "selected": false
     },
     {
       "root": 77,
       "excitation_ev": 11.678500704244815,
-      "oscillator_strength": 0.016220521250930854,
+      "oscillator_strength": 0.009020381465784265,
       "transition_dipole_au": [
-        0.13892810503259134,
-        0.1910080566050836,
-        0.03011021283196203
+        0.005723493189757909,
+        0.17307544297825173,
+        0.03922909062512207
       ],
       "retained_subspace_weight": 8.238891554647029e-05,
-      "native_frontier_subspace_weight": 5.846784279506066e-05,
+      "native_frontier_subspace_weight": 5.8467842794987676e-05,
       "selected": false
     },
     {
       "root": 78,
       "excitation_ev": 11.80996079914536,
-      "oscillator_strength": 0.02571512969243837,
+      "oscillator_strength": 0.013579516661270224,
       "transition_dipole_au": [
-        -0.2964472717776435,
-        -0.027630756766429846,
-        0.015201424812763382
+        0.21185918645011115,
+        0.040799781735812224,
+        -0.01959605261639162
       ],
       "retained_subspace_weight": 0.0009182364795275055,
-      "native_frontier_subspace_weight": 0.0008513924666948783,
+      "native_frontier_subspace_weight": 0.0008513924666948396,
       "selected": false
     },
     {
       "root": 79,
       "excitation_ev": 11.861399583120267,
-      "oscillator_strength": 0.0030554555478215593,
+      "oscillator_strength": 0.0012781297550051888,
       "transition_dipole_au": [
-        0.10223848564404617,
-        0.002492258804851876,
-        -0.0074444146261503025
+        -0.06318272642736836,
+        -0.01977750078310678,
+        0.0038799366587583587
       ],
       "retained_subspace_weight": 0.00012128748504897116,
-      "native_frontier_subspace_weight": 9.016976653388561e-05,
+      "native_frontier_subspace_weight": 9.016976653390258e-05,
       "selected": false
     },
     {
       "root": 80,
       "excitation_ev": 11.929250021054184,
-      "oscillator_strength": 0.009841562951559635,
+      "oscillator_strength": 0.0013822196177621367,
       "transition_dipole_au": [
-        0.179901125467888,
-        -0.03546615932853704,
-        -0.007182849584104579
+        -0.02618822321466827,
+        -0.06321084933126232,
+        0.006925547708689513
       ],
       "retained_subspace_weight": 0.0001763890229079478,
-      "native_frontier_subspace_weight": 0.00013995539403888476,
+      "native_frontier_subspace_weight": 0.0001399553940388213,
       "selected": false
     },
     {
       "root": 81,
       "excitation_ev": 11.94158217323314,
-      "oscillator_strength": 0.023895377248840433,
+      "oscillator_strength": 0.021353449276826426,
       "transition_dipole_au": [
-        0.26171584740738424,
-        0.1111202639949744,
-        -0.02886183210359765
+        -0.2670940031372368,
+        0.039929465113049324,
+        0.007339259857344201
       ],
       "retained_subspace_weight": 0.0007212097541582883,
-      "native_frontier_subspace_weight": 0.0009214624046943678,
+      "native_frontier_subspace_weight": 0.0009214624046943958,
       "selected": false
     },
     {
       "root": 82,
       "excitation_ev": 11.960840695982336,
-      "oscillator_strength": 0.08724701504349927,
+      "oscillator_strength": 0.013014714806073493,
       "transition_dipole_au": [
-        0.5437433931239014,
-        0.010669524529225887,
-        -0.04432725047851871
+        -0.19126950659166372,
+        -0.08828127123478446,
+        0.005990022446100318
       ],
       "retained_subspace_weight": 0.0017704961298055835,
-      "native_frontier_subspace_weight": 0.0017801986617257486,
+      "native_frontier_subspace_weight": 0.0017801986617255975,
       "selected": false
     },
     {
       "root": 83,
       "excitation_ev": 12.05433774619207,
-      "oscillator_strength": 0.014781201668677305,
+      "oscillator_strength": 0.0007341842279689958,
       "transition_dipole_au": [
-        -0.22275107993907342,
-        -0.008037739012203761,
-        0.01917912197953356
+        0.04154755164787645,
+        0.02754335068702126,
+        0.0010858526174437782
       ],
       "retained_subspace_weight": 0.00015540064556581563,
-      "native_frontier_subspace_weight": 0.00023018041939739363,
+      "native_frontier_subspace_weight": 0.00023018041939758843,
       "selected": false
     },
     {
       "root": 84,
       "excitation_ev": 12.132752132150458,
-      "oscillator_strength": 0.0027424779075414787,
+      "oscillator_strength": 0.00047190726665878553,
       "transition_dipole_au": [
-        -0.09216163174618486,
-        -0.026772939358172664,
-        0.0039628779289411905
+        0.03844947150225654,
+        -0.009189475711404724,
+        -0.004978454300302641
       ],
       "retained_subspace_weight": 2.6876210234531557e-05,
-      "native_frontier_subspace_weight": 5.621325629794013e-05,
+      "native_frontier_subspace_weight": 5.621325629817549e-05,
       "selected": false
     },
     {
       "root": 85,
       "excitation_ev": 12.218168822015429,
-      "oscillator_strength": 0.0037856840833101887,
+      "oscillator_strength": 0.00035306602632883193,
       "transition_dipole_au": [
-        -0.11189277892729566,
-        -0.008576911436194157,
-        0.007295801516033502
+        0.032478746359642666,
+        0.01085904311417847,
+        -0.002587537188929056
       ],
       "retained_subspace_weight": 3.737628914141515e-05,
-      "native_frontier_subspace_weight": 6.868179509724849e-05,
+      "native_frontier_subspace_weight": 6.868179509713222e-05,
       "selected": false
     },
     {
       "root": 86,
       "excitation_ev": 12.309242459222299,
-      "oscillator_strength": 0.0002995898811473372,
+      "oscillator_strength": 3.178089954689286e-05,
       "transition_dipole_au": [
-        -0.03135037015166539,
-        0.0019230115877298514,
-        -0.002624384086056861
+        0.005591780531130912,
+        0.006896332748091957,
+        -0.005153357766718197
       ],
       "retained_subspace_weight": 6.876555982430294e-07,
-      "native_frontier_subspace_weight": 4.497000115557992e-06,
+      "native_frontier_subspace_weight": 4.497000115569711e-06,
       "selected": false
     },
     {
       "root": 87,
       "excitation_ev": 12.312860330237605,
-      "oscillator_strength": 0.20699786919898905,
+      "oscillator_strength": 0.015064204619071824,
       "transition_dipole_au": [
-        -0.8066808275295703,
-        -0.18372825121920455,
-        0.041316145463576905
+        0.2167960239470179,
+        -0.045943119912141665,
+        -0.028748698415625485
       ],
       "retained_subspace_weight": 0.0009370747050553927,
-      "native_frontier_subspace_weight": 0.0034517123527727602,
+      "native_frontier_subspace_weight": 0.0034517123527725894,
       "selected": false
     },
     {
       "root": 88,
       "excitation_ev": 12.421682529763157,
-      "oscillator_strength": 0.01666533822296637,
+      "oscillator_strength": 0.0008315970191729977,
       "transition_dipole_au": [
-        0.22771372101257326,
-        0.05231055698985439,
-        -0.013099783698358389
+        -0.04974027460442484,
+        0.014958432061375823,
+        0.005894071276007477
       ],
       "retained_subspace_weight": 6.639422629159439e-05,
-      "native_frontier_subspace_weight": 0.0002536649802854866,
+      "native_frontier_subspace_weight": 0.00025366498028528764,
       "selected": false
     },
     {
       "root": 89,
       "excitation_ev": 12.443474854872518,
-      "oscillator_strength": 0.0020078503256954765,
+      "oscillator_strength": 0.004148244710659339,
       "transition_dipole_au": [
-        0.07646855488308,
-        -0.018330811900215946,
-        -0.020067161787934357
+        -0.1081082075420439,
+        -0.04317937922274057,
+        -0.00743146609594675
       ],
       "retained_subspace_weight": 0.00011106888852497076,
-      "native_frontier_subspace_weight": 0.00011226195365387528,
+      "native_frontier_subspace_weight": 0.0001122619536538257,
       "selected": false
     },
     {
       "root": 90,
       "excitation_ev": 12.529885232027961,
-      "oscillator_strength": 0.06918060164336107,
+      "oscillator_strength": 0.004190149144524864,
       "transition_dipole_au": [
-        0.46679097515075063,
-        0.0834168643413772,
-        -0.022561541187701328
+        -0.11543494090756343,
+        0.005034950594405626,
+        0.01729629033256952
       ],
       "retained_subspace_weight": 0.0007096835899829229,
-      "native_frontier_subspace_weight": 0.0011170217090871412,
+      "native_frontier_subspace_weight": 0.0011170217090871435,
       "selected": false
     },
     {
       "root": 91,
       "excitation_ev": 12.541810253995155,
-      "oscillator_strength": 0.026884446635024147,
+      "oscillator_strength": 0.007609425148637079,
       "transition_dipole_au": [
-        0.28862553582008815,
-        0.050350612891396626,
-        -0.04068204099988334
+        -0.15674352675655076,
+        -0.009607005767674748,
+        -0.010193111237525256
       ],
       "retained_subspace_weight": 0.0003120413529032198,
-      "native_frontier_subspace_weight": 0.0006536099262546359,
+      "native_frontier_subspace_weight": 0.0006536099262552023,
       "selected": false
     },
     {
       "root": 92,
       "excitation_ev": 12.56138441531343,
-      "oscillator_strength": 0.04237456946785113,
+      "oscillator_strength": 0.007116534471551088,
       "transition_dipole_au": [
-        0.35976574180943005,
-        0.07882611058035013,
-        -0.04524793388877312
+        -0.15139062958809243,
+        0.010011903742319937,
+        -0.010255358035036475
       ],
       "retained_subspace_weight": 0.00025688086101531153,
-      "native_frontier_subspace_weight": 0.0008609662054377757,
+      "native_frontier_subspace_weight": 0.0008609662054371474,
       "selected": false
     },
     {
       "root": 93,
       "excitation_ev": 12.719529370293923,
-      "oscillator_strength": 0.05313289149929659,
+      "oscillator_strength": 0.012848330784197202,
       "transition_dipole_au": [
-        -0.3973578941988358,
-        -0.10487093330913407,
-        0.04015841128525344
+        0.2015993025877979,
+        -0.02423657808410021,
+        -0.0008448047842095181
       ],
       "retained_subspace_weight": 0.00046155327169539835,
-      "native_frontier_subspace_weight": 0.0011821432942392492,
+      "native_frontier_subspace_weight": 0.0011821432942390711,
       "selected": false
     },
     {
       "root": 94,
       "excitation_ev": 12.725869216956713,
-      "oscillator_strength": 0.005104534556074298,
+      "oscillator_strength": 0.0023850780105872786,
       "transition_dipole_au": [
-        -0.11701272094669421,
-        -0.05054125972591557,
-        0.01122225712974663
+        0.08422290776950662,
+        -0.02344999968781536,
+        -0.0025538657875364096
       ],
       "retained_subspace_weight": 4.543125479648661e-05,
-      "native_frontier_subspace_weight": 0.0001334406957660624,
+      "native_frontier_subspace_weight": 0.00013344069576607753,
       "selected": false
     },
     {
       "root": 95,
       "excitation_ev": 12.879659737249085,
-      "oscillator_strength": 0.00039992895494950724,
+      "oscillator_strength": 0.00023483028343311243,
       "transition_dipole_au": [
-        -0.022446202481014782,
-        -0.027051403616892983,
-        0.005639951763847814
+        0.016023844833801835,
+        -0.021872390029024094,
+        0.0030063818347858336
       ],
       "retained_subspace_weight": 2.773140902924427e-09,
-      "native_frontier_subspace_weight": 4.876676968029887e-06,
+      "native_frontier_subspace_weight": 4.876676968042777e-06,
       "selected": false
     },
     {
       "root": 96,
       "excitation_ev": 12.9783908471085,
-      "oscillator_strength": 0.0009469561385868496,
+      "oscillator_strength": 0.001218613920164832,
       "transition_dipole_au": [
-        -0.04921373584979191,
-        -0.012644540031701637,
-        0.01990738046073654
+        0.06061750260560806,
+        0.002141443247119869,
+        0.01238858942570562
       ],
       "retained_subspace_weight": 5.840587185640894e-05,
-      "native_frontier_subspace_weight": 3.974937545224498e-05,
+      "native_frontier_subspace_weight": 3.9749375452193236e-05,
       "selected": false
     },
     {
       "root": 97,
       "excitation_ev": 13.033546956905713,
-      "oscillator_strength": 0.009934307819478018,
+      "oscillator_strength": 0.005632059454800814,
       "transition_dipole_au": [
-        -0.16897356386055976,
-        -0.03805356563962358,
-        0.03333274602036079
+        0.1321740347141506,
+        0.00248830040508234,
+        0.012716882116549168
       ],
       "retained_subspace_weight": 0.00032719936412085757,
-      "native_frontier_subspace_weight": 0.00029883905651188313,
+      "native_frontier_subspace_weight": 0.0002988390565118864,
       "selected": false
     },
     {
       "root": 98,
       "excitation_ev": 13.131991230930714,
-      "oscillator_strength": 0.008335020984762952,
+      "oscillator_strength": 0.00228905714116463,
       "transition_dipole_au": [
-        0.12653812709895965,
-        0.09900460234129187,
-        -0.009656378641881683
+        -0.03330416660084104,
+        0.07748590224162814,
+        0.0012860528720449896
       ],
       "retained_subspace_weight": 2.9356313599308808e-05,
-      "native_frontier_subspace_weight": 8.419027998080089e-05,
+      "native_frontier_subspace_weight": 8.419027998085632e-05,
       "selected": false
     },
     {
       "root": 99,
       "excitation_ev": 13.148514055997662,
-      "oscillator_strength": 0.01128322354782319,
+      "oscillator_strength": 0.0019221999928335522,
       "transition_dipole_au": [
-        0.18122910948146886,
-        0.044662182929365746,
-        -0.0137089918251956
+        -0.07650043013113496,
+        0.009965454414207701,
+        0.003934572784951829
       ],
       "retained_subspace_weight": 0.00010960836461401656,
-      "native_frontier_subspace_weight": 0.00021888043534214484,
+      "native_frontier_subspace_weight": 0.00021888043534165654,
       "selected": false
     },
     {
       "root": 100,
       "excitation_ev": 13.247763847298435,
-      "oscillator_strength": 0.22300711576524526,
+      "oscillator_strength": 0.03202355944966813,
       "transition_dipole_au": [
-        0.8086655578667823,
-        0.16920892297357124,
-        -0.06727096077382644
+        -0.3134420758169323,
+        0.018145664996899475,
+        0.009545916966294695
       ],
       "retained_subspace_weight": 0.0018214260753189894,
-      "native_frontier_subspace_weight": 0.004149039616559102,
+      "native_frontier_subspace_weight": 0.004149039616560067,
       "selected": false
     },
     {
       "root": 101,
       "excitation_ev": 13.308534878230834,
-      "oscillator_strength": 0.009649220471594762,
+      "oscillator_strength": 0.0006420542970098954,
       "transition_dipole_au": [
-        -0.16734823060279788,
-        -0.0378556932346581,
-        0.012471266294086085
+        0.04330336245963714,
+        -0.00949681304281229,
+        -0.0019494516337630378
       ],
       "retained_subspace_weight": 5.119765303358009e-05,
-      "native_frontier_subspace_weight": 0.00014622042557701923,
+      "native_frontier_subspace_weight": 0.00014622042557664144,
       "selected": false
     },
     {
       "root": 102,
       "excitation_ev": 13.330807370377693,
-      "oscillator_strength": 0.025792506425703732,
+      "oscillator_strength": 0.0029622741898712715,
       "transition_dipole_au": [
-        -0.2736797729153496,
-        -0.06060628344955365,
-        0.01998324735443935
+        0.09445003017850921,
+        -0.011046966905997942,
+        -0.0052180624200256365
       ],
       "retained_subspace_weight": 0.000152289925305033,
-      "native_frontier_subspace_weight": 0.00044656070518409713,
+      "native_frontier_subspace_weight": 0.00044656070518363054,
       "selected": false
     },
     {
       "root": 103,
       "excitation_ev": 13.448665459925689,
-      "oscillator_strength": 0.0006734977602280898,
+      "oscillator_strength": 0.00010967730503961003,
       "transition_dipole_au": [
-        -0.04375996358477792,
-        0.011250844365401785,
-        0.001602749317849785
+        0.004114086396366697,
+        0.01769586777099171,
+        -0.0016745967530012932
       ],
       "retained_subspace_weight": 3.8366624164330435e-05,
-      "native_frontier_subspace_weight": 7.552293957333514e-06,
+      "native_frontier_subspace_weight": 7.552293957343506e-06,
       "selected": false
     },
     {
       "root": 104,
       "excitation_ev": 13.515305602924819,
-      "oscillator_strength": 0.0003930313650673531,
+      "oscillator_strength": 0.0008014476368782697,
       "transition_dipole_au": [
-        0.0333894008038628,
-        -0.0028562528073660517,
-        0.007998084912829936
+        -0.045386106345182406,
+        -0.013461371604775356,
+        0.013390872841483957
       ],
       "retained_subspace_weight": 1.2908022692762582e-06,
-      "native_frontier_subspace_weight": 2.044847681864174e-05,
+      "native_frontier_subspace_weight": 2.0448476818631536e-05,
       "selected": false
     },
     {
       "root": 105,
       "excitation_ev": 13.553567773882808,
-      "oscillator_strength": 0.00030185300034059765,
+      "oscillator_strength": 0.0007662072813043196,
       "transition_dipole_au": [
-        -0.012643537091072236,
-        0.02375952272943213,
-        -0.013589250114982625
+        0.033582853680496454,
+        0.029982730721986862,
+        -0.016753801270029622
       ],
       "retained_subspace_weight": 0.00010457057452020512,
-      "native_frontier_subspace_weight": 7.041391965703188e-06,
+      "native_frontier_subspace_weight": 7.041391965701321e-06,
       "selected": false
     },
     {
       "root": 106,
       "excitation_ev": 13.836505115994706,
-      "oscillator_strength": 0.003371020952333158,
+      "oscillator_strength": 0.0006525271460890297,
       "transition_dipole_au": [
-        0.09806894181081677,
-        0.016936442155482477,
-        -0.006324760599719683
+        -0.04369084374573627,
+        -0.0021479080560428705,
+        0.003379784480161776
       ],
       "retained_subspace_weight": 3.454885241659904e-05,
-      "native_frontier_subspace_weight": 6.621930876830523e-05,
+      "native_frontier_subspace_weight": 6.621930876841505e-05,
       "selected": false
     },
     {
       "root": 107,
       "excitation_ev": 13.86838876011443,
-      "oscillator_strength": 0.03250723996204491,
+      "oscillator_strength": 0.010214233982220867,
       "transition_dipole_au": [
-        0.30476198020547896,
-        0.05065745267854628,
-        -0.015113472040110126
+        -0.17196626563080394,
+        -0.013521882550740945,
+        0.017522234443270748
       ],
       "retained_subspace_weight": 0.0005705857390111348,
-      "native_frontier_subspace_weight": 0.0007488939404887391,
+      "native_frontier_subspace_weight": 0.0007488939404887548,
       "selected": false
     },
     {
       "root": 108,
       "excitation_ev": 13.98794443933926,
-      "oscillator_strength": 0.06286409982054243,
+      "oscillator_strength": 0.017737955914487017,
       "transition_dipole_au": [
-        -0.41407151862214087,
-        -0.10241626878959437,
-        0.03865599376454923
+        0.2268750032935859,
+        -0.0161291187133066,
+        -0.005221713804665322
       ],
       "retained_subspace_weight": 0.0007788934251922699,
-      "native_frontier_subspace_weight": 0.0013536990940725456,
+      "native_frontier_subspace_weight": 0.0013536990940726786,
       "selected": false
     },
     {
       "root": 109,
       "excitation_ev": 14.065259590972504,
-      "oscillator_strength": 0.01174143396171841,
+      "oscillator_strength": 0.002392533806419624,
       "transition_dipole_au": [
-        -0.17657360372651743,
-        -0.051722187490033794,
-        0.014831230606679834
+        0.08152831657277977,
+        -0.016975327384948856,
+        -0.0028378263188428435
       ],
       "retained_subspace_weight": 0.00011289993286290524,
-      "native_frontier_subspace_weight": 0.0002195133913433943,
+      "native_frontier_subspace_weight": 0.00021951339134334584,
       "selected": false
     },
     {
       "root": 110,
       "excitation_ev": 14.123622460776485,
-      "oscillator_strength": 0.005525693992591708,
+      "oscillator_strength": 0.0033810901840323902,
       "transition_dipole_au": [
-        -0.06735952899565652,
-        -0.10690312336354135,
-        -0.0018967211054732095
+        0.03000797345600534,
+        -0.0937950651880927,
+        -0.008562273773654037
       ],
       "retained_subspace_weight": 1.1489666193411989e-07,
-      "native_frontier_subspace_weight": 3.123968227756326e-05,
+      "native_frontier_subspace_weight": 3.123968227757872e-05,
       "selected": false
     },
     {
       "root": 111,
       "excitation_ev": 14.14739122760752,
-      "oscillator_strength": 0.0008372296447159207,
+      "oscillator_strength": 4.7791442788518054e-05,
       "transition_dipole_au": [
-        -0.04897862239607396,
-        0.0038676738748020163,
-        0.001285686303129528
+        0.0035765603273475058,
+        0.010942892764180062,
+        -0.002312119223440674
       ],
       "retained_subspace_weight": 4.500373365792692e-06,
-      "native_frontier_subspace_weight": 9.101430323092823e-06,
+      "native_frontier_subspace_weight": 9.1014303230509e-06,
       "selected": false
     },
     {
       "root": 112,
       "excitation_ev": 14.192461173522439,
-      "oscillator_strength": 0.0009061571701866227,
+      "oscillator_strength": 0.00023372674488319868,
       "transition_dipole_au": [
-        -0.04986490361790019,
-        0.006717816992723353,
-        0.008627996086959145
+        0.019941557859544757,
+        0.016115481870898674,
+        0.003849208156267754
       ],
       "retained_subspace_weight": 2.3218066010900058e-05,
-      "native_frontier_subspace_weight": 1.605719922694394e-05,
+      "native_frontier_subspace_weight": 1.6057199226941336e-05,
       "selected": false
     },
     {
       "root": 113,
       "excitation_ev": 14.349745670670151,
-      "oscillator_strength": 0.04406230427762884,
+      "oscillator_strength": 0.007212271765728267,
       "transition_dipole_au": [
-        0.34406231618302496,
-        0.08169831925735394,
-        -0.01671408513574801
+        -0.14133216086828418,
+        0.01635229637490907,
+        0.01651489137247556
       ],
       "retained_subspace_weight": 0.000511182245282076,
-      "native_frontier_subspace_weight": 0.0007763690410986767,
+      "native_frontier_subspace_weight": 0.0007763690410986189,
       "selected": false
     },
     {
       "root": 114,
       "excitation_ev": 14.368567131136153,
-      "oscillator_strength": 0.0006625056269400855,
+      "oscillator_strength": 0.00017706454614878657,
       "transition_dipole_au": [
-        0.04314445204095549,
-        -0.0032875388814233024,
-        -0.003121135230932696
+        -0.01911826771333926,
+        -0.011669630771923322,
+        0.0011412256937777638
       ],
       "retained_subspace_weight": 1.5978607852940062e-05,
-      "native_frontier_subspace_weight": 1.2774229755132046e-05,
+      "native_frontier_subspace_weight": 1.277422975515898e-05,
       "selected": false
     },
     {
       "root": 115,
       "excitation_ev": 14.715779670540739,
-      "oscillator_strength": 0.007765698899955698,
+      "oscillator_strength": 0.0060995385357246095,
       "transition_dipole_au": [
-        -0.14372295581783895,
-        -0.026073164391726016,
-        0.01426813147340899
+        0.12955194664562786,
+        0.010716351916854123,
+        -0.004439632507364976
       ],
       "retained_subspace_weight": 0.00015614886392481891,
-      "native_frontier_subspace_weight": 0.00024608097782383175,
+      "native_frontier_subspace_weight": 0.00024608097782372366,
       "selected": false
     },
     {
       "root": 116,
       "excitation_ev": 14.810673196140899,
-      "oscillator_strength": 0.012646068009593656,
+      "oscillator_strength": 0.011941704065070896,
       "transition_dipole_au": [
-        -0.1848803603233725,
-        -0.018874798230151233,
-        0.01773662470038164
+        0.178757929863815,
+        0.030079850318494396,
+        -0.007157206551112317
       ],
       "retained_subspace_weight": 0.0002677532392278887,
-      "native_frontier_subspace_weight": 0.00043573030088226437,
+      "native_frontier_subspace_weight": 0.00043573030088233706,
       "selected": false
     },
     {
       "root": 117,
       "excitation_ev": 15.021841464375907,
-      "oscillator_strength": 0.05371809874145166,
+      "oscillator_strength": 0.03621420090539266,
       "transition_dipole_au": [
-        0.3695515431826466,
-        0.08306344400910042,
-        -0.04993976181738191
+        -0.3135463442805993,
+        -0.008898315540135758,
+        -0.0031764698383913107
       ],
       "retained_subspace_weight": 0.0011560319615265752,
-      "native_frontier_subspace_weight": 0.0015376037601881048,
+      "native_frontier_subspace_weight": 0.0015376037601881733,
       "selected": false
     },
     {
       "root": 118,
       "excitation_ev": 15.147979315863413,
-      "oscillator_strength": 0.05232955275087369,
+      "oscillator_strength": 0.036224037711444244,
       "transition_dipole_au": [
-        -0.36883254105408697,
-        -0.056599805106480244,
-        0.04199918905202767
+        0.3104401984706466,
+        0.03484699554532029,
+        -0.0045022421992455515
       ],
       "retained_subspace_weight": 0.0010994550460341709,
-      "native_frontier_subspace_weight": 0.0015204317136924145,
+      "native_frontier_subspace_weight": 0.0015204317136923106,
       "selected": false
     },
     {
       "root": 119,
       "excitation_ev": 15.265294508716918,
-      "oscillator_strength": 0.013518644407625038,
+      "oscillator_strength": 0.0062903531946087565,
       "transition_dipole_au": [
-        0.17901143780502393,
-        0.060683021473867095,
-        -0.020476285798848425
+        -0.12824159355347806,
+        0.0193192141643478,
+        0.000557541827532084
       ],
       "retained_subspace_weight": 0.0001941176237050236,
-      "native_frontier_subspace_weight": 0.0003110791478125671,
+      "native_frontier_subspace_weight": 0.000311079147812706,
       "selected": false
     },
     {
       "root": 120,
       "excitation_ev": 15.274627080944253,
-      "oscillator_strength": 0.0118910858453774,
+      "oscillator_strength": 0.003908391075884474,
       "transition_dipole_au": [
-        0.16886887573491385,
-        0.053663936283907004,
-        -0.01946834099608933
+        -0.10070359820841183,
+        0.01737285782378392,
+        -0.0010140366571838061
       ],
       "retained_subspace_weight": 0.0001440844040532538,
-      "native_frontier_subspace_weight": 0.00023945815748550067,
+      "native_frontier_subspace_weight": 0.00023945815748553276,
       "selected": false
     },
     {
       "root": 121,
       "excitation_ev": 15.359650223262738,
-      "oscillator_strength": 0.003288885637866767,
+      "oscillator_strength": 0.000652332919578399,
       "transition_dipole_au": [
-        0.08623306326499272,
-        0.034791059462157686,
-        -0.009664342702946914
+        -0.03745742036273848,
+        0.01813928125779614,
+        -0.0011967799903963906
       ],
       "retained_subspace_weight": 2.508393227155809e-05,
-      "native_frontier_subspace_weight": 5.0413996060658216e-05,
+      "native_frontier_subspace_weight": 5.0413996060524825e-05,
       "selected": false
     },
     {
       "root": 122,
       "excitation_ev": 15.690741255637436,
-      "oscillator_strength": 0.00310815078422956,
+      "oscillator_strength": 0.0005955268632725666,
       "transition_dipole_au": [
-        -0.08911707383406997,
-        -0.01198036498375745,
-        -5.244230786602222e-06
+        -0.03886011084328718,
+        -0.005214542938261681,
+        -0.0034457189818377127
       ],
       "retained_subspace_weight": 1.6331784750951047e-06,
-      "native_frontier_subspace_weight": 8.32283010647987e-06,
+      "native_frontier_subspace_weight": 8.32283010653346e-06,
       "selected": false
     },
     {
       "root": 123,
       "excitation_ev": 15.807979283388747,
-      "oscillator_strength": 0.003377320355914674,
+      "oscillator_strength": 0.0013177579875530785,
       "transition_dipole_au": [
-        -0.09030247256849623,
-        -0.021715939616413122,
-        0.009711329030001858
+        0.05830426518730566,
+        -0.001709821407431054,
+        -0.00046194246630779226
       ],
       "retained_subspace_weight": 3.99226121944845e-06,
-      "native_frontier_subspace_weight": 7.277053185276202e-05,
+      "native_frontier_subspace_weight": 7.277053185312478e-05,
       "selected": false
     },
     {
       "root": 124,
       "excitation_ev": 15.899227147239824,
-      "oscillator_strength": 0.044868946099528705,
+      "oscillator_strength": 0.01241670102678423,
       "transition_dipole_au": [
-        -0.3320902764713608,
-        -0.06255467321859297,
-        0.03149866767262048
+        0.17840025770998238,
+        0.0061698955703398456,
+        -0.0034483265145263627
       ],
       "retained_subspace_weight": 3.8419242080623043e-05,
-      "native_frontier_subspace_weight": 0.0008587246605617554,
+      "native_frontier_subspace_weight": 0.0008587246605635048,
       "selected": false
     },
     {
       "root": 125,
       "excitation_ev": 16.020670558996407,
-      "oscillator_strength": 0.054151985372718855,
+      "oscillator_strength": 0.007701802162042626,
       "transition_dipole_au": [
-        0.3634582664954053,
-        0.0696878026296711,
-        -0.03176201171102455
+        -0.14004111936226268,
+        0.0019044141794766704,
+        0.002706384728525421
       ],
       "retained_subspace_weight": 4.206147549928221e-05,
-      "native_frontier_subspace_weight": 0.0008353653133623861,
+      "native_frontier_subspace_weight": 0.0008353653133622388,
       "selected": false
     },
     {
       "root": 126,
       "excitation_ev": 16.176672914758175,
-      "oscillator_strength": 0.04854533361057714,
+      "oscillator_strength": 0.011004782064529437,
       "transition_dipole_au": [
-        -0.34313559105016056,
-        -0.06095183696111334,
-        0.032135967331927674
+        0.16643698777208651,
+        0.00764915248207848,
+        -0.0027481857671870858
       ],
       "retained_subspace_weight": 4.6565054314118245e-05,
-      "native_frontier_subspace_weight": 0.0008556391491830704,
+      "native_frontier_subspace_weight": 0.000855639149180545,
       "selected": false
     },
     {
       "root": 127,
       "excitation_ev": 16.79109451782844,
-      "oscillator_strength": 0.00031944430086986694,
+      "oscillator_strength": 0.0011323122262158964,
       "transition_dipole_au": [
-        0.017884185827782454,
-        -0.01840434829123023,
-        -0.010861194638825036
+        -0.04460936957291416,
+        -0.026817516331425033,
+        -0.006583031242855044
       ],
       "retained_subspace_weight": 0.0010507415046798912,
-      "native_frontier_subspace_weight": 1.2869124862696266e-05,
+      "native_frontier_subspace_weight": 1.2869124862688312e-05,
       "selected": false
     },
     {
       "root": 128,
       "excitation_ev": 16.84455723237097,
-      "oscillator_strength": 0.005664495804248424,
+      "oscillator_strength": 0.00268251636257044,
       "transition_dipole_au": [
-        -0.11513273001793269,
-        -0.0195867318190031,
-        0.009316731647168026
+        0.08024092251864667,
+        0.006715362194998174,
+        -0.004058094020200315
       ],
       "retained_subspace_weight": 7.339522948323263e-05,
-      "native_frontier_subspace_weight": 0.00012577969562461682,
+      "native_frontier_subspace_weight": 0.00012577969562457768,
       "selected": false
     },
     {
       "root": 129,
       "excitation_ev": 16.988216977833204,
-      "oscillator_strength": 0.0016180037962670478,
+      "oscillator_strength": 0.00010245870448577314,
       "transition_dipole_au": [
-        -0.062021222338072196,
-        -0.0014172571283210449,
-        0.006236068552508534
+        0.013020526253358249,
+        0.0086852060277921,
+        0.0010988850471891287
       ],
       "retained_subspace_weight": 1.6912107435466675e-05,
-      "native_frontier_subspace_weight": 1.8556003184154434e-05,
+      "native_frontier_subspace_weight": 1.855600318417632e-05,
       "selected": false
     },
     {
       "root": 130,
       "excitation_ev": 17.048085116726682,
-      "oscillator_strength": 0.003816699911304338,
+      "oscillator_strength": 0.0018328965471367151,
       "transition_dipole_au": [
-        0.09393205265318597,
-        0.012549650698734113,
-        -0.012543632014862364
+        -0.06562017791864708,
+        -0.00892999977695041,
+        -0.001621057547771348
       ],
       "retained_subspace_weight": 8.666682322222327e-05,
-      "native_frontier_subspace_weight": 8.388499984912083e-05,
+      "native_frontier_subspace_weight": 8.388499984947256e-05,
       "selected": false
     },
     {
       "root": 131,
       "excitation_ev": 17.147961061348795,
-      "oscillator_strength": 0.004020388466049771,
+      "oscillator_strength": 0.0006580906416353642,
       "transition_dipole_au": [
-        0.09461790570922517,
-        0.023267105782152082,
-        -0.0087048600498447
+        -0.039226134540077305,
+        0.005248409380947148,
+        0.00045779152424889395
       ],
       "retained_subspace_weight": 4.7738594764043594e-05,
-      "native_frontier_subspace_weight": 5.903052199845976e-05,
+      "native_frontier_subspace_weight": 5.9030521998389015e-05,
       "selected": false
     },
     {
       "root": 132,
       "excitation_ev": 17.290448335263292,
-      "oscillator_strength": 0.0018974084030681352,
+      "oscillator_strength": 0.00044769045547952366,
       "transition_dipole_au": [
-        -0.0648483669732164,
-        -0.015114643474040278,
-        0.006737653560717843
+        0.032446552100388874,
+        -0.0020163568047081937,
+        7.706978171170489e-05
       ],
       "retained_subspace_weight": 4.938240209371959e-06,
-      "native_frontier_subspace_weight": 3.1193123899140064e-05,
+      "native_frontier_subspace_weight": 3.119312389913508e-05,
       "selected": false
     },
     {
       "root": 133,
       "excitation_ev": 17.47073145853272,
-      "oscillator_strength": 0.00039663019479798734,
+      "oscillator_strength": 7.840640164735335e-05,
       "transition_dipole_au": [
-        0.029389090293103638,
-        0.005311563050156744,
-        -0.005892414542945384
+        -0.01319624671564924,
+        -0.00042146964427220384,
+        -0.0029771214566793737
       ],
       "retained_subspace_weight": 8.79577304058086e-08,
-      "native_frontier_subspace_weight": 5.975836751434041e-06,
+      "native_frontier_subspace_weight": 5.975836751375885e-06,
       "selected": false
     },
     {
       "root": 134,
       "excitation_ev": 17.510579853100484,
-      "oscillator_strength": 0.0015357275804779359,
+      "oscillator_strength": 0.0004545400921267826,
       "transition_dipole_au": [
-        -0.05885311460304207,
-        -0.008754450776508714,
-        0.006280467182265868
+        0.032358991044046284,
+        0.003524939749270329,
+        3.629865726432681e-05
       ],
       "retained_subspace_weight": 1.413809787435774e-05,
-      "native_frontier_subspace_weight": 2.7414700843437913e-05,
+      "native_frontier_subspace_weight": 2.7414700843290797e-05,
       "selected": false
     },
     {
       "root": 135,
       "excitation_ev": 17.644698283610747,
-      "oscillator_strength": 0.004966378724034624,
+      "oscillator_strength": 0.0005015193459487093,
       "transition_dipole_au": [
-        0.10598013138375899,
-        0.014788671978029327,
-        -0.00617397113302711
+        -0.03365438898330539,
+        -0.0040095653206593486,
+        0.00338508323693853
       ],
       "retained_subspace_weight": 2.1301847530020318e-05,
-      "native_frontier_subspace_weight": 6.424867018404694e-05,
+      "native_frontier_subspace_weight": 6.42486701840557e-05,
       "selected": false
     },
     {
       "root": 136,
       "excitation_ev": 17.765193042061618,
-      "oscillator_strength": 0.004850846198898591,
+      "oscillator_strength": 0.0009403654605576017,
       "transition_dipole_au": [
-        -0.1007842833332543,
-        -0.031082533607377387,
-        0.004652554465972791
+        0.04472460414848251,
+        -0.011493462160285782,
+        -0.0053086454084900845
       ],
       "retained_subspace_weight": 8.546930920165028e-06,
-      "native_frontier_subspace_weight": 6.976821123336262e-05,
+      "native_frontier_subspace_weight": 6.976821123344568e-05,
       "selected": false
     },
     {
       "root": 137,
       "excitation_ev": 17.879111562887992,
-      "oscillator_strength": 0.0011987141613036846,
+      "oscillator_strength": 4.591658564914403e-05,
       "transition_dipole_au": [
-        0.05163179569107775,
-        0.008116578025481014,
-        -0.0022092434559263957
+        -0.010036969595476534,
+        -0.000185553000044657,
+        0.0020124567279046087
       ],
       "retained_subspace_weight": 2.079630794994342e-06,
-      "native_frontier_subspace_weight": 1.2531673010635056e-05,
+      "native_frontier_subspace_weight": 1.2531673010588583e-05,
       "selected": false
     },
     {
       "root": 138,
       "excitation_ev": 17.934601713882987,
-      "oscillator_strength": 0.0017803931171538343,
+      "oscillator_strength": 0.00027802876718855253,
       "transition_dipole_au": [
-        0.05706580792283865,
-        0.02814786325241284,
-        -0.00177769319596611
+        -0.01708514565556244,
+        0.01816532299211395,
+        0.0032985085554153516
       ],
       "retained_subspace_weight": 1.577808417185832e-07,
-      "native_frontier_subspace_weight": 1.8118073983114145e-05,
+      "native_frontier_subspace_weight": 1.8118073983051397e-05,
       "selected": false
     },
     {
       "root": 139,
       "excitation_ev": 18.740954922972783,
-      "oscillator_strength": 0.0022222252121828984,
+      "oscillator_strength": 0.0020447491705168084,
       "transition_dipole_au": [
-        0.0629383596667109,
-        0.02624490004286301,
-        -0.013780028590687311
+        -0.06595250362719082,
+        0.008893022960725633,
+        -0.004956459986162346
       ],
       "retained_subspace_weight": 5.933771352000516e-05,
-      "native_frontier_subspace_weight": 5.474227134030957e-05,
+      "native_frontier_subspace_weight": 5.474227134031222e-05,
       "selected": false
     },
     {
       "root": 140,
       "excitation_ev": 18.986351427274215,
-      "oscillator_strength": 0.0017269404701016741,
+      "oscillator_strength": 0.0013423845163228624,
       "transition_dipole_au": [
-        -0.054413475979169526,
-        -0.02464910046632139,
-        0.012008006020919827
+        0.05252414498813031,
+        -0.010252669198344375,
+        0.004687305306408473
       ],
       "retained_subspace_weight": 3.9714773944173316e-05,
-      "native_frontier_subspace_weight": 3.7682489274762086e-05,
+      "native_frontier_subspace_weight": 3.7682489274757234e-05,
       "selected": false
     },
     {
       "root": 141,
       "excitation_ev": 19.14240195936008,
-      "oscillator_strength": 0.0015722483678055263,
+      "oscillator_strength": 5.063094975253216e-05,
       "transition_dipole_au": [
-        -0.0573969660631253,
-        -0.006931731213521151,
-        -0.0031658921841081124
+        -0.008066284768903085,
+        -0.0002906094433668218,
+        -0.006542955845435811
       ],
       "retained_subspace_weight": 2.6525289864671975e-06,
-      "native_frontier_subspace_weight": 8.018862649836376e-06,
+      "native_frontier_subspace_weight": 8.018862649846238e-06,
       "selected": false
     },
     {
       "root": 142,
       "excitation_ev": 19.674614205027254,
-      "oscillator_strength": 0.00012066270948504644,
+      "oscillator_strength": 6.019207226085845e-07,
       "transition_dipole_au": [
-        -0.015641767646777948,
-        -0.00237905732725753,
-        5.303989487498274e-05
+        0.00033687427979222696,
+        -0.000227939524461826,
+        -0.0010408207531416643
       ],
       "retained_subspace_weight": 1.0193493013782019e-08,
-      "native_frontier_subspace_weight": 8.413143120044786e-07,
+      "native_frontier_subspace_weight": 8.413143119911767e-07,
       "selected": false
     },
     {
       "root": 143,
       "excitation_ev": 20.839356695638433,
-      "oscillator_strength": 0.0038005677217404724,
+      "oscillator_strength": 0.0009027142264895176,
       "transition_dipole_au": [
-        -0.08419764569862939,
-        -0.01744403992542462,
-        0.007103328810022171
+        0.04201829490643393,
+        -0.00045227316077108926,
+        -0.001537120811093499
       ],
       "retained_subspace_weight": 2.8150731559819558e-05,
-      "native_frontier_subspace_weight": 5.249367331921764e-05,
+      "native_frontier_subspace_weight": 5.249367331935196e-05,
       "selected": false
     },
     {
       "root": 144,
       "excitation_ev": 21.104945771929163,
-      "oscillator_strength": 0.003069326324624905,
+      "oscillator_strength": 0.0006936593274038768,
       "transition_dipole_au": [
-        -0.07539499530082645,
-        -0.014707273663925777,
-        0.005948488192625424
+        0.036584915479535796,
+        0.0003679737032862406,
+        -0.001717395950347301
       ],
       "retained_subspace_weight": 1.7448503110019177e-05,
-      "native_frontier_subspace_weight": 4.13198543672459e-05,
+      "native_frontier_subspace_weight": 4.1319854367108285e-05,
       "selected": false
     },
     {
       "root": 145,
       "excitation_ev": 21.158751482312283,
-      "oscillator_strength": 0.0002782683130677805,
+      "oscillator_strength": 0.0001244064725292822,
       "transition_dipole_au": [
-        -0.022005753924925264,
-        -0.0069287055826406305,
-        0.002131597939322961
+        0.01536910919208427,
+        -0.0018971306967679677,
+        -0.0004269982277737427
       ],
       "retained_subspace_weight": 1.29904765165151e-05,
-      "native_frontier_subspace_weight": 4.602966025907935e-06,
+      "native_frontier_subspace_weight": 4.602966025924618e-06,
       "selected": false
     },
     {
       "root": 146,
       "excitation_ev": 21.39971093027426,
-      "oscillator_strength": 0.0004498434702908748,
+      "oscillator_strength": 0.0001464635657242927,
       "transition_dipole_au": [
-        0.028661660985210384,
-        0.005685091417769987,
-        -0.002050617128072539
+        -0.016675598709871432,
+        -0.0004184176857108778,
+        0.001053066182267266
       ],
       "retained_subspace_weight": 2.6221969597961955e-06,
-      "native_frontier_subspace_weight": 6.773124852128441e-06,
+      "native_frontier_subspace_weight": 6.773124852112617e-06,
       "selected": false
     },
     {
       "root": 147,
       "excitation_ev": 21.69305658441651,
-      "oscillator_strength": 0.0007048446718984056,
+      "oscillator_strength": 0.0002925303069066551,
       "transition_dipole_au": [
-        0.03578775433871099,
-        0.005856804553293021,
-        -0.0033393865412766374
+        -0.023355546037897863,
+        -0.0021053368440099455,
+        0.0007094261909410597
       ],
       "retained_subspace_weight": 3.271577509052524e-05,
-      "native_frontier_subspace_weight": 1.1526293114912246e-05,
+      "native_frontier_subspace_weight": 1.1526293114940093e-05,
       "selected": false
     },
     {
       "root": 148,
       "excitation_ev": 21.883470620218898,
-      "oscillator_strength": 0.00031167803251051237,
+      "oscillator_strength": 0.00011647464279399163,
       "transition_dipole_au": [
-        -0.023650267274388098,
-        -0.0040511178919165535,
-        0.0023655009489495873
+        0.01469512605627182,
+        0.0011111142068975885,
+        -0.0002595354583943248
       ],
       "retained_subspace_weight": 9.610377554943072e-06,
-      "native_frontier_subspace_weight": 4.8451245071004366e-06,
+      "native_frontier_subspace_weight": 4.845124507070443e-06,
       "selected": false
     },
     {
       "root": 149,
       "excitation_ev": 22.74704540358009,
-      "oscillator_strength": 0.0005553613240864686,
+      "oscillator_strength": 0.00016042781463949593,
       "transition_dipole_au": [
-        0.030468331307851423,
-        0.008043643622167791,
-        -0.00187499335694842
+        -0.016828629140420968,
+        0.001676310646938737,
+        0.001362846507224579
       ],
       "retained_subspace_weight": 9.381373748470587e-07,
-      "native_frontier_subspace_weight": 7.371315690259213e-06,
+      "native_frontier_subspace_weight": 7.371315690279868e-06,
       "selected": false
     },
     {
       "root": 150,
       "excitation_ev": 22.946076497416946,
-      "oscillator_strength": 0.00031895184375600375,
+      "oscillator_strength": 7.659727916907081e-05,
       "transition_dipole_au": [
-        -0.022753866051262592,
-        -0.00684054403446015,
-        0.0016817835261213074
+        0.011437325573006857,
+        -0.0022375695551661253,
+        -0.0006588658981840724
       ],
       "retained_subspace_weight": 4.916675544476434e-07,
-      "native_frontier_subspace_weight": 3.8521839895933775e-06,
+      "native_frontier_subspace_weight": 3.85218398957323e-06,
       "selected": false
     },
     {
       "root": 151,
       "excitation_ev": 25.27109408958939,
-      "oscillator_strength": 9.880898988030857e-05,
+      "oscillator_strength": 7.443881564294738e-05,
       "transition_dipole_au": [
-        0.012412535550511122,
-        0.0016277377126246466,
-        -0.0016948792511987693
+        -0.010860692844973348,
+        -0.0015054106588154874,
+        -0.00010164818618493002
       ],
       "retained_subspace_weight": 8.042426075340022e-07,
-      "native_frontier_subspace_weight": 1.7848092620352679e-06,
+      "native_frontier_subspace_weight": 1.7848092620402935e-06,
       "selected": false
     },
     {
       "root": 152,
       "excitation_ev": 25.492388739828957,
-      "oscillator_strength": 8.362052789882858e-05,
+      "oscillator_strength": 5.193841459432272e-05,
       "transition_dipole_au": [
-        -0.011368640923748449,
-        -0.0015014056009170005,
-        0.001545509603414193
+        0.00903264142841561,
+        0.0012451082686141814,
+        0.00014888528223084953
       ],
       "retained_subspace_weight": 3.2106254272490726e-07,
-      "native_frontier_subspace_weight": 1.3714926385496368e-06,
+      "native_frontier_subspace_weight": 1.3714926385446052e-06,
       "selected": false
     }
   ],
@@ -1983,14 +1983,14 @@
     {
       "root": 2,
       "excitation_ev": 2.859962003503646,
-      "oscillator_strength": 1.9702637376872716,
+      "oscillator_strength": 3.659780309876097,
       "transition_dipole_au": [
-        5.191747476797724,
-        1.0391333512146033,
-        -0.292161849320906
+        -7.178591817917086,
+        -0.626218260378789,
+        0.554682796131063
       ],
       "retained_subspace_weight": 0.5221896548346384,
-      "native_frontier_subspace_weight": 0.504245198183147,
+      "native_frontier_subspace_weight": 0.5042451981830429,
       "selected": true
     }
   ],
@@ -19521,5 +19521,17 @@
   "frontier_virtual": 4,
   "screened_interaction_reused": true,
   "screening_active_frontier": 5,
-  "role": "Post-exposure active-space convergence diagnostic; no parameter retuning"
+  "role": "Post-exposure active-space convergence diagnostic; no parameter retuning",
+  "target_coverage": {
+    "minimum_target_coverage": 0.5042451981830429,
+    "required_target_coverage": 0.49,
+    "target_rank": 1,
+    "retained_roots": 1,
+    "fragmented": false,
+    "complete_target_coverage": 0.9963349466035001
+  },
+  "observable_phase_convention": "Identical to MatrixResponse opened singlet: excited determinant core+[particle], ground determinant in original column order",
+  "corrected_observables_checkpoint": "observables_phase_corrected.npz",
+  "observable_refresh_wall_seconds": 0.10779445798834786,
+  "energy_and_CI_checkpoints_reused_unchanged": true
 }

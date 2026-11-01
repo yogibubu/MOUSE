@@ -1,0 +1,19 @@
+{
+  "molecule": "Beta_carotene",
+  "frozen_before_coherent_sequence": "2026-11-02",
+  "supersedes": "beta_convergence_protocol.json",
+  "reason": "Code inspection establishes that W is the rank of the explicit active exclusion from the native polarization, not a numerical truncation of the polarization. Increasing W at fixed N removes response channels without adding their CI configurations. The original independent W convergence criterion conflated a change of downfolding partition with numerical convergence. Its failed sensitivity checks are retained, not relabelled as passed.",
+  "CI_energy_tolerance_ev": 0.02,
+  "successive_increments_required": 2,
+  "roots": [1, 2, 3],
+  "fixed_Hamiltonian_check": "Two consecutive N increments at fixed W=16; full configuration space retained in each window.",
+  "coherent_model_check": "Two consecutive N increments with W=N, so the native polarization excludes precisely the canonical frontier represented in CI, plus the unchanged optimized ROKS target sectors.",
+  "screening_numerical_check": "Positive dielectric and three independent quadratic-form checks of the reused native/bath update, relative error below 1e-9.",
+  "optical_tracking": "Metric principal angles of roots 2 and 3, with all root intensities and native-target coverage reported.",
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "eta": 0.6,
+  "energy_offset_ev": 0,
+  "reference_geometry_changed": false,
+  "scope": "Post-exposure development test of the fixed rank-two model; no experimental accuracy, blind validation or pigment nuclear-derivative claim. Do not claim robustness to inconsistent exclusion/CI partitions."
+}

@@ -1,0 +1,185 @@
+{
+  "screening_numerical_verification": {
+    "host": "mac-2.homenet.telecomitalia.it",
+    "rows": [
+      {
+        "W": 11,
+        "quadratic_form_relative_error": 4.163336342344337e-17,
+        "dielectric_solve_relative_residual": 3.01761061984828e-15,
+        "factorized_screened_row_max_error": 1.4399560103323106e-20,
+        "positive_dielectric_by_construction": true
+      },
+      {
+        "W": 12,
+        "quadratic_form_relative_error": 1.1102230246251565e-16,
+        "dielectric_solve_relative_residual": 3.02015263900281e-15,
+        "factorized_screened_row_max_error": 3.2526065174565133e-18,
+        "positive_dielectric_by_construction": true
+      },
+      {
+        "W": 13,
+        "quadratic_form_relative_error": 6.938893903907228e-17,
+        "dielectric_solve_relative_residual": 3.3286984996760504e-15,
+        "factorized_screened_row_max_error": 4.743384504624082e-20,
+        "positive_dielectric_by_construction": true
+      },
+      {
+        "W": 16,
+        "quadratic_form_relative_error": 5.551115123125783e-17,
+        "dielectric_solve_relative_residual": 2.9339700476077574e-15,
+        "factorized_screened_row_max_error": 3.144186300207963e-18,
+        "positive_dielectric_by_construction": true
+      }
+    ],
+    "threshold": 1e-09,
+    "random_checks_each": 3,
+    "SCF_calls": 0,
+    "physical_parameters_retuned": false
+  },
+  "screening_numerics_passed": true,
+  "protocol": {
+    "molecule": "Beta_carotene",
+    "frozen_before_coherent_sequence": "2026-11-02",
+    "supersedes": "beta_convergence_protocol.json",
+    "reason": "Code inspection establishes that W is the rank of the explicit active exclusion from the native polarization, not a numerical truncation of the polarization. Increasing W at fixed N removes response channels without adding their CI configurations. The original independent W convergence criterion conflated a change of downfolding partition with numerical convergence. Its failed sensitivity checks are retained, not relabelled as passed.",
+    "CI_energy_tolerance_ev": 0.02,
+    "successive_increments_required": 2,
+    "roots": [
+      1,
+      2,
+      3
+    ],
+    "fixed_Hamiltonian_check": "Two consecutive N increments at fixed W=16; full configuration space retained in each window.",
+    "coherent_model_check": "Two consecutive N increments with W=N, so the native polarization excludes precisely the canonical frontier represented in CI, plus the unchanged optimized ROKS target sectors.",
+    "screening_numerical_check": "Positive dielectric and three independent quadratic-form checks of the reused native/bath update, relative error below 1e-9.",
+    "optical_tracking": "Metric principal angles of roots 2 and 3, with all root intensities and native-target coverage reported.",
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lambda_exchange": 0.9,
+    "eta": 0.6,
+    "energy_offset_ev": 0,
+    "reference_geometry_changed": false,
+    "scope": "Post-exposure development test of the fixed rank-two model; no experimental accuracy, blind validation or pigment nuclear-derivative claim. Do not claim robustness to inconsistent exclusion/CI partitions."
+  },
+  "frontiers": [
+    11,
+    12,
+    13
+  ],
+  "fixed_screening_window": 16,
+  "fixed_Hamiltonian_increments_ev": [
+    [
+      -0.0008969479088747345,
+      -0.0009971084581112954,
+      -0.0018307820843124212
+    ],
+    [
+      -0.0010755162128452955,
+      -0.0013234401397048678,
+      -0.0020695228791249853
+    ]
+  ],
+  "coherent_W_equals_N_increments_ev": [
+    [
+      -0.0030336620384610047,
+      -0.005027929656854724,
+      -0.0028790432509495645
+    ],
+    [
+      -0.0033699200192662815,
+      -0.005367271564473697,
+      -0.0031209317524547586
+    ]
+  ],
+  "fixed_Hamiltonian_converged": true,
+  "coherent_model_converged": true,
+  "converged": true,
+  "coherent_states": [
+    {
+      "root": 1,
+      "excitation_ev": 1.9498503159199916,
+      "oscillator_strength": 0.0011684010335889538,
+      "transition_dipole_au": [
+        -0.15524071682107207,
+        -0.015535340419583696,
+        0.010845682588955668
+      ],
+      "retained_subspace_weight": 0.0004335355957090394,
+      "native_frontier_subspace_weight": 0.0009841949322521662,
+      "selected": false
+    },
+    {
+      "root": 2,
+      "excitation_ev": 2.338412047051961,
+      "oscillator_strength": 0.13196813390424647,
+      "transition_dipole_au": [
+        1.5112564757324074,
+        0.10099783032611717,
+        -0.09701834497898933
+      ],
+      "retained_subspace_weight": 0.02248204879968034,
+      "native_frontier_subspace_weight": 0.02679072918407451,
+      "selected": false
+    },
+    {
+      "root": 3,
+      "excitation_ev": 2.478190666652836,
+      "oscillator_strength": 4.795981564768285,
+      "transition_dipole_au": [
+        8.815279308496207,
+        0.9128632025936202,
+        -0.6706886373218078
+      ],
+      "retained_subspace_weight": 0.795822786711025,
+      "native_frontier_subspace_weight": 0.7741273099348874,
+      "selected": true
+    }
+  ],
+  "fixed_screening_states": [
+    {
+      "root": 1,
+      "excitation_ev": 1.9092708180321056,
+      "oscillator_strength": 0.0010233804466995239,
+      "transition_dipole_au": [
+        -0.14684006356257692,
+        -0.01453650966733941,
+        0.01024116621014825
+      ],
+      "retained_subspace_weight": 0.0003976453387275979,
+      "native_frontier_subspace_weight": 0.0009284331045742213,
+      "selected": false
+    },
+    {
+      "root": 2,
+      "excitation_ev": 2.2911572805575835,
+      "oscillator_strength": 0.07788541640377826,
+      "transition_dipole_au": [
+        1.1738233732093222,
+        0.06763335592191404,
+        -0.07139280329878799
+      ],
+      "retained_subspace_weight": 0.013408797531464985,
+      "native_frontier_subspace_weight": 0.016854763036531592,
+      "selected": false
+    },
+    {
+      "root": 3,
+      "excitation_ev": 2.4659955997467033,
+      "oscillator_strength": 4.817033309759985,
+      "transition_dipole_au": [
+        8.857345685947335,
+        0.9090328071907318,
+        -0.672656094999942
+      ],
+      "retained_subspace_weight": 0.8030364589048067,
+      "native_frontier_subspace_weight": 0.7822731831875086,
+      "selected": true
+    }
+  ],
+  "same_geometry_and_parameters": true,
+  "coherent_result_sha256": "700ae901c11a737443580265c5b507eb39903d1a9ca1bfafbdf1d47e2969d284",
+  "original_W_sensitivity_criterion": "Superseded for the stated mathematical reason; failed sensitivity checks retained separately, not relabelled as converged",
+  "scope": "Numerical convergence of the explicit rank-two prepared model on the source geometry; no general accuracy or pigment Hessian qualification"
+}

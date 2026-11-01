@@ -1,0 +1,99 @@
+{
+  "protocol": {
+    "molecule": "Beta_carotene",
+    "frozen_before_new_results": "2026-11-01",
+    "CI_energy_tolerance_ev": 0.02,
+    "screening_energy_tolerance_ev": 0.01,
+    "CI_successive_increments_required": 2,
+    "tracked_roots": [
+      1,
+      2,
+      3
+    ],
+    "optical_tracking": "Also inspect the metric principal angles of roots 2 and 3; report fragmentation and oscillator-strength redistribution without relabelling ordinal roots.",
+    "criterion": "All three lowest excitation energies change by at most 0.02 eV in each of two consecutive frontier expansions at fixed screening. Independently require changes at fixed CI frontier below 0.01 eV on screening expansion.",
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lambda_exchange": 0.9,
+    "eta": 0.6,
+    "energy_offset_ev": 0,
+    "reference_geometry_changed": false,
+    "scope": "Numerical active-space convergence only; not a claim of experimental accuracy or nuclear-derivative qualification. Expand further if the criterion is not met."
+  },
+  "frontiers": [
+    11,
+    12,
+    13
+  ],
+  "screening_window": 16,
+  "CI_increments_ev": [
+    [
+      -0.0008969479088747345,
+      -0.0009971084581112954,
+      -0.0018307820843124212
+    ],
+    [
+      -0.0010755162128452955,
+      -0.0013234401397048678,
+      -0.0020695228791249853
+    ]
+  ],
+  "CI_converged": true,
+  "screening_control_frontier": 10,
+  "screening_control_windows": [
+    14,
+    16
+  ],
+  "screening_increments_ev": [
+    -0.023339969700132635,
+    -0.026947026832794485,
+    -0.009451618120365435
+  ],
+  "screening_converged": false,
+  "converged": false,
+  "lowest_states": [
+    {
+      "root": 1,
+      "excitation_ev": 1.9092708180321056,
+      "oscillator_strength": 0.0010233804466995239,
+      "transition_dipole_au": [
+        -0.14684006356257692,
+        -0.01453650966733941,
+        0.01024116621014825
+      ],
+      "retained_subspace_weight": 0.0003976453387275979,
+      "native_frontier_subspace_weight": 0.0009284331045742213,
+      "selected": false
+    },
+    {
+      "root": 2,
+      "excitation_ev": 2.2911572805575835,
+      "oscillator_strength": 0.07788541640377826,
+      "transition_dipole_au": [
+        1.1738233732093222,
+        0.06763335592191404,
+        -0.07139280329878799
+      ],
+      "retained_subspace_weight": 0.013408797531464985,
+      "native_frontier_subspace_weight": 0.016854763036531592,
+      "selected": false
+    },
+    {
+      "root": 3,
+      "excitation_ev": 2.4659955997467033,
+      "oscillator_strength": 4.817033309759985,
+      "transition_dipole_au": [
+        8.857345685947335,
+        0.9090328071907318,
+        -0.672656094999942
+      ],
+      "retained_subspace_weight": 0.8030364589048067,
+      "native_frontier_subspace_weight": 0.7822731831875086,
+      "selected": true
+    }
+  ],
+  "next_action": "Continue expansion; do not claim convergence",
+  "parameters_retuned": false
+}

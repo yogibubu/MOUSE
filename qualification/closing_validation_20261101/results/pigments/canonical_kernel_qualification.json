@@ -1,0 +1,19 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "rows": [
+    {
+      "spin_orbitals": 16,
+      "Hamiltonian_error_hartree": 1.687538997430238e-14,
+      "metric_error": 2.220446049250313e-15,
+      "compiled": true
+    },
+    {
+      "spin_orbitals": 64,
+      "Hamiltonian_error_hartree": 2.007283228522283e-13,
+      "metric_error": 1.9539925233402755e-14,
+      "compiled": true
+    }
+  ],
+  "fast_math": false,
+  "integral_or_configuration_truncation": false
+}

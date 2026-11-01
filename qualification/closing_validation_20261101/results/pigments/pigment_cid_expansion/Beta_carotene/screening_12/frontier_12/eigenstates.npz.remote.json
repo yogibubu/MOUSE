@@ -1,0 +1,7 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "remote_path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_expansion/Beta_carotene/screening_12/frontier_12/eigenstates.npz",
+  "bytes": 900574418,
+  "sha256": "73c4ca1a033400e8d559415d32fc89baafa01f39d33fdc8e12c3a65564a20048",
+  "retention": "Complete original checkpoint retained on verified compute host; not replaced or truncated"
+}

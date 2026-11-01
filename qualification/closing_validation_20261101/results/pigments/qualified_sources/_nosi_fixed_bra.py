@@ -36,7 +36,7 @@ class FixedBra:
             u,s,vh=np.linalg.svd(a.T@core,full_matrices=True)
             if len(s) and s.min()<.1:raise UnusableCore('common occupied core is ill-conditioned')
             regular=a@u[:,:self.nc];null=a@u[:,self.nc:];r=null.shape[1]
-            if not 1<=r<=12:raise UnusableCore('fixed-core accelerator requires one to twelve active electrons per spin')
+            if not 1<=r<=16:raise UnusableCore('fixed-core accelerator requires one to sixteen active electrons per spin')
             rotated=core@vh.T;inverse=rotated/s[None,:] if len(s) else rotated
             density=inverse@regular.T
             left=active-inverse@(regular.T@active)
@@ -50,7 +50,8 @@ class FixedBra:
         features=np.concatenate(features)
         # Only simultaneous pair transposition is required, as in the
         # parent Hamiltonian contract; separate pair symmetry is unnecessary.
-        self.integrals=(features@hamiltonian.j)@features.T
+        factors=getattr(hamiltonian,'coulomb_factors',None)
+        self.integrals=((features@factors[0].T)@(factors[1]@features.T) if factors is not None else (features@hamiltonian.j)@features.T)
         self.one=features@hamiltonian.h.T.ravel()
         self.j_fields=[features@sector['j'] for sector in self.sectors]
         self.same_fields=[features@sector['jk'] for sector in self.sectors]
@@ -72,7 +73,7 @@ class FixedBra:
         tensor=self.integrals[np.ix_(index,index)].reshape((r,)*4)
         null_two=.5*float(np.sum(second*tensor))
         value=(determinant(block),vector,null_two)
-        if len(cache)>=2048:cache.pop(next(iter(cache)))
+        if len(cache)>=16384:cache.pop(next(iter(cache)))
         cache[key]=value
         return value
 

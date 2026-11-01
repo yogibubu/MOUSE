@@ -11,7 +11,7 @@
       "cases": 12,
       "occupation_cache_hits": 8,
       "occupation_cache_misses": 18,
-      "wall_seconds": 0.004782999982126057
+      "wall_seconds": 0.004388415953144431
     },
     {
       "orbitals": 8,
@@ -19,11 +19,11 @@
       "common_core": 2,
       "general_Hermitian_tensor": false,
       "identical_alpha_beta": true,
-      "maximum_overlap_or_energy_error": 4.440892098500626e-15,
+      "maximum_overlap_or_energy_error": 3.9968028886505635e-15,
       "cases": 12,
       "occupation_cache_hits": 14,
       "occupation_cache_misses": 12,
-      "wall_seconds": 0.003928249992895871
+      "wall_seconds": 0.003630290972068906
     },
     {
       "orbitals": 12,
@@ -35,7 +35,7 @@
       "cases": 12,
       "occupation_cache_hits": 3,
       "occupation_cache_misses": 23,
-      "wall_seconds": 0.005514332966413349
+      "wall_seconds": 0.005586167040746659
     },
     {
       "orbitals": 12,
@@ -43,11 +43,11 @@
       "common_core": 2,
       "general_Hermitian_tensor": false,
       "identical_alpha_beta": true,
-      "maximum_overlap_or_energy_error": 3.6415315207705135e-14,
+      "maximum_overlap_or_energy_error": 3.552713678800501e-14,
       "cases": 12,
       "occupation_cache_hits": 6,
       "occupation_cache_misses": 20,
-      "wall_seconds": 0.00483766698744148
+      "wall_seconds": 0.004785500001162291
     },
     {
       "orbitals": 8,
@@ -59,7 +59,7 @@
       "cases": 12,
       "occupation_cache_hits": 10,
       "occupation_cache_misses": 16,
-      "wall_seconds": 0.003661665949039161
+      "wall_seconds": 0.003566416969988495
     },
     {
       "orbitals": 8,
@@ -71,7 +71,7 @@
       "cases": 12,
       "occupation_cache_hits": 14,
       "occupation_cache_misses": 12,
-      "wall_seconds": 0.003306084021460265
+      "wall_seconds": 0.0032275000121444464
     },
     {
       "orbitals": 12,
@@ -83,7 +83,7 @@
       "cases": 12,
       "occupation_cache_hits": 4,
       "occupation_cache_misses": 22,
-      "wall_seconds": 0.005241458013188094
+      "wall_seconds": 0.005165416980162263
     },
     {
       "orbitals": 12,
@@ -95,7 +95,7 @@
       "cases": 12,
       "occupation_cache_hits": 4,
       "occupation_cache_misses": 22,
-      "wall_seconds": 0.005110875004902482
+      "wall_seconds": 0.0051676660077646375
     },
     {
       "orbitals": 14,
@@ -103,11 +103,11 @@
       "common_core": 2,
       "general_Hermitian_tensor": false,
       "identical_alpha_beta": false,
-      "maximum_overlap_or_energy_error": 2.4424906541753444e-15,
+      "maximum_overlap_or_energy_error": 2.275957200481571e-15,
       "cases": 12,
       "occupation_cache_hits": 2,
       "occupation_cache_misses": 24,
-      "wall_seconds": 0.006543916009832174
+      "wall_seconds": 0.006484125042334199
     },
     {
       "orbitals": 14,
@@ -115,11 +115,11 @@
       "common_core": 2,
       "general_Hermitian_tensor": false,
       "identical_alpha_beta": true,
-      "maximum_overlap_or_energy_error": 4.773959005888173e-15,
+      "maximum_overlap_or_energy_error": 4.551914400963142e-15,
       "cases": 12,
       "occupation_cache_hits": 4,
       "occupation_cache_misses": 22,
-      "wall_seconds": 0.006369167007505894
+      "wall_seconds": 0.00607449997914955
     },
     {
       "orbitals": 16,
@@ -131,7 +131,7 @@
       "cases": 12,
       "occupation_cache_hits": 3,
       "occupation_cache_misses": 23,
-      "wall_seconds": 0.007492000004276633
+      "wall_seconds": 0.007707499957177788
     },
     {
       "orbitals": 16,
@@ -139,11 +139,11 @@
       "common_core": 2,
       "general_Hermitian_tensor": false,
       "identical_alpha_beta": true,
-      "maximum_overlap_or_energy_error": 9.237055564881302e-14,
+      "maximum_overlap_or_energy_error": 9.414691248821327e-14,
       "cases": 12,
       "occupation_cache_hits": 3,
       "occupation_cache_misses": 23,
-      "wall_seconds": 0.007025292026810348
+      "wall_seconds": 0.0067859579576179385
     },
     {
       "orbitals": 16,
@@ -155,7 +155,7 @@
       "cases": 12,
       "occupation_cache_hits": 2,
       "occupation_cache_misses": 24,
-      "wall_seconds": 0.007377041969448328
+      "wall_seconds": 0.006930958013981581
     },
     {
       "orbitals": 16,
@@ -167,7 +167,55 @@
       "cases": 12,
       "occupation_cache_hits": 3,
       "occupation_cache_misses": 23,
-      "wall_seconds": 0.007128291996195912
+      "wall_seconds": 0.006973958050366491
+    },
+    {
+      "orbitals": 18,
+      "occupied_per_spin": 14,
+      "common_core": 1,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 8.257283745649602e-16,
+      "cases": 12,
+      "occupation_cache_hits": 3,
+      "occupation_cache_misses": 23,
+      "wall_seconds": 0.017759000009391457
+    },
+    {
+      "orbitals": 18,
+      "occupied_per_spin": 14,
+      "common_core": 1,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 2.7478019859472624e-15,
+      "cases": 12,
+      "occupation_cache_hits": 2,
+      "occupation_cache_misses": 24,
+      "wall_seconds": 0.017700541007798165
+    },
+    {
+      "orbitals": 20,
+      "occupied_per_spin": 17,
+      "common_core": 1,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 3.979039320256561e-13,
+      "cases": 12,
+      "occupation_cache_hits": 2,
+      "occupation_cache_misses": 24,
+      "wall_seconds": 0.02820770797552541
+    },
+    {
+      "orbitals": 20,
+      "occupied_per_spin": 17,
+      "common_core": 1,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 9.992007221626409e-15,
+      "cases": 12,
+      "occupation_cache_hits": 4,
+      "occupation_cache_misses": 22,
+      "wall_seconds": 0.02377099997829646
     }
   ],
   "cofactor_max_error": 1.8189894035458565e-12,
