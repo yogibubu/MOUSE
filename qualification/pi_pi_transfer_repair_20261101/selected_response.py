@@ -11,10 +11,10 @@ from threadpoolctl import threadpool_limits
 def select(case,variant='pauli_common'):
  cohort,name=case['cohort'],case['molecule'];out=HERE/variant/cohort/name
  if (out/'result.json').exists():return
- src=ROOT/variant/cohort/name
- if not (src/'checkpoint.npz').exists():return
+ parts=variant.split(':');src=ROOT/parts[0]/cohort/name;checkpoint=src/(parts[1]+'.npz' if len(parts)>1 else 'checkpoint.npz')
+ if not checkpoint.exists():return
  with np.load(ROOT/'selected_cid'/cohort/name/'checkpoint.npz') as z:keep=z['indices'].copy()
- with np.load(src/'checkpoint.npz') as z:h=z['matrix'][np.ix_(keep,keep)].copy();s=z['metric'][np.ix_(keep,keep)].copy()
+ with np.load(checkpoint) as z:h=z['matrix'][np.ix_(keep,keep)].copy();s=z['metric'][np.ix_(keep,keep)].copy()
  old=NATIVE/'nosi_coherent'/cohort/name;rows=json.loads((old/'result.json').read_text())['predictions']
  with np.load(old/'checkpoint.npz') as z:reference=np.column_stack([z['coefficients'][:,r['root']] for r in rows])
  pad=np.zeros((len(keep),len(rows)));pad[:len(reference)]=reference
