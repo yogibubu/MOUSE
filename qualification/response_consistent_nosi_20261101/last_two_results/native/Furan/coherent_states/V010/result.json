@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "energy_hartree": -13.702724252602975,
+  "ground_overlap_squared": 1.5913479208143767e-32,
+  "fidelity": 0.7255230781748512,
+  "kkt_max": 1.15681145218538e-11,
+  "multiplier": -0.06715954222732012,
+  "qualified": true,
+  "iterations": 1,
+  "solver": "KKT stationary point, residual merit, state-overlap guarded",
+  "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+  "source_sha256": "6d6d420a2b58371421d7846f4870b8c3494bbcf86ef5f277b9c20189eb3e2c47",
+  "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "threads": 2,
+  "checkpoint_resumed": true,
+  "excitation_ev": 8.163109691001065,
+  "id": "V010",
+  "molecule": "Furan",
+  "attempts": [
+    {
+      "seed": "NTO",
+      "qualified": true,
+      "kkt_max": 2.6226530668562823e-10,
+      "fidelity": 0.7255230781659103
+    }
+  ],
+  "energy_labels_used": false,
+  "protocol_sha256": "8d2d31dcda930fed819e1b11cdd84fe6a852f91569150410cdf528916fd300cf"
+}

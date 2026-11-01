@@ -1,0 +1,73 @@
+{
+  "last_two": {
+    "states": 2,
+    "OO_MAE_ev": 0.7123933576890216,
+    "OO_max_ev": 0.7256708163728529,
+    "TDA_MAE_ev": 1.3131205673613349,
+    "TDA_max_ev": 1.3340613181004066,
+    "accuracy_gate_pass": false
+  },
+  "all": {
+    "states": 20,
+    "OO_MAE_ev": 0.2933359802764587,
+    "OO_max_ev": 0.7256708163728529,
+    "TDA_MAE_ev": 0.9254798851308282,
+    "TDA_max_ev": 3.659689340364121,
+    "accuracy_gate_pass": false
+  },
+  "development": {
+    "states": 13,
+    "OO_MAE_ev": 0.22266080321822157,
+    "OO_max_ev": 0.49794804287979977,
+    "TDA_MAE_ev": 1.051615534665454,
+    "TDA_max_ev": 3.659689340364121,
+    "accuracy_gate_pass": true
+  },
+  "prospective": {
+    "states": 7,
+    "OO_MAE_ev": 0.42458988052747043,
+    "OO_max_ev": 0.7256708163728529,
+    "TDA_MAE_ev": 0.6912279645665232,
+    "TDA_max_ev": 1.3340613181004066,
+    "accuracy_gate_pass": false
+  },
+  "additional_three": {
+    "states": 3,
+    "OO_MAE_ev": 0.3811181525965184,
+    "OO_max_ev": 0.49649572434533606,
+    "TDA_MAE_ev": 0.46256793759103026,
+    "TDA_max_ev": 0.608577475009195,
+    "accuracy_gate_pass": false
+  },
+  "all_new_assignments_pass": true,
+  "pi_pi": {
+    "states": 7,
+    "OO_MAE_ev": 0.33939547585434476,
+    "OO_max_ev": 0.7256708163728529,
+    "TDA_MAE_ev": 1.8523924888214602,
+    "TDA_max_ev": 3.659689340364121,
+    "accuracy_gate_pass": false
+  },
+  "n_pi": {
+    "states": 13,
+    "OO_MAE_ev": 0.2685347134268277,
+    "OO_max_ev": 0.49794804287979977,
+    "TDA_MAE_ev": 0.4263730985281803,
+    "TDA_max_ev": 0.7286916704023199,
+    "accuracy_gate_pass": true
+  },
+  "candidate_freeze_commit": "467a9e5",
+  "cohort_freeze_commit": "a474e68",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "model_changed": false,
+  "blind": false,
+  "exposure": "13 development states plus 7 predictions after candidate freeze on historically exposed molecules",
+  "pooled_accuracy_gates_pass": false,
+  "additional_cohort_accuracy_gates_pass": false,
+  "all_fixed_accuracy_gates_pass": false
+}

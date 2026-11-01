@@ -15,7 +15,24 @@ for row in json.loads((ROOT/'last_two_protocol.json').read_text())['cases']:
   ground=Path('/home/enzo/MOUSE-deltascf-validation-20261029/uracil_uridine_20261029/results/quest_s0/ground.npz');full=OLD/'results/full_response/uracil';q=OLD/'results/qualified_spectral_response/uracil/model.npz';reference=Path('/home/enzo/MATRIX-runs/tda-uracil-application-20261022-v1/docs/reports/tda_uracil_application_20261022/results/pbe0_avdz');tda=reference/'selected_full.npz'
  src=DATA/'predictions'/name;ref=DATA/'references'/name
  link(ground,src/'native_ground.npz');link(ground,src/'grounds/0/stationary.npz')
- for file in ['embedding.npz','projected_eri.npz','model.npz']:link(full/file,src/'full_response/anchor'/file)
+ for file in ['embedding.npz','projected_eri.npz','model.npz']:
+  original=full/file
+  if name=='uracil' and file=='embedding.npz':original=Path('/home/enzo/MOUSE-roks-repair-20261030/results/spin_kernel/uracil/kernel.npz')
+  if name=='uracil' and file=='projected_eri.npz':
+   # The RSH integral cache belongs to a different core embedding. Rebuild
+   # the missing bare Coulomb tensor in this archived PBE0 frame once.
+   original=ROOT/'last_two_input_cache/uracil_projected_eri.npz';original.parent.mkdir(exist_ok=True)
+   if not original.exists():
+    from pyscf import scf,ao2mo,lib
+    from threadpoolctl import threadpool_limits
+    lib.num_threads(2)
+    with np.load(src/'full_response/anchor/embedding.npz') as z:lift=z['embedding'].copy()
+    mol=scf.chkfile.load_mol(str(reference/'backend.chk'))
+    with threadpool_limits(2):eri=ao2mo.kernel(mol,(lift,lift,lift,lift),compact=False).reshape((lift.shape[1],)*4)
+    np.savez_compressed(original,eri=eri)
+   prior=src/'full_response/anchor'/file
+   if prior.is_symlink() and prior.resolve()!=original.resolve():prior.unlink()
+  link(original,src/'full_response/anchor'/file)
  link(q,src/'qualified_spectral_response/anchor/model.npz');link(reference/'backend.chk',ref/'backend.chk');link(tda,ref/(row['id']+'.npz'))
  with np.load(reference/'reference.npz') as z:data={k:z[k].copy() for k in z.files}
  if 'orbital_energies' not in data:data['orbital_energies']=data['orbital_energies_hartree']

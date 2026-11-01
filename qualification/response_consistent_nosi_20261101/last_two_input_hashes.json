@@ -1,0 +1,29 @@
+{
+  "source_host": "oracle.sns.it",
+  "destination_host": "mac-2.homenet.telecomitalia.it",
+  "input_files": {
+    "manifest.json": "d0c44c761474ddd4f6435a29f67b25872875c7c5fe2b3982f2418ba3d8ac485b",
+    "predictions/Furan/full_response/anchor/embedding.npz": "4b12cf4e7f27e56f0630ba798472a6650e69704408de75d6a09cc3139bc3a95e",
+    "predictions/Furan/full_response/anchor/model.npz": "dae7693cf52e03c8889e2da3977dc72484dceaea83d6da22857dfbe485d4d91e",
+    "predictions/Furan/full_response/anchor/projected_eri.npz": "9a9fe3da66824c8cde2a6097ad56b5f7b7b00cf350634c3590694f5e3cf4e025",
+    "predictions/Furan/grounds/0/stationary.npz": "0e47b9610a990e79150053f8a230ceb20e4c64d26c2c928d90b1a5243ed56be0",
+    "predictions/Furan/native_ground.npz": "0e47b9610a990e79150053f8a230ceb20e4c64d26c2c928d90b1a5243ed56be0",
+    "predictions/Furan/qualified_spectral_response/anchor/model.npz": "83d7fe4fe564e27b540e5f513af34f7004d438d6f833592b5b8420d406315e64",
+    "predictions/Furan/retained_F_seed.npz": "98667173d25007bce8e54977d11021b6c7d0eee0f6fa640c4d6c6950e79c188d",
+    "predictions/uracil/full_response/anchor/embedding.npz": "ace67c3839c1b787ee35dcbac750f87d18466c7f13f003c5a57d0fdd0b52b97b",
+    "predictions/uracil/full_response/anchor/model.npz": "01824a38fe00614df0f1c6d1cbe967f4f6ce35488b21a4c962bfdbb0e2193950",
+    "predictions/uracil/full_response/anchor/projected_eri.npz": "2a866c4cfa7644f3162979f5229f387f952d5e966b9711743dc1340b178daaf3",
+    "predictions/uracil/grounds/0/stationary.npz": "f4b7610bdeae580c0a8a3599f8db467e6fc44707682cd06714583f7101e8f30b",
+    "predictions/uracil/native_ground.npz": "f4b7610bdeae580c0a8a3599f8db467e6fc44707682cd06714583f7101e8f30b",
+    "predictions/uracil/qualified_spectral_response/anchor/model.npz": "e83df840710572ea4af5720cb270c38cd2dea9e97a7f0b389efa8ae292f6cc79",
+    "predictions/uracil/retained_F_seed.npz": "45b30900bf1a15fbeaf44b8997db335a1ecfeb2fc3bdead3f3c9fc899580ba81",
+    "references/Furan/V010.npz": "bbf73496f3dbf6a43f4b0ab3982517f8ffa135194469bc257888800f8b9d7333",
+    "references/Furan/backend.chk": "1839f2193c9b3f6ff4728b4b536bfe282274c752ff32a102f06f53c8f426d377",
+    "references/Furan/reference.npz": "169455a60e621e588043819faa510a2650a21742edd99cf144a349c320c1e25f",
+    "references/uracil/V011.npz": "bad1e1a91b5c6d8ac581ce7c459dca1a9ec1c5682ab5a9c9427d62e9e6db340b",
+    "references/uracil/backend.chk": "c21c41e58841d71d917a8a0d0e4917aec125a9176841b5c34bb87f365ba3a5da",
+    "references/uracil/reference.npz": "46c4a218a4e048af9e41a40a7cbb8d23c68c9207db74860cea1e2ef5b78794df"
+  },
+  "method_changes": false,
+  "uracil_Coulomb_tensor": "Missing cache reconstructed once on verified Oracle in the archived PBE0 core-projected embedding; incompatible RSH embedding cache was not reused."
+}

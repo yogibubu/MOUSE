@@ -1,0 +1,428 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "cohort_freeze_commit": "a474e68",
+  "candidate_freeze_commit": "467a9e5",
+  "unchanged_inputs_verified": 21,
+  "source_hashes": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/last_two.py": "aa42d8f35181edd279373f7b1ca50137954786daf259289e4c97130a5aa8750c",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/selected_extension.py": "aa1ff1fc0ab0bd51ff748c5607e4819da9b6daa9a6465384d15aa76b434e9fed",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/nosi_spectrum.py": "c36b04e341ed377c5625061653ee6a3504a83b176ab7ab357564e6b989784f2b",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/export_selected_model.py": "799ae035ab22f0ac1ce563f79562d352109b57fff1a06301c2ae2df8c755c54b",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/validate_portable.py": "12f59e32d61511a2e4128bb6debc2323ef4a3467ca1f33790900551552700092",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/audit_last_two_spin.py": "d71dd06a4424d972465453e9329d5a4ad8cbc71ab446a830ff16c6a00b717285",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/anchor.py": "7017584d34fe3aa371efc48a0018e57248c82a1692fd1f5214824bfcda5b96f4",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/calibrate.py": "98a820f161bdd43ce54ad0ee2ab60c37964769cdd7b892d8806b2e423eba2ed5",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/full_reference.py": "30e9b7235f8247ecae350648aa6e0c21eec0bd7bf3123b233397f4a94b6b358b",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/native_batch.py": "7f3ef82aaa401fdcc8d5e1f30dee2cd768b050186d24b2272abd309bc40fa927",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/predict.py": "3d892c3a40079b23e69e963aa77ec27ce3a9e0533e397ed57f80b688ed3199a9",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/heldout_predict.py": "6d6d420a2b58371421d7846f4870b8c3494bbcf86ef5f277b9c20189eb3e2c47",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/nosi_coherent.py": "61c4fa7b898519d5fdf9bb4c161e8f3d8353496f4ef6bb5dd1a7561e69ac1807",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/nosi_projected.py": "de15483e3d1957c57eaa85689dd6a8745b680fa8ee706a59c15c0e1d4017005c",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/run.py": "1e10941adb71221bb08134449b1393567b3c8e6af4fa9af1353591b822949771",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/run.py": "e08de0012746bd5489b4aaeb7f6c558041cd1f448cbbf45abb9602acca15294d",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/tda_control.py": "9a092d5b2c1e8fa3df416d7f10bbea3cf0c31d77f340423d1c2bca0e2448c6c1"
+  },
+  "remote_checkpoints": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/CAM_full_reference/backend.chk": {
+      "bytes": 199376,
+      "sha256": "46aad7d369fec8ed3cf65accca39d3493c7c76e57ab5875af19de6b2616f5435"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/CAM_full_reference/certificate.json": {
+      "bytes": 478,
+      "sha256": "e9427dfa7f150f7c0c7f57236c45fd24c27bd55d487efa623f2e695c22fefa20"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/CAM_full_reference/history.json": {
+      "bytes": 1079,
+      "sha256": "be9a36287aa54a878dc8c7dc33b1fe90eda00d4e08e5dced94f4d8557b65c72d"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/CAM_full_reference/reference.npz": {
+      "bytes": 277043,
+      "sha256": "d17f4eb3bf6b71102f2ae252856701a101f8f86658836de002158312372314a0"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/F/calibration_certificate.json": {
+      "bytes": 439,
+      "sha256": "7252d2aa003a19a445dce2ba82a7a224a512574d1e960c364996f539f18e54ae"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/F/ground/certificate.json": {
+      "bytes": 60,
+      "sha256": "990e11d2760b23b0e6fce49356245c602a893a411bf1c92a59ce4b2c8a72755f"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/F/ground/stationary.npz": {
+      "bytes": 27956,
+      "sha256": "79ba23fafab8bf7418166d1c1fe2e349b7d404c7cbe72553d9d6b1b2e305b084"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/F/model.npz": {
+      "bytes": 1287573,
+      "sha256": "a9b29d9822efee46f486d948f6d39958258132991e5177311a91b10050cce662"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/Q/calibration_certificate.json": {
+      "bytes": 440,
+      "sha256": "f16edcea973949b524593a5d65308e031493840bfd3dd7b42b7e2113741999c6"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/Q/ground/certificate.json": {
+      "bytes": 60,
+      "sha256": "20798843b47e6b6295df5f649426faf0bd7680a32aced944325b97583c6a65e9"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/Q/ground/stationary.npz": {
+      "bytes": 27969,
+      "sha256": "9c45f1dd8d3f904b0b586608b81ed8f578c67c4a1d5cda7c4c665cf4e7dc2cc7"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/Q/model.npz": {
+      "bytes": 1287573,
+      "sha256": "f55449acdb9ed87da05b6d2813a25c714321fa3e73037e2b94a00e235aab90be"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/Q_M06/model.npz": {
+      "bytes": 1287573,
+      "sha256": "f55449acdb9ed87da05b6d2813a25c714321fa3e73037e2b94a00e235aab90be"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/Q_mapping.json": {
+      "bytes": 2332,
+      "sha256": "447aeb2d96ff25028db3dc6ec6c66262122981e255efc8588dc845689230eefa"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/anchor_complete.json": {
+      "bytes": 957,
+      "sha256": "b5e98b501ffb3e438af0da2c79be370a47aa23934a2db7e0b84fa29f6169c629"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/calibration_complete.json": {
+      "bytes": 1519,
+      "sha256": "a28d7106e6c76016783963d4ee2f688a81fb247fe80654cc870878aa94f81452"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/coherent_common/mapping.json": {
+      "bytes": 2528,
+      "sha256": "0dc1ef3b6efca0d021574bcd2d0cc0d4e5d08796406db32fe9d9c9266a1dec39"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/coherent_common/model.npz": {
+      "bytes": 1287580,
+      "sha256": "68cdf8fd18cffe3e52fbe9db9abdff63ad352686c0d83636d4a416852e664289"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/embedded_ground.npz": {
+      "bytes": 13930,
+      "sha256": "5df85bbfd65c9e83a546f2881f83369670ce0c6da626d5e95f3be4f25687754b"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/native_response.npz": {
+      "bytes": 666383,
+      "sha256": "36513d28479fda73a7ad9074f8fd496cf2a001b5730ca4541065b35515f64b59"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/range_eri.npz": {
+      "bytes": 1824192,
+      "sha256": "32cf57cd0134a5cb94ba336a341a4c11ae7ab152e8e2ac8aca03400056a16c85"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/response_progress.npz": {
+      "bytes": 1239826,
+      "sha256": "28d6294fdcb570347924faf2c3da7f1a83770aaf90c5a8665544cdb4c5ab87b1"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/scf_checkpoint.npz": {
+      "bytes": 2848,
+      "sha256": "6e5088055502938fc3b01a0ee9cbfcbcc7e55cb9954c4a2425113c877765c4f7"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/Furan/scf_history.json": {
+      "bytes": 1126,
+      "sha256": "03086c7c68a8df72998531c536c015ed4633b57b256a4ff2f5b91c1a7c995a6a"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/CAM_full_reference/backend.chk": {
+      "bytes": 466160,
+      "sha256": "962be5331f7397f354fa5c8a5b1d5ebb9988a5712cdb4ee70cc7fdb1f81a0476"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/CAM_full_reference/certificate.json": {
+      "bytes": 478,
+      "sha256": "5b6edf1d598661508909cd975309f1b58e2d70fe1678f0d7baa80c68d3cd1c6b"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/CAM_full_reference/history.json": {
+      "bytes": 1464,
+      "sha256": "2a28273ad777acede7ae6eb3650588bee935400f13a558befd8bc497be26b7dc"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/CAM_full_reference/reference.npz": {
+      "bytes": 1511870,
+      "sha256": "43e3377885a6800a0c53db8b7dce523e00bcdb977b213a09e63b75947fb94fa7"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/F/calibration_certificate.json": {
+      "bytes": 439,
+      "sha256": "c704a69153c660c3ba8d850cdc430aa6a572d26d66bb0f8584fb180c042f9ccf"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/F/ground/certificate.json": {
+      "bytes": 59,
+      "sha256": "d2d8d8a06c818edd33f57825d6360f465ce6301808115a244a713a50bce88ceb"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/F/ground/stationary.npz": {
+      "bytes": 59658,
+      "sha256": "ce2b3e5bb281ee6f03d82f18893587143d62b1ba47fd1d58b8ad6b3b978f9943"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/F/model.npz": {
+      "bytes": 6619102,
+      "sha256": "68cd3f8b15e081d07a6bf231e0f52a376d81572e18b4927d8f43a443a17be464"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/Q/calibration_certificate.json": {
+      "bytes": 439,
+      "sha256": "aade680d348c4f00cc3e3e36ab794e13a4983cffc3f9dde5e7aa6e612451c321"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/Q/ground/certificate.json": {
+      "bytes": 60,
+      "sha256": "003d110e168e95629fe4c9d628a3a8ac7340bc6101c5a3e1bc902db67b9c2ccd"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/Q/ground/stationary.npz": {
+      "bytes": 59655,
+      "sha256": "b4d0cec648b592b41a7962481328f9e3d2a48c899eb5d71f0cfc207039531e5c"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/Q/model.npz": {
+      "bytes": 6619096,
+      "sha256": "27b8a78d789b394187a39d41790fe8e80e9f3d92eb1e92b218692f4d38e2f33b"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/Q_M06/model.npz": {
+      "bytes": 6619096,
+      "sha256": "27b8a78d789b394187a39d41790fe8e80e9f3d92eb1e92b218692f4d38e2f33b"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/Q_mapping.json": {
+      "bytes": 3368,
+      "sha256": "a798e70f6dca84cf5f18aa879063ce4ca7ebd20ff32c4d61e86e5d021e2fbef6"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/anchor_complete.json": {
+      "bytes": 954,
+      "sha256": "501c1acdce2197ba6f09404f24b225879029c5c10e851a49920415ef7bf0acbb"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/calibration_complete.json": {
+      "bytes": 1518,
+      "sha256": "5b9f752f79480b9f3abebdb1b173e3633c0abb73dc110d14df8bfd87351856b2"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/coherent_common/mapping.json": {
+      "bytes": 3565,
+      "sha256": "3dfaf697c4cad3b43be3a147ec4882537e951429836cce37607531e05c52fd27"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/coherent_common/model.npz": {
+      "bytes": 6619097,
+      "sha256": "07786cd3dd19aae3a7f90792c7ef97b0166beb21df0cf237b35539ba9086bd60"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/embedded_ground.npz": {
+      "bytes": 33779,
+      "sha256": "430d537081678205e81c4c94f97f23672ab8b88ebc4deb60aae62c2693e93525"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/native_response.npz": {
+      "bytes": 3445630,
+      "sha256": "5b2841747e0b518cbe457581d3e60c0d2439a93e7090a66a7485610ce402f243"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/range_eri.npz": {
+      "bytes": 9857454,
+      "sha256": "e1b90768f428f0ab9db8af09cfba15a6eb0531d9a5c2fa927dc97c38bcb2bed8"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/response_progress.npz": {
+      "bytes": 6280119,
+      "sha256": "58ff863295180c37b3336013519205b0679ca781eddf3d15c26e58069d6c4d70"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/scf_checkpoint.npz": {
+      "bytes": 6827,
+      "sha256": "9bdd14b961fc1e1de8676a7574b08ea1e7f7cb7f2caceb2d35859e5fa17b0d38"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/last_two/uracil/scf_history.json": {
+      "bytes": 1748,
+      "sha256": "6c863f3ee2e273b477be7daf7a2bee9277ca5ad6fe60a54c186e9876d6192603"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/F/model.npz": {
+      "bytes": 1287573,
+      "sha256": "a9b29d9822efee46f486d948f6d39958258132991e5177311a91b10050cce662"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_common/ground/certificate.json": {
+      "bytes": 60,
+      "sha256": "ca6e23719fde1cd53a9c9b708b19db5ac25a88465d25e7c0ceb995a0312ed223"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_common/ground/stationary.npz": {
+      "bytes": 28119,
+      "sha256": "e9c4ba43ec90cc07bceccc3057448a2169f712fdda33b06476b003bd6d3d7647"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_common/model.npz": {
+      "bytes": 1287620,
+      "sha256": "270c328e7c3a29a0eb79ae94182d40dd395bbe19938ab1aa5dbb9b5881bbb474"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_common/native_ground_certificate.json": {
+      "bytes": 235,
+      "sha256": "7e0866dd7d28bf60c58cc0a7ab6b7b797e4615a616a663a0c154d591d9ec924c"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_common/reference_certificate.json": {
+      "bytes": 4042,
+      "sha256": "80161fc3e2952a4cdeac781ab17011b5c11e33e19b5ca0d98c0c6e8f818cfe0a"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_states/V010/NTO/checkpoint.npz": {
+      "bytes": 4379,
+      "sha256": "613b2d83e75b3d3c2939e15111980ebd094321926dabe4a1a1104380dd52a5eb"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_states/V010/NTO/final.npz": {
+      "bytes": 4181,
+      "sha256": "aa48c9553236313bac9f8ff31d989fb0efad63d5d00e2a39eef7e0f0eb5eaefb"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_states/V010/NTO/history.json": {
+      "bytes": 828,
+      "sha256": "20a5eb52f825c74a866f2db7d96a9e5b616a794df70caca519a185d51e989909"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_states/V010/NTO/result.json": {
+      "bytes": 727,
+      "sha256": "8ae675ccd19d162d1aa600a5c09c30d57f0cdc11fc4220ce98aa2ea7086679ca"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_states/V010/final/checkpoint.npz": {
+      "bytes": 4363,
+      "sha256": "00d9fc23bbbf88d5e1d30f3f4988753750bca56421f0510f36c11bd29e68b809"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_states/V010/final/final.npz": {
+      "bytes": 4165,
+      "sha256": "c13d366592d359ca17159624ec15270dad45c9960b3a32517b254edb161779c1"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_states/V010/final/history.json": {
+      "bytes": 208,
+      "sha256": "f7bb231f5935dfe30a6ff0df07262911bc56dd0579be19a20a5ede8261914d9a"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_states/V010/final/result.json": {
+      "bytes": 726,
+      "sha256": "9af785142bb4f8532e62fe43e84268c085d3c12c4c0ecb455c62ed204330f2a6"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/coherent_states/V010/result.json": {
+      "bytes": 1080,
+      "sha256": "55f15edd2a8c9f98dc1241889c1286122bd3f5528a67c72b9488b906dffbafc0"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/embedded_ground.npz": {
+      "bytes": 13930,
+      "sha256": "5df85bbfd65c9e83a546f2881f83369670ce0c6da626d5e95f3be4f25687754b"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/Furan/native_response.npz": {
+      "bytes": 666383,
+      "sha256": "36513d28479fda73a7ad9074f8fd496cf2a001b5730ca4541065b35515f64b59"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/F/model.npz": {
+      "bytes": 6619102,
+      "sha256": "68cd3f8b15e081d07a6bf231e0f52a376d81572e18b4927d8f43a443a17be464"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_common/ground/certificate.json": {
+      "bytes": 60,
+      "sha256": "51e5f2335119beefbabb100eeeab429658301c08ed50b33bdaaa78a396ee250f"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_common/ground/stationary.npz": {
+      "bytes": 59658,
+      "sha256": "45a71099d55dc45f874e3a2f1a21ccf6f58a46c247ad3e007939c35183bae662"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_common/model.npz": {
+      "bytes": 6619096,
+      "sha256": "06fd7fbb685e8617909ec439aed3c98e6990f9fb9d86a1ff01b22bd9f837c53d"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_common/native_ground_certificate.json": {
+      "bytes": 234,
+      "sha256": "2c434b8f96ae7636a752272358c9475d8a6c51d983d63b1c7474ab23a46756e9"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_common/reference_certificate.json": {
+      "bytes": 5747,
+      "sha256": "bce0c126652b3e5b5499943a5967005ccfc6bc7e4986d8b870d10382f30f6670"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_states/V011/NTO/checkpoint.npz": {
+      "bytes": 10517,
+      "sha256": "194e13a7e7246d1b3834a3ecb997367008526d6de7e1222f6161e162f345a3df"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_states/V011/NTO/final.npz": {
+      "bytes": 10318,
+      "sha256": "5679271a95a0427b1921992427e2121446aaf06a6df526f11ac7c819a0984815"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_states/V011/NTO/history.json": {
+      "bytes": 2261,
+      "sha256": "d722d8ea9ef3d684774f282eceb21f64c5117ee0539a47041c6687ed77fa616e"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_states/V011/NTO/result.json": {
+      "bytes": 727,
+      "sha256": "68059c128531d3509fcf2367a23576b118f759642e678bb31ecb8e1c68dde0c3"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_states/V011/final/checkpoint.npz": {
+      "bytes": 10505,
+      "sha256": "afe33fa8678ad80cc58d1b907037eeb68ff0a45803c1eb1183029a3c9dd84e2f"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_states/V011/final/final.npz": {
+      "bytes": 10306,
+      "sha256": "3a7f1ee02c24da1143d4ff1b686b642ef5f8de0b8261e7f78e53ad30e8c4ecff"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_states/V011/final/history.json": {
+      "bytes": 209,
+      "sha256": "951dae6c21f0305fcaaf564a6f6b08ac01cc1e4019c244c53f37efe19cf6e236"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_states/V011/final/result.json": {
+      "bytes": 726,
+      "sha256": "c87683a1b199ccef7eaebdc545d3ec649d2c4adafd46fc032b3a238556c4f9c8"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/coherent_states/V011/result.json": {
+      "bytes": 1079,
+      "sha256": "1080a04153329f326f83e66a71784bb72f212f3c0f194e1112abba1d2c22ae69"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/embedded_ground.npz": {
+      "bytes": 33779,
+      "sha256": "430d537081678205e81c4c94f97f23672ab8b88ebc4deb60aae62c2693e93525"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-native-reference-20261101/last_two/uracil/native_response.npz": {
+      "bytes": 3445630,
+      "sha256": "5b2841747e0b518cbe457581d3e60c0d2439a93e7090a66a7485610ce402f243"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/last_two/Furan/checkpoint.npz": {
+      "bytes": 7182,
+      "sha256": "5db3ce1fe611518cb1f79fe5885e93ab5b947106ec27d084f2dcee7d04012be0"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/last_two/Furan/result.json": {
+      "bytes": 4130,
+      "sha256": "303ea3f81cad3d6546bf110eda2de0dcf1e6b96ec563d11eedddac7fac72b00e"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/last_two/Furan/tda_control.json": {
+      "bytes": 957,
+      "sha256": "047e04bca4fe8ae7c344302b6dec9f8f9af0292e323da50705a837768061d35b"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/last_two/uracil/checkpoint.npz": {
+      "bytes": 7205,
+      "sha256": "86aa31d6e13f22ddec2cdbf646810273fab480898c6ad29010a2142c0fe4a05e"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/last_two/uracil/result.json": {
+      "bytes": 4124,
+      "sha256": "e7fcfc8da43996e9089b0e2e2953e61dac29b843a1e5c578fb27d505ab2d445d"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-frontier-cisd-20261101/last_two/uracil/tda_control.json": {
+      "bytes": 956,
+      "sha256": "39d7a25f76e2cf724d0d85887d2a5b3fd4ad81ef254d778200840d87357a9ca9"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/selected_cid/last_two/Furan/checkpoint.npz": {
+      "bytes": 5364,
+      "sha256": "1c892a6dffe58af1485a20aba67649059e7f00edfb2132949ba0d4bf8e35f204"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/selected_cid/last_two/Furan/result.json": {
+      "bytes": 2283,
+      "sha256": "904c36f18ddd4a708b9fe85c227f51901270fb2b9f62765e62f44cb569ced67c"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/selected_cid/last_two/uracil/checkpoint.npz": {
+      "bytes": 5359,
+      "sha256": "573ae0db27d7d6ac5591b87d8268345fc2f4dbd63605fa4c44aafb94fcfde4c1"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/selected_cid/last_two/uracil/result.json": {
+      "bytes": 2279,
+      "sha256": "e3846c3daf6c066f99a0264a3634b2b932d583622f03b27aac00ea09b91bdce2"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prepared_models/selected_cid/last_two/Furan/arrays.npz": {
+      "bytes": 1971553,
+      "sha256": "6c2bf55a93f36fb91ebb410973389600f9d4e37a74c79c4e2652e0ec6a281dfa"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prepared_models/selected_cid/last_two/Furan/model.json": {
+      "bytes": 1131,
+      "sha256": "b331a2d8cddbe87a23222bbd7f084fc527aecd6005bc77c93c5cdf1051c6bcc6"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prepared_models/selected_cid/last_two/Furan/response.npz": {
+      "bytes": 1290228,
+      "sha256": "b51f87249a085eae1b8c0661fbba0302392787a8e428c4d3a87481030a87e182"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prepared_models/selected_cid/last_two/Furan/template.npz": {
+      "bytes": 29188,
+      "sha256": "98c7287f7ca9aa3dbf0ad9b8d9351ea94083c5cda430fd2dcb8a97fd44349fa0"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prepared_models/selected_cid/last_two/uracil/arrays.npz": {
+      "bytes": 10469204,
+      "sha256": "69126284f0a14a47c33115dcc6378a9c6a9e7a4e932d47b85213d8880d442421"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prepared_models/selected_cid/last_two/uracil/model.json": {
+      "bytes": 1131,
+      "sha256": "366c4916dc29c35b9fc86cca71cdb0f9c525d153ba951e13d3280ac9d260d201"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prepared_models/selected_cid/last_two/uracil/response.npz": {
+      "bytes": 6621862,
+      "sha256": "5a21314eac62808c4903fe44540b65c280d06a1515f64709398be73738d7df2e"
+    },
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/prepared_models/selected_cid/last_two/uracil/template.npz": {
+      "bytes": 62471,
+      "sha256": "217dc4a2173005a21638fb164baf7674c902023abb6c0864935306b8e95dd5ba"
+    }
+  },
+  "grid_cache_excluded": true
+}

@@ -1,0 +1,25 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+Furan stationary embedded DFT verified
+radial grids: 
+    Treutler-Ahlrichs [JCP 102, 346 (1995); DOI:10.1063/1.469408] (M4) radial grids
+    
+becke partition: Becke, JCP 88, 2547 (1988); DOI:10.1063/1.454033
+pruning grids: <function nwchem_prune at 0x106735e40>
+grids dens level: 3
+symmetrized grids: True
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x106735da0>
+Freeze 0 electrons in irreps []
+    36 free electrons in irreps A1 A2 B1 B2
+tot grids = 109792
+Furan stationary response block 1 / 3
+Furan stationary response block 2 / 3
+Furan stationary response block 3 / 3
+Furan stationary F/Q calibration certified
+Furan coherent M06 reference and Q model retained
+Furan V010 True
+Furan [{'id': 'V010', 'root': 1, 'gap_ev': 9.414277430402553, 'overlap': 0.9690850771385302, 'margin': 0.8912685291713147, 'qualified': True}]
+Furan [{'id': 'V010', 'root': 1, 'gap_ev': 8.139549154212753, 'overlap': 0.9987550113987294, 'margin': 0.9488708735800838, 'qualified': True}]
+Furan [{'id': 'V010', 'gap_ev': 9.483245447505487, 'conventional_si_gap_ev': 12.252793203321962, 'root': 4, 'overlap': 0.7328449850342101, 'margin': 0.17254548120456703, 'qualified': True}]
+Furan [{'id': 'V010', 'root': 0, 'gap_ev': 5.804329183627147, 'overlap': 0.8424355561778373, 'margin': 0.4501983335485889, 'qualified': True}] [{'id': 'V010', 'root': 1, 'gap_ev': 6.188137182813713, 'overlap': 0.8287228061734969, 'margin': 0.426878535407004, 'qualified': True}]
+Furan CID inputs and stationary states complete

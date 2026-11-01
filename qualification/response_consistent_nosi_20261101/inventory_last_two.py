@@ -1,4 +1,4 @@
-"""Read-only host, input, method and checkpoint audit for the three-case extension."""
+"""Read-only host, input, method and checkpoint audit for the final two-case extension."""
 from pathlib import Path
 import json,hashlib,socket,subprocess
 assert socket.getfqdn()=='oracle.sns.it'
@@ -17,5 +17,5 @@ for prefix in [CAM/'last_two',NATIVE/'last_two',BASE/'last_two',ROOT/'selected_c
  for path in sorted(prefix.rglob('*')):
   if not path.is_file() or 'grid' in path.parts or path.suffix not in {'.json','.npz','.chk'}:continue
   files[str(path)]=dict(bytes=path.stat().st_size,sha256=sha(path))
-(ROOT/'last_two_remote_inventory.json').write_text(json.dumps(dict(host=socket.getfqdn(),cohort_freeze_commit='f8a38e3',candidate_freeze_commit='467a9e5',unchanged_inputs_verified=len(expected),source_hashes={str(p):sha(p) for p in sources},remote_checkpoints=files,grid_cache_excluded=True),indent=2)+'\n')
+(ROOT/'last_two_remote_inventory.json').write_text(json.dumps(dict(host=socket.getfqdn(),cohort_freeze_commit='a474e68',candidate_freeze_commit='467a9e5',unchanged_inputs_verified=len(expected),source_hashes={str(p):sha(p) for p in sources},remote_checkpoints=files,grid_cache_excluded=True),indent=2)+'\n')
 print('Verified raw inputs and inventoried source/checkpoints.',flush=True)

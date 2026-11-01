@@ -1,0 +1,16 @@
+[
+  {
+    "molecule": "Furan",
+    "path": "manuscripts/mouse_orbital_optimized_dft/coordinates/extension/Furan.xyz",
+    "sha256": "81569196e1f0a100f68aaefd07672141d6835be944bfb27faac44d3194e3dc92",
+    "maximum_coordinate_difference_angstrom": 6.567768551235531e-11,
+    "matches_existing_Jmol_geometry": true
+  },
+  {
+    "molecule": "uracil",
+    "path": "manuscripts/mouse_orbital_optimized_dft/coordinates/uracil_anchor.xyz",
+    "sha256": "92ae29c6355c58dd71f0bce076b3763cc56b263a50aae91339204f863c458eed",
+    "maximum_coordinate_difference_angstrom": 1.2000000992884452e-09,
+    "matches_existing_Jmol_geometry": true
+  }
+]

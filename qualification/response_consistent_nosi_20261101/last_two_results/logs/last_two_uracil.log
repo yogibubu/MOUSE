@@ -1,0 +1,26 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+uracil stationary embedded DFT verified
+radial grids: 
+    Treutler-Ahlrichs [JCP 102, 346 (1995); DOI:10.1063/1.469408] (M4) radial grids
+    
+becke partition: Becke, JCP 88, 2547 (1988); DOI:10.1063/1.454033
+pruning grids: <function nwchem_prune at 0x10a769e40>
+grids dens level: 3
+symmetrized grids: False
+atomic radii adjust function: <function treutler_atomic_radii_adjust at 0x10a769da0>
+tot grids = 151672
+uracil stationary response block 1 / 6
+uracil stationary response block 2 / 6
+uracil stationary response block 3 / 6
+uracil stationary response block 4 / 6
+uracil stationary response block 5 / 6
+uracil stationary response block 6 / 6
+uracil stationary F/Q calibration certified
+uracil coherent M06 reference and Q model retained
+uracil V011 True
+uracil [{'id': 'V011', 'root': 1, 'gap_ev': 6.565089689245827, 'overlap': 0.9952007123400205, 'margin': 0.9541646268301414, 'qualified': True}]
+uracil [{'id': 'V011', 'root': 1, 'gap_ev': 6.102824340001549, 'overlap': 0.9984264330108916, 'margin': 0.9423491839241035, 'qualified': True}]
+uracil [{'id': 'V011', 'gap_ev': 6.089579540828129, 'conventional_si_gap_ev': 6.5711577220794615, 'root': 2, 'overlap': 0.9866469779061033, 'margin': 0.8305246391629845, 'qualified': True}]
+uracil [{'id': 'V011', 'root': 0, 'gap_ev': 6.0801158990051904, 'overlap': 0.9939245321520498, 'margin': 0.9522319033187672, 'qualified': True}] [{'id': 'V011', 'root': 1, 'gap_ev': 6.135397965020737, 'overlap': 0.9987137934983863, 'margin': 0.9657052958544743, 'qualified': True}]
+uracil CID inputs and stationary states complete

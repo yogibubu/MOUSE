@@ -1,0 +1,21 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "threads": 2,
+  "stationary_orbital_fock_error": 2.2522716419392288e-14,
+  "density_fixed_point_error": 6.909653738063071e-09,
+  "independent_full_ao_fock_error": 9.53327457394685e-13,
+  "energy_fock_derivative_error": 2.467946208506433e-09,
+  "wall_seconds": 47.35499149997486,
+  "peak_rss_kib": 1815969792,
+  "frozen_core": true,
+  "xc": "CAM-B3LYP",
+  "short_range_exchange": 0.19,
+  "long_range_exchange": 0.65,
+  "omega_bohr_inverse": 0.33,
+  "source_sha256": "7017584d34fe3aa371efc48a0018e57248c82a1692fd1f5214824bfcda5b96f4",
+  "energy_labels_used": false,
+  "reference_sha256": "46c4a218a4e048af9e41a40a7cbb8d23c68c9207db74860cea1e2ef5b78794df",
+  "embedding_sha256": "ace67c3839c1b787ee35dcbac750f87d18466c7f13f003c5a57d0fdd0b52b97b",
+  "protocol_sha256": "8bfea17551d7eab8648dbcfb853c0d05a8370a59a4cf1b972c308d9a091f487a",
+  "energy_origin": "fixed core constant omitted; no excitation offset"
+}

@@ -1,0 +1,20 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "properties": [
+    "energy"
+  ],
+  "wall_seconds": 0.1810877919779159,
+  "peak_rss_native": 192790528,
+  "prediction_errors_ev": {
+    "V010": 6.857803214188607e-11
+  },
+  "derivative_errors": {},
+  "restart_error_hartree": 0.0,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_input_reads": 0,
+  "read_paths": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/portable_validation/last_two/Furan/checkpoint.npz"
+  ],
+  "model_fingerprint": "b331a2d8cddbe87a23222bbd7f084fc527aecd6005bc77c93c5cdf1051c6bcc6"
+}

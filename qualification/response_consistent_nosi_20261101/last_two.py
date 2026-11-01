@@ -13,11 +13,14 @@ import heldout_predict as hp,nosi_coherent as nc,nosi_projected as npj
 import importlib.util
 spec=importlib.util.spec_from_file_location('native_engine',NATIVE/'run.py');engine=importlib.util.module_from_spec(spec);spec.loader.exec_module(engine)
 if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--molecule',choices=['Furan','uracil']);args=parser.parse_args()
     target=CAM/'data/last_two'
     if not target.exists():target.symlink_to(ROOT/'data/last_two')
     with threadpool_limits():
         for row in json.loads((ROOT/'last_two_protocol.json').read_text())['cases']:
             name=row['molecule'];cohort='last_two'
+            if args.molecule is not None and name!=args.molecule:continue
             anchor(cohort,name);full_reference(cohort,name,prepare_only=True);calibrate(cohort,name);full_reference(cohort,name)
             install_native_batch(prepare(cohort,name),CAM/cohort/name)
             engine.prepare_native(cohort,name);hp.DEST=NATIVE;nc.DEST=NATIVE;nc.HERE=NATIVE/'nosi_coherent';npj.HERE=nc.HERE

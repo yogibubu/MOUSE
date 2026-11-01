@@ -1,0 +1,11 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "xc": "CAM-B3LYP",
+  "converged": true,
+  "occupied_virtual_fock_residual": 5.030670176298248e-09,
+  "wall_seconds": 133.39045404095668,
+  "source_sha256": "30e9b7235f8247ecae350648aa6e0c21eec0bd7bf3123b233397f4a94b6b358b",
+  "protocol_sha256": "0fe3950e44eecbf657f500dec215d35c9cfb1a747926b5685b731b1d3b362483",
+  "seed_sha256": "46c4a218a4e048af9e41a40a7cbb8d23c68c9207db74860cea1e2ef5b78794df",
+  "energy_labels_used": false
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "V010",
+    "molecule": "Furan",
+    "model_fingerprint": "b331a2d8cddbe87a23222bbd7f084fc527aecd6005bc77c93c5cdf1051c6bcc6",
+    "spin_squared": 0.0,
+    "determinants": 24
+  },
+  {
+    "id": "V011",
+    "molecule": "uracil",
+    "model_fingerprint": "366c4916dc29c35b9fc86cca71cdb0f9c525d153ba951e13d3280ac9d260d201",
+    "spin_squared": 0.0,
+    "determinants": 10
+  }
+]
