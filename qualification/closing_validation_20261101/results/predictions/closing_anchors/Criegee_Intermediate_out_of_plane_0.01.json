@@ -1,0 +1,75 @@
+{
+  "item": {
+    "cohort": "closing_anchors",
+    "molecule": "Criegee_Intermediate_out_of_plane_0.01",
+    "states": [
+      "I002"
+    ]
+  },
+  "result": {
+    "primary": {
+      "predictions": [
+        {
+          "id": "I002",
+          "root": 0,
+          "gap_ev": 4.360166366728698,
+          "overlap": 0.970936692456308,
+          "margin": 0.9461467513473396,
+          "qualified": true
+        }
+      ],
+      "all_eigenvalues_ev": [
+        4.360166366728698,
+        12.897505738136664,
+        15.322846910911759,
+        15.723111961141564,
+        18.608554482723946,
+        18.834737149434336,
+        20.31701652566202,
+        20.82952104634093,
+        21.633726671499883,
+        23.14454131204467,
+        24.602014944754966
+      ],
+      "metric_eigenvalues": [
+        0.8855707885278719,
+        0.9818144513127689,
+        0.9999999999999759,
+        0.9999999999999787,
+        0.9999999999999815,
+        0.9999999999999818,
+        0.9999999999999828,
+        0.9999999999999848,
+        0.9999999999999888,
+        1.0181855486872007,
+        1.1144292114720933
+      ]
+    },
+    "labels": [
+      "S0",
+      "I002",
+      "I002_pair_double",
+      "pair_h7_p9",
+      "open_h7_7_p9_10",
+      "pair_h7_p10",
+      "open_h7_8_p9_9",
+      "four_h7_8_p9_10_0",
+      "four_h7_8_p9_10_1",
+      "open_h7_8_p10_10",
+      "open_h8_8_p9_10",
+      "pair_h8_p10"
+    ],
+    "reflection": {
+      "available": false,
+      "reason": "molecular reflection not certified",
+      "geometry_error_bohr": 0.03598467332501169
+    },
+    "source_sha256": "f53799fa9a5092cf5a869decad32a02b1f6c93965e6633510f3b64648871c5c9",
+    "parent_sha256": "721d5bb277ad58db974c15edba3c6fc05e5d7215b715a5ba5ed976b12acbb9b2",
+    "single_common_interaction": true,
+    "no_state_family_branch": true
+  },
+  "model_sha256": "08b1375273845320384d71fb0b50673c121918f3108a8b2d51035543fd012b70",
+  "protocol_sha256": "764a1d70be47b79e8d069616600c34b93fca4774bb36ee2804568e9708b9c49e",
+  "scoring_labels_read": false
+}

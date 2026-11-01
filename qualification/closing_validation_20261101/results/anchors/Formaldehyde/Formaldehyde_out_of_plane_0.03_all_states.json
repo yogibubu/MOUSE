@@ -1,0 +1,24 @@
+{
+  "molecule": "Formaldehyde",
+  "direction": "out_of_plane",
+  "step_bohr": 0.03,
+  "old_anchor_gap_ev": 4.282495602563772,
+  "new_anchor_gap_ev": 4.282985469300428,
+  "anchor_shift_ev": 0.0004898667366559282,
+  "old_anchor": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+  "new_anchor": "55b04bb72654f43c599995be3629a1e2d905e3848dfb1bb611bcde9555651033",
+  "old_csf_count": 12,
+  "new_csf_count": 12,
+  "new_reflection": {
+    "available": false,
+    "reason": "no molecular plane"
+  },
+  "state_overlap_original": 0.9997987369784562,
+  "state_overlap_new": 0.999999999999997,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0
+}

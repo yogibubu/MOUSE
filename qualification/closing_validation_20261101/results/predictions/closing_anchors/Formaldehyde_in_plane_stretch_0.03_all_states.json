@@ -1,0 +1,74 @@
+{
+  "item": {
+    "cohort": "closing_anchors",
+    "molecule": "Formaldehyde_in_plane_stretch_0.03_all_states",
+    "states": [
+      "B001"
+    ]
+  },
+  "result": {
+    "primary": {
+      "predictions": [
+        {
+          "id": "B001",
+          "root": 0,
+          "gap_ev": 4.4299103728381555,
+          "overlap": 0.9949939811989634,
+          "margin": 0.8958658440207957,
+          "qualified": true
+        }
+      ],
+      "all_eigenvalues_ev": [
+        4.4299103728381555,
+        13.155296620983862,
+        15.719330111134868,
+        19.281287648190137,
+        24.966070763194022,
+        26.37518905767164,
+        31.190260873145142,
+        33.53820145924441,
+        40.664168141600044,
+        45.070426962307536,
+        52.23048582188493
+      ],
+      "metric_eigenvalues": [
+        0.8487796358736073,
+        0.999999999999991,
+        0.9999999999999929,
+        0.9999999999999942,
+        0.9999999999999969,
+        0.9999999999999979,
+        0.9999999999999982,
+        0.9999999999999994,
+        1.0000000000000004,
+        1.000000000000002,
+        1.1512203641263965
+      ]
+    },
+    "labels": [
+      "S0",
+      "B001",
+      "B001_pair_double",
+      "pair_h4_p6",
+      "open_h4_4_p6_7",
+      "pair_h4_p7",
+      "open_h4_5_p6_6",
+      "four_h4_5_p6_7_0",
+      "four_h4_5_p6_7_1",
+      "open_h4_5_p7_7",
+      "open_h5_5_p6_7",
+      "pair_h5_p7"
+    ],
+    "reflection": {
+      "available": false,
+      "reason": "no molecular plane"
+    },
+    "source_sha256": "f53799fa9a5092cf5a869decad32a02b1f6c93965e6633510f3b64648871c5c9",
+    "parent_sha256": "b567ba79974685b5ba2c247bef493dbc816623c55d798fab5a68b67035e3b32f",
+    "single_common_interaction": true,
+    "no_state_family_branch": true
+  },
+  "model_sha256": "f97d3b74d53ed1cf25c186f4d44ea7c2529e09d83d5a7ebad32f4b11dc4e493f",
+  "protocol_sha256": "764a1d70be47b79e8d069616600c34b93fca4774bb36ee2804568e9708b9c49e",
+  "scoring_labels_read": false
+}

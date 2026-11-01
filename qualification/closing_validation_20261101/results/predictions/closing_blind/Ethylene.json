@@ -1,0 +1,74 @@
+{
+  "item": {
+    "cohort": "closing_blind",
+    "molecule": "Ethylene",
+    "states": [
+      "B002"
+    ]
+  },
+  "result": {
+    "primary": {
+      "predictions": [
+        {
+          "id": "B002",
+          "root": 0,
+          "gap_ev": 9.078513469522075,
+          "overlap": 1.0000000000000007,
+          "margin": 0.9999999999999986,
+          "qualified": true
+        }
+      ],
+      "all_eigenvalues_ev": [
+        9.078513469522075,
+        13.641081676335563,
+        16.76942792512041,
+        21.880980752588396,
+        21.986614117933623,
+        23.320494699823332,
+        27.92279093249478,
+        28.607580804813853,
+        32.985712230591034,
+        33.13514955887228,
+        36.62129997010388
+      ],
+      "metric_eigenvalues": [
+        0.9999999999998971,
+        0.999999999999999,
+        1.0000000000000009,
+        1.0000000000000009,
+        1.000000000000001,
+        1.000000000000002,
+        1.0000000000000027,
+        1.0000000000000029,
+        1.0000000000000029,
+        1.0000000000000118,
+        1.0000000000001124
+      ]
+    },
+    "labels": [
+      "S0",
+      "B002",
+      "B002_pair_double",
+      "pair_h4_p6",
+      "open_h4_4_p6_7",
+      "pair_h4_p7",
+      "open_h4_5_p6_6",
+      "four_h4_5_p6_7_0",
+      "four_h4_5_p6_7_1",
+      "open_h4_5_p7_7",
+      "open_h5_5_p6_7",
+      "pair_h5_p7"
+    ],
+    "reflection": {
+      "available": false,
+      "reason": "no molecular plane"
+    },
+    "source_sha256": "f53799fa9a5092cf5a869decad32a02b1f6c93965e6633510f3b64648871c5c9",
+    "parent_sha256": "f64e10c27975cd3a28e8a5104c074f28d5a9cb57eca0d980467dbc4f755d9bff",
+    "single_common_interaction": true,
+    "no_state_family_branch": true
+  },
+  "model_sha256": "d6fbffb329be566446ede4b645651616cfcedbe1c3754a3aff5dce33e146ebf2",
+  "protocol_sha256": "764a1d70be47b79e8d069616600c34b93fca4774bb36ee2804568e9708b9c49e",
+  "scoring_labels_read": false
+}

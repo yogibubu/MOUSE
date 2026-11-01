@@ -2,7 +2,7 @@
 import ast
 from types import SimpleNamespace
 import numpy as np
-from ._mixed_jet import MixedJet as Jet,contract
+from ._mixed_jet import MixedJet as Jet,contract,stack
 from ._nosi_mixed import inverse
 from ._nosi_nuclear import closed,opened,csf_element,square_root_jet,DensityEnergy
 from ._nosi_orbital_response import GroundResponse,ROKSResponse
@@ -113,6 +113,8 @@ class MatrixResponse:
             four=four+charge[...,None,None]*np.eye(2);diagonal.extend([four[0,0],four[1,1]])
             four_overrides.append((len(basis)-2,four))
         size=len(basis);metric=Jet.constant(np.zeros((size,size)),self.nr);hf=Jet.constant(np.zeros((size,size)),self.nr)
+        # Frozen auxiliary values have identically zero nuclear jets. Fill
+        # their dense block directly, without allocating scalar jets per pair.
         for i in range(size):
             for j in range(i+1):
                 if i>=self.nbase and j>=self.nbase:
@@ -120,16 +122,17 @@ class MatrixResponse:
                     if key not in self.constant_elements:
                         scalar=lambda b:[(weight,(a.v,bb.v)) for weight,(a,bb) in b]
                         self.constant_elements[key]=self.scalar.csf(scalar(basis[i]),scalar(basis[j]))
-                    ov,hval=self.constant_elements[key];overlap=Jet.constant(ov,self.nr);value=Jet.constant(hval,self.nr)
+                    ov,hval=self.constant_elements[key]
+                    metric.v[i,j]=metric.v[j,i]=ov;hf.v[i,j]=hf.v[j,i]=hval
+                    continue
                 elif self.nr==0:
                     scalar=lambda b:[(weight,(a.v,bb.v)) for weight,(a,bb) in b]
                     ov,hval=self.scalar.csf(scalar(basis[i]),scalar(basis[j]));overlap=Jet.constant(ov,0);value=Jet.constant(hval,0)
                 else:overlap,value=csf_element(basis[i],basis[j],self.h,self.w)
                 metric[i,j]=metric[j,i]=overlap;hf[i,j]=hf[j,i]=value
-        residual=[energy-hf[i,i]/metric[i,i] for i,energy in enumerate(diagonal)]
-        h=Jet.constant(np.zeros((size,size)),self.nr)
-        for i in range(size):
-            for j in range(size):h[i,j]=hf[i,j]+.5*metric[i,j]*(residual[i]+residual[j])
+        indices=np.arange(size)
+        residual=stack(diagonal)-hf[indices,indices]/metric[indices,indices]
+        h=hf+.5*metric*(residual[:,None]+residual[None,:])
         for index,four in four_overrides:h[index:index+2,index:index+2]=four
         self.current_basis=basis
         return h,metric,diagonal[0]

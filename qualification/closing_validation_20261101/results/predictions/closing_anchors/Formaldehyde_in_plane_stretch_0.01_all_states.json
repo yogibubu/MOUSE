@@ -1,0 +1,74 @@
+{
+  "item": {
+    "cohort": "closing_anchors",
+    "molecule": "Formaldehyde_in_plane_stretch_0.01_all_states",
+    "states": [
+      "B001"
+    ]
+  },
+  "result": {
+    "primary": {
+      "predictions": [
+        {
+          "id": "B001",
+          "root": 0,
+          "gap_ev": 4.333745284688542,
+          "overlap": 0.9945160470685103,
+          "margin": 0.8906756459773824,
+          "qualified": true
+        }
+      ],
+      "all_eigenvalues_ev": [
+        4.333745284688542,
+        13.12363915555301,
+        15.606530405947863,
+        18.917071159621425,
+        25.309398167874466,
+        26.465567703844982,
+        31.23244426051271,
+        33.28619619492273,
+        41.3458944913751,
+        45.34386278662933,
+        52.041941529333016
+      ],
+      "metric_eigenvalues": [
+        0.8407920288990507,
+        1.0000000000000009,
+        1.000000000000002,
+        1.0000000000000024,
+        1.0000000000000084,
+        1.0000000000000095,
+        1.00000000000001,
+        1.0000000000000102,
+        1.0000000000000107,
+        1.0000000000000173,
+        1.1592079711009757
+      ]
+    },
+    "labels": [
+      "S0",
+      "B001",
+      "B001_pair_double",
+      "pair_h4_p6",
+      "open_h4_4_p6_7",
+      "pair_h4_p7",
+      "open_h4_5_p6_6",
+      "four_h4_5_p6_7_0",
+      "four_h4_5_p6_7_1",
+      "open_h4_5_p7_7",
+      "open_h5_5_p6_7",
+      "pair_h5_p7"
+    ],
+    "reflection": {
+      "available": false,
+      "reason": "no molecular plane"
+    },
+    "source_sha256": "f53799fa9a5092cf5a869decad32a02b1f6c93965e6633510f3b64648871c5c9",
+    "parent_sha256": "6d42d0ca8f2d669d76a80d34b191ebfac886155da781c8d964f1081dc0469225",
+    "single_common_interaction": true,
+    "no_state_family_branch": true
+  },
+  "model_sha256": "54daed1a6d0cb1baa18668342264af217e063eb8adcb78fb42b437cf7a5afe65",
+  "protocol_sha256": "764a1d70be47b79e8d069616600c34b93fca4774bb36ee2804568e9708b9c49e",
+  "scoring_labels_read": false
+}

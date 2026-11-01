@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-11-01T17:16:59.900987+00:00",
+  "model_changed": false,
+  "reason": "Complete preparation without a TDA representability restriction: ethylene valence PBE0-TDA projection norm is 0.6349338, below the legacy 0.7 seed gate although the native pi-pi promotion is unambiguous.",
+  "new_case_assignment": "Native canonical orbital plane parity selects highest occupied n or pi and lowest virtual pi, then the identical KKT solver certifies target fidelity >=0.7. No excitation-energy label is consulted.",
+  "anchor_assignment": "Transport each original target hole/particle pair, retaining all original states; no new spectral root selection.",
+  "completed_calculations_preserved": "Formaldehyde completed with its qualified original reference transition; baseline SCF, native SCC, embeddings and reference-TDA caches retained. No scored prediction is changed.",
+  "exposure": "Bibliographic search for structural and vibrational references exposed the approximate formaldehyde vertical reference after its prediction was saved. It is a prospective fixed-model test, not a strict blinded claim. Ethylene and butadiene QUEST labels remain unopened.",
+  "no_fitting": true
+}

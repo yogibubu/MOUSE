@@ -1,0 +1,46 @@
+{
+  "molecule": "Criegee_Intermediate",
+  "direction": "in_plane_stretch",
+  "step_bohr": 0.03,
+  "old_anchor_gap_ev": 4.152870260901035,
+  "new_anchor_gap_ev": 4.154454902185805,
+  "anchor_shift_ev": 0.0015846412847690997,
+  "old_anchor": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+  "new_anchor": "b308fe3c57a69dc913675fa3716ad497bf22e3c19c80d13ef137981e972f0e04",
+  "old_csf_count": 178,
+  "new_csf_count": 177,
+  "new_reflection": {
+    "available": true,
+    "geometry_error_bohr": 1.1102230246251565e-16,
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "mo_characters": [
+      0.9999999999999991,
+      0.9999999999999993,
+      1.0000000000000002,
+      1.0000000000000009,
+      1.0000000000000004,
+      -0.9999999999999991,
+      0.9999999999999991,
+      -0.9999999999999987,
+      0.9999999999999998,
+      -1.0000000000000004,
+      0.999999999999999,
+      0.9999999999999992,
+      0.9999999999999991,
+      0.9999999999999983
+    ],
+    "offdiagonal_error": 7.616661881378942e-13
+  },
+  "state_overlap_original": 0.9999014641956351,
+  "state_overlap_new": 1.0000000000000089,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0
+}

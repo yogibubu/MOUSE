@@ -1,0 +1,61 @@
+{
+  "schema": "mouse.closing.validation.v1",
+  "frozen_utc": "2026-11-01T17:11:55.407252+00:00",
+  "candidate_commit": "6ce3356",
+  "model_changes_allowed": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "independent": [
+    {
+      "molecule": "Formaldehyde",
+      "id": "B001",
+      "family": "n_pi",
+      "state": "lowest valence singlet n-pi",
+      "geometry_sha256": "12aaa15993072edaca70ee7d1e06ef4f685d03f3cd1b6be28a81ca330e2f1c62"
+    },
+    {
+      "molecule": "Ethylene",
+      "id": "B002",
+      "family": "pi_pi",
+      "state": "lowest valence singlet pi-pi",
+      "geometry_sha256": "7e5c47ecd6fb50d6c9ca201fe272c65823e59e0f4d3c569a94177094680ac71c"
+    },
+    {
+      "molecule": "Butadiene",
+      "id": "B003",
+      "family": "pi_pi",
+      "state": "bright valence singlet pi-pi, Bu",
+      "geometry_sha256": "3e7eeb9b717270778b20255ebb0c57ab628e54af0d7db54db8970a2ddb759d36"
+    }
+  ],
+  "assignment": "largest normalized compact projection of PBE0/aug-cc-pVDZ transition onto native HOMO-LUMO promotion, checked molecular-plane orbital parity; no target-energy matching",
+  "scoring": "QUEST AVTZ TBE after all fixed predictions saved; all outcomes retained, no model refit",
+  "quest_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa",
+  "anchor_tests": {
+    "molecules": [
+      "Criegee_Intermediate",
+      "Formaldehyde"
+    ],
+    "displacements_bohr": [
+      0.01,
+      0.03
+    ],
+    "directions": [
+      "in_plane_stretch",
+      "out_of_plane"
+    ],
+    "compare": "same physical geometry evaluated with original and re-prepared references; frozen candidate and declared parity-selection scope"
+  },
+  "geometry_frequency": {
+    "molecules": [
+      "Formaldehyde",
+      "acetaldehyde"
+    ],
+    "method": "optimize final prepared energy with analytic gradients, then full analytic Hessian; compare published coupled-cluster geometry and experimental or coupled-cluster harmonic frequencies without fitting"
+  },
+  "acceleration": "exact vectorized dense residual completion, skip allocation of constant scalar jets; compare all Criegee G/H with frozen qualified arrays; same two-thread cold timing"
+}

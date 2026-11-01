@@ -1,0 +1,52 @@
+{
+  "molecule": "Formaldehyde",
+  "model_fingerprint": "01877bea61f5fc591d4a882fbdd8d76f04752ec2c6b8772b4f7ba1f652b289f3",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "gradient_max": 4.029744721898477e-07,
+  "frequencies_cm": [
+    336.8299842685799,
+    1100.6706491596012,
+    1255.9346370697797,
+    1540.3930290511619,
+    3059.8057049517934,
+    3107.0813909103917
+  ],
+  "imaginary_modes": 0,
+  "minimum_frequency_cm": 336.8299842685799,
+  "coordinates_angstrom": [
+    [
+      -0.14428599685825422,
+      -1.5555028679070783e-15,
+      -0.641193265703606
+    ],
+    [
+      0.02128525433412712,
+      1.3464333884508106e-14,
+      0.6281625934450936
+    ],
+    [
+      0.021812080444342574,
+      0.9116226628457411,
+      -1.1744545038328034
+    ],
+    [
+      0.02181208044433385,
+      -0.9116226628457524,
+      -1.1744545038327945
+    ]
+  ],
+  "atomic_numbers": [
+    6,
+    8,
+    1,
+    1
+  ],
+  "optimization_steps": 18,
+  "optimization_message": "Optimization terminated successfully.",
+  "wall_seconds": 24.598618416988757,
+  "hessian_seconds": 5.820720458053984,
+  "maximum_stationary_residual": 2.4945504724157274e-15,
+  "minimum_overlap": 1.0000000000000002,
+  "derivatives": "analytic of final frozen anchored model; no re-preparation inside optimization",
+  "frequency_scaling": 1.0
+}
