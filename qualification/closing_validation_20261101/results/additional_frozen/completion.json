@@ -1,0 +1,128 @@
+[
+  {
+    "molecule": "Cyclopropene",
+    "id": "P001",
+    "returncode": 0,
+    "stage": "audit_prepared_energy.py",
+    "completed_utc": "2026-11-01T18:17:55.438370+00:00",
+    "protocol_sha256": "8664de4327dd7b13150219e56a736a6982dde25379c598a3a1dde4ba65400189",
+    "reference_labels_read": false,
+    "prediction_sha256": "895152cd03456333df8a954f1347c14bd14094324f8b4f37455eda8db2780a93",
+    "prediction": {
+      "bath_polarization_strength": 0.6,
+      "bath_strength_fitted": true,
+      "cohort": "additional_pi_eta060",
+      "molecule": "Cyclopropene",
+      "states": [
+        {
+          "id": "P001",
+          "gap_ev": 6.783408536334049,
+          "overlap": 0.9998432910326339,
+          "margin": 0.9899628685247646
+        }
+      ],
+      "model": "b21d80889b6741173cc40da5d74a511db61c86dfef7c6b0f2989743589e4d777",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0,
+      "reference_excitation_energies_read": false,
+      "auxbasis": "weigend+etb",
+      "auxiliary_functions": 191,
+      "bath_virtuals": 86,
+      "native_environment_transitions": 39,
+      "bath_transitions": 688,
+      "gauge_alignment_hartree": 0.0767662002439844,
+      "minimum_bath_gap_hartree": 0.3532155577688197,
+      "bare_DF_integral_max_error_hartree": 6.80171823890241e-05,
+      "minimum_dielectric_eigenvalue": 1.0000076849017852,
+      "screened_coulomb_trace": 13.166317637272606
+    }
+  },
+  {
+    "molecule": "Cyclopentadiene",
+    "id": "P002",
+    "returncode": 0,
+    "stage": "audit_prepared_energy.py",
+    "completed_utc": "2026-11-01T18:19:26.376336+00:00",
+    "protocol_sha256": "8664de4327dd7b13150219e56a736a6982dde25379c598a3a1dde4ba65400189",
+    "reference_labels_read": false,
+    "prediction_sha256": "ba11b1c9ec1b1c5266366f8e50a8128f54fc49f8d9407efe8cd7b1846b1ba2d6",
+    "prediction": {
+      "bath_polarization_strength": 0.6,
+      "bath_strength_fitted": true,
+      "cohort": "additional_pi_eta060",
+      "molecule": "Cyclopentadiene",
+      "states": [
+        {
+          "id": "P002",
+          "gap_ev": 5.526816728392101,
+          "overlap": 0.9999655704861835,
+          "margin": 0.9955922685245803
+        }
+      ],
+      "model": "6794e0679913a664d910d921ca16f136962426a617ac3938493628a6ebe9a848",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0,
+      "reference_excitation_energies_read": false,
+      "auxbasis": "weigend+etb",
+      "auxiliary_functions": 311,
+      "bath_virtuals": 138,
+      "native_environment_transitions": 139,
+      "bath_transitions": 1794,
+      "gauge_alignment_hartree": 0.0814014326979488,
+      "minimum_bath_gap_hartree": 0.31937376819864255,
+      "bare_DF_integral_max_error_hartree": 6.793369804147797e-05,
+      "minimum_dielectric_eigenvalue": 1.0000141336841544,
+      "screened_coulomb_trace": 20.289727000074194
+    }
+  },
+  {
+    "molecule": "Pyrrole",
+    "id": "P003",
+    "returncode": 0,
+    "stage": "audit_prepared_energy.py",
+    "completed_utc": "2026-11-01T18:19:09.288417+00:00",
+    "protocol_sha256": "8664de4327dd7b13150219e56a736a6982dde25379c598a3a1dde4ba65400189",
+    "reference_labels_read": false,
+    "prediction_sha256": "c361d3688232db7e6a79cc138bd41fc7121abea98d9b6730fd7a561b587f54e0",
+    "prediction": {
+      "bath_polarization_strength": 0.6,
+      "bath_strength_fitted": true,
+      "cohort": "additional_pi_eta060",
+      "molecule": "Pyrrole",
+      "states": [
+        {
+          "id": "P003",
+          "gap_ev": 8.616412417028458,
+          "overlap": 0.9997206273473396,
+          "margin": 0.9835295525413901
+        }
+      ],
+      "model": "5ff335a23952f3178e03562e37014ed275e76f4fa682adb5a5c16f092528cb9b",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "lambda_exchange": 0.9,
+      "offset_ev": 0,
+      "reference_excitation_energies_read": false,
+      "auxbasis": "weigend+etb",
+      "auxiliary_functions": 300,
+      "bath_virtuals": 130,
+      "native_environment_transitions": 131,
+      "bath_transitions": 1690,
+      "gauge_alignment_hartree": 0.09454853768335647,
+      "minimum_bath_gap_hartree": 0.31032656470498515,
+      "bare_DF_integral_max_error_hartree": 0.0004037851597871178,
+      "minimum_dielectric_eigenvalue": 1.0000140185232769,
+      "screened_coulomb_trace": 19.958409498937414
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "additional_pi_eta060",
+  "molecule": "Pyrrole",
+  "states": [
+    {
+      "id": "P003",
+      "gap_ev": 8.616412417028458,
+      "overlap": 0.9997206273473396,
+      "margin": 0.9835295525413901
+    }
+  ],
+  "model": "5ff335a23952f3178e03562e37014ed275e76f4fa682adb5a5c16f092528cb9b",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 300,
+  "bath_virtuals": 130,
+  "native_environment_transitions": 131,
+  "bath_transitions": 1690,
+  "gauge_alignment_hartree": 0.09454853768335647,
+  "minimum_bath_gap_hartree": 0.31032656470498515,
+  "bare_DF_integral_max_error_hartree": 0.0004037851597871178,
+  "minimum_dielectric_eigenvalue": 1.0000140185232769,
+  "screened_coulomb_trace": 19.958409498937414
+}
