@@ -1,0 +1,26 @@
+{
+  "spin": [
+    {
+      "state_id": "V011",
+      "spin_squared": 0.0
+    }
+  ],
+  "host": "mac-2.homenet.telecomitalia.it",
+  "properties": [
+    "energy"
+  ],
+  "wall_seconds": 9.818790249992162,
+  "peak_rss_native": 707788800,
+  "prediction_errors_ev": {
+    "V011": 5.154827675823981e-10
+  },
+  "derivative_errors": {},
+  "restart_error_hartree": 2.842170943040401e-14,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_input_reads": 0,
+  "read_paths": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-pi-pi-transfer-repair-20261101/portable_validation/last_two/uracil/checkpoint.npz"
+  ],
+  "model_fingerprint": "7d96071dfceeec426e29d7a6e24c10ceceff5800d779190331391e400406b8b3"
+}

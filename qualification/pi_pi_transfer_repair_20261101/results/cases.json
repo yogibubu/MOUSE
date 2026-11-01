@@ -1,0 +1,130 @@
+[
+  {
+    "cohort": "independent_challenge",
+    "molecule": "Furofuran",
+    "states": [
+      "C001",
+      "C002"
+    ]
+  },
+  {
+    "cohort": "independent",
+    "molecule": "Criegee_Intermediate",
+    "states": [
+      "I001",
+      "I002"
+    ]
+  },
+  {
+    "cohort": "independent",
+    "molecule": "Benzoxadiazole",
+    "states": [
+      "I004"
+    ]
+  },
+  {
+    "cohort": "independent",
+    "molecule": "Hexatriene",
+    "states": [
+      "I005"
+    ]
+  },
+  {
+    "cohort": "extra_npi",
+    "molecule": "acetaldehyde",
+    "states": [
+      "N001"
+    ]
+  },
+  {
+    "cohort": "extra_npi",
+    "molecule": "formamide",
+    "states": [
+      "N002"
+    ]
+  },
+  {
+    "cohort": "extra_npi",
+    "molecule": "pyrazine",
+    "states": [
+      "N003"
+    ]
+  },
+  {
+    "cohort": "prospective_cisd",
+    "molecule": "acetone",
+    "states": [
+      "V001"
+    ]
+  },
+  {
+    "cohort": "prospective_cisd",
+    "molecule": "glyoxal",
+    "states": [
+      "V002"
+    ]
+  },
+  {
+    "cohort": "post_kernel_validation",
+    "molecule": "tetrazine",
+    "states": [
+      "V003"
+    ]
+  },
+  {
+    "cohort": "post_kernel_validation",
+    "molecule": "acrolein",
+    "states": [
+      "V004"
+    ]
+  },
+  {
+    "cohort": "cid_prospective",
+    "molecule": "nitrosomethane",
+    "states": [
+      "V005"
+    ]
+  },
+  {
+    "cohort": "cid_prospective",
+    "molecule": "maleimide",
+    "states": [
+      "V006"
+    ]
+  },
+  {
+    "cohort": "additional_three",
+    "molecule": "pyrimidine",
+    "states": [
+      "V007"
+    ]
+  },
+  {
+    "cohort": "additional_three",
+    "molecule": "cyclopentadienone",
+    "states": [
+      "V008"
+    ]
+  },
+  {
+    "cohort": "additional_three",
+    "molecule": "pyranone",
+    "states": [
+      "V009"
+    ]
+  },
+  {
+    "cohort": "last_two",
+    "molecule": "Furan",
+    "states": [
+      "V010"
+    ]
+  },
+  {
+    "cohort": "last_two",
+    "molecule": "uracil",
+    "states": [
+      "V011"
+    ]
+  }
+]

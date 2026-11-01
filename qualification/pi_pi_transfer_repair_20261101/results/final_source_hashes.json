@@ -1,0 +1,23 @@
+{
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_slater.py": "ba9249638f00a29ee063e2700e229fcdc021bdd7c3aa324f795bb29876b4712e",
+  "packages/matrix-gfn2/src/matrix_gfn2/nonlocal_response.py": "3939d8cd40039ad9077333bb6691689298ccfc398fca40af46a165d45827c349",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_nuclear.py": "bcb6d3de99074513f915b1d55a0b245c28e6681408984617543704c92b375061",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_orbital_response.py": "54086f5d093721063fef6fa95ae0a83cbec1c9cc5f2c5bdbf96fa115ee6a441b",
+  "packages/matrix-gfn2/src/matrix_gfn2/_mixed_jet.py": "9e03fc7e882d78804f4ac48f4f600a1165a33e68f073ca7173d3358c2b91f963",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_orthogonality.py": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_determinant.py": "cba68b479bcf88d5d8c1f3652b7127e8f6dd6d434d4a9985afc5f1a1a968fc61",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_spin.py": "2efd5e457bc115a3d3451ac6f4ae30a9e569dfb2b107e4261b35c7a9422392d2",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_refine.py": "2904f163ba115ae60b70ace8282bcc8d4b8a9264be6ecb7020e5c0f8d070b60f",
+  "packages/matrix-gfn2/src/matrix_gfn2/deltascf_analytic_hessian.py": "2e7659fa7962cb3fab1fa901f6bc3fd403826fc67776f4bc1fd7c01c92dbd74f",
+  "packages/matrix-gfn2/src/matrix_gfn2/_einsum_cached.py": "b7e3c15f48a8ae5e228392c335e40ece7d6da1c404577e348c2d18c7bf92deb8",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_mixed_fock.py": "75eebcc186d31df8bed4a1fe08ad97dffb2cd63e1583f3ed4999ddaf7ff4a205",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_mixed.py": "58fceec7ce356a7ce9a64c3976071b8e51d3b9a071e61d2f4593c44d320df67c",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_canonical.py": "0cee95ace03eb985c775a6c9a72d63a601542ac825b485db6a6715e1ec234341",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_configurations.py": "f28fa62fa319845e803e47112520af8cdafae92047742369bf1f471bf5cec46f",
+  "packages/matrix-gfn2/src/matrix_gfn2/nosi_surface.py": "7e2895a5005b2421a3864d7a53f109d58aa36434c656e2cc9cf246a7dbd4a14f",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_eigen.py": "15ba844857ee8005f126d97b7b2dffdf53b0fbf9949036bb417d951b506d65b6",
+  "packages/matrix-gfn2/src/matrix_gfn2/_nosi_surface_response.py": "dee545873b79186d1c1b3df173b2faa05019e21a38f6fb59b115dd40ec360198",
+  "packages/matrix-apoc/src/matrix_apoc/nonorthogonal_ci.py": "78e94cb6664981774326b3877a230db497e02d8ccafeb65c7823e8a281e6b27b",
+  "packages/matrix-link/src/matrix_link/nosi_component.py": "7c9d9b189d05410e1f8cd622915c46758e184d2b1dfc919bdb7e7467b3964632",
+  "packages/matrix-link/src/matrix_link/scan.py": "d369c5f99735e6da462123ce8688e7b62fe03146db6de30a8aadbd9e2faafb79"
+}

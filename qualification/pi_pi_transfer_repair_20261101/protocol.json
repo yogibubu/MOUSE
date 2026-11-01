@@ -67,12 +67,7 @@
     ],
     "lambda_exchange": 0.9,
     "offset_ev": 0,
-    "qualification_pending": [
-      "public portable runtime",
-      "coherent spin validation",
-      "full analytic nuclear response",
-      "independent molecular derivative checks",
-      "manuscript and cost update"
-    ]
+    "qualification_pending": [],
+    "qualification_result": "qualification_summary.json"
   }
 }

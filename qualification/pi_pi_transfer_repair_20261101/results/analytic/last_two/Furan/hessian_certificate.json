@@ -1,0 +1,63 @@
+{
+  "molecule": "Furan",
+  "cohort": "last_two",
+  "coordinates": 27,
+  "states": {
+    "V010": {
+      "energy_hartree": -13.759854311424613,
+      "gradient_column_consistency": 1.1102230246251565e-16,
+      "raw_hessian_asymmetry": 4.6407322429331543e-14,
+      "translation_residual": 1.4253181968015838e-13,
+      "gradient_translation_residual": 7.181755190543981e-16,
+      "independent_energy_checks": [
+        {
+          "direction": 0,
+          "character": "out_of_plane",
+          "steps": [
+            {
+              "epsilon_bohr": 0.001,
+              "gradient": -7.105427357601002e-12,
+              "curvature": 0.14321264529826294,
+              "raw_gradient_error": 7.105074025496379e-12,
+              "raw_curvature_error": 2.2159941401311833e-07
+            },
+            {
+              "epsilon_bohr": 0.0005,
+              "gradient": 1.2434497875801753e-11,
+              "curvature": 0.1432124534517243,
+              "raw_gradient_error": 1.2434851207906376e-11,
+              "raw_curvature_error": 2.9752875357891284e-08
+            }
+          ],
+          "richardson_gradient_error": 1.8948159619040625e-11,
+          "richardson_curvature_error": 3.419597086051773e-08
+        },
+        {
+          "direction": 1,
+          "character": "mixed_internal",
+          "steps": [
+            {
+              "epsilon_bohr": 0.001,
+              "gradient": -0.029263108888066824,
+              "curvature": 0.5538070464439215,
+              "raw_gradient_error": 5.7418467300229814e-08,
+              "raw_curvature_error": 8.494911596379495e-08
+            },
+            {
+              "epsilon_bohr": 0.0005,
+              "gradient": -0.029263151979819213,
+              "curvature": 0.5538070979582699,
+              "raw_gradient_error": 1.4326714911638838e-08,
+              "raw_curvature_error": 1.3646346430640222e-07
+            }
+          ],
+          "richardson_gradient_error": 3.720255006833817e-11,
+          "richardson_curvature_error": 1.536349137909454e-07
+        }
+      ]
+    }
+  },
+  "method": "fully analytic anchored-model nuclear response; finite differences only for independent validation",
+  "no_DFT_runtime": true,
+  "no_SCC_runtime": true
+}

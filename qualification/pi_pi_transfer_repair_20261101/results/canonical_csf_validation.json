@@ -1,0 +1,24 @@
+[
+  {
+    "n": 6,
+    "metric_error": 1.1102230246251565e-14,
+    "energy_matrix_error": 9.947598300641403e-14,
+    "fast_seconds": 0.004077957943081856,
+    "independent_seconds": 0.4485055419499986,
+    "determinants": 49,
+    "csfs": 24,
+    "active_orbitals": 5,
+    "closed_core_orbitals": 1
+  },
+  {
+    "n": 7,
+    "metric_error": 1.2434497875801753e-14,
+    "energy_matrix_error": 7.105427357601002e-14,
+    "fast_seconds": 0.0040687500149942935,
+    "independent_seconds": 0.46306291699875146,
+    "determinants": 52,
+    "csfs": 24,
+    "active_orbitals": 5,
+    "closed_core_orbitals": 2
+  }
+]

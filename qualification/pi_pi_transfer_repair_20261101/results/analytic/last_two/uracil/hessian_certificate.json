@@ -1,0 +1,63 @@
+{
+  "molecule": "uracil",
+  "cohort": "last_two",
+  "coordinates": 36,
+  "states": {
+    "V011": {
+      "energy_hartree": -23.050615831743222,
+      "gradient_column_consistency": 0.0,
+      "raw_hessian_asymmetry": 1.3766765505351941e-14,
+      "translation_residual": 1.745652233875461e-14,
+      "gradient_translation_residual": 1.5386997231914279e-15,
+      "independent_energy_checks": [
+        {
+          "direction": 0,
+          "character": "out_of_plane",
+          "steps": [
+            {
+              "epsilon_bohr": 0.001,
+              "gradient": -1.7763568394002505e-12,
+              "curvature": 0.10070184330857046,
+              "raw_gradient_error": 1.7766556244104429e-12,
+              "raw_curvature_error": 1.449182956969608e-07
+            },
+            {
+              "epsilon_bohr": 0.0005,
+              "gradient": -1.7763568394002505e-11,
+              "curvature": 0.10070199607525865,
+              "raw_gradient_error": 1.7763867179012697e-11,
+              "raw_curvature_error": 7.848392491460743e-09
+            }
+          ],
+          "richardson_gradient_error": 2.309293769721345e-11,
+          "richardson_curvature_error": 5.877062188297533e-08
+        },
+        {
+          "direction": 1,
+          "character": "mixed_internal",
+          "steps": [
+            {
+              "epsilon_bohr": 0.001,
+              "gradient": 0.03190522142659802,
+              "curvature": 0.33658636056088653,
+              "raw_gradient_error": 1.5219576154912318e-09,
+              "raw_curvature_error": 4.3847633413029996e-08
+            },
+            {
+              "epsilon_bohr": 0.0005,
+              "gradient": 0.03190522030749321,
+              "curvature": 0.33658612608178373,
+              "raw_gradient_error": 4.0285280666907397e-10,
+              "raw_curvature_error": 1.9063146938780307e-07
+            }
+          ],
+          "richardson_gradient_error": 2.981787039502137e-11,
+          "richardson_curvature_error": 2.687911703214141e-07
+        }
+      ]
+    }
+  },
+  "method": "fully analytic anchored-model nuclear response; finite differences only for independent validation",
+  "no_DFT_runtime": true,
+  "no_SCC_runtime": true
+}

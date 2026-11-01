@@ -29,6 +29,13 @@ with threadpool_limits(2):
  target=json.loads((ROOT/'even_sector_5'/args.cohort/args.name/'result.json').read_text());expected={r['id']:r['gap_ev'] for r in target['primary']['predictions']};errors={};derivative_errors={}
  for state in result.states:
     errors[state.state_id]=abs(state.excitation_hartree*27.211386245988-expected[state.state_id]);assert errors[state.state_id]<1e-5,errors
+ if args.hessian or args.gradient:
+    with np.load(ROOT/'analytic'/args.cohort/args.name/'nuclear_response.npz') as z:
+        for state in result.states:
+            ge=float(np.max(abs(state.gradient_hartree_per_bohr.ravel()-z[state.state_id+'_gradient'])));assert ge<1e-7,(state.state_id,ge)
+            he=None
+            if args.hessian:he=float(np.max(abs(state.hessian_hartree_per_bohr2-z[state.state_id+'_hessian'])));assert he<2e-6,(state.state_id,he)
+            derivative_errors[state.state_id]=dict(gradient_error=ge,hessian_error=he)
  destination=ROOT/'portable_validation'/args.cohort/args.name;destination.mkdir(parents=True,exist_ok=True);save_nosi_result(destination/'checkpoint.npz',result);restored=load_nosi_result(destination/'checkpoint.npz',model)
  restarted=model.evaluate(calculator,restored.coordinates_angstrom,properties=('energy',),reference_result=restored)
  restart_error=max(abs(a.energy_hartree-b.energy_hartree) for a,b in zip(result.states,restarted.states));assert restart_error<1e-9,restart_error

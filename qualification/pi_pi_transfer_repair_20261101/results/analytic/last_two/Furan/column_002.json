@@ -1,0 +1,15 @@
+{
+  "identity": {
+    "model": "ce5c8e5700ca1201bffc471af2961218ca4086b4b8919585b87fb634ea09d349",
+    "sources": {
+      "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-pi-pi-transfer-repair-20261101/hessian_columns.py": "87c3be43b4b270c0c410901aca08a19cc88f7aa85ef88afda244c06721c8ca59",
+      "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_surface_response.py": "dee545873b79186d1c1b3df173b2faa05019e21a38f6fb59b115dd40ec360198",
+      "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_configurations.py": "f28fa62fa319845e803e47112520af8cdafae92047742369bf1f471bf5cec46f",
+      "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_canonical.py": "0cee95ace03eb985c775a6c9a72d63a601542ac825b485db6a6715e1ec234341"
+    }
+  },
+  "column": 2,
+  "wall_seconds": 75.63791779102758,
+  "worker_elapsed": 187.3589791660197,
+  "peak_rss_bytes": 1656963072
+}

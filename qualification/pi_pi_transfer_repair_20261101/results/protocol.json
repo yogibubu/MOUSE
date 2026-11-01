@@ -1,0 +1,48 @@
+{
+  "objective": "Resolve all seven exposed pi-to-pi transitions with a uniform response-consistent selected-configuration model, preserving n-to-pi controls.",
+  "reference": "Same retained native GFN2 orbitals and frozen CAM-derived common F/Q reference as the twenty-state test.",
+  "fixed": {
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lambda_exchange": 0.9,
+    "fitted_excitation_offset_ev": 0
+  },
+  "first_candidate": "Use the native functional's nearest Pauli-compatible charge/spin two-body response and consistently normal-ordered one-body operator in the selected optimized-target-plus-doubles space. Preserve every native diagonal functional and exact four-spin block; retain moving stationary-ground projection.",
+  "motivation": "The previous kernel-response tests used the enlarged canonical-singles diagnostic space, whereas the selected-CID success omitted unoptimized canonical singles. Test their physically consistent combination before changing any functional or parameter.",
+  "selection": "Every molecule receives identical algebra; use the unchanged selected-space indices and wavefunction assignment gates. No reference-energy root matching.",
+  "gates": {
+    "all_seven_pi_pi_max_error_ev": 0.5,
+    "pi_pi_MAE_ev": 0.3,
+    "n_pi_max_error_ev": 0.5,
+    "n_pi_MAE_ev": 0.3
+  },
+  "exposure": "All twenty target energies are exposed development; no blind validation claim.",
+  "compute": "Verified Oracle or MAC-STUDIO only; all prepared references, states and completed operator/matrix checkpoints are reused.",
+  "subsequent_diagnostics": [
+    {
+      "name": "native_reanchor",
+      "hypothesis": "Kernel evaluated at native GFN2 ground density rather than embedded DFT density; preserve the same first derivative and F/Q levels. Fixed-orbital diagnostic precedes any new stationarity claim."
+    },
+    {
+      "name": "nonlinear_xc",
+      "hypothesis": "Measure exact CAM-B3LYP XC remainder beyond the quadratic native-density expansion on archived OO states. This diagnostic is not an energy correction selected from labels."
+    },
+    {
+      "name": "density_driven",
+      "hypothesis": "Test the published ensemble ddA algebra as a matrix functional before diagonalization, with external xi=.32. Combining it with the existing native functional is exploratory and is not GX24.",
+      "primary_source": "https://arxiv.org/html/2406.18105v2"
+    },
+    {
+      "name": "screened_ensemble",
+      "hypothesis": "Replace bare transition self interaction by constrained-screened interaction in the exploratory ddA matrix; same xi=.32, no refit. This is not the published GX24 functional."
+    },
+    {
+      "name": "expanded_cid",
+      "hypothesis": "Test uniform active-space completeness with all rank-two singlet CSFs from three highest occupied and three lowest virtual native orbitals; exclude their entire product from environmental screening. Retain optimized target singles and paired doubles. No new empirical parameter.",
+      "regression": "At m=2 reproduce the completed constrained-screened selected-CID Furan result before running m=3.",
+      "selection": "One common active size for every molecule; no per-molecule choice and no nuclear derivative claim before completing the new response algebra."
+    }
+  ]
+}

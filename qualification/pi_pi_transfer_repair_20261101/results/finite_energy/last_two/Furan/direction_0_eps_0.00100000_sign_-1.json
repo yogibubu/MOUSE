@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "model": "ce5c8e5700ca1201bffc471af2961218ca4086b4b8919585b87fb634ea09d349",
+    "sources": {
+      "matrix_gfn2.nosi_surface": "7e2895a5005b2421a3864d7a53f109d58aa36434c656e2cc9cf246a7dbd4a14f",
+      "matrix_gfn2._nosi_surface_response": "dee545873b79186d1c1b3df173b2faa05019e21a38f6fb59b115dd40ec360198",
+      "matrix_gfn2._nosi_configurations": "f28fa62fa319845e803e47112520af8cdafae92047742369bf1f471bf5cec46f",
+      "matrix_gfn2._nosi_canonical": "0cee95ace03eb985c775a6c9a72d63a601542ac825b485db6a6715e1ec234341"
+    }
+  },
+  "energies": {
+    "V010": -13.759854239820646
+  },
+  "maximum_stationary_residual": 9.103828801926284e-14,
+  "minimum_overlap": 0.9999997770914356,
+  "wall_seconds": 2.096998333989177
+}

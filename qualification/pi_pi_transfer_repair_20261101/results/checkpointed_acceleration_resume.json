@@ -1,0 +1,32 @@
+{
+  "reason": "Resume completed analytic columns with exact compiled NumPy contractions and zero-term pruning; no completed column is restarted",
+  "stopped_old_workers": [
+    {
+      "pid": 81093,
+      "command": "/Users/vincenzobarone/.venvs/matrix/bin/python /Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-pi-pi-transfer-repair-20261101/hessian_columns.py last_two Furan --worker 0 --workers 2"
+    },
+    {
+      "pid": 81094,
+      "command": "/Users/vincenzobarone/.venvs/matrix/bin/python /Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-pi-pi-transfer-repair-20261101/hessian_columns.py last_two Furan --worker 1 --workers 2"
+    },
+    {
+      "pid": 81095,
+      "command": "/Users/vincenzobarone/.venvs/matrix/bin/python /Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-pi-pi-transfer-repair-20261101/hessian_columns.py last_two uracil --worker 0 --workers 2"
+    },
+    {
+      "pid": 81096,
+      "command": "/Users/vincenzobarone/.venvs/matrix/bin/python /Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-pi-pi-transfer-repair-20261101/hessian_columns.py last_two uracil --worker 1 --workers 2"
+    }
+  ],
+  "preserved_columns": [
+    "analytic/independent/Criegee_Intermediate/column_000.npz",
+    "analytic/last_two/Furan/column_000.npz",
+    "analytic/last_two/Furan/column_001.npz",
+    "analytic/last_two/Furan/column_002.npz",
+    "analytic/last_two/Furan/column_003.npz",
+    "analytic/last_two/Furan/column_004.npz",
+    "analytic/last_two/Furan/column_005.npz",
+    "analytic/last_two/Furan/column_006.npz",
+    "analytic/last_two/Furan/column_007.npz"
+  ]
+}

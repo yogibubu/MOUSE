@@ -1,0 +1,26 @@
+{
+  "spin": [
+    {
+      "state_id": "I004",
+      "spin_squared": 0.0
+    }
+  ],
+  "host": "mac-2.homenet.telecomitalia.it",
+  "properties": [
+    "energy"
+  ],
+  "wall_seconds": 12.468366999994032,
+  "peak_rss_native": 848723968,
+  "prediction_errors_ev": {
+    "I004": 8.514863480968415e-09
+  },
+  "derivative_errors": {},
+  "restart_error_hartree": 1.5631940186722204e-13,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_input_reads": 0,
+  "read_paths": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-pi-pi-transfer-repair-20261101/portable_validation/independent/Benzoxadiazole/checkpoint.npz"
+  ],
+  "model_fingerprint": "ad546537fadb96d1cb6580fda901657c591a3b8a54426f45605bf70cae1fbaf6"
+}

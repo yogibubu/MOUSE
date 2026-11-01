@@ -1,0 +1,15 @@
+{
+  "identity": {
+    "model": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46",
+    "sources": {
+      "cached_column_check.py": "f1a9eef59b2469756c6aae5bc9c3db3f23db2c1a8d24ba75cfa69f4a6f00ca95",
+      "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_surface_response.py": "dee545873b79186d1c1b3df173b2faa05019e21a38f6fb59b115dd40ec360198",
+      "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_configurations.py": "f28fa62fa319845e803e47112520af8cdafae92047742369bf1f471bf5cec46f",
+      "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_canonical.py": "0cee95ace03eb985c775a6c9a72d63a601542ac825b485db6a6715e1ec234341"
+    }
+  },
+  "column": 0,
+  "wall_seconds": 128.91438820800977,
+  "worker_elapsed": 133.72199995798292,
+  "peak_rss_bytes": 464633856
+}
