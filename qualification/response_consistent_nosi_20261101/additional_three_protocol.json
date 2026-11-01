@@ -1,0 +1,22 @@
+{
+  "stage": "small extension of the frozen selected OO-CID candidate",
+  "candidate_freeze_commit": "467a9e5",
+  "public_implementation_commit": "ecb6644",
+  "previous_qualification_commit": "4f2ffbc",
+  "cohort": "additional_three",
+  "cases": [
+    {"id":"V007","molecule":"pyrimidine","prepared_group":"prepared_D","family":"n_pi","reason":"Diazine substitution pattern distinct from pyrazine and tetrazine."},
+    {"id":"V008","molecule":"cyclopentadienone","prepared_group":"prepared_F","family":"n_pi","reason":"Five-membered conjugated cyclic ketone; ring-size and conjugation challenge."},
+    {"id":"V009","molecule":"pyranone","prepared_group":"prepared_F","family":"n_pi","reason":"Six-membered conjugated oxygen heterocycle and carbonyl."}
+  ],
+  "weights": [0.5,0.5],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "model_changes": false,
+  "assignment": "Unchanged state-overlap threshold 0.7 and margin 0.05; no target-energy matching.",
+  "accuracy_gate_ev": {"mae":0.3,"max_absolute_error":0.5},
+  "comparison": "Full singlet TDA A, same native GFN2 spatial orbitals and same prepared reference/kernel.",
+  "exposure": "All three molecules were used in historical models. Existing labels are exposed; predictions are after the selected-CID freeze, but are not a blind test. No model adaptation is allowed for this cohort.",
+  "all_selected_cases_reported": true,
+  "compute": "Only verified Oracle or MAC-STUDIO; preserve all completed checkpoints and prepare missing reference stages only."
+}
