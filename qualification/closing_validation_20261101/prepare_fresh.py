@@ -99,6 +99,8 @@ def run(name,identity,xyzfile,cohort='closing_blind',target_model=None):
  hp.DEST=NATIVE;nc.DEST=NATIVE;nc.HERE=NATIVE/'nosi_coherent'
  def native_transition(case,row):
   with np.load(case['src']/('native_transition_'+row['id']+'.npz')) as z:q=z['amplitude'].copy()
+  seed=case['src']/('native_seed_'+row['id']+'.npz')
+  if seed.exists():case['retained_seed']=seed
   s=case['s'];no=case['no'];return s.coefficients[:,:no]@q@s.coefficients[:,no:].T
  # Previously completed Formaldehyde is retained; new explicit valence seeds
  # remove the need for a diffuse DFT-TDA projection in a minimal basis.

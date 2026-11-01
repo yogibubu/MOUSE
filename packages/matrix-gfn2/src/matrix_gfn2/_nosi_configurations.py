@@ -7,6 +7,13 @@ from ._nosi_spin import spin_vectors,ASSIGNMENTS
 def from_labels(labels,no):
     records=[]
     for label in labels:
+        match=re.fullmatch(r'single_h(\d+)_p(\d+)',label)
+        if match:
+            hole,particle=map(int,match.groups())
+            if not 0<=hole<no<=particle:
+                raise ValueError('invalid single-excitation orbital indices')
+            records.append(dict(kind='open',closed=[i for i in range(no) if i!=hole],open=[hole,particle]))
+            continue
         match=re.fullmatch(r'pair_h(\d+)_p(\d+)',label)
         if match:
             hole,particle=map(int,match.groups())

@@ -93,15 +93,16 @@ class PreparedNOSIModel:
     def __init__(self,path):
         self.path=Path(path).expanduser().resolve();self.root=self.path.parent;self.fingerprint=_sha(self.path)
         self.manifest=json.loads(self.path.read_text());m=self.manifest
-        if m.get('schema') not in ('mouse.nosi.selected_cid.v1','mouse.nosi.screened_even_cid.v1') or m.get('weights')!=[.5,.5] or m.get('lambda_exchange')!=.9 or m.get('energy_offset_ev')!=0:raise ValueError('unsupported NOSI model contract')
+        if m.get('schema') not in ('mouse.nosi.selected_cid.v1','mouse.nosi.screened_even_cid.v1','mouse.nosi.screened_cisd.v1') or m.get('weights')!=[.5,.5] or m.get('lambda_exchange')!=.9 or m.get('energy_offset_ev')!=0:raise ValueError('unsupported NOSI model contract')
         if set(m.get('sha256',{}))!={'template.npz','response.npz','arrays.npz'}:raise ValueError('incomplete NOSI model')
         self.validate_files();self.template=_load_point(self.root/'template.npz');self.anchor=self.template.reference_state
         self.response=load_response_reference(self.root/'response.npz')
         if not isinstance(self.response,FrozenNonlocalResponseReference):raise ValueError('NOSI requires its full nonlocal reference')
         if abs(self.response.response_exchange_scale-.9)>1e-12:raise ValueError('NOSI response exchange scale differs')
         with np.load(self.root/'arrays.npz',allow_pickle=False) as z:self.arrays={k:z[k].copy() for k in z.files}
-        self.extended=m['schema']=='mouse.nosi.screened_even_cid.v1'
-        if self.extended and (m.get('active_space_size')!=5 or m.get('interaction')!='static_constrained_RPA' or m.get('augmentation')!='frozen_reflection_even'):raise ValueError('unsupported screened CID preparation')
+        self.extended=m['schema'] in ('mouse.nosi.screened_even_cid.v1','mouse.nosi.screened_cisd.v1')
+        augmentation='frozen_reflection_even_doubles_complete_singles' if m['schema']=='mouse.nosi.screened_cisd.v1' else 'frozen_reflection_even'
+        if self.extended and (m.get('active_space_size')!=5 or m.get('interaction')!='static_constrained_RPA' or m.get('augmentation')!=augmentation):raise ValueError('unsupported screened CID preparation')
         self.no=self.anchor.electron_count//2;self.labels=m['labels'];self.state_ids=tuple(m['state_ids']);a=self.arrays;n=len(self.anchor.overlap);ns=len(self.state_ids)
         expected={'h':(n,n),'eri':(n,n,n,n),'ground':(n,n),'states':(ns,n,n),'multipliers':(ns,),'auxiliary_frame':(n,n),'reference_ci':(len(self.labels),ns)}
         if self.no<2 or n-self.no<2:raise ValueError('NOSI frontier requires two occupied and two virtual orbitals')

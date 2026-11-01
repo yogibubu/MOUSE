@@ -1,0 +1,15 @@
+{
+  "status": "exposed development candidate; not a blinded assessment",
+  "motivation": "Resolve the ethylene compact-reference error while completing missing single-excitation couplings before testing transferability",
+  "embedding": "Select already qualified matched full-DFT orbitals; retain original images for unqualified channels; remove archived frozen core; canonical wave-operator image and symmetric orthonormalization; radial_embedding.py --mode subspace",
+  "response": "Rebuild the existing F/Q reference, charge/spin response, bare integrals and constrained static screening in the same dressed image; original native GFN2 orbital chart retained",
+  "configuration_space": "Keep original frozen doubles and both four-spin singlets; add every single in the five-occupied/five-virtual native auxiliary chart except linearly dependent vectors selected solely by Gram residual below 1e-6",
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "fitted_parameters": 0,
+  "reference_excitation_energies_read_by_preparer": false,
+  "molecule_or_state_family_switch": false,
+  "pilot_results_seen_before_full_run": ["Ethylene", "Furan"],
+  "scope": "All 23 exposed states, same algorithm. Pole-residue and projected-bath screening diagnostics are separate candidates and are not mixed into this construction. Nuclear derivatives keep the prepared operators and configuration membership frozen, as in the original analytic anchored surface."
+}

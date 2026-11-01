@@ -8,7 +8,7 @@ from matrix_apoc import NonOrthogonalSingletCIState
 
 
 def records():
-    return from_labels(['pair_h1_p3','open_h1_1_p3_4','open_h1_2_p3_3',
+    return from_labels(['single_h1_p4','pair_h1_p3','open_h1_1_p3_4','open_h1_2_p3_3',
                         'four_h1_2_p3_4_0','four_h1_2_p3_4_1'],3)
 
 
@@ -41,6 +41,11 @@ def test_rejects_incomplete_or_unphysical_recoupling():
     with pytest.raises(ValueError,match='four-spin'):validate(r[:-1],3,6)
     with pytest.raises(ValueError,match='indices'):validate([dict(kind='open',closed=[0,1],open=[2,2])],3,6)
     with pytest.raises(ValueError,match='occupation'):validate([dict(kind='closed',closed=[0,1])],3,6)
+
+
+@pytest.mark.parametrize('label',['single_h3_p4','single_h1_p2'])
+def test_rejects_nonexciting_single(label):
+    with pytest.raises(ValueError,match='single-excitation'):from_labels([label],3)
 
 
 @pytest.mark.parametrize('dimension',[0,3])
