@@ -16,7 +16,7 @@ with threadpool_limits(2):
   for rank in [n,n-1,max(1,n-2)]:
    matrix=rng.normal(size=(n,rank))@rng.normal(size=(rank,n));expected=cofactors(matrix);actual=spectral_cofactors(matrix);cofactor_error=max(cofactor_error,max(float(np.max(abs(a-b))) for a,b in zip(actual,expected)))
  assert cofactor_error<1e-8
- for n,no,nc,general in [(8,4,2,False),(12,6,2,False),(8,4,2,True),(12,6,2,True),(14,7,2,False),(16,8,2,False),(16,8,2,True)]:
+ for n,no,nc,general in [(8,4,2,False),(12,6,2,False),(8,4,2,True),(12,6,2,True),(14,7,2,False),(16,8,2,False),(16,8,2,True),(18,14,1,True),(20,17,1,False)]:
   factors=rng.normal(size=(25,n,n));factors=.5*(factors+factors.transpose(0,2,1));eri=np.einsum('Lpq,Lrs->pqrs',factors,factors);h=rng.normal(size=(n,n));h=.5*(h+h.T);ham=Hamiltonian(h,eri);core=np.eye(n)[:,:nc];active=np.eye(n)[:,nc:];rotations=[]
   if general:
    eri=rng.normal(size=(n,)*4);eri=.5*(eri+eri.transpose(2,3,0,1));eri=.5*(eri+eri.transpose(1,0,3,2));ham=Hamiltonian(h,eri)

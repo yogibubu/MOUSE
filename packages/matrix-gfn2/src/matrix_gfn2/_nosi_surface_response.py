@@ -30,7 +30,7 @@ class MatrixResponse:
             if fixed_bra and not derivatives:
                 from ._nosi_fixed_bra import FixedBraCSF
                 self.fixed_bra=FixedBraCSF(self.scalar,self.ycanonical[:,core],self.ycanonical[:,active])
-            metric,matrix,_=canonical_block(configuration_basis(self.ycanonical,auxiliary_records),self.ycanonical,self.h,self.w,core,active)
+            metric,matrix,_=canonical_block(None,self.ycanonical,self.h,self.w,core,active,records=auxiliary_records)
             self.canonical_block=(metric,matrix)
         if derivatives:
             self.ground=GroundResponse(context,ground_coefficients);self.states=[]

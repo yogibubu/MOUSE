@@ -36,7 +36,7 @@ class FixedBra:
             u,s,vh=np.linalg.svd(a.T@core,full_matrices=True)
             if len(s) and s.min()<.1:raise UnusableCore('common occupied core is ill-conditioned')
             regular=a@u[:,:self.nc];null=a@u[:,self.nc:];r=null.shape[1]
-            if not 1<=r<=12:raise UnusableCore('fixed-core accelerator requires one to twelve active electrons per spin')
+            if not 1<=r<=16:raise UnusableCore('fixed-core accelerator requires one to sixteen active electrons per spin')
             rotated=core@vh.T;inverse=rotated/s[None,:] if len(s) else rotated
             density=inverse@regular.T
             left=active-inverse@(regular.T@active)
