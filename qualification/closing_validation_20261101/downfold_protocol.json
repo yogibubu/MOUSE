@@ -1,0 +1,18 @@
+{
+  "frozen_utc": "2026-11-01T17:34:14.147171+00:00",
+  "trigger": "Ethylene frozen-model +1.1815 eV outlier; user requests resolution before closure",
+  "diagnosis": "One-body valence-basis confinement; evaluate exact full-DFT-complement self-energy at already qualified orbital energies",
+  "rule": "Complete DFT MO Hilbert space; orthogonal complement of isometric retained native valence embedding; diagonal Sigma_i(E_i)=F_iQ (E_i-F_QQ)^-1 F_Qi for qualified overlap/margin matches; zero for unqualified matches; add Sigma_i to F levels before existing 50/50 F/Q average",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "parameters_fitted": 0,
+  "first_stage": "Hold original screened W and CSF membership fixed to isolate reference effect; check all 20 development states and all 3 extension states by same rule",
+  "exposure": "All 23 labels exposed after original prospective predictions; subsequent corrected model assessment is development, not blind",
+  "no_molecule_or_family_switch": true,
+  "no_reference_excitation_energy_in_preparer": true,
+  "anchor_derivatives": "All newly prepared operators remain frozen under nuclear displacement, so existing exact analytic response applies; repeat molecular validation before promoting a corrected model"
+}
