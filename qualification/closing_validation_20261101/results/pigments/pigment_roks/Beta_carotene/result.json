@@ -1,0 +1,92 @@
+{
+  "molecule": "Beta_carotene",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "states": [
+    {
+      "molecule": "Beta_carotene",
+      "ordinal": 1,
+      "hole": 107,
+      "particle": 108,
+      "excitation_ev": 3.5181004168751953,
+      "ground_energy_hartree": -111.18398949364247,
+      "report": {
+        "converged": true,
+        "history": [
+          {
+            "iteration": 0,
+            "energy_hartree": -111.0502034757237,
+            "residual": 0.029058711949428905,
+            "ground_overlap": -4.911500851196278e-15,
+            "fidelity": 1.0,
+            "multiplier": 0.0,
+            "Krylov_iterations": 11,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 1,
+            "energy_hartree": -111.0546919699091,
+            "residual": 0.0012969529836376972,
+            "ground_overlap": -0.0008102695648756533,
+            "fidelity": 0.9976849917347452,
+            "multiplier": -0.00013246439891348753,
+            "Krylov_iterations": 15,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 2,
+            "energy_hartree": -111.05470169325758,
+            "residual": 8.448412388579417e-06,
+            "ground_overlap": 7.064466316155504e-06,
+            "fidelity": 0.9981393300250173,
+            "multiplier": -0.0008307053475376824,
+            "Krylov_iterations": 19,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 3,
+            "energy_hartree": -111.05470168797542,
+            "residual": 5.341472507413988e-09,
+            "ground_overlap": -1.1317170510450957e-09,
+            "fidelity": 0.9981382939514414,
+            "multiplier": -0.000832330539985602,
+            "Krylov_iterations": 24,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 4,
+            "energy_hartree": -111.05470168797642,
+            "residual": 4.73276263015035e-12,
+            "ground_overlap": -1.3201236355589324e-13,
+            "fidelity": 0.9981382914583151,
+            "multiplier": -0.00083233220467669
+          }
+        ],
+        "energy_hartree": -111.05470168797642,
+        "residual": 4.73276263015035e-12,
+        "ground_overlap": -1.3201236355589324e-13,
+        "fidelity": 0.9981382914583151,
+        "complete_orbital_rotations": 11878,
+        "dense_orbital_Jacobian_allocated": false,
+        "full_functional_residual": true,
+        "auxiliary_linearization": true
+      },
+      "spin_squared": 0.0,
+      "spin_definition": "coherent shared-orbital two-determinant singlet; ROKS multiplet-sum energy",
+      "DFT_imports": 0,
+      "new_SCC_calls": 0,
+      "TDA_solves": 0,
+      "full_XC_quadrature_energy": true,
+      "RI_role": "orbital KKT linearization only",
+      "model_sha256": "14bd49b32ea9268cbddf416fb84aeabb275139378565cd9f304ce2afb87dadcf"
+    }
+  ],
+  "wall_seconds": 295.87245741696097,
+  "ground_residual": 1.429600797398508e-14,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "scope": "Spin-pure ground-orthogonal ROKS targets before screened CID; not yet a final correlated pigment prediction"
+}

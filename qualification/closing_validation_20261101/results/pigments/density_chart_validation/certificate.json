@@ -1,0 +1,9 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "energy_error_hartree": 0.0,
+  "gradient_max_error": 3.608224830031759e-16,
+  "Hessian_max_error": 1.0547118733938987e-15,
+  "complete_pair_features": 78,
+  "orbitals_discarded": 0,
+  "chart_condition": 6.921905016176252
+}

@@ -4198,8 +4198,12 @@ class GFN2Calculator:
             )
         else:
             anisotropic_parameters = nn_state.anisotropic_parameters(coordination)
-        anisotropic_geometry = prepare_anisotropic_geometry(
-            coordinates, anisotropic_parameters
+        anisotropic_geometry = (
+            prepare_anisotropic_geometry_sparse(
+                coordinates, anisotropic_parameters, cutoff_bohr=64.0
+            )
+            if len(coordinates) >= 64 and nn_state is None
+            else prepare_anisotropic_geometry(coordinates, anisotropic_parameters)
         )
         d4_parameters = self._d4_parameters
         if len(coordinates) >= 64 and nn_state is None:
@@ -4207,14 +4211,14 @@ class GFN2Calculator:
                 coordinates,
                 _covalent_radii()[self._atomic_number_array - 1],
                 self._electronegativities,
-                cutoff_bohr=24.0,
+                cutoff_bohr=40.0,
             )
             d4_prepared = prepare_d4_geometry_sparse(
                 coordinates,
                 d4_cn,
                 self._d4_models,
                 d4_parameters,
-                cutoff_bohr=24.0,
+                cutoff_bohr=50.0,
             )
         else:
             d4_cn = _d4_coordination(

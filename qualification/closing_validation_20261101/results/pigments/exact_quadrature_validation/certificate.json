@@ -1,0 +1,130 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "molecule": "Ethylene",
+  "errors": [
+    {
+      "energy": 1.7763568394002505e-15,
+      "Fock": 1.6653345369377348e-16,
+      "charge_response": 8.881784197001252e-16,
+      "spin_response": 2.4424906541753444e-15
+    },
+    {
+      "energy": 0.0,
+      "Fock": 1.6653345369377348e-16,
+      "charge_response": 9.992007221626409e-16,
+      "spin_response": 1.3322676295501878e-15
+    },
+    {
+      "energy": 8.881784197001252e-16,
+      "Fock": 1.1102230246251565e-16,
+      "charge_response": 1.1102230246251565e-15,
+      "spin_response": 1.5543122344752192e-15
+    },
+    {
+      "energy": 8.881784197001252e-16,
+      "Fock": 1.3877787807814457e-16,
+      "charge_response": 8.881784197001252e-16,
+      "spin_response": 1.1102230246251565e-15
+    }
+  ],
+  "spin_pure_CI_matrix_max_error": 3.552713678800501e-15,
+  "RI_preconditioned_solver": {
+    "converged": true,
+    "history": [
+      {
+        "iteration": 0,
+        "energy_hartree": -5.7760516079972035,
+        "residual": 0.004808533514391727,
+        "ground_overlap": -0.0011609564659715342,
+        "fidelity": 0.9999984991294174,
+        "multiplier": -3.0077924950499947e-15,
+        "Krylov_iterations": 7,
+        "Krylov_info": 0
+      },
+      {
+        "iteration": 1,
+        "energy_hartree": -5.776067843235577,
+        "residual": 9.736348270950439e-05,
+        "ground_overlap": 5.138340089649719e-06,
+        "fidelity": 0.9999999629492974,
+        "multiplier": -4.931823878729313e-06,
+        "Krylov_iterations": 14,
+        "Krylov_info": 0
+      },
+      {
+        "iteration": 2,
+        "energy_hartree": -5.7760678529729965,
+        "residual": 3.2251446202064096e-07,
+        "ground_overlap": -1.5959894516584332e-07,
+        "fidelity": 0.9999999999991026,
+        "multiplier": 1.7406621756463757e-07,
+        "Krylov_iterations": 17,
+        "Krylov_info": 0
+      },
+      {
+        "iteration": 3,
+        "energy_hartree": -5.776067852973282,
+        "residual": 3.7835161647537133e-10,
+        "ground_overlap": -1.2724398416728326e-11,
+        "fidelity": 1.0,
+        "multiplier": 8.774926242593115e-11,
+        "Krylov_iterations": 18,
+        "Krylov_info": 0
+      },
+      {
+        "iteration": 4,
+        "energy_hartree": -5.776067852973283,
+        "residual": 8.082690826821808e-13,
+        "ground_overlap": 2.225697240965976e-15,
+        "fidelity": 1.0,
+        "multiplier": -3.8313528566843676e-16
+      }
+    ],
+    "energy_hartree": -5.776067852973283,
+    "residual": 8.082690826821808e-13,
+    "ground_overlap": 2.225697240965976e-15,
+    "fidelity": 1.0,
+    "retained_transition_rank": 1,
+    "state_following": "anchor transition subspace",
+    "krylov": "gmres",
+    "complete_orbital_rotations": 46,
+    "dense_orbital_Jacobian_allocated": false,
+    "full_functional_residual": true,
+    "auxiliary_linearization": true
+  },
+  "RI_diagnostic": {
+    "auxbasis": "def2-universal-jkfit",
+    "auxiliary_functions": 222,
+    "native_pair_features": 78,
+    "direct_curvatures": [
+      [
+        -0.014510923148249843,
+        -0.012936461171090463,
+        -0.011730790683689252
+      ],
+      [
+        -0.011211064997581871,
+        -0.010229912996498974,
+        -0.009214196205163942
+      ]
+    ],
+    "fitted_curvatures": [
+      [
+        -0.014524680058368886,
+        -0.012948493942227928,
+        -0.011732947213069007
+      ],
+      [
+        -0.011209973964439252,
+        -0.0102286414620766,
+        -0.009203291689613612
+      ]
+    ],
+    "maximum_curvature_error_hartree": 1.3756910119042814e-05,
+    "required_tolerance_hartree": 1e-05,
+    "energy_labels_read": false,
+    "approximation": "RI-V response density with exact charge/dipole/quadrupole constraints; full embedded density used for f_xc"
+  },
+  "RI_role": "preconditioner only; full quadrature restores exact XC energy and residual",
+  "nuclear_derivatives_supported": false
+}

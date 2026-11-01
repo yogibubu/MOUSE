@@ -1,0 +1,24 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "molecule": "Beta_carotene",
+  "wall_seconds": 69.0021442080033,
+  "bath_efficiency_eta": 0.6,
+  "eta_retuned": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "auxbasis": "def2-universal-jkfit",
+  "auxiliary_functions": 4008,
+  "native_orbitals": 216,
+  "bath_virtuals": 1162,
+  "minimum_native_gap": 0.17879568556608513,
+  "minimum_bath_gap": 0.24805156355194224,
+  "positive_dielectric_by_construction": true,
+  "retained_active_hole_rank": 6,
+  "retained_active_particle_rank": 6,
+  "CI_selection": "Frozen original two-occupied/two-virtual frontier; even-sector augmentation only if nuclear reflection is certified",
+  "reference_energies_read": false
+}

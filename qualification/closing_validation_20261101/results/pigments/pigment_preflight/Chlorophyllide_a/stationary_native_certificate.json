@@ -1,0 +1,53 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "source_checkpoint_sha256": "a9fbe7674696af9bc6b765a046b323c7735c900005c2e39197650298a0bffc28",
+  "stationary_checkpoint_sha256": "d1465735931f52c86d4b1c190ecc6684e58432a1d30d588b2e0484f6c5e8a859",
+  "residual": 8.55220318602733e-16,
+  "wall_seconds": 0.21295995899708942,
+  "history": [
+    {
+      "cycle": 0,
+      "energy": -124.63904884240333,
+      "gradient_norm": 2.88579587888568e-09
+    },
+    {
+      "cycle": 1,
+      "energy": -124.63904884240333,
+      "gradient_norm": 1.5433546891647842e-08
+    },
+    {
+      "cycle": 2,
+      "energy": -124.63904884240333,
+      "gradient_norm": 3.449181598569864e-08
+    },
+    {
+      "cycle": 3,
+      "energy": -124.63904884240333,
+      "gradient_norm": 4.139306097366354e-08
+    },
+    {
+      "cycle": 4,
+      "energy": -124.63904884240333,
+      "gradient_norm": 2.825381698266375e-08
+    },
+    {
+      "cycle": 5,
+      "energy": -124.63904884240335,
+      "gradient_norm": 1.0416044051928557e-08
+    },
+    {
+      "cycle": 6,
+      "energy": -124.63904884240333,
+      "gradient_norm": 1.594385172192071e-09
+    },
+    {
+      "cycle": 7,
+      "energy": -124.63904884240333,
+      "gradient_norm": 1.5348521296997428e-11
+    }
+  ],
+  "initial_checkpoint_preserved": true,
+  "native_orbital_tolerance": 1e-09,
+  "ground_SCC_driver_calls": 0,
+  "status": "Retained native density refined under the same complete large-system functional"
+}

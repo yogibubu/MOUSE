@@ -1,0 +1,22 @@
+{
+  "schema": "mouse.pigment.vertical_quadrature.v1",
+  "molecule": "Chlorophyllide_a",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "sha256": {
+    "state.npz": "d1465735931f52c86d4b1c190ecc6684e58432a1d30d588b2e0484f6c5e8a859",
+    "response.npz": "d7a351ee8f4b91c1b0180c8e3feb012985853192f8b0415b41ccd31c21025fea",
+    "xc_charge.npy": "528592b02ed345196e89e554af1f1a17b89d1fbb57e9a5e1fbedd88ca9d970dc",
+    "xc_spin.npy": "986a1daafa3829f0375900197add1932155cb6336fa66094cd04ff8ac89b79ef"
+  },
+  "quadrature_manifest_sha256": "0bcb690a663a55c992c51f18ab49e12c5f9cf98a4f2738175f72d11f5a40a6ca",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "bath_efficiency_eta": 0.6,
+  "energy_offset_ev": 0,
+  "exact_frozen_XC_residual": true,
+  "RI_XC_role": "Newton linearization only; exact frozen-quadrature energy and residual correction",
+  "scope": "Vertical ROKS; nuclear derivative adapter not yet qualified on pigments"
+}

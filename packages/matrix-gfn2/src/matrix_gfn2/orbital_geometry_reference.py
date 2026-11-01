@@ -49,7 +49,12 @@ def geometry_orbital_reference(calculator, coordinates_angstrom, template):
     if len(xyz)>=3:
         neutral=kernel._d4(np.zeros(len(xyz)))
         par=kernel.d4_parameters
-        atm=float(native.atm_energy_gradient(xyz,neutral.c6,neutral.c8,neutral.c6_coordination_derivative,
-            _covalent_radii()[calculator._atomic_number_array-1],calculator._electronegativities,
-            s9=par.s9,a1=par.a1,a2=par.a2)[0])
+        from .dispersion import SparseD4Result, atm_three_body_energy_gradient_sparse
+        if isinstance(neutral,SparseD4Result):
+            atm=float(atm_three_body_energy_gradient_sparse(xyz,neutral,cutoff_bohr=25.,
+                s9=par.s9,a1=par.a1,a2=par.a2).energy_hartree)
+        else:
+            atm=float(native.atm_energy_gradient(xyz,neutral.c6,neutral.c8,neutral.c6_coordination_derivative,
+                _covalent_radii()[calculator._atomic_number_array-1],calculator._electronegativities,
+                s9=par.s9,a1=par.a1,a2=par.a2)[0])
     return replace(state,total_energy_hartree=electronic+repulsion+atm)

@@ -1,0 +1,20 @@
+[
+  {
+    "operation": "einsum_moments",
+    "seconds": 0.9717622500029393
+  },
+  {
+    "operation": "BLAS_moments",
+    "seconds": 0.1045961250201799,
+    "max_difference": 7.638334409421077e-14
+  },
+  {
+    "operation": "einsum_potential",
+    "seconds": 0.22799712501000613
+  },
+  {
+    "operation": "BLAS_potential",
+    "seconds": 0.33795666601508856,
+    "max_difference": 9.547918011776346e-15
+  }
+]

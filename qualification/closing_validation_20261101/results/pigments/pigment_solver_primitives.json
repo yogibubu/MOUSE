@@ -1,0 +1,10 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "d_harmonic_rotation_error": 5.329070518200751e-15,
+  "d_frame_first_error": 6.538561359015205e-12,
+  "d_frame_second_error": 9.297419353848646e-08,
+  "d_frame_curvature_contraction_error": 5.551115123125783e-17,
+  "orbital_Jacobian_action_max_error": 8.881784197001252e-16,
+  "ground_constraint_action_max_error": 1.1102230246251565e-16,
+  "finite_differences": "frame derivative validation only; no production differences"
+}

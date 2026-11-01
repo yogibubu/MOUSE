@@ -12,7 +12,7 @@ from pyscf import gto
 from pyscf.data.elements import ELEMENTS
 ANGULAR={1:(0,0,0),2:(1,0,0),3:(0,1,0),4:(0,0,1),5:(2,0,0),6:(0,2,0),7:(0,0,2),8:(1,1,0),9:(1,0,1),10:(0,1,1)}
 ORDER={0:[1],1:[2,3,4],2:[5,8,9,6,10,7]}
-def source_molecule(state, *, return_certificate=False):
+def source_molecule(state, *, return_certificate=False, raw=False):
  b=state.basis
  if np.max(b.cartesian_type)<=4 and all(int(z) in [1,6,7,8] for z in state.atomic_numbers):
   try:
@@ -47,8 +47,10 @@ def source_molecule(state, *, return_certificate=False):
  calibration = (u * w**-.5) @ u.T @ (un * wn**.5) @ un.T
  change = float(np.linalg.norm(calibration-np.eye(len(w)), ord=2))
  assert change < .01, ('Metric reconciliation changes the orbital basis by >=1%', change)
+ raw_transform = transform.copy()
  transform = transform @ calibration
  corrected_error = float(np.max(abs(transform.T@mol.intor('int1e_ovlp')@transform-state.overlap)))
  assert corrected_error < 1e-9
  certificate = dict(reconstruction='explicit_normalized_cartesian_spd', primitive_AO_max_error=ao_error, raw_overlap_max_error=error, metric_calibration=True, metric_calibration_operator_norm=change, corrected_overlap_max_error=corrected_error, minimum_raw_overlap_eigenvalue=float(w.min()), minimum_native_overlap_eigenvalue=float(wn.min()))
+ if raw:transform=raw_transform;certificate['returned_metric_reconciled']=False
  return (mol, transform, certificate) if return_certificate else (mol, transform)

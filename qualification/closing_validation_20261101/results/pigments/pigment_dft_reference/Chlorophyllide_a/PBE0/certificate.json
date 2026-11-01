@@ -1,0 +1,17 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "xc": "PBE0",
+  "basis": "aug-cc-pVDZ",
+  "auxiliary_basis": "def2-universal-jkfit",
+  "density_fitting": true,
+  "nao": 1345,
+  "electrons": 324,
+  "energy_hartree": -2147.0586426293194,
+  "wall_seconds": 3203.2906872079475,
+  "geometry_sha256": "3aa59de1260b3257545781c3486c3b108a66d1b26440da8bd45a832f21f6b13c",
+  "reference_sha256": "4f1cd70f37fd91e2159a896106361f9ef102c39fe90220bb3789beaf2603ee0e",
+  "converged": true,
+  "excitation_energies_read": false,
+  "geometry_status": "Fixed source starting geometry; not an optimized MOUSE geometry"
+}

@@ -1,0 +1,14 @@
+{
+  "molecule": "Beta_carotene",
+  "state": 1,
+  "hole": 107,
+  "particle": 108,
+  "row": {
+    "iteration": 4,
+    "energy_hartree": -111.05470168797642,
+    "residual": 4.73276263015035e-12,
+    "ground_overlap": -1.3201236355589324e-13,
+    "fidelity": 0.9981382914583151,
+    "multiplier": -0.00083233220467669
+  }
+}

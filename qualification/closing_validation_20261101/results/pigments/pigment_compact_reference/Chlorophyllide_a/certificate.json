@@ -1,0 +1,12 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "wall_seconds": 106.29581387504004,
+  "residual": 2.158413238770038e-12,
+  "energy_fock_derivative_error": 8.656821518654434e-08,
+  "RI_JK_auxbasis": "def2-universal-jkfit",
+  "XC": "CAM-B3LYP",
+  "grid_level": 3,
+  "no_excitation_offset": true,
+  "energy_labels_read": false,
+  "status": "Frozen-core compact anchor complete; response calibration and OO states still required"
+}

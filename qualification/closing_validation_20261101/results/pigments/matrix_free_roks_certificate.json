@@ -1,0 +1,319 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "rows": [
+    {
+      "molecule": "Ethylene",
+      "krylov": "gmres",
+      "model": "6a718b598aa4fa183b8fc2a6895f869f2cc9421c44267ab6ac13aa069f59d43a",
+      "energy_error_hartree": 5.329070518200751e-15,
+      "wall_seconds": 0.050936790998093784,
+      "report": {
+        "converged": true,
+        "history": [
+          {
+            "iteration": 0,
+            "energy_hartree": -5.776050581078921,
+            "residual": 0.00584051242458708,
+            "ground_overlap": -0.0005664553430309435,
+            "fidelity": 0.9999976134454539,
+            "multiplier": -3.0077924950499947e-15,
+            "Krylov_iterations": 6,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 1,
+            "energy_hartree": -5.7760678502277925,
+            "residual": 2.9259214541082408e-05,
+            "ground_overlap": 2.090539547657609e-06,
+            "fidelity": 0.9999997827467492,
+            "multiplier": -3.386308071485382e-06,
+            "Krylov_iterations": 14,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 2,
+            "energy_hartree": -5.776067852973245,
+            "residual": 2.281439803235778e-07,
+            "ground_overlap": 5.73131492750168e-09,
+            "fidelity": 0.9999999999999784,
+            "multiplier": 3.0597741557313726e-08,
+            "Krylov_iterations": 16,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 3,
+            "energy_hartree": -5.776067852973284,
+            "residual": 7.389692785637891e-11,
+            "ground_overlap": 1.2153536974087729e-13,
+            "fidelity": 1.0,
+            "multiplier": -1.406801628161222e-13,
+            "Krylov_iterations": 18,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 4,
+            "energy_hartree": -5.776067852973284,
+            "residual": 3.851086116668512e-15,
+            "ground_overlap": -1.6377780363242415e-16,
+            "fidelity": 1.0,
+            "multiplier": -1.885207266364063e-15
+          }
+        ],
+        "energy_hartree": -5.776067852973284,
+        "residual": 3.851086116668512e-15,
+        "ground_overlap": -1.6377780363242415e-16,
+        "fidelity": 1.0,
+        "retained_transition_rank": 1,
+        "state_following": "anchor transition subspace",
+        "krylov": "gmres",
+        "complete_orbital_rotations": 46,
+        "dense_orbital_Jacobian_allocated": false,
+        "full_functional_residual": true,
+        "auxiliary_linearization": false
+      }
+    },
+    {
+      "molecule": "Pyrrole",
+      "krylov": "gmres",
+      "model": "073718e9243dd5b403eafb7872bb4fbae46b6a6992adc1ab5d7a095ab9899a9f",
+      "energy_error_hartree": 1.0658141036401503e-14,
+      "wall_seconds": 0.11144458397757262,
+      "report": {
+        "converged": true,
+        "history": [
+          {
+            "iteration": 0,
+            "energy_hartree": -13.323328590577116,
+            "residual": 0.003253876508276357,
+            "ground_overlap": -9.541408688615943e-05,
+            "fidelity": 0.9999994544565529,
+            "multiplier": 3.102422086207476e-15,
+            "Krylov_iterations": 6,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 1,
+            "energy_hartree": -13.323345242173481,
+            "residual": 3.3674025606818664e-05,
+            "ground_overlap": 3.7914454666331675e-06,
+            "fidelity": 0.9999999903606016,
+            "multiplier": -4.505307943338307e-06,
+            "Krylov_iterations": 13,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 2,
+            "energy_hartree": -13.32334524648154,
+            "residual": 1.3404456852834556e-07,
+            "ground_overlap": -1.6691471963565376e-08,
+            "fidelity": 0.9999999999990244,
+            "multiplier": 1.1518596626079244e-08,
+            "Krylov_iterations": 16,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 3,
+            "energy_hartree": -13.323345246481637,
+            "residual": 2.7513224771354746e-11,
+            "ground_overlap": -8.852630069242918e-13,
+            "fidelity": 1.0,
+            "multiplier": 1.7350246097387744e-13,
+            "Krylov_iterations": 18,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 4,
+            "energy_hartree": -13.32334524648164,
+            "residual": 1.685825949843243e-15,
+            "ground_overlap": -2.4690734309806576e-16,
+            "fidelity": 1.0,
+            "multiplier": 4.0259317338919825e-15
+          }
+        ],
+        "energy_hartree": -13.32334524648164,
+        "residual": 1.685825949843243e-15,
+        "ground_overlap": -2.4690734309806576e-16,
+        "fidelity": 1.0,
+        "retained_transition_rank": 1,
+        "state_following": "anchor transition subspace",
+        "krylov": "gmres",
+        "complete_orbital_rotations": 179,
+        "dense_orbital_Jacobian_allocated": false,
+        "full_functional_residual": true,
+        "auxiliary_linearization": false
+      }
+    },
+    {
+      "molecule": "Ethylene",
+      "krylov": "minres",
+      "model": "6a718b598aa4fa183b8fc2a6895f869f2cc9421c44267ab6ac13aa069f59d43a",
+      "energy_error_hartree": 7.105427357601002e-15,
+      "wall_seconds": 0.050585417018737644,
+      "report": {
+        "converged": true,
+        "history": [
+          {
+            "iteration": 0,
+            "energy_hartree": -5.776050581078921,
+            "residual": 0.00584051242458708,
+            "ground_overlap": -0.0005664553430309435,
+            "fidelity": 0.9999976134454539,
+            "multiplier": -3.0077924950499947e-15,
+            "Krylov_iterations": 4,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 1,
+            "energy_hartree": -5.776067792753455,
+            "residual": 9.513439465063098e-05,
+            "ground_overlap": -8.99212991094806e-06,
+            "fidelity": 0.9999996392627504,
+            "multiplier": 8.569087068279067e-06,
+            "Krylov_iterations": 9,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 2,
+            "energy_hartree": -5.776067850900852,
+            "residual": 1.03246588333897e-05,
+            "ground_overlap": 5.890721920275812e-07,
+            "fidelity": 0.9999999552873708,
+            "multiplier": -6.297376760893535e-07,
+            "Krylov_iterations": 9,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 3,
+            "energy_hartree": -5.776067852965971,
+            "residual": 1.3949573839396518e-06,
+            "ground_overlap": 1.4099168504448704e-07,
+            "fidelity": 0.9999999999460917,
+            "multiplier": -1.6080943752369796e-07,
+            "Krylov_iterations": 13,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 4,
+            "energy_hartree": -5.776067852973282,
+            "residual": 1.6081343318802324e-08,
+            "ground_overlap": -3.4594530506523095e-09,
+            "fidelity": 0.9999999999999744,
+            "multiplier": 3.915143064654033e-09,
+            "Krylov_iterations": 15,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 5,
+            "energy_hartree": -5.776067852973284,
+            "residual": 2.077162747360394e-11,
+            "ground_overlap": 5.718321703825053e-12,
+            "fidelity": 1.0,
+            "multiplier": -6.461416785886864e-12,
+            "Krylov_iterations": 16,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 6,
+            "energy_hartree": -5.776067852973286,
+            "residual": 4.232725281383409e-15,
+            "ground_overlap": 2.725059520479548e-16,
+            "fidelity": 1.0,
+            "multiplier": -2.362183317496591e-15
+          }
+        ],
+        "energy_hartree": -5.776067852973286,
+        "residual": 4.232725281383409e-15,
+        "ground_overlap": 2.725059520479548e-16,
+        "fidelity": 1.0,
+        "retained_transition_rank": 1,
+        "state_following": "accepted-step coherent CSF overlap",
+        "krylov": "minres",
+        "complete_orbital_rotations": 46,
+        "dense_orbital_Jacobian_allocated": false,
+        "full_functional_residual": true,
+        "auxiliary_linearization": false
+      }
+    },
+    {
+      "molecule": "Pyrrole",
+      "krylov": "minres",
+      "model": "073718e9243dd5b403eafb7872bb4fbae46b6a6992adc1ab5d7a095ab9899a9f",
+      "energy_error_hartree": 3.552713678800501e-15,
+      "wall_seconds": 0.10003199998755008,
+      "report": {
+        "converged": true,
+        "history": [
+          {
+            "iteration": 0,
+            "energy_hartree": -13.323328590577116,
+            "residual": 0.003253876508276357,
+            "ground_overlap": -9.541408688615943e-05,
+            "fidelity": 0.9999994544565529,
+            "multiplier": 3.102422086207476e-15,
+            "Krylov_iterations": 5,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 1,
+            "energy_hartree": -13.323345222781724,
+            "residual": 5.5808146414326096e-05,
+            "ground_overlap": -2.8456914814353784e-06,
+            "fidelity": 0.9999999641419108,
+            "multiplier": -2.7118687438504697e-05,
+            "Krylov_iterations": 7,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 2,
+            "energy_hartree": -13.323345246431959,
+            "residual": 1.9437801385776897e-06,
+            "ground_overlap": -1.227359141590248e-07,
+            "fidelity": 0.9999999992229055,
+            "multiplier": -5.1919899968363385e-08,
+            "Krylov_iterations": 10,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 3,
+            "energy_hartree": -13.323345246481592,
+            "residual": 6.122633664102695e-08,
+            "ground_overlap": -1.0379223738212757e-08,
+            "fidelity": 0.9999999999995006,
+            "multiplier": 7.608315908534781e-09,
+            "Krylov_iterations": 13,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 4,
+            "energy_hartree": -13.323345246481631,
+            "residual": 2.1451172609232426e-10,
+            "ground_overlap": 1.7370968069429143e-11,
+            "fidelity": 1.0,
+            "multiplier": -4.0627700825154624e-11,
+            "Krylov_iterations": 15,
+            "Krylov_info": 0
+          },
+          {
+            "iteration": 5,
+            "energy_hartree": -13.323345246481633,
+            "residual": 1.315284787817893e-13,
+            "ground_overlap": 1.4769710663286235e-14,
+            "fidelity": 1.0,
+            "multiplier": -1.1800224245614249e-14
+          }
+        ],
+        "energy_hartree": -13.323345246481633,
+        "residual": 1.315284787817893e-13,
+        "ground_overlap": 1.4769710663286235e-14,
+        "fidelity": 1.0,
+        "retained_transition_rank": 1,
+        "state_following": "accepted-step coherent CSF overlap",
+        "krylov": "minres",
+        "complete_orbital_rotations": 179,
+        "dense_orbital_Jacobian_allocated": false,
+        "full_functional_residual": true,
+        "auxiliary_linearization": false
+      }
+    }
+  ]
+}

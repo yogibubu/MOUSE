@@ -27,7 +27,9 @@ class MixedFock:
             r=Jet(self.state.coordinates_bohr,np.eye(n).reshape(n,*direction.shape),direction)
             transport=self.charge.transport;du,d2r=transport.frame_jet(second=True)
             tangent=np.einsum('a,aij->ij',direction.ravel(),du)
-            mixed=np.array([transport.lift(x) for x in np.einsum('b,abij->aij',direction.ravel(),d2r)])
+            mixed=(transport.directional_second(direction.ravel())
+                   if hasattr(transport,'directional_second') else
+                   np.array([transport.lift(x) for x in np.einsum('b,abij->aij',direction.ravel(),d2r)]))
             u=Jet(transport.u,du,tangent,mixed)
             self.geometry_cache[key]=(r,s,mu,q,u)
         return self.geometry_cache[key]

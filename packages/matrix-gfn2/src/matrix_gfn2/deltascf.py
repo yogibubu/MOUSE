@@ -293,19 +293,22 @@ class DeltaSCFContext:
         return g
 
 
-def prepare_gfn2_deltascf(calculator, coordinates_angstrom, *, ground_state=None,spin_reference=None,orbital_reference=None):
+def prepare_gfn2_deltascf(calculator, coordinates_angstrom, *, ground_state=None,spin_reference=None,orbital_reference=None,allow_large=False):
     """Bind a complete, spin-polarized fixed-geometry energy/Fock functional."""
     from .multipole import AtomicMultipoles, anisotropic_energy_and_moment_potentials
     from .scc import monopole_energy
     from .calculator import ANGSTROM_TO_BOHR
     from .spin_polarization import ShellSpinPolarization
 
-    if (len(calculator.atomic_numbers) >= 64
-            or calculator.nn_enabled or calculator.temperature_kelvin != 0
+    if not isinstance(allow_large, (bool, np.bool_)):
+        raise ValueError("allow_large must be a boolean")
+    if len(calculator.atomic_numbers) >= 64 and not allow_large:
+        raise ValueError("large Delta-SCC requires explicit allow_large=True and remote resource qualification")
+    if (calculator.nn_enabled or calculator.temperature_kelvin != 0
             or calculator.alpb_parameters is not None
             or len(calculator.point_charges_electron)
             or calculator.symmetry_contract is not None):
-        raise ValueError("experimental Delta-SCC requires <64 atoms, zero-temperature standard gas-phase GFN2 without symmetry constraints")
+        raise ValueError("experimental Delta-SCC requires zero-temperature standard gas-phase GFN2 without symmetry constraints")
     xyz = np.asarray(coordinates_angstrom, dtype=float)
     if xyz.shape != (len(calculator.atomic_numbers), 3) or not np.all(np.isfinite(xyz)):
         raise ValueError("Delta-SCC coordinates must be finite natoms x 3")
@@ -335,8 +338,11 @@ def prepare_gfn2_deltascf(calculator, coordinates_angstrom, *, ground_state=None
         if not isinstance(spin_reference,FrozenSpinReference):
             raise TypeError('spin_reference must be a FrozenSpinReference')
         polarization = spin_reference.bind(state,kernel.partition)
-    charge_correction=(spin_reference.bind_charge(state,kernel.partition)
-                       if spin_reference is not None and hasattr(spin_reference,'bind_charge') else None)
+    if spin_reference is not None and hasattr(spin_reference,'bind_charge_from_spin'):
+        charge_correction=spin_reference.bind_charge_from_spin(state,kernel.partition,polarization)
+    else:
+        charge_correction=(spin_reference.bind_charge(state,kernel.partition)
+                           if spin_reference is not None and hasattr(spin_reference,'bind_charge') else None)
 
     def functional(p):
         dq, dm = kernel._observables(p - p0)

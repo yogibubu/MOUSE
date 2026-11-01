@@ -12,6 +12,9 @@ for name in ['Beta_carotene','Chlorophyllide_a']:
  embedding=P/'pigment_embedding'/name
  row['compact_embedding_certificate']=json.loads((embedding/'certificate.json').read_text()) if (embedding/'certificate.json').exists() else None
  row['compact_embedding_status']=json.loads((embedding/'status.json').read_text()) if (embedding/'status.json').exists() else None
+ for stage,relative in [('native_stationarity','pigment_preflight/'+name+'/stationary_native_certificate.json'),('compact_anchor','pigment_compact_reference/'+name+'/certificate.json'),('full_response','pigment_full_response/'+name+'/ri_xc_chart/certificate.json'),('runtime_manifest','pigment_models/'+name+'/manifest.json'),('ROKS','pigment_roks/'+name+'/result.json'),('screening','pigment_screening/'+name+'/certificate.json'),('CID','pigment_cid/'+name+'/result.json')]:
+  path=P/relative;row[stage]=json.loads(path.read_text()) if path.exists() else None
+ row['ROKS_progress']=[json.loads(path.read_text()) for path in sorted((P/'pigment_roks'/name).glob('state_*/progress.json'))]
  report['pigments'].append(row)
 report['sources']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [P/n for n in ['pigment_dft_reference.py','pigment_preflight.py','gaussian_embedding_basis.py','check_pigment_basis.py','pigment_reference_embedding.py']]}
 (P/'pigment_status.json').write_text(json.dumps(report,indent=2)+'\n')

@@ -1,0 +1,25 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "rows": [
+    {
+      "molecule": "Beta_carotene",
+      "ground_energy_error_hartree": 2.842170943040401e-14,
+      "preflight_stored_fock_difference_hartree": 2.875394922163821e-10,
+      "energy_fock_directional_error": 2.2405396496449903e-09,
+      "response_directional_error": 1.4980131718411727e-11,
+      "checkpoint_reused": true,
+      "new_SCC_calls": 0,
+      "default_size_guard_retained": true
+    },
+    {
+      "molecule": "Chlorophyllide_a",
+      "ground_energy_error_hartree": 0.0,
+      "preflight_stored_fock_difference_hartree": 1.8151163905244516e-10,
+      "energy_fock_directional_error": 9.905779078944743e-10,
+      "response_directional_error": 3.784191016098504e-11,
+      "checkpoint_reused": true,
+      "new_SCC_calls": 0,
+      "default_size_guard_retained": true
+    }
+  ]
+}

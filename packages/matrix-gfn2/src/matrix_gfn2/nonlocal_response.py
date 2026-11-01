@@ -4,13 +4,14 @@ This defines a LOCAL potential around the calibration geometry. DFT parameters
 are frozen, not recalculated along the path. Proper least-squares rotation of
 labelled nuclei transports all AO operators. Its first and second derivatives
 come from the polar stationarity equation, including planar molecules. Linear
-or ambiguous frames are rejected. Currently only s/p shells are supported.
+or ambiguous frames are rejected. Native s/p/d shells are supported.
 """
 from dataclasses import dataclass
 from hashlib import sha256
 from pathlib import Path
 import numpy as np
 from .spin_reference import FrozenResponseReference
+from ._angular_transport import d_rotation, d_first, d_second
 
 
 def rotation_jet(coordinates, anchor, *, second=True):
@@ -43,16 +44,17 @@ def rotation_jet(coordinates, anchor, *, second=True):
 class TransportedOperators:
     def __init__(self,state,anchor,operators):
         self.state=state;self.anchor=anchor;self.original=operators
-        self.groups=[]
+        self.groups=[];self.d_groups=[]
         for atom in range(len(state.atomic_numbers)):
             for label in dict.fromkeys(state.ao_shell):
                 ids=[i for i,(a,s) in enumerate(zip(state.ao_atom,state.ao_shell)) if a==atom and s==label]
                 if not ids:continue
                 if str(label).endswith('s') and len(ids)==1:continue
-                if not str(label).endswith('p') or len(ids)!=3:
-                    raise ValueError('AO-pair transport currently supports s/p shells only')
-                self.groups.append(ids)
+                if str(label).endswith('p') and len(ids)==3:self.groups.append(ids)
+                elif str(label).endswith('d') and len(ids)==5:self.d_groups.append(ids)
+                else:raise ValueError('AO-pair transport supports native s/p/d shells only')
         r,_,_=rotation_jet(state.coordinates_bohr,anchor,second=False)
+        self.r=r;self._dr=None
         self.u=self.lift(r,identity=True)
         self.a=self.u@operators@self.u.T
         self._first=None;self._second=None;self._du=None
@@ -60,16 +62,24 @@ class TransportedOperators:
     def lift(self,r,identity=False):
         n=self.original.shape[-1];u=np.eye(n) if identity else np.zeros((n,n))
         for ids in self.groups:u[np.ix_(ids,ids)]=r
+        for ids in self.d_groups:u[np.ix_(ids,ids)]=d_rotation(r) if identity else d_first(self.r,r)
         return u
+
+    def lift_second(self,first,second,mixed):
+        result=self.lift(mixed)
+        for ids in self.d_groups:result[np.ix_(ids,ids)]=d_second(self.r,first,second,mixed)
+        return result
 
     def frame_jet(self,*,second=False):
         """Small AO rotation jets, without a coordinate/operator tensor."""
         if second and self._second is None:
             _,dr,d2r=rotation_jet(self.state.coordinates_bohr,self.anchor)
+            self._dr=dr
             self._du=np.array([self.lift(r) for r in dr])
             self._second=(self._du,d2r)
         if self._du is None:
             _,dr,_=rotation_jet(self.state.coordinates_bohr,self.anchor,second=False)
+            self._dr=dr
             self._du=np.array([self.lift(r) for r in dr])
         return self._du,None if not second else self._second[1]
 
@@ -77,7 +87,17 @@ class TransportedOperators:
         """Contract the AO rotation's second jet before lifting features."""
         _,d2r=self.frame_jet(second=True)
         reduced=sum((adjoint[np.ix_(ids,ids)] for ids in self.groups),np.zeros((3,3)))
-        return np.einsum('rsij,ij->rs',d2r,reduced)
+        result=np.einsum('rsij,ij->rs',d2r,reduced)
+        for ids in self.d_groups:
+            curvature=d_second(self.r,self._dr[:,None],self._dr[None,:],d2r)
+            result+=np.einsum('rsij,ij->rs',curvature,adjoint[np.ix_(ids,ids)])
+        return result
+
+    def directional_second(self,direction):
+        _,d2r=self.frame_jet(second=True)
+        tangent=np.einsum('a,aij->ij',direction,self._dr)
+        mixed=np.einsum('b,abij->aij',direction,d2r)
+        return np.array([self.lift_second(a,tangent,b) for a,b in zip(self._dr,mixed)])
 
     def first(self):
         if self._first is None:
@@ -86,32 +106,33 @@ class TransportedOperators:
         return self._first
 
     def second(self,i,j):
-        du,d2r=self.frame_jet(second=True);z=self.lift(d2r[i,j])
+        du,d2r=self.frame_jet(second=True);z=self.lift_second(self._dr[i],self._dr[j],d2r[i,j])
         return (z@self.original@self.u.T+self.u@self.original@z.T
                 +du[i]@self.original@du[j].T+du[j]@self.original@du[i].T)
 
 
 class PairTerm:
-    def __init__(self,transport,k,q0=None,v=None):
+    def __init__(self,transport,k,q0=None,v=None,*,metric_operators=None):
         self.transport=transport;self.s=transport.state.overlap;self.a=transport.a;self.k=k
         self.q0=np.zeros(len(k)) if q0 is None else q0
         self.v=np.zeros(len(k)) if v is None else v
-        self.b=self.metric(self.s,self.a)
+        self.b=self.metric(self.s,self.a) if metric_operators is None else metric_operators
     @staticmethod
     def metric(s,a):return .5*(s@a+a@s)
-    def moments(self,p):return np.einsum('aij,ij->a',self.b,p)
+    def moments(self,p):return self.b.reshape(len(self.b),-1)@np.asarray(p).ravel()
+    def potential(self,field):return (np.asarray(field)@self.b.reshape(len(self.b),-1)).reshape(self.s.shape)
     def field(self,p):return self.k@(self.moments(p)-self.q0)+self.v
     def evaluate(self,p):
         q=self.moments(p);dq=q-self.q0
-        return np.einsum('a,aij->ij',self.k@dq+self.v,self.b),.5*float(dq@self.k@dq)+float(self.v@q)
-    def response(self,p):return np.einsum('a,aij->ij',self.k@self.moments(p),self.b)
+        return self.potential(self.k@dq+self.v),.5*float(dq@self.k@dq)+float(self.v@q)
+    def response(self,p):return self.potential(self.k@self.moments(p))
     def response_batch(self,p):
         """Apply the same linear operator to a batch using matrix products."""
         p=np.asarray(p);b=self.b.reshape(len(self.b),-1)
         moments=p.reshape(len(p),-1)@b.T
         return ((moments@self.k.T)@b).reshape(p.shape)
     def metric_potential(self,p):
-        a=np.einsum('a,aij->ij',self.field(p),self.a)
+        a=(self.field(p)@self.a.reshape(len(self.a),-1)).reshape(self.s.shape)
         return .5*(p@a+a@p)
     def _weighted_transport(self,p):
         """Contract the feature index before taking frame derivatives."""
@@ -228,9 +249,16 @@ class FrozenNonlocalResponseReference(FrozenResponseReference):
         t=TransportedOperators(state,self.anchor_coordinates_bohr,self.operators)
         return PairSpin(base,PairTerm(t,self.pair_spin_hartree))
     def bind_charge(self,state,partition):
-        self.bind(state,partition)
+        super().bind(state,partition)
         t=TransportedOperators(state,self.anchor_coordinates_bohr,self.operators)
         return PairTerm(t,self.pair_charge_hartree,self.pair_reference_moments,self.pair_linear_hartree)
+    def bind_charge_from_spin(self,state,partition,polarization):
+        """Reuse the identical frame and metric chart already bound for spin."""
+        term=polarization.term
+        if term.transport.state is not state or term.k is not self.pair_spin_hartree:
+            raise ValueError('charge/spin binding belongs to another response state')
+        return PairTerm(term.transport,self.pair_charge_hartree,self.pair_reference_moments,
+                        self.pair_linear_hartree,metric_operators=term.b)
     @classmethod
     def from_vertical_model(cls,state,partition,data,source_model):
         ns=len(partition.shell_atom)

@@ -12,11 +12,14 @@ from ._nosi_configurations import basis as configuration_basis,common_core_and_a
 from ._nosi_canonical import block as canonical_block
 
 class MatrixResponse:
-    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True,auxiliary_records=None):
+    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True,auxiliary_records=None,scalar_elements=None,scalar_checkpoint=None):
+        if derivatives and getattr(context,'vertical_only',False):raise NotImplementedError('this quadrature adapter supports vertical energies only')
         self.context=context;self.s=context.state;self.reference=reference;self.no=context.state.electron_count//2
         self.nr=context.state.coordinates_bohr.size if derivatives else 0;self.labels=list(labels)
         self.ycanonical=np.asarray(canonical_frame);self.h=np.asarray(h);self.w=np.asarray(eri);self.nbase=1+2*len(state_coefficients)
         self.auxiliary_records=auxiliary_records
+        self.scalar_elements={} if scalar_elements is None else scalar_elements
+        self.scalar_checkpoint=scalar_checkpoint
         self.scalar=Hamiltonian(self.h,self.w);self.constant_elements={};self.spin_map=np.zeros((4,4,2,2))
         for i in range(4):
             for j in range(4):
@@ -40,8 +43,11 @@ class MatrixResponse:
             self.states=[SimpleNamespace(occupations=mixed,triplet=triplet,coefficient=lambda direction,c=c:Jet.constant(c,0)) for c in state_coefficients]
             class ValueEnergy:
                 def evaluate(self,c,occupations,direction):
-                    p=np.array([(c.v*x)@c.v.T for x in occupations]);return Jet.constant(context.fock_and_energy(p)[1],0)
+                    p=np.array([(c.v*x)@c.v.T for x in occupations]);return Jet.constant(context.energy(p) if hasattr(context,'energy') else context.fock_and_energy(p)[1],0)
             self.energy=ValueEnergy()
+    def _spin_pair(self,left,right,direction):
+        if hasattr(self.context,'spin_pair_bilinear'):return self.context.spin_pair_bilinear(left,right,direction)
+        return contract('i,ij,j->',left,self.reference.pair_spin_hartree,right)
     def matrices(self,direction):
         direction=np.asarray(direction).ravel();_,s,_,_,u=self.ground.engine.geometry(direction);root=square_root_jet(s)
         cg=self.ground.coefficient(direction);cs=[state.coefficient(direction) for state in self.states]
@@ -76,7 +82,7 @@ class MatrixResponse:
                         for j in range(4):
                             for k in range(4):
                                 key=tuple(sorted((sites[j],sites[k])))
-                                if key not in pair_cache:pair_cache[key]=contract('i,ij,j->',q[j],self.reference.pair_spin_hartree,q[k])
+                                if key not in pair_cache:pair_cache[key]=self._spin_pair(q[j],q[k],direction)
                                 pending=pending+pair_cache[key][...,None,None]*self.spin_map[j,k]
                         pending=pending+charge[...,None,None]*np.eye(2);four_overrides.append((self.nbase+i,pending))
                     diagonal.append(pending[record['component'],record['component']])
@@ -109,7 +115,7 @@ class MatrixResponse:
             four=Jet.constant(np.zeros((2,2)),self.nr)
             for i in range(4):
                 for j in range(4):
-                    value=contract('i,ij,j->',q[i],self.reference.pair_spin_hartree,q[j]);four=four+value[...,None,None]*self.spin_map[i,j]
+                    value=self._spin_pair(q[i],q[j],direction);four=four+value[...,None,None]*self.spin_map[i,j]
             four=four+charge[...,None,None]*np.eye(2);diagonal.extend([four[0,0],four[1,1]])
             four_overrides.append((len(basis)-2,four))
         size=len(basis);metric=Jet.constant(np.zeros((size,size)),self.nr);hf=Jet.constant(np.zeros((size,size)),self.nr)
@@ -126,8 +132,12 @@ class MatrixResponse:
                     metric.v[i,j]=metric.v[j,i]=ov;hf.v[i,j]=hf.v[j,i]=hval
                     continue
                 elif self.nr==0:
-                    scalar=lambda b:[(weight,(a.v,bb.v)) for weight,(a,bb) in b]
-                    ov,hval=self.scalar.csf(scalar(basis[i]),scalar(basis[j]));overlap=Jet.constant(ov,0);value=Jet.constant(hval,0)
+                    key=(i,j)
+                    if key not in self.scalar_elements:
+                        scalar=lambda b:[(weight,(a.v,bb.v)) for weight,(a,bb) in b]
+                        self.scalar_elements[key]=self.scalar.csf(scalar(basis[i]),scalar(basis[j]))
+                        if self.scalar_checkpoint is not None:self.scalar_checkpoint(self.scalar_elements)
+                    ov,hval=self.scalar_elements[key];overlap=Jet.constant(ov,0);value=Jet.constant(hval,0)
                 else:overlap,value=csf_element(basis[i],basis[j],self.h,self.w)
                 metric[i,j]=metric[j,i]=overlap;hf[i,j]=hf[j,i]=value
         indices=np.arange(size)

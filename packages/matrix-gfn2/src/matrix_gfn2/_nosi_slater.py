@@ -1,5 +1,6 @@
 """Scalar Schur Slater--Condon elements; no occupied four-index transform."""
 from itertools import permutations
+from hashlib import sha256
 import numpy as np
 from ._einsum_cached import einsum as cached_einsum
 
@@ -30,9 +31,18 @@ def schur(a,b):
 
 class Hamiltonian:
     def __init__(self,h,eri):
-        self.h=h;self.eri=eri;n=len(h);self.j=eri.reshape(n*n,n*n);self.k=eri.transpose(1,2,3,0).reshape(n*n,n*n);self.jk=self.j-self.k
-    def coulomb(self,p,q):return float(p.ravel()@self.j@q.ravel())
-    def same(self,p,q):return float(p.ravel()@self.jk@q.ravel())
+        self.h=h;self.eri=eri;n=len(h);self.j=eri.reshape(n*n,n*n);self.k=eri.transpose(1,2,3,0).reshape(n*n,n*n);self.jk=self.j-self.k;self._contractions={}
+    def _bilinear(self,p,q,exchange):
+        # Schur null blocks often give exactly zero transition densities.
+        # Avoid reading the complete pair tensor for these exact zero terms.
+        if not np.any(p) or not np.any(q):return 0.
+        key=(bool(exchange),sha256(np.ascontiguousarray(p).tobytes()).digest())
+        if key not in self._contractions:
+            if len(self._contractions)>=128:self._contractions.pop(next(iter(self._contractions)))
+            self._contractions[key]=p.ravel()@(self.jk if exchange else self.j)
+        return float(self._contractions[key]@q.ravel())
+    def coulomb(self,p,q):return self._bilinear(p,q,False)
+    def same(self,p,q):return self._bilinear(p,q,True)
     def element(self,bra,ket):
         p=[schur(a,b) for a,b in zip(bra,ket)];det=p[0][0]*p[1][0];total=0.
         for spin in range(2):

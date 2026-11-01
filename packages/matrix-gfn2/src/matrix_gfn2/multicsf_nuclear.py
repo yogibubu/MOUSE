@@ -51,7 +51,7 @@ class FrozenLowdinERI:
         for a in range(nr):
             for b in range(nr):
                 crr=c@(.375*(metric[a]@metric[b]+metric[b]@metric[a])-.5*(c.T@d2s[a,b]@c))[:,active]
-                d2u=transport.lift(d2r[a,b])
+                d2u=transport.lift_second(dr[a],dr[b],d2r[a,b])
                 yrr[a,b]=(d2u.T@l@ca+du[a].T@dl[b]@ca+du[a].T@l@cr[b,:,active].T
                     +du[b].T@dl[a]@ca+u.T@d2l[a,b]@ca+u.T@dl[a]@cr[b,:,active].T
                     +du[b].T@l@cr[a,:,active].T+u.T@dl[b]@cr[a,:,active].T+u.T@l@crr)

@@ -1,0 +1,57 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "wall_seconds": 232.3962142500095,
+  "native_orbitals": 219,
+  "complete_pair_features": 24090,
+  "localized_pair_chart": false,
+  "RI_XC": {
+    "auxbasis": "def2-universal-jkfit",
+    "auxiliary_functions": 4042,
+    "native_pair_features": 24090,
+    "direct_curvatures": [
+      [
+        -0.0014145469646899681,
+        -0.0013456982339908753,
+        -0.0016052456356874304
+      ],
+      [
+        -0.0010827596602615496,
+        -0.0010316043336907879,
+        -0.0012290773763398036
+      ]
+    ],
+    "fitted_curvatures": [
+      [
+        -0.00142137862813609,
+        -0.001354012132221704,
+        -0.0016078749319876078
+      ],
+      [
+        -0.0010861637710208654,
+        -0.0010361479376937853,
+        -0.0012295469143544545
+      ]
+    ],
+    "maximum_curvature_error_hartree": 8.313898230828719e-06,
+    "required_tolerance_hartree": 1e-05,
+    "energy_labels_read": false,
+    "approximation": "RI-V response density with exact charge/dipole/quadrupole constraints; full embedded density used for f_xc"
+  },
+  "local_chart_condition": 1.0,
+  "chart_duality_max_error": 4.576339307504895e-13,
+  "quadrature_cutoff": 1e-12,
+  "quadrature_directional_curvature_error": 8.313898230828719e-06,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "eta": 0.6,
+  "offset_ev": 0,
+  "DF_auxbasis": "def2-universal-jkfit",
+  "native_ground_reused": true,
+  "native_stationary_checkpoint_sha256": "d1465735931f52c86d4b1c190ecc6684e58432a1d30d588b2e0484f6c5e8a859",
+  "full_orbital_space": true,
+  "reference_energy_labels_read": false,
+  "status": "Complete charge/spin/one-body reference; spin-pure OO optimization still required"
+}

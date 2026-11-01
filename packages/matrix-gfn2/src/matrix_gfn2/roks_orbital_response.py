@@ -33,6 +33,40 @@ def orbital_residual_jacobian(c, occupations, focks, kernel, polarization, left,
     return derivative
 
 
+def orbital_residual_action(c, occupations, focks, kernel, polarization, left, right, vector, *, symmetric=False):
+    """Exact Jacobian action without storing every orbital density variation.
+
+    This differentiates the same moving-frame residual as
+    ``orbital_residual_jacobian``. Memory grows with the AO matrix size,
+    rather than the number of orbital rotations times that size.
+    """
+    vector = np.asarray(vector, dtype=float)
+    if vector.shape != (len(left),):
+        raise ValueError('orbital direction has incompatible dimension')
+    rotation = np.zeros_like(c)
+    rotation[left, right] = vector
+    rotation[right, left] = -vector
+    dc = c @ rotation
+    changes = []
+    for occupation in occupations:
+        dp = (dc * occupation) @ c.T
+        changes.append(dp + dp.T)
+    changes = np.asarray(changes)
+    charge = kernel(changes.sum(axis=0))
+    spin = (polarization.response_batch(changes[None])[0]
+            if hasattr(polarization, 'response_batch')
+            else polarization.evaluate(changes)[0])
+    result = np.zeros(len(left)); q = np.zeros_like(c)
+    for occupation, fock, df in zip(occupations, focks, charge[None]+spin):
+        mo = dc.T @ fock @ c + c.T @ fock @ dc + c.T @ df @ c
+        result += 2 * mo[left, right] * (occupation[right]-occupation[left])
+        if symmetric:q += 2*(c.T@fock@c)*occupation[None,:]
+    if symmetric:
+        correction=.5*(rotation@q-q@rotation)
+        result+=correction[left,right]-correction[right,left]
+    return result
+
+
 def run_roks_orbital_newton(context, coefficients, occupations, *,
                             orbital_tolerance=1e-9, maximum_evaluations=100,
                             maximum_step=.5, certify_index=False, trial_guard=None):
