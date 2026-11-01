@@ -1,0 +1,50 @@
+{
+  "schema": "mouse.additional.frozen_eta060.v1",
+  "frozen_utc": "2026-11-01T18:17:10.111544+00:00",
+  "candidate_commit": "77766280063a20fc123bbe0030ba5e6a8ac81c99",
+  "bath_efficiency_eta": 0.6,
+  "eta_refit_allowed": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "cohort": "additional_pi_eta060",
+  "cases": [
+    {
+      "molecule": "Cyclopropene",
+      "id": "P001",
+      "family": "pi_pi",
+      "state": "^1B_2",
+      "nature": "V",
+      "quest_type": "ppi",
+      "geometry_sha256": "e95cd62dc3121a5105d437130e46d0344560d9c9a394951e1cb7baa4af642b3c"
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "id": "P002",
+      "family": "pi_pi",
+      "state": "^1B_2",
+      "nature": "V",
+      "quest_type": "ppi",
+      "geometry_sha256": "0a0f04c43efea6cff33c9bd5ffd018c9adb119e5c7d5fd1cad07d3757fa980e9"
+    },
+    {
+      "molecule": "Pyrrole",
+      "id": "P003",
+      "family": "pi_pi",
+      "state": "^1B_2",
+      "nature": "V",
+      "quest_type": "ppi",
+      "geometry_sha256": "3b1951001fac6b3ef9be34185af14cf51226f802d18200684c220187eaeec31c"
+    }
+  ],
+  "selection": "One strained ethylene analogue, one cyclic conjugated hydrocarbon, one five-membered heteroaromatic. Propene unavailable in this QUEST source, replaced before calculation and numeric-label extraction by Cyclopropene.",
+  "state_assignment": "Highest occupied reflection-odd native GFN2 orbital to lowest reflection-odd virtual orbital; stationary ground-orthogonal ROKS and coherent singlet CID tracking; verify target valence B2 symmetry; never choose a root by reference energy proximity.",
+  "scoring": "Extract QUEST TBE/AVTZ for singlet valence ppi B2 only after all three frozen predictions and hashes are saved. No offset or eta adjustment.",
+  "quest_commit": "460482bcc6231dab41fe32188dc43959a7c2bdaa",
+  "exposure": "Numeric source columns not opened in this extension before prediction. Cyclopentadiene has historical earlier-model calculations and Pyrrole has historical exclusion/selection metadata; therefore do not call the entire extension strictly blind.",
+  "compute": "Verified MAC-STUDIO only; reuse any compatible completed checkpoints; no electronic calculations on laptop",
+  "figure": "Actual Jmol renders of all three new anchors appended to the complete molecular plate"
+}
