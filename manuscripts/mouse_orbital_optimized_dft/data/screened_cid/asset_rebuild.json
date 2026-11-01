@@ -1,0 +1,9 @@
+{
+  "standalone_inputs": "Only bundled screened_cid data, Jmol renders and two figure scripts",
+  "electronic_calculations": 0,
+  "byte_identical": [
+    "figures/screened_cid_validation.png",
+    "tables/screened_cid_validation.tex"
+  ],
+  "PDF_note": "PDF creation metadata varies; rendering reviewed separately"
+}

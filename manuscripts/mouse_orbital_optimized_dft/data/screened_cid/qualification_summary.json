@@ -1,0 +1,84 @@
+{
+  "status": "qualified_on_current_twenty_state_development_set",
+  "accuracy": {
+    "all": {
+      "n": 20,
+      "MAE_ev": 0.22521503396412137,
+      "max_error_ev": 0.497948042879786,
+      "all_within_0_5_ev": true,
+      "all_assigned": true
+    },
+    "pi_pi": {
+      "n": 7,
+      "MAE_ev": 0.1797921100107795,
+      "max_error_ev": 0.34940923531743984,
+      "all_within_0_5_ev": true,
+      "all_assigned": true
+    },
+    "n_pi": {
+      "n": 13,
+      "MAE_ev": 0.2496735314774593,
+      "max_error_ev": 0.497948042879786,
+      "all_within_0_5_ev": true,
+      "all_assigned": true
+    }
+  },
+  "exposure": "All twenty labels exposed during development; no blind or universal accuracy claim",
+  "runtime": {
+    "molecules": 18,
+    "states": 20,
+    "all_spin_pure": true,
+    "DFT_imports": 0,
+    "TDA_input_reads": 0,
+    "new_SCC_driver_calls": 0,
+    "max_prediction_reproduction_error_ev": 8.514863480968415e-09,
+    "max_restart_error_hartree": 1.5631940186722204e-13
+  },
+  "analytic_hessians": {
+    "molecules": 3,
+    "states": 4,
+    "Cartesian_dimensions": [
+      15,
+      27,
+      36
+    ],
+    "maximum_independent_gradient_error": 1.421203779661262e-10,
+    "maximum_independent_curvature_error": 3.712806412037306e-07,
+    "public_API_max_hessian_error": 2.153500489043836e-09,
+    "public_API_wall_seconds": 418.03626233298564,
+    "public_API_peak_rss_bytes": 1058783232
+  },
+  "link": {
+    "host": "mac-2.homenet.telecomitalia.it",
+    "wall_seconds": 157.6975021249964,
+    "cold_start_energy": -10.394977955833475,
+    "restart_error": 3.552713678800501e-15,
+    "trial_overlap": 0.9999999634785541,
+    "trial_does_not_advance_accepted": true,
+    "spin_squared": 0,
+    "new_SCC_calls": 0,
+    "DFT_imports": 0,
+    "selected_electronic_state": 2,
+    "model_sha256": "5886eb4e4eef7739c1d6d6cf1604cf348760a2be8a9e7857f2cde0390a9c0e46"
+  },
+  "regression_tests": 10,
+  "transfer": {
+    "verified_files": 981,
+    "matching_public_sources": 21,
+    "portable_examples": 3
+  },
+  "compute_host": {
+    "host": "mac-2.homenet.telecomitalia.it",
+    "computer_name": "Mac Studio di Vincenzo",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "pyscf_preparation_version": "2.14.0",
+    "native_extension_sha256": {
+      "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_gfn2_native.cpython-312-darwin.so": "b7f9684ce0127b94f55a97bd38e8a9c95ad8da0107542684813cbf99a9a42a54"
+    },
+    "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 17:06:14) [Clang 19.1.7 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.18.0",
+    "threads_per_process": 2,
+    "maximum_parallel_column_processes": 12
+  }
+}

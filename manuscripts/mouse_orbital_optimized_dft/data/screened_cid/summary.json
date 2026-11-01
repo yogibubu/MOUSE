@@ -1,0 +1,23 @@
+{
+  "all": {
+    "n": 20,
+    "MAE_ev": 0.22521503396412137,
+    "max_error_ev": 0.497948042879786,
+    "all_within_0_5_ev": true,
+    "all_assigned": true
+  },
+  "pi_pi": {
+    "n": 7,
+    "MAE_ev": 0.1797921100107795,
+    "max_error_ev": 0.34940923531743984,
+    "all_within_0_5_ev": true,
+    "all_assigned": true
+  },
+  "n_pi": {
+    "n": 13,
+    "MAE_ev": 0.2496735314774593,
+    "max_error_ev": 0.497948042879786,
+    "all_within_0_5_ev": true,
+    "all_assigned": true
+  }
+}

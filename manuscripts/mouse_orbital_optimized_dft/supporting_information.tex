@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern,microtype,amsmath,amssymb,booktabs,graphicx,longtable}
 \usepackage[margin=25mm]{geometry}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
 \hypersetup{pdftitle={Supporting Information: MOUSE Semiempirical Orbital-Optimized DFT},pdfauthor={Vincenzo Barone}}
 \usepackage{fancyvrb}
@@ -15,7 +16,7 @@
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\theequation}{S\arabic{equation}}
 \section{Data scope and fixed protocol}
-The data in this document are generated from the final relative-active-pair qualification archive, not from the earlier shared-pair or shared-hole exploratory surfaces. The two parent weights are 0.5, the exchange-response scaling is 0.9, and the additive excitation-energy offset is zero. The full and qualified-spectral parents share their quadratic charge/spin correction and differ in their one-body operator. The mixed-spin and triplet energies within each parent use common spatial orbitals.
+This document preserves separately identified model generations. The early tables describe the relative-active-pair qualification; the final screened symmetry-augmented OO-CID assessment is reported in its own section and table below. Numerical evidence from an earlier model is not attributed to the final candidate. The two parent weights are 0.5, the exchange-response scaling is 0.9, and the additive excitation-energy offset is zero. The full and qualified-spectral parents share their quadratic charge/spin correction and differ in their one-body operator. The mixed-spin and triplet energies within each parent use common spatial orbitals.
 
 The 15 regression states were exposed during development. The four final prospective molecules had previous native/shell-model predictions, but the present full/spectral composite protocol was frozen before their new predictions. Reference transition character, rather than TBE proximity, determines assignments. The reported states constitute a curated qualified cohort; the table is not a survey of every attempted state in preceding development campaigns. In particular, its size must not be used as a database-wide success-rate denominator.
 
@@ -104,7 +105,7 @@ The cold full-Hessian interface call takes 98.99~s; restoring the accepted state
 
 The response-only $\lambda$ diagnostic uses 0.85, 0.90 and 0.95, with the one-body DFT reference, semilocal contribution and bare off-diagonal CSF couplings held fixed. Vertical weight and fixed-reference rank perturbations are separate algebraic diagnostics; no new molecular minimum or weighted Hessian is inferred. The actual displaced-reference rank diagnostic is reported below; full F/Q energy recalibration and independent validation remain open.
 
-\section{Symmetry-assigned TD-DFTB and $\Delta$DFTB comparison}
+\section{Symmetry-assigned TD-DFTB and \texorpdfstring{$\Delta$}{Delta}DFTB comparison}
 All electronic calculations in this table were already completed on Oracle; the new audit only reads stored wavefunctions, transition weights, occupations and energies. DFTB2 uses mio-1-1 parameters. The auxiliary Gaussian $s/p$ shells define the same angular group representation and are never used to compute an electronic energy or a cross-model radial overlap. Reference axes are reused explicitly to avoid irrep-name changes from equivalent axis conventions. A TD root requires more than 0.999 of the reported transition weight in its assigned irrep. The reference irrep is obtained from its AO transition density, allowing orbital degeneracy and mixing. The $\Delta$DFTB final occupied spin orbitals must have irrep purity above 0.999; their product gives the broken-symmetry determinant's spatial irrep. Only globally first reference singlets are considered for this lowest-state method.
 
 The 19-state TD-DFTB MAE is 0.54547~eV. For the 15 eligible completed $\Delta$DFTB states, its MAE is 0.31353~eV and the same-subset MOUSE MAE is 0.17174~eV. On the four previous prospective cases, TD-DFTB gives 1.05835~eV MAE versus 0.30363~eV for MOUSE; on the three eligible prospective $\Delta$DFTB cases, the respective MAEs are 0.23380 and 0.22655~eV. The original calculations, including unsuccessful SCC attempts for uracil and cyclopentadienone, are retained. No failed calculation is replaced by an assigned energy. Additional bounded Anderson and linear-mixing recoveries retain the same mio-1-1 Hamiltonian, integer occupations and $10^{-10}$ SCC tolerance; both incomplete cases remain unresolved. The backend rejects binary charge restart for this method, so the final recoveries supply the previously converged atomic ground charges through the supported InitialCharges input. All 112 recovery artifacts, including input rejections and unsuccessful SCC histories, are retained separately from the 254 original audit inputs/results. Neither the group-theoretical audit nor the arithmetic score is a cross-model transition-overlap qualification or a new independent validation set.
@@ -147,11 +148,17 @@ A separate bounded diagnostic replaces only the F-parent linear reference by the
 \clearpage
 \input{frontier_cisd_discussion.tex}
 \clearpage
+\input{selected_cid_development_history.tex}
+\begin{table}[htbp]\centering\small\input{tables/selected_cid_validation.tex}\caption{Earlier compact selected OO-CID and same-native-orbital TDA values in eV; this model is superseded by the screened symmetry augmentation.}\end{table}
+\clearpage
 \input{selected_cid_discussion.tex}
-\begin{table}[htbp]\centering\small\input{tables/selected_cid_validation.tex}\caption{Final selected OO-CID and same-native-orbital TDA values in eV.}\end{table}
+\begin{table}[htbp]\centering\small\input{tables/screened_cid_validation.tex}\caption{Final screened symmetry-augmented OO-CID predictions and matched native-orbital TDA values in eV. All twenty targets are exposed development data.}\end{table}
 \clearpage
 \section{Structures of all studied molecules}
 The following Jmol renderings use archived three-dimensional molecular coordinates. Inclusion identifies a studied molecule and does not imply that every requested electronic state is representable or accurate.
 \begin{figure}[p]\centering\includegraphics[page=1,width=\linewidth,height=.86\textheight,keepaspectratio]{figures/all_studied_structures_jmol.pdf}\caption{Archived three-dimensional molecular structures, plate 1.}\end{figure}
 \begin{figure}[p]\centering\includegraphics[page=2,width=\linewidth,height=.86\textheight,keepaspectratio]{figures/all_studied_structures_jmol.pdf}\caption{Archived three-dimensional molecular structures, plate 2.}\end{figure}
+\clearpage
+\bibliographystyle{unsrtnat}
+\bibliography{references}
 \end{document}

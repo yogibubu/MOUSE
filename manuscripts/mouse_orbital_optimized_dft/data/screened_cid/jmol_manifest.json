@@ -1,0 +1,132 @@
+{
+  "renderer": "Jmol; exact archived ball-and-stick renders",
+  "display": "Rigid rotations only; panel scales differ",
+  "molecules": [
+    {
+      "molecule": "Furofuran",
+      "geometry": "coordinates/independent/Furofuran.xyz",
+      "geometry_sha256": "d7866de10b3d0e39d233c77895c790a2c1b0cb5cfc23fa28e045c9a97de5792a",
+      "render": "data/screened_cid/jmol/Furofuran.png",
+      "render_sha256": "c8336fcc156471e9cd81d4f0737da474c277155fc0438b479c1c013bd0195204"
+    },
+    {
+      "molecule": "Criegee_Intermediate",
+      "geometry": "coordinates/independent/Criegee_Intermediate.xyz",
+      "geometry_sha256": "f0b6e316c886188793ac4d2a8e9eb52dea4d23d2ce9db65d1a7773a093b5d06e",
+      "render": "data/screened_cid/jmol/Criegee_Intermediate.png",
+      "render_sha256": "61bdef8a291333c624a7a0eea6cc32ec0a3bfdce35d360fa91a7a6a35bb55f71"
+    },
+    {
+      "molecule": "Benzoxadiazole",
+      "geometry": "coordinates/independent/Benzoxadiazole.xyz",
+      "geometry_sha256": "7b7d95a9ccdc6a2e0a346eed5e6f239a7d9712e63f42e1a9a2a020ad0153986b",
+      "render": "data/screened_cid/jmol/Benzoxadiazole.png",
+      "render_sha256": "623d8a2826bbff682f08c3e2599da8a41ada4d99c5034d9d06a5375bc7f20e50"
+    },
+    {
+      "molecule": "Hexatriene",
+      "geometry": "coordinates/independent/Hexatriene.xyz",
+      "geometry_sha256": "52d9d67d40de735f19b298d38edee3bc5a27ead4faf0f6ff33bff304c71b5c87",
+      "render": "data/screened_cid/jmol/Hexatriene.png",
+      "render_sha256": "c241ff2a7995f7286effa60838750ca19753f6a77693a35105d422407f1bf6e4"
+    },
+    {
+      "molecule": "acetaldehyde",
+      "geometry": "coordinates/acetaldehyde_anchor.xyz",
+      "geometry_sha256": "9789853348cde999e6812f55953c4483d854d28bdf87894433ad5e9c4de0c89d",
+      "render": "data/screened_cid/jmol/acetaldehyde.png",
+      "render_sha256": "68e51c7a74fa528a90a7b45c2a0c1fca8c961be747a8edec574189a289027d40"
+    },
+    {
+      "molecule": "formamide",
+      "geometry": "coordinates/formamide_anchor.xyz",
+      "geometry_sha256": "cb17f7e51f49e2f90be0f54ace97a92f327ba73eba0b487ab871afe3d53cd8e9",
+      "render": "data/screened_cid/jmol/formamide.png",
+      "render_sha256": "0c84063569b301705215bfa7a718af8bf34751c5e67f6e1d6e360d50a54f86b8"
+    },
+    {
+      "molecule": "pyrazine",
+      "geometry": "coordinates/pyrazine_anchor.xyz",
+      "geometry_sha256": "6571525f3159223c9d3ac630c78dcc1a3c93fe76eaa8f3069bb2a6fce76eea65",
+      "render": "data/screened_cid/jmol/pyrazine.png",
+      "render_sha256": "d3ba00af11dc05d013f411182a1836d3f320aa8710712b867308ec3beb7982f1"
+    },
+    {
+      "molecule": "acetone",
+      "geometry": "coordinates/acetone_anchor.xyz",
+      "geometry_sha256": "4220694699f848f06c05c78a6115c04df4fc3b3cbe992b3e4a8e4575a0a728b1",
+      "render": "data/screened_cid/jmol/acetone.png",
+      "render_sha256": "10b4e484ef674303160138e7c5c3c7e382b9a5f29b5ce1b715ffe9f9a605b2d1"
+    },
+    {
+      "molecule": "glyoxal",
+      "geometry": "coordinates/glyoxal_anchor.xyz",
+      "geometry_sha256": "d2a60d12bd260a56af25dca5b2aaf2b749d02b3a873026092777a94b7f83c13c",
+      "render": "data/screened_cid/jmol/glyoxal.png",
+      "render_sha256": "1a397af57cc53bc95ed24a3d1875637addadc78c30c32a34c8768467b8044da0"
+    },
+    {
+      "molecule": "tetrazine",
+      "geometry": "coordinates/tetrazine_anchor.xyz",
+      "geometry_sha256": "dd9f06b7677d1ddbc2750047594561ff74282a2bdb55f7a1630485f682c2d7d0",
+      "render": "data/screened_cid/jmol/tetrazine.png",
+      "render_sha256": "79a2f9b56d450605336973d4968a04e78172d930fb2abce01ca7ab2d8ec20e86"
+    },
+    {
+      "molecule": "acrolein",
+      "geometry": "coordinates/acrolein_anchor.xyz",
+      "geometry_sha256": "40d91f413519a552e1e6efeffd6be9bf5d4e48337f41bd405d18bfc4cdd42078",
+      "render": "data/screened_cid/jmol/acrolein.png",
+      "render_sha256": "dd80a5bad20774cec25985fbddd9e47009a463a7c84808a67e82534a88285568"
+    },
+    {
+      "molecule": "nitrosomethane",
+      "geometry": "coordinates/nitrosomethane_anchor.xyz",
+      "geometry_sha256": "586f060fd802ecd83166e0252af06c58bb914a6955cc3701223bdfaf099867e7",
+      "render": "data/screened_cid/jmol/nitrosomethane.png",
+      "render_sha256": "f6015cf8c22cd4f8fbc102ec0ce008b1e78b141f3ff106439df947f19b659632"
+    },
+    {
+      "molecule": "maleimide",
+      "geometry": "coordinates/maleimide_anchor.xyz",
+      "geometry_sha256": "b3c38f105d88608df1adc05e64d9630c4cfdc7c52d4f8e806c28422573feea0b",
+      "render": "data/screened_cid/jmol/maleimide.png",
+      "render_sha256": "cbe2ddd973feb430a8a345eb954226e8c59ec32748c799ec5badb3b0c53a7a13"
+    },
+    {
+      "molecule": "pyrimidine",
+      "geometry": "coordinates/pyrimidine_anchor.xyz",
+      "geometry_sha256": "7939633f6c2e942f0fefac0cdec980ec68cc14a752244f2537e3987d5785dbac",
+      "render": "data/screened_cid/jmol/pyrimidine.png",
+      "render_sha256": "3a3113a0218683d66a854762bf864b8f0dcb4fa72f48dd27008db8b5494c8864"
+    },
+    {
+      "molecule": "cyclopentadienone",
+      "geometry": "coordinates/cyclopentadienone_anchor.xyz",
+      "geometry_sha256": "15af95359b6cd2e6444e53cbbc443efe6acfea6b631564469fff512919e48de7",
+      "render": "data/screened_cid/jmol/cyclopentadienone.png",
+      "render_sha256": "a70e3e5873a44ae90032cff113b96a779d4554d4b79147a49bdf793363fe09ad"
+    },
+    {
+      "molecule": "pyranone",
+      "geometry": "coordinates/pyranone_anchor.xyz",
+      "geometry_sha256": "338e376ee17d780cb8058698005a61df608721841f419d397f979abd362079fc",
+      "render": "data/screened_cid/jmol/pyranone.png",
+      "render_sha256": "8d91b6f3181df7817650710e5b2cbdfc945865f64da1d6bc9c539aeba79af0c0"
+    },
+    {
+      "molecule": "Furan",
+      "geometry": "coordinates/extension/Furan.xyz",
+      "geometry_sha256": "81569196e1f0a100f68aaefd07672141d6835be944bfb27faac44d3194e3dc92",
+      "render": "data/screened_cid/jmol/Furan.png",
+      "render_sha256": "b856371a326f69fb5aa66234f53370bd9394e4b980724470491c56b54d52dbb3"
+    },
+    {
+      "molecule": "uracil",
+      "geometry": "coordinates/uracil_anchor.xyz",
+      "geometry_sha256": "92ae29c6355c58dd71f0bce076b3763cc56b263a50aae91339204f863c458eed",
+      "render": "data/screened_cid/jmol/uracil.png",
+      "render_sha256": "8505da685979b26d99e7385664e53a0885734d62dfe41838473e06b6f47c8b78"
+    }
+  ]
+}

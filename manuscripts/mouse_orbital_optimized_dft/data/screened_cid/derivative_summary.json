@@ -1,0 +1,244 @@
+[
+  {
+    "molecule": "Criegee_Intermediate",
+    "cohort": "independent",
+    "coordinates": 15,
+    "states": {
+      "I001": {
+        "energy_hartree": -10.456959276880303,
+        "gradient_column_consistency": 3.469446951953614e-17,
+        "raw_hessian_asymmetry": 4.440892098500626e-16,
+        "translation_residual": 3.2682190287403046e-15,
+        "gradient_translation_residual": 6.288372600415926e-16,
+        "independent_energy_checks": [
+          {
+            "direction": 0,
+            "character": "out_of_plane",
+            "steps": [
+              {
+                "epsilon_bohr": 0.001,
+                "gradient": -2.6645352591003757e-12,
+                "curvature": -0.12404571059221325,
+                "raw_gradient_error": 2.6643167981133007e-12,
+                "raw_curvature_error": 2.1259276354601564e-07
+              },
+              {
+                "epsilon_bohr": 0.0005,
+                "gradient": -1.9539925233402755e-11,
+                "curvature": -0.12404559157630501,
+                "raw_gradient_error": 1.953970677241568e-11,
+                "raw_curvature_error": 3.316086717858324e-07
+              }
+            ],
+            "richardson_gradient_error": 2.5164836763849804e-11,
+            "richardson_curvature_error": 3.712806412037306e-07
+          },
+          {
+            "direction": 1,
+            "character": "mixed_internal",
+            "steps": [
+              {
+                "epsilon_bohr": 0.001,
+                "gradient": -0.002646901122282941,
+                "curvature": 0.2466492805552889,
+                "raw_gradient_error": 1.1042571586078118e-07,
+                "raw_curvature_error": 4.538199151860045e-06
+              },
+              {
+                "epsilon_bohr": 0.0005,
+                "gradient": -0.002646983970677752,
+                "curvature": 0.24665276754376464,
+                "raw_gradient_error": 2.7577321049573195e-08,
+                "raw_curvature_error": 1.0512106761173534e-06
+              }
+            ],
+            "richardson_gradient_error": 3.8810554162799216e-11,
+            "richardson_curvature_error": 1.1111881578762528e-07
+          }
+        ]
+      },
+      "I002": {
+        "energy_hartree": -10.394977955827555,
+        "gradient_column_consistency": 8.326672684688674e-17,
+        "raw_hessian_asymmetry": 6.328271240363392e-15,
+        "translation_residual": 9.603429163007604e-15,
+        "gradient_translation_residual": 2.7582103268031233e-16,
+        "independent_energy_checks": [
+          {
+            "direction": 0,
+            "character": "out_of_plane",
+            "steps": [
+              {
+                "epsilon_bohr": 0.001,
+                "gradient": 8.881784197001252e-13,
+                "curvature": 0.02753910344210908,
+                "raw_gradient_error": 8.893388407355404e-13,
+                "raw_curvature_error": 1.7398146414521198e-07
+              },
+              {
+                "epsilon_bohr": 0.0005,
+                "gradient": -8.881784197001252e-12,
+                "curvature": 0.027538938240923017,
+                "raw_gradient_error": 8.880623775965837e-12,
+                "raw_curvature_error": 8.78027808098869e-09
+              }
+            ],
+            "richardson_gradient_error": 1.2137277981532962e-11,
+            "richardson_curvature_error": 4.6286783940419074e-08
+          },
+          {
+            "direction": 1,
+            "character": "mixed_internal",
+            "steps": [
+              {
+                "epsilon_bohr": 0.001,
+                "gradient": -0.03543445907983056,
+                "curvature": 0.3406534769823111,
+                "raw_gradient_error": 9.405086961178366e-07,
+                "raw_curvature_error": 4.542945434243828e-05
+              },
+              {
+                "epsilon_bohr": 0.0005,
+                "gradient": -0.03543375359171819,
+                "curvature": 0.3406195077104712,
+                "raw_gradient_error": 2.3502058374424983e-07,
+                "raw_curvature_error": 1.146018250258729e-05
+              }
+            ],
+            "richardson_gradient_error": 1.421203779661262e-10,
+            "richardson_curvature_error": 1.3709188928512361e-07
+          }
+        ]
+      }
+    },
+    "method": "fully analytic anchored-model nuclear response; finite differences only for independent validation",
+    "no_DFT_runtime": true,
+    "no_SCC_runtime": true
+  },
+  {
+    "molecule": "Furan",
+    "cohort": "last_two",
+    "coordinates": 27,
+    "states": {
+      "V010": {
+        "energy_hartree": -13.759854311424613,
+        "gradient_column_consistency": 1.1102230246251565e-16,
+        "raw_hessian_asymmetry": 4.6407322429331543e-14,
+        "translation_residual": 1.4253181968015838e-13,
+        "gradient_translation_residual": 7.181755190543981e-16,
+        "independent_energy_checks": [
+          {
+            "direction": 0,
+            "character": "out_of_plane",
+            "steps": [
+              {
+                "epsilon_bohr": 0.001,
+                "gradient": -7.105427357601002e-12,
+                "curvature": 0.14321264529826294,
+                "raw_gradient_error": 7.105074025496379e-12,
+                "raw_curvature_error": 2.2159941401311833e-07
+              },
+              {
+                "epsilon_bohr": 0.0005,
+                "gradient": 1.2434497875801753e-11,
+                "curvature": 0.1432124534517243,
+                "raw_gradient_error": 1.2434851207906376e-11,
+                "raw_curvature_error": 2.9752875357891284e-08
+              }
+            ],
+            "richardson_gradient_error": 1.8948159619040625e-11,
+            "richardson_curvature_error": 3.419597086051773e-08
+          },
+          {
+            "direction": 1,
+            "character": "mixed_internal",
+            "steps": [
+              {
+                "epsilon_bohr": 0.001,
+                "gradient": -0.029263108888066824,
+                "curvature": 0.5538070464439215,
+                "raw_gradient_error": 5.7418467300229814e-08,
+                "raw_curvature_error": 8.494911596379495e-08
+              },
+              {
+                "epsilon_bohr": 0.0005,
+                "gradient": -0.029263151979819213,
+                "curvature": 0.5538070979582699,
+                "raw_gradient_error": 1.4326714911638838e-08,
+                "raw_curvature_error": 1.3646346430640222e-07
+              }
+            ],
+            "richardson_gradient_error": 3.720255006833817e-11,
+            "richardson_curvature_error": 1.536349137909454e-07
+          }
+        ]
+      }
+    },
+    "method": "fully analytic anchored-model nuclear response; finite differences only for independent validation",
+    "no_DFT_runtime": true,
+    "no_SCC_runtime": true
+  },
+  {
+    "molecule": "uracil",
+    "cohort": "last_two",
+    "coordinates": 36,
+    "states": {
+      "V011": {
+        "energy_hartree": -23.050615831743222,
+        "gradient_column_consistency": 0.0,
+        "raw_hessian_asymmetry": 1.3766765505351941e-14,
+        "translation_residual": 1.745652233875461e-14,
+        "gradient_translation_residual": 1.5386997231914279e-15,
+        "independent_energy_checks": [
+          {
+            "direction": 0,
+            "character": "out_of_plane",
+            "steps": [
+              {
+                "epsilon_bohr": 0.001,
+                "gradient": -1.7763568394002505e-12,
+                "curvature": 0.10070184330857046,
+                "raw_gradient_error": 1.7766556244104429e-12,
+                "raw_curvature_error": 1.449182956969608e-07
+              },
+              {
+                "epsilon_bohr": 0.0005,
+                "gradient": -1.7763568394002505e-11,
+                "curvature": 0.10070199607525865,
+                "raw_gradient_error": 1.7763867179012697e-11,
+                "raw_curvature_error": 7.848392491460743e-09
+              }
+            ],
+            "richardson_gradient_error": 2.309293769721345e-11,
+            "richardson_curvature_error": 5.877062188297533e-08
+          },
+          {
+            "direction": 1,
+            "character": "mixed_internal",
+            "steps": [
+              {
+                "epsilon_bohr": 0.001,
+                "gradient": 0.03190522142659802,
+                "curvature": 0.33658636056088653,
+                "raw_gradient_error": 1.5219576154912318e-09,
+                "raw_curvature_error": 4.3847633413029996e-08
+              },
+              {
+                "epsilon_bohr": 0.0005,
+                "gradient": 0.03190522030749321,
+                "curvature": 0.33658612608178373,
+                "raw_gradient_error": 4.0285280666907397e-10,
+                "raw_curvature_error": 1.9063146938780307e-07
+              }
+            ],
+            "richardson_gradient_error": 2.981787039502137e-11,
+            "richardson_curvature_error": 2.687911703214141e-07
+          }
+        ]
+      }
+    },
+    "method": "fully analytic anchored-model nuclear response; finite differences only for independent validation",
+    "no_DFT_runtime": true,
+    "no_SCC_runtime": true
+  }
+]

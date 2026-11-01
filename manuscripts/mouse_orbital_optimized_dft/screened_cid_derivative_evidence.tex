@@ -1,0 +1,23 @@
+Complete analytic Hessians are qualified for Criegee (two states,
+15 Cartesian coordinates), furan (27 coordinates), and uracil (36 coordinates).
+Independently reconverged energies at $10^{-3}$ and $5\times10^{-4}$ bohr
+validate both an out-of-plane direction and a mixed internal displacement.
+Richardson-extrapolated maximum errors are $1.42\times10^{-10}$ Hartree/bohr for
+first derivatives and $3.71\times10^{-7}$ Hartree/bohr$^2$ for curvatures.
+The largest raw Hessian asymmetry is $4.64\times10^{-14}$ Hartree/bohr$^2$, and the
+maximum translational identity residual is $1.43\times10^{-13}$ Hartree/bohr$^2$.
+These are implementation checks of the final anchored surface, not a
+validation of its equilibrium geometries or physical vibrational frequencies.
+Fresh-process runtime, spin and restart checks pass for all twenty states
+in eighteen molecules. Prepared energy-only evaluations take 1.7--9.0 s
+with two BLAS threads on MAC-STUDIO, excluding model loading and reference
+preparation. They do not demonstrate a vertical speed advantage over TDA.
+A direct cold public-API Criegee Hessian reproduces the independently
+assembled matrices within $2.2\times10^{-9}$ Hartree/bohr$^2$.
+Its complete two-state Hessian evaluation takes 418 s with two BLAS threads
+and about 1.0 GiB peak RSS; this is the current dense reference implementation,
+not an end-to-end timing advantage over TDA. The separate column-checkpoint
+route permits bounded remote parallel validation and reuses completed columns.
+The final LINK $\pi\pi^*$ test has restart error
+$3.6\times10^{-15}$ Hartree and displaced trial overlap 0.99999996;
+trial evaluation leaves the accepted checkpoint unchanged.
