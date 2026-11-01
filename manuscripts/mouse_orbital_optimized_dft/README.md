@@ -173,7 +173,7 @@ freeze: 7666f7a. `make_frontier_cisd_assets.py` reads only the bundled
 the remote electronic calculations.
 
 The final selected optimized-target CID candidate is frozen as 467a9e5 and
-implemented in the public MOUSE/APOC/LINK interfaces in ecb6644. All fifteen
+implemented in the public MOUSE/APOC/LINK interfaces in ecb6644. The initial fifteen
 valence transitions meet the fixed gates: MAE 0.219905 eV, maximum 0.497948 eV.
 Thirteen informed model selection; two post-freeze predictions on historically
 exposed molecules give 0.201994 eV MAE. No universal or blind claim is made.
@@ -183,3 +183,12 @@ actual LINK cold-start/rollback/restart and coherent spin-pure following pass.
 The SI preserves the earlier unsuccessful pilots separately. Rebuild the new
 figure and table with `python make_selected_cid_assets.py`; all its inputs are
 bundled in `data/selected_cid`.
+
+The subsequent three-molecule extension (`f8a38e3`) adds pyrimidine,
+cyclopentadienone and pyranone without changing the frozen model. Updated
+figure/table: 18 states, MAE 0.246774 eV, maximum 0.497948 eV. The new cohort
+has MAE 0.381118 eV; all five post-freeze predictions have MAE 0.309468 eV.
+Both post-freeze means exceed the 0.3 eV mean-error gate, although all
+individual errors remain below 0.5 eV. The text explicitly distinguishes
+these subset results from the passing pooled aggregate. All three portable
+models reproduce the research predictions and pass explicit singlet checks.

@@ -30,7 +30,7 @@ state-interaction functional; it does not supply a universally balanced
 multi-determinant ground-state functional.
 
 The selected rule was frozen in commit \texttt{467a9e5} before evaluating
-nitrosomethane and maleimide. All fifteen transitions satisfy the unchanged
+nitrosomethane and maleimide. The initial fifteen transitions satisfy the unchanged
 aggregate MAE gate of 0.3 eV and individual error gate of 0.5 eV, with an MAE
 of 0.220 eV and maximum absolute error 0.498 eV. The two post-freeze errors
 are $-0.002$ and $+0.402$ eV, respectively, giving 0.202 eV MAE. These
@@ -42,11 +42,38 @@ The same-reference, same-native-orbital TDA control gives 0.966 eV MAE over
 these fifteen states. This control isolates the present kernel and is not
 a claim to outperform every calibrated TDA or sTDA parameterization.
 
+
+A further three-molecule cohort was registered in commit \texttt{f8a38e3}
+without changing the candidate: pyrimidine tests another diazine substitution
+pattern, cyclopentadienone a five-membered conjugated cyclic ketone, and
+pyranone a six-membered carbonyl-containing oxygen heterocycle. Their
+$n\pi^*$ predictions are 4.637, 3.412 and 4.512 eV, against unchanged
+references 4.451, 2.951 and 4.016 eV. All three state assignments pass the
+fixed overlap gates and all individual errors remain below 0.5 eV. The
+three-state MAE is 0.381 eV, compared with 0.463 eV for the matched native-orbital
+TDA control. This subset therefore exceeds the 0.3 eV mean-error criterion;
+its successful individual assignments and maximum-error checks must not be
+presented as passing every accuracy gate.
+
+Pooling these cases with the original fifteen gives eighteen states in
+sixteen molecules, with 0.247 eV MAE and 0.498 eV maximum error. The pooled
+mean and maximum meet the original numerical limits, but all five predictions
+made after freezing the candidate give 0.309 eV MAE, slightly exceeding the
+0.3 eV mean-error limit. These are historically exposed molecules, not a blind
+set. The increase from 0.220 to 0.247 eV on extension quantifies the remaining
+transferability limitation without modifying the model or its offsets.
+The matched TDA control gives 0.882 eV MAE over eighteen states and 0.442 eV
+on the five post-freeze predictions. Portable MOUSE evaluation reproduces
+all three new matrix predictions without DFT imports, SCC calls or TDA reads;
+explicit determinant-sum checks verify $S=0$ for each new state. No additional
+nuclear Hessian qualification is claimed for this energy-only extension.
+Their archived geometries match the existing Jmol structure plates.
+
 \begin{figure}[tbp]\centering
 \includegraphics[width=\linewidth]{figures/selected_cid_validation.pdf}
 \caption{Final selected OO-CID predictions. The shaded error interval is
 $\pm0.5$ eV. Thirteen states informed model selection; squares identify the
-two predictions made after the final candidate freeze. All controls use
+five predictions made after the final candidate freeze. All controls use
 native GFN2 spatial orbitals.}\end{figure}
 
 The public class \texttt{PreparedNOSIModel} evaluates a portable, checksummed
@@ -78,7 +105,8 @@ threads and 262 MiB peak RSS on MAC-STUDIO. Its energy-only evaluation takes
 speed advantage over TDA. The earlier 42.22 s phthalimide Hessian belongs
 to the preceding production model, not this final selected candidate.
 
-This completes a finite candidate test and automatic derivative integration.
+This completes the finite extension and automatic derivative integration,
+while the post-freeze mean errors remain a limitation.
 It does not demonstrate an independent broad CT/Rydberg benchmark, final-model
 excited minima and frequencies against coupled-cluster theory, or universal
 chemical transferability. Those claims require additional evidence beyond
