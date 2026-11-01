@@ -1,0 +1,46 @@
+[
+  {
+    "iteration": 0,
+    "energy": -18.52889827397501,
+    "kkt_max": 0.04402447828780546,
+    "ground_overlaps": [
+      7.319177927701905e-16,
+      -5.844456108754688e-15
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 1,
+    "energy": -18.543741819893683,
+    "kkt_max": 0.003876796074359011,
+    "ground_overlaps": [
+      8.76157454044292e-15,
+      3.3280195148081436e-15
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 2,
+    "energy": -18.54415425456479,
+    "kkt_max": 0.00047867490929336365,
+    "ground_overlaps": [
+      -2.342986860287036e-16,
+      6.818888513427523e-16
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 3,
+    "energy": -18.5441555733551,
+    "kkt_max": 8.727019950135805e-07,
+    "ground_overlaps": [
+      5.682646187019295e-17,
+      6.310990921999453e-16
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  }
+]

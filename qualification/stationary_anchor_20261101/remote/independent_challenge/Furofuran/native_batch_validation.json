@@ -1,0 +1,20 @@
+{
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "reference_density_kernel_max_errors": [
+    1.9539925233402755e-14,
+    2.398081733190338e-14,
+    1.8207657603852567e-14
+  ],
+  "full_energy_gradient_orbital_hessian_errors": [
+    0.0,
+    0.0,
+    3.552713678800501e-15
+  ],
+  "literal_seconds": 0.2636070820153691,
+  "batched_seconds": 0.28096862795064226,
+  "speedup": 0.9382082403223926,
+  "source_sha256": "391222e5abc3280357fb64143b7652266884663f658b933350b9d46aa7c9fdde",
+  "batch_source_sha256": "7f3ef82aaa401fdcc8d5e1f30dee2cd768b050186d24b2272abd309bc40fa927",
+  "scope": "fixed geometry, exact ordinary-GFN2 native response; not a new physical approximation"
+}

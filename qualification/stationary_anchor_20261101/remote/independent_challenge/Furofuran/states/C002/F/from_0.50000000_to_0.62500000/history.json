@@ -1,0 +1,18 @@
+[
+  {
+    "iteration": 0,
+    "energy": -18.46624551468937,
+    "overlap": -8.058932265014912e-05,
+    "residual_max": 0.025127660088732566,
+    "fidelity": 0.9061028826557546,
+    "accepted_step": true
+  },
+  {
+    "iteration": 1,
+    "energy": -18.466247931202886,
+    "overlap": -6.601636686465554e-08,
+    "residual_max": 8.514367097082497e-06,
+    "fidelity": 0.9060520074129484,
+    "accepted_step": true
+  }
+]

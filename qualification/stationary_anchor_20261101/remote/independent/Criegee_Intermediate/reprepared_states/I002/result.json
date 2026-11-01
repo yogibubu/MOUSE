@@ -1,0 +1,44 @@
+{
+  "qualified": false,
+  "energy_hartree": -9.075860865911732,
+  "parent_energies": [
+    -9.073352791699412,
+    -9.078368940124053
+  ],
+  "kkt_max": 6.258797265524738e-06,
+  "ground_overlaps": [
+    -2.3570900723248705e-07,
+    -2.3737993119221545e-07
+  ],
+  "state_fidelities": [
+    0.9450261924100836,
+    0.9450261924135126
+  ],
+  "active_frame_drift": 2.5933404256276462e-14,
+  "iterations": 40,
+  "multipliers": [
+    982682.0025507733,
+    -974598.6448595031
+  ],
+  "source_sha256": "08e44964c9b346bb7f18ba2c4826ac836d8a6128321eeda8c2ae87ef70331991",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "nuclear_response_implemented": false,
+  "id": "I002",
+  "molecule": "Criegee_Intermediate",
+  "family": "pi_pi",
+  "rank_caps": [
+    0.9603293617622022,
+    0.9603293617676222
+  ],
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "preparation": "common new-ground NTO active frame, not the old-model cross-parent Gram",
+  "driver_source_sha256": "17463e89692553b28742fd723aeb143901fbe82183e34d88b8de34a9f289c648",
+  "protocol_sha256": "6cbf476e7463bb5619888dcb1962053ba475ca509b15c0ac0770c8b882246211"
+}

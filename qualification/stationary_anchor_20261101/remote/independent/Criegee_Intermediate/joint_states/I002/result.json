@@ -1,0 +1,107 @@
+{
+  "id": "I002",
+  "molecule": "Criegee_Intermediate",
+  "family": "pi_pi",
+  "qualified": true,
+  "reached_t": 1.0,
+  "continuation": [
+    {
+      "t": 0.125,
+      "status": "accepted",
+      "kkt": 8.857869630633816e-09,
+      "fidelity": [
+        0.9542765753612229,
+        0.9531359845606874
+      ]
+    },
+    {
+      "t": 0.25,
+      "status": "accepted",
+      "kkt": 4.311814794100144e-12,
+      "fidelity": [
+        0.8550258731316087,
+        0.847039536294387
+      ]
+    },
+    {
+      "t": 0.375,
+      "status": "accepted",
+      "kkt": 6.119611180506012e-10,
+      "fidelity": [
+        0.7885053115334896,
+        0.7744217117843358
+      ]
+    },
+    {
+      "t": 0.5,
+      "status": "accepted",
+      "kkt": 8.077246260729254e-09,
+      "fidelity": [
+        0.7746975490945576,
+        0.7577649563611505
+      ]
+    },
+    {
+      "t": 0.625,
+      "status": "accepted",
+      "kkt": 9.803067064728677e-14,
+      "fidelity": [
+        0.7732211316921067,
+        0.7547933763896448
+      ]
+    },
+    {
+      "t": 0.75,
+      "status": "accepted",
+      "kkt": 9.734618139356499e-09,
+      "fidelity": [
+        0.7842805386779964,
+        0.7655072084323505
+      ]
+    },
+    {
+      "t": 0.875,
+      "status": "accepted",
+      "kkt": 1.1759227619423385e-09,
+      "fidelity": [
+        0.8174492568280051,
+        0.7999373962165574
+      ]
+    },
+    {
+      "t": 1.0,
+      "status": "accepted",
+      "kkt": 9.280726812055384e-10,
+      "fidelity": [
+        0.8761317864225957,
+        0.8622755878531266
+      ]
+    }
+  ],
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "source_sha256": "783477e9f8b1e1543335a50eb3d9cef8430758ee0c3c2ea7e06b6aef3cfceace",
+  "protocol_sha256": "5fa064f3e3fc52735ceb259aedc9e868fc53f07c7da5349bd4392ca14f158b46",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "kkt_max": 9.280726812055384e-10,
+  "ground_overlaps": [
+    4.018260353037996e-12,
+    4.430297664481699e-12
+  ],
+  "state_fidelities": [
+    0.8761317864225957,
+    0.8622755878531266
+  ],
+  "active_frame_drift": 5.440092820663267e-15,
+  "parent_gaps_ev": [
+    13.312553517337292,
+    11.89199777601615
+  ],
+  "excitation_ev": 12.602275646676722
+}

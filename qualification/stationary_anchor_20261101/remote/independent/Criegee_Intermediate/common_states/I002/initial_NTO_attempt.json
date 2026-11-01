@@ -1,0 +1,36 @@
+{
+  "success": false,
+  "energy_hartree": -9.013241199408895,
+  "ground_overlap_squared": 4.568210717476246e-05,
+  "fidelity": 0.844834254010301,
+  "kkt_max": 0.014724418679227913,
+  "multiplier": 0.2537881792638201,
+  "qualified": false,
+  "iterations": 11,
+  "solver": "KKT stationary point, residual merit, state-overlap guarded",
+  "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+  "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+  "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "checkpoint_resumed": true,
+  "id": "I002",
+  "molecule": "Criegee_Intermediate",
+  "family": "pi_pi",
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "identity_energy_gradient_hessian_errors": [
+    1.7763568394002505e-15,
+    5.030698080332741e-16,
+    3.552713678800501e-15
+  ],
+  "model_sha256": "de95858b4a5d8454cf2fa4c55194114f6fcc1c5893e5207f8fcd77918f853b68",
+  "driver_source_sha256": "caa2d26e34faa4d387949eef195eb8cb48a9eb6a0d3d3ca160be19facd272125",
+  "protocol_sha256": "39dcbd0ea94faf409fe9f82b946a2eb7bb06e5e68aa2d814fa41294a6afcd5c0",
+  "scope": "one averaged energy functional, fully shared orbitals; different from averaging separately optimized parent energies"
+}

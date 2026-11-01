@@ -1,0 +1,92 @@
+[
+  {
+    "iteration": 0,
+    "energy": -9.325649521935723,
+    "kkt_max": 0.00213561153738077,
+    "ground_overlaps": [
+      1.2103024035756802e-15,
+      -6.713713162986299e-16
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 1,
+    "energy": -9.325648079936698,
+    "kkt_max": 0.0024814093209808343,
+    "ground_overlaps": [
+      2.448163291907835e-15,
+      -3.642524638056036e-15
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 2,
+    "energy": -9.325649196821999,
+    "kkt_max": 0.0020680354552648486,
+    "ground_overlaps": [
+      6.324637113297059e-16,
+      -7.528420811806138e-16
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 3,
+    "energy": -9.325652397558509,
+    "kkt_max": 0.0015019945683356207,
+    "ground_overlaps": [
+      2.363216552495385e-15,
+      -1.872862312294834e-15
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 4,
+    "energy": -9.325654641696431,
+    "kkt_max": 0.00029907265092690954,
+    "ground_overlaps": [
+      6.8099778297842874e-15,
+      -1.0853388548835258e-16
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 5,
+    "energy": -9.325655087684405,
+    "kkt_max": 0.00035137774830281695,
+    "ground_overlaps": [
+      2.708156145689641e-13,
+      -5.869725637635225e-13
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 6,
+    "energy": -9.325655295701583,
+    "kkt_max": 0.00016355408984692385,
+    "ground_overlaps": [
+      -5.5314534673877124e-14,
+      2.5888169053224066e-14
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 7,
+    "energy": -9.325655329143075,
+    "kkt_max": 2.888579209695582e-05,
+    "ground_overlaps": [
+      7.616727384167248e-14,
+      -2.4668421596820525e-14
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 8,
+    "energy": -9.325655330714525,
+    "kkt_max": 2.051621185819983e-06,
+    "ground_overlaps": [
+      -2.4690473150706654e-14,
+      3.507371843547687e-14
+    ],
+    "accepted_step": true
+  }
+]

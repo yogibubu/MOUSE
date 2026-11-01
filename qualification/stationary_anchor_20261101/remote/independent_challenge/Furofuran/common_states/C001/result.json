@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "energy_hartree": -18.544155354336752,
+  "ground_overlap_squared": 1.3164250190067918e-32,
+  "fidelity": 0.9717963087842916,
+  "kkt_max": 9.992584776123692e-11,
+  "multiplier": 1.3057812204335333e-14,
+  "qualified": true,
+  "iterations": 4,
+  "solver": "KKT stationary point, residual merit, state-overlap guarded",
+  "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+  "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+  "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "checkpoint_resumed": true,
+  "id": "C001",
+  "molecule": "Furofuran",
+  "family": "pi_pi",
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "identity_energy_gradient_hessian_errors": [
+    0.0,
+    7.112650724662209e-16,
+    4.440892098500626e-15
+  ],
+  "model_sha256": "0103a479280480f6c8918ff85b327757f6489afcbff93502b64da5549950478e",
+  "driver_source_sha256": "caa2d26e34faa4d387949eef195eb8cb48a9eb6a0d3d3ca160be19facd272125",
+  "protocol_sha256": "39dcbd0ea94faf409fe9f82b946a2eb7bb06e5e68aa2d814fa41294a6afcd5c0",
+  "scope": "one averaged energy functional, fully shared orbitals; different from averaging separately optimized parent energies",
+  "excitation_ev": 5.603316520421575,
+  "tda": {
+    "excitation_ev": 6.797649030522865,
+    "root": 1,
+    "overlap": 0.9889711670729759,
+    "margin": 0.8888501629706822,
+    "qualified": true,
+    "orbitals": "own stationary corrected GFN2 ground orbitals",
+    "operator": "complete singlet TDA A including nonlocal exchange correction",
+    "lambda_exchange": 0.9
+  }
+}

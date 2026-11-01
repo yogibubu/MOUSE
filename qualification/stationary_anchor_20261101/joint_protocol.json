@@ -1,0 +1,17 @@
+{
+  "stage": "exposed development, after independently continued stationary-anchor states",
+  "purpose": "restore the production-style fixed-relative-active-frame manifold while enforcing both ground orthogonalities",
+  "targets": ["I001", "I002", "C001", "C002"],
+  "starting_points": "previously converged ground-orthogonal F/Q CSFs of the original calibration",
+  "frame_constraint": "freeze their full 2x2 active cross-overlap matrix throughout continuation",
+  "ground_constraints": "zero singlet determinant overlap with each own stationary ground",
+  "state_guards": "original projected reference transition overlap >= 0.7 for each parent; local CSF overlap >= 0.9",
+  "derivatives": "analytic orbital energy and constraint Hessians, including relative-frame mixed retraction curvature",
+  "nuclear_response": "not yet implemented for ground-overlap constraints",
+  "prepared_only": true,
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "calibration": "unchanged stationary embedded reference and F/Q models",
+  "limitations": ["not blind", "rank one", "fixed compact space", "no claim that accuracy is solved"]
+}

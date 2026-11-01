@@ -1,0 +1,90 @@
+[
+  {
+    "iteration": 0,
+    "energy": -9.014912915724546,
+    "overlap": 1.4721595981539318e-16,
+    "residual_max": 0.37138504230934444,
+    "fidelity": 0.9603293617647057,
+    "accepted_step": true
+  },
+  {
+    "iteration": 1,
+    "energy": -9.004955531977926,
+    "overlap": 0.025333469947499934,
+    "residual_max": 0.22754178876036726,
+    "fidelity": 0.9301710511319644,
+    "accepted_step": true
+  },
+  {
+    "iteration": 2,
+    "energy": -9.014644043074437,
+    "overlap": 0.009711036635160897,
+    "residual_max": 0.029805598599660726,
+    "fidelity": 0.8845249981967177,
+    "accepted_step": true
+  },
+  {
+    "iteration": 3,
+    "energy": -9.012701441291217,
+    "overlap": 0.00759719855263129,
+    "residual_max": 0.016316101136751915,
+    "fidelity": 0.8362946626253328,
+    "accepted_step": true
+  },
+  {
+    "iteration": 4,
+    "energy": -9.013277022752384,
+    "overlap": 0.0073578875690817275,
+    "residual_max": 0.015862170161734246,
+    "fidelity": 0.8497454321033766,
+    "accepted_step": true
+  },
+  {
+    "iteration": 5,
+    "energy": -9.012775115790237,
+    "overlap": 0.007313139720138016,
+    "residual_max": 0.015792773849745756,
+    "fidelity": 0.8363179095590346,
+    "accepted_step": true
+  },
+  {
+    "iteration": 6,
+    "energy": -9.013345935536199,
+    "overlap": 0.0070980635909394935,
+    "residual_max": 0.01538399670636964,
+    "fidelity": 0.8497669162351636,
+    "accepted_step": true
+  },
+  {
+    "iteration": 7,
+    "energy": -9.012837780796598,
+    "overlap": 0.007070895304237984,
+    "residual_max": 0.015347204212677379,
+    "fidelity": 0.8363377572214059,
+    "accepted_step": true
+  },
+  {
+    "iteration": 8,
+    "energy": -9.013404548100938,
+    "overlap": 0.006876560661462835,
+    "residual_max": 0.014977020072320546,
+    "fidelity": 0.8497852523314555,
+    "accepted_step": true
+  },
+  {
+    "iteration": 9,
+    "energy": -9.013176011591959,
+    "overlap": 0.0067624967912513784,
+    "residual_max": 0.01472817174534069,
+    "fidelity": 0.8431599205532175,
+    "accepted_step": true
+  },
+  {
+    "iteration": 10,
+    "energy": -9.013241199408895,
+    "overlap": 0.006758853983832056,
+    "residual_max": 0.014724418679227913,
+    "fidelity": 0.844834254010301,
+    "accepted_step": false
+  }
+]

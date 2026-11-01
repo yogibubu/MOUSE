@@ -1,0 +1,27 @@
+{
+  "qualified": true,
+  "energy_hartree": -9.42945409818432,
+  "parent_energies": [
+    -9.159978812143942,
+    -9.698929384224696
+  ],
+  "kkt_max": 3.8216974399625675e-09,
+  "ground_overlaps": [
+    9.850040354929997e-12,
+    1.1959585233877114e-11
+  ],
+  "state_fidelities": [
+    0.9967339263824535,
+    0.9989454064706623
+  ],
+  "active_frame_drift": 3.4861002973229915e-14,
+  "iterations": 12,
+  "multipliers": [
+    5.160475245995041e-10,
+    -6.110783048137989e-10
+  ],
+  "source_sha256": "18dc708ae533c9018a252566c302da15aa622845ae2238e77a81b6a820cf8568",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "nuclear_response_implemented": false
+}

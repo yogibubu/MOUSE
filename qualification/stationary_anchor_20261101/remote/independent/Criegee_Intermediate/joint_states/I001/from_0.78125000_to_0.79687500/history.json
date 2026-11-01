@@ -1,0 +1,92 @@
+[
+  {
+    "iteration": 0,
+    "energy": -9.31533412896809,
+    "kkt_max": 0.0021479927102489157,
+    "ground_overlaps": [
+      -1.5543253598927652e-15,
+      3.661819993925396e-15
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 1,
+    "energy": -9.315332163715702,
+    "kkt_max": 0.0030067096970132863,
+    "ground_overlaps": [
+      -2.2193797664512964e-15,
+      3.027169108258578e-15
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 2,
+    "energy": -9.315332283840567,
+    "kkt_max": 0.002522828865688397,
+    "ground_overlaps": [
+      -1.1137198816832344e-15,
+      2.8511414594379517e-15
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 3,
+    "energy": -9.315335853771368,
+    "kkt_max": 0.0019190823124130864,
+    "ground_overlaps": [
+      -3.0178819130358603e-15,
+      3.429157330074782e-15
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 4,
+    "energy": -9.315338917903231,
+    "kkt_max": 0.0004169197244739876,
+    "ground_overlaps": [
+      -1.0277983253527586e-14,
+      7.6582343749653e-15
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 5,
+    "energy": -9.315339571049059,
+    "kkt_max": 0.000487614066952932,
+    "ground_overlaps": [
+      1.5566755258879191e-13,
+      -2.6854242466065084e-13
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 6,
+    "energy": -9.315339836485826,
+    "kkt_max": 0.0001547812154998904,
+    "ground_overlaps": [
+      -6.821096345077786e-14,
+      4.4617612246427504e-14
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 7,
+    "energy": -9.31533991530215,
+    "kkt_max": 4.5732445800351605e-05,
+    "ground_overlaps": [
+      -9.228197800554394e-15,
+      6.498424358435853e-14
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 8,
+    "energy": -9.315339916914077,
+    "kkt_max": 1.5766727598167833e-07,
+    "ground_overlaps": [
+      -1.6540808687871738e-14,
+      1.5015202592765544e-14
+    ],
+    "accepted_step": true
+  }
+]

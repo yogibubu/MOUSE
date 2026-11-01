@@ -1,0 +1,17 @@
+{
+  "stage": "exposed development; frozen before projected-Hamiltonian molecular predictions",
+  "molecules": ["Criegee_Intermediate", "Furofuran"],
+  "targets": ["I001", "I002", "C001", "C002"],
+  "input": "same stationary embedded-PBE0 charge/spin response, lambda 0.9, F/Q one-body average 0.5/0.5",
+  "projection": "unique unweighted Frobenius least-squares fermionic response in the orthonormal Lowdin basis",
+  "projection_formula": "V = (11 C - 3 S + 2 T(C) - 10 T(S))/13",
+  "one_body": "normal order to preserve the input mean Fock at its stationary reference density",
+  "energy_offset_ev": 0,
+  "active_space": "common molecular occupied/virtual union of leading NTOs of the two retained target transitions; extend each sector by frontier canonical orbitals to three occupied and three virtual",
+  "wavefunction": "CAS(6,6) spin-singlet full CI in the selected common active space, inactive orbitals frozen initially",
+  "assignment": "transition-density overlap with retained target amplitudes, maximum-weight unique assignment; overlap >= 0.7 and margin >= 0.05",
+  "numerical_stage": "vertical CASCI first; optimize orbitals only after character and energy diagnostics",
+  "new_DFT_calculations": false,
+  "nuclear_derivative_claims": false,
+  "limitations": ["new approximate Hamiltonian projection", "not blind", "fixed compact valence basis", "no universal accuracy claim"]
+}

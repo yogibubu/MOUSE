@@ -1,0 +1,26 @@
+[
+  {
+    "iteration": 0,
+    "energy": -10.231421590823482,
+    "overlap": 2.3262582941414006e-15,
+    "residual_max": 0.03374333486994501,
+    "fidelity": 0.9973446487136914,
+    "accepted_step": true
+  },
+  {
+    "iteration": 1,
+    "energy": -10.232306077726017,
+    "overlap": -3.664769516397183e-18,
+    "residual_max": 0.0005502976933210984,
+    "fidelity": 0.9977940626498287,
+    "accepted_step": true
+  },
+  {
+    "iteration": 2,
+    "energy": -10.232306174465599,
+    "overlap": 6.768404625772395e-20,
+    "residual_max": 9.778567493234913e-08,
+    "fidelity": 0.9977971452785351,
+    "accepted_step": true
+  }
+]

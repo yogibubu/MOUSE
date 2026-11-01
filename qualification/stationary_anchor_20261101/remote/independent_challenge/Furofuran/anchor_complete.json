@@ -1,0 +1,19 @@
+{
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "stationary_orbital_fock_error": 2.7418517482860725e-15,
+  "density_fixed_point_error": 1.2685098527143168e-09,
+  "independent_full_ao_fock_error": 5.215272658176673e-13,
+  "energy_fock_derivative_error": 1.0496669922144264e-09,
+  "wall_seconds": 15.024745580041781,
+  "peak_rss_kib": 1127956,
+  "frozen_core": true,
+  "xc": "PBE0",
+  "scf_exchange_fraction": 0.25,
+  "source_sha256": "583151b373feefc0acd93967ca675daab4488675c7447395fe5148bf3b75eafc",
+  "energy_labels_used": false,
+  "reference_sha256": "2fcb35f85d6fe0fa0474ed51235cfcd419c2fada56f08628df94663a476a3ead",
+  "embedding_sha256": "5027c1cc0014b69ef701c6f023cd5992fc7b7e129dd20e69554270b187011477",
+  "protocol_sha256": "d23b7489b267076f3afa9491719245438f4f4f7f4e5836a0b0a9893519df8a7c",
+  "energy_origin": "fixed core constant omitted; no excitation offset"
+}

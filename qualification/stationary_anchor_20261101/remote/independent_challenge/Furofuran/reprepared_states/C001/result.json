@@ -1,0 +1,71 @@
+{
+  "qualified": true,
+  "energy_hartree": -18.544155573372077,
+  "parent_energies": [
+    -18.52486475771001,
+    -18.563446389034144
+  ],
+  "kkt_max": 3.4166453867521e-11,
+  "ground_overlaps": [
+    1.867730512099167e-17,
+    3.8774746120299006e-16
+  ],
+  "state_fidelities": [
+    0.9717972884537439,
+    0.9717972884543296
+  ],
+  "active_frame_drift": 2.9976021664879227e-15,
+  "iterations": 4,
+  "multipliers": [
+    -2.6527062497243022e-11,
+    2.6540222437033618e-11
+  ],
+  "source_sha256": "08e44964c9b346bb7f18ba2c4826ac836d8a6128321eeda8c2ae87ef70331991",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "nuclear_response_implemented": false,
+  "id": "C001",
+  "molecule": "Furofuran",
+  "family": "pi_pi",
+  "rank_caps": [
+    0.9799064939657053,
+    0.9799064939657274
+  ],
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "preparation": "common new-ground NTO active frame, not the old-model cross-parent Gram",
+  "driver_source_sha256": "17463e89692553b28742fd723aeb143901fbe82183e34d88b8de34a9f289c648",
+  "protocol_sha256": "6cbf476e7463bb5619888dcb1962053ba475ca509b15c0ac0770c8b882246211",
+  "parent_gaps_ev": [
+    6.128240396147224,
+    5.0783807241858785
+  ],
+  "excitation_ev": 5.603310560166552,
+  "tda": [
+    {
+      "excitation_ev": 7.291844304900394,
+      "root": 1,
+      "overlap": 0.9937417016826887,
+      "margin": 0.9350502949748739,
+      "qualified": true,
+      "orbitals": "own stationary corrected GFN2 ground orbitals",
+      "operator": "complete singlet TDA A including nonlocal exchange correction",
+      "lambda_exchange": 0.9
+    },
+    {
+      "excitation_ev": 6.297993453272974,
+      "root": 1,
+      "overlap": 0.9832590791901425,
+      "margin": 0.8437265171419238,
+      "qualified": true,
+      "orbitals": "own stationary corrected GFN2 ground orbitals",
+      "operator": "complete singlet TDA A including nonlocal exchange correction",
+      "lambda_exchange": 0.9
+    }
+  ]
+}

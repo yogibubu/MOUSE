@@ -1,0 +1,506 @@
+[
+  {
+    "iteration": 0,
+    "energy": -20.103508657129503,
+    "kkt_max": 0.023920347957045875,
+    "ground_overlaps": [
+      -8.102029852130632e-11,
+      0.0004252496661493028
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 1,
+    "energy": -20.102788117809446,
+    "kkt_max": 0.02222185223526985,
+    "ground_overlaps": [
+      -0.0021931932230819158,
+      -0.0004961979581567603
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 2,
+    "energy": -20.103741476520117,
+    "kkt_max": 0.018087996150051158,
+    "ground_overlaps": [
+      -0.004268916686179663,
+      -0.0009235801985498473
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 3,
+    "energy": -20.104952043757137,
+    "kkt_max": 0.017392552331365267,
+    "ground_overlaps": [
+      -0.007279599741121392,
+      -0.003917844302927207
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 4,
+    "energy": -20.105614751196605,
+    "kkt_max": 0.016458406151287984,
+    "ground_overlaps": [
+      -0.006302381476357477,
+      -0.005431633079752478
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 5,
+    "energy": -20.104994215355504,
+    "kkt_max": 0.011880987950222476,
+    "ground_overlaps": [
+      -0.005363800178571992,
+      -0.006236865643631672
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 6,
+    "energy": -20.10561412246652,
+    "kkt_max": 0.010700109508466164,
+    "ground_overlaps": [
+      -0.004579478685551723,
+      -0.007343068988529446
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 7,
+    "energy": -20.104923929646986,
+    "kkt_max": 0.011467938547079143,
+    "ground_overlaps": [
+      -0.004000441148067595,
+      -0.00809039279095263
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 8,
+    "energy": -20.105534223093457,
+    "kkt_max": 0.008928642637145247,
+    "ground_overlaps": [
+      -0.0033616923118456347,
+      -0.008715614601993396
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 9,
+    "energy": -20.105189494373942,
+    "kkt_max": 0.010858335032214431,
+    "ground_overlaps": [
+      -0.003204504836539456,
+      -0.008810567732498997
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 10,
+    "energy": -20.105229979914675,
+    "kkt_max": 0.011447007110312062,
+    "ground_overlaps": [
+      -0.00319926951988448,
+      -0.00880362062345414
+    ],
+    "accepted_step": false
+  },
+  {
+    "iteration": 11,
+    "energy": -20.105229979914675,
+    "kkt_max": 0.011447199063714728,
+    "ground_overlaps": [
+      -0.00319926951988448,
+      -0.00880362062345414
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 12,
+    "energy": -20.106210855090346,
+    "kkt_max": 0.00513784455616369,
+    "ground_overlaps": [
+      0.00020746127797278727,
+      -3.4144411836293983e-06
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 13,
+    "energy": -20.105754502798774,
+    "kkt_max": 0.003963670922546684,
+    "ground_overlaps": [
+      0.00024370872200384785,
+      -0.0006287278292243652
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 14,
+    "energy": -20.105395664968235,
+    "kkt_max": 0.0032978126639338504,
+    "ground_overlaps": [
+      0.00027585430727552134,
+      -0.0009308905038016533
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 15,
+    "energy": -20.105227543859414,
+    "kkt_max": 0.003169753190313241,
+    "ground_overlaps": [
+      0.00028287448633012923,
+      -0.0009418061796660452
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 16,
+    "energy": -20.105054866536975,
+    "kkt_max": 0.0032112170790552863,
+    "ground_overlaps": [
+      0.0002833447629941123,
+      -0.0009588555531702282
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 17,
+    "energy": -20.105369356522488,
+    "kkt_max": 0.0031946108998217493,
+    "ground_overlaps": [
+      0.00021733825200432732,
+      -0.001277467869936143
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 18,
+    "energy": -20.105206425672925,
+    "kkt_max": 0.0031821387377841378,
+    "ground_overlaps": [
+      0.00023262162389854285,
+      -0.001199656850880213
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 19,
+    "energy": -20.10503740573745,
+    "kkt_max": 0.0031882475041813897,
+    "ground_overlaps": [
+      0.00023860446599883957,
+      -0.0011488852956623014
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 20,
+    "energy": -20.105194911217467,
+    "kkt_max": 0.003238074482683113,
+    "ground_overlaps": [
+      0.0002580272823703834,
+      -0.001127669655569414
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 21,
+    "energy": -20.105027877811075,
+    "kkt_max": 0.0032187023651287926,
+    "ground_overlaps": [
+      0.00025670902689562737,
+      -0.0010917824879098648
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 22,
+    "energy": -20.10485282026358,
+    "kkt_max": 0.003259287131101035,
+    "ground_overlaps": [
+      0.0002418325042965171,
+      -0.001066182199417306
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 23,
+    "energy": -20.105018343867933,
+    "kkt_max": 0.0032643351679316115,
+    "ground_overlaps": [
+      0.00024019890991109298,
+      -0.001050850706640661
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 24,
+    "energy": -20.10484518506236,
+    "kkt_max": 0.0032716599172839217,
+    "ground_overlaps": [
+      0.00022939237918575704,
+      -0.0010334018596585583
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 25,
+    "energy": -20.10492857730319,
+    "kkt_max": 0.0032867820128953686,
+    "ground_overlaps": [
+      0.00024003653092188244,
+      -0.0010079549933060174
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 26,
+    "energy": -20.10475362404938,
+    "kkt_max": 0.0032901774474475734,
+    "ground_overlaps": [
+      0.0002204154168650671,
+      -0.0009958215982905003
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 27,
+    "energy": -20.104838170735228,
+    "kkt_max": 0.0032975352390104194,
+    "ground_overlaps": [
+      0.00022880610519366808,
+      -0.0009713332571271423
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 28,
+    "energy": -20.104751023707756,
+    "kkt_max": 0.0033055473380270532,
+    "ground_overlaps": [
+      0.00023294833179152567,
+      -0.0009498716880886962
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 29,
+    "energy": -20.104834985966544,
+    "kkt_max": 0.00330713298245223,
+    "ground_overlaps": [
+      0.00024018358243829574,
+      -0.0009307801323896089
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 30,
+    "energy": -20.104748503277982,
+    "kkt_max": 0.0033124016653986827,
+    "ground_overlaps": [
+      0.00024286988535552253,
+      -0.0009128097330791397
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 31,
+    "energy": -20.104662739514772,
+    "kkt_max": 0.003313093734053351,
+    "ground_overlaps": [
+      0.00024259029594736294,
+      -0.0008943435976222074
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 32,
+    "energy": -20.104578925250017,
+    "kkt_max": 0.0033338092452753453,
+    "ground_overlaps": [
+      0.0002395519151283433,
+      -0.0008743480548462006
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 33,
+    "energy": -20.10466266618121,
+    "kkt_max": 0.003332839410129609,
+    "ground_overlaps": [
+      0.00023947812956633425,
+      -0.0008552629690936692
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 34,
+    "energy": -20.104578524899395,
+    "kkt_max": 0.003341136285419744,
+    "ground_overlaps": [
+      0.00023683465389428017,
+      -0.0008390058596065532
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 35,
+    "energy": -20.104496797263558,
+    "kkt_max": 0.003350303366487619,
+    "ground_overlaps": [
+      0.0002317182858633679,
+      -0.0008204720710140663
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 36,
+    "energy": -20.10441772141344,
+    "kkt_max": 0.00335163660264099,
+    "ground_overlaps": [
+      0.00022445543219169024,
+      -0.0007995377769034938
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 37,
+    "energy": -20.104342011308383,
+    "kkt_max": 0.0033594864581352906,
+    "ground_overlaps": [
+      0.00021548232210135884,
+      -0.0007759827726251149
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 38,
+    "energy": -20.10442340740965,
+    "kkt_max": 0.003364696891907837,
+    "ground_overlaps": [
+      0.00020753823548152502,
+      -0.0007520090952513064
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 39,
+    "energy": -20.104345780468822,
+    "kkt_max": 0.0033643235589462563,
+    "ground_overlaps": [
+      0.00020068060728399057,
+      -0.0007339534068256276
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 40,
+    "energy": -20.104271753571556,
+    "kkt_max": 0.0033650614169424015,
+    "ground_overlaps": [
+      0.00019211895434633632,
+      -0.00071281086347941
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 41,
+    "energy": -20.104201431843407,
+    "kkt_max": 0.003367922842405738,
+    "ground_overlaps": [
+      0.00018210631221122792,
+      -0.0006887201405211641
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 42,
+    "energy": -20.104279801859946,
+    "kkt_max": 0.0033700737953761837,
+    "ground_overlaps": [
+      0.0001709642160358831,
+      -0.0006631321751335354
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 43,
+    "energy": -20.10420720228133,
+    "kkt_max": 0.003370617549668397,
+    "ground_overlaps": [
+      0.00016364017730457713,
+      -0.0006452628022083688
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 44,
+    "energy": -20.10413859640147,
+    "kkt_max": 0.0033658257124424417,
+    "ground_overlaps": [
+      0.00015470275891715744,
+      -0.000623874638096724
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 45,
+    "energy": -20.104176824490203,
+    "kkt_max": 0.003366223657527019,
+    "ground_overlaps": [
+      0.00015364423191326066,
+      -0.0006104163358140346
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 46,
+    "energy": -20.104109204416623,
+    "kkt_max": 0.003362323243695932,
+    "ground_overlaps": [
+      0.00014481695167516034,
+      -0.0005904907697143222
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 47,
+    "energy": -20.10414680206724,
+    "kkt_max": 0.0033649948829430746,
+    "ground_overlaps": [
+      0.00014358666698452045,
+      -0.0005777299013294852
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  },
+  {
+    "iteration": 48,
+    "energy": -20.1040802851387,
+    "kkt_max": 0.003361553974407365,
+    "ground_overlaps": [
+      0.00013485829819274772,
+      -0.0005590072535672579
+    ],
+    "accepted_step": true,
+    "solver": "projected KKT; multipliers excluded from physical trust radius"
+  }
+]

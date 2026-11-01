@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "energy_hartree": -9.079068522985471,
+  "ground_overlap_squared": 7.626876557218878e-34,
+  "fidelity": 0.9438584710884939,
+  "kkt_max": 4.3021142204224816e-16,
+  "multiplier": 0.08579747252897739,
+  "qualified": true,
+  "iterations": 1,
+  "solver": "KKT stationary point, residual merit, state-overlap guarded",
+  "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+  "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+  "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "checkpoint_resumed": true,
+  "profile": "Q",
+  "gap_ev": 4.862400221200588,
+  "tda": {
+    "excitation_ev": 7.308035076955481,
+    "root": 5,
+    "overlap": 0.9463485436281917,
+    "margin": 0.7297623970675509,
+    "qualified": true,
+    "orbitals": "own stationary corrected GFN2 ground orbitals",
+    "operator": "complete singlet TDA A including nonlocal exchange correction",
+    "lambda_exchange": 0.9
+  },
+  "ground_energy_hartree": -9.257758435261348
+}

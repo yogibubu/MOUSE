@@ -1,0 +1,81 @@
+{
+  "id": "I002",
+  "molecule": "Criegee_Intermediate",
+  "family": "pi_pi",
+  "qualified": true,
+  "parents": [
+    {
+      "success": true,
+      "energy_hartree": -9.075063062432818,
+      "ground_overlap_squared": 3.450690528535558e-34,
+      "fidelity": 0.9447992339138344,
+      "kkt_max": 2.0042541062499417e-10,
+      "multiplier": 0.09145897741081893,
+      "qualified": true,
+      "iterations": 1,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+      "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+      "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+      "host": "oracle.sns.it",
+      "threads": 2,
+      "checkpoint_resumed": true,
+      "profile": "F",
+      "gap_ev": 4.971394355391805,
+      "tda": {
+        "excitation_ev": 7.6637947274869145,
+        "root": 3,
+        "overlap": 0.9102692165097879,
+        "margin": 0.5710958511616009,
+        "qualified": true,
+        "orbitals": "own stationary corrected GFN2 ground orbitals",
+        "operator": "complete singlet TDA A including nonlocal exchange correction",
+        "lambda_exchange": 0.9
+      },
+      "ground_energy_hartree": -9.257758435261344
+    },
+    {
+      "success": true,
+      "energy_hartree": -9.079068522985471,
+      "ground_overlap_squared": 7.626876557218878e-34,
+      "fidelity": 0.9438584710884939,
+      "kkt_max": 4.3021142204224816e-16,
+      "multiplier": 0.08579747252897739,
+      "qualified": true,
+      "iterations": 1,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+      "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+      "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+      "host": "oracle.sns.it",
+      "threads": 2,
+      "checkpoint_resumed": true,
+      "profile": "Q",
+      "gap_ev": 4.862400221200588,
+      "tda": {
+        "excitation_ev": 7.308035076955481,
+        "root": 5,
+        "overlap": 0.9463485436281917,
+        "margin": 0.7297623970675509,
+        "qualified": true,
+        "orbitals": "own stationary corrected GFN2 ground orbitals",
+        "operator": "complete singlet TDA A including nonlocal exchange correction",
+        "lambda_exchange": 0.9
+      },
+      "ground_energy_hartree": -9.257758435261348
+    }
+  ],
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "scope": "new stationary embedded anchor; separately optimized, ground-orthogonal rank-one ROKS parents",
+  "source_sha256": "40e82365d7fc452599a2b78243ce49f4d6cac6cfd9acd94844473ecb45f87fc7",
+  "protocol_sha256": "d23b7489b267076f3afa9491719245438f4f4f7f4e5836a0b0a9893519df8a7c",
+  "excitation_ev": 4.916897288296196
+}

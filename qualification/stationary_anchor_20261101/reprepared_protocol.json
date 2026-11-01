@@ -1,0 +1,18 @@
+{
+  "stage": "exposed development, frozen before re-prepared joint predictions",
+  "reason": "the old-model relative frame is part of that model's preparation; re-anchoring both parents on a new common ground requires preparing the state frame there",
+  "targets": ["I001", "I002", "C001", "C002"],
+  "initial_state": "NTOs of the retained target transition projected into the new stationary ground occupied/virtual sectors",
+  "initial_F_Q_frames": "identical active orbitals; full active cross-overlap identity, held fixed",
+  "orbital_spaces": "common active pair and independent spectator rotations, as in RelativeActiveFrame",
+  "ground_constraints": "both exact determinant overlaps zero",
+  "solver": "projected KKT residual trust in physical orbital coordinates; multipliers analytically eliminated",
+  "state_qualification": "original reference transition overlap >= 0.7; local CSF overlap >= 0.9",
+  "numerical_gate": "KKT max < 1e-8; full relative active-frame drift < 1e-9",
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "new_DFT_jobs": false,
+  "nuclear_constraint_response": "not yet implemented",
+  "limitations": ["not blind", "rank-one trial", "separate candidate from transporting the old relative-frame constraint", "accuracy not assumed"]
+}

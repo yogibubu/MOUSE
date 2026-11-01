@@ -1,0 +1,109 @@
+{
+  "scope": "four already exposed states in two development molecules; no blind or universal claim",
+  "rows": [
+    {
+      "id": "I001",
+      "molecule": "Criegee_Intermediate",
+      "family": "n_pi",
+      "reference_ev": 2.403,
+      "original_ev": 2.1126880376219956,
+      "orthogonal_previous_ev": 2.1126880376219956,
+      "stationary_common_ev": 2.0466557479351177,
+      "stationary_common_error_ev": -0.3563442520648823,
+      "tda_ev": 2.4557004336958985,
+      "tda_qualified": true,
+      "kkt_max": 1.3637034210201016e-12,
+      "fidelity": 0.9980942900879933,
+      "ground_overlap_squared": 6.27229544314023e-44,
+      "result_sha256": "1e2a1b42cdfe6c4575a8c111fa85b2b71a9fb801f7af8e26705465aff6ecabf0"
+    },
+    {
+      "id": "I002",
+      "molecule": "Criegee_Intermediate",
+      "family": "pi_pi",
+      "reference_ev": 3.715,
+      "original_ev": 1.850800611842393,
+      "orthogonal_previous_ev": 4.850224374498252,
+      "stationary_common_ev": 4.918424590077592,
+      "stationary_common_error_ev": 1.2034245900775922,
+      "tda_ev": 7.5150690553543456,
+      "tda_qualified": true,
+      "kkt_max": 9.865025463184907e-14,
+      "fidelity": 0.9443298948343217,
+      "ground_overlap_squared": 1.411172390690869e-27,
+      "result_sha256": "75cedb57f6362ef42bb3efb0036bd659d75d0f15e738df3281542958155a9564"
+    },
+    {
+      "id": "C001",
+      "molecule": "Furofuran",
+      "family": "pi_pi",
+      "reference_ev": 5.489000000000001,
+      "original_ev": 5.522605508310233,
+      "orthogonal_previous_ev": 5.509973118157285,
+      "stationary_common_ev": 5.603316520421575,
+      "stationary_common_error_ev": 0.11431652042157392,
+      "tda_ev": 6.797649030522865,
+      "tda_qualified": true,
+      "kkt_max": 9.992584776123692e-11,
+      "fidelity": 0.9717963087842916,
+      "ground_overlap_squared": 1.3164250190067918e-32,
+      "result_sha256": "69706543bd02ea4881e44a809d3dd89f1aff6fac0541b84a2b96be4c1280567c"
+    },
+    {
+      "id": "C002",
+      "molecule": "Furofuran",
+      "family": "pi_pi",
+      "reference_ev": 6.026999999999999,
+      "original_ev": 7.067333815979192,
+      "orthogonal_previous_ev": 7.048379216525351,
+      "stationary_common_ev": 7.07260723302613,
+      "stationary_common_error_ev": 1.0456072330261303,
+      "tda_ev": 7.0565787151320105,
+      "tda_qualified": true,
+      "kkt_max": 1.4419874616365793e-10,
+      "fidelity": 0.9061632692016834,
+      "ground_overlap_squared": 4.232195471099532e-21,
+      "result_sha256": "44bfae99d6907436582b2b33a1263fe3098ad7d8bff78b0ccc0d9f9dc3cde026"
+    }
+  ],
+  "metrics": {
+    "original_ev": {
+      "n": 4,
+      "mae_ev": 0.8071126687062591,
+      "rmse_ev": 1.0773746067600607,
+      "maxabs_ev": 1.8641993881576069
+    },
+    "orthogonal_previous_ev": {
+      "n": 4,
+      "mae_ev": 0.6169721678897232,
+      "rmse_ev": 0.7772822511144032,
+      "maxabs_ev": 1.135224374498252
+    },
+    "stationary_common_ev": {
+      "n": 4,
+      "mae_ev": 0.6799231488975447,
+      "rmse_ev": 0.8187757206007268,
+      "maxabs_ev": 1.2034245900775922
+    },
+    "tda_ev": {
+      "n": 4,
+      "mae_ev": 1.54774930867628,
+      "rmse_ev": 2.0746021773411596,
+      "maxabs_ev": 3.8000690553543457
+    }
+  },
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "tda_comparison": "same new corrected model and own stationary orbitals, derived from the embedded-DFT anchor; not native unmodified GFN2-orbital TDA",
+  "conclusion": "Stationary-anchor and common-functional numerical coherence established; accuracy does not improve over the preceding ground-orthogonal model; do not promote as transferability correction",
+  "limitations": [
+    "rank one",
+    "no new ground-orthogonality nuclear response",
+    "compact representation limitations unchanged",
+    "common functional differs from averaging separately optimized parent energies"
+  ]
+}

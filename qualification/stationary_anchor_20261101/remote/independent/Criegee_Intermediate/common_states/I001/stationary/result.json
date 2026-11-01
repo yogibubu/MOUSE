@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "energy_hartree": -9.182545223797831,
+  "ground_overlap_squared": 6.27229544314023e-44,
+  "fidelity": 0.9980942900879933,
+  "kkt_max": 1.3637034210201016e-12,
+  "multiplier": -2.3563832502227046e-16,
+  "qualified": true,
+  "iterations": 5,
+  "solver": "KKT stationary point, residual merit, state-overlap guarded",
+  "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+  "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+  "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "checkpoint_resumed": true
+}

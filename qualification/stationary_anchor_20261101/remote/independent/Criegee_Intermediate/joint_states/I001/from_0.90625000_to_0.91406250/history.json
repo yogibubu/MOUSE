@@ -1,0 +1,42 @@
+[
+  {
+    "iteration": 0,
+    "energy": -9.238338330010214,
+    "kkt_max": 0.001173465178521474,
+    "ground_overlaps": [
+      -3.4735327006876277e-17,
+      -7.564385045819673e-16
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 1,
+    "energy": -9.238339647537382,
+    "kkt_max": 0.0001771057018699619,
+    "ground_overlaps": [
+      -1.5721122445879268e-17,
+      9.779571366717535e-17
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 2,
+    "energy": -9.238339735545939,
+    "kkt_max": 9.538353837671862e-05,
+    "ground_overlaps": [
+      -7.237104175876065e-18,
+      -9.538672621682722e-17
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 3,
+    "energy": -9.238339740247087,
+    "kkt_max": 1.9058478280379652e-06,
+    "ground_overlaps": [
+      -1.3824833878741112e-18,
+      -8.318046913225371e-17
+    ],
+    "accepted_step": true
+  }
+]

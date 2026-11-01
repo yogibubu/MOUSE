@@ -1,0 +1,92 @@
+[
+  {
+    "iteration": 0,
+    "energy": -9.33597650419238,
+    "kkt_max": 0.0021189465527965546,
+    "ground_overlaps": [
+      -2.6235144562766173e-13,
+      -1.5713335102574083e-12
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 1,
+    "energy": -9.335976212097158,
+    "kkt_max": 0.0017139711701729817,
+    "ground_overlaps": [
+      3.4026048145046787e-12,
+      -4.172637675015439e-12
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 2,
+    "energy": -9.335977790704106,
+    "kkt_max": 0.00133883442419105,
+    "ground_overlaps": [
+      4.209630570928095e-12,
+      -8.050463910795152e-12
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 3,
+    "energy": -9.33598032345829,
+    "kkt_max": 0.0006362984232800046,
+    "ground_overlaps": [
+      5.123663248773289e-13,
+      -2.023097256698772e-12
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 4,
+    "energy": -9.335981622650806,
+    "kkt_max": 0.0007416512083878691,
+    "ground_overlaps": [
+      -6.478908971277848e-12,
+      1.961302305365815e-12
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 5,
+    "energy": -9.335982229771746,
+    "kkt_max": 0.0001887417286622114,
+    "ground_overlaps": [
+      -2.956436811705624e-11,
+      5.894528407116098e-12
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 6,
+    "energy": -9.33598231992219,
+    "kkt_max": 6.567784660876408e-05,
+    "ground_overlaps": [
+      -2.1232562648144225e-11,
+      3.446705732589854e-11
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 7,
+    "energy": -9.335982334086278,
+    "kkt_max": 6.346969682469463e-06,
+    "ground_overlaps": [
+      -3.210644046797779e-12,
+      -1.0433305251616048e-12
+    ],
+    "accepted_step": true
+  },
+  {
+    "iteration": 8,
+    "energy": -9.335982334250575,
+    "kkt_max": 1.1234698823455622e-07,
+    "ground_overlaps": [
+      1.2479580805283465e-13,
+      -2.3768629513466607e-13
+    ],
+    "accepted_step": true
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "profiles": [
+    {
+      "profile": "F",
+      "fock_error": 8.881784197001252e-16,
+      "ground_density_drift": 1.3490707662100476e-08,
+      "minimum_ground_curvature": 0.3931758140849423,
+      "ground_residual": 2.635646554350982e-15,
+      "response_directional_error": 3.656257137329977e-09,
+      "model_sha256": "36cace8024c2785ee834dbc34809816fb6c43c01bc745069fddcd9b51d853aff",
+      "response_fingerprint": "ff4c0390693d79f893986b80f34c469f357d02acd8fffede3526ab5fa480eaec"
+    },
+    {
+      "profile": "Q",
+      "fock_error": 9.43689570931383e-16,
+      "ground_density_drift": 1.3596884507194318e-08,
+      "minimum_ground_curvature": 0.4259489655752992,
+      "ground_residual": 2.1814903815405805e-15,
+      "response_directional_error": 3.6590326948915397e-09,
+      "model_sha256": "1ba413290ae819daaafa957ad958dfed07598e08dda64e48bf1c1528732c1163",
+      "response_fingerprint": "a098cd86a89b1cb9081df61adc07c6f42ecf48de9375cff4929d21c13caddae7"
+    }
+  ],
+  "response_center": "stationary embedded PBE0 density",
+  "lambda_exchange": 0.9,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "offset_ev": 0,
+  "wall_seconds": 1.1681814180337824,
+  "source_sha256": "f211e9deda7d2722dd1ba68246ccc0ac68284fca8493fe069198d5d37d535094",
+  "anchor_sha256": "c55bd5549af6903ecdeef5faf0b3e0fad2d921499343d2f13b0c373cfe7f18d6",
+  "protocol_sha256": "d23b7489b267076f3afa9491719245438f4f4f7f4e5836a0b0a9893519df8a7c",
+  "energy_labels_used": false
+}

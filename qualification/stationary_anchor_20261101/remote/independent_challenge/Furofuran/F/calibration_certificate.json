@@ -1,0 +1,10 @@
+{
+  "profile": "F",
+  "fock_error": 4.440892098500626e-15,
+  "ground_density_drift": 4.750589921442838e-10,
+  "minimum_ground_curvature": 1.119627079755901,
+  "ground_residual": 7.824522862913004e-16,
+  "response_directional_error": 4.9215326258789105e-11,
+  "model_sha256": "0de4f0135ad765883b68a7d57ed87c796bcc806783a8b348fd6a2d7d84d744b4",
+  "response_fingerprint": "2ba13d0c9fa08dda65b5aa570da9c368b7a2004659639b5b456002f5b1c9d37a"
+}

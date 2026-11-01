@@ -1,0 +1,9 @@
+{
+  "host": "oracle.sns.it",
+  "metric_commutator_max": 8.985593109855916e-09,
+  "electron_count_error": 1.4210854715202004e-14,
+  "restricted_density_idempotency_error": 5.773159728050814e-15,
+  "checkpoint_sha256": "c55bd5549af6903ecdeef5faf0b3e0fad2d921499343d2f13b0c373cfe7f18d6",
+  "source_sha256": "dc008617bd69b997bb129e625fbed7b9421ed752effd5cbe1bf2fa6a4debc934",
+  "new_scf_performed": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "C001",
+  "molecule": "Furofuran",
+  "family": "pi_pi",
+  "qualified": false,
+  "parents": [
+    {
+      "success": true,
+      "energy_hartree": -18.524900622688694,
+      "ground_overlap_squared": 8.954949510400888e-38,
+      "fidelity": 0.971556477991594,
+      "kkt_max": 1.0441777650860296e-13,
+      "multiplier": 0.0,
+      "qualified": true,
+      "iterations": 0,
+      "solver": "KKT stationary point, residual merit, state-overlap guarded",
+      "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+      "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+      "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+      "host": "oracle.sns.it",
+      "threads": 2,
+      "checkpoint_resumed": false,
+      "profile": "F",
+      "gap_ev": 6.127264460359531,
+      "tda": {
+        "excitation_ev": 7.291844304900386,
+        "root": 1,
+        "overlap": 0.9937417016826885,
+        "margin": 0.9350502949748739,
+        "qualified": true,
+        "orbitals": "own stationary corrected GFN2 ground orbitals",
+        "operator": "complete singlet TDA A including nonlocal exchange correction",
+        "lambda_exchange": 0.9
+      },
+      "ground_energy_hartree": -18.750073438397887
+    },
+    {
+      "profile": "Q",
+      "qualified": false,
+      "reached_t": 0.5078125,
+      "checkpoint_retained": true
+    }
+  ],
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "scope": "new stationary embedded anchor; separately optimized, ground-orthogonal rank-one ROKS parents",
+  "source_sha256": "40e82365d7fc452599a2b78243ce49f4d6cac6cfd9acd94844473ecb45f87fc7",
+  "protocol_sha256": "d23b7489b267076f3afa9491719245438f4f4f7f4e5836a0b0a9893519df8a7c"
+}

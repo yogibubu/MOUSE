@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "energy_hartree": -9.07700966540393,
+  "ground_overlap_squared": 1.411172390690869e-27,
+  "fidelity": 0.9443298948343217,
+  "kkt_max": 9.865025463184907e-14,
+  "multiplier": 0.08871802623466649,
+  "qualified": true,
+  "iterations": 3,
+  "solver": "KKT stationary point, residual merit, state-overlap guarded",
+  "constraint_orbital_curvature": "analytic, singular-safe determinant second cofactors and exponential retraction",
+  "source_sha256": "3e321ef990471339e663eb5d43125a3fdc9dd16a6be7ff4593cd701a1dde3574",
+  "overlap_source_sha256": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "checkpoint_resumed": true,
+  "id": "I002",
+  "molecule": "Criegee_Intermediate",
+  "family": "pi_pi",
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "identity_energy_gradient_hessian_errors": [
+    1.7763568394002505e-15,
+    5.030698080332741e-16,
+    3.552713678800501e-15
+  ],
+  "model_sha256": "de95858b4a5d8454cf2fa4c55194114f6fcc1c5893e5207f8fcd77918f853b68",
+  "driver_source_sha256": "f63af92df6acd129009a7c2d180f2265462079360996f3f8e3c8290353a71483",
+  "protocol_sha256": "39dcbd0ea94faf409fe9f82b946a2eb7bb06e5e68aa2d814fa41294a6afcd5c0",
+  "scope": "one averaged energy functional, fully shared orbitals; different from averaging separately optimized parent energies",
+  "warm_start_checkpoint": "/home/enzo/MOUSE-stationary-anchor-20261101/independent/Criegee_Intermediate/states/I002/F/final/final.npz",
+  "excitation_ev": 4.918424590077592,
+  "tda": {
+    "excitation_ev": 7.5150690553543456,
+    "root": 5,
+    "overlap": 0.957054847550889,
+    "margin": 0.7920618934046306,
+    "qualified": true,
+    "orbitals": "own stationary corrected GFN2 ground orbitals",
+    "operator": "complete singlet TDA A including nonlocal exchange correction",
+    "lambda_exchange": 0.9
+  }
+}

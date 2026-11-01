@@ -1,0 +1,71 @@
+{
+  "qualified": true,
+  "energy_hartree": -9.182588379769786,
+  "parent_energies": [
+    -9.185504992807012,
+    -9.17967176673256
+  ],
+  "kkt_max": 4.552880242286893e-15,
+  "ground_overlaps": [
+    6.2087948518833395e-22,
+    -9.023090989553494e-16
+  ],
+  "state_fidelities": [
+    0.9981110988278562,
+    0.9981110988277213
+  ],
+  "active_frame_drift": 4.884981308350689e-15,
+  "iterations": 5,
+  "multipliers": [
+    -3.2520048816964502e-12,
+    3.2586720038412154e-12
+  ],
+  "source_sha256": "08e44964c9b346bb7f18ba2c4826ac836d8a6128321eeda8c2ae87ef70331991",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "nuclear_response_implemented": false,
+  "id": "I001",
+  "molecule": "Criegee_Intermediate",
+  "family": "n_pi",
+  "rank_caps": [
+    0.9999343584613894,
+    0.9999343584613911
+  ],
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "preparation": "common new-ground NTO active frame, not the old-model cross-parent Gram",
+  "driver_source_sha256": "17463e89692553b28742fd723aeb143901fbe82183e34d88b8de34a9f289c648",
+  "protocol_sha256": "6cbf476e7463bb5619888dcb1962053ba475ca509b15c0ac0770c8b882246211",
+  "parent_gaps_ev": [
+    1.9661163302271123,
+    2.1248464979993034
+  ],
+  "excitation_ev": 2.045481414113208,
+  "tda": [
+    {
+      "excitation_ev": 2.343629216603075,
+      "root": 1,
+      "overlap": 0.9996091098951082,
+      "margin": 0.9824353022383316,
+      "qualified": true,
+      "orbitals": "own stationary corrected GFN2 ground orbitals",
+      "operator": "complete singlet TDA A including nonlocal exchange correction",
+      "lambda_exchange": 0.9
+    },
+    {
+      "excitation_ev": 2.5677410755447205,
+      "root": 1,
+      "overlap": 0.9996452623812689,
+      "margin": 0.9831830098823969,
+      "qualified": true,
+      "orbitals": "own stationary corrected GFN2 ground orbitals",
+      "operator": "complete singlet TDA A including nonlocal exchange correction",
+      "lambda_exchange": 0.9
+    }
+  ]
+}

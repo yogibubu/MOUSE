@@ -1,0 +1,18 @@
+{
+  "stage": "exposed development, frozen before common-functional predictions",
+  "reason": "fully shared-orbital limit removes parent-frame redundancy and defines a single reusable ground-program functional",
+  "functional": "E_common[Palpha,Pbeta] = 0.5 E_F[Palpha,Pbeta] + 0.5 E_Q[Palpha,Pbeta] at the same spin densities",
+  "implementation": "charge, spin and response center are identical; only the one-body linear field is averaged",
+  "objective_change": "optimize the averaged functional, rather than average separately optimized energies",
+  "targets": ["I001", "I002", "C001", "C002"],
+  "initial_state": "new common-ground NTO frame of the retained projected reference transition",
+  "solver": "single spin-pure ROKS orbital KKT, analytic ground-overlap gradient and curvature",
+  "qualification": "KKT max < 1e-8; target transition overlap >= 0.7; local CSF overlap >= 0.9",
+  "identity_test": "energy, orbital gradient and Hessian equal the original F/Q average at identical orbitals to < 1e-10",
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "new_DFT_jobs": false,
+  "nuclear_constraint_response": "not yet implemented",
+  "limitations": ["not blind", "rank-one model", "accuracy not assumed", "distinct from the published two-parent optimization contract"]
+}

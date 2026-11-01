@@ -1,0 +1,44 @@
+{
+  "qualified": false,
+  "energy_hartree": -18.49016008848444,
+  "parent_energies": [
+    -18.459743645028404,
+    -18.520576531940478
+  ],
+  "kkt_max": 9.973577752189375e-06,
+  "ground_overlaps": [
+    -1.064636058941337e-09,
+    -1.1279389798983535e-09
+  ],
+  "state_fidelities": [
+    0.9061623266575425,
+    0.9061623266575921
+  ],
+  "active_frame_drift": 5.329070518200751e-15,
+  "iterations": 6,
+  "multipliers": [
+    -0.009668665975619503,
+    -0.009668772358556463
+  ],
+  "source_sha256": "08e44964c9b346bb7f18ba2c4826ac836d8a6128321eeda8c2ae87ef70331991",
+  "host": "oracle.sns.it",
+  "threads": 2,
+  "nuclear_response_implemented": false,
+  "id": "C002",
+  "molecule": "Furofuran",
+  "family": "pi_pi",
+  "rank_caps": [
+    0.9090621430258257,
+    0.9090621430259223
+  ],
+  "energy_labels_used": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "preparation": "common new-ground NTO active frame, not the old-model cross-parent Gram",
+  "driver_source_sha256": "17463e89692553b28742fd723aeb143901fbe82183e34d88b8de34a9f289c648",
+  "protocol_sha256": "6cbf476e7463bb5619888dcb1962053ba475ca509b15c0ac0770c8b882246211"
+}
