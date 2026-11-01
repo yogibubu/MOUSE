@@ -171,3 +171,15 @@ for all four corresponding ROKS states. Code/evidence: 5f69635; candidate
 freeze: 7666f7a. `make_frontier_cisd_assets.py` reads only the bundled
 `data/frontier_cisd` files, so its figure and table rebuild independently of
 the remote electronic calculations.
+
+The final selected optimized-target CID candidate is frozen as 467a9e5 and
+implemented in the public MOUSE/APOC/LINK interfaces in ecb6644. All fifteen
+valence transitions meet the fixed gates: MAE 0.219905 eV, maximum 0.497948 eV.
+Thirteen informed model selection; two post-freeze predictions on historically
+exposed molecules give 0.201994 eV MAE. No universal or blind claim is made.
+Three complete molecular analytic Hessians cover five states. The public
+Criegee Hessian reproduces the qualified matrix within 9.1e-13 Hartree/bohr²;
+actual LINK cold-start/rollback/restart and coherent spin-pure following pass.
+The SI preserves the earlier unsuccessful pilots separately. Rebuild the new
+figure and table with `python make_selected_cid_assets.py`; all its inputs are
+bundled in `data/selected_cid`.

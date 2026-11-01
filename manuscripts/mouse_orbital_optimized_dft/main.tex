@@ -20,7 +20,26 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-An alternative to a semiempirical Tamm--Dancoff description is to optimize an excited-state energy directly with respect to molecular orbitals and differentiate the resulting stationary surface. Inspired by direct orbital optimization and electronic saddle searches developed by Levi and co-workers, we introduce this route in MOUSE using a GFN2-based energy informed by projected ground-state density-functional response. Spin polarization enters a restricted open-shell Kohn--Sham construction with a spin-pure singlet configuration state function. Two complementary effective energy models are combined with fixed equal weights and relative active-orbital constraints, without an additive excitation-energy correction. An analytic constrained orbital response yields nuclear gradients and Hessians, including metric, local-frame, and ground-reference contributions. For a curated set of 19 vertical transitions in 18 molecules, the mean absolute error is 0.183~eV. Four prospective tests give 0.304~eV. A separate completed 14-state extension gives MAEs of 0.492~eV for the original OO model and 0.261~eV for the Q-parent TDA control on corrected GFN2 orbitals, exposing a limitation for multiconfigurational $\pi\pi^*$ states. A minimal-CSF development candidate reduces the extension MAE to 0.228~eV on already exposed data. A subsequent frozen six-state cohort accepts four states and gives 0.675~eV, exposing limits of transferability; the other two states lack adequate compact-space representation. Six excited-state molecular minima, including a symmetry-broken cyclopentadiene descendant, have positive vibrational curvatures; complete finite-difference Hessian checks on nitroxyl and formamide agree within $1.2\times10^{-8}$~\Eh/bohr$^2$. Prepared OO energies are slower than matched GFN2-orbital TDA for all six measured sizes; the method targets differentiated stationary surfaces. The results establish a semiempirical OO-DFT candidate for state-specific potential-energy surfaces and analytic second derivatives, while leaving broad chemical transferability to further validation.
+We develop a semiempirical orbital-optimized excited-state model in MOUSE,
+inspired by Levi and co-workers' direct orbital optimization and electronic
+saddle searches. Native GFN2 spatial orbitals and density-functional orbital
+energy references define a spin-polarized, restricted-open-shell singlet
+functional. A selected configuration interaction combines optimized target
+singlets and double excitations with fixed 50/50 reference weights, exchange
+response scale 0.9, and no fitted excitation-energy offset. The final candidate
+gives a mean absolute error of 0.220 eV for fifteen valence transitions;
+thirteen informed model selection and two were predicted after freezing
+it, giving 0.202 eV MAE on historically exposed molecules. The maximum error
+is 0.498 eV. A matched native-orbital TDA control with the same prepared
+kernel gives 0.966 eV MAE. Complete analytic gradients and Hessians include
+orbital stationarity, CSF metric and moving-ground-projector response and
+are independently verified for five states in three molecules. A portable
+MOUSE/LINK implementation evaluates and follows spin-pure states without
+a TDA solve or new DFT calculation after reference preparation. Earlier
+model cohorts, unsuccessful extensions and their exposure histories remain
+separately documented. The result is a candidate for inexpensive differentiated
+state-specific surfaces; broad blind validation and universal transferability
+are not established.
 \end{abstract}
 
 \section{Introduction}
@@ -289,13 +308,37 @@ An additional exposure-audited manifest was frozen before new predictions: 44 st
 
 Multistate DFT with nonorthogonal state interaction provides complementary motivation for combining optimized configurations; Zhu and co-workers benchmarked this approach with spin-multiplet constraints.\cite{zhu2023nosi} Our overlap-weighted residual construction is a distinct approximation. A separate frontier-CISD research extension is documented in the Supporting Information, including its fixed rank hierarchy, same-kernel native-GFN2-orbital TDA control, and prospective acetone/glyoxal predictions. Its eleven-state MAE is 0.217~eV, but its 0.552~eV glyoxal error exceeds the unchanged maximum-error gate. The two prospective states alone give 0.385~eV MAE. This composite uses the stationary ground-functional energy as its reference rather than the auxiliary state-interaction ground eigenvalue; the associated imbalance is disclosed explicitly. These exploratory results do not replace the frozen-model cohorts above.
 
-\section{Conclusions}
-MOUSE now supports a semiempirical OO-DFT route in which a spin-pure singlet energy is optimized directly in orbital space and differentiated analytically through second order in nuclear coordinates. The implementation combines two fixed DFT-response-informed GFN2 energy models with equal weights and relative active-pair constraints, and reuses the ground-state engine through a new stationary-orbital and constrained-response layer. It therefore provides an energy-based alternative to the TDA route for state-specific molecular surfaces.
+\input{selected_cid_discussion.tex}
 
-The original 19-state MAE is 0.183~eV; the separate exposed 14-state development candidate gives 0.228~eV. The primary frozen prospective cohort accepts four of six states and gives 0.675~eV, including both source-flagged partial-double-character states. Two states are outside compact-space representability. Subsequent molecular and higher-state challenges give 0.537 and 0.400~eV, respectively, with distinct exposure histories. These results establish an implemented candidate, not a universal accuracy improvement over GFN2-orbital TDA. Full F/Q anchor recalibrations at six points are complete, with common-geometry excitation changes up to 0.235~eV. Complete furan and cyclopentadiene Cartesian Hessian checks and independent displaced-gradient checks support analytic correctness. A symmetry-breaking cyclopentadiene descent yields 27 positive vibrational modes; the symmetric furan stationary point has a physically relevant out-of-plane instability and a direct EOM-CCSD comparison. The methodological contribution is a compact spin-adapted stationary energy surface, constrained analytic nuclear response, and reusable ground-state derivative machinery. The remaining transferability errors require improvement of the energy model, rather than a numerical offset or a claim that electronic convergence alone solves accuracy.
+\section{Conclusions}
+MOUSE supports a semiempirical orbital-optimized route with explicit spin
+polarization, spin-pure singlet CSFs, and analytic nuclear gradients and
+Hessians. It reuses ground-state Fock, energy and derivative machinery through
+constrained orbital saddle optimization and implicit response. The final
+selected OO-CID candidate supplements optimized target states with double
+excitations and applies a moving ground-orthogonality projector. Its F/Q
+reference weights remain 50/50 and its exchange-response scale remains 0.9;
+no additive excitation correction is fitted.
+
+The final fifteen-state valence test gives 0.220 eV MAE and 0.498 eV maximum
+error. Thirteen states informed the compact-space choice; two post-freeze
+predictions on historically exposed molecules give 0.202 eV MAE. All pass
+the fixed finite accuracy gates. Complete analytic Hessians for five states
+in three molecules and portable cold-start, coherent APOC tracking and
+accepted-restart checks qualify the implemented surface. Earlier production
+cohorts, numerical acceleration, molecular minima and failed extensions
+remain separately documented rather than being attributed to the final model.
+
+These results support a concrete candidate for differentiated state-specific
+surfaces. They do not establish a universal correction, superiority to all
+calibrated TDA methods, or broad blind chemical transferability. The compact
+valence basis and anchored operators require further assessment for CT,
+Rydberg states and large structural changes. A prospective independent
+geometry/frequency benchmark of the final model remains necessary before
+claiming general predictive performance.
 
 \section*{Data and software availability}
-MOUSE source code is hosted at \url{https://github.com/yogibubu/MOUSE}. The original implementation is committed as \texttt{5620e2d}, with trusted-Newton acceleration in \texttt{49e0c9d}; calculation-generation source hashes are retained separately in the accompanying protocols. The manuscript package includes machine-readable result tables, reference provenance, the validation summary and source-hash protocol, figure-generation code, and supporting information. The underlying qualification archive is \path{qualification/roks_relative_pair_20261030} in the associated working tree. Its transfer audit verifies 561 result files and 30 source files; the remote qualification suite reports 86 passing tests. The automatic cold-start/restart example reproduces its energy within $1.8\times10^{-15}$~\Eh. The multi-CSF development implementation is committed as \texttt{2068ee8}; its verified transfer and qualification logs are in \texttt{1eea614}. The separate \path{qualification/pi_pi_repair_20261031} archive records 141 transferred source/result files, 21 matching local/remote implementation files, upstream model hashes, all blocked development attempts and the effective-rank scoring protocol. The public multi-CSF integration and its full furan Hessian/sensitivity qualification are committed as \texttt{489e899}, with 110 further transferred artifacts and 12 matching local/remote modified implementation files in \path{qualification/multicsf_integration_20261031}. Large phthalimide tensors remain on Oracle with recorded hashes; a complete portable furan model is included. The final numerical solver and restart contracts are committed as \texttt{34965d6}; the exact nuclear-response contraction that completes the phthalimide Hessian is committed as \texttt{4fe3cd8}. Final validation evidence, prediction locks, preparation audit and transfer hashes are retained in \path{qualification/final_validation_20261031}; 46 final core/LINK/APOC regressions, two restart/rank contracts and two exact-response tests pass. The separate spin-pure frontier-CISD pilot, portable state-interaction algebra, independent molecular Hessian checks and prospective-test audit are committed as \texttt{5f69635}; its candidate freeze is \texttt{7666f7a}. These exploratory results remain distinct from the frozen production model. A permanent public dataset identifier has not been assigned to this working draft.
+MOUSE source code is hosted at \url{https://github.com/yogibubu/MOUSE}. The original implementation is committed as \texttt{5620e2d}, with trusted-Newton acceleration in \texttt{49e0c9d}; calculation-generation source hashes are retained separately in the accompanying protocols. The manuscript package includes machine-readable result tables, reference provenance, the validation summary and source-hash protocol, figure-generation code, and supporting information. The underlying qualification archive is \path{qualification/roks_relative_pair_20261030} in the associated working tree. Its transfer audit verifies 561 result files and 30 source files; the remote qualification suite reports 86 passing tests. The automatic cold-start/restart example reproduces its energy within $1.8\times10^{-15}$~\Eh. The multi-CSF development implementation is committed as \texttt{2068ee8}; its verified transfer and qualification logs are in \texttt{1eea614}. The separate \path{qualification/pi_pi_repair_20261031} archive records 141 transferred source/result files, 21 matching local/remote implementation files, upstream model hashes, all blocked development attempts and the effective-rank scoring protocol. The public multi-CSF integration and its full furan Hessian/sensitivity qualification are committed as \texttt{489e899}, with 110 further transferred artifacts and 12 matching local/remote modified implementation files in \path{qualification/multicsf_integration_20261031}. Large phthalimide tensors remain on Oracle with recorded hashes; a complete portable furan model is included. The final numerical solver and restart contracts are committed as \texttt{34965d6}; the exact nuclear-response contraction that completes the phthalimide Hessian is committed as \texttt{4fe3cd8}. Final validation evidence, prediction locks, preparation audit and transfer hashes are retained in \path{qualification/final_validation_20261031}; 46 final core/LINK/APOC regressions, two restart/rank contracts and two exact-response tests pass. The separate spin-pure frontier-CISD pilot, portable state-interaction algebra, independent molecular Hessian checks and prospective-test audit are committed as \texttt{5f69635}; its candidate freeze is \texttt{7666f7a}. These exploratory results remain distinct from the frozen production model. The final selected OO-CID public surface, analytic response and coherent APOC/LINK restart are committed as \texttt{ecb6644}, with candidate freeze \texttt{467a9e5}. Its full 15-state predictions, three molecular Hessian certificates, exact executed sources, portable model example and remote transfer hashes are retained in \path{qualification/response_consistent_nosi_20261101}. A permanent public dataset identifier has not been assigned to this working draft.
 
 \bibliographystyle{unsrtnat}
 \bibliography{references}

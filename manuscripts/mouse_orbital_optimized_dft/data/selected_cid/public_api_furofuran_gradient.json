@@ -1,0 +1,32 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "properties": [
+    "energy",
+    "gradient"
+  ],
+  "wall_seconds": 24.501319083035924,
+  "peak_rss_native": 1561051136,
+  "prediction_errors_ev": {
+    "C001": 1.6342482922482304e-13,
+    "C002": 1.6412649017638614e-11
+  },
+  "derivative_errors": {
+    "C001": {
+      "gradient_error": 1.8225004838612335e-14,
+      "hessian_error": null
+    },
+    "C002": {
+      "gradient_error": 2.656208586415687e-14,
+      "hessian_error": null
+    }
+  },
+  "restart_error_hartree": 3.552713678800501e-14,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_input_reads": 0,
+  "read_paths": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/portable_validation/independent_challenge/Furofuran/checkpoint.npz",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/selected_cid_analytic/independent_challenge/Furofuran/nuclear_response.npz"
+  ],
+  "model_fingerprint": "78450b3ac68f2dcd80356babb3942c0175f073f724d3792a2fa10e0c4d7882d1"
+}

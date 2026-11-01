@@ -1,0 +1,56 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "states": {
+    "V002": [
+      {
+        "direction": 0,
+        "epsilon_bohr": 0.001,
+        "gradient_error": 2.900317661348739e-07,
+        "hessian_direction_error": 6.751078533984156e-07,
+        "independent_gradient": -0.027606701257454347,
+        "analytic_gradient": -0.027606411225688212,
+        "independent_curvature": 0.6798706060351378,
+        "analytic_curvature": 0.6798699309272844
+      },
+      {
+        "direction": 0,
+        "epsilon_bohr": 0.0005,
+        "gradient_error": 7.249022579772224e-08,
+        "hessian_direction_error": 2.52334925621156e-07,
+        "independent_gradient": -0.02760648371591401,
+        "analytic_gradient": -0.027606411225688212,
+        "independent_curvature": 0.67987018326221,
+        "analytic_curvature": 0.6798699309272844,
+        "richardson_gradient_error": 2.362098017183456e-11,
+        "richardson_hessian_error": 1.114106163990769e-07
+      },
+      {
+        "direction": 1,
+        "epsilon_bohr": 0.001,
+        "gradient_error": 1.038168983419352e-08,
+        "hessian_direction_error": 3.296779269024164e-08,
+        "independent_gradient": 0.019064415933023326,
+        "analytic_gradient": 0.01906442631471316,
+        "independent_curvature": 0.07208019603410776,
+        "analytic_curvature": 0.07208016306631507
+      },
+      {
+        "direction": 1,
+        "epsilon_bohr": 0.0005,
+        "gradient_error": 2.612793197076524e-09,
+        "hessian_direction_error": 4.341555140396913e-08,
+        "independent_gradient": 0.019064423701919964,
+        "analytic_gradient": 0.01906442631471316,
+        "independent_curvature": 0.07208011965076366,
+        "analytic_curvature": 0.07208016306631507,
+        "richardson_gradient_error": 2.316098354770979e-11,
+        "richardson_hessian_error": 6.887666610666532e-08
+      }
+    ]
+  },
+  "implementation": "analytic molecular Hessian; displaced calculations used only for independent validation",
+  "SCC_runs": 0,
+  "source_sha256": "a50bdeb40616928131b6ce142d87e49a7a326cb798a54e726c42e70dd457f498",
+  "response_sha256": "7f0ac515dd757f3ae18c2368a9c1e08b1a473da6fe316efc9f6939a652943322",
+  "protocol_sha256": "c2cd4b6aeab3a5abfc74075934874b461b4ee8951420fca3870268f24ed3267c"
+}
