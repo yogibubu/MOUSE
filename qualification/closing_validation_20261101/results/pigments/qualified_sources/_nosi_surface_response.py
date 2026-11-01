@@ -12,7 +12,7 @@ from ._nosi_configurations import basis as configuration_basis,common_core_and_a
 from ._nosi_canonical import block as canonical_block
 
 class MatrixResponse:
-    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True,auxiliary_records=None,scalar_elements=None,scalar_checkpoint=None):
+    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True,auxiliary_records=None,scalar_elements=None,scalar_checkpoint=None,fixed_bra=False):
         if derivatives and getattr(context,'vertical_only',False):raise NotImplementedError('this quadrature adapter supports vertical energies only')
         self.context=context;self.s=context.state;self.reference=reference;self.no=context.state.electron_count//2
         self.nr=context.state.coordinates_bohr.size if derivatives else 0;self.labels=list(labels)
@@ -21,11 +21,15 @@ class MatrixResponse:
         self.scalar_elements={} if scalar_elements is None else scalar_elements
         self.scalar_checkpoint=scalar_checkpoint
         self.scalar=Hamiltonian(self.h,self.w);self.constant_elements={};self.spin_map=np.zeros((4,4,2,2))
+        self.fixed_bra=None
         for i in range(4):
             for j in range(4):
                 m=np.zeros((4,4));m[i,j]=1.;self.spin_map[i,j]=spin_matrix(0.,m)
         if auxiliary_records is not None:
             core,active=common_core_and_active(auxiliary_records)
+            if fixed_bra and not derivatives:
+                from ._nosi_fixed_bra import FixedBraCSF
+                self.fixed_bra=FixedBraCSF(self.scalar,self.ycanonical[:,core],self.ycanonical[:,active])
             metric,matrix,_=canonical_block(configuration_basis(self.ycanonical,auxiliary_records),self.ycanonical,self.h,self.w,core,active)
             for i in range(len(auxiliary_records)):
                 for j in range(i+1):self.constant_elements[(self.nbase+i,self.nbase+j)]=(metric[i,j],matrix[i,j])
@@ -135,7 +139,9 @@ class MatrixResponse:
                     key=(i,j)
                     if key not in self.scalar_elements:
                         scalar=lambda b:[(weight,(a.v,bb.v)) for weight,(a,bb) in b]
-                        self.scalar_elements[key]=self.scalar.csf(scalar(basis[i]),scalar(basis[j]))
+                        if self.fixed_bra is not None and i>=self.nbase and j<self.nbase:
+                            self.scalar_elements[key]=self.fixed_bra.element(scalar(basis[j]),scalar(basis[i]))
+                        else:self.scalar_elements[key]=self.scalar.csf(scalar(basis[i]),scalar(basis[j]))
                         if self.scalar_checkpoint is not None:self.scalar_checkpoint(self.scalar_elements)
                     ov,hval=self.scalar_elements[key];overlap=Jet.constant(ov,0);value=Jet.constant(hval,0)
                 else:overlap,value=csf_element(basis[i],basis[j],self.h,self.w)

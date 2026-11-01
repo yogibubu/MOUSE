@@ -1,0 +1,149 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "rows": [
+    {
+      "orbitals": 8,
+      "occupied_per_spin": 4,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 1.1546319456101628e-14,
+      "cases": 12,
+      "wall_seconds": 0.004570499993860722
+    },
+    {
+      "orbitals": 8,
+      "occupied_per_spin": 4,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 4.440892098500626e-15,
+      "cases": 12,
+      "wall_seconds": 0.004317124956287444
+    },
+    {
+      "orbitals": 12,
+      "occupied_per_spin": 6,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 1.1102230246251565e-14,
+      "cases": 12,
+      "wall_seconds": 0.005361041985452175
+    },
+    {
+      "orbitals": 12,
+      "occupied_per_spin": 6,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 3.6415315207705135e-14,
+      "cases": 12,
+      "wall_seconds": 0.00514979095896706
+    },
+    {
+      "orbitals": 8,
+      "occupied_per_spin": 4,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 1.2212453270876722e-15,
+      "cases": 12,
+      "wall_seconds": 0.0039649159880355
+    },
+    {
+      "orbitals": 8,
+      "occupied_per_spin": 4,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 1.021405182655144e-14,
+      "cases": 12,
+      "wall_seconds": 0.0037499169702641666
+    },
+    {
+      "orbitals": 12,
+      "occupied_per_spin": 6,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 1.1379786002407855e-15,
+      "cases": 12,
+      "wall_seconds": 0.005390625039581209
+    },
+    {
+      "orbitals": 12,
+      "occupied_per_spin": 6,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 2.498001805406602e-16,
+      "cases": 12,
+      "wall_seconds": 0.005176125036086887
+    },
+    {
+      "orbitals": 14,
+      "occupied_per_spin": 7,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 2.4424906541753444e-15,
+      "cases": 12,
+      "wall_seconds": 0.006526749988552183
+    },
+    {
+      "orbitals": 14,
+      "occupied_per_spin": 7,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 4.773959005888173e-15,
+      "cases": 12,
+      "wall_seconds": 0.00622183398809284
+    },
+    {
+      "orbitals": 16,
+      "occupied_per_spin": 8,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 9.325873406851315e-15,
+      "cases": 12,
+      "wall_seconds": 0.007121458009351045
+    },
+    {
+      "orbitals": 16,
+      "occupied_per_spin": 8,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 9.237055564881302e-14,
+      "cases": 12,
+      "wall_seconds": 0.00666316703427583
+    },
+    {
+      "orbitals": 16,
+      "occupied_per_spin": 8,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 2.498001805406602e-16,
+      "cases": 12,
+      "wall_seconds": 0.006746375001966953
+    },
+    {
+      "orbitals": 16,
+      "occupied_per_spin": 8,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 4.218847493575595e-15,
+      "cases": 12,
+      "wall_seconds": 0.007171290984842926
+    }
+  ],
+  "cofactor_max_error": 1.8189894035458565e-12,
+  "orbital_truncation": false,
+  "density_truncation": false,
+  "integral_truncation": false
+}

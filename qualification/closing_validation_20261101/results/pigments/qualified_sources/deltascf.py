@@ -220,6 +220,10 @@ class DeltaSCFContext:
     fock_and_energy: object
     model: tuple
     charge_correction: object | None = None
+    energy_only: object | None = None
+
+    def energy(self,spin_densities):
+        return self.fock_and_energy(spin_densities)[1] if self.energy_only is None else self.energy_only(spin_densities)
 
     def density_response_kernel(self,state):
         base=self.calculator.density_response_kernel(state)
@@ -344,7 +348,7 @@ def prepare_gfn2_deltascf(calculator, coordinates_angstrom, *, ground_state=None
         charge_correction=(spin_reference.bind_charge(state,kernel.partition)
                            if spin_reference is not None and hasattr(spin_reference,'bind_charge') else None)
 
-    def functional(p):
+    def functional(p,with_fock=True):
         dq, dm = kernel._observables(p - p0)
         q = kernel.reference_shell_charges + dq
         m0 = kernel.reference_multipoles
@@ -359,7 +363,7 @@ def prepare_gfn2_deltascf(calculator, coordinates_angstrom, *, ground_state=None
         energy = (float(np.sum(p * core)) + monopole_energy(
             q, interaction, kernel.partition, quadratic_energy_override=quadratic)
             + aes + kernel._d4(m.charges).energy_hartree)
-        return core + kernel.density_dependent_fock(p - p0), energy
+        return (core + kernel.density_dependent_fock(p - p0) if with_fock else None), energy
 
     _, baseline = functional(p0)
     def callback(spin_densities):
@@ -368,7 +372,12 @@ def prepare_gfn2_deltascf(calculator, coordinates_angstrom, *, ground_state=None
         if charge_correction is not None:
             dv,de=charge_correction.evaluate(np.sum(spin_densities,axis=0));f=f+dv;e=e+de
         return f[None, :, :] + spin_fock, state.total_energy_hartree + e - baseline + spin_energy
-    return DeltaSCFContext(calculator, state, kernel, polarization, callback, model,charge_correction)
+    def energy_callback(spin_densities):
+        total=np.sum(spin_densities,axis=0);_,e=functional(total,with_fock=False)
+        e+=polarization.energy(spin_densities) if hasattr(polarization,'energy') else polarization.evaluate(spin_densities)[1]
+        if charge_correction is not None:e+=charge_correction.energy(total) if hasattr(charge_correction,'energy') else charge_correction.evaluate(total)[1]
+        return float(state.total_energy_hartree+e-baseline)
+    return DeltaSCFContext(calculator, state, kernel, polarization, callback, model,charge_correction,energy_only=energy_callback)
 
 
 def delta_cross_overlap(reference_state, context):

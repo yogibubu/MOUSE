@@ -13,7 +13,7 @@ from matrix_gfn2 import GFN2Calculator
 from matrix_gfn2.nosi_surface import PreparedNOSIModel
 from matrix_gfn2.deltascf import prepare_gfn2_deltascf
 from matrix_gfn2.calculator import ANGSTROM_TO_BOHR
-from matrix_gfn2.roks_orbital_response import orbital_residual_action,orbital_residual_jacobian
+from matrix_gfn2.roks_orbital_response import orbital_residual_action,orbital_residual_jacobian,roks_residual_action
 from matrix_gfn2._nosi_orthogonality import ground_overlap_action,ground_overlap_hessian
 with threadpool_limits(2):
  rng=np.random.default_rng(182);anchor=rng.normal(size=(4,3));xyz=anchor+.02*rng.normal(size=anchor.shape);operators=rng.normal(size=(3,12,12));operators=.5*(operators+operators.transpose(0,2,1));symbols=['3s']+['3p']*3+['3d']*5+['1s']*3;atoms=[0]*9+[1,2,3]
@@ -37,5 +37,12 @@ with threadpool_limits(2):
    vector=rng.normal(size=len(left));vector/=np.linalg.norm(vector);action=orbital_residual_action(c,occupations,f,kernel,ctx.polarization,left,right,vector);errors.append(float(np.max(abs(action-matrix@vector))));symmetric_action=orbital_residual_action(c,occupations,f,kernel,ctx.polarization,left,right,vector,symmetric=True);errors.append(float(np.max(abs(symmetric_action-.5*(matrix+matrix.T)@vector))))
  ground=model.arrays['ground'];hc=ground_overlap_hessian(ground,c,s.overlap,occ,left,right);vector=rng.normal(size=len(left));vector/=np.linalg.norm(vector);constraint_error=float(np.max(abs(ground_overlap_action(ground,c,s.overlap,occ,left,right,vector)[1]-hc@vector)));assert constraint_error<1e-10
  assert max(errors)<1e-10
- report=dict(host=socket.getfqdn(),d_harmonic_rotation_error=harmonic_error,d_frame_first_error=first_error,d_frame_second_error=second_error,d_frame_curvature_contraction_error=contraction_error,orbital_Jacobian_action_max_error=max(errors),ground_constraint_action_max_error=constraint_error,finite_differences='frame derivative validation only; no production differences')
+ components=[];combined=np.zeros((len(left),len(left)))
+ for weight,occupations in [(2.,occ),(-1.,triplet)]:
+  density=np.array([(c*o)@c.T for o in occupations]);f,_=ctx.fock_and_energy(density);components.append((weight,occupations,f));combined+=weight*orbital_residual_jacobian(c,occupations,f,kernel,ctx.polarization,left,right)
+ fused_error=0.
+ for repeat in range(3):
+  vector=rng.normal(size=len(left));vector/=np.linalg.norm(vector);fused_error=max(fused_error,float(np.max(abs(roks_residual_action(c,components,kernel,ctx.polarization,left,right,vector)-.5*(combined+combined.T)@vector))))
+ assert fused_error<1e-10
+ report=dict(host=socket.getfqdn(),d_harmonic_rotation_error=harmonic_error,d_frame_first_error=first_error,d_frame_second_error=second_error,d_frame_curvature_contraction_error=contraction_error,orbital_Jacobian_action_max_error=max(errors),fused_ROKS_action_max_error=fused_error,ground_constraint_action_max_error=constraint_error,finite_differences='frame derivative validation only; no production differences')
  (HERE/'pigment_solver_primitives.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

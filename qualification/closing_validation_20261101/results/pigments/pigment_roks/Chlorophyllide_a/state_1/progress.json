@@ -4,11 +4,19 @@
   "hole": 112,
   "particle": 113,
   "row": {
-    "iteration": 2,
-    "energy_hartree": -125.27810228009584,
-    "residual": 0.016984853790473473,
-    "ground_overlap": 0.015990790794878616,
-    "fidelity": 0.6259307095714812,
-    "multiplier": 0.0491093618964853
+    "iteration": 0,
+    "energy_hartree": -125.27432301726198,
+    "residual": 0.001633317761054174,
+    "ground_overlap": 0.0003415140364129673,
+    "fidelity": 0.25153150333166857,
+    "multiplier": 0.010788326468560316,
+    "Krylov_iterations": 40,
+    "Krylov_info": 0,
+    "linear_relative_residual": 0.002164728081371315,
+    "full_Hessian_outer_iterations": 1,
+    "full_Hessian_actions": 2,
+    "full_linear_relative_residual": 0.00027754607922019945,
+    "unscaled_step_norm": 17.907890607357885,
+    "step_scale": 0.011168261208711273
   }
 }

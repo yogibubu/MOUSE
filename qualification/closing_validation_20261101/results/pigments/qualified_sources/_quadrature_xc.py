@@ -68,8 +68,10 @@ class FrozenQuadratureXC:
     def energy(self,spin_densities):
         p=np.asarray(spin_densities);key=self.key(p)
         if key not in self.energy_cache:
-            e=self.base.fock_and_energy(p)[1];ec=self.apply(p.sum(axis=0)-self.ground,0,potential=False)[1];es=self.apply(p[0]-p[1],1,potential=False)[1];self.energy_cache[key]=float(e+ec+es)
+            e=self.base.energy(p);ec=self.apply(p.sum(axis=0)-self.ground,0,potential=False)[1];es=self.apply(p[0]-p[1],1,potential=False)[1];self.energy_cache[key]=float(e+ec+es)
         return self.energy_cache[key]
+    def analytic_gradient(self,*args,**kwargs):
+        raise NotImplementedError('frozen pigment quadrature nuclear jets are not yet bound')
     def density_response_kernel(self,state):
         kernel=self.base.density_response_kernel(state)
         def action(dp):return kernel(dp)+self.apply(dp,0)[0]
@@ -77,6 +79,8 @@ class FrozenQuadratureXC:
         return action
     def register_density_span(self,densities):
         densities=np.asarray(densities);vectors=np.array([self.pack(p) for p in densities]).T;pinverse=np.linalg.pinv(vectors);matrices=[np.zeros((len(densities),len(densities))) for unused in range(2)]
+        self.base.charge_correction.register_density_span(densities,center=self.ground)
+        self.base.polarization.term.register_density_span(densities)
         for phi,weight,charge,spin in self.chunks:
             rho=np.array([self.rho(phi,p) for p in densities])
             for channel,fx in enumerate([charge,spin]):matrices[channel]+=np.einsum('aig,ijg,bjg,g->ab',rho,fx,rho,weight,optimize=True)
@@ -91,6 +95,7 @@ class FrozenQuadratureXC:
 
 
 class _Spin:
+    vertical_only=True
     def __init__(self,parent):self.parent=parent;self.base=parent.base.polarization
     def __getattr__(self,key):return getattr(self.base,key)
     def evaluate(self,p):

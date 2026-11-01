@@ -1,0 +1,84 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "ordinal": 4,
+  "hole": 111,
+  "particle": 114,
+  "excitation_ev": 3.648886031790607,
+  "ground_energy_hartree": -125.41609689726496,
+  "report": {
+    "converged": true,
+    "history": [
+      {
+        "iteration": 0,
+        "energy_hartree": -125.28200761579305,
+        "residual": 0.0009521968197958845,
+        "ground_overlap": 5.579535654442573e-06,
+        "fidelity": 0.9940901705558594,
+        "multiplier": 0.020351189057781164,
+        "Krylov_iterations": 30,
+        "Krylov_info": 0,
+        "linear_relative_residual": 1.8859680573166725e-05
+      },
+      {
+        "iteration": 1,
+        "energy_hartree": -125.28200121157484,
+        "residual": 0.0004792392710751298,
+        "ground_overlap": 0.00018225691809126905,
+        "fidelity": 0.9920217797418607,
+        "multiplier": 0.02048210259667622,
+        "Krylov_iterations": 30,
+        "Krylov_info": 0,
+        "linear_relative_residual": 1.899496129859576e-05
+      },
+      {
+        "iteration": 2,
+        "energy_hartree": -125.28199957931746,
+        "residual": 0.00015403994262291746,
+        "ground_overlap": 0.00015403994262291746,
+        "fidelity": 0.9893066857956441,
+        "multiplier": 0.020523162853999584,
+        "Krylov_iterations": 34,
+        "Krylov_info": 0,
+        "linear_relative_residual": 1.480863303422854e-06
+      },
+      {
+        "iteration": 3,
+        "energy_hartree": -125.28200280883642,
+        "residual": 4.757072829506296e-08,
+        "ground_overlap": 3.120600364307441e-09,
+        "fidelity": 0.9893347691486696,
+        "multiplier": 0.020498774828210102,
+        "Krylov_iterations": 35,
+        "Krylov_info": 0,
+        "linear_relative_residual": 3.174516517308007e-06
+      },
+      {
+        "iteration": 4,
+        "energy_hartree": -125.28200280890044,
+        "residual": 3.492740902380595e-11,
+        "ground_overlap": 5.919597389042522e-13,
+        "fidelity": 0.9893349161409413,
+        "multiplier": 0.020498847887324433
+      }
+    ],
+    "energy_hartree": -125.28200280890044,
+    "residual": 3.492740902380595e-11,
+    "ground_overlap": 5.919597389042522e-13,
+    "fidelity": 0.9893349161409413,
+    "retained_transition_rank": 4,
+    "state_following": "accepted-step coherent CSF overlap",
+    "krylov": "minres",
+    "complete_orbital_rotations": 12195,
+    "dense_orbital_Jacobian_allocated": false,
+    "full_functional_residual": true,
+    "auxiliary_linearization": true
+  },
+  "spin_squared": 0.0,
+  "spin_definition": "coherent shared-orbital two-determinant singlet; ROKS multiplet-sum energy",
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_solves": 0,
+  "full_XC_quadrature_energy": true,
+  "RI_role": "orbital KKT linearization only",
+  "model_sha256": "ed0e67b2b98d21bc47122439f447a28f9c9114c4bb5110b1832402196d10764c"
+}

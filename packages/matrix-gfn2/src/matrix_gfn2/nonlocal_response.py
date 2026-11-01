@@ -117,6 +117,7 @@ class PairTerm:
         self.q0=np.zeros(len(k)) if q0 is None else q0
         self.v=np.zeros(len(k)) if v is None else v
         self.b=self.metric(self.s,self.a) if metric_operators is None else metric_operators
+        self._density_span=None
     @staticmethod
     def metric(s,a):return .5*(s@a+a@s)
     def moments(self,p):return self.b.reshape(len(self.b),-1)@np.asarray(p).ravel()
@@ -125,6 +126,23 @@ class PairTerm:
     def evaluate(self,p):
         q=self.moments(p);dq=q-self.q0
         return self.potential(self.k@dq+self.v),.5*float(dq@self.k@dq)+float(self.v@q)
+    def energy(self,p):
+        if self._density_span is not None:
+            center,vectors,pinverse,quadratic,linear,constant=self._density_span
+            delta=(np.asarray(p)-center).ravel();coeff=pinverse@delta
+            if np.linalg.norm(vectors@coeff-delta)<1e-12:
+                return .5*float(coeff@quadratic@coeff)+float(linear@coeff)+constant
+        q=self.moments(p);dq=q-self.q0
+        return .5*float(dq@self.k@dq)+float(self.v@q)
+    def register_density_span(self,densities,*,center=None):
+        """Exact energy contraction in a supplied fixed density subspace."""
+        densities=np.asarray(densities);vectors=densities.reshape(len(densities),-1).T
+        center=np.zeros_like(self.s) if center is None else np.asarray(center)
+        qcenter=self.moments(center);offset=qcenter-self.q0
+        moments=self.b.reshape(len(self.b),-1)@vectors;weighted=self.k@moments
+        quadratic=moments.T@weighted;field=self.k@offset+self.v
+        linear=moments.T@field;constant=.5*float(offset@self.k@offset)+float(self.v@qcenter)
+        self._density_span=(center.copy(),vectors,np.linalg.pinv(vectors),quadratic,linear,constant)
     def response(self,p):return self.potential(self.k@self.moments(p))
     def response_batch(self,p):
         """Apply the same linear operator to a batch using matrix products."""
@@ -202,6 +220,7 @@ class PairSpin:
     def evaluate(self,p):
         f,e,m=self.base.evaluate(p);v,de=self.term.evaluate(p[0]-p[1])
         return f+np.array([v,-v]),e+de,m
+    def energy(self,p):return self.base.evaluate(p)[1]+self.term.energy(p[0]-p[1])
     def response_batch(self,p):
         base=(self.base.response_batch(p) if hasattr(self.base,'response_batch')
               else np.asarray([self.base.evaluate(x)[0] for x in p]))

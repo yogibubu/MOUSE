@@ -67,6 +67,28 @@ def orbital_residual_action(c, occupations, focks, kernel, polarization, left, r
     return result
 
 
+def roks_residual_action(c,components,kernel,polarization,left,right,vector):
+    """Symmetric ROKS action with one shared charge and batched spin response."""
+    rotation=np.zeros_like(c);rotation[left,right]=vector;rotation[right,left]=-vector
+    dc=c@rotation;changes=[]
+    for weight,occupations,focks in components:
+        part=np.array([(dc*occupation)@c.T for occupation in occupations])
+        changes.append(part+part.transpose(0,2,1))
+    changes=np.asarray(changes)
+    # The mixed and triplet ROKS components have identical total occupations.
+    totals=np.array([np.sum(occupations,axis=0) for weight,occupations,focks in components])
+    if not np.array_equal(totals[0],totals[1]):raise ValueError('ROKS components must share a total density')
+    charge=kernel(changes[0].sum(axis=0));spins=polarization.response_batch(changes)
+    result=np.zeros(len(left));q=np.zeros_like(c)
+    for (weight,occupations,focks),spin in zip(components,spins):
+        for occupation,fock,df in zip(occupations,focks,charge[None]+spin):
+            mo=dc.T@fock@c+c.T@fock@dc+c.T@df@c
+            result+=2*weight*mo[left,right]*(occupation[right]-occupation[left])
+            q+=2*weight*(c.T@fock@c)*occupation[None,:]
+    correction=.5*(rotation@q-q@rotation)
+    return result+correction[left,right]-correction[right,left]
+
+
 def run_roks_orbital_newton(context, coefficients, occupations, *,
                             orbital_tolerance=1e-9, maximum_evaluations=100,
                             maximum_step=.5, certify_index=False, trial_guard=None):

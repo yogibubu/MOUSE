@@ -41,13 +41,23 @@ def run():
  for sample in range(4):
   c=s.coefficients;dm=np.array([c[:,:no]@c[:,:no].T]*2);q=rng.normal(size=dm.shape);q=.02*(q+q.transpose(0,2,1));dm+=q
   f,e=ctx.fock_and_energy(dm);fo,eo=original.fock_and_energy(dm);dp=rng.normal(size=(n,n));dp=.5*(dp+dp.T);dc=ctx.density_response_kernel(s)(dp);do=original.density_response_kernel(s)(dp);sp=np.array([dp,-dp]);sc=ctx.polarization.response_batch(sp[None])[0];so=original.polarization.response_batch(sp[None])[0]
-  errors.append(dict(energy=abs(e-eo),Fock=float(np.max(abs(f-fo))),charge_response=float(np.max(abs(dc-do))),spin_response=float(np.max(abs(sc-so)))))
+  ctx.energy_cache.clear();energy_only_error=max(abs(ctx.energy(dm)-e),abs(base.energy(dm)-base.fock_and_energy(dm)[1]))
+  errors.append(dict(energy=abs(e-eo),energy_only=energy_only_error,Fock=float(np.max(abs(f-fo))),charge_response=float(np.max(abs(dc-do))),spin_response=float(np.max(abs(sc-so)))))
+ sites=list(range(no-2,no+2));ctx.register_density_span(np.array([np.outer(s.coefficients[:,j],s.coefficients[:,j]) for j in sites]));span_error=0.
+ for hole in sites[:2]:
+  occupations=np.zeros((2,n));occupations[:,:no]=1;occupations[0,hole]=0;occupations[0,no]=1;dm=np.array([(s.coefficients*o)@s.coefficients.T for o in occupations]);ctx.energy_cache.clear();span_error=max(span_error,abs(ctx.energy(dm)-ctx.fock_and_energy(dm)[1]))
+ assert span_error<1e-10
  a=old.arrays;matrices=[]
  for context,response in [(original,r),(ctx,reference)]:
   engine=MatrixResponse(context,response,a['ground'],a['states'],a['multipliers'],a['auxiliary_frame'],old.labels,a['h'],a['eri'],derivatives=False,auxiliary_records=old.auxiliary_records);hh,ss,eg=engine.matrices(np.zeros(0));matrices.append((hh.v,ss.v))
  matrix_error=max(float(np.max(abs(a-b))) for a,b in zip(*matrices));ground=a['ground'];c=a['states'][0];transition=np.outer(ground[:,:no].T@s.overlap@c[:,0],ground[:,no:].T@s.overlap@c[:,no]);transition/=np.linalg.norm(transition);rotation=rng.normal(size=(n,n));rotation-=rotation.T;rotation*=.006/np.linalg.norm(rotation)
- coefficient,multiplier,solver=solve_roks(ctx,c@expm(rotation),ground,transition,a['multipliers'][0],tolerance=1e-11,linearization_context=base)
- report=dict(host=socket.getfqdn(),molecule=name,errors=errors,spin_pure_CI_matrix_max_error=matrix_error,RI_preconditioned_solver=solver,RI_diagnostic=certificate,RI_role='preconditioner only; full quadrature restores exact XC energy and residual',nuclear_derivatives_supported=False)
+ fast=MatrixResponse(ctx,reference,a['ground'],a['states'],a['multipliers'],a['auxiliary_frame'],old.labels,a['h'],a['eri'],derivatives=False,auxiliary_records=old.auxiliary_records,fixed_bra=True);hh,ss,eg=fast.matrices(np.zeros(0));fixed_error=max(float(np.max(abs(hh.v-matrices[1][0]))),float(np.max(abs(ss.v-matrices[1][1]))));assert fixed_error<1e-9
+ coefficient,multiplier,solver=solve_roks(ctx,c@expm(rotation),ground,transition,a['multipliers'][0],tolerance=1e-11,linearization_context=base,exact_refinement=True)
+ try:ctx.analytic_gradient(None,None)
+ except NotImplementedError:pass
+ else:raise AssertionError('vertical quadrature must reject nuclear gradient requests')
+ assert ctx.polarization.vertical_only
+ report=dict(host=socket.getfqdn(),molecule=name,errors=errors,registered_span_energy_max_error=span_error,spin_pure_CI_matrix_max_error=matrix_error,fixed_bra_CI_matrix_max_error=fixed_error,RI_preconditioned_solver=solver,RI_diagnostic=certificate,RI_role='preconditioner only; full quadrature restores exact XC energy and residual',nuclear_derivatives_supported=False,nuclear_gradient_rejection_verified=True)
  write(root/'certificate.json',report);assert max(max(row.values()) for row in errors)<1e-8 and matrix_error<1e-9;print(json.dumps(report,indent=2),flush=True)
 
 if __name__=='__main__':

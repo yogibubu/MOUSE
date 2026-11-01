@@ -15,13 +15,14 @@ def _apply(mask,annihilate,create):
 
 def block(basis,canonical,h,eri,core,active):
  y=np.asarray(canonical);core=list(core);active=list(active);na=len(active);ns=2*na
- hmo=y.T@h@y;w=np.einsum('pqrs,pi,qj,rk,sl->ijkl',eri,y,y,y,y,optimize=True)
- hc=hmo[np.ix_(active,active)].copy()
- for k in core:hc+=2*w[np.ix_(active,active,[k],[k])][:,:,0,0]-w[np.ix_(active,[k],[k],active)][:,0,0,:]
- ec=2*np.trace(hmo[np.ix_(core,core)])
- for i in core:
-  for j in core:ec+=2*w[i,i,j,j]-w[i,j,j,i]
- wa=w[np.ix_(active,active,active,active)];orb=np.tile(np.arange(na),2);spin=np.repeat(np.arange(2),na)
+ ya=y[:,active];pc=2*y[:,core]@y[:,core].T
+ if core:
+  j=np.einsum('pqrs,rs->pq',eri,pc,optimize=True);k=np.einsum('prsq,rs->pq',eri,pc,optimize=True)
+  ec=float(np.sum(pc*h)+.5*np.sum(pc*j)-.25*np.sum(pc*k));hc=ya.T@(h+j-.5*k)@ya
+ else:ec=0.;hc=ya.T@h@ya
+ # Only active indices need a four-index transformation. The core has
+ # already been contracted exactly into its scalar and one-body fields.
+ wa=np.einsum('pqrs,pi,qj,rk,sl->ijkl',eri,ya,ya,ya,ya,optimize=True);orb=np.tile(np.arange(na),2);spin=np.repeat(np.arange(2),na)
  hs=hc[np.ix_(orb,orb)]*(spin[:,None]==spin[None,:]);v=wa[np.ix_(orb,orb,orb,orb)].transpose(0,2,1,3)
  mask=(spin[:,None,None,None]==spin[None,None,:,None])&(spin[None,:,None,None]==spin[None,None,None,:]);g=v*mask;g=g-g.swapaxes(2,3)
  rows={};terms=[];mapping={a:i for i,a in enumerate(active)}

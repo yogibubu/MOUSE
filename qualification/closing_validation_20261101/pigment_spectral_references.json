@@ -1,0 +1,73 @@
+{
+  "consulted_utc": "2026-11-01T21:09:14.429220+00:00",
+  "exposure": "Spectroscopic references consulted after the baseline beta-carotene CI result; subsequent active-space expansion is exposed development, not blind validation",
+  "energy_conversion": "E/eV = 1239.8419843320026 / wavelength_nm",
+  "comparability": "Solution absorption maxima, gas-phase 0-0 estimates and fluorescence energies must not be treated as matched gas-phase vertical references",
+  "hamiltonian_parameters_refitted": false,
+  "references": [
+    {
+      "molecule": "Beta_carotene",
+      "observable": "Absorption maximum",
+      "solvent": "n-hexane",
+      "wavelength_nm": 450.0,
+      "energy_ev": 2.755204409626672,
+      "source": "https://pubs.rsc.org/en/content/articlehtml/2016/ra/c6ra03016e"
+    },
+    {
+      "molecule": "Beta_carotene",
+      "observable": "Absorption maxima",
+      "solvent": "100% acetone",
+      "wavelengths_nm": [
+        454.0,
+        480.0
+      ],
+      "energies_ev": [
+        2.7309294809074944,
+        2.583004134025005
+      ],
+      "source": "https://doi.org/10.1016/j.dib.2019.103875"
+    },
+    {
+      "molecule": "Chlorophyllide_a",
+      "observable": "Red absorption maximum",
+      "solvent": "90% acetone",
+      "wavelength_nm": 665.0,
+      "energy_ev": 1.8644240365894775,
+      "source": "https://doi.org/10.1016/j.dib.2019.103875"
+    },
+    {
+      "molecule": "Chlorophyll_a",
+      "observable": "Red and blue absorption maxima",
+      "solvent": "90% acetone",
+      "wavelengths_nm": [
+        663.0,
+        431.0
+      ],
+      "energies_ev": [
+        1.8700482418280582,
+        2.8766635367331848
+      ],
+      "source": "https://doi.org/10.1016/j.dib.2019.103875"
+    },
+    {
+      "molecule": "Beta_carotene",
+      "observable": "Solvatochromic extrapolation of gas-phase S2 0-0 origin; not a measured vertical energy",
+      "wavenumber_range_cm_inverse": [
+        23000.0,
+        23600.0
+      ],
+      "energy_range_ev": [
+        2.8516365639636057,
+        2.926027083023526
+      ],
+      "source": "https://doi.org/10.1088/1674-1056/19/1/013102"
+    },
+    {
+      "molecule": "Beta_carotene",
+      "observable": "Room-temperature S1 fluorescence-derived energy; not a vertical excitation at the ground geometry",
+      "wavenumber_cm_inverse": 13200.0,
+      "uncertainty_cm_inverse": 300.0,
+      "source": "https://doi.org/10.1016/0009-2614(94)87092-6"
+    }
+  ]
+}

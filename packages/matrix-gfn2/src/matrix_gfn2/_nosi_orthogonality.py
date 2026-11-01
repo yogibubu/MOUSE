@@ -26,11 +26,14 @@ def ground_overlap_jet(ground,c,overlap,occupations,left,right):
 
 def ground_overlap_action(ground,c,overlap,occupations,left,right,vector,*,symmetric=True):
     """Singular-safe analytic overlap-Hessian action, with O(n^2) storage."""
+    return prepare_ground_overlap_action(ground,c,overlap,occupations,left,right,symmetric=symmetric)(vector)
+
+
+def prepare_ground_overlap_action(ground,c,overlap,occupations,left,right,*,symmetric=True):
+    """Factor the fixed overlap once for all Krylov vectors at one geometry."""
     no=int(np.sum(occupations[0]));ov=ground[:,:no].T@overlap@c
-    rotation=np.zeros_like(c);rotation[left,right]=vector;rotation[right,left]=-vector
-    change=ov@rotation
     def determinant(indices):
-        a=ov[:,indices];da=change[:,indices];u,s,vh=np.linalg.svd(a)
+        a=ov[:,indices];u,s,vh=np.linalg.svd(a)
         phase=np.linalg.det(u)*np.linalg.det(vh)
         products=np.array([np.prod(np.delete(s,i)) for i in range(no)])
         cofactor=phase*(u*products)@vh
@@ -38,18 +41,24 @@ def ground_overlap_action(ground,c,overlap,occupations,left,right,vector,*,symme
         for i in range(no):
             for j in range(no):
                 if i!=j:weights[i,j]=phase*np.prod(np.delete(s,[i,j]))
-        x=u.T@da@vh.T;derivative=-weights*x.T
-        np.fill_diagonal(derivative,weights@np.diag(x))
-        return float(np.linalg.det(a)),cofactor,float(np.sum(cofactor*da)),u@derivative@vh
+        return float(np.linalg.det(a)),cofactor,u,vh,weights
     ia,ib=[np.flatnonzero(o) for o in occupations]
-    da,ga,dda,dga=determinant(ia);db,gb,ddb,dgb=determinant(ib)
-    derivative=np.zeros_like(ov);mixed=np.zeros_like(ov)
+    first,second=determinant(ia),determinant(ib);da,ga=first[:2];db,gb=second[:2]
+    derivative=np.zeros_like(ov)
     derivative[:,ia]+=np.sqrt(2)*db*ga;derivative[:,ib]+=np.sqrt(2)*da*gb
-    mixed[:,ia]+=np.sqrt(2)*(ddb*ga+db*dga)
-    mixed[:,ib]+=np.sqrt(2)*(dda*gb+da*dgb)
-    q=ov.T@derivative;dq=change.T@derivative+ov.T@mixed
-    if symmetric:dq+=.5*(rotation@q-q@rotation)
-    return float(np.sqrt(2)*(dda*db+da*ddb)),dq[left,right]-dq[right,left]
+    q=ov.T@derivative
+    def action(vector):
+        rotation=np.zeros_like(c);rotation[left,right]=vector;rotation[right,left]=-vector;change=ov@rotation
+        def variation(data,indices):
+            value,cofactor,u,vh,weights=data;d=change[:,indices];x=u.T@d@vh.T;dcofactor=-weights*x.T
+            np.fill_diagonal(dcofactor,weights@np.diag(x))
+            return float(np.sum(cofactor*d)),u@dcofactor@vh
+        dda,dga=variation(first,ia);ddb,dgb=variation(second,ib);mixed=np.zeros_like(ov)
+        mixed[:,ia]+=np.sqrt(2)*(ddb*ga+db*dga);mixed[:,ib]+=np.sqrt(2)*(dda*gb+da*dgb)
+        dq=change.T@derivative+ov.T@mixed
+        if symmetric:dq+=.5*(rotation@q-q@rotation)
+        return float(np.sqrt(2)*(dda*db+da*ddb)),dq[left,right]-dq[right,left]
+    return action
 
 def ground_overlap_hessian(ground,c,overlap,occupations,left,right):
     """Analytic exponential-chart curvature, including singular determinants."""

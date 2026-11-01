@@ -17,7 +17,7 @@ with threadpool_limits(2):
    matrix=h.jk if exchange else h.j;expected=float(p.ravel()@matrix@q.ravel());actual=h.same(p,q) if exchange else h.coulomb(p,q);error=max(error,abs(actual-expected))
  assert error==0.,error
  start=time.monotonic()
- for filename in ['validate_pigment_solver_primitives.py','validate_matrix_free_roks.py','validate_density_pair_chart.py','validate_exact_quadrature.py']:
+ for filename in ['validate_fixed_bra.py','validate_pigment_solver_primitives.py','validate_matrix_free_roks.py','validate_density_pair_chart.py','validate_exact_quadrature.py']:
   print('QUALIFY',filename,flush=True);subprocess.run(['/Users/vincenzobarone/.venvs/matrix/bin/python',str(HERE/filename)],cwd=HERE,check=True,env=dict(os.environ,VECLIB_MAXIMUM_THREADS='2'))
  import pytest
  paths=[str(BASE/'source/qualification'/filename) for filename in ['test_nosi_contracts.py','test_state_interaction.py','test_screened_cid.py']];status=pytest.main(['-q']+paths);assert status==0

@@ -1,0 +1,22 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "state": 3,
+  "hole": 112,
+  "particle": 114,
+  "row": {
+    "iteration": 0,
+    "energy_hartree": -125.29132928371943,
+    "residual": 0.003030206814253111,
+    "ground_overlap": 0.0008498437845331607,
+    "fidelity": 0.9761259535436,
+    "multiplier": -0.030718986232785843,
+    "Krylov_iterations": 25,
+    "Krylov_info": 0,
+    "linear_relative_residual": 0.0012439569821540773,
+    "full_Hessian_outer_iterations": 1,
+    "full_Hessian_actions": 2,
+    "full_linear_relative_residual": 0.0002466699039487615,
+    "unscaled_step_norm": 16.054002519544454,
+    "step_scale": 0.012457952448712782
+  }
+}

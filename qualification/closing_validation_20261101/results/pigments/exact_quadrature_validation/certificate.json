@@ -4,30 +4,36 @@
   "errors": [
     {
       "energy": 1.7763568394002505e-15,
+      "energy_only": 8.881784197001252e-16,
       "Fock": 1.6653345369377348e-16,
       "charge_response": 8.881784197001252e-16,
       "spin_response": 2.4424906541753444e-15
     },
     {
       "energy": 0.0,
+      "energy_only": 1.7763568394002505e-15,
       "Fock": 1.6653345369377348e-16,
       "charge_response": 9.992007221626409e-16,
       "spin_response": 1.3322676295501878e-15
     },
     {
       "energy": 8.881784197001252e-16,
+      "energy_only": 0.0,
       "Fock": 1.1102230246251565e-16,
       "charge_response": 1.1102230246251565e-15,
       "spin_response": 1.5543122344752192e-15
     },
     {
       "energy": 8.881784197001252e-16,
+      "energy_only": 1.7763568394002505e-15,
       "Fock": 1.3877787807814457e-16,
       "charge_response": 8.881784197001252e-16,
       "spin_response": 1.1102230246251565e-15
     }
   ],
+  "registered_span_energy_max_error": 8.881784197001252e-16,
   "spin_pure_CI_matrix_max_error": 3.552713678800501e-15,
+  "fixed_bra_CI_matrix_max_error": 1.4242781075485484e-15,
   "RI_preconditioned_solver": {
     "converged": true,
     "history": [
@@ -39,50 +45,58 @@
         "fidelity": 0.9999984991294174,
         "multiplier": -3.0077924950499947e-15,
         "Krylov_iterations": 7,
-        "Krylov_info": 0
+        "Krylov_info": 0,
+        "linear_relative_residual": 0.01486845002011299,
+        "full_Hessian_outer_iterations": 0,
+        "full_Hessian_actions": 1,
+        "full_linear_relative_residual": 0.014907688340991624,
+        "unscaled_step_norm": 0.0034202705408564217,
+        "step_scale": 1.0
       },
       {
         "iteration": 1,
-        "energy_hartree": -5.776067843235577,
-        "residual": 9.736348270950439e-05,
+        "energy_hartree": -5.776067843235576,
+        "residual": 9.736348270956684e-05,
         "ground_overlap": 5.138340089649719e-06,
         "fidelity": 0.9999999629492974,
-        "multiplier": -4.931823878729313e-06,
+        "multiplier": -4.931823878729731e-06,
         "Krylov_iterations": 14,
-        "Krylov_info": 0
+        "Krylov_info": 0,
+        "linear_relative_residual": 0.005536627774643958,
+        "full_Hessian_outer_iterations": 0,
+        "full_Hessian_actions": 1,
+        "full_linear_relative_residual": 0.005505809519708606,
+        "unscaled_step_norm": 0.0002908198286563346,
+        "step_scale": 1.0
       },
       {
         "iteration": 2,
-        "energy_hartree": -5.7760678529729965,
-        "residual": 3.2251446202064096e-07,
-        "ground_overlap": -1.5959894516584332e-07,
+        "energy_hartree": -5.776067852972995,
+        "residual": 3.2251446213166326e-07,
+        "ground_overlap": -1.5959894516584356e-07,
         "fidelity": 0.9999999999991026,
-        "multiplier": 1.7406621756463757e-07,
+        "multiplier": 1.7406621755395818e-07,
         "Krylov_iterations": 17,
-        "Krylov_info": 0
+        "Krylov_info": 0,
+        "linear_relative_residual": 0.0001792826282027072,
+        "full_Hessian_outer_iterations": 1,
+        "full_Hessian_actions": 2,
+        "full_linear_relative_residual": 1.1128728913679145e-06,
+        "unscaled_step_norm": 1.4519394301843992e-06,
+        "step_scale": 1.0
       },
       {
         "iteration": 3,
-        "energy_hartree": -5.776067852973282,
-        "residual": 3.7835161647537133e-10,
-        "ground_overlap": -1.2724398416728326e-11,
+        "energy_hartree": -5.7760678529732825,
+        "residual": 7.071486733586317e-13,
+        "ground_overlap": 4.649901841053778e-14,
         "fidelity": 1.0,
-        "multiplier": 8.774926242593115e-11,
-        "Krylov_iterations": 18,
-        "Krylov_info": 0
-      },
-      {
-        "iteration": 4,
-        "energy_hartree": -5.776067852973283,
-        "residual": 8.082690826821808e-13,
-        "ground_overlap": 2.225697240965976e-15,
-        "fidelity": 1.0,
-        "multiplier": -3.8313528566843676e-16
+        "multiplier": 1.863417565784232e-13
       }
     ],
-    "energy_hartree": -5.776067852973283,
-    "residual": 8.082690826821808e-13,
-    "ground_overlap": 2.225697240965976e-15,
+    "energy_hartree": -5.7760678529732825,
+    "residual": 7.071486733586317e-13,
+    "ground_overlap": 4.649901841053778e-14,
     "fidelity": 1.0,
     "retained_transition_rank": 1,
     "state_following": "anchor transition subspace",
@@ -126,5 +140,6 @@
     "approximation": "RI-V response density with exact charge/dipole/quadrupole constraints; full embedded density used for f_xc"
   },
   "RI_role": "preconditioner only; full quadrature restores exact XC energy and residual",
-  "nuclear_derivatives_supported": false
+  "nuclear_derivatives_supported": false,
+  "nuclear_gradient_rejection_verified": true
 }

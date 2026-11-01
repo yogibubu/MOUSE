@@ -8,14 +8,14 @@ from types import SimpleNamespace
 import numpy as np
 from scipy.linalg import expm
 from scipy.sparse.linalg import LinearOperator, gmres, minres
-from .roks_orbital_response import orbital_residual_action
-from ._nosi_orthogonality import ground_overlap_jet, ground_overlap_action
+from .roks_orbital_response import roks_residual_action
+from ._nosi_orthogonality import ground_overlap_jet, prepare_ground_overlap_action
 from ._nosi_refine import normalize
 
 
 def solve(context, coefficients, ground, transition, multiplier=0., *,
           tolerance=1e-10, maximum_iterations=80, maximum_step=.2, checkpoint=None, linearization_context=None,
-          local_state_following=False, krylov='gmres'):
+          local_state_following=False, krylov='gmres',exact_refinement=False):
     c=normalize(coefficients,context.state.overlap);n=len(c);no=context.state.electron_count//2
     occ=np.zeros((2,n));occ[:,:no]=1;occ[0,0]=0;occ[0,no]=1
     triplet=np.array([np.maximum(*occ),np.minimum(*occ)])
@@ -50,10 +50,10 @@ def solve(context, coefficients, ground, transition, multiplier=0., *,
         if iteration==maximum_iterations:break
         state=SimpleNamespace(**vars(context.state));state.coefficients=c;state.alpha_occupations,state.beta_occupations=occ
         kernel=linear.density_response_kernel(state)
+        constraint=prepare_ground_overlap_action(ground,c,s,occ,left,right) if mu else None
         def action(vector):
-            x=vector[:-1];result=np.zeros(len(left))
-            for weight,o,f in components:result+=weight*orbital_residual_action(c,o,f,kernel,linear.polarization,left,right,x,symmetric=True)
-            if mu:result-=mu*ground_overlap_action(ground,c,s,occ,left,right,x)[1]
+            x=vector[:-1];result=roks_residual_action(c,components,kernel,linear.polarization,left,right,x)
+            if constraint is not None:result-=mu*constraint(x)[1]
             return np.r_[result-vector[-1]*j,-j@x]
         diagonal=np.zeros(len(left))
         for weight,o,f in components:
@@ -67,11 +67,42 @@ def solve(context, coefficients, ground, transition, multiplier=0., *,
         def counted(value):linear_iterations[0]+=1
         rtol=min(.03,max(1e-4,error**.5))
         if krylov=='gmres':step,info=gmres(operator,-residual,M=preconditioner,rtol=rtol,atol=1e-14,restart=40,maxiter=15,callback=counted,callback_type='pr_norm')
-        elif krylov=='minres':step,info=minres(operator,-residual,M=preconditioner,rtol=rtol,maxiter=600,callback=counted)
+        elif krylov=='minres':
+            step,info=minres(operator,-residual,M=preconditioner,rtol=min(1e-7,rtol*1e-3),maxiter=600,callback=counted)
+            # MINRES uses a backward-error stop, not the relative residual
+            # required by inexact Newton. Verify that residual explicitly.
+            if np.linalg.norm(action(step)+residual)>rtol*np.linalg.norm(residual):
+                step,info=gmres(operator,-residual,x0=step,M=preconditioner,rtol=rtol,atol=1e-14,restart=40,maxiter=15,callback=counted,callback_type='pr_norm')
         else:raise ValueError('unsupported orbital Krylov solver')
         row['Krylov_iterations']=linear_iterations[0];row['Krylov_info']=int(info)
+        row['linear_relative_residual']=float(np.linalg.norm(action(step)+residual)/np.linalg.norm(residual))
+        if exact_refinement and linearization_context is not None:
+            exact_kernel=context.density_response_kernel(state)
+            def exact_action(vector):
+                x=vector[:-1];result=roks_residual_action(c,components,exact_kernel,context.polarization,left,right,x)
+                if constraint is not None:result-=mu*constraint(x)[1]
+                return np.r_[result-vector[-1]*j,-j@x]
+            # Flexible right-preconditioned GMRES: the auxiliary Hessian
+            # supplies each direction, the full quadrature supplies A*z.
+            rhs=-residual;initial=step.copy();image=exact_action(initial);remaining=rhs-image;beta=np.linalg.norm(remaining);target=rtol*np.linalg.norm(rhs);outer=0
+            if beta>target:
+                vectors=[remaining/beta];directions=[];images=[];hessenberg=np.zeros((13,12))
+                for k in range(12):
+                    z,inner_info=gmres(operator,vectors[k],M=preconditioner,rtol=1e-4,atol=1e-14,restart=40,maxiter=15)
+                    az=exact_action(z);w=az.copy()
+                    for unused in range(2):
+                        for i,v in enumerate(vectors):
+                            value=float(v@w);hessenberg[i,k]+=value;w-=value*v
+                    hessenberg[k+1,k]=np.linalg.norm(w);directions.append(z);images.append(az);right_hand=np.zeros(k+2);right_hand[0]=beta;coeff=np.linalg.lstsq(hessenberg[:k+2,:k+1],right_hand,rcond=None)[0]
+                    step=initial+np.asarray(directions).T@coeff;remaining=rhs-image-np.asarray(images).T@coeff;outer=k+1
+                    if np.linalg.norm(remaining)<=target:break
+                    if hessenberg[k+1,k]<1e-14:break
+                    vectors.append(w/hessenberg[k+1,k])
+            row['full_Hessian_outer_iterations']=outer;row['full_Hessian_actions']=outer+1;row['full_linear_relative_residual']=float(np.linalg.norm(remaining)/np.linalg.norm(rhs))
         if not np.all(np.isfinite(step)):raise RuntimeError('nonfinite analytic orbital KKT step')
-        norm=np.linalg.norm(step[:-1]);step*=min(1.,maximum_step/max(norm,1e-300))
+        norm=np.linalg.norm(step[:-1]);row['unscaled_step_norm']=float(norm);row['step_scale']=min(1.,maximum_step/max(norm,1e-300))
+        if checkpoint is not None:checkpoint(c,mu,row)
+        step*=row['step_scale']
         accepted=False
         for fraction in [1.,.5,.25,.125,.0625,.03125,.015625]:
             rotation=np.zeros((n,n));rotation[left,right]=fraction*step[:-1];rotation[right,left]=-fraction*step[:-1]

@@ -47,7 +47,7 @@ def run(name,requested_state=None):
   history=[]
   def callback(coefficient,multiplier,row):
    temporary=checkpoint.with_suffix('.tmp.npz');np.savez_compressed(temporary,coefficients=coefficient,multiplier=multiplier,model_sha256=hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest());temporary.replace(checkpoint);history.append(row);write(folder/'progress.json',dict(molecule=name,state=ordinal+1,hole=hole,particle=particle,row=row));print(name,ordinal+1,row,flush=True)
-  state,mu,report=solve(context,seed,c,transition,mu,tolerance=1e-10,maximum_iterations=100,checkpoint=callback,linearization_context=base,local_state_following=True,krylov='minres')
+  state,mu,report=solve(context,seed,c,transition,mu,tolerance=1e-10,maximum_iterations=100,checkpoint=callback,linearization_context=base,local_state_following=True,krylov='minres',exact_refinement=True)
   result=dict(molecule=name,ordinal=ordinal+1,hole=hole,particle=particle,excitation_ev=(report['energy_hartree']-eg)*27.211386245988,ground_energy_hartree=eg,report=report,spin_squared=0.,spin_definition='coherent shared-orbital two-determinant singlet; ROKS multiplet-sum energy',DFT_imports=0,new_SCC_calls=0,TDA_solves=0,full_XC_quadrature_energy=True,RI_role='orbital KKT linearization only',model_sha256=hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest());write(certificate,result);states.append(result)
  certificates=[out/f'state_{i+1}'/'certificate.json' for i in range(len(promotions))]
  if all(path.exists() for path in certificates):
