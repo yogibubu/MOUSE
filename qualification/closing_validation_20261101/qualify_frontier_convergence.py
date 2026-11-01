@@ -1,7 +1,7 @@
 """Remote equivalence checks for polynomial enumeration and selected-root solves."""
 from run_pigment_cid import *
 from scipy.linalg import cho_factor,cho_solve
-from matrix_gfn2._nosi_selected_roots import solve,metric_certificate
+from matrix_gfn2._nosi_selected_roots import solve,metric_certificate,projector_population
 from matrix_gfn2._nosi_configurations import frontier_rank_two
 
 def brute(no,nf):
@@ -72,5 +72,6 @@ with threadpool_limits(8):
  population=np.sum(cross*cho_solve(cho_factor(gram,lower=True),cross),axis=0)
  previous=json.loads((folder/'analysis.json').read_text());population_error=float(np.max(abs(population-np.array([r['double_subspace_weight'] for r in previous['states'][:20]]))))
  assert population_error<1e-9,population_error
- report=dict(host=socket.getfqdn(),enumeration_identical_frontiers=[2,3,4,5],iterative_selected_root_error_ev=ar_error,iterative_wall_seconds=ar_wall,iterative_certificate=ar_cert,metric_certificate=metric_cert,Schur_metric_certificate=border_cert,projector_population_error=population_error,canonical_transition_max_error=error,corrected_pigment_transition_max_error_au=moment_error,legacy_transition_phase_difference_au=legacy_moment_difference,projected_selected_root_energy_error_ev=ee,minimum_squared_old_new_overlap=ov,parameters_changed=False)
+ sparse_projector_error=float(np.max(abs(projector_population(s,indices,oldci)-population)));assert sparse_projector_error<1e-9
+ report=dict(host=socket.getfqdn(),enumeration_identical_frontiers=[2,3,4,5],iterative_selected_root_error_ev=ar_error,iterative_wall_seconds=ar_wall,iterative_certificate=ar_cert,metric_certificate=metric_cert,Schur_metric_certificate=border_cert,sparse_projector_error=sparse_projector_error,projector_population_error=population_error,canonical_transition_max_error=error,corrected_pigment_transition_max_error_au=moment_error,legacy_transition_phase_difference_au=legacy_moment_difference,projected_selected_root_energy_error_ev=ee,minimum_squared_old_new_overlap=ov,parameters_changed=False)
  write(HERE/'frontier_convergence_qualification.json',report);print(json.dumps(report),flush=True)

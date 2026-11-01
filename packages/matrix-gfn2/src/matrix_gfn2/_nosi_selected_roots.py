@@ -48,3 +48,13 @@ def solve(h,metric,ground_energy,roots):
     if maximum>1e-8 or orthogonal>1e-8:raise ValueError(('CI root residual qualification failed',maximum,orthogonal))
     ci=np.vstack((-p@z,z))
     return energies,ci,dict(method=method,roots=k,maximum_residual_hartree=maximum,maximum_metric_orthonormality_error=orthogonal,configurations_discarded=0)
+
+
+def projector_population(metric,indices,ci):
+    """Exact metric projector onto a ground-projected subset of CI functions."""
+    subset=csc_matrix(metric[np.ix_(indices,indices)]);factor=splu(subset)
+    u=metric[indices,0]/np.sqrt(metric[0,0]);v=factor.solve(u);denominator=1-float(u@v)
+    if denominator<=0:raise ValueError('dependent ground-projected diagnostic subspace')
+    cross=(metric[indices]-np.outer(metric[indices,0]/metric[0,0],metric[0]))@ci
+    solved=factor.solve(cross);solved+=np.outer(v,(u@solved)/denominator)
+    return np.sum(cross*solved,axis=0)

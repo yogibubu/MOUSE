@@ -1,13 +1,15 @@
 """Inspect saved CI vectors and verify the baseline principal submatrix."""
 from pathlib import Path
-import socket,json,hashlib,argparse
+import socket,json,hashlib,argparse,runpy
 assert socket.getfqdn()=='mac-2.homenet.telecomitalia.it'
 import numpy as np
 from scipy.linalg import eigh,cho_factor,cho_solve
 from scipy.optimize import linear_sum_assignment
 HERE=Path('/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101')
+runpy.run_path(str(HERE.parents[1]/'source/qualification/remote_bootstrap.py'))
+from matrix_gfn2._nosi_selected_roots import projector_population
 
-def run(name,frontier,screening_frontier=5):
+def run(name,frontier,screening_frontier=5,coherent_parent=False):
  parent=HERE/'pigment_cid'/name;folder=parent if frontier==2 else HERE/'pigment_cid_expansion'/name/f'frontier_{frontier}';same_interaction=True
  if screening_frontier!=5:
   root=HERE/'pigment_cid_expansion'/name
@@ -18,6 +20,8 @@ def run(name,frontier,screening_frontier=5):
   parent=next(path for path in candidates if (path/'result.json').exists())
   parent_report=json.loads((parent/'result.json').read_text())
   same_interaction=parent_report.get('screening_active_frontier',5)==screening_frontier
+ if coherent_parent:
+  parent=HERE/f'pigment_cid_expansion/{name}/screening_{frontier-1}/frontier_{frontier-1}';same_interaction=False
  report=json.loads((folder/'result.json').read_text());baseline=json.loads((parent/'result.json').read_text())
  with np.load(HERE/'pigment_models'/name/'state.npz') as z:no=int(z['electron_count'])//2
  with np.load(folder/'matrices.npz') as z:h=z['h'];s=z['s'];eg=float(z['ground_energy'])
@@ -26,12 +30,7 @@ def run(name,frontier,screening_frontier=5):
  for i,record in enumerate(report['auxiliary_records']):
   rank=2*sum(j>=no for j in record['closed'])+sum(j>=no for j in record.get('open',[]))
   if rank==2:indices.append(nbase+i)
- # The projector only needs a positive-definite solve, not all Gram eigenvectors.
- gram=s[np.ix_(indices,indices)]-np.outer(s[indices,0],s[0,indices])/s[0,0]
- cross=(s[indices]-np.outer(s[indices,0]/s[0,0],s[0]))@ci
- population=np.sum(cross*cho_solve(cho_factor(gram,lower=True),cross),axis=0)
- del gram,cross
-
+ population=projector_population(s,indices,ci)
  rows=[dict(row,double_subspace_weight=float(weight)) for row,weight in zip(report['states'],population)]
  control=None;root_tracking=None
  if frontier!=2:
@@ -45,7 +44,7 @@ def run(name,frontier,screening_frontier=5):
   if same_interaction:
    parent_energies=np.array([row['excitation_ev'] for row in baseline['states']]);energies=np.array([row['excitation_ev'] for row in report['states']]);violation=float(np.max(energies[:min(len(energies),len(parent_energies))]-parent_energies[:min(len(energies),len(parent_energies))]));control['maximum_Rayleigh_Ritz_violation_ev']=violation;assert violation<1e-7
  analysis=dict(molecule=name,frontier=frontier,screening_frontier=screening_frontier,basis_size=report['basis_size'],states=rows,baseline_principal_submatrix=control,root_tracking=root_tracking,double_population_definition='Metric-orthogonal projector onto retained optimized pairs plus canonical rank-two CSFs; ground projected out',weights=[.5,.5],lambda_exchange=.9,eta=.6,parameters_retuned=False,reference_geometry_changed=False,screened_interaction_changed=not same_interaction,result_sha256=hashlib.sha256((folder/'result.json').read_bytes()).hexdigest())
- (folder/'analysis.json').write_text(json.dumps(analysis,indent=2)+'\n');print(json.dumps(dict(frontier=frontier,basis_size=report['basis_size'],control=control,lowest_states=rows[:5]),indent=2),flush=True)
+ (folder/('analysis_coherent.json' if coherent_parent else 'analysis.json')).write_text(json.dumps(analysis,indent=2)+'\n');print(json.dumps(dict(frontier=frontier,basis_size=report['basis_size'],control=control,lowest_states=rows[:5]),indent=2),flush=True)
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('frontier',type=int);p.add_argument('--screening-frontier',type=int,default=5);a=p.parse_args();run(a.name,a.frontier,a.screening_frontier)
+ p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('frontier',type=int);p.add_argument('--coherent-parent',action='store_true');p.add_argument('--screening-frontier',type=int,default=5);a=p.parse_args();run(a.name,a.frontier,a.screening_frontier,a.coherent_parent)

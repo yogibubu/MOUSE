@@ -7,7 +7,7 @@
     5
   ],
   "iterative_selected_root_error_ev": 1.9334852827049077e-12,
-  "iterative_wall_seconds": 0.24944654200226068,
+  "iterative_wall_seconds": 0.2524416249943897,
   "iterative_certificate": {
     "method": "ARPACK with exact sparse metric inverse and rank-one ground projection",
     "roots": 20,
@@ -27,6 +27,7 @@
     "canonical_shifted_lower_bound": 0.99999999,
     "border_Schur_minimum": 0.45999998460000013
   },
+  "sparse_projector_error": 1.9984014443252818e-15,
   "projector_population_error": 1.9984014443252818e-15,
   "canonical_transition_max_error": 0.0,
   "corrected_pigment_transition_max_error_au": 0.0,
