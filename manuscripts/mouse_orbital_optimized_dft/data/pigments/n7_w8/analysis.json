@@ -1,0 +1,347 @@
+{
+  "molecule": "Beta_carotene",
+  "frontier": 7,
+  "screening_frontier": 8,
+  "basis_size": 1275,
+  "states": [
+    {
+      "root": 1,
+      "excitation_ev": 2.3725713283592005,
+      "oscillator_strength": 0.0144376495990527,
+      "transition_dipole_au": [
+        -0.49059219287847367,
+        -0.08096344669518381,
+        0.03384764902845867
+      ],
+      "retained_subspace_weight": 0.0010706409709096464,
+      "native_frontier_subspace_weight": 0.0019089365906040704,
+      "selected": false,
+      "double_subspace_weight": 0.48902853055360296
+    },
+    {
+      "root": 2,
+      "excitation_ev": 2.63705316465434,
+      "oscillator_strength": 2.949186743783851,
+      "transition_dipole_au": [
+        6.626131484112247,
+        1.2641946092935767,
+        -0.3802205282623199
+      ],
+      "retained_subspace_weight": 0.795773252193828,
+      "native_frontier_subspace_weight": 0.7858571886410014,
+      "selected": true,
+      "double_subspace_weight": 0.08358795594747923
+    },
+    {
+      "root": 3,
+      "excitation_ev": 2.7837388772703053,
+      "oscillator_strength": 0.07941474760718735,
+      "transition_dipole_au": [
+        -1.0729181071243399,
+        -0.10882430033000716,
+        0.03791092761246225
+      ],
+      "retained_subspace_weight": 0.03253278873347928,
+      "native_frontier_subspace_weight": 0.02594903712983319,
+      "selected": false,
+      "double_subspace_weight": 0.5356547196736127
+    },
+    {
+      "root": 4,
+      "excitation_ev": 3.301835041874498,
+      "oscillator_strength": 0.00036002503817079176,
+      "transition_dipole_au": [
+        0.018015829106268054,
+        0.05921164551649518,
+        -0.02490016185282853
+      ],
+      "retained_subspace_weight": 6.579394580299503e-05,
+      "native_frontier_subspace_weight": 5.14953075371342e-05,
+      "selected": false,
+      "double_subspace_weight": 0.5188604887248837
+    },
+    {
+      "root": 5,
+      "excitation_ev": 3.607480048422211,
+      "oscillator_strength": 0.04601289387363671,
+      "transition_dipole_au": [
+        -0.6619389935157002,
+        0.2848310403087338,
+        0.036387873998914994
+      ],
+      "retained_subspace_weight": 0.006835132868999177,
+      "native_frontier_subspace_weight": 0.005817813999399004,
+      "selected": false,
+      "double_subspace_weight": 0.5314094418085367
+    },
+    {
+      "root": 6,
+      "excitation_ev": 3.7371404657185052,
+      "oscillator_strength": 0.009741914135637058,
+      "transition_dipole_au": [
+        0.06833580151095214,
+        0.29270422009884656,
+        -0.1267111885174566
+      ],
+      "retained_subspace_weight": 3.0025087751898624e-08,
+      "native_frontier_subspace_weight": 5.52160714675063e-06,
+      "selected": false,
+      "double_subspace_weight": 0.14733579529076252
+    },
+    {
+      "root": 7,
+      "excitation_ev": 3.8838170477444995,
+      "oscillator_strength": 0.0006991487023262473,
+      "transition_dipole_au": [
+        -0.0851514411344708,
+        -0.002341411075475604,
+        0.009564094033215897
+      ],
+      "retained_subspace_weight": 1.0315473163846422e-05,
+      "native_frontier_subspace_weight": 4.026302998888171e-06,
+      "selected": false,
+      "double_subspace_weight": 0.8272478081787014
+    },
+    {
+      "root": 8,
+      "excitation_ev": 4.177278781711269,
+      "oscillator_strength": 1.3651277318731803,
+      "transition_dipole_au": [
+        -3.593906143535409,
+        -0.5092448329029376,
+        0.4043040008005636
+      ],
+      "retained_subspace_weight": 0.03692836395624954,
+      "native_frontier_subspace_weight": 0.02820461031519193,
+      "selected": false,
+      "double_subspace_weight": 0.42607917376219784
+    },
+    {
+      "root": 9,
+      "excitation_ev": 4.330512547122608,
+      "oscillator_strength": 0.0021710132335516223,
+      "transition_dipole_au": [
+        0.09023731451120186,
+        0.09964098903315038,
+        -0.048905031066816186
+      ],
+      "retained_subspace_weight": 4.9782590693536014e-05,
+      "native_frontier_subspace_weight": 9.355959141058095e-06,
+      "selected": false,
+      "double_subspace_weight": 0.5916947001521863
+    },
+    {
+      "root": 10,
+      "excitation_ev": 4.343368309646251,
+      "oscillator_strength": 0.4323108724996718,
+      "transition_dipole_au": [
+        -1.9330236047451366,
+        -0.5171121014013415,
+        0.2422471500679887
+      ],
+      "retained_subspace_weight": 0.008875787164127943,
+      "native_frontier_subspace_weight": 0.007265026526907398,
+      "selected": false,
+      "double_subspace_weight": 0.7085616069554209
+    }
+  ],
+  "baseline_principal_submatrix": {
+    "Hamiltonian_max_error_hartree": 2.5579538487363607e-13,
+    "overlap_max_error": 2.886579864025407e-15,
+    "ground_energy_error_hartree": 0.0,
+    "baseline_CSFs": 703,
+    "same_screened_interaction": true,
+    "maximum_Rayleigh_Ritz_violation_ev": -0.035490108901712336
+  },
+  "root_tracking": {
+    "parent": "pigment_cid_expansion/Beta_carotene/screening_8/frontier_6",
+    "scope": "One-to-one metric-overlap assignment among lowest ten roots",
+    "overlap_squared": [
+      [
+        0.994517547385692,
+        9.096845009495869e-05,
+        7.590159711450519e-09,
+        2.963554787679568e-05,
+        1.6404298652894992e-06,
+        5.4419451620913764e-05,
+        0.0002301320523329721,
+        7.410959303152522e-07,
+        1.0171826609072341e-08,
+        1.4240952952052647e-06
+      ],
+      [
+        9.448937220281369e-05,
+        0.989764901991815,
+        0.0065224943942824385,
+        2.8056456512212416e-06,
+        0.00011202392918777821,
+        3.03337923715948e-07,
+        1.911331548190773e-07,
+        7.398065856562385e-05,
+        7.089692741826003e-06,
+        1.7420575511798739e-06
+      ],
+      [
+        8.064679952289265e-07,
+        0.006772637455888011,
+        0.9855366520579206,
+        3.0801091620481796e-06,
+        1.3811361407633958e-05,
+        1.046791476338945e-06,
+        7.879700584261969e-07,
+        0.00012385063129203783,
+        4.178149451049937e-05,
+        1.0298083428360917e-06
+      ],
+      [
+        3.4938375336085e-05,
+        2.9984232033466295e-06,
+        4.583075671743764e-06,
+        0.9854294567205194,
+        6.432765641333388e-07,
+        0.0005018368547673216,
+        0.00020663556107696038,
+        1.8198520059978044e-06,
+        1.4700762211321465e-05,
+        0.0004684389787945326
+      ],
+      [
+        2.32054310720052e-07,
+        0.0001345561557072866,
+        2.443730605904604e-05,
+        1.6031287692969168e-05,
+        0.966142319227946,
+        0.014565746080857214,
+        1.7668077852375193e-07,
+        2.4750436622123776e-05,
+        2.3864082682839336e-05,
+        3.6212113921473596e-06
+      ],
+      [
+        5.711633217096408e-05,
+        6.562823486087525e-07,
+        3.251615387851452e-07,
+        0.0005913186042443165,
+        0.014983314514478714,
+        0.9746225526896237,
+        0.0027974456389135076,
+        1.4587738343420498e-06,
+        4.268475712136758e-07,
+        6.0224382877135044e-05
+      ],
+      [
+        0.00033694389357099414,
+        5.626997915770471e-07,
+        6.962502176651386e-07,
+        0.00023511032562031553,
+        4.767812156273283e-05,
+        0.0028922757297074574,
+        0.9857485348845922,
+        6.836155916598448e-06,
+        0.00018452089208870572,
+        0.00029906232941459744
+      ],
+      [
+        1.34934609086058e-06,
+        7.077243103197695e-05,
+        0.0002116057792196225,
+        1.3406599603279108e-06,
+        2.8640932341026225e-05,
+        5.082879759455845e-06,
+        1.8731705086313405e-05,
+        0.9733585982869122,
+        0.01550377065079559,
+        0.0007702097647676255
+      ],
+      [
+        3.460158685792594e-06,
+        2.776477876322785e-06,
+        1.5098149360134092e-08,
+        0.0007901676423840442,
+        1.8636959893942556e-05,
+        0.00014699577077259115,
+        0.0002348069833898419,
+        0.00033706259974435916,
+        0.005652298941441595,
+        0.9050609541215094
+      ],
+      [
+        9.795373739158203e-09,
+        2.7578156980781167e-05,
+        2.733782750171658e-05,
+        5.403704645293365e-06,
+        1.660650132133135e-05,
+        9.960906072571719e-09,
+        0.00016154838039403123,
+        0.017434913170969728,
+        0.9574417806034481,
+        0.006539883780690598
+      ]
+    ],
+    "assignments": [
+      {
+        "parent_root": 1,
+        "child_root": 1,
+        "overlap_squared": 0.994517547385692
+      },
+      {
+        "parent_root": 2,
+        "child_root": 2,
+        "overlap_squared": 0.989764901991815
+      },
+      {
+        "parent_root": 3,
+        "child_root": 3,
+        "overlap_squared": 0.9855366520579206
+      },
+      {
+        "parent_root": 4,
+        "child_root": 4,
+        "overlap_squared": 0.9854294567205194
+      },
+      {
+        "parent_root": 5,
+        "child_root": 5,
+        "overlap_squared": 0.966142319227946
+      },
+      {
+        "parent_root": 6,
+        "child_root": 6,
+        "overlap_squared": 0.9746225526896237
+      },
+      {
+        "parent_root": 7,
+        "child_root": 7,
+        "overlap_squared": 0.9857485348845922
+      },
+      {
+        "parent_root": 8,
+        "child_root": 8,
+        "overlap_squared": 0.9733585982869122
+      },
+      {
+        "parent_root": 10,
+        "child_root": 9,
+        "overlap_squared": 0.9050609541215094
+      },
+      {
+        "parent_root": 9,
+        "child_root": 10,
+        "overlap_squared": 0.9574417806034481
+      }
+    ]
+  },
+  "double_population_definition": "Metric-orthogonal projector onto retained optimized pairs plus canonical rank-two CSFs; ground projected out",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "eta": 0.6,
+  "parameters_retuned": false,
+  "reference_geometry_changed": false,
+  "screened_interaction_changed": false,
+  "result_sha256": "c3e2c77d7147055dab538f0255517fd3346495cfd6e595432c9e1bd81d6b05d3",
+  "compact_view": "Lowest ten roots; full spectrum and configurations in qualification archive",
+  "source_sha256": "1753f2d6643b218b455497a4b9d89495a6ba3e2e1ae3848666799a3fb1e00707"
+}

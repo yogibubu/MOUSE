@@ -12,12 +12,20 @@ between accepted steps. Its character relative to the initial transition
 is reported separately. Final CI targets are assigned by collective
 overlap with the frozen native-frontier singlet subspace; this allows
 mixed frontier excitations without identifying a state by its energy.
+When a target fragments over several CI eigenstates, roots are retained
+until the smallest eigenvalue of their projector in the fixed target space
+reaches 0.49. This keeps the original coverage threshold, protects each
+target direction and is invariant to unitary rotations of the target basis.
 
 The large-system XC response is evaluated on its full frozen quadrature.
 A density-fitted approximation preconditions the Newton linear system.
 When its step fails the full-response inexact-Newton tolerance, flexible
 GMRES refines it with analytic full-quadrature Hessian actions. The
-ground-constraint factorization is cached within each linear solve.
+ground-constraint factorization is cached within each linear solve. For
+large Newton steps, a two-dimensional trust subspace spans the Newton
+and squared-residual descent directions. Minimizing the predicted residual
+in this subspace limits the orbital step without changing the stationarity
+equations; the scalar ground-constraint multiplier is optimized jointly.
 Writing $a=c,s$ for charge and spin channels, the actual energy is
 \begin{equation}
  E=E_{\mathrm{RI}}+\frac12\sum_a
@@ -40,7 +48,11 @@ CI assembly likewise preserves the Hamiltonian while avoiding a full
 four-index molecular-orbital transformation: the common closed-shell core
 is contracted first and only the active integral block is transformed.
 Fixed-bra Schur contractions reuse the common core in nonorthogonal
-couplings. Singular cofactors are evaluated as products of the remaining
+couplings; repeated identical canonical occupations reuse their exact
+cofactors and pair contractions through a bounded cache. The canonical
+determinant-to-CSF transformation uses its exact sparse coefficients
+instead of dense multiplication; no determinant or spin coupling is
+dropped. Singular cofactors are evaluated as products of the remaining
 singular values without division. Registered density spans accelerate the
 quadratic native energy only when the requested density lies in that span;
 otherwise evaluation falls back to the full expression.

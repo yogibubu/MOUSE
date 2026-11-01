@@ -287,10 +287,12 @@ separate from this corrected candidate's derivative qualifications.
 
 Matrix-free orbital stationarity and exact frozen-quadrature XC correction
 extend the numerical implementation to larger native valence spaces. The
-carotene configuration expansion recovers weak $S_1$ below intense $S_2$
-at 2.446 and 2.671 eV on its source geometry, without parameter adjustment.
-The ordering survives successive CI and screening-window expansions,
-although absolute gaps retain active-space sensitivity. Pigment predictions are excluded from the accuracy
+carotene configuration expansion keeps a weak first singlet below the
+absorbing manifold without parameter adjustment. At 5,151 CSFs the first
+gap is 2.084 eV, and the dominant intensity is on the third ordered root
+at 2.532 eV after mixing with the second root. Collective target-space
+tracking resolves this fragmentation; absolute gaps remain sensitive to
+the CI window. Pigment predictions are excluded from the accuracy
 ledger, and their nuclear derivatives are not yet qualified. Full pair
 storage and DFT-reference preparation remain significant costs. Independent
 frozen-label validation, corrected-model equilibrium structures, broader
@@ -319,9 +321,14 @@ energy validations and executed-source hashes. The manuscript package
 contains the machine-readable results, scientific figure sources, archived
 Jmol renders and coordinate provenance. Earlier generations and their
 qualification archives are identified separately in the Supporting Information
-and preserved development manuscript. A permanent public dataset identifier
+and preserved development manuscript. The large-system runtime and exact accelerations are archived in
+\texttt{d05afa6} and \texttt{e3c005a}, with fragmented-target tracking
+in \texttt{bb3435f}. Large pigment checkpoints remain on the verified
+compute host with checksummed receipts and compact low-state exports.
+A permanent public dataset identifier
 has not yet been assigned.
 
+\setlength{\bibsep}{2pt}
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 \end{document}

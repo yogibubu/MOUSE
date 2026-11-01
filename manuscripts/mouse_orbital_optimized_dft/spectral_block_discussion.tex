@@ -74,45 +74,58 @@ at 3.269 eV below a weak state at 3.680 eV. We therefore expand the native
 frontier window with all spin-singlet configurations of excitation rank
 at most two, retaining the optimized ROKS configurations. The F/Q weights,
 $\lambda$, $\eta$, geometry and zero offset remain fixed. The resulting
-15, 153, 351 and 703-CSF calculations are reported in
-Figure~\ref{fig:carotenespace}, including the initial ordering.
+15, 153, 351 and 703-CSF calculations are retained in the
+Supporting Information, including the initial ordering.
 
 With five occupied and five virtual frontier orbitals, the first state
 becomes weak (2.561 eV, $f=0.0238$), followed by the intense state
-(2.728 eV, $f=3.127$). Expanding the consistently excluded screening
-window to six occupied and six virtual orbitals changes these values to
-2.550 and 2.728 eV, respectively. With this same screened interaction,
-the six-plus-six CI gives $S_1=2.446$ eV ($f=0.0210$) and
-$S_2=2.671$ eV ($f=3.063$): the second is about 146 times more intense.
-The double-configuration subspace populations are 0.489 and 0.072,
-respectively; the intense state retains native-frontier singlet weight
-0.807. These populations are metric-projector weights, not unique
-configuration probabilities. The 351-CSF principal block is unchanged
-within $3.2\times10^{-13}$ Ha on expansion to 703 CSFs.
+(2.728 eV, $f=3.127$). This initial ordering repair motivates further
+configuration-space checks rather than an absolute-energy convergence claim.
 
-This recovers the expected weak-below-intense ordering, while the
-0.103/0.057 eV changes on the last CI expansion show that absolute
-energies are not yet converged. The first state is weak rather than
-strictly forbidden on this source geometry. Room-temperature
-fluorescence-derived $S_1$ energies and solvent absorption maxima are
-different observables and cannot validate these vertical gaps directly.
-The known low-lying dark state motivates the expanded configuration
-space~\cite{Bondarev1994}; pigment absorption data provide experimental
-context~\cite{Clementson2019}. The expansion follows exposure of the
-spectra and is a development test, not blind validation. The
-chlorophyllide frontier calculations are still being qualified.
+Larger fixed-screening calculations with $W=10$ use 2,145, 3,403 and
+5,151 CSFs for $N=8,9,10$ (Figure~\ref{fig:carotenespace}). Their lowest weak state lies at 2.189,
+2.145 and 2.084 eV, respectively. The frontier bright character fragments
+between roots 2 and 3: at $N=9$ their individual native-target weights
+are 0.420 and 0.385, while their combined projector coverage is 0.805.
+Requiring a single root to carry 0.49 would therefore reject a resolved
+mixed target. The subspace criterion retains both roots with the same
+coverage threshold, without changing any matrix element or energy.
+Across $N=9$ to 10, the squared principal cosines of the roots 2--3
+subspace are 0.998 and 0.993, supporting its continuity through the
+intensity redistribution.
+
+At $N=10$, the lowest root has $f=0.00883$; roots 2 and 3 lie at
+2.467 and 2.532 eV with $f=0.529$ and 2.310. Thus weak $S_1$ remains
+below the absorbing pair, but the dominant frontier intensity is now on
+the third energy-ordered root. Energy labels and the bright target must
+be distinguished through this mixing. The last increments of the three
+ordered gaps are $-0.061$, $-0.058$ and $-0.041$ eV. These do not
+establish absolute energy convergence. Screening-window effects are
+smaller: at fixed $N=8$, increasing $W=8$ to 10 changes the first two
+gaps by $-0.009$ and $+0.004$ eV. The complete sequence, transition
+strengths and overlap controls are given in the Supporting Information.
+
+The first state is weak rather than strictly forbidden on the unoptimized
+source geometry. Room-temperature fluorescence-derived $S_1$ energies
+and solvent absorption maxima are different observables and cannot
+validate these vertical gaps directly. The known low-lying dark state
+motivates the expanded configuration space~\cite{Bondarev1994}; pigment
+absorption data provide experimental context~\cite{Clementson2019}.
+The expansion follows exposure of the spectra and is a development test,
+not blind validation. The chlorophyllide frontier calculations are still
+being qualified with serial checkpointed workers.
 Both pigments remain excluded from the 26-state accuracy pool; neither
 excited minima nor pigment nuclear Hessians are reported.
 
 \begin{figure}[!htbp]\centering
-\includegraphics[width=\linewidth]{figures/beta_carotene_state_ordering.pdf}
-\caption{Recovery of weak $S_1$ below intense $S_2$ through configuration
-expansion, without parameter adjustment. Each group shows energy-ordered
-roots; colors do not assert continuous root identity. The screening
-exclusion window $W$ is specified separately from the CI window.
-The comparison at fixed $W=6$ isolates CI expansion. Intensities use a
-logarithmic scale. These are vertical calculations on the same unoptimized
-source structure, excluded from the small-molecule accuracy ledger.}
+\includegraphics[width=\linewidth]{figures/beta_carotene_convergence.pdf}
+\caption{Fixed-screening configuration-window sensitivity of
+$\beta$-carotene at $W=10$. The weak first singlet remains below an
+absorbing pair, whose intensity redistributes between roots 2 and 3.
+Lines connect energy-ordered roots and do not assert continuous diabatic
+identity. The Hamiltonian parameters and unoptimized source geometry
+remain unchanged. The initial 15--703 CSF ordering repair and the full
+window sequence are retained in the Supporting Information.}
 \label{fig:carotenespace}
 \end{figure}
 
