@@ -55,5 +55,24 @@
     "rule": "Apply a common active size to all states, with complete rank-two singlet CSFs and matching environmental exclusion. Inspect basis completeness, not molecular offsets. No state-family-dependent Hamiltonian.",
     "production_promotion": "Requires all seven pi states and thirteen n-pi controls, exact fast-matrix regression, spin identity, analytic derivative validation and portable runtime before a completion claim.",
     "acceleration": "Replace only the canonical auxiliary Slater-Condon block by exact frozen-core occupation-bitstring algebra. Keep nonorthogonal optimized-state cross terms and every original functional diagonal. Compare to the independent Schur/cofactor code before use."
+  },
+  "selected_candidate": {
+    "name": "screened_reflection_even_cid_5",
+    "development_choice": "The uniform complete five-pair space resolves all seven pi states but overcorrelates several n-pi controls. Extend the original frontier CID by its reflection-even valence sector while retaining the original frontier block in both parities. This is an exposed-data model-development decision, not an independent test.",
+    "rule": "Certify a nuclear molecular-plane reflection and canonical MO parities from exact Gaussian overlaps. Keep original frontier doubles and add all reflection-even five-pair doubles; retain every optimized target and paired double. Use the same prepared m=5 screened Hamiltonian for every state. No state-family input, molecular override or energy-dependent truncation. Freeze the resulting CSF list during geometry changes.",
+    "scope": "The current pi targets are planar reflection-even states. No universal accuracy or nonplanar transferability claim.",
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lambda_exchange": 0.9,
+    "offset_ev": 0,
+    "qualification_pending": [
+      "public portable runtime",
+      "coherent spin validation",
+      "full analytic nuclear response",
+      "independent molecular derivative checks",
+      "manuscript and cost update"
+    ]
   }
 }
