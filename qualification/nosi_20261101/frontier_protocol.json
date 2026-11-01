@@ -1,0 +1,9 @@
+{
+  "stage": "frozen before TDA-free frontier-state recovery",
+  "scope": "prepared common-functional model; the preparation uses DFT ground references, and this frontend reads no TDA amplitudes or excited-reference energies",
+  "seeds": "all four promotions from the highest two occupied to lowest two virtual canonical orbitals of the prepared stationary ground",
+  "solver": "unchanged spin-pure ground-orthogonal ROKS saddle KKT with analytic orbital curvature and local CSF tracking",
+  "identity": "compare the computed stationary CSFs with already retained OO checkpoints after all four promotions; unique maximum-overlap matching, overlap >=0.95 and energy agreement <1e-5 eV",
+  "forbidden": ["TDA amplitude files", "backend_tda files", "new DFT SCF", "native SCC restart", "reference excitation energies in state selection"],
+  "no_parameter_change": true
+}

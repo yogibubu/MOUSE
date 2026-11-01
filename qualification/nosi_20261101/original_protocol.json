@@ -1,0 +1,17 @@
+{
+  "stage": "exposed development, frozen before original-parent NOSI predictions",
+  "base": "protocol.json exact Slater-Condon and CSF residual functional",
+  "change": "use already completed original unmodified F and Q parent functional models and stationary CSFs; restore original separate-parent 50/50 combination",
+  "reason": "state interaction must resolve nonorthogonality instead of imposing an extra nonlinear constraint on each parent beforehand",
+  "basis": "original stationary S0, retained two target CSFs, paired closed doubles at those same target frames; same basis construction for both molecules",
+  "primary": "full generalized state interaction; average final parent excitation energies with equal weights",
+  "diagnostic": "also retain Q-projected excited-space spectrum, never select between them using energy labels",
+  "assignment": "unique maximum overlap with retained target CSFs; overlap >=0.7, margin >=0.05, ground character >=0.7",
+  "molecules": ["Criegee_Intermediate", "Furofuran"],
+  "lambda_exchange": 0.9,
+  "weights": [0.5, 0.5],
+  "energy_offset_ev": 0,
+  "energy_labels_used": false,
+  "new_DFT_SCF": false,
+  "nuclear_derivative_claims": false
+}

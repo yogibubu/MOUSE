@@ -1,0 +1,21 @@
+{
+  "stage": "exposed nine-state development; frozen before native-orbital reference predictions",
+  "reason": "implement the requested separation: native GFN2 spatial ground orbitals, DFT orbital-energy reference, then spin-pure orbital optimization with the ground-state program",
+  "parent_response": "unchanged prepared CAM-B3LYP charge/spin kernel, lambda=0.9, standard omega=0.33",
+  "F_reference": "diagonal Rayleigh quotients of the embedded DFT Fock in the native canonical GFN2 orbitals; discard off-diagonal one-body mixing",
+  "Q_reference": "qualified full DFT orbital levels matched separately in occupied and virtual spaces to the same native GFN2 orbitals; overlap>=0.7 and margin>=0.05, unmatched levels use F_reference",
+  "Q_safety_rule": "if the molecular occupied/virtual spectral gap is nonpositive, use F_reference for every Q level of that molecule; no state-dependent selection",
+  "common_functional": "one averaged F/Q one-body field with weights 0.5/0.5; re-center the quadratic charge term at the native ground density",
+  "native_ground": "must remain stationary with positive restricted orbital curvature and unchanged occupied projector; otherwise reject the candidate",
+  "excited_states": "unchanged ground-orthogonal spin-pure ROKS and Q-projected NOSI with paired doubles",
+  "comparison": "complete singlet TDA of this identical functional on the same native GFN2 spatial orbitals, including the correct range-separated exchange tensor",
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "orbital_gap_scale": 1,
+  "energy_offset_ev": 0,
+  "no_new_DFT_SCF": true,
+  "energy_labels_used_in_model": false,
+  "cases": [["independent","Criegee_Intermediate"],["independent_challenge","Furofuran"],["extra_npi","acetaldehyde"],["extra_npi","formamide"],["extra_npi","pyrazine"],["independent","Benzoxadiazole"],["independent","Hexatriene"]],
+  "accuracy_gate_ev": {"mae": 0.3, "max_absolute_error": 0.5},
+  "nuclear_derivatives": "same complete analytic frozen-response and projected-NOSI response implementation; revalidate the final reference choice"
+}

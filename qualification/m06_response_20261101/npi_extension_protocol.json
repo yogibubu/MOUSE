@@ -1,0 +1,16 @@
+{
+  "stage": "candidate unchanged and frozen before three additional n-to-pi predictions",
+  "candidate": "same coherent M06-2X common 50/50 functional and Q-projected spin-pure NOSI, lambda 0.9, zero offset",
+  "cases": [
+    {"id": "N001", "molecule": "acetaldehyde", "prepared_group": "prepared_B", "family": "n_pi"},
+    {"id": "N002", "molecule": "formamide", "prepared_group": "prepared_B", "family": "n_pi"},
+    {"id": "N003", "molecule": "pyrazine", "prepared_group": "prepared_C", "family": "n_pi"}
+  ],
+  "reason": "test carbonyl and aromatic lone-pair excitations beyond the single Criegee n-pi development state",
+  "disclosure": "all molecules and reference labels appeared in preceding model campaigns; additional model validation, not a truly blind benchmark",
+  "reuse": "retain exact archived geometries, native grounds, Gaussian embeddings, projected ERIs, PBE0 reference amplitudes and state symmetry; new M06-2X references only",
+  "state_assignment": "same NTO initialization, deterministic original full-parent seed and adaptive continuation; no use of TBE for root selection",
+  "accuracy_gate_ev": {"mae": 0.3, "max_absolute_error": 0.5},
+  "nuclear_derivative_claims": false,
+  "energy_labels_used_in_model": false
+}

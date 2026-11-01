@@ -1,0 +1,18 @@
+{
+  "stage": "exposed development; frozen before general-nonlocal-Hamiltonian molecular predictions",
+  "motivation": "previous projection imposed eightfold local-Coulomb symmetry on the Hamiltonian; general nonlocal spin-independent interactions need only Hermiticity and particle interchange",
+  "input_models": ["stationary PBE0/common", "coherent M06-2X/common"],
+  "molecules": ["Criegee_Intermediate", "Furofuran"],
+  "projection": "orthogonal least-squares removal of only the Pauli-incompatible fully symmetric component of C+S: Cprime=C-Psym(C+S)/2, Sprime=S-Psym(C+S)/2",
+  "reconstruction": "general nonlocal spatial W with Jsym=Cprime-Sprime and Ksym=-2Sprime; preserve reference mean Fock by normal ordering",
+  "active_space": "same predeclared common CAS(6,6) union-of-NTOs protocol as preceding Hamiltonian diagnostic",
+  "solver": "general nonsymmetric-integral FCI, explicit exact singlet projection; verify Hermiticity and S-squared commutation",
+  "assignment": "unique maximum absolute transition amplitude projected onto each normalized target; cosine overlap >=0.7 and relative amplitude margin >=0.05; retain all weak-transition diagnostics",
+  "assignment_reason": "normalizing every model transition before selecting a root spuriously promotes almost dark high roots; use actual projected spectral amplitude for root selection, then assess cosine character separately",
+  "energy_labels_used": false,
+  "energy_offset_ev": 0,
+  "lambda_exchange": 0.9,
+  "weights": [0.5, 0.5],
+  "new_DFT_SCF": false,
+  "initial_stage": "CASCI; no orbital-optimization or nuclear-derivative claim"
+}

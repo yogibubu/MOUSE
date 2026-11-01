@@ -1,0 +1,10 @@
+{
+  "stage": "numerical repair; no change of M06-2X physical model",
+  "start": "already certified stationary-PBE0 common-functional targets and ground",
+  "end": "M06-2X common functional specified in protocol.json",
+  "path": "linear interpolation of charge/spin kernels and one-body fields after exact shift of the old quadratic center to the new center",
+  "step": "start 0.125, halve when stationary KKT or character guard fails, minimum 1/256",
+  "guard": "KKT maximum <1e-8, fidelity >=0.7, analytic constraint orbital curvature; use retained accepted checkpoint",
+  "selection": "all four predefined states; do not use target energies or select a different root",
+  "nuclear_derivative_claims": false
+}

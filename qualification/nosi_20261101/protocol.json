@@ -1,0 +1,17 @@
+{
+  "stage": "exposed development, frozen before predictions",
+  "motivation": "MSDFT-NOSI spin-multiplet constraints and overlap-weighted correlation matrix, doi:10.1021/acs.jpca.3c04799, equations 12-14",
+  "model": "spin-adapted CSF-level overlap-weighted residual functional, new approximation",
+  "molecules": ["Criegee_Intermediate", "Furofuran"],
+  "inputs": "retained stationary common F/Q 50/50 energy functional, lambda=0.9",
+  "basis": "one common stationary closed-shell ground, both retained independently optimized ground-orthogonal singlet CSFs, and one closed pair-double at each retained target frame",
+  "diagonal": "closed determinant functional; open singlet 2 E_mixed - E_triplet",
+  "off_diagonal": "exact bare projected Slater-Condon between spin-pure CSFs plus overlap times mean of the two residual diagonal functional energies",
+  "one_body": "physical frozen-core HF one-body operator in the retained embedding; core fixed to original DFT reference",
+  "state_assignment": "maximum-weight unique normalized overlap with retained target singlet CSFs; overlap >=0.7 and margin >=0.05; retain ground character separately",
+  "energy_offset_ev": 0,
+  "energy_labels_used": false,
+  "new_orbital_optimizations": false,
+  "new_DFT_SCF": false,
+  "nuclear_derivative_claims": false
+}

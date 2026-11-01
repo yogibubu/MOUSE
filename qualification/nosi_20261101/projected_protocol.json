@@ -1,0 +1,14 @@
+{
+  "stage": "exposed development, frozen before projected predictions",
+  "base": "protocol.json; same five spin-pure CSFs and same residual-functional Hamiltonian",
+  "projection": "Q=1-|S0><S0| projects every excited-space basis function; retain previously stationary functional ground energy, do not variationally remix S0",
+  "reason": "existing OO model uses ground-orthogonal constrained excited-state optimization; apply that constraint to the entire state-interaction subspace",
+  "spectrum": "generalized Rayleigh-Ritz eigensystem on Q-projected excited subspace; subtract the unchanged stationary functional E0",
+  "assignment": "maximum-weight unique overlap with retained target singlet CSFs; overlap >=0.7 and margin >=0.05",
+  "energy_labels_used": false,
+  "energy_offset_ev": 0,
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "new_electronic_jobs": false,
+  "nuclear_derivative_claims": false
+}

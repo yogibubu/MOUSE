@@ -1,0 +1,20 @@
+{
+  "stage": "exposed development, frozen before M06-2X predictions",
+  "molecules": ["Criegee_Intermediate", "Furofuran"],
+  "targets": ["I001", "I002", "C001", "C002"],
+  "change": "stationary frozen-core embedded M06-2X anchor and full meta-GGA charge/spin response, including kinetic-energy density",
+  "motivation": "more accurate functional and multistate treatment supported by doi:10.1021/acs.jpca.3c04799; no parameter fitting to these states",
+  "F": "stationary M06-2X one-body Fock and lambda-scaled full M06-2X response",
+  "Q": "same M06-2X response, qualified spectral one-body spacings from existing independently archived PBE0 reference; keep overlap 0.7 and margin 0.05",
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "SCF_exact_exchange": 0.54,
+  "response_exact_exchange": 0.486,
+  "gap_scaling": 1,
+  "energy_offset_ev": 0,
+  "energy_labels_used": false,
+  "primary": "one averaged functional with common orbitals and ground-orthogonal stationary singlet ROKS",
+  "secondary": "same fixed spin-pure NOSI and projected-NOSI construction as preceding experiment, report both without choosing by target energies",
+  "new_nuclear_derivative_claims": false,
+  "host_required": "oracle.sns.it"
+}

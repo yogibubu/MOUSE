@@ -1,0 +1,17 @@
+{
+  "stage": "exposed development, frozen before full M06-2X references and coherent-Q predictions",
+  "reason": "changing the response functional while retaining PBE0 spectral spacings mixes different exchange fractions; test a coherent M06-2X spectral reference",
+  "molecules": ["Criegee_Intermediate", "Furofuran"],
+  "reference": "full original aug-cc-pVDZ Cartesian basis, grid3, M06-2X restricted ground SCF; seed archived PBE0 ground; preserve checkpoints",
+  "embedding": "original retained embedding and frozen core unchanged",
+  "F": "already stationary embedded M06-2X Fock",
+  "Q": "qualified matching to full M06-2X orbital energies instead of old PBE0 spacings; same 0.7 overlap and 0.05 margin",
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "gap_scaling": 1,
+  "energy_labels_used": false,
+  "prediction": "one coherent averaged functional, stationary continuation from existing M06-2X/common checkpoints; retain every state and attempt",
+  "state_identity": "original PBE0 target amplitudes retained for character only; do not reinterpret them in the new M06-2X orbital basis",
+  "nuclear_derivative_claims": false
+}

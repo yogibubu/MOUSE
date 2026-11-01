@@ -1,0 +1,18 @@
+{
+  "stage": "model frozen after four exposed development states; before new candidate predictions on the retained additional molecules",
+  "candidate": "coherent M06-2X stationary common F/Q 50/50 functional, ground-orthogonal ROKS components, Q-projected spin-pure state interaction including paired double configurations",
+  "development_ids": ["I001", "I002", "C001", "C002"],
+  "validation": [
+    {"cohort": "independent", "molecule": "Benzoxadiazole", "states": ["I004"]},
+    {"cohort": "independent", "molecule": "Hexatriene", "states": ["I005"]}
+  ],
+  "disclosure": "molecules and reference energies were used in preceding models; held out from this candidate selection, not a truly blind external benchmark",
+  "parameters": "unchanged literature M06-2X, lambda=0.9 exchange, common F/Q weights=0.5/0.5, zero offset",
+  "basis": "same stationary S0 plus every retained target open singlet and one paired double at its own orbital frame; no molecule-specific basis adjustment",
+  "solver": "same ground-orthogonal analytic orbital KKT; direct NTO guess, then deterministic original certified parent-F target and adaptive functional continuation if needed",
+  "assignment": "same fixed target character and unique overlap gates; no energy-label-based root choice",
+  "accuracy_gate_ev": {"mae": 0.3, "max_absolute_error": 0.5},
+  "acceptance": "all predefined development and validation states must satisfy character, convergence and accuracy gates; otherwise do not promote",
+  "nuclear_derivative_claims": false,
+  "energy_labels_used_in_model": false
+}

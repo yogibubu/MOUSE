@@ -1,0 +1,16 @@
+{
+  "stage": "exposed development, frozen before molecular XC-remainder evaluations",
+  "molecules": ["Criegee_Intermediate", "Furofuran"],
+  "targets": ["I001", "I002", "C001", "C002"],
+  "functionals": ["PBE0", "M06-2X"],
+  "change": "exact semilocal XC remainder beyond its complete second-order spin-density-matrix expansion at each stationary anchor",
+  "reason": "preceding nonlinearity diagnostic only measures native GFN2 remainder; it does not assess omitted high-order DFT spin-polarization response",
+  "definition": "R=Exc[Pa,Pb]-Exc[P0/2,P0/2]-vxc0:dP-0.5*dP:fxc0:dP",
+  "tau": "M06-2X includes kinetic-energy density and all rho/gradient/tau cross derivatives",
+  "initial_stage": "frozen retained stationary orbital evaluations, not optimized predictions",
+  "no_change": ["lambda 0.9", "F/Q weights 0.5/0.5", "no excitation-energy offset", "same target assignments"],
+  "energy_labels_used": false,
+  "new_DFT_SCF": false,
+  "nuclear_derivative_claims": false,
+  "host_required": "oracle.sns.it"
+}

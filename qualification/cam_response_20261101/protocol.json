@@ -1,0 +1,25 @@
+{
+  "stage": "all nine states are exposed development after the M06-2X n-pi extension; frozen before CAM-B3LYP predictions",
+  "motivation": "use a literature range-separated functional instead of a fitted orbital-extent lambda: Yanai, Tew, Handy, Chem Phys Lett 393 (2004) 51-57, doi:10.1016/j.cplett.2004.06.011",
+  "functional": "CAM-B3LYP, standard published parameters, no molecular tuning",
+  "SCF_exchange": {"short_range": 0.19, "long_range": 0.65, "omega_bohr_inverse": 0.33},
+  "lambda_exchange": 0.9,
+  "response_exchange": {"full_ERI_coefficient": 0.171, "long_range_ERI_additional_coefficient": 0.414},
+  "weights": [0.5, 0.5],
+  "energy_offset_ev": 0,
+  "energy_labels_used_in_model": false,
+  "reference": "stationary embedded frozen-core CAM-B3LYP F and coherent qualified full-basis CAM-B3LYP orbital-level Q; original geometry, embedding, occupations and target character retained",
+  "state_interaction": "unchanged Q-projected spin-pure NOSI with the ground, all retained open targets and one paired double at each target frame",
+  "cases": [
+    ["independent", "Criegee_Intermediate"],
+    ["independent_challenge", "Furofuran"],
+    ["extra_npi", "acetaldehyde"],
+    ["extra_npi", "formamide"],
+    ["extra_npi", "pyrazine"],
+    ["independent", "Benzoxadiazole"],
+    ["independent", "Hexatriene"]
+  ],
+  "accuracy_gate_ev": {"mae": 0.3, "max_absolute_error": 0.5},
+  "no_state_or_family_specific_fit": true,
+  "claim": "development until every predefined state and analytic molecular derivative check has passed; no universal, CT or Rydberg claim"
+}

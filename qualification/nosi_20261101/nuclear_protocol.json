@@ -1,0 +1,14 @@
+{
+  "stage": "frozen before molecular projected-NOSI nuclear response",
+  "vertical_model": "unchanged coherent M06-2X common 50/50 ROKS and Q-projected spin-pure state interaction",
+  "PES_definition": "native semiempirical diagonal functional with frozen charge/spin/one-body response coefficients; physical Slater-Condon h and ERI couplings frozen and co-rotated in the orthonormal AO frame",
+  "moving_ground": "stationary ground of the same corrected functional; analytic first and second orbital response",
+  "excited_orbitals": "complete ground-orthogonal ROKS KKT first and second response, including metric, moving ground and multiplier",
+  "state_interaction": "singular-safe analytic Slater-Condon mixed element jets; generalized eigenvalue/metric/projection response",
+  "no_derivative_steps_in_implementation": true,
+  "validation": "independently reconverged displaced semiempirical roots; energy directional gradients and curvatures, raw Hessian symmetry and translation sum rules",
+  "no_new_DFT_SCF_for_derivatives": true,
+  "no_energy_offset": true,
+  "initial_molecules": ["Criegee_Intermediate", "Furofuran"],
+  "promotion": "only after complete molecular energy/Hessian validation; algebraic tests alone are insufficient"
+}
