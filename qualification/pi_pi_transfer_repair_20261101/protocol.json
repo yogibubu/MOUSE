@@ -1,0 +1,11 @@
+{
+ "objective":"Resolve all seven exposed pi-to-pi transitions with a uniform response-consistent selected-configuration model, preserving n-to-pi controls.",
+ "reference":"Same retained native GFN2 orbitals and frozen CAM-derived common F/Q reference as the twenty-state test.",
+ "fixed":{"weights":[0.5,0.5],"lambda_exchange":0.9,"fitted_excitation_offset_ev":0},
+ "first_candidate":"Use the native functional's nearest Pauli-compatible charge/spin two-body response and consistently normal-ordered one-body operator in the selected optimized-target-plus-doubles space. Preserve every native diagonal functional and exact four-spin block; retain moving stationary-ground projection.",
+ "motivation":"The previous kernel-response tests used the enlarged canonical-singles diagnostic space, whereas the selected-CID success omitted unoptimized canonical singles. Test their physically consistent combination before changing any functional or parameter.",
+ "selection":"Every molecule receives identical algebra; use the unchanged selected-space indices and wavefunction assignment gates. No reference-energy root matching.",
+ "gates":{"all_seven_pi_pi_max_error_ev":0.5,"pi_pi_MAE_ev":0.3,"n_pi_max_error_ev":0.5,"n_pi_MAE_ev":0.3},
+ "exposure":"All twenty target energies are exposed development; no blind validation claim.",
+ "compute":"Verified Oracle or MAC-STUDIO only; all prepared references, states and completed operator/matrix checkpoints are reused."
+}
