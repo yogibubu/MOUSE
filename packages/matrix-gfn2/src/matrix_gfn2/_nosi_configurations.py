@@ -68,3 +68,36 @@ def common_core_and_active(records):
     for record in records:
         core.intersection_update(record['closed']);occupied.update(record['closed']);occupied.update(record.get('open',[]))
     return sorted(core),sorted(occupied-core)
+
+
+def frontier_rank_two(no, frontier):
+    """Complete singlet rank <= 2 records in the historical lexical order.
+
+    Enumerate occupied holes and virtual particles directly, avoiding the
+    exponentially large space of occupations that would subsequently be rejected.
+    """
+    from itertools import combinations
+    if not 2 <= frontier <= no:
+        raise ValueError('invalid occupied frontier')
+    ground = set(range(no))
+    holes = range(no-frontier, no)
+    particles = range(no, no+frontier)
+    closed = [dict(kind='closed', closed=list(range(no)))]
+    opened = []
+    four = []
+    for h in holes:
+        core = sorted(ground-{h})
+        for a in particles:
+            closed.append(dict(kind='closed', closed=sorted(ground-{h}|{a})))
+            opened.append(dict(kind='open', closed=core, open=[h,a]))
+        for a,b in combinations(particles,2):
+            opened.append(dict(kind='open', closed=core, open=[a,b]))
+    for h,j in combinations(holes,2):
+        core = ground-{h,j}
+        for a in particles:
+            opened.append(dict(kind='open', closed=sorted(core|{a}), open=[h,j]))
+        for a,b in combinations(particles,2):
+            for component in range(2):
+                four.append(dict(kind='four', closed=sorted(core), open=[h,j,a,b], component=component))
+    key = lambda r: (tuple(r['closed']),tuple(r.get('open',[])),r.get('component',0))
+    return sorted(closed,key=key)+sorted(opened,key=key)+sorted(four,key=key)

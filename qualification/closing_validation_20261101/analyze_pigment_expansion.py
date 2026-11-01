@@ -3,7 +3,7 @@ from pathlib import Path
 import socket,json,hashlib,argparse
 assert socket.getfqdn()=='mac-2.homenet.telecomitalia.it'
 import numpy as np
-from scipy.linalg import eigh
+from scipy.linalg import eigh,cho_factor,cho_solve
 from scipy.optimize import linear_sum_assignment
 HERE=Path('/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101')
 
@@ -26,7 +26,12 @@ def run(name,frontier,screening_frontier=5):
  for i,record in enumerate(report['auxiliary_records']):
   rank=2*sum(j>=no for j in record['closed'])+sum(j>=no for j in record.get('open',[]))
   if rank==2:indices.append(nbase+i)
- d=np.eye(len(s))[:,indices];d[0]-=(s[0]@d)/s[0,0];values,u=eigh(d.T@s@d);assert values.min()>1e-10;d=d@((u*values**-.5)@u.T);population=np.sum((d.T@s@ci)**2,axis=0)
+ # The projector only needs a positive-definite solve, not all Gram eigenvectors.
+ gram=s[np.ix_(indices,indices)]-np.outer(s[indices,0],s[0,indices])/s[0,0]
+ cross=(s[indices]-np.outer(s[indices,0]/s[0,0],s[0]))@ci
+ population=np.sum(cross*cho_solve(cho_factor(gram,lower=True),cross),axis=0)
+ del gram,cross
+
  rows=[dict(row,double_subspace_weight=float(weight)) for row,weight in zip(report['states'],population)]
  control=None;root_tracking=None
  if frontier!=2:
@@ -38,7 +43,7 @@ def run(name,frontier,screening_frontier=5):
   root_tracking=dict(roots_2_3_principal_cosines_squared=(np.linalg.svd(cross[1:3,1:3],compute_uv=False)**2).tolist(),parent=str(parent.relative_to(HERE)),scope='One-to-one metric-overlap assignment among lowest ten roots',overlap_squared=overlap_squared.tolist(),assignments=[dict(parent_root=int(j+1),child_root=int(i+1),overlap_squared=float(overlap_squared[i,j])) for i,j in zip(child_ids,parent_ids)])
   control=dict(Hamiltonian_max_error_hartree=eh,overlap_max_error=es,ground_energy_error_hartree=ee,baseline_CSFs=len(mapping),same_screened_interaction=same_interaction);assert (not same_interaction or eh<1e-8) and es<1e-10 and ee<1e-8,control
   if same_interaction:
-   parent_energies=np.array([row['excitation_ev'] for row in baseline['states']]);energies=np.array([row['excitation_ev'] for row in report['states']]);violation=float(np.max(energies[:len(parent_energies)]-parent_energies));control['maximum_Rayleigh_Ritz_violation_ev']=violation;assert violation<1e-7
+   parent_energies=np.array([row['excitation_ev'] for row in baseline['states']]);energies=np.array([row['excitation_ev'] for row in report['states']]);violation=float(np.max(energies[:min(len(energies),len(parent_energies))]-parent_energies[:min(len(energies),len(parent_energies))]));control['maximum_Rayleigh_Ritz_violation_ev']=violation;assert violation<1e-7
  analysis=dict(molecule=name,frontier=frontier,screening_frontier=screening_frontier,basis_size=report['basis_size'],states=rows,baseline_principal_submatrix=control,root_tracking=root_tracking,double_population_definition='Metric-orthogonal projector onto retained optimized pairs plus canonical rank-two CSFs; ground projected out',weights=[.5,.5],lambda_exchange=.9,eta=.6,parameters_retuned=False,reference_geometry_changed=False,screened_interaction_changed=not same_interaction,result_sha256=hashlib.sha256((folder/'result.json').read_bytes()).hexdigest())
  (folder/'analysis.json').write_text(json.dumps(analysis,indent=2)+'\n');print(json.dumps(dict(frontier=frontier,basis_size=report['basis_size'],control=control,lowest_states=rows[:5]),indent=2),flush=True)
 

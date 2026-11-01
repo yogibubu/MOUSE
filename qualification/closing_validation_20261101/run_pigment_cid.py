@@ -2,7 +2,7 @@
 from run_pigment_roks import *
 from itertools import combinations
 from scipy.linalg import eigh
-from matrix_gfn2._nosi_configurations import basis as configuration_basis,validate
+from matrix_gfn2._nosi_configurations import basis as configuration_basis,validate,frontier_rank_two
 from matrix_gfn2._nosi_surface_response import MatrixResponse
 from matrix_gfn2._nosi_slater import schur
 from matrix_gfn2._nosi_target_subspace import select_target_subspace
@@ -24,7 +24,7 @@ def transition_dipole(a,b,mu):
 
 def screening_path(name,frontier):return HERE/'pigment_screening'/name if frontier==5 else HERE/'pigment_screening_expansion'/name/f'frontier_{frontier}'
 
-def run(name,frontier=2,screening_frontier=5):
+def run(name,frontier=2,screening_frontier=5,roots=None):
  if not 2<=frontier<=screening_frontier<=12:raise ValueError('CI must fit inside the excluded screening frontier')
  out=(HERE/'pigment_cid'/name if frontier==2 else HERE/'pigment_cid_expansion'/name/f'frontier_{frontier}') if screening_frontier==5 else HERE/'pigment_cid_expansion'/name/f'screening_{screening_frontier}'/f'frontier_{frontier}';out.mkdir(parents=True,exist_ok=True)
  if (out/'result.json').exists():return
@@ -45,19 +45,10 @@ def run(name,frontier=2,screening_frontier=5):
  ys=[frame.T@sr@cc for cc in cs];retained=scalar_basis(y,ys,[],no);core=list(range(no-frontier));sites=list(range(no-frontier,no+frontier));records=[]
  # Complete spin-singlet rank-two frontier rule. The default reproduces
  # the original two-hole/two-particle space; expansion changes membership only.
- for pair in combinations(sites,frontier):
-  if 2*sum(j>=no for j in pair)>2:continue
-  rec=dict(kind='closed',closed=core+list(pair));candidate=configuration_basis(y,[rec])[0]
+ for rec in frontier_rank_two(no,frontier):
+  if rec['kind']=='four':records.append(rec);continue
+  candidate=configuration_basis(y,[rec])[0]
   if max(abs(overlap(candidate,b)) for b in retained)<.7:records.append(rec)
- for paired in combinations(sites,frontier-1):
-  for opens in combinations([j for j in sites if j not in paired],2):
-   if 2*sum(j>=no for j in paired)+sum(j>=no for j in opens)>2:continue
-   rec=dict(kind='open',closed=core+list(paired),open=list(opens));candidate=configuration_basis(y,[rec])[0]
-   if max(abs(overlap(candidate,b)) for b in retained)<.7:records.append(rec)
- for paired in combinations(sites,frontier-2):
-  for opens in combinations([j for j in sites if j not in paired],4):
-   if 2*sum(j>=no for j in paired)+sum(j>=no for j in opens)>2:continue
-   for component in range(2):records.append(dict(kind='four',closed=core+list(paired),open=list(opens),component=component))
  validate(records,no,n);basis=scalar_basis(y,ys,records,no);labels=['ground']+[f'ROKS_{i+1}' for i in range(len(cs))]+[f'paired_{i+1}' for i in range(len(cs))]+[f'canonical_{i+1}' for i in range(len(records))]
  matrices=out/'matrices.npz';screen=screening_path(name,screening_frontier);reused=matrices.exists()
  if not matrices.exists():
@@ -72,28 +63,48 @@ def run(name,frontier=2,screening_frontier=5):
    write(journal,dict(identity=identity,elements={f'{i},{j}':value for (i,j),value in values.items()}));print(name,'CI orbital couplings complete',len(values),flush=True)
   response=MatrixResponse(ctx,reference,c,cs,mus,y,labels,h,w,derivatives=False,auxiliary_records=records,scalar_elements=elements,scalar_checkpoint=checkpoint,fixed_bra=True);hh,ss,eg=response.matrices(np.zeros(s.coordinates_bohr.size));checkpoint(response.scalar_elements,force=True);np.savez(matrices,h=hh.v,s=ss.v,ground_energy=float(eg.v));del response,w
  with np.load(matrices) as z:h=z['h'];metric=z['s'];eg=float(z['ground_energy'])
- projection=np.eye(len(basis))[:,1:];projection[0]-=metric[0,1:]/metric[0,0];sp=projection.T@metric@projection;smallest=float(np.linalg.eigvalsh(sp).min());assert smallest>1e-8,('unresolved CI metric dependence',smallest)
- energies,z=eigh(projection.T@h@projection,sp);ci=projection@z
+ # Exact rank-one ground projection, without dense projection products.
+ p=metric[0,1:]/metric[0,0]
+ sp=metric[1:,1:]-np.outer(metric[1:,0],p)
+ hp=h[1:,1:]-np.outer(h[1:,0],p)-np.outer(p,h[0,1:])+h[0,0]*np.outer(p,p)
+ bound=float(np.min(2*np.diag(sp)-np.sum(abs(sp),axis=1)))
+ smallest=None
+ if bound<=1e-8:
+  smallest=float(eigh(sp,subset_by_index=[0,0],eigvals_only=True)[0]);assert smallest>1e-8,('unresolved CI metric dependence',smallest)
+ subset={} if roots is None else dict(subset_by_index=[0,min(roots,len(sp))-1])
+ energies,z=eigh(hp,sp,**subset);ci=np.vstack((-p@z,z))
+ del hp,sp
  # A multi-promotion pigment is tracked as one retained target subspace.
  targets=np.eye(len(basis))[:,1:1+len(cs)].copy();targets[0]-=(metric[0]@targets)/metric[0,0];tv,tu=eigh(targets.T@metric@targets);assert tv.min()>1e-8;targets=targets@((tu*tv**-.5)@tu.T);weights=np.sum((targets.T@metric@ci)**2,axis=0)
  native_targets=[]
  for row in roks['states']:
   hole,particle=row['hole'],row['particle'];order=[hole]+[j for j in range(no) if j!=hole]+[particle]+[j for j in range(no,n) if j!=particle];native_targets.append(opened(y[:,order],no))
- native_cross=np.array([[overlap(target,b) for b in basis] for target in native_targets]);native_amplitudes=native_cross@ci;native_weights=np.sum(native_amplitudes**2,axis=0);selected,target_coverage=select_target_subspace(native_amplitudes,minimum_coverage=.49)
+ native_cross=np.zeros((len(native_targets),len(basis)))
+ for k,target in enumerate(native_targets):
+  native_cross[k,:len(retained)]=[overlap(target,b) for b in retained]
+  hole,particle=roks['states'][k]['hole'],roks['states'][k]['particle']
+  for j,rec in enumerate(records):
+   if rec['kind']=='open' and rec['open']==[hole,particle] and rec['closed']==[i for i in range(no) if i!=hole]:native_cross[k,len(retained)+j]=1.
+ native_amplitudes=native_cross@ci;native_weights=np.sum(native_amplitudes**2,axis=0);selected,target_coverage=select_target_subspace(native_amplitudes,minimum_coverage=.49)
  dipole_ao=calc._model(s.coordinates_bohr)[2]
  if dipole_ao is None:
   pairs=calc._post_scf_pair_integrals;dipole_ao=np.zeros((3,n,n));dipole_ao[:,pairs.rows,pairs.columns]=pairs.dipole.T;dipole_ao[:,pairs.columns,pairs.rows]=pairs.dipole.T
  if dipole_ao.shape!=(3,n,n):raise ValueError(('native dipole shape',dipole_ao.shape))
- dipoles=np.array([-frame.T@si@a@si@frame for a in dipole_ao]);transition=np.array([transition_dipole(basis[0],b,dipoles) for b in basis]);moment=ci.T@transition;gap=energies-eg;osc=(2/3)*gap*np.sum(moment**2,axis=1)
+ dipoles=np.array([-frame.T@si@a@si@frame for a in dipole_ao]);transition=np.zeros((len(basis),3));transition[:len(retained)]=[transition_dipole(retained[0],b,dipoles) for b in retained];mu_mo=np.einsum('pi,xpq,qj->xij',y,dipoles,y,optimize=True)
+ for j,rec in enumerate(records):
+  if rec['kind']=='open':
+   holes=[i for i in range(no) if i not in rec['closed']]
+   if len(holes)==1 and rec['open'][0]==holes[0] and rec['open'][1]>=no:transition[len(retained)+j]=2**.5*mu_mo[:,holes[0],rec['open'][1]]
+ moment=ci.T@transition;gap=energies-eg;osc=(2/3)*gap*np.sum(moment**2,axis=1)
  rows=[dict(root=i+1,excitation_ev=float(gap[i]*27.211386245988),oscillator_strength=float(osc[i]),transition_dipole_au=moment[i].tolist(),retained_subspace_weight=float(weights[i]),native_frontier_subspace_weight=float(native_weights[i]),selected=bool(i in selected)) for i in range(len(gap))]
  np.savez(out/'eigenstates.npz',energies=energies,ci=ci,transition_dipoles=moment,metric=metric)
- report=dict(molecule=name,host=socket.getfqdn(),states=rows,selected_states=[rows[i] for i in selected],basis_size=len(basis),auxiliary_records=records,retained_ROKS_ordinals=ordinals,minimum_projected_metric_eigenvalue=smallest,spin_squared=0.,weights=[.5,.5],lambda_exchange=.9,bath_efficiency_eta=.6,energy_offset_ev=0,DFT_imports=0,TDA_solves=0,current_process_wall_seconds=time.monotonic()-start,matrix_checkpoint_reused=reused,timing_scope='Current process only; excludes previous matrix construction when resumed and all DFT preparation',model_sha256=hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest(),scope='Vertical examples on source geometries; no excited geometry or pigment nuclear derivative qualification',target_coverage=target_coverage,target_rule='Retain eigenstates until every fixed native-frontier target direction has at least 0.49 projector coverage; fragmented targets remain a subspace; ROKS weights reported separately',numerical_quadrature='Full frozen XC quadrature; RI used only in orbital Newton step')
+ report=dict(molecule=name,host=socket.getfqdn(),states=rows,selected_states=[rows[i] for i in selected],basis_size=len(basis),auxiliary_records=records,retained_ROKS_ordinals=ordinals,minimum_projected_metric_eigenvalue=smallest,projected_metric_Gershgorin_lower_bound=bound,eigenstates_requested=roots,spin_squared=0.,weights=[.5,.5],lambda_exchange=.9,bath_efficiency_eta=.6,energy_offset_ev=0,DFT_imports=0,TDA_solves=0,current_process_wall_seconds=time.monotonic()-start,matrix_checkpoint_reused=reused,timing_scope='Current process only; excludes previous matrix construction when resumed and all DFT preparation',model_sha256=hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest(),scope='Vertical examples on source geometries; no excited geometry or pigment nuclear derivative qualification',target_coverage=target_coverage,target_rule='Retain eigenstates until every fixed native-frontier target direction has at least 0.49 projector coverage; fragmented targets remain a subspace; ROKS weights reported separately',numerical_quadrature='Full frozen XC quadrature; RI used only in orbital Newton step')
  report['scalar_checkpoint_batch_size']=32;report['frontier_occupied']=frontier;report['frontier_virtual']=frontier;report['screened_interaction_reused']=True;report['screening_active_frontier']=screening_frontier;report['role']='Baseline' if frontier==2 else 'Post-exposure active-space convergence diagnostic; no parameter retuning'
  write(out/'result.json',report);print(json.dumps(report,indent=2),flush=True)
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--wait-for-screening',action='store_true');p.add_argument('--frontier',type=int,choices=range(2,13),default=2);p.add_argument('--screening-frontier',type=int,default=5);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--wait-for-screening',action='store_true');p.add_argument('--frontier',type=int,choices=range(2,13),default=2);p.add_argument('--roots',type=int);p.add_argument('--screening-frontier',type=int,default=5);a=p.parse_args()
  while not (screening_path(a.name,a.screening_frontier)/'certificate.json').exists():
   if not a.wait_for_screening:raise RuntimeError('Screening incomplete')
   time.sleep(20)
- with threadpool_limits(8):run(a.name,a.frontier,a.screening_frontier)
+ with threadpool_limits(8):run(a.name,a.frontier,a.screening_frontier,a.roots)
