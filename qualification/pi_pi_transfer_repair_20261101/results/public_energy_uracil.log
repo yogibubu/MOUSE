@@ -1,0 +1,43 @@
+{
+  "runtime_sources": {
+    "matrix_gfn2._nosi_orthogonality": "122423b5322302108d56f10bee909d26d2e95aeae3945f32f05b86b485e23b0c",
+    "matrix_gfn2._nosi_refine": "2904f163ba115ae60b70ace8282bcc8d4b8a9264be6ecb7020e5c0f8d070b60f",
+    "matrix_gfn2._einsum_cached": "b7e3c15f48a8ae5e228392c335e40ece7d6da1c404577e348c2d18c7bf92deb8",
+    "matrix_gfn2._mixed_jet": "9e03fc7e882d78804f4ac48f4f600a1165a33e68f073ca7173d3358c2b91f963",
+    "matrix_gfn2._nosi_mixed": "58fceec7ce356a7ce9a64c3976071b8e51d3b9a071e61d2f4593c44d320df67c",
+    "matrix_gfn2._nosi_mixed_fock": "75eebcc186d31df8bed4a1fe08ad97dffb2cd63e1583f3ed4999ddaf7ff4a205",
+    "matrix_gfn2._nosi_determinant": "cba68b479bcf88d5d8c1f3652b7127e8f6dd6d434d4a9985afc5f1a1a968fc61",
+    "matrix_gfn2._nosi_orbital_response": "54086f5d093721063fef6fa95ae0a83cbec1c9cc5f2c5bdbf96fa115ee6a441b",
+    "matrix_gfn2._nosi_nuclear": "bcb6d3de99074513f915b1d55a0b245c28e6681408984617543704c92b375061",
+    "matrix_gfn2._nosi_slater": "ba9249638f00a29ee063e2700e229fcdc021bdd7c3aa324f795bb29876b4712e",
+    "matrix_gfn2._nosi_spin": "2efd5e457bc115a3d3451ac6f4ae30a9e569dfb2b107e4261b35c7a9422392d2",
+    "matrix_gfn2._nosi_configurations": "f28fa62fa319845e803e47112520af8cdafae92047742369bf1f471bf5cec46f",
+    "matrix_gfn2._nosi_canonical": "0cee95ace03eb985c775a6c9a72d63a601542ac825b485db6a6715e1ec234341",
+    "matrix_gfn2._nosi_surface_response": "dee545873b79186d1c1b3df173b2faa05019e21a38f6fb59b115dd40ec360198",
+    "matrix_gfn2.nosi_surface": "7e2895a5005b2421a3864d7a53f109d58aa36434c656e2cc9cf246a7dbd4a14f"
+  },
+  "spin": [
+    {
+      "state_id": "V011",
+      "spin_squared": 0.0
+    }
+  ],
+  "host": "mac-2.homenet.telecomitalia.it",
+  "properties": [
+    "energy"
+  ],
+  "wall_seconds": 6.725615500006825,
+  "peak_rss_native": 690700288,
+  "prediction_errors_ev": {
+    "V011": 5.154827675823981e-10
+  },
+  "derivative_errors": {},
+  "restart_error_hartree": 2.842170943040401e-14,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_input_reads": 0,
+  "read_paths": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-pi-pi-transfer-repair-20261101/portable_validation/last_two/uracil/checkpoint.npz"
+  ],
+  "model_fingerprint": "7d96071dfceeec426e29d7a6e24c10ceceff5800d779190331391e400406b8b3"
+}

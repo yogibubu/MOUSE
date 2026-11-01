@@ -1,0 +1,33 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "properties": [
+    "energy",
+    "gradient",
+    "hessian"
+  ],
+  "wall_seconds": 17.65212170802988,
+  "peak_rss_native": 308543488,
+  "prediction_errors_ev": {
+    "I001": 1.6608936448392342e-13,
+    "I002": 1.667554982986985e-10
+  },
+  "derivative_errors": {
+    "I001": {
+      "gradient_error": 5.248031522059182e-15,
+      "hessian_error": 3.1361363924619685e-13
+    },
+    "I002": {
+      "gradient_error": 4.507908087965219e-15,
+      "hessian_error": 9.121592370320286e-13
+    }
+  },
+  "restart_error_hartree": 1.2434497875801753e-14,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_input_reads": 0,
+  "read_paths": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/portable_validation/independent/Criegee_Intermediate/checkpoint.npz",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/selected_cid_analytic/independent/Criegee_Intermediate/nuclear_response.npz"
+  ],
+  "model_fingerprint": "64eafb6dcd9203fa5442573fc309a2a0298c4345e0f852551631dec28cb0c9f0"
+}

@@ -1,0 +1,3 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+Furan [{'id': 'V010', 'xc_roks_remainder_ev': np.float64(0.011212171186209532), 'xc_double_remainder_ev': np.float64(0.02481989468918652)}]
