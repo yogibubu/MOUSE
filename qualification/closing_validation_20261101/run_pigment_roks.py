@@ -21,13 +21,17 @@ from threadpoolctl import threadpool_limits
 def write(path,data):
  p=path.with_suffix(f'.tmp.{os.getpid()}.json');p.write_text(json.dumps(data,indent=2)+'\n');p.replace(path)
 
-def load(name):
+def load_state_only(name):
  model=HERE/'pigment_models'/name
  with np.load(model/'state.npz') as z:
   basis=GFN2OrbitalBasis(**{f.name:z['basis_'+f.name].copy() for f in fields(GFN2OrbitalBasis)});kw={f.name:z[f.name].copy() for f in fields(GFN2OrbitalState) if f.name!='basis'}
  kw['model_id']=str(kw['model_id']);kw['ao_shell']=tuple(kw['ao_shell'].tolist())
  for field in ['electron_count','charge','multiplicity']:kw[field]=int(kw[field])
  kw['total_energy_hartree']=float(kw['total_energy_hartree']);s=GFN2OrbitalState(**kw,basis=basis)
+ return model,s
+
+def load(name):
+ model,s=load_state_only(name)
  reference=load_response_reference(model/'response.npz');calc=GFN2Calculator([{1:'H',6:'C',7:'N',8:'O',12:'Mg'}[int(z)] for z in s.atomic_numbers],temperature_kelvin=0.);calc.evaluate=lambda *x,**k:(_ for _ in ()).throw(AssertionError('New SCC forbidden'))
  base=prepare_gfn2_deltascf(calc,s.coordinates_bohr/ANGSTROM_TO_BOHR,orbital_reference=s,spin_reference=reference,allow_large=True);context=FrozenQuadratureXC(base,model/'quadrature/manifest.json',model/'xc_charge.npy',model/'xc_spin.npy',reference)
  return model,s,reference,calc,base,context

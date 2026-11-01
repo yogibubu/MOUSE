@@ -6,7 +6,7 @@
       "krylov": "gmres",
       "model": "6a718b598aa4fa183b8fc2a6895f869f2cc9421c44267ab6ac13aa069f59d43a",
       "energy_error_hartree": 5.329070518200751e-15,
-      "wall_seconds": 0.047800625034142286,
+      "wall_seconds": 0.0427847919636406,
       "report": {
         "converged": true,
         "history": [
@@ -166,7 +166,7 @@
       "krylov": "gmres",
       "model": "073718e9243dd5b403eafb7872bb4fbae46b6a6992adc1ab5d7a095ab9899a9f",
       "energy_error_hartree": 3.552713678800501e-15,
-      "wall_seconds": 0.08173074998194352,
+      "wall_seconds": 0.0998537500272505,
       "report": {
         "converged": true,
         "history": [
@@ -306,7 +306,7 @@
       "krylov": "minres",
       "model": "6a718b598aa4fa183b8fc2a6895f869f2cc9421c44267ab6ac13aa069f59d43a",
       "energy_error_hartree": 5.329070518200751e-15,
-      "wall_seconds": 0.051341667014639825,
+      "wall_seconds": 0.058074458967894316,
       "report": {
         "converged": true,
         "history": [
@@ -450,7 +450,7 @@
       "krylov": "minres",
       "model": "073718e9243dd5b403eafb7872bb4fbae46b6a6992adc1ab5d7a095ab9899a9f",
       "energy_error_hartree": 7.105427357601002e-15,
-      "wall_seconds": 0.09205720905447379,
+      "wall_seconds": 0.13068308302899823,
       "report": {
         "converged": true,
         "history": [

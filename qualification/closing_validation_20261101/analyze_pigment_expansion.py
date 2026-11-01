@@ -35,7 +35,7 @@ def run(name,frontier,screening_frontier=5):
   with np.load(parent/'eigenstates.npz') as z:parent_ci=z['ci'][:,:10]
   cross=ci[:,:10].T@s[:,mapping]@parent_ci;overlap_squared=abs(cross)**2;assert np.max(overlap_squared)<=1+1e-8
   child_ids,parent_ids=linear_sum_assignment(-overlap_squared)
-  root_tracking=dict(parent=str(parent.relative_to(HERE)),scope='One-to-one metric-overlap assignment among lowest ten roots',overlap_squared=overlap_squared.tolist(),assignments=[dict(parent_root=int(j+1),child_root=int(i+1),overlap_squared=float(overlap_squared[i,j])) for i,j in zip(child_ids,parent_ids)])
+  root_tracking=dict(roots_2_3_principal_cosines_squared=(np.linalg.svd(cross[1:3,1:3],compute_uv=False)**2).tolist(),parent=str(parent.relative_to(HERE)),scope='One-to-one metric-overlap assignment among lowest ten roots',overlap_squared=overlap_squared.tolist(),assignments=[dict(parent_root=int(j+1),child_root=int(i+1),overlap_squared=float(overlap_squared[i,j])) for i,j in zip(child_ids,parent_ids)])
   control=dict(Hamiltonian_max_error_hartree=eh,overlap_max_error=es,ground_energy_error_hartree=ee,baseline_CSFs=len(mapping),same_screened_interaction=same_interaction);assert (not same_interaction or eh<1e-8) and es<1e-10 and ee<1e-8,control
   if same_interaction:
    parent_energies=np.array([row['excitation_ev'] for row in baseline['states']]);energies=np.array([row['excitation_ev'] for row in report['states']]);violation=float(np.max(energies[:len(parent_energies)]-parent_energies));control['maximum_Rayleigh_Ritz_violation_ev']=violation;assert violation<1e-7
