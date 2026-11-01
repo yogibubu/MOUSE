@@ -1,0 +1,153 @@
+{
+  "cohort": "extra_npi",
+  "molecule": "formamide",
+  "states": [
+    {
+      "id": "N002",
+      "gap_ev": 5.32344128512391,
+      "overlap": 0.9999016249057754,
+      "margin": 0.9938967984093502
+    }
+  ],
+  "model": "5047e138d721f4d4eaadccb2015cd7e37ce5cf6604e072b530454526e7c8aaf8",
+  "delta_common_levels_hartree": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.13899909798169335,
+    -0.07520773891972096,
+    -0.16272580018787874,
+    -0.06826122899203302,
+    0.03282555671089088
+  ],
+  "spectral_blocks": [
+    {
+      "native_orbital": 10,
+      "full_MOs": [
+        41,
+        12,
+        19,
+        31,
+        23,
+        24
+      ],
+      "weights": [
+        0.11264337452393836,
+        0.09833866324512877,
+        0.09749334817176868,
+        0.0758697274539145,
+        0.07356072974908467,
+        0.04950325928642223
+      ],
+      "cumulative_weight": 0.5074091024302572,
+      "centroid_full_hartree": 0.2365438653013425,
+      "centroid_aligned_hartree": 0.34299353234598984,
+      "spectral_width_hartree": 0.18542633396490213,
+      "F_relaxation_hartree": -0.1596924141789864,
+      "Q_change_hartree": -0.11830578178440032
+    },
+    {
+      "native_orbital": 11,
+      "full_MOs": [
+        20,
+        27,
+        45,
+        40,
+        25
+      ],
+      "weights": [
+        0.14727673217876366,
+        0.13390930299137177,
+        0.07773201234543341,
+        0.07602937460026436,
+        0.06905948591475204
+      ],
+      "cumulative_weight": 0.5040069080305852,
+      "centroid_full_hartree": 0.30408197051134694,
+      "centroid_aligned_hartree": 0.41053163755599426,
+      "spectral_width_hartree": 0.16963404344090782,
+      "F_relaxation_hartree": -0.09617005320222183,
+      "Q_change_hartree": -0.0542454246372201
+    },
+    {
+      "native_orbital": 12,
+      "full_MOs": [
+        23,
+        28,
+        42,
+        34
+      ],
+      "weights": [
+        0.18714033943771002,
+        0.1444482421788525,
+        0.08687009697904774,
+        0.07582331200983315
+      ],
+      "cumulative_weight": 0.4942819906054434,
+      "centroid_full_hartree": 0.2971503054103946,
+      "centroid_aligned_hartree": 0.4035999724550419,
+      "spectral_width_hartree": 0.1314275991138173,
+      "F_relaxation_hartree": -0.17742572875140378,
+      "Q_change_hartree": -0.1480258716243537
+    },
+    {
+      "native_orbital": 13,
+      "full_MOs": [
+        40,
+        31,
+        45,
+        41
+      ],
+      "weights": [
+        0.19544675224584215,
+        0.16696481398722293,
+        0.08352494471756619,
+        0.051078276799338664
+      ],
+      "cumulative_weight": 0.49701478774996993,
+      "centroid_full_hartree": 0.4702704782150563,
+      "centroid_aligned_hartree": 0.5767201452597036,
+      "spectral_width_hartree": 0.09099208937775455,
+      "F_relaxation_hartree": -0.07759224913654639,
+      "Q_change_hartree": -0.05893020884751965
+    },
+    {
+      "native_orbital": 14,
+      "full_MOs": [
+        51,
+        48,
+        43,
+        54,
+        40
+      ],
+      "weights": [
+        0.20774064521502272,
+        0.11219964801930161,
+        0.08182022929763937,
+        0.06272639070879218,
+        0.04986911084935363
+      ],
+      "cumulative_weight": 0.5143560240901095,
+      "centroid_full_hartree": 0.7278615125324644,
+      "centroid_aligned_hartree": 0.8343111795771118,
+      "spectral_width_hartree": 0.12176065498440124,
+      "F_relaxation_hartree": 0.0272549179424868,
+      "Q_change_hartree": 0.03839619547929496
+    }
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "development_amendment": true
+}

@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "cid_prospective",
+  "molecule": "maleimide",
+  "states": [
+    {
+      "id": "V006",
+      "gap_ev": 3.994415160740121,
+      "overlap": 0.9999337117535042,
+      "margin": 0.9886824320452124
+    }
+  ],
+  "model": "3e04e1a03580d1013c3d4a85acd5d238b594977308563f58005c1157df4d7583",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 463,
+  "bath_virtuals": 164,
+  "native_environment_transitions": 209,
+  "bath_transitions": 2952,
+  "gauge_alignment_hartree": 0.10202323463355745,
+  "minimum_bath_gap_hartree": 0.36992064906912125,
+  "bare_DF_integral_max_error_hartree": 0.0003661765342722889,
+  "minimum_dielectric_eigenvalue": 1.0000021089451443,
+  "screened_coulomb_trace": 25.50471740002338
+}

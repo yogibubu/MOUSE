@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "additional_three",
+  "molecule": "pyranone",
+  "states": [
+    {
+      "id": "V009",
+      "gap_ev": 4.181183426030143,
+      "overlap": 0.9996613336216911,
+      "margin": 0.9736504384976197
+    }
+  ],
+  "model": "02eb02c21c2097a4a7a5b304b5235e0a8bd5c1a2302df01ff27c5a90929d8a9a",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 475,
+  "bath_virtuals": 172,
+  "native_environment_transitions": 227,
+  "bath_transitions": 3096,
+  "gauge_alignment_hartree": 0.09366187329558373,
+  "minimum_bath_gap_hartree": 0.3329591786942574,
+  "bare_DF_integral_max_error_hartree": 0.00011850195553925191,
+  "minimum_dielectric_eigenvalue": 1.0000021250947595,
+  "screened_coulomb_trace": 25.658082968381713
+}

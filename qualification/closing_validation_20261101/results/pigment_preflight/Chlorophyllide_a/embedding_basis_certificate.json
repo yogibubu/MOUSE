@@ -1,0 +1,17 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "spherical_native_orbitals": 219,
+  "cartesian_functions": 220,
+  "maximum_angular_momentum": 2,
+  "overlap_max_error": 1.4904744105592727e-13,
+  "embedding": {
+    "reconstruction": "explicit_normalized_cartesian_spd",
+    "primitive_AO_max_error": 1.6653345369377348e-16,
+    "raw_overlap_max_error": 1.5318457613489045e-10,
+    "metric_calibration": true,
+    "metric_calibration_operator_norm": 9.124263779814615e-11,
+    "corrected_overlap_max_error": 1.4904744105592727e-13,
+    "minimum_raw_overlap_eigenvalue": 0.24725870714338224,
+    "minimum_native_overlap_eigenvalue": 0.247258707146201
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "cohort": "additional_three",
+  "molecule": "pyranone",
+  "states": [
+    {
+      "id": "V009",
+      "gap_ev": 4.1429272442063905,
+      "overlap": 0.9999509340086264,
+      "margin": 0.9975987556313679
+    }
+  ],
+  "model": "c37bfcd2acd28d324a743c918ca471f96135493efdc434deebcdcd01700b468b",
+  "delta_common_levels_hartree": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0891039286830369,
+    -0.11889187052275751,
+    -0.0643192455015904,
+    -0.20959036596549419,
+    -0.1236158738439676,
+    -0.06619594924388977,
+    -0.06305373659592428,
+    -0.02422477832359493,
+    -0.14741727027940574,
+    -0.06382817207343605,
+    -0.019814385391175415
+  ],
+  "spectral_blocks": [
+    {
+      "native_orbital": 21,
+      "full_MOs": [
+        47,
+        72,
+        41,
+        50
+      ],
+      "weights": [
+        0.239244436121719,
+        0.1057863596356049,
+        0.09389926660838753,
+        0.0915415859339891
+      ],
+      "cumulative_weight": 0.5304716482997005,
+      "centroid_full_hartree": 0.22181636937698546,
+      "centroid_aligned_hartree": 0.3247744234612969,
+      "spectral_width_hartree": 0.09946807639705153,
+      "F_relaxation_hartree": -0.10270565682226618,
+      "Q_change_hartree": -0.07550220054380763
+    },
+    {
+      "native_orbital": 22,
+      "full_MOs": [
+        58,
+        79,
+        60,
+        44,
+        64
+      ],
+      "weights": [
+        0.17180698454331325,
+        0.10897309486955639,
+        0.08376105277670702,
+        0.0746179432172802,
+        0.07079467890424117
+      ],
+      "cumulative_weight": 0.509953754311098,
+      "centroid_full_hartree": 0.3156240056470727,
+      "centroid_aligned_hartree": 0.4185820597313842,
+      "spectral_width_hartree": 0.10892975867834115,
+      "F_relaxation_hartree": -0.1278502671977234,
+      "Q_change_hartree": -0.10993347384779162
+    },
+    {
+      "native_orbital": 23,
+      "full_MOs": [
+        51,
+        54,
+        59
+      ],
+      "weights": [
+        0.18698715703593433,
+        0.1834480726945422,
+        0.1282460296228507
+      ],
+      "cumulative_weight": 0.4986812593533272,
+      "centroid_full_hartree": 0.2540717033468061,
+      "centroid_aligned_hartree": 0.3570297574311176,
+      "spectral_width_hartree": 0.020785403851391913,
+      "F_relaxation_hartree": -0.0772550907442428,
+      "Q_change_hartree": -0.051383400258938006
+    },
+    {
+      "native_orbital": 24,
+      "full_MOs": [
+        39,
+        57,
+        50,
+        49,
+        26,
+        52
+      ],
+      "weights": [
+        0.11357577707965869,
+        0.10829639579871138,
+        0.09029929656822372,
+        0.07704571669620672,
+        0.06472671300631082,
+        0.06352705337409172
+      ],
+      "cumulative_weight": 0.5174709525232031,
+      "centroid_full_hartree": 0.1807216994228494,
+      "centroid_aligned_hartree": 0.2836797535071609,
+      "spectral_width_hartree": 0.08480076235589268,
+      "F_relaxation_hartree": -0.22701817439309221,
+      "Q_change_hartree": -0.19216255753789613
+    },
+    {
+      "native_orbital": 25,
+      "full_MOs": [
+        61,
+        73,
+        78,
+        63
+      ],
+      "weights": [
+        0.24394771994297965,
+        0.15136980780225254,
+        0.07808777411234674,
+        0.06922647954258415
+      ],
+      "cumulative_weight": 0.5426317814001631,
+      "centroid_full_hartree": 0.3607287920392998,
+      "centroid_aligned_hartree": 0.4636868461236113,
+      "spectral_width_hartree": 0.07482745719955694,
+      "F_relaxation_hartree": -0.13282901437954592,
+      "Q_change_hartree": -0.11440273330838929
+    },
+    {
+      "native_orbital": 26,
+      "full_MOs": [
+        67,
+        95,
+        69
+      ],
+      "weights": [
+        0.22391625149362085,
+        0.1880027176904113,
+        0.12595972791675225
+      ],
+      "cumulative_weight": 0.5378786971007844,
+      "centroid_full_hartree": 0.47649479538940553,
+      "centroid_aligned_hartree": 0.579452849473717,
+      "spectral_width_hartree": 0.15392867961792228,
+      "F_relaxation_hartree": -0.07239841476685227,
+      "Q_change_hartree": -0.059993483720927276
+    },
+    {
+      "native_orbital": 27,
+      "full_MOs": [
+        73,
+        88,
+        91,
+        78
+      ],
+      "weights": [
+        0.26006467533558075,
+        0.11567674970186614,
+        0.11111668998687864,
+        0.09828571718640478
+      ],
+      "cumulative_weight": 0.5851438322107303,
+      "centroid_full_hartree": 0.5073414336657547,
+      "centroid_aligned_hartree": 0.6102994877500661,
+      "spectral_width_hartree": 0.09298835495676981,
+      "F_relaxation_hartree": -0.07107959054263258,
+      "Q_change_hartree": -0.05502788264921599
+    },
+    {
+      "native_orbital": 28,
+      "full_MOs": [
+        98,
+        93,
+        72,
+        76
+      ],
+      "weights": [
+        0.1664540717341356,
+        0.15181889778154004,
+        0.11174798590611237,
+        0.10676910410026574
+      ],
+      "cumulative_weight": 0.5367900595220537,
+      "centroid_full_hartree": 0.5837734564952329,
+      "centroid_aligned_hartree": 0.6867315105795444,
+      "spectral_width_hartree": 0.12057484320196597,
+      "F_relaxation_hartree": -0.03193228013997762,
+      "Q_change_hartree": -0.016517276507212242
+    },
+    {
+      "native_orbital": 29,
+      "full_MOs": [
+        74,
+        65,
+        81,
+        87
+      ],
+      "weights": [
+        0.20473520273127718,
+        0.17185965127316535,
+        0.10655332887034857,
+        0.06335171888065264
+      ],
+      "cumulative_weight": 0.5464999017554437,
+      "centroid_full_hartree": 0.44718988555315614,
+      "centroid_aligned_hartree": 0.5501479396374676,
+      "spectral_width_hartree": 0.08354690359770375,
+      "F_relaxation_hartree": -0.15065983140047906,
+      "Q_change_hartree": -0.14417470915833241
+    },
+    {
+      "native_orbital": 30,
+      "full_MOs": [
+        91,
+        103
+      ],
+      "weights": [
+        0.36385926906017446,
+        0.13001275710810886
+      ],
+      "cumulative_weight": 0.4938720261682833,
+      "centroid_full_hartree": 0.6658349524557681,
+      "centroid_aligned_hartree": 0.7687930065400795,
+      "spectral_width_hartree": 0.05942795881866237,
+      "F_relaxation_hartree": -0.06484391778504794,
+      "Q_change_hartree": -0.06281242636182416
+    },
+    {
+      "native_orbital": 31,
+      "full_MOs": [
+        108,
+        93,
+        112,
+        104
+      ],
+      "weights": [
+        0.15419247123355037,
+        0.1431478749000752,
+        0.12809550019894056,
+        0.10581974585184142
+      ],
+      "cumulative_weight": 0.5312555921844075,
+      "centroid_full_hartree": 0.7792110396903031,
+      "centroid_aligned_hartree": 0.8821690937746146,
+      "spectral_width_hartree": 0.08576741218715393,
+      "F_relaxation_hartree": -0.020923073498887557,
+      "Q_change_hartree": -0.018705697283463274
+    }
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "development_amendment": true
+}

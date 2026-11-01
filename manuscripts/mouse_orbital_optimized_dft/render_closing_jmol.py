@@ -3,11 +3,11 @@ from pathlib import Path
 import subprocess,json,hashlib,shutil,argparse
 import numpy as np
 P=Path(__file__).resolve().parent
-p=argparse.ArgumentParser();p.add_argument('--jar',type=Path,required=True);a=p.parse_args();root=P/'data/closing_validation';root.mkdir(exist_ok=True);records=[]
-for name in ['Formaldehyde','Ethylene','Butadiene']:
- source=P/'coordinates/closing_validation'/(name+'.xyz');lines=source.read_text().splitlines();n=int(lines[0]);atoms=[line.split() for line in lines[2:2+n]];x=np.array([[float(v) for v in row[1:4]] for row in atoms]);center=x.mean(0);_,_,axes=np.linalg.svd(x-center,full_matrices=True);rotation=axes.T
+p=argparse.ArgumentParser();p.add_argument('--jar',type=Path,required=True);p.add_argument('--names',nargs='+',default=['Formaldehyde','Ethylene','Butadiene']);p.add_argument('--group',default='closing_validation');a=p.parse_args();root=P/'data'/a.group;root.mkdir(parents=True,exist_ok=True);records=[]
+for name in a.names:
+ source=P/'coordinates'/a.group/(name+'.xyz');lines=source.read_text().splitlines();n=int(lines[0]);atoms=[line.split() for line in lines[2:2+n]];x=np.array([[float(v) for v in row[1:4]] for row in atoms]);center=x.mean(0);_,_,axes=np.linalg.svd(x-center,full_matrices=True);rotation=axes.T
  if np.linalg.det(rotation)<0:rotation[:,-1]*=-1
- view=(x-center)@rotation;cache=P/'tmp/closing_jmol';cache.mkdir(parents=True,exist_ok=True);xyz=cache/(name+'.xyz');xyz.write_text(str(n)+'\nRigid display rotation, Angstrom\n'+''.join(f'{row[0]} {r[0]:.12f} {r[1]:.12f} {r[2]:.12f}\n' for row,r in zip(atoms,view)));png=root/(name+'.png');script=cache/(name+'.spt');script.write_text(f'''load "{xyz}"
+ view=(x-center)@rotation;cache=P/'tmp'/('jmol_'+a.group);cache.mkdir(parents=True,exist_ok=True);xyz=cache/(name+'.xyz');xyz.write_text(str(n)+'\nRigid display rotation, Angstrom\n'+''.join(f'{row[0]} {r[0]:.12f} {r[1]:.12f} {r[2]:.12f}\n' for row,r in zip(atoms,view)));png=root/(name+'.png');script=cache/(name+'.spt');script.write_text(f'''load "{xyz}"
 background white
 set frank off
 set antialiasDisplay true

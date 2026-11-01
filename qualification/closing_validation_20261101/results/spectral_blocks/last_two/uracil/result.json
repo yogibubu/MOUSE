@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "last_two",
+  "molecule": "uracil",
+  "states": [
+    {
+      "id": "V011",
+      "gap_ev": 5.103112493778395,
+      "overlap": 0.9990892928554026,
+      "margin": 0.969522242488574
+    }
+  ],
+  "model": "3020a5cf531d09b3be933678c53b9e28bc8740c4ee49b14b6fa9b233bbdb04ec",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 536,
+  "bath_virtuals": 192,
+  "native_environment_transitions": 290,
+  "bath_transitions": 4032,
+  "gauge_alignment_hartree": 0.10516561480708642,
+  "minimum_bath_gap_hartree": 0.34604887545726193,
+  "bare_DF_integral_max_error_hartree": 0.00035176666593961237,
+  "minimum_dielectric_eigenvalue": 1.0000021278152293,
+  "screened_coulomb_trace": 29.373452508530484
+}

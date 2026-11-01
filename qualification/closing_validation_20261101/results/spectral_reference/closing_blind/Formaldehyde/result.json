@@ -1,0 +1,88 @@
+{
+  "cohort": "closing_blind",
+  "molecule": "Formaldehyde",
+  "states": [
+    {
+      "id": "B001",
+      "gap_ev": 3.5789941911077943,
+      "overlap": 0.9997687428900301,
+      "margin": 0.979688030419923
+    }
+  ],
+  "model": "2e6098fae4757d84a3def93002a31163579bd278c990d6c68404eb55acf00ae1",
+  "delta_common_levels_hartree": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0922100432754841,
+    -0.015872566332533616,
+    0.0074326898085248505
+  ],
+  "spectral_blocks": [
+    {
+      "native_orbital": 7,
+      "full_MOs": [
+        16,
+        32,
+        14
+      ],
+      "weights": [
+        0.23117756485656363,
+        0.16802550903019256,
+        0.13874944045100976
+      ],
+      "cumulative_weight": 0.5379525143377659,
+      "centroid_full_hartree": 0.30845947192971,
+      "centroid_aligned_hartree": 0.3932824591764351,
+      "spectral_width_hartree": 0.21420032992635565,
+      "F_relaxation_hartree": -0.11152974960510542,
+      "Q_change_hartree": -0.07289033694586278
+    },
+    {
+      "native_orbital": 8,
+      "full_MOs": [
+        31,
+        21
+      ],
+      "weights": [
+        0.27330914301364084,
+        0.24409837555098107
+      ],
+      "cumulative_weight": 0.5174075185646219,
+      "centroid_full_hartree": 0.43886179364474204,
+      "centroid_aligned_hartree": 0.5236847808914671,
+      "spectral_width_hartree": 0.14265692940909813,
+      "F_relaxation_hartree": -0.033239648611736616,
+      "Q_change_hartree": 0.0014945159466693836
+    },
+    {
+      "native_orbital": 9,
+      "full_MOs": [
+        30,
+        34
+      ],
+      "weights": [
+        0.28277298853287924,
+        0.22106432718873714
+      ],
+      "cumulative_weight": 0.5038373157216164,
+      "centroid_full_hartree": 0.6298684282536182,
+      "centroid_aligned_hartree": 0.7146914155003433,
+      "spectral_width_hartree": 0.10167855292004072,
+      "F_relaxation_hartree": -0.0021660882705831774,
+      "Q_change_hartree": 0.01703146788763288
+    }
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "development_amendment": true
+}

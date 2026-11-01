@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "post_kernel_validation",
+  "molecule": "acrolein",
+  "states": [
+    {
+      "id": "V004",
+      "gap_ev": 3.3685849000209873,
+      "overlap": 0.999223412603156,
+      "margin": 0.9614509074419508
+    }
+  ],
+  "model": "4c353eb8e3333225ccbb229f93eebffd07e82ea744346b1a4c0891551bc4fe64",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 292,
+  "bath_virtuals": 112,
+  "native_environment_transitions": 74,
+  "bath_transitions": 1232,
+  "gauge_alignment_hartree": 0.08642817359960231,
+  "minimum_bath_gap_hartree": 0.3597290793174657,
+  "bare_DF_integral_max_error_hartree": 0.00011706929936253219,
+  "minimum_dielectric_eigenvalue": 1.0000015445427393,
+  "screened_coulomb_trace": 16.68595009785836
+}

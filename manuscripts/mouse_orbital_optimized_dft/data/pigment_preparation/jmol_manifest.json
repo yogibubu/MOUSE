@@ -1,0 +1,64 @@
+{
+  "renderer": "Jmol 14.31.10",
+  "jar_sha256": "50d63fac6e8074aaf7883b072e4b0a46e95c78fe1958a05e79560fa99eb1cfdf",
+  "molecules": [
+    {
+      "molecule": "Beta_carotene",
+      "geometry": "coordinates/pigment_preparation/Beta_carotene.xyz",
+      "geometry_sha256": "5bd7714938e3eaaf3fe50dfb5f0af139ba307971bc228246d319381ab661b71c",
+      "render": "data/pigment_preparation/Beta_carotene.png",
+      "render_sha256": "c48969b56412d5cd75238ba7188185a610b56f26e59ed54c12a75698789d0e9b",
+      "display_rotation": [
+        [
+          0.9999823439288551,
+          -0.004666011398035502,
+          -0.0036796967519838334
+        ],
+        [
+          0.004785971298090967,
+          0.9994341052931491,
+          0.033295099573607545
+        ],
+        [
+          0.0035222591169598895,
+          -0.03331212263600123,
+          0.999438790610109
+        ]
+      ],
+      "display_center": [
+        0.008191666666666667,
+        -0.015600000000000029,
+        -0.004661458333333333
+      ]
+    },
+    {
+      "molecule": "Chlorophyllide_a",
+      "geometry": "coordinates/pigment_preparation/Chlorophyllide_a.xyz",
+      "geometry_sha256": "26cd8e5c7da9d9f73eedc600a03cb120053e21c517abd223c810fb5e2911c4ea",
+      "render": "data/pigment_preparation/Chlorophyllide_a.png",
+      "render_sha256": "2282352658f5c7d8e378afa4aed619872b584f77833b35d6d811b248b4972577",
+      "display_rotation": [
+        [
+          -0.975925346425384,
+          0.0892625214313102,
+          0.19900231273083072
+        ],
+        [
+          -0.12888428846217084,
+          -0.9720913988413749,
+          -0.19602844815541143
+        ],
+        [
+          0.17595044300056312,
+          -0.21695740265393987,
+          0.9601931717324185
+        ]
+      ],
+      "display_center": [
+        0.24991139240506322,
+        -0.09424050632911389,
+        -0.34508860759493665
+      ]
+    }
+  ]
+}

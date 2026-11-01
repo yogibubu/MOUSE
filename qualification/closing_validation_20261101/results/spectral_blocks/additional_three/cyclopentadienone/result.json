@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "additional_three",
+  "molecule": "cyclopentadienone",
+  "states": [
+    {
+      "id": "V008",
+      "gap_ev": 2.9711096485060247,
+      "overlap": 0.9999596787101911,
+      "margin": 0.9911063821744283
+    }
+  ],
+  "model": "2794d56c639c4274c348401ae6d4cc2d0b5bd61a7af3db471449fb6e2069b983",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 414,
+  "bath_virtuals": 152,
+  "native_environment_transitions": 170,
+  "bath_transitions": 2280,
+  "gauge_alignment_hartree": 0.09580317372722336,
+  "minimum_bath_gap_hartree": 0.3452651572897492,
+  "bare_DF_integral_max_error_hartree": 0.00011407241630284615,
+  "minimum_dielectric_eigenvalue": 1.0000019998198995,
+  "screened_coulomb_trace": 22.012139225504804
+}

@@ -12,9 +12,9 @@ from matrix_gfn2.nosi_surface import PreparedNOSIModel,load_nosi_result,save_nos
 import shutil
 sys.path.insert(0,str(Q));from screening import sector
 
-def run_screen(cohort,name,auxbasis='weigend+etb',bath_strength=1.):
+def run_screen(cohort,name,auxbasis='weigend+etb',bath_strength=1.,reference_parent='downfold_reference'):
  assert 0<=bath_strength<=1
- parent=HERE/'downfold_reference'/cohort/name;cache_root=HERE/('disentangled_bath' if auxbasis=='weigend+etb' else 'disentangled_bath_auxcheck')/cohort/name;cache_root.mkdir(parents=True,exist_ok=True);out=(cache_root if bath_strength==1 else HERE/f'disentangled_bath_eta_{bath_strength:.6f}'/cohort/name);out.mkdir(parents=True,exist_ok=True)
+ parent=HERE/reference_parent/cohort/name;tag='' if reference_parent=='downfold_reference' else '_'+reference_parent;cache_root=HERE/('disentangled_bath'+tag if auxbasis=='weigend+etb' else 'disentangled_bath_auxcheck'+tag)/cohort/name;cache_root.mkdir(parents=True,exist_ok=True);out=(cache_root if bath_strength==1 else HERE/f'disentangled_bath{tag}_eta_{bath_strength:.6f}'/cohort/name);out.mkdir(parents=True,exist_ok=True)
  if (out/'result.json').exists():return
  model=PreparedNOSIModel(parent/'model.json');r=load_nosi_result(parent/'checkpoint.npz',model);case=prepare(cohort,name);s=case['s'];no=case['no'];n=len(s.overlap);sr=model._anchor_sqrt;si=np.linalg.inv(sr);ctx=prepare_gfn2_deltascf(case['calc'],case['xyz'],orbital_reference=model.anchor,spin_reference=model.response);p=r.ground_coefficients[:,:no]@r.ground_coefficients[:,:no].T;fg,_=ctx.fock_and_energy(np.array([p,p]));en,canonical=eigh(fg[0],s.overlap);y=sr@canonical
  # The excluded active span is exactly the frozen retained CI chart.
@@ -32,6 +32,9 @@ def run_screen(cohort,name,auxbasis='weigend+etb',bath_strength=1.):
   with np.load(vertices) as z:assert str(z['parent'])==model.fingerprint;lp=z['lp'].copy();ln=z['ln'].copy();lb=z['lb'].copy()
  else:
   cache=cache_root/'cderi.npz'
+  if not cache.exists() and reference_parent!='downfold_reference':
+   reusable=HERE/'disentangled_bath'/cohort/name/'cderi.npz'
+   if reusable.exists():shutil.copy2(reusable,cache)
   if cache.exists():
    with np.load(cache) as z:three=z['three'].copy()
   else:three=df.incore.cholesky_eri(case['mol'],auxbasis=auxbasis,max_memory=3000);np.savez_compressed(cache,three=three)
@@ -46,5 +49,5 @@ def run_screen(cohort,name,auxbasis='weigend+etb',bath_strength=1.):
  bare=np.einsum('pqrs,pi,qj,rk,sl->ijkl',case['eri'],si,si,si,si,optimize=True).reshape(n*n,n*n);df_error=float(np.max(abs(lp.T@lp-bare)));report=dict(bath_polarization_strength=bath_strength,bath_strength_fitted=bath_strength!=1,cohort=cohort,molecule=name,states=[dict(id=v.state_id,gap_ev=v.excitation_hartree*EV,overlap=v.overlap,margin=v.margin) for v in result.states],model=final.fingerprint,weights=[.5,.5],lambda_exchange=.9,offset_ev=0,reference_excitation_energies_read=False,auxbasis=auxbasis,auxiliary_functions=len(lp),bath_virtuals=len(eb),native_environment_transitions=int(np.count_nonzero(fraction>1e-10)),bath_transitions=lb.shape[1],gauge_alignment_hartree=gauge,minimum_bath_gap_hartree=float(bath_gap.min()),bare_DF_integral_max_error_hartree=df_error,minimum_dielectric_eigenvalue=float(np.linalg.eigvalsh(dielectric).min()),screened_coulomb_trace=float(np.trace(screen)))
  write(out/'result.json',report);print(name,report['states'],'DF max',df_error,flush=True)
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('cohort');p.add_argument('name');p.add_argument('--auxbasis',default='weigend+etb');p.add_argument('--bath-strength',type=float,default=1.);a=p.parse_args()
- with threadpool_limits(2):run_screen(a.cohort,a.name,a.auxbasis,a.bath_strength)
+ p=argparse.ArgumentParser();p.add_argument('cohort');p.add_argument('name');p.add_argument('--auxbasis',default='weigend+etb');p.add_argument('--bath-strength',type=float,default=1.);p.add_argument('--reference-parent',default='downfold_reference');a=p.parse_args()
+ with threadpool_limits(2):run_screen(a.cohort,a.name,a.auxbasis,a.bath_strength,a.reference_parent)

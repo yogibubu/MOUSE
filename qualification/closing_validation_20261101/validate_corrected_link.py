@@ -1,6 +1,6 @@
 """Remote cold-start, acceptance, rollback, coherent following and restart audit."""
 from pathlib import Path
-import runpy,socket,json,time,hashlib,sys,importlib.abc
+import runpy,socket,json,time,hashlib,sys,importlib.abc,argparse
 class NoDFT(importlib.abc.MetaPathFinder):
  def find_spec(self,fullname,path=None,target=None):
   if fullname=='pyscf' or fullname.startswith('pyscf.'):raise AssertionError('DFT backend forbidden in LINK runtime')
@@ -15,12 +15,13 @@ from matrix_gfn2.calculator import ANGSTROM_TO_BOHR
 from matrix_link.scan import QMScanBackend
 from matrix_link.qmqm_component import CappedQMComponent
 ROOT=Path('/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101')
-p=ROOT/'disentangled_bath_eta_0.600000/closing_blind/Ethylene/model.json'
+parser=argparse.ArgumentParser();parser.add_argument('--variant',default='disentangled_bath_eta_0.600000');args=parser.parse_args()
+p=ROOT/args.variant/'closing_blind/Ethylene/model.json'
 m=PreparedNOSIModel(p);symbols={1:'H',6:'C',7:'N',8:'O'}
 c=GFN2Calculator([symbols[int(z)] for z in m.anchor.atomic_numbers],temperature_kelvin=0.)
 c.evaluate=lambda *a,**k:(_ for _ in ()).throw(AssertionError('unexpected SCC'))
 b=QMScanBackend(name='matrix_gfn2',electronic_state=1,native_excited_method='nosi_50_50',native_nosi_model_path=p)
-folder=ROOT/'link_eth_eta060'/time.strftime('%Y%m%d-%H%M%S')
+folder=ROOT/('link_'+args.variant)/time.strftime('%Y%m%d-%H%M%S')
 component=CappedQMComponent(b,SimpleNamespace(_calculator=c),folder)
 xyz=m.anchor.coordinates_bohr/ANGSTROM_TO_BOHR
 start=time.monotonic();result=component.evaluate(xyz);component.accept(result)

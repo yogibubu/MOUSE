@@ -1,0 +1,19 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "atoms": 79,
+  "native_orbitals": 219,
+  "electrons": 226,
+  "occupied": 113,
+  "ground_energy_hartree": -124.63904881978397,
+  "wall_seconds": 0.13650195801164955,
+  "peak_rss_native": 169066496,
+  "dense_ERI_GiB": 17.138254053890705,
+  "complete_pair_chart_operators_GiB": 8.608255460858345,
+  "two_dense_pair_kernels_GiB": 8.647562563419342,
+  "dense_ground_orbital_Hessian_GiB": 1.0689533054828644,
+  "charge": 0,
+  "spin": 0,
+  "geometry": "Unoptimized source geometry; preflight only",
+  "status": "Native ground checkpoint complete; no OO excitation energy claimed"
+}

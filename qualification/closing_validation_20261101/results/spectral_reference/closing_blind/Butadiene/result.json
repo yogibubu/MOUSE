@@ -1,0 +1,238 @@
+{
+  "cohort": "closing_blind",
+  "molecule": "Butadiene",
+  "states": [
+    {
+      "id": "B003",
+      "gap_ev": 6.161980984485921,
+      "overlap": 0.9996953316533232,
+      "margin": 0.9800398896547606
+    }
+  ],
+  "model": "6df7ce6b5e78f95e8a80f9acd1d4019bd1e713d54c03c9a430d3fb8358b00928",
+  "delta_common_levels_hartree": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.1508320869315987,
+    -0.153867407992256,
+    -0.12161739542808442,
+    -0.19012576124147149,
+    -0.11642177598566897,
+    -0.09995159556614047,
+    -0.08243709655561898,
+    -0.14596474013296268,
+    0.03684775899766585
+  ],
+  "spectral_blocks": [
+    {
+      "native_orbital": 13,
+      "full_MOs": [
+        65,
+        44,
+        39,
+        27,
+        40
+      ],
+      "weights": [
+        0.14554541801963924,
+        0.11752956348053305,
+        0.09175149896549029,
+        0.08083709039196861,
+        0.07539590219306518
+      ],
+      "cumulative_weight": 0.5110594730506963,
+      "centroid_full_hartree": 0.33473822946725096,
+      "centroid_aligned_hartree": 0.42128711130483903,
+      "spectral_width_hartree": 0.1560139930873516,
+      "F_relaxation_hartree": -0.15850749105901418,
+      "Q_change_hartree": -0.1431566828041832
+    },
+    {
+      "native_orbital": 14,
+      "full_MOs": [
+        29,
+        38,
+        44
+      ],
+      "weights": [
+        0.20039703098976888,
+        0.17110554071035128,
+        0.12347130249846303
+      ],
+      "cumulative_weight": 0.4949738741985832,
+      "centroid_full_hartree": 0.21543680802103232,
+      "centroid_aligned_hartree": 0.3019856898586204,
+      "spectral_width_hartree": 0.07536437050985598,
+      "F_relaxation_hartree": -0.16023281810751128,
+      "Q_change_hartree": -0.14750199787700075
+    },
+    {
+      "native_orbital": 15,
+      "full_MOs": [
+        37,
+        41,
+        73,
+        62
+      ],
+      "weights": [
+        0.1963012707471279,
+        0.15839428980166295,
+        0.11344868876901454,
+        0.09229392836546631
+      ],
+      "cumulative_weight": 0.5604381776832716,
+      "centroid_full_hartree": 0.36534204846446006,
+      "centroid_aligned_hartree": 0.45189093030204813,
+      "spectral_width_hartree": 0.1772477209491851,
+      "F_relaxation_hartree": -0.1327503042425297,
+      "Q_change_hartree": -0.11048448661363913
+    },
+    {
+      "native_orbital": 16,
+      "full_MOs": [
+        41,
+        28,
+        48,
+        42
+      ],
+      "weights": [
+        0.19485370708330108,
+        0.13242389297815926,
+        0.11025191217874677,
+        0.08222548697270088
+      ],
+      "cumulative_weight": 0.519754999212908,
+      "centroid_full_hartree": 0.2551677385325449,
+      "centroid_aligned_hartree": 0.34171662037013295,
+      "spectral_width_hartree": 0.08175499540414195,
+      "F_relaxation_hartree": -0.19836743997248357,
+      "Q_change_hartree": -0.1818840825104594
+    },
+    {
+      "native_orbital": 17,
+      "full_MOs": [
+        40,
+        44,
+        35,
+        84,
+        51,
+        27,
+        72
+      ],
+      "weights": [
+        0.11300669986706996,
+        0.08525357665398942,
+        0.08116558965523626,
+        0.07121068380684686,
+        0.06909607246366398,
+        0.06566678904759629,
+        0.06420106679380623
+      ],
+      "cumulative_weight": 0.5496004782882089,
+      "centroid_full_hartree": 0.3704264538312394,
+      "centroid_aligned_hartree": 0.4569753356688275,
+      "spectral_width_hartree": 0.22243055301447834,
+      "F_relaxation_hartree": -0.12186625957760577,
+      "Q_change_hartree": -0.11097729239373216
+    },
+    {
+      "native_orbital": 18,
+      "full_MOs": [
+        47,
+        79,
+        48,
+        74
+      ],
+      "weights": [
+        0.1954394936010722,
+        0.15115688877101768,
+        0.11011340758892656,
+        0.06507126815794903
+      ],
+      "cumulative_weight": 0.5217810581189655,
+      "centroid_full_hartree": 0.5033011678718736,
+      "centroid_aligned_hartree": 0.5898500497094616,
+      "spectral_width_hartree": 0.1819078446028779,
+      "F_relaxation_hartree": -0.10314766726101798,
+      "Q_change_hartree": -0.09675552387126296
+    },
+    {
+      "native_orbital": 19,
+      "full_MOs": [
+        57,
+        80,
+        51,
+        75
+      ],
+      "weights": [
+        0.1909318738644057,
+        0.14739444782791294,
+        0.08714462178305943,
+        0.08345777903677135
+      ],
+      "cumulative_weight": 0.5089287225121494,
+      "centroid_full_hartree": 0.5682577012791292,
+      "centroid_aligned_hartree": 0.6548065831167174,
+      "spectral_width_hartree": 0.14836563498008457,
+      "F_relaxation_hartree": -0.07902316398464981,
+      "Q_change_hartree": -0.08585102912658815
+    },
+    {
+      "native_orbital": 20,
+      "full_MOs": [
+        71,
+        52,
+        80,
+        65
+      ],
+      "weights": [
+        0.15888138222261045,
+        0.14558812809515043,
+        0.1318758713609802,
+        0.11702696493798685
+      ],
+      "cumulative_weight": 0.5533723466167279,
+      "centroid_full_hartree": 0.5757243524076381,
+      "centroid_aligned_hartree": 0.6622732342452262,
+      "spectral_width_hartree": 0.13227917037046186,
+      "F_relaxation_hartree": -0.13897544706545617,
+      "Q_change_hartree": -0.15295403320046919
+    },
+    {
+      "native_orbital": 21,
+      "full_MOs": [
+        89,
+        77
+      ],
+      "weights": [
+        0.2949604911671044,
+        0.28871386309470076
+      ],
+      "cumulative_weight": 0.5836743542618051,
+      "centroid_full_hartree": 0.8434898036244747,
+      "centroid_aligned_hartree": 0.9300386854620628,
+      "spectral_width_hartree": 0.13076443755507955,
+      "F_relaxation_hartree": 0.0462545567812338,
+      "Q_change_hartree": 0.027440961214097892
+    }
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "development_amendment": true
+}

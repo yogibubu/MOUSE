@@ -1,0 +1,17 @@
+{
+  "molecule": "Beta_carotene",
+  "spherical_native_orbitals": 216,
+  "cartesian_functions": 216,
+  "maximum_angular_momentum": 1,
+  "overlap_max_error": 2.48245868306185e-13,
+  "embedding": {
+    "reconstruction": "explicit_normalized_cartesian_spd",
+    "primitive_AO_max_error": 1.6653345369377348e-16,
+    "raw_overlap_max_error": 0.000512218518034676,
+    "metric_calibration": true,
+    "metric_calibration_operator_norm": 0.0010053320305754637,
+    "corrected_overlap_max_error": 2.48245868306185e-13,
+    "minimum_raw_overlap_eigenvalue": 0.29077147280732796,
+    "minimum_native_overlap_eigenvalue": 0.2908426388135188
+  }
+}

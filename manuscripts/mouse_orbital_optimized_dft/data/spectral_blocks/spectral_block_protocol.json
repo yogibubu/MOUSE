@@ -1,0 +1,19 @@
+{
+  "generation": "spectral-block reference amendment",
+  "status": "Development after the three additional prediction labels were exposed",
+  "motivation": "Pyrrole virtual native orbitals have fragmented full-DFT spectral weight and fail individual orbital qualification",
+  "rule_scope": "Every previously unqualified occupied and virtual orbital of every molecule; individually qualified poles remain unchanged",
+  "qualification": "Smallest descending spectral-weight set reaching cumulative squared norm 0.7^2, within the same occupation sector",
+  "Q_level": "Normalized spectral centroid, aligned using the unchanged occupied-centroid gauge",
+  "F_relaxation": "Spectral centroid minus Rayleigh energy of the original native image",
+  "common_linear_shift": "0.5 * (F_relaxation + Q_change)",
+  "bath": "Rebuild explicit orthogonal-bath screening on corrected native orbitals",
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "bath_efficiency_eta": 0.6,
+  "eta_retuned": false,
+  "energy_offset_ev": 0,
+  "reference_labels_read_by_preparer": false,
+  "independent_blind_validation": false,
+  "limitation": "Centroid approximation; broad spectral blocks need independent prospective and anchor-sensitivity validation"
+}

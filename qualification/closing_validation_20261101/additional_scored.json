@@ -1,0 +1,49 @@
+{
+  "scored_utc": "2026-11-01T18:20:30.784752+00:00",
+  "model_refit": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "bath_efficiency_eta": 0.6,
+  "offset_ev": 0,
+  "rows": [
+    {
+      "molecule": "Cyclopropene",
+      "id": "P001",
+      "family": "pi_pi",
+      "state": "^1B_2",
+      "reference_ev": 6.728999999999999,
+      "prediction_ev": 6.783408536334049,
+      "error_ev": 0.05440853633404963,
+      "method": "CCSDTQ/AVDZ + [CC4/AVTZ - CC4/AVDZ]",
+      "reference_safe": "Y",
+      "model": "b21d80889b6741173cc40da5d74a511db61c86dfef7c6b0f2989743589e4d777"
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "id": "P002",
+      "family": "pi_pi",
+      "state": "^1B_2",
+      "reference_ev": 5.54,
+      "prediction_ev": 5.526816728392101,
+      "error_ev": -0.01318327160789945,
+      "method": "CC4/6-31+G(d) + [CCSDT/AVTZ - CCSDT/6-31+G(d)]",
+      "reference_safe": "Y",
+      "model": "6794e0679913a664d910d921ca16f136962426a617ac3938493628a6ebe9a848"
+    },
+    {
+      "molecule": "Pyrrole",
+      "id": "P003",
+      "family": "pi_pi",
+      "state": "^1B_2",
+      "reference_ev": 6.247,
+      "prediction_ev": 8.616412417028458,
+      "error_ev": 2.3694124170284585,
+      "method": "CC4/AVDZ + [CCSDT/AVTZ - CCSDT/AVDZ]",
+      "reference_safe": "Y",
+      "model": "5ff335a23952f3178e03562e37014ed275e76f4fa682adb5a5c16f092528cb9b"
+    }
+  ]
+}

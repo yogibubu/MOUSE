@@ -1,0 +1,131 @@
+{
+  "schema": "mouse.nosi.screened_even_cid.v1",
+  "active_space_size": 5,
+  "interaction": "static_constrained_RPA",
+  "augmentation": "frozen_reflection_even",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "state_ids": [
+    "B001"
+  ],
+  "labels": [
+    "S0",
+    "B001",
+    "B001_pair_double",
+    "pair_h4_p6",
+    "open_h4_4_p6_7",
+    "pair_h4_p7",
+    "open_h4_5_p6_6",
+    "four_h4_5_p6_7_0",
+    "four_h4_5_p6_7_1",
+    "open_h4_5_p7_7",
+    "open_h5_5_p6_7",
+    "pair_h5_p7"
+  ],
+  "sha256": {
+    "template.npz": "de8442f3f2fa2e3dc0f0562a73a4330eaa0a81a7d27a920052e0908897ee7211",
+    "response.npz": "468962e85562999da2b0159902d1c4afe18ab81e7db70f6fe1acd48406e7f906",
+    "arrays.npz": "a137c6d1d9e060080037b649b769a16869598771be98ef93e82ae75542834802"
+  },
+  "provenance": {
+    "candidate_freeze_commit": "2d59ab8",
+    "native_model_sha256": "6b978cf9011ff06d03363ce46eaaeb5c8680fec3852529b87b3f83757c9b05d6",
+    "selected_matrix_sha256": "5428db16513ecc4c32aec0957bd46b95d4a855419f38c5d580f864af8b284432",
+    "reflection_certificate": {
+      "available": false,
+      "reason": "no molecular plane"
+    },
+    "runtime_DFT_backend_required": false,
+    "runtime_TDA_required": false,
+    "source_sha256": "a931df084873e8bcf3db5974a4b87ad1affc71f0586791c86f60280a84878acc",
+    "parent_model": "46e98d750ab099cbb0dffa3d85c46200b22e03ff86f8fd683b2df5e654fdb629",
+    "reference_correction": "diagonal Feshbach self-energy of excluded full-DFT complement, evaluated at qualified matched orbital levels",
+    "fitted_parameters": 0,
+    "screened_operator": "held fixed as diagnostic",
+    "self_energy_hartree": [
+      -0.01196477219241785,
+      -0.01430805946122333,
+      -0.007245258031000818,
+      -0.02094657026936944,
+      -0.023739073238480676,
+      -0.018450592681757666,
+      -0.06732047855248066,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_common_levels_hartree": [
+      -0.005982386096208925,
+      -0.007154029730611665,
+      -0.003622629015500409,
+      -0.01047328513468472,
+      -0.011869536619240338,
+      -0.009225296340878833,
+      -0.03366023927624033,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "spectral_block_rule": "minimal descending spectral-weight set reaching norm 0.7",
+    "spectral_blocks": [
+      {
+        "native_orbital": 7,
+        "full_MOs": [
+          16,
+          32,
+          14
+        ],
+        "weights": [
+          0.23117756485656363,
+          0.16802550903019256,
+          0.13874944045100976
+        ],
+        "cumulative_weight": 0.5379525143377659,
+        "centroid_full_hartree": 0.30845947192971,
+        "centroid_aligned_hartree": 0.3932824591764351,
+        "spectral_width_hartree": 0.21420032992635565,
+        "F_relaxation_hartree": -0.11152974960510542,
+        "Q_change_hartree": -0.07289033694586278
+      },
+      {
+        "native_orbital": 8,
+        "full_MOs": [
+          31,
+          21
+        ],
+        "weights": [
+          0.27330914301364084,
+          0.24409837555098107
+        ],
+        "cumulative_weight": 0.5174075185646219,
+        "centroid_full_hartree": 0.43886179364474204,
+        "centroid_aligned_hartree": 0.5236847808914671,
+        "spectral_width_hartree": 0.14265692940909813,
+        "F_relaxation_hartree": -0.033239648611736616,
+        "Q_change_hartree": 0.0014945159466693836
+      },
+      {
+        "native_orbital": 9,
+        "full_MOs": [
+          30,
+          34
+        ],
+        "weights": [
+          0.28277298853287924,
+          0.22106432718873714
+        ],
+        "cumulative_weight": 0.5038373157216164,
+        "centroid_full_hartree": 0.6298684282536182,
+        "centroid_aligned_hartree": 0.7146914155003433,
+        "spectral_width_hartree": 0.10167855292004072,
+        "F_relaxation_hartree": -0.0021660882705831774,
+        "Q_change_hartree": 0.01703146788763288
+      }
+    ],
+    "energy_labels_read": false
+  }
+}

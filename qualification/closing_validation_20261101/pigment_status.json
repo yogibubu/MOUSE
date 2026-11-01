@@ -1,0 +1,133 @@
+{
+  "captured_utc": "2026-11-01T18:41:41.871014+00:00",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "pigments": [
+    {
+      "name": "Beta_carotene",
+      "native": {
+        "molecule": "Beta_carotene",
+        "host": "mac-2.homenet.telecomitalia.it",
+        "atoms": 96,
+        "native_orbitals": 216,
+        "electrons": 216,
+        "occupied": 108,
+        "ground_energy_hartree": -114.0709228684243,
+        "wall_seconds": 0.07684766600141302,
+        "peak_rss_native": 139657216,
+        "dense_ERI_GiB": 16.218292236328125,
+        "complete_pair_chart_operators_GiB": 8.146688461303711,
+        "two_dense_pair_kernels_GiB": 8.184404611587524,
+        "dense_ground_orbital_Hessian_GiB": 1.0136432647705078,
+        "charge": 0,
+        "spin": 0,
+        "geometry": "Unoptimized source geometry; preflight only",
+        "status": "Native ground checkpoint complete; no OO excitation energy claimed"
+      },
+      "embedding": {
+        "molecule": "Beta_carotene",
+        "spherical_native_orbitals": 216,
+        "cartesian_functions": 216,
+        "maximum_angular_momentum": 1,
+        "overlap_max_error": 2.48245868306185e-13,
+        "embedding": {
+          "reconstruction": "explicit_normalized_cartesian_spd",
+          "primitive_AO_max_error": 1.6653345369377348e-16,
+          "raw_overlap_max_error": 0.000512218518034676,
+          "metric_calibration": true,
+          "metric_calibration_operator_norm": 0.0010053320305754637,
+          "corrected_overlap_max_error": 2.48245868306185e-13,
+          "minimum_raw_overlap_eigenvalue": 0.29077147280732796,
+          "minimum_native_overlap_eigenvalue": 0.2908426388135188
+        }
+      },
+      "native_checkpoint_sha256": "db18fe54631aa9620d01af6182740db04d03dee7390c5b66f0251f713fee6933",
+      "references": {
+        "PBE0": {
+          "converged_reference_exists": false,
+          "restart_checkpoint_exists": true,
+          "progress": {
+            "cycle": 5,
+            "energy_hartree": -1556.1455520074314,
+            "gradient_norm": 0.006580255782679358,
+            "density_norm": 0.2745407317838665,
+            "elapsed_seconds": 660.8949223340023
+          },
+          "certificate": null
+        },
+        "CAM": {
+          "converged_reference_exists": false,
+          "restart_checkpoint_exists": false,
+          "progress": null,
+          "certificate": null
+        }
+      }
+    },
+    {
+      "name": "Chlorophyllide_a",
+      "native": {
+        "molecule": "Chlorophyllide_a",
+        "host": "mac-2.homenet.telecomitalia.it",
+        "atoms": 79,
+        "native_orbitals": 219,
+        "electrons": 226,
+        "occupied": 113,
+        "ground_energy_hartree": -124.63904881978397,
+        "wall_seconds": 0.13650195801164955,
+        "peak_rss_native": 169066496,
+        "dense_ERI_GiB": 17.138254053890705,
+        "complete_pair_chart_operators_GiB": 8.608255460858345,
+        "two_dense_pair_kernels_GiB": 8.647562563419342,
+        "dense_ground_orbital_Hessian_GiB": 1.0689533054828644,
+        "charge": 0,
+        "spin": 0,
+        "geometry": "Unoptimized source geometry; preflight only",
+        "status": "Native ground checkpoint complete; no OO excitation energy claimed"
+      },
+      "embedding": {
+        "molecule": "Chlorophyllide_a",
+        "spherical_native_orbitals": 219,
+        "cartesian_functions": 220,
+        "maximum_angular_momentum": 2,
+        "overlap_max_error": 1.4904744105592727e-13,
+        "embedding": {
+          "reconstruction": "explicit_normalized_cartesian_spd",
+          "primitive_AO_max_error": 1.6653345369377348e-16,
+          "raw_overlap_max_error": 1.5318457613489045e-10,
+          "metric_calibration": true,
+          "metric_calibration_operator_norm": 9.124263779814615e-11,
+          "corrected_overlap_max_error": 1.4904744105592727e-13,
+          "minimum_raw_overlap_eigenvalue": 0.24725870714338224,
+          "minimum_native_overlap_eigenvalue": 0.247258707146201
+        }
+      },
+      "native_checkpoint_sha256": "a9fbe7674696af9bc6b765a046b323c7735c900005c2e39197650298a0bffc28",
+      "references": {
+        "PBE0": {
+          "converged_reference_exists": false,
+          "restart_checkpoint_exists": true,
+          "progress": {
+            "cycle": 3,
+            "energy_hartree": -2147.0413490285973,
+            "gradient_norm": 0.24233292549155394,
+            "density_norm": 5.3592664959050795,
+            "elapsed_seconds": 679.3366172909737
+          },
+          "certificate": null
+        },
+        "CAM": {
+          "converged_reference_exists": false,
+          "restart_checkpoint_exists": false,
+          "progress": null,
+          "certificate": null
+        }
+      }
+    }
+  ],
+  "accuracy_pool_member": false,
+  "sources": {
+    "pigment_dft_reference.py": "0dd3ec4b0b64b3bc3f8b91aa43c144e657d5d6f6d3239dc2c62ae0c696c2a5c8",
+    "pigment_preflight.py": "9683896ba61baf05ead38f13bd222f474acbefa368a701e5a149b184e00b0f25",
+    "gaussian_embedding_basis.py": "e5d9f65687c2373733799b390691e2cc183257399fd40a96189d62be3f80abb4",
+    "check_pigment_basis.py": "0902cf6f2bd03826945fe28577b2a053a05ca01f609a00e60045893c656f09b0"
+  }
+}

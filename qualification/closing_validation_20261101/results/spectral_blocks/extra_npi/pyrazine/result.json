@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "extra_npi",
+  "molecule": "pyrazine",
+  "states": [
+    {
+      "id": "N003",
+      "gap_ev": 4.136896993786235,
+      "overlap": 0.9999999999999756,
+      "margin": 0.9999999999999577
+    }
+  ],
+  "model": "ea23642fde12deb283491d57dfdbe167deec0a20241137a00498df840fe5beb0",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 414,
+  "bath_virtuals": 152,
+  "native_environment_transitions": 170,
+  "bath_transitions": 2280,
+  "gauge_alignment_hartree": 0.11330345363800809,
+  "minimum_bath_gap_hartree": 0.3371425099666763,
+  "bare_DF_integral_max_error_hartree": 0.00035228607640169773,
+  "minimum_dielectric_eigenvalue": 1.000001211043041,
+  "screened_coulomb_trace": 22.192748348048024
+}

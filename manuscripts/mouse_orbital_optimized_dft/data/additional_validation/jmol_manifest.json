@@ -1,0 +1,93 @@
+{
+  "renderer": "Jmol 14.31.10",
+  "jar_sha256": "50d63fac6e8074aaf7883b072e4b0a46e95c78fe1958a05e79560fa99eb1cfdf",
+  "molecules": [
+    {
+      "molecule": "Cyclopropene",
+      "geometry": "coordinates/additional_validation/Cyclopropene.xyz",
+      "geometry_sha256": "e95cd62dc3121a5105d437130e46d0344560d9c9a394951e1cb7baa4af642b3c",
+      "render": "data/additional_validation/Cyclopropene.png",
+      "render_sha256": "901fa3d123be8e54b88958fa524057d179f7753bc820d907bab5e37647a29679",
+      "display_rotation": [
+        [
+          -0.0,
+          -0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0
+        ],
+        [
+          -1.0,
+          -0.0,
+          -0.0
+        ]
+      ],
+      "display_center": [
+        0.0,
+        0.0,
+        -0.11873734142857144
+      ]
+    },
+    {
+      "molecule": "Cyclopentadiene",
+      "geometry": "coordinates/additional_validation/Cyclopentadiene.xyz",
+      "geometry_sha256": "0a0f04c43efea6cff33c9bd5ffd018c9adb119e5c7d5fd1cad07d3757fa980e9",
+      "render": "data/additional_validation/Cyclopentadiene.png",
+      "render_sha256": "6613b513e45d538600ec0ddbf5b4eddcb7d7647d486cab7a0330a0669f967cb7",
+      "display_rotation": [
+        [
+          0.0,
+          -0.0,
+          1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -0.0,
+          0.0
+        ]
+      ],
+      "display_center": [
+        0.0,
+        0.0,
+        -0.10856153909090906
+      ]
+    },
+    {
+      "molecule": "Pyrrole",
+      "geometry": "coordinates/additional_validation/Pyrrole.xyz",
+      "geometry_sha256": "3b1951001fac6b3ef9be34185af14cf51226f802d18200684c220187eaeec31c",
+      "render": "data/additional_validation/Pyrrole.png",
+      "render_sha256": "351bbe0eaefc32ac4c08ed9ce896d6d575ffe33e153c8cc8928f1a2e89be3672",
+      "display_rotation": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -1.0000000000000002,
+          4.996003610813204e-16,
+          -0.0
+        ],
+        [
+          3.7457132709249694e-16,
+          1.0,
+          -0.0
+        ]
+      ],
+      "display_center": [
+        0.0,
+        0.0,
+        -0.021422670000000067
+      ]
+    }
+  ]
+}

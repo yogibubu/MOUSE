@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "independent",
+  "molecule": "Hexatriene",
+  "states": [
+    {
+      "id": "I005",
+      "gap_ev": 4.954973530393055,
+      "overlap": 0.9993389728548676,
+      "margin": 0.9736404125214702
+    }
+  ],
+  "model": "7ec51a89243bf8f2c30745c7a92bf35a143fde42fcf2b80a3d3b601502561242",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 382,
+  "bath_virtuals": 172,
+  "native_environment_transitions": 231,
+  "bath_transitions": 2752,
+  "gauge_alignment_hartree": 0.08383542563170987,
+  "minimum_bath_gap_hartree": 0.30955234512908303,
+  "bare_DF_integral_max_error_hartree": 6.657613114469108e-05,
+  "minimum_dielectric_eigenvalue": 1.000011056560674,
+  "screened_coulomb_trace": 24.600453409184116
+}

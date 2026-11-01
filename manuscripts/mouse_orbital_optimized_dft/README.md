@@ -1,30 +1,35 @@
 # MOUSE semiempirical OO-DFT manuscript
 
-The manuscript distinguishes the original screened-even OO-CID model from the common-reference repair motivated by ethylene. The latter has one explicitly calibrated bath-screening efficiency, **eta = 0.60**; F/Q weights remain 50/50, exchange-response lambda remains 0.9, and the energy offset is zero.
+The current candidate adds a generic spectral-block reference construction for fragmented orbital matches to the ethylene common-reference repair. It uses one calibrated bath efficiency, **eta = 0.60**; F/Q weights remain 50/50, exchange-response lambda remains 0.9, and the energy offset is zero.
 
-| Corrected exposed development set | States | MAE / eV | Maximum error / eV |
+| Current exposed development set | States | MAE / eV | Maximum error / eV |
 |---|---:|---:|---:|
-| pi-to-pi* | 9 | 0.283 | 0.482 |
-| n-to-pi* | 14 | 0.175 | 0.381 |
-| All | 23 | 0.217 | 0.482 |
+| pi-to-pi* | 12 | 0.216 | 0.446 |
+| n-to-pi* | 14 | 0.183 | 0.423 |
+| All | 26 | 0.198 | 0.446 |
 
-All 23 states in 21 molecules meet the individual 0.5 eV criterion. Ethylene is 8.206 eV against 7.897 eV, reducing its error from +1.182 to +0.309 eV. The freshly recomputed TDA control uses the same corrected native GFN2 orbitals and reference response: MAE 0.781 eV overall, 1.726 eV for pi-to-pi*, and 0.174 eV for n-to-pi*. Thus the mean accuracy gain is concentrated in pi-to-pi*.
+All 26 states in 24 molecules meet the individual 0.5 eV criterion. Matched TDA uses the same corrected native GFN2 orbitals and reference response: MAE 0.789 eV overall, 1.514 eV for pi-to-pi*, and 0.168 eV for n-to-pi*. The OO improvement is concentrated in pi-to-pi*; TDA has the smaller mean n-to-pi* error.
 
-Eta is calibrated using furan V010 and furofuran C002. The other 21 states give 0.192 eV MAE, but all 23 labels were exposed during development: this is **not blind validation or a universal-accuracy claim**. The original twenty-state result (0.225 eV MAE) and its prospective extension are retained as separate model generations. Earlier physical minima and frequencies are not attributed to the corrected model.
+The three added molecules are cyclopropene, cyclopentadiene and pyrrole. Their original fixed-model predictions were archived before numerical reference extraction. The pyrrole discrepancy motivated a generic spectral-block amendment, applied to every unresolved orbital of every molecule. Pyrrole now gives 6.302 eV versus 6.247 eV, with no retuning of eta. All 26 labels are exposed: this is **not blind validation or a universal-accuracy claim**. Eta was calibrated only on furan V010 and furofuran C002. Original 20- and 23-state generations and their predictions remain separately archived; earlier physical minima are not assigned to the latest candidate.
+
+Beta-carotene and chlorophyllide a (with Mg and conjugated substituents, without phytyl chain) have source structures, Jmol renders, native ground checkpoints and certified s/p/d embeddings. One-time DFT reference preparation is running on MAC-STUDIO with resumable checkpoints. Pigment excitation energies are not yet validated, and pigments are excluded from the 26-state pool.
 
 ## Read
 
-- `main.pdf` / `main.tex`: current 16-page method manuscript, with Levi's saddle-optimization motivation and positioning relative to Grimme's simplified response methods and other semiempirical alternatives.
-- `supporting_information.pdf`: complete original and corrected 23-state tables and separately identified earlier-model evidence.
+- `main.pdf` / `main.tex`: current 18-page method manuscript, with Levi's saddle-optimization motivation and positioning relative to Grimme's simplified response methods and other semiempirical alternatives.
+- `supporting_information.pdf`: complete original, corrected 23-state and current 26-state tables and separately identified earlier-model evidence.
 - `data/screened_cid/`: final predictions, aggregate scores, derivative certificates and Jmol coordinate/render checksums.
 - `figures/screened_cid_validation.pdf`: all seven pi-to-pi* targets and thirteen controls, before/after the new construction.
-- `figures/screened_cid_structures_jmol.pdf`: actual archived 3D Jmol renders of all twenty-one molecular anchors.
+- `figures/screened_cid_structures_jmol.pdf`: actual archived 3D Jmol renders of all twenty-four small-molecule anchors.
+- `figures/pigment_test_structures_jmol.pdf`: beta-carotene and chlorophyllide a, explicitly labelled as preparation.
+- `figures/spectral_block_validation.pdf`: complete latest 26-state comparison.
+- `data/spectral_blocks/`: current ledger, amendment, original additional predictions and pigment protocol.
 - `figures/screened_method_workflow.pdf`: current prepared-model workflow.
 - `README_development_history.md`: the earlier package notes, retained as history.
 
 ## Derivatives and automatic integration
 
-The corrected ethylene full analytic Hessian takes 10.15 s in one two-thread MAC-STUDIO call. Independent scalar-energy Richardson checks give maximum gradient error 1.73e-11 Ha/bohr and curvature error 6.56e-8 Ha/bohr². Its coherent singlet has S² = 0. All 23 corrected energies pass fresh-process spin and restart checks without DFT imports, TDA solves or new SCC calls. The corrected ethylene LINK check also passes cold start, accepted restart and displaced-trial rollback.
+The current spectral-block ethylene full analytic Hessian takes 10.68 s in one two-thread MAC-STUDIO call. Independent scalar-energy Richardson checks give maximum gradient error 9.92e-12 Ha/bohr and curvature error 2.46e-8 Ha/bohr². Its coherent singlet has S² = 0. All 26 current energies pass fresh-process spin and restart checks without DFT imports, TDA solves or new SCC calls. The corrected ethylene LINK check also passes cold start, accepted restart and displaced-trial rollback.
 
 The following larger Hessian qualifications refer to the original screened-even predecessor:
 
@@ -44,6 +49,8 @@ The figures use only the bundled data and archived Jmol PNGs; no electronic calc
 python make_screened_cid_assets.py
 python make_screened_workflow.py
 python make_ethylene_repair_assets.py
+python make_spectral_block_assets.py
+python make_pigment_structure_plate.py
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 latexmk -pdf -interaction=nonstopmode -halt-on-error supporting_information.tex
 ```

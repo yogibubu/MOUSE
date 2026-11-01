@@ -1,0 +1,19 @@
+{
+  "molecule": "Beta_carotene",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "atoms": 96,
+  "native_orbitals": 216,
+  "electrons": 216,
+  "occupied": 108,
+  "ground_energy_hartree": -114.0709228684243,
+  "wall_seconds": 0.07684766600141302,
+  "peak_rss_native": 139657216,
+  "dense_ERI_GiB": 16.218292236328125,
+  "complete_pair_chart_operators_GiB": 8.146688461303711,
+  "two_dense_pair_kernels_GiB": 8.184404611587524,
+  "dense_ground_orbital_Hessian_GiB": 1.0136432647705078,
+  "charge": 0,
+  "spin": 0,
+  "geometry": "Unoptimized source geometry; preflight only",
+  "status": "Native ground checkpoint complete; no OO excitation energy claimed"
+}

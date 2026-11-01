@@ -1,0 +1,170 @@
+{
+  "cohort": "post_kernel_validation",
+  "molecule": "tetrazine",
+  "states": [
+    {
+      "id": "V003",
+      "gap_ev": 2.549080690993494,
+      "overlap": 0.9999960552192887,
+      "margin": 0.9999960552192855
+    }
+  ],
+  "model": "572d8b28c0a8730ce9b042fbe405e83ffc174349ea09965730f2d276a937eb8f",
+  "delta_common_levels_hartree": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.12283947572360177,
+    -0.116494847012866,
+    -0.14296492999464486,
+    -0.09020763607791749,
+    -0.1174071862351371,
+    -0.14341792404450787,
+    0.034496698117675695,
+    0.0
+  ],
+  "spectral_blocks": [
+    {
+      "native_orbital": 18,
+      "full_MOs": [
+        46,
+        30
+      ],
+      "weights": [
+        0.44236499181416133,
+        0.13719668432385332
+      ],
+      "cumulative_weight": 0.5795616761380147,
+      "centroid_full_hartree": 0.22240724441653537,
+      "centroid_aligned_hartree": 0.3777364437472801,
+      "spectral_width_hartree": 0.0607245099065036,
+      "F_relaxation_hartree": -0.14182621318935495,
+      "Q_change_hartree": -0.10385273825784858
+    },
+    {
+      "native_orbital": 19,
+      "full_MOs": [
+        51,
+        38
+      ],
+      "weights": [
+        0.4288539135171177,
+        0.32690840028213686
+      ],
+      "cumulative_weight": 0.7557623137992546,
+      "centroid_full_hartree": 0.25541685504440836,
+      "centroid_aligned_hartree": 0.4107460543751531,
+      "spectral_width_hartree": 0.06591803763712327,
+      "F_relaxation_hartree": -0.12389656590333409,
+      "Q_change_hartree": -0.10909312812239791
+    },
+    {
+      "native_orbital": 20,
+      "full_MOs": [
+        54,
+        42
+      ],
+      "weights": [
+        0.27617147334659314,
+        0.23215149619214692
+      ],
+      "cumulative_weight": 0.5083229695387401,
+      "centroid_full_hartree": 0.28546679216204646,
+      "centroid_aligned_hartree": 0.4407959914927912,
+      "spectral_width_hartree": 0.06436278283614902,
+      "F_relaxation_hartree": -0.15750929673333924,
+      "Q_change_hartree": -0.12842056325595047
+    },
+    {
+      "native_orbital": 21,
+      "full_MOs": [
+        54,
+        48
+      ],
+      "weights": [
+        0.30375423256588263,
+        0.19342811749305547
+      ],
+      "cumulative_weight": 0.49718235005893807,
+      "centroid_full_hartree": 0.3201371616475871,
+      "centroid_aligned_hartree": 0.47546636097833184,
+      "spectral_width_hartree": 0.030502031397494307,
+      "F_relaxation_hartree": -0.11713392035874493,
+      "Q_change_hartree": -0.06328135179709005
+    },
+    {
+      "native_orbital": 22,
+      "full_MOs": [
+        52,
+        65
+      ],
+      "weights": [
+        0.34884382998806884,
+        0.22770681198697193
+      ],
+      "cumulative_weight": 0.5765506419750408,
+      "centroid_full_hartree": 0.409266215484744,
+      "centroid_aligned_hartree": 0.5645954148154888,
+      "spectral_width_hartree": 0.10849211090471239,
+      "F_relaxation_hartree": -0.11305631502822483,
+      "Q_change_hartree": -0.12175805744204937
+    },
+    {
+      "native_orbital": 23,
+      "full_MOs": [
+        55,
+        62
+      ],
+      "weights": [
+        0.41384340475441017,
+        0.31051201109944454
+      ],
+      "cumulative_weight": 0.7243554158538548,
+      "centroid_full_hartree": 0.4154560409829905,
+      "centroid_aligned_hartree": 0.5707852403137352,
+      "spectral_width_hartree": 0.06621840831241813,
+      "F_relaxation_hartree": -0.14787322946092385,
+      "Q_change_hartree": -0.1389626186280919
+    },
+    {
+      "native_orbital": 24,
+      "full_MOs": [
+        73,
+        65
+      ],
+      "weights": [
+        0.3019736330793089,
+        0.22852690062195
+      ],
+      "cumulative_weight": 0.5305005337012589,
+      "centroid_full_hartree": 0.6134324071774125,
+      "centroid_aligned_hartree": 0.7687616065081573,
+      "spectral_width_hartree": 0.060792216344071934,
+      "F_relaxation_hartree": 0.01694289294769402,
+      "Q_change_hartree": 0.05205050328765737
+    }
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "development_amendment": true
+}

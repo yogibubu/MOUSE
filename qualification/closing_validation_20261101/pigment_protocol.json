@@ -1,0 +1,14 @@
+{
+  "molecules": ["all-trans beta-carotene", "chlorophyllide a"],
+  "selection": "User delegated chlorophyll-core choice; chlorophyllide a retains Mg and conjugated substituents without phytyl chain",
+  "geometry_status": "Fixed primary-source starting structures; not optimized excited-state geometries",
+  "compute_host": "Verified MAC-STUDIO only",
+  "existing_ground_checkpoints": "pigment_preflight/<molecule>/native_ground.npz",
+  "reference_preparation": {"functionals": ["PBE0", "CAM-B3LYP"], "basis": "aug-cc-pVDZ", "grid": 3, "RI_JK_auxbasis": "def2-universal-jkfit", "density_fitting": true},
+  "reference_reuse": "Resume PySCF backend.chk; never rerun converged reference.npz or native ground checkpoints",
+  "embedding": "Normalized native Cartesian s/p/d reconstruction; report raw overlap discrepancy and explicit metric reconciliation separately",
+  "unchanged_model_parameters": {"weights": [0.5, 0.5], "lambda_exchange": 0.9, "bath_efficiency_eta": 0.6, "offset_ev": 0},
+  "targets_to_resolve": {"Beta_carotene": "Distinguish lowest dark double-excitation character from bright valence absorption; do not identify HOMO-LUMO target with S1 without character analysis", "Chlorophyllide_a": "Resolve Q-band valence targets and their frontier-promotion mixing before assigning energies"},
+  "limitations_before_excited_state_use": ["Declare and test configuration selection for nonplanar geometries", "Qualify all target states and orbital spectral blocks", "Audit preparation memory and cost independently of runtime", "Verify analytic response on final prepared pigment model"],
+  "accuracy_pool": "Excluded until actual excited-state calculations and independent references are available"
+}

@@ -20,29 +20,30 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-We develop a semiempirical orbital-optimized excited-state model in MOUSE,
-inspired by Levi and co-workers' direct orbital optimization and electronic
-saddle searches. A spin-polarized GFN2 energy uses DFT-derived orbital-energy
-references, fixed 50/50 F/Q weights, exchange-response scale 0.9, and no fitted
-excitation-energy offset. Optimized spin-pure singlets are coupled to double
-excitations with a prepared statically screened interaction. A common
-reflection-even augmentation resolves all seven $\pi\pi^*$ development
-targets, with 0.180 eV mean absolute error and 0.349 eV maximum error, while
-retaining thirteen $n\pi^*$ controls within 0.5 eV. The full twenty-state MAE
-is 0.225 eV, compared with 0.925 eV for the matched native-orbital TDA control.
-All twenty labels informed this development assessment; the result is not
-blind validation. Complete analytic gradients and Hessians include orbital
-stationarity, spin recoupling, CSF metric, moving-ground-projector and
-state-eigenvector response. A portable MOUSE/LINK implementation follows the
-coherent spin-pure state without a TDA solve or DFT-backend import after
-one-time reference preparation. Exact contraction and configuration-block
-acceleration preserve the differentiated energy. A three-state extension exposes
-an ethylene error of 1.182 eV. A subsequent common reference repair with one
-calibrated bath-screening efficiency reduces this error to 0.309 eV; all 23
-exposed development states then lie within 0.5 eV, with 0.217 eV MAE. The
-weights, exchange scale and zero energy offset are retained. Physical
-minimum comparisons for the predecessor are distinguished from corrected-
-model derivative checks; independent validation remains necessary.
+We develop a semiempirical orbital-optimized route to excited-state energies,
+gradients and Hessians in MOUSE, motivated by variational electronic saddle
+searches. A spin-polarized GFN2 energy uses one-time DFT-derived orbital
+references, fixed 50/50 F/Q weights, exchange-response scale 0.9, and zero
+excitation-energy offset. Spin-pure optimized singlets couple to selected
+double excitations through a prepared static screened interaction with one
+calibrated bath efficiency, $\eta=0.60$. A spectral-block construction treats
+native orbitals whose full-DFT weight is fragmented over several poles.
+On 26 exposed development states in 24 molecules, the resulting candidate
+gives 0.198 eV mean absolute error and 0.446 eV maximum error. Twelve
+$\pi\pi^*$ states give 0.216 eV MAE, compared with 1.514 eV for a matched
+TDA control on the same corrected native GFN2 orbitals. For fourteen
+$n\pi^*$ states, the respective MAEs are 0.183 and 0.168 eV.
+The spectral-block amendment was developed after pyrrole scoring;
+these results are not blind validation. Complete analytic response includes
+orbital stationarity, spin recoupling, the configuration metric, the moving
+ground projector and state-eigenvector response. The prepared MOUSE/LINK
+surface follows coherent singlets without a runtime TDA solve, new SCC call
+or DFT-backend import. Independent scalar-energy checks verify the analytic
+derivatives; ethylene's full Hessian takes 10.68 s in one two-thread run.
+Earlier-model minimum and frequency comparisons are identified separately.
+Larger pigment structures are prepared but excluded from accuracy claims.
+Independent transferability, equilibrium-structure and complete-cost
+benchmarks remain necessary.
 \end{abstract}
 
 \section{Introduction}
@@ -250,6 +251,7 @@ in the Supporting Information and are not attributed to this final model.
 
 \input{closing_validation_discussion.tex}
 \input{ethylene_repair_discussion.tex}
+\input{spectral_block_discussion.tex}
 
 The next scientific assessment should test the calibrated correction on
 independent molecules, additional CT and Rydberg states, corrected-model
@@ -287,7 +289,11 @@ is fitted. A corrected-reference TDA control gives 0.781 eV MAE, with the
 OO accuracy benefit concentrated in $\pi\pi^*$ states. Local reference-geometry changes are small
 within one transported configuration chart; re-selecting the symmetry
 space can cause a discontinuity. Minimum and frequency comparisons for the predecessor are reported
-separately from derivative validation of the corrected candidate.
+separately from derivative validation of the corrected candidate. The later
+spectral-block amendment reduces the 26-state development MAE to 0.198 eV
+without retuning $\eta$, and leaves no error above 0.446 eV on this ledger.
+Pigment source structures and preparation are identified separately from
+validated excitations.
 These limits, and the missing broader CT/Rydberg and calibrated-method
 benchmarks, preclude a claim of general predictive accuracy or replacement
 of multi-root TDA spectroscopy.

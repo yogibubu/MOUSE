@@ -1,0 +1,42 @@
+{
+  "molecules": [
+    {
+      "molecule": "Beta_carotene",
+      "starting_structure_source": "https://pubchem.ncbi.nlm.nih.gov/compound/5280489",
+      "starting_SDF": "Beta_carotene_pubchem_3d.sdf",
+      "SDF_sha256": "ec510f667b86061b1f3c02f51ed2c454a3766ccbd7a199ea49cbd1034e8f7e3c",
+      "starting_XYZ": "Beta_carotene.xyz",
+      "XYZ_sha256": "5bd7714938e3eaaf3fe50dfb5f0af139ba307971bc228246d319381ab661b71c",
+      "atoms": 96,
+      "composition": {
+        "C": 40,
+        "H": 56
+      },
+      "charge": 0,
+      "spin": 0,
+      "status": "Native ground checkpoint and Gaussian embedding certified; full DFT reference preparation running; no excited-state validation"
+    },
+    {
+      "molecule": "Chlorophyllide_a",
+      "starting_structure_source": "https://www.rcsb.org/ligand/A1JWG",
+      "starting_SDF": "Chlorophyllide_a_rcsb_ideal.sdf",
+      "SDF_sha256": "116785e8fccdd260e899ea3d49b41901ae9654f327cf041a353ae79204e2ce18",
+      "starting_XYZ": "Chlorophyllide_a.xyz",
+      "XYZ_sha256": "26cd8e5c7da9d9f73eedc600a03cb120053e21c517abd223c810fb5e2911c4ea",
+      "atoms": 79,
+      "composition": {
+        "N": 4,
+        "C": 35,
+        "O": 5,
+        "H": 34,
+        "Mg": 1
+      },
+      "charge": 0,
+      "spin": 0,
+      "status": "Native ground checkpoint and Gaussian embedding certified; full DFT reference preparation running; no excited-state validation",
+      "remote_input": "Chlorophyllide_a_remote_input.xyz",
+      "remote_input_sha256": "3aa59de1260b3257545781c3486c3b108a66d1b26440da8bd45a832f21f6b13c",
+      "symbol_normalization": "Remote input preserves original MG label; parser canonicalizes to Mg, identical coordinates and atomic numbers"
+    }
+  ]
+}

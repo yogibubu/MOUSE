@@ -1,0 +1,32 @@
+{
+  "bath_polarization_strength": 0.6,
+  "bath_strength_fitted": true,
+  "cohort": "closing_blind",
+  "molecule": "Ethylene",
+  "states": [
+    {
+      "id": "B002",
+      "gap_ev": 8.205293952547356,
+      "overlap": 1.0000000000000004,
+      "margin": 0.999999999999999
+    }
+  ],
+  "model": "6a718b598aa4fa183b8fc2a6895f869f2cc9421c44267ab6ac13aa069f59d43a",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "reference_excitation_energies_read": false,
+  "auxbasis": "weigend+etb",
+  "auxiliary_functions": 142,
+  "bath_virtuals": 68,
+  "native_environment_transitions": 11,
+  "bath_transitions": 408,
+  "gauge_alignment_hartree": 0.07029446836272496,
+  "minimum_bath_gap_hartree": 0.3848203440723104,
+  "bare_DF_integral_max_error_hartree": 6.527035243064638e-05,
+  "minimum_dielectric_eigenvalue": 1.0000075561409263,
+  "screened_coulomb_trace": 10.462203219374135
+}
