@@ -1,0 +1,42 @@
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+pyrimidine stationary embedded DFT verified
+pyrimidine stationary response block 1 / 4
+pyrimidine stationary response block 2 / 4
+pyrimidine stationary response block 3 / 4
+pyrimidine stationary response block 4 / 4
+pyrimidine stationary F/Q calibration certified
+pyrimidine coherent M06 reference and Q model retained
+pyrimidine V007 True
+pyrimidine [{'id': 'V007', 'root': 1, 'gap_ev': 4.644283882983487, 'overlap': 1.000000000000003, 'margin': 1.0000000000000024, 'qualified': True}]
+pyrimidine [{'id': 'V007', 'root': 1, 'gap_ev': 4.637125574784314, 'overlap': 1.0000000000000027, 'margin': 1.0000000000000016, 'qualified': True}]
+pyrimidine [{'id': 'V007', 'gap_ev': 4.554578123328127, 'conventional_si_gap_ev': 4.582987406315645, 'root': 1, 'overlap': 0.985916651046885, 'margin': 0.8186792234521619, 'qualified': True}]
+pyrimidine [{'id': 'V007', 'root': 0, 'gap_ev': 4.6371255747842985, 'overlap': 1.0000000000000024, 'margin': 1.000000000000001, 'qualified': True}] [{'id': 'V007', 'root': 1, 'gap_ev': 4.637125574784266, 'overlap': 1.0000000000000024, 'margin': 1.0000000000000007, 'qualified': True}]
+pyrimidine CID inputs and stationary states complete
+cyclopentadienone stationary embedded DFT verified
+cyclopentadienone stationary response block 1 / 4
+cyclopentadienone stationary response block 2 / 4
+cyclopentadienone stationary response block 3 / 4
+cyclopentadienone stationary response block 4 / 4
+cyclopentadienone stationary F/Q calibration certified
+cyclopentadienone coherent M06 reference and Q model retained
+cyclopentadienone V008 True
+cyclopentadienone [{'id': 'V008', 'root': 1, 'gap_ev': 3.4498066664458906, 'overlap': 0.9999999999999951, 'margin': 0.9999999999999951, 'qualified': True}]
+cyclopentadienone [{'id': 'V008', 'root': 1, 'gap_ev': 3.4398977976286536, 'overlap': 0.9999999999999953, 'margin': 0.9999999999999951, 'qualified': True}]
+cyclopentadienone [{'id': 'V008', 'gap_ev': 3.4117331586599153, 'conventional_si_gap_ev': 3.921147534710249, 'root': 1, 'overlap': 0.9986666498424867, 'margin': 0.9505597930771059, 'qualified': True}]
+cyclopentadienone [{'id': 'V008', 'root': 0, 'gap_ev': 3.41173315865992, 'overlap': 0.9986666498424869, 'margin': 0.9505597930771065, 'qualified': True}] [{'id': 'V008', 'root': 1, 'gap_ev': 3.411733158659915, 'overlap': 0.998666649842487, 'margin': 0.9505597930771056, 'qualified': True}]
+cyclopentadienone CID inputs and stationary states complete
+pyranone stationary embedded DFT verified
+pyranone stationary response block 1 / 5
+pyranone stationary response block 2 / 5
+pyranone stationary response block 3 / 5
+pyranone stationary response block 4 / 5
+pyranone stationary response block 5 / 5
+pyranone stationary F/Q calibration certified
+pyranone coherent M06 reference and Q model retained
+pyranone V009 True
+pyranone [{'id': 'V009', 'root': 1, 'gap_ev': 4.533150235422428, 'overlap': 0.9999999999999987, 'margin': 0.9999999999999987, 'qualified': True}]
+pyranone [{'id': 'V009', 'root': 1, 'gap_ev': 4.528797448042045, 'overlap': 0.9999999999999984, 'margin': 0.9999999999999982, 'qualified': True}]
+pyranone [{'id': 'V009', 'gap_ev': 4.512495724345364, 'conventional_si_gap_ev': 5.226698954184272, 'root': 1, 'overlap': 0.9991274251263532, 'margin': 0.9573960992712166, 'qualified': True}]
+pyranone [{'id': 'V009', 'root': 0, 'gap_ev': 4.512495724345336, 'overlap': 0.9991274251263534, 'margin': 0.9573960992712182, 'qualified': True}] [{'id': 'V009', 'root': 1, 'gap_ev': 4.512495724345375, 'overlap': 0.9991274251263538, 'margin': 0.9573960992712183, 'qualified': True}]
+pyranone CID inputs and stationary states complete

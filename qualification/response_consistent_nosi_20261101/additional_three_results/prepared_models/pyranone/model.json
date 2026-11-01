@@ -1,0 +1,39 @@
+{
+  "schema": "mouse.nosi.selected_cid.v1",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "energy_offset_ev": 0,
+  "state_ids": [
+    "V009"
+  ],
+  "labels": [
+    "S0",
+    "V009",
+    "V009_pair_double",
+    "pair_(16, 19)",
+    "pair_(17, 18)",
+    "pair_(17, 19)",
+    "open_16_(18, 19)",
+    "open_17_(18, 19)",
+    "open_18_(16, 17)",
+    "open_19_(16, 17)",
+    "four_spin_0",
+    "four_spin_1"
+  ],
+  "sha256": {
+    "template.npz": "3e1cf6dee92ebc5438e4ea3adab3a43cda4231dc31b4246ca1a92804042d3e6b",
+    "response.npz": "f063ba38c17a60bd1369ddbac5e6d67379353394fd7de7b5bcb7db3afc579368",
+    "arrays.npz": "79d80b9b6f6e8169bec35b8dcd092ca73a8f0231ddac0c1d405ab8c36b0aed75"
+  },
+  "provenance": {
+    "candidate_freeze_commit": "467a9e5",
+    "native_model_sha256": "441a0e57e5a1db893e89eb8d4b9559fed52c98a9a0f5cd2caa2a8f399998e297",
+    "selected_matrix_sha256": "3ac64c47910a197af479f65beb96ff7845dc3ab920160890830c63184fdad2c3",
+    "runtime_DFT_backend_required": false,
+    "runtime_TDA_required": false,
+    "source_sha256": "799ae035ab22f0ac1ce563f79562d352109b57fff1a06301c2ae2df8c755c54b"
+  }
+}

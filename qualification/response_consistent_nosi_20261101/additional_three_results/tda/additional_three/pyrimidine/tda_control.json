@@ -1,0 +1,30 @@
+{
+  "predictions": [
+    {
+      "excitation_ev": 4.655414046148156,
+      "root": 1,
+      "overlap": 0.9987033941444567,
+      "margin": 0.9673790162776655,
+      "qualified": true,
+      "orbitals": "own stationary corrected GFN2 ground orbitals",
+      "operator": "complete singlet TDA A including nonlocal exchange correction",
+      "lambda_exchange": 0.9,
+      "xc": "CAM-B3LYP",
+      "response_short_range_exchange": 0.171,
+      "response_long_range_exchange": 0.585,
+      "omega_bohr_inverse": 0.33,
+      "id": "V007",
+      "wall_seconds": 0.0991156249656342
+    }
+  ],
+  "minimum_native_MO_overlap": 0.9999999999999989,
+  "DFT_spatial_orbitals_used": false,
+  "lambda_exchange": 0.9,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "model_sha256": "d400de2a1d6bdd341e064fefa34aaf9408bc4950987be82891ae555c28541e96",
+  "source_sha256": "9a092d5b2c1e8fa3df416d7f10bbea3cf0c31d77f340423d1c2bca0e2448c6c1",
+  "host": "mac-2.homenet.telecomitalia.it"
+}

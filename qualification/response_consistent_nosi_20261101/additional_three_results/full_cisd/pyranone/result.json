@@ -1,0 +1,202 @@
+{
+  "predictions": [
+    {
+      "id": "V009",
+      "gap_ev": 4.512495724345364,
+      "conventional_si_gap_ev": 5.226698954184272,
+      "root": 1,
+      "overlap": 0.9991274251263532,
+      "margin": 0.9573960992712166,
+      "qualified": true
+    }
+  ],
+  "labels": [
+    "S0",
+    "V009",
+    "V009_pair_double",
+    "pair_(16, 19)",
+    "pair_(17, 18)",
+    "pair_(17, 19)",
+    "open_16_(17, 19)",
+    "open_16_(18, 19)",
+    "open_17_(16, 18)",
+    "open_17_(16, 19)",
+    "open_17_(18, 19)",
+    "open_18_(16, 17)",
+    "open_19_(16, 17)",
+    "four_spin_0",
+    "four_spin_1"
+  ],
+  "metric_eigenvalues": [
+    0.8004919977812708,
+    0.9999999999996219,
+    0.999999999999726,
+    0.999999999999816,
+    0.9999999999998684,
+    1.00000000000001,
+    1.0000000000000127,
+    1.0000000000000133,
+    1.000000000000015,
+    1.0000000000000224,
+    1.000000000000149,
+    1.0000000000002116,
+    1.0000000000002889,
+    1.000000000000407,
+    1.1995080022187457
+  ],
+  "auxiliary_si_ground_lowering_ev": -0.7142032298389089,
+  "ground_character": 0.9727561726034071,
+  "retained_block_errors": {
+    "metric": 8.215650382226158e-15,
+    "matrix": 1.8735013540549517e-16
+  },
+  "additions": [
+    {
+      "kind": "paired",
+      "indices": [
+        16,
+        17
+      ],
+      "maximum_retained_overlap": 0.9999999999999991,
+      "added": false
+    },
+    {
+      "kind": "paired",
+      "indices": [
+        16,
+        18
+      ],
+      "maximum_retained_overlap": 0.9719703779509293,
+      "added": false
+    },
+    {
+      "kind": "paired",
+      "indices": [
+        16,
+        19
+      ],
+      "maximum_retained_overlap": 5.919441130444737e-26,
+      "added": true
+    },
+    {
+      "kind": "paired",
+      "indices": [
+        17,
+        18
+      ],
+      "maximum_retained_overlap": 4.5787948273011155e-15,
+      "added": true
+    },
+    {
+      "kind": "paired",
+      "indices": [
+        17,
+        19
+      ],
+      "maximum_retained_overlap": 2.3883874515996654e-28,
+      "added": true
+    },
+    {
+      "kind": "open",
+      "paired": 16,
+      "opens": [
+        17,
+        18
+      ],
+      "maximum_retained_overlap": 0.9581228589479052,
+      "added": false
+    },
+    {
+      "kind": "open",
+      "paired": 16,
+      "opens": [
+        17,
+        19
+      ],
+      "maximum_retained_overlap": 2.364476706206126e-13,
+      "added": true
+    },
+    {
+      "kind": "open",
+      "paired": 16,
+      "opens": [
+        18,
+        19
+      ],
+      "maximum_retained_overlap": 3.3922032465100453e-13,
+      "added": true
+    },
+    {
+      "kind": "open",
+      "paired": 17,
+      "opens": [
+        16,
+        18
+      ],
+      "maximum_retained_overlap": 1.5434433398147323e-14,
+      "added": true
+    },
+    {
+      "kind": "open",
+      "paired": 17,
+      "opens": [
+        16,
+        19
+      ],
+      "maximum_retained_overlap": 2.185583423985319e-14,
+      "added": true
+    },
+    {
+      "kind": "open",
+      "paired": 17,
+      "opens": [
+        18,
+        19
+      ],
+      "maximum_retained_overlap": 1.0606196510908112e-27,
+      "added": true
+    },
+    {
+      "kind": "open",
+      "paired": 18,
+      "opens": [
+        16,
+        17
+      ],
+      "maximum_retained_overlap": 0.19950800221874151,
+      "added": true
+    },
+    {
+      "kind": "open",
+      "paired": 19,
+      "opens": [
+        16,
+        17
+      ],
+      "maximum_retained_overlap": 3.924407987297768e-27,
+      "added": true
+    }
+  ],
+  "all_eigenvalues_ev": [
+    -0.7142032298389089,
+    4.512495724345364,
+    6.9575956208479015,
+    6.98980595399466,
+    7.333599455214433,
+    12.523712015588314,
+    13.648720160063185,
+    13.845851863014579,
+    14.751653026985696,
+    16.004700682884696,
+    17.17802081637364,
+    18.818975521003363,
+    21.030358646097675,
+    23.11771433283706,
+    29.48078633719666
+  ],
+  "source_sha256": "e08de0012746bd5489b4aaeb7f6c558041cd1f448cbbf45abb9602acca15294d",
+  "protocol_sha256": "243982af61dfa3825a01cdcf7b324f72fe17e478fbbe2f830e9a53af34820d4c",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "energy_labels_used": false,
+  "offset_ev": 0
+}

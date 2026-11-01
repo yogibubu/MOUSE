@@ -1,0 +1,6 @@
+{
+  "frozen_source_sha256": "d4d400377fc71aa427db7466c0d12f69ee9e7a1a971ef1be4a9d5cbf1bf780de",
+  "adapter_sha256": "db19f208060f7b90d7c0b8eecc6554d1df5c1598bcdf2eba911c524463a2fd5f",
+  "AST_body_identical_after_loop_skip_to_return": true,
+  "model_changed": false
+}

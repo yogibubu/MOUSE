@@ -1,0 +1,38 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "threads": 2,
+  "profiles": [
+    {
+      "profile": "F",
+      "fock_error": 8.097689185859736e-15,
+      "ground_density_drift": 3.142228366392885e-09,
+      "minimum_ground_curvature": 0.6957804080140302,
+      "ground_residual": 6.665691580074173e-16,
+      "response_directional_error": 1.0146908313579672e-10,
+      "model_sha256": "99084c70c0688c5c04907c1ca6f405b49be85fd26414cfd5fc8e49fa009cc221",
+      "response_fingerprint": "d8273200510fb70922ac39b126901134cde9c773f5cebf8d7e128fd2611c8233"
+    },
+    {
+      "profile": "Q",
+      "fock_error": 5.551115123125783e-16,
+      "ground_density_drift": 2.9182380956171983e-09,
+      "minimum_ground_curvature": 0.7464878088441611,
+      "ground_residual": 9.315906212335332e-16,
+      "response_directional_error": 1.0025935637258954e-10,
+      "model_sha256": "cbf7b1e6ae4c36fc7d12bc9cef04c5c4136d1e99822fda170f6cd4a92857f1ce",
+      "response_fingerprint": "cfc14ea3a31ebaa3981dbaf806d0441f9917ab241a1a08ead5986c895347e48f"
+    }
+  ],
+  "response_center": "stationary embedded CAM-B3LYP density",
+  "lambda_exchange": 0.9,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "offset_ev": 0,
+  "wall_seconds": 8.981866208021529,
+  "source_sha256": "98a820f161bdd43ce54ad0ee2ab60c37964769cdd7b892d8806b2e423eba2ed5",
+  "anchor_sha256": "146f1526703b66b99dbd8066461761c1dfd98849e935df5c3793b702f7dcff74",
+  "protocol_sha256": "8bfea17551d7eab8648dbcfb853c0d05a8370a59a4cf1b972c308d9a091f487a",
+  "energy_labels_used": false
+}

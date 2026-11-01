@@ -73,3 +73,14 @@ remote with hashes in the transfer audit; completed work was not rerun.
 There are no claims of universal n→pi* correction, broad CT/Rydberg coverage,
 blind generalization, or final-model coupled-cluster geometry/frequency accuracy.
 The final candidate passes the specified finite valence-state test.
+
+## Three-molecule extension
+
+The registered `f8a38e3` extension adds pyrimidine, cyclopentadienone and
+pyranone with the same frozen model. `additional_three_results` contains all
+three predictions, matching TDA controls, portable models, source/input
+audits and the unchanged-model combined score. The full set is now 18 states
+in 16 molecules, MAE 0.246774 eV and maximum 0.497948 eV. The new three-state
+MAE is 0.381118 eV and the five post-freeze predictions give 0.309468 eV:
+these means exceed the 0.3 eV gate despite every individual error remaining
+below 0.5 eV. The original fifteen-state `results/` archive remains frozen.

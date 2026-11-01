@@ -1,0 +1,23 @@
+[
+  {
+    "molecule": "pyrimidine",
+    "archived_geometry": "manuscripts/mouse_orbital_optimized_dft/coordinates/pyrimidine_anchor.xyz",
+    "sha256": "7939633f6c2e942f0fefac0cdec980ec68cc14a752244f2537e3987d5785dbac",
+    "maximum_coordinate_difference_angstrom": 1.1210987693743846e-09,
+    "Jmol_structure_already_present": true
+  },
+  {
+    "molecule": "cyclopentadienone",
+    "archived_geometry": "manuscripts/mouse_orbital_optimized_dft/coordinates/cyclopentadienone_anchor.xyz",
+    "sha256": "15af95359b6cd2e6444e53cbbc443efe6acfea6b631564469fff512919e48de7",
+    "maximum_coordinate_difference_angstrom": 1.0262453109532998e-09,
+    "Jmol_structure_already_present": true
+  },
+  {
+    "molecule": "pyranone",
+    "archived_geometry": "manuscripts/mouse_orbital_optimized_dft/coordinates/pyranone_anchor.xyz",
+    "sha256": "338e376ee17d780cb8058698005a61df608721841f419d397f979abd362079fc",
+    "maximum_coordinate_difference_angstrom": 1.0260117200289187e-09,
+    "Jmol_structure_already_present": true
+  }
+]

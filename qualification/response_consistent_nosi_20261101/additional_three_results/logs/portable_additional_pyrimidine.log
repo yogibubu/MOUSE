@@ -1,0 +1,20 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "properties": [
+    "energy"
+  ],
+  "wall_seconds": 0.3221558749792166,
+  "peak_rss_native": 249724928,
+  "prediction_errors_ev": {
+    "V007": 5.32018873400375e-13
+  },
+  "derivative_errors": {},
+  "restart_error_hartree": 2.1316282072803006e-14,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_input_reads": 0,
+  "read_paths": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-response-consistent-nosi-20261101/portable_validation/additional_three/pyrimidine/checkpoint.npz"
+  ],
+  "model_fingerprint": "24c143b1ec1dea53ad98ed78708d65c8cd2c5e9e2d5a8f4c4cb95e0df274f332"
+}

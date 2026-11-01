@@ -1,0 +1,28 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "records": [
+    {
+      "id": "V007",
+      "molecule": "pyrimidine",
+      "model_fingerprint": "24c143b1ec1dea53ad98ed78708d65c8cd2c5e9e2d5a8f4c4cb95e0df274f332",
+      "spin_squared": 0.0,
+      "determinants": 2
+    },
+    {
+      "id": "V008",
+      "molecule": "cyclopentadienone",
+      "model_fingerprint": "5d1149802da200fb20465308e2a7276591e2185fb1d40cf255dcf832f641158a",
+      "spin_squared": 0.0,
+      "determinants": 14
+    },
+    {
+      "id": "V009",
+      "molecule": "pyranone",
+      "model_fingerprint": "b80f154ea454fab4939575a1d223a3bce04e803f2839ab45de146a36627ef009",
+      "spin_squared": 0.0,
+      "determinants": 6
+    }
+  ]
+}
