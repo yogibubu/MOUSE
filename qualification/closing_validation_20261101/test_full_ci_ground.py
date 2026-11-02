@@ -14,3 +14,9 @@ def test_sparse_full_roots_are_generalized_and_energy_gauge_invariant():
  e,c,_=solve_full(h,s,4);expected=eigh(h,s,eigvals_only=True)[:4]
  np.testing.assert_allclose(e,expected,atol=1e-11)
  shifted,_,_=solve_full(h+17*s,s,4);np.testing.assert_allclose(shifted-e,17.,atol=1e-11)
+
+def test_preconditioned_block_roots_match_dense_generalized_reference():
+ rng=np.random.default_rng(851);n=70;a=rng.normal(size=(n,n))*.02;s=a@a.T+np.eye(n);b=rng.normal(size=(n,n))*.01;h=np.diag(np.linspace(.05,2,n))+(b+b.T)/2
+ e,c,certificate=solve_full(h,s,4,energy_shift=0.,algorithm='lobpcg')
+ np.testing.assert_allclose(e,eigh(h,s,eigvals_only=True)[:4],atol=1e-10)
+ assert certificate['maximum_residual_hartree']<1e-8

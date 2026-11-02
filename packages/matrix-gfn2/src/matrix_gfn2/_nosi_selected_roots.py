@@ -1,7 +1,7 @@
 """Exact selected generalized CI roots with a sparse metric and rank-one projection."""
 import numpy as np
 from scipy.sparse import csc_matrix,eye
-from scipy.sparse.linalg import splu,LinearOperator,eigsh
+from scipy.sparse.linalg import splu,LinearOperator,eigsh,lobpcg
 from scipy.linalg import eigh
 
 
@@ -59,13 +59,21 @@ def projector_population(metric,indices,ci):
     solved=factor.solve(cross);solved+=np.outer(v,(u@solved)/denominator)
     return np.sum(cross*solved,axis=0)
 
-def solve_full(h,metric,roots,*,energy_shift=None):
+def solve_full(h,metric,roots,*,energy_shift=None,algorithm='arpack'):
     """Solve the same full CI pencil, including its interacting ground state."""
     n=len(h);k=min(int(roots),n)
     if k<1:raise ValueError('positive number of full CI roots required')
+    if algorithm not in ('arpack','lobpcg'):raise ValueError('unknown full CI eigensolver')
     shift=float(h[0,0]/metric[0,0]) if energy_shift is None else float(energy_shift)
-    if k>=n-1:
+    if k>=n-1 or (algorithm=='lobpcg' and n<5*k):
         energies,z=eigh(h,metric,subset_by_index=[0,k-1]);method='Dense full generalized eigensolve'
+    elif algorithm=='lobpcg':
+        sparse=csc_matrix(metric)
+        action=LinearOperator((n,n),matvec=lambda x:h@x-shift*(sparse@x),matmat=lambda x:h@x-shift*(sparse@x),dtype=float)
+        diagonal=np.maximum(abs(np.diag(h)-shift*np.diag(metric)),1e-6)
+        preconditioner=LinearOperator((n,n),matvec=lambda x:x/diagonal,matmat=lambda x:x/diagonal[:,None],dtype=float)
+        values,z=lobpcg(action,np.random.default_rng(715).normal(size=(n,k)),B=sparse,M=preconditioner,largest=False,tol=1e-10,maxiter=500)
+        order=np.argsort(values);z=z[:,order];energies=values[order]+shift;method='Block LOBPCG with full generalized metric and diagonal preconditioner'
     else:
         sparse=csc_matrix(metric);factor=splu(sparse)
         m=LinearOperator((n,n),matvec=lambda x:sparse@x,dtype=float)
