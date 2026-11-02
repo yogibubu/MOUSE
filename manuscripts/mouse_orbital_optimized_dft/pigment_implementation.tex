@@ -156,3 +156,31 @@ supports vertical energies and orbital response only; it explicitly rejects
 nuclear-derivative requests. The analytic nuclear Hessian qualifications
 reported for the small-molecule anchored surface therefore do not extend
 to these pigment calculations.
+
+\paragraph{Coherent transition constraints in the pigment screening test.}
+A product of separately enlarged hole and particle spaces generally exceeds
+its explicit CI transition space. At $N=16$, the former contains 400 native
+response directions for chlorophyllide, whereas the actual canonical-single
+and optimized-CSF one-body amplitudes span 257 directions. The corresponding
+numbers for carotene at $N=13$ are 196 and 169. This over-exclusion removes
+polarization channels that the explicit configurations do not restore.
+We therefore test a general correction using the actual transition amplitudes.
+Let $D$ contain the positive native orbital gaps, let $L$ be the native
+Coulomb vertices, and let $A$ collect the canonical-single coordinate vectors
+and the exact one-body transition amplitudes of the retained optimized CSFs.
+With $B=2LD^{-1/2}$ and $U$ an orthonormal basis for $D^{-1/2}A$, the
+constrained native polarization is
+\begin{equation}
+ \Pi_{\rm n}=B(I-UU^{\mathsf T})B^{\mathsf T}.
+\end{equation}
+This is the response of the positive quadratic resolvent under the coherent
+constraints, rather than a diagonal probability mask. Canonical directions
+are removed directly; a thin SVD resolves the remaining optimized-CSF
+columns. The orthogonal DFT bath, $\eta=0.60$, F/Q weights, exchange scale,
+native functional and converged ROKS checkpoints are unchanged. No excitation
+energy enters the construction. The earlier product-space sequence and the
+corrected transition-space sequence are retained as separate model generations;
+the pigment extension is not pooled with the 26-state exposed accuracy ledger.
+The new projector is checked against the direct constrained inverse and under
+unitary changes of its active basis. Screening and all CI matrices are frozen
+within each fixed-interaction convergence sequence.
