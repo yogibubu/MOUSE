@@ -127,6 +127,8 @@ class MatrixResponse:
             scalar_basis=[[(weight,(a.v,b.v)) for weight,(a,b) in csf] for csf in basis[:self.nbase]]
             self.scalar.prefetch_csf_pairs((scalar_basis[i],scalar_basis[j])
                 for i in range(self.nbase) for j in range(i+1) if (i,j) not in self.scalar_elements)
+            scalar_all=[[(weight,(a.v,b.v)) for weight,(a,b) in csf] for csf in basis]
+            self.fixed_bra.prefill(scalar_all,self.nbase,self.scalar_elements,self.scalar_checkpoint)
         size=len(basis);metric=Jet.constant(np.zeros((size,size)),self.nr);hf=Jet.constant(np.zeros((size,size)),self.nr)
         if self.canonical_block is not None:
             metric.v[self.nbase:,self.nbase:]=self.canonical_block[0]

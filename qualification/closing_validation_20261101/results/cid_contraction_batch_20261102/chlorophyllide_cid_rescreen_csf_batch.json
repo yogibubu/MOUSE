@@ -1,0 +1,24 @@
+{
+  "native_functional_values_reused": true,
+  "screened_operator_recomputed": true,
+  "maximum_metric_identity_error": 2.7755575615628914e-17,
+  "canonical_block": {
+    "compiled_integer_kernel": true,
+    "determinants": 9307,
+    "csfs": 3397,
+    "active_orbitals": 18,
+    "closed_core_orbitals": 104
+  },
+  "wall_seconds": 96.22269262501504,
+  "threads": 8,
+  "source_sha256": {
+    "matrix_gfn2._nosi_fixed_bra": "41e718f0eeb916d52268cc804dae0656bf31c949877e2cc72b88fadc33b45af3",
+    "matrix_gfn2._nosi_rescreen": "5dcda26098a180ba8f5e6907ce6a8b403f86aad4a6c0c8e52e9d93bbb0374ba4"
+  },
+  "host": "mac-2.homenet.telecomitalia.it",
+  "Hamiltonian_error_hartree": 6.821210263296962e-13,
+  "metric_error": 0.0,
+  "reference": "Archived full native-functional CI matrix",
+  "DFT_imports": 0,
+  "new_SCC_calls": 0
+}

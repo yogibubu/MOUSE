@@ -29,7 +29,7 @@ class UnusableCore(ValueError):
 class FixedBra:
     def __init__(self,hamiltonian,bra,core,active):
         self.hamiltonian=hamiltonian;self.core=core;self.active=active
-        self.nc=core.shape[1];self.sectors=[];features=[];offset=0;self.occupation_cache_hits=0;self.occupation_cache_misses=0
+        self.nc=core.shape[1];self.sectors=[];features=[];feature_sectors=[];offset=0;self.occupation_cache_hits=0;self.occupation_cache_misses=0
         for spin,a in enumerate(bra):
             if spin and np.array_equal(a,bra[0]):
                 self.sectors.append(self.sectors[0]);continue
@@ -46,12 +46,22 @@ class FixedBra:
             sector=dict(regular=density,null=null,left=left,r=r,prefactor=phase*float(np.prod(s)),
                         occupation_cache={},offset=offset,count=len(pair),one=float(np.trace(hamiltonian.h@density)),
                         same=float(jk@density.ravel()),j=j,jk=jk,features=pair)
-            self.sectors.append(sector);features.append(pair);offset+=len(pair)
+            self.sectors.append(sector);features.append(pair);feature_sectors.append(sector);offset+=len(pair)
         features=np.concatenate(features)
         # Only simultaneous pair transposition is required, as in the
         # parent Hamiltonian contract; separate pair symmetry is unnecessary.
         factors=getattr(hamiltonian,'coulomb_factors',None)
-        self.integrals=((features@factors[0].T)@(factors[1]@features.T) if factors is not None else (features@hamiltonian.j)@features.T)
+        if factors is not None:
+            # Each feature is an outer product of a left and a null orbital.
+            # Transform the exact auxiliary factors along those two indices
+            # rather than multiplying a flattened outer-product matrix.
+            n=len(hamiltonian.h)
+            projected=[]
+            for factor in factors:
+                tensor=factor.reshape((-1,n,n))
+                projected.append(np.concatenate([np.einsum('pi,Lpq,qj->ijL',sector['left'],tensor,sector['null'],optimize=True).reshape(sector['count'],-1) for sector in feature_sectors]))
+            self.integrals=projected[0]@projected[1].T
+        else:self.integrals=(features@hamiltonian.j)@features.T
         self.one=features@hamiltonian.h.T.ravel()
         self.j_fields=[features@sector['j'] for sector in self.sectors]
         self.same_fields=[features@sector['jk'] for sector in self.sectors]
@@ -77,6 +87,23 @@ class FixedBra:
         cache[key]=value
         return value
 
+    def elements(self,kets):
+        """Evaluate a batch with the identical cofactor and pair contractions."""
+        kets=list(kets)
+        if not kets:return np.empty((0,2))
+        values=[[self._occupation(b,sector) for b,sector in zip(ket,self.sectors)] for ket in kets]
+        determinants=[np.array([v[spin][0] for v in values]) for spin in range(2)]
+        vectors=[np.array([v[spin][1] for v in values]) for spin in range(2)]
+        total=np.zeros(len(kets))
+        for spin,sector in enumerate(self.sectors):
+            d=determinants[spin];q=vectors[spin];other=determinants[1-spin]
+            two=np.array([v[spin][2] for v in values])
+            total+=other*(d*(sector['one']+.5*sector['same'])+q@(self.one+self.same_fields[spin])+two)
+        da,db=determinants;qa,qb=vectors
+        total+=da*db*self.regular_cross+da*(qb@self.j_fields[0])+db*(qa@self.j_fields[1])+np.einsum('ij,ij->i',qa@self.integrals,qb)
+        prefactor=self.sectors[0]['prefactor']*self.sectors[1]['prefactor']
+        return np.column_stack((prefactor*da*db,prefactor*total))
+
     def element(self,ket):
         values=[self._occupation(b,sector) for b,sector in zip(ket,self.sectors)]
         total=0.
@@ -92,6 +119,37 @@ class FixedBra:
 class FixedBraCSF:
     def __init__(self,hamiltonian,core,active):
         self.hamiltonian=hamiltonian;self.core=core;self.active=active;self.engines={}
+    def elements(self,bra,kets,*,batch_size=128):
+        """Batch canonical columns without changing their determinant expansion."""
+        if batch_size<1:raise ValueError('positive fixed-bra batch size required')
+        kets=list(kets);result=np.zeros((len(kets),2))
+        for start in range(0,len(kets),batch_size):
+            chunk=kets[start:start+batch_size];indices=[];weights=[];determinants=[]
+            for i,csf in enumerate(chunk):
+                for weight,determinant in csf:indices.append(i);weights.append(weight);determinants.append(determinant)
+            for weight,a in bra:
+                key=tuple(np.ascontiguousarray(part).tobytes() for part in a)
+                if key not in self.engines:
+                    try:self.engines[key]=FixedBra(self.hamiltonian,a,self.core,self.active)
+                    except UnusableCore:self.engines[key]=None
+                engine=self.engines[key]
+                if engine is None:values=np.array([self.hamiltonian.element(a,b) for b in determinants])
+                else:
+                    try:values=engine.elements(determinants)
+                    except UnusableCore:values=np.array([self.hamiltonian.element(a,b) for b in determinants])
+                local=np.zeros((len(chunk),2));np.add.at(local,indices,weight*np.asarray(weights)[:,None]*values);result[start:start+len(chunk)]+=local
+        return result
+
+    def prefill(self,basis,nbase,elements,checkpoint):
+        """Checkpoint exact canonical/retained couplings by fixed bra."""
+        for j in range(nbase):
+            pending=[i for i in range(nbase,len(basis)) if (i,j) not in elements]
+            for start in range(0,len(pending),128):
+                ids=pending[start:start+128];values=self.elements(basis[j],[basis[i] for i in ids])
+                for i,value in zip(ids,values):
+                    elements[i,j]=tuple(map(float,value))
+                    if checkpoint is not None:checkpoint(elements)
+
     def element(self,bra,ket):
         overlap=energy=0.
         for x,a in bra:

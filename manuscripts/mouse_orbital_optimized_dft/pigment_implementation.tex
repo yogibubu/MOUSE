@@ -100,7 +100,11 @@ Fixed-bra Schur contractions reuse the common core in nonorthogonal
 couplings; repeated identical canonical occupations reuse their exact
 cofactors and pair contractions through a bounded cache. Retained-CSF
 transition-density actions are batched into exact matrix products; identically
-zero second cofactors bypass their pair-tensor contraction. Coulomb
+zero second cofactors bypass their pair-tensor contraction. Canonical columns
+with a common retained bra are evaluated in batches with the same determinant
+cofactors and spin coefficients. Their active/null pair features remain outer
+products: the auxiliary factors are transformed along the two orbital indices
+before contraction, avoiding a flattened dense feature transform. Coulomb
 feature contractions use the existing auxiliary factors of the same
 screened interaction, with no additional fitting or truncation. The canonical
 determinant-to-CSF transformation uses its exact sparse coefficients
@@ -133,7 +137,9 @@ changes; an independent matrix reconstruction agrees within
 $2.0\times10^{-11}$ Ha for the archived carotene block and
 $1.1\times10^{-10}$ Ha for chlorophyllide. The 45 retained-CSF scalar
 elements of chlorophyllide reproduce the unbatched journal within
-$1.9\times10^{-12}$ Ha. Positive definiteness is certified by a Gershgorin lower bound or by
+$1.9\times10^{-12}$ Ha. Batched reconstruction of the 3,406-CSF
+chlorophyllide pencil at $N=W=9$ agrees with the saved matrix within
+$6.9\times10^{-13}$ Ha. Positive definiteness is certified by a Gershgorin lower bound or by
 eliminating the sparse canonical block and testing its small border
 Schur complement. A smallest-eigenvalue calculation remains the fallback.
 

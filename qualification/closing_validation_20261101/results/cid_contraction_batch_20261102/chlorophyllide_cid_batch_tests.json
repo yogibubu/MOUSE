@@ -1,12 +1,13 @@
 {
   "host": "mac-2.homenet.telecomitalia.it",
-  "pytest_tests": 4,
+  "pytest_tests": 5,
   "pytest_status": 0,
-  "wall_seconds": 0.64,
-  "scope": "Captured successful remote pytest invocation for Schur batching and even/odd determinant phase controls",
+  "wall_seconds": 0.59,
+  "scope": "Captured successful remote pytest invocation for Schur batching, exact factor transforms, fallback and even/odd determinant phase controls",
   "source_sha256": {
     "_nosi_slater.py": "06183545122ef5a87b3deeee3179bf1245afd5ed0bd221ae3f26a21b44b68334",
-    "_nosi_surface_response.py": "1bfec8e171d265d0670b4ea0550417d0611bace071f4e49ab0c05685228655a3",
-    "_nosi_rescreen.py": "179828890e378cda1eb3b475a9dd1dd65a4a6e06517432e58f541ad198f36c8d"
+    "_nosi_surface_response.py": "1213945922d5887577cbe4c12789789d28c3206f347044d118b50166cbdc881f",
+    "_nosi_rescreen.py": "5dcda26098a180ba8f5e6907ce6a8b403f86aad4a6c0c8e52e9d93bbb0374ba4",
+    "_nosi_fixed_bra.py": "41e718f0eeb916d52268cc804dae0656bf31c949877e2cc72b88fadc33b45af3"
   }
 }

@@ -20,6 +20,7 @@ def reassemble(y,basis,records,nbase,h,w,parent_h,parent_s,*,elements,checkpoint
     scalar=Hamiltonian(h,w);scalar.coulomb_factors=coulomb_factors;fixed=FixedBraCSF(scalar,y[:,core],y[:,active]);raw=np.zeros_like(parent_h);raw[nbase:,nbase:]=ch
     scalar.prefetch_csf_pairs((basis[i],basis[j]) for i in range(nbase)
                              for j in range(i+1) if (i,j) not in elements)
+    fixed.prefill(basis,nbase,elements,checkpoint)
     for i in range(len(basis)):
         for j in range(min(i+1,nbase)):
             if (i,j) not in elements:
