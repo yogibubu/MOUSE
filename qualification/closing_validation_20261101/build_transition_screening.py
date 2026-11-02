@@ -4,7 +4,7 @@ import fcntl
 from scipy.linalg import cho_factor,cho_solve
 from pigment_block_matmul import product
 from matrix_gfn2._nosi_slater import transition_density
-from matrix_gfn2._transition_projector import constrained_vertices
+from matrix_gfn2._transition_projector import constrained_vertices,canonical_frontier_indices
 
 def run(name,frontier):
  out=screening_path(name,frontier,'coherent_transitions');out.mkdir(parents=True,exist_ok=True)
@@ -12,14 +12,16 @@ def run(name,frontier):
  start=time.monotonic();model,s=load_state_only(name);n=len(s.overlap);no=s.electron_count//2;original=screening_path(name,5);prior=json.loads((original/'certificate.json').read_text());eta=prior['bath_efficiency_eta']
  with np.load(HERE/'pigment_full_response'/name/'ri_xc_chart/field.npz') as z:levels=z['common_levels'].copy();fg=z['ground_fock'].copy()
  gaps=levels[no:][None,:]-levels[:no,None];assert gaps.min()>0
- source=native_parent(name,frontier,frontier,'coherent_transitions');r=json.loads((source/'result.json').read_text());records=r['auxiliary_records'];ys=[]
+ source=native_parent(name,frontier,frontier,'coherent_transitions')
+ if source is None:
+  # Screening only needs the retained orbitals and the explicit singles span,
+  # not a completed CID calculation at the screening frontier.
+  source=HERE/'pigment_cid'/name
+ r=json.loads((source/'result.json').read_text());ys=[]
  for ordinal in r['retained_ROKS_ordinals']:
   with np.load(HERE/f'pigment_roks/{name}/state_{ordinal}/checkpoint.npz') as z:ys.append(s.coefficients.T@s.overlap@z['coefficients'])
  basis=scalar_basis(np.eye(n),ys,[],no);transitions=np.column_stack([(transition_density(basis[0],b)[no:,:no].T/np.sqrt(2)).ravel() for b in basis[1:]])
- canonical=[]
- for rec in records:
-  holes=[i for i in range(no) if i not in rec['closed']]
-  if rec['kind']=='open' and len(holes)==1 and rec['open'][0]==holes[0] and rec['open'][1]>=no:canonical.append(holes[0]*(n-no)+rec['open'][1]-no)
+ canonical=canonical_frontier_indices(transitions,no,n-no,frontier)
  common=HERE/'pigment_screening_transition'/name/'common';common.mkdir(parents=True,exist_ok=True);full=common/'native_unconstrained.npy';marker=common/'native_complete.json'
  if not marker.exists():
   with np.load(HERE/'pigment_dft_reference'/name/'CAM/reference.npz') as z:nc=int(np.count_nonzero(z['occupations']==2)-no)

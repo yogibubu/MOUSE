@@ -42,7 +42,7 @@ def native_parent(name,frontier,screening_frontier,screening_mode='legacy_sector
 
 def run(name,frontier=2,screening_frontier=5,roots=None,refresh_observables=False,checkpoint_batch_size=512,screening_mode='legacy_sectors'):
  if checkpoint_batch_size<1:raise ValueError('positive scalar checkpoint batch size required')
- if not 2<=frontier<=16 and frontier<=screening_frontier:raise ValueError('CI must fit inside the excluded screening frontier')
+ if not 2<=frontier<=min(16,screening_frontier):raise ValueError('CI must fit inside the excluded screening frontier')
  out=(HERE/'pigment_cid'/name if frontier==2 else HERE/'pigment_cid_expansion'/name/f'frontier_{frontier}') if screening_frontier==5 else HERE/'pigment_cid_expansion'/name/f'screening_{screening_frontier}'/f'frontier_{frontier}'
  if screening_mode=='coherent_transitions':out=HERE/'pigment_cid_transition'/name/f'screening_{screening_frontier}'/f'frontier_{frontier}'
  out.mkdir(parents=True,exist_ok=True)

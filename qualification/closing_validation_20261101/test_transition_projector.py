@@ -1,5 +1,5 @@
 import numpy as np
-from matrix_gfn2._transition_projector import constrained_vertices
+from matrix_gfn2._transition_projector import constrained_vertices,canonical_frontier_indices
 from matrix_gfn2._nosi_slater import transition_density
 
 def test_gap_constraint_matches_direct_constrained_resolvent_and_is_basis_invariant():
@@ -15,3 +15,11 @@ def test_one_body_density_recovers_single_and_rejects_double_promotion():
  single=[(2**-.5,(y[:,[0,1,3]],y[:,:3])),(2**-.5,(y[:,:3],y[:,[0,1,3]]))]
  gamma=transition_density(ground,single);assert abs(gamma[3,2]-np.sqrt(2))<1e-12
  pair=[(1.,(y[:,[0,1,3]],y[:,[0,1,3]]))];np.testing.assert_allclose(transition_density(ground,pair),0.,atol=1e-12)
+
+def test_screening_frontier_can_exceed_completed_ci_frontier():
+ y=np.eye(8);ground=[(1.,(y[:,:4],y[:,:4]))]
+ # An explicit retained singlet replaces just its own canonical direction.
+ single=[(2**-.5,(y[:,[0,1,2,4]],y[:,:4])),(2**-.5,(y[:,:4],y[:,[0,1,2,4]]))]
+ t=(transition_density(ground,single)[4:,:4].T/np.sqrt(2)).reshape(16,1)
+ assert canonical_frontier_indices(t,4,4,4).tolist()==[i for i in range(16) if i!=12]
+ assert canonical_frontier_indices(t,4,4,2).tolist()==[8,9,13]

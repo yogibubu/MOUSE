@@ -1,6 +1,15 @@
 """Positive static response constrained by actual particle--hole amplitudes."""
 import numpy as np
 
+def canonical_frontier_indices(transitions,no,nvirtual,frontier,*,redundancy_threshold=.7):
+    """Canonical singlets retained by the CID overlap rule, without a CI run."""
+    t=np.asarray(transitions,dtype=float)
+    if not 1<=frontier<=min(no,nvirtual) or t.ndim!=2 or t.shape[0]!=no*nvirtual:
+        raise ValueError('transition chart incompatible with frontier')
+    indices=np.array([h*nvirtual+a for h in range(no-frontier,no) for a in range(frontier)],dtype=int)
+    overlap=np.max(abs(t[indices]),axis=1,initial=0.)
+    return indices[overlap<redundancy_threshold]
+
 def constrained_vertices(vertices,gaps,canonical_indices,transitions,*,tolerance=1e-10):
     """Apply the exact gap-metric constraint, without a hole/particle product.
 
