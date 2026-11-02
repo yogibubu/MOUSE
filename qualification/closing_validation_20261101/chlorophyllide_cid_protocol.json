@@ -10,7 +10,7 @@
   "eta": 0.6,
   "energy_offset_ev": 0,
   "ROKS_targets": "All four distinct certified roots, unchanged checkpoints",
-  "CI_space": "Complete spin-singlet frontier configurations through excitation rank two, plus optimized ROKS and paired CSFs",
+  "CI_space": "Spin-singlet frontier configurations through excitation rank two, plus optimized ROKS and paired CSFs. As in the existing pigment implementation, canonical closed/open CSFs overlapping retained CSFs by >=0.7 are omitted; four-open-shell recouplings are all retained.",
   "baseline": "N=2, W=5; expand N=3,4,5 at fixed W=5",
   "coherent_sequence": "W=N, N=5 through at most 16; two consecutive increments below 0.02 eV for the lowest four roots",
   "energy_tolerance_ev": 0.02,
