@@ -38,3 +38,10 @@ without scalar identity journals are accepted only when their exact checksum
 matches an independently archived certificate supplied in the control protocol.
 All other CI windows must pass their orbital/model/screening journal identity.
 The positive-metric certificate is recomputed from the actual saved metric.
+
+Scalar snapshot frequency is configurable (`checkpoint_batch_size`, default
+512 entries); the final snapshot is always forced. Profiling identified repeated
+pretty-printed JSON snapshots every 32 entries as a large-window serialization
+bottleneck. Increasing the interval changes neither matrix elements nor the
+convergence thresholds; it only bounds the amount of uncaptured scalar work
+between resumable snapshots. Every completed window is reused unchanged.

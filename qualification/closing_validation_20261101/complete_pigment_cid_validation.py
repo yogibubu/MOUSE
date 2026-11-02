@@ -20,7 +20,7 @@ def command(args,log):
     import run_pigment_cid as cid_module
     cid_module.load=functools.lru_cache(maxsize=1)(cid_module.load)
    with contextlib.redirect_stdout(f),contextlib.redirect_stderr(f),cid_module.threadpool_limits(8):
-    cid_module.run(name,int(args[args.index('--frontier')+1]),int(args[args.index('--screening-frontier')+1]),int(args[args.index('--roots')+1]))
+    cid_module.run(name,int(args[args.index('--frontier')+1]),int(args[args.index('--screening-frontier')+1]),int(args[args.index('--roots')+1]),checkpoint_batch_size=protocol.get('checkpoint_batch_size',512))
   else:subprocess.run([sys.executable,'-u',*args],cwd=HERE,stdout=f,stderr=subprocess.STDOUT,check=True)
 def calc(n,w):
  screen=HERE/(f'pigment_screening/{name}' if w==5 else f'pigment_screening_expansion/{name}/frontier_{w}')

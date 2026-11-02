@@ -53,5 +53,6 @@
     "chlorophyllide_cid_batch_tests.json",
     "chlorophyllide_cid_rescreen_csf_batch.json",
     "chlorophyllide_cid_rescreen_csf_batch_before_factor.json"
-  ]
+  ],
+  "checkpoint_batch_size": 512
 }

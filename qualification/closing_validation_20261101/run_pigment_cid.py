@@ -37,7 +37,8 @@ def native_parent(name,frontier,screening_frontier):
   if (folder/'matrices.npz').exists() and (folder/'scalar_elements.json').exists():return folder
  return None
 
-def run(name,frontier=2,screening_frontier=5,roots=None,refresh_observables=False):
+def run(name,frontier=2,screening_frontier=5,roots=None,refresh_observables=False,checkpoint_batch_size=512):
+ if checkpoint_batch_size<1:raise ValueError('positive scalar checkpoint batch size required')
  if not 2<=frontier<=16 and frontier<=screening_frontier:raise ValueError('CI must fit inside the excluded screening frontier')
  out=(HERE/'pigment_cid'/name if frontier==2 else HERE/'pigment_cid_expansion'/name/f'frontier_{frontier}') if screening_frontier==5 else HERE/'pigment_cid_expansion'/name/f'screening_{screening_frontier}'/f'frontier_{frontier}';out.mkdir(parents=True,exist_ok=True)
  if (out/'result.json').exists() and not refresh_observables:return
@@ -83,7 +84,7 @@ def run(name,frontier=2,screening_frontier=5,roots=None,refresh_observables=Fals
     saved=json.loads(journal.read_text());assert saved['identity']==identity;elements={tuple(map(int,k.split(','))):tuple(v) for k,v in saved['elements'].items()}
    last=[len(elements)]
    def checkpoint(values,force=False):
-    if not force and len(values)-last[0]<32:return
+    if not force and len(values)-last[0]<checkpoint_batch_size:return
     last[0]=len(values);write(journal,dict(identity=identity,elements={f'{i},{j}':value for (i,j),value in values.items()}));print(name,'rescreened couplings',len(values),flush=True)
    with np.load(parent_native/'matrices.npz') as z:old_h=z['h'];old_s=z['s'];eg=float(z['ground_energy'])
    h=np.load(screen/'h.npy');w=np.load(screen/'screened_pair.npy',mmap_mode='r').reshape((n,)*4)
@@ -112,7 +113,7 @@ def run(name,frontier=2,screening_frontier=5,roots=None,refresh_observables=Fals
      print(name,'reused exact scalar couplings',inherited,flush=True);break
    last_checkpoint=[len(elements)]
    def checkpoint(values,force=False):
-    if not force and len(values)-last_checkpoint[0]<32:return
+    if not force and len(values)-last_checkpoint[0]<checkpoint_batch_size:return
     last_checkpoint[0]=len(values)
     write(journal,dict(identity=identity,elements={f'{i},{j}':value for (i,j),value in values.items()}));print(name,'CI orbital couplings complete',len(values),flush=True)
    response=MatrixResponse(ctx,reference,c,cs,mus,y,labels,h,w,derivatives=False,auxiliary_records=records,scalar_elements=elements,scalar_checkpoint=checkpoint,fixed_bra=True,coulomb_factors=(np.load(screen/'lp.npy',mmap_mode='r'),np.load(screen/'weighted_lp.npy',mmap_mode='r')));hh,ss,eg=response.matrices(np.zeros(s.coordinates_bohr.size));checkpoint(response.scalar_elements,force=True);np.savez(matrices,h=hh.v,s=ss.v,ground_energy=float(eg.v));del response,w
@@ -154,7 +155,7 @@ def run(name,frontier=2,screening_frontier=5,roots=None,refresh_observables=Fals
  if not refresh_observables:np.savez(out/'eigenstates.npz',energies=energies,ci=ci,transition_dipoles=moment,metric=metric)
  np.savez(out/'observables_phase_corrected.npz',transition_dipoles=moment,native_target_amplitudes=native_amplitudes,energies=energies,convention='Same ordered determinants as MatrixResponse; canonical native-target phase (-1)^(no-1)')
  report=dict(molecule=name,host=socket.getfqdn(),states=rows,selected_states=[rows[i] for i in selected],basis_size=len(basis),auxiliary_records=records,retained_ROKS_ordinals=ordinals,minimum_projected_metric_eigenvalue=smallest,projected_metric_Gershgorin_lower_bound=bound if certificate['method']=='Gershgorin' else None,metric_positive_definiteness_certificate=certificate,eigensolver_certificate=eigen_certificate,eigenstates_requested=roots,spin_squared=0.,weights=[.5,.5],lambda_exchange=.9,bath_efficiency_eta=.6,energy_offset_ev=0,DFT_imports=0,TDA_solves=0,current_process_wall_seconds=time.monotonic()-start,matrix_checkpoint_reused=reused,timing_scope='Current process only; excludes previous matrix construction when resumed and all DFT preparation',model_sha256=hashlib.sha256((model/'manifest.json').read_bytes()).hexdigest(),scope='Vertical examples on source geometries; no excited geometry or pigment nuclear derivative qualification',target_coverage=target_coverage,target_rule='Retain eigenstates until every fixed native-frontier target direction has at least 0.49 projector coverage; fragmented targets remain a subspace; ROKS weights reported separately',numerical_quadrature='Full frozen XC quadrature; RI used only in orbital Newton step')
- report['native_functional_checkpoint']=str(parent_native) if parent_native else None;report['rescreening_certificate']=rescreen_certificate;report['inherited_scalar_elements']=inherited;report['scalar_checkpoint_batch_size']=32;report['frontier_occupied']=frontier;report['frontier_virtual']=frontier;report['screened_interaction_reused']=True;report['screening_active_frontier']=screening_frontier;report['role']='Baseline' if frontier==2 else 'Post-exposure active-space convergence diagnostic; no parameter retuning'
+ report['native_functional_checkpoint']=str(parent_native) if parent_native else None;report['rescreening_certificate']=rescreen_certificate;report['inherited_scalar_elements']=inherited;report['scalar_checkpoint_batch_size']=checkpoint_batch_size;report['frontier_occupied']=frontier;report['frontier_virtual']=frontier;report['screened_interaction_reused']=True;report['screening_active_frontier']=screening_frontier;report['role']='Baseline' if frontier==2 else 'Post-exposure active-space convergence diagnostic; no parameter retuning'
  report['observable_phase_convention']='Identical to MatrixResponse opened singlet: excited determinant core+[particle], ground determinant in original column order'
  report['corrected_observables_checkpoint']='observables_phase_corrected.npz'
  if refresh_observables and previous_report is not None:
@@ -164,8 +165,8 @@ def run(name,frontier=2,screening_frontier=5,roots=None,refresh_observables=Fals
  write(out/'result.json',report);print(json.dumps(report,indent=2),flush=True)
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--wait-for-screening',action='store_true');p.add_argument('--frontier',type=int,choices=range(2,17),default=2);p.add_argument('--refresh-observables',action='store_true');p.add_argument('--roots',type=int);p.add_argument('--screening-frontier',type=int,default=5);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--wait-for-screening',action='store_true');p.add_argument('--frontier',type=int,choices=range(2,17),default=2);p.add_argument('--refresh-observables',action='store_true');p.add_argument('--roots',type=int);p.add_argument('--checkpoint-batch-size',type=int,default=512);p.add_argument('--screening-frontier',type=int,default=5);a=p.parse_args()
  while not (screening_path(a.name,a.screening_frontier)/'certificate.json').exists():
   if not a.wait_for_screening:raise RuntimeError('Screening incomplete')
   time.sleep(20)
- with threadpool_limits(8):run(a.name,a.frontier,a.screening_frontier,a.roots,a.refresh_observables)
+ with threadpool_limits(8):run(a.name,a.frontier,a.screening_frontier,a.roots,a.refresh_observables,a.checkpoint_batch_size)
