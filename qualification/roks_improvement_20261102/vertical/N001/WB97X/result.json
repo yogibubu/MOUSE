@@ -1,0 +1,43 @@
+{
+  "id": "N001",
+  "cohort": "subspace_extra_npi",
+  "name": "acetaldehyde",
+  "role": "confirmation",
+  "family": "n_pi",
+  "functional": "WB97X",
+  "basis": "aug-cc-pVDZ",
+  "excitation_ev": 4.180430612794424,
+  "energy_hartree": -153.65470834656034,
+  "ground_energy_hartree": -153.8083363379829,
+  "spin_squared": 0.0,
+  "orbital_residual": 6.9795888903503855e-12,
+  "iterations": 4,
+  "reference_overlap": 0.9510751247031658,
+  "hole_overlap": 0.9849542375862782,
+  "particle_overlap": 0.9688123166903357,
+  "target_sector_projection": [
+    0.9995060574452724,
+    0.9991078484043971
+  ],
+  "solver": {
+    "status": "converged",
+    "solver": "trust",
+    "trust_radius": 0.3,
+    "Fock_builds": 10,
+    "response_builds": 10,
+    "Jacobian_actions": 80
+  },
+  "new_ground_SCF_calls": 0,
+  "archived_ground_reused": false,
+  "target_excitation_labels_read": false,
+  "source_sha256": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_extra_npi/references/acetaldehyde/reference.npz": "747fa027e78b5d37c2045ad12a648c8a9926be82b5658408cf6129d215df5992",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_extra_npi/predictions/acetaldehyde/native_ground.npz": "f7a77520ff081e6347e8ef479945795e5b3fd1603f385351ef809f9dbb851ace",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_extra_npi/predictions/acetaldehyde/native_transition_N001.npz": "4b63e361c4dd43d94714d1a7f40da950685c02d6c335d8b5dcd29a3cf3c0f6ad",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_extra_npi/predictions/acetaldehyde/full_response/anchor/embedding.npz": "eab9476bce18c086043aed666da4d5813e6a7aabb619dd2f75fe9ea02363e7d1",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_extra_npi/references/acetaldehyde/backend.chk": "9ddad86f9b2530bfd14cc7d54ccc5d7c17a6689edead34df62fea8e7b388856c"
+  },
+  "cartesian_AO_reference": true,
+  "cartesian_AO_calculation": false,
+  "seconds": 101.16894341702573
+}

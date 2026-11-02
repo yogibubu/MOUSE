@@ -1,0 +1,8 @@
+{
+  "source_functional": "WB97X",
+  "source_checkpoint": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-roks-improvement-20261102/vertical/B002/WB97X/accepted.npz",
+  "sha256": "d0630352109508647d887448f4193fa2e52a2d25ce23287f117afed0447adaba",
+  "hole_overlap": 0.9978263256182393,
+  "particle_overlap": 0.7899941023224608,
+  "energy_selection": false
+}

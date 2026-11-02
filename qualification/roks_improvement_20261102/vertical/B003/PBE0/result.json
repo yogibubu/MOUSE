@@ -1,0 +1,43 @@
+{
+  "id": "B003",
+  "cohort": "closing_blind",
+  "name": "Butadiene",
+  "role": "pilot",
+  "family": "pi_pi",
+  "functional": "PBE0",
+  "basis": "aug-cc-pVDZ",
+  "excitation_ev": 5.133817178946353,
+  "energy_hartree": -155.62035886585494,
+  "ground_energy_hartree": -155.80902316735495,
+  "spin_squared": 0.0,
+  "orbital_residual": 2.457981821551991e-11,
+  "iterations": 3,
+  "reference_overlap": 0.8840084734308641,
+  "hole_overlap": 0.9986950164160993,
+  "particle_overlap": 0.8856724457950192,
+  "target_sector_projection": [
+    0.96657914007093,
+    0.9999921069682336
+  ],
+  "solver": {
+    "status": "converged",
+    "solver": "trust",
+    "trust_radius": 0.3,
+    "Fock_builds": 8,
+    "response_builds": 8,
+    "Jacobian_actions": 51
+  },
+  "new_ground_SCF_calls": 0,
+  "archived_ground_reused": false,
+  "target_excitation_labels_read": false,
+  "source_sha256": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/references/Butadiene/reference.npz": "06104bac5dc517afe45e67e634e7df472d49459d6c294dd59f81e68c373778e1",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/predictions/Butadiene/native_ground.npz": "860e34f2f06829c6f027f4b5d805bfba08695b637e2fa339c94375c42e752ce0",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/predictions/Butadiene/native_transition_B003.npz": "81e16d93d0f656e92db957bc30c94288bc9da743bd20ce95fb65bf1be742d083",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/predictions/Butadiene/full_response/anchor/embedding.npz": "1cb0b0cc5b3163d392953757872a093c440f87baf696189eea858292cd42e9da",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/references/Butadiene/backend.chk": "9c8d44813bb887b8bee3e9c8c16fe3ea92f50ddd2533aa68475bb76120e53e63"
+  },
+  "cartesian_AO_reference": false,
+  "cartesian_AO_calculation": false,
+  "seconds": 58.126110874989536
+}

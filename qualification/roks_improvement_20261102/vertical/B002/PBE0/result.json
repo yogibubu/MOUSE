@@ -1,0 +1,40 @@
+{
+  "id": "B002",
+  "cohort": "closing_blind",
+  "name": "Ethylene",
+  "role": "pilot",
+  "family": "pi_pi",
+  "functional": "PBE0",
+  "basis": "aug-cc-pVDZ",
+  "excitation_ev": 7.08740644592997,
+  "energy_hartree": -78.23001785772004,
+  "ground_energy_hartree": -78.49047524059134,
+  "spin_squared": 0.0,
+  "orbital_residual": 1.569106563431566e-11,
+  "iterations": 3,
+  "reference_overlap": 0.7862800408703751,
+  "hole_overlap": 0.9978263256182393,
+  "particle_overlap": 0.7899941023224608,
+  "target_sector_projection": [
+    0.9680454231244804,
+    0.9999999999999994
+  ],
+  "solver": {
+    "status": "converged",
+    "solver": "trust",
+    "trust_radius": 0.3,
+    "Fock_builds": 8,
+    "response_builds": 8,
+    "Jacobian_actions": 56
+  },
+  "new_ground_SCF_calls": 0,
+  "archived_ground_reused": false,
+  "target_excitation_labels_read": false,
+  "source_sha256": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/references/Ethylene/reference.npz": "368700fdfb24c24925a0f9eccedec5b4fb31530d57244ea9f7edcb9c05f16b80",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/predictions/Ethylene/native_ground.npz": "c1a35050f42167ba1eeaffdc877375aab9e03f3a92d52380f2572536020172a2",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/predictions/Ethylene/native_transition_B002.npz": "8e20c92be28a49a5ceb8fe50587cb7618674f4c0b1c2d96780f1e28313be4888",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/predictions/Ethylene/full_response/anchor/embedding.npz": "856a82af015e52a94b2be38c2471d85f8c475b9192915d6f0033dadd2f4278e6"
+  },
+  "seconds": 39.11851216701325
+}

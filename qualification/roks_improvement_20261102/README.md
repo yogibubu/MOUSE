@@ -35,3 +35,17 @@ was introduced after observing a diffuse PBE0 ethylene root (particle overlap
 Intermediate attempts and partial pilot predictions are retained separately.
 A partial functional comparison is not evidence for a universally improved ROKS
 functional and does not change the semiempirical accuracy ledger.
+
+AO reference contract: some archived carbonyl references use Cartesian Gaussian
+AOs. Their checkpoint molecule/overlap and geometry are now checked explicitly;
+occupied orbitals and frozen target vectors are projected into the common
+spherical aug-cc-pVDZ calculation basis before SCF. Previously completed ground
+references in that basis are reused. Acetaldehyde/WB97X qualifies after this
+projection (4.180430613 eV, orbital residual 6.98e-12).
+
+The `vertical/` archive is a timestamped partial campaign snapshot. Only a
+`result.json` denotes a stationary, state-qualified prediction; alternative and
+unfinished accepted checkpoints are retained for provenance, never scored.
+`functional_comparison.json` leaves aggregate MAEs and the globally selected
+functional unset until all required pilot cases are present. Failed early driver
+attempts concern the AO/projection contract and are preserved in remote logs.

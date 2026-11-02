@@ -61,5 +61,12 @@
   ],
   "missing_transition_fallback": "Leading occupied/virtual transition of the already frozen semiempirical ROKS seed, from prepared arrays; no excitation energy read",
   "global_CSF_overlap_floor": 0.1,
-  "final_active_orbital_overlap_floor": 0.7
+  "final_active_orbital_overlap_floor": 0.7,
+  "recovery_amendment_20261102": {
+    "energy_labels_used": false,
+    "rule": "Preserve incomplete/alternative roots; prepare closed orbitals; deterministic qualified orbital continuation in WB97X/CAM-B3LYP/PBE0 order; final energy and full response use only requested functional",
+    "source_AO_contract": "Validate backend.chk metric and geometry; project Cartesian reference orbitals into spherical aug-cc-pVDZ AO basis when needed",
+    "qualification": "Unchanged residual <1e-8 and individual frozen hole/particle overlaps >=0.7",
+    "campaign_scope": "Historically exposed labels; these are recovery and functional-selection tests, not blind validation"
+  }
 }

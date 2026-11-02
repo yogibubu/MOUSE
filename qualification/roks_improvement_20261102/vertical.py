@@ -3,7 +3,7 @@ import socket,runpy,argparse,json,time,hashlib,fcntl
 from pathlib import Path
 import numpy as np
 from scipy.linalg import eigh,null_space
-from pyscf import gto,dft
+from pyscf import gto,dft,scf
 from pyscf.data.elements import ELEMENTS
 from threadpoolctl import threadpool_limits
 assert socket.getfqdn().lower()=='mac-2.homenet.telecomitalia.it'
@@ -22,7 +22,11 @@ def write(path,value):path.write_text(json.dumps(value,indent=2)+'\n')
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 with threadpool_limits(2):
  start=time.monotonic();paths=[source/'data'/cohort/'references'/name/'reference.npz',pred/'native_ground.npz',pred/f'native_transition_{a.identity}.npz',pred/'full_response/anchor/embedding.npz']
- with np.load(paths[0]) as z:znum=z['atomic_numbers'];xyz=z['coordinates_bohr'];ground_c=z['coefficients'].copy();ground_o=z['occupations'].copy()
+ with np.load(paths[0]) as z:znum=z['atomic_numbers'];xyz=z['coordinates_bohr'];ground_c=z['coefficients'].copy();ground_o=z['occupations'].copy();archived_overlap=z['overlap'].copy()
+ archived_mol=scf.chkfile.load_mol(str(paths[0].with_name('backend.chk')))
+ paths.append(paths[0].with_name('backend.chk'))
+ assert np.max(abs(archived_mol.intor('int1e_ovlp')-archived_overlap))<1e-8
+ assert np.max(abs(archived_mol.atom_coords()-xyz))<1e-8
  mol=gto.M(atom=[(ELEMENTS[int(z)],tuple(r)) for z,r in zip(znum,xyz)],unit='Bohr',basis=protocol['basis'],verbose=0)
  with np.load(paths[1]) as z:
   native_s=z['result_overlap'];native_c=eigh(z['result_fock'][0],native_s)[1];no=int(z['state_electron_count'])//2
@@ -36,6 +40,9 @@ with threadpool_limits(2):
   paths[2]=frozen/'arrays.npz'
  with np.load(paths[3]) as z:lift=z['embedding']
  u,s,vh=np.linalg.svd(target,full_matrices=False);hole=lift@native_c[:,:no]@u[:,0];particle=lift@native_c[:,no:]@vh[0]
+ if archived_mol.cart!=mol.cart or ground_c.shape[0]!=mol.nao_nr():
+  hole=scf.addons.project_mo_nr2nr(archived_mol,hole[:,None],mol)[:,0];particle=scf.addons.project_mo_nr2nr(archived_mol,particle[:,None],mol)[:,0]
+  occupied=ground_o>0;ground_c=scf.addons.project_mo_nr2nr(archived_mol,ground_c[:,occupied],mol);ground_o=ground_o[occupied]
  mf=dft.RKS(mol);mf.xc=a.functional;mf.grids.level=protocol['grids_level'];mf.small_rho_cutoff=0;mf.conv_tol=1e-11;mf.conv_tol_grad=1e-8;mf.max_cycle=150
  ground_path=folder/'ground.npz';ground_calls=0;reference_reused=False
  if ground_path.exists():
@@ -43,11 +50,11 @@ with threadpool_limits(2):
  else:
   if a.functional=='CAM-B3LYP':
    archived=source/cohort/name/'CAM_full_reference/reference.npz'
-   if archived.exists():
+   if archived.exists() and archived_mol.cart==mol.cart:
     with np.load(archived) as z:ground_c=z['coefficients'].copy();ground_o=z['occupations'].copy()
   dm=(ground_c*ground_o)@ground_c.T;f=mf.get_hcore()+mf.get_veff(dm=dm);sao=mf.get_ovlp();r=f@dm@sao-sao@dm@f
   # Verify rather than rerun an already completed, identical reference.
-  if a.functional in ('PBE0','CAM-B3LYP') and np.max(abs(r))<2e-7:
+  if a.functional in ('PBE0','CAM-B3LYP') and ground_c.shape==(mol.nao_nr(),mol.nao_nr()) and np.max(abs(r))<2e-7:
    c=ground_c;mo_o=ground_o;energy0=float(mf.energy_tot(dm=dm));reference_reused=True
   else:
    mf.chkfile=str(folder/'ground.chk');mf.kernel(dm0=dm);ground_calls=1
@@ -112,5 +119,5 @@ with threadpool_limits(2):
      orbital_residual=result.orbital_residual,iterations=result.iterations,reference_overlap=result.reference_overlap,
      hole_overlap=hscore,particle_overlap=pscore,target_sector_projection=weights,solver=result.solver_certificate,
      new_ground_SCF_calls=ground_calls,archived_ground_reused=reference_reused,target_excitation_labels_read=False,
-     source_sha256={str(x):digest(x) for x in paths},seconds=time.monotonic()-start)
+     source_sha256={str(x):digest(x) for x in paths},cartesian_AO_reference=bool(archived_mol.cart),cartesian_AO_calculation=bool(mol.cart),seconds=time.monotonic()-start)
  write(folder/'result.json',row);print(json.dumps(row),flush=True)
