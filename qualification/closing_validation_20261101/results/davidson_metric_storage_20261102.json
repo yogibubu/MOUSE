@@ -1,0 +1,8 @@
+{
+  "compute_host": "mac-2.homenet.telecomitalia.it",
+  "tests": "test_full_ci_ground.py",
+  "passed": 5,
+  "seconds": 0.50,
+  "change": "Exact density-based metric storage; no small-entry truncation",
+  "running_N17_job": "Loaded earlier code; left running unchanged; no speedup claimed for that job"
+}

@@ -10,8 +10,14 @@ except ImportError:
     def threadpool_limits(unused):return nullcontext()
 
 
+def metric_operator(metric):
+    """Choose exact storage without treating dense roundoff entries as zeros."""
+    density=np.count_nonzero(metric)/metric.size
+    return (csc_matrix(metric),'sparse') if density<0.1 else (metric,'dense')
+
+
 def lowest(h,metric,roots,shift,initial=None,*,tolerance=1e-10,maxiter=300,block_workers=1):
-    n=len(h);k=int(roots);s=csc_matrix(metric);diagonal=np.diag(h)-shift*np.diag(metric);sdiag=np.diag(metric)
+    n=len(h);k=int(roots);s,metric_storage=metric_operator(metric);diagonal=np.diag(h)-shift*np.diag(metric);sdiag=np.diag(metric)
     if block_workers<1:raise ValueError('positive row-block worker count required')
     def action(x):
         if block_workers==1 or n<256:return h@x-shift*(s@x)
@@ -40,7 +46,7 @@ def lowest(h,metric,roots,shift,initial=None,*,tolerance=1e-10,maxiter=300,block
         vectors=v@u[:,:k];sv=s@vectors;residual=av@u[:,:k]-sv*energies[:k]
         norms=np.linalg.norm(residual,axis=0)
         if np.max(norms)<tolerance:
-            return energies[:k]+shift,vectors,dict(iterations=iteration+1,restarts=restarts,maximum_residual_hartree=float(np.max(norms)),largest_search_space=limit)
+            return energies[:k]+shift,vectors,dict(metric_storage=metric_storage,iterations=iteration+1,restarts=restarts,maximum_residual_hartree=float(np.max(norms)),largest_search_space=limit)
         active=np.flatnonzero(norms>tolerance)
         denominator=diagonal[:,None]-sdiag[:,None]*energies[None,active]
         denominator=np.where(abs(denominator)<1e-5,np.where(denominator<0,-1e-5,1e-5),denominator)

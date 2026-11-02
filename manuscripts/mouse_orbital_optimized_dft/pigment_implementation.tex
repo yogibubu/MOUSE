@@ -205,3 +205,10 @@ and matrix elements remain in the operator. Row-block matrix products can
 share the immutable Hamiltonian across workers. Every returned root must
 pass the full generalized residual and metric-normalization tests. This
 algorithm changes the numerical search, rather than the physical model.
+
+The Davidson metric action chooses sparse or dense storage from the exact
+nonzero density. Dense metrics use matrix multiplication directly;
+small nonzero entries are retained without thresholding. This avoids a
+serial sparse-multiplication bottleneck when ground projection produces
+a dense metric. The choice changes storage and execution only, leaving
+the generalized pencil and residual tolerance unchanged.

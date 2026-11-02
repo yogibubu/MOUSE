@@ -26,3 +26,14 @@ def test_davidson_handles_rank_deficient_low_rank_hamiltonian_update():
  e,c,certificate=solve_full(updated,s,12,energy_shift=0.,algorithm='davidson',initial=z[:,:30],block_workers=2)
  np.testing.assert_allclose(e,eigh(updated,s,eigvals_only=True)[:12],atol=1e-10)
  assert certificate['maximum_residual_hartree']<1e-8
+
+
+def test_metric_storage_preserves_dense_small_entries():
+ from matrix_gfn2._nosi_davidson import metric_operator
+ s=np.eye(20)+np.full((20,20),1e-16)
+ operator,storage=metric_operator(s)
+ assert storage=='dense'
+ assert operator is s
+ operator,storage=metric_operator(np.eye(20))
+ assert storage=='sparse'
+ assert np.array_equal(operator.toarray(),np.eye(20))
