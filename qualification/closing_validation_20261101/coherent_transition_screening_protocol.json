@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-02",
+  "purpose": "Correct over-exclusion caused by Cartesian products of optimized hole and particle spans",
+  "definition": "Exclude the span of actual explicit canonical-single and optimized-CSF one-body transition amplitudes using the positive gap-metric constrained resolvent",
+  "candidate_selected_before_spectral_results": true,
+  "weights": [0.5,0.5],
+  "lambda_exchange": 0.9,
+  "eta": 0.6,
+  "energy_offset_ev": 0,
+  "reference_geometry_changed": false,
+  "native_functional_changed": false,
+  "ROKS_checkpoints_changed": false,
+  "Chlorophyllide_a_coherent_frontiers": [14,15,16],
+  "Beta_carotene_coherent_frontiers": [11,12,13],
+  "fixed_screening_frontier": 16,
+  "energy_tolerance_ev": 0.02,
+  "successive_increments_required": 2,
+  "roots_monitored": {"Chlorophyllide_a":[1,2,3,4],"Beta_carotene":[1,2,3]},
+  "scope": "General projector correction; no pigment-specific parameters or excitation-energy fitting. Prior product-sector results are preserved as a separate model generation."
+}

@@ -91,3 +91,13 @@ class Hamiltonian:
             for y,b in ket:
                 ov,value=self.element(a,b);s+=x*y*ov;h+=x*y*value
         return s,h
+
+def transition_density(bra,ket):
+    """Exact spin-summed one-body transition density of coherent real CSFs."""
+    n=len(bra[0][1][0]);result=np.zeros((n,n))
+    for x,a in bra:
+        for y,b in ket:
+            aa,bb=[schur(u,v) for u,v in zip(a,b)]
+            pa,da,ra,qa,*_=aa;pb,db,rb,qb,*_=bb
+            result+=x*y*pa*pb*(db*(da*ra+qa)+da*(db*rb+qb))
+    return result
