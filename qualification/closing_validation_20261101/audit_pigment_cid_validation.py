@@ -20,7 +20,11 @@ def eigen_check(n,w):
  for ordinal in r['retained_ROKS_ordinals']:
   with np.load(HERE/f'pigment_roks/{NAME}/state_{ordinal}/checkpoint.npz') as saved:coefficients.append(saved['coefficients'].copy())
  expected=hashlib.sha256((HERE/f'pigment_models/{NAME}/manifest.json').read_bytes()+(screening_path(NAME,w)/'certificate.json').read_bytes()+np.asarray(coefficients).tobytes()+json.dumps(r['auxiliary_records'],sort_keys=True).encode()).hexdigest()
- assert json.loads((f/'scalar_elements.json').read_text())['identity']==expected,'CI checkpoint identity changed'
+ journal=f/'scalar_elements.json'
+ if journal.exists():assert json.loads(journal.read_text())['identity']==expected,'CI checkpoint identity changed'
+ else:
+  assert n==protocol['baseline_frontiers'][0] and w==baseline_w,'Missing CI identity journal outside legacy baseline'
+  assert hashlib.sha256((f/'matrices.npz').read_bytes()).hexdigest()==protocol.get('certified_baseline_matrix_sha256'),'Legacy baseline matrix requires an independently archived checksum'
  assert r['weights']==protocol['weights'] and r['lambda_exchange']==protocol['lambda_exchange'] and r['bath_efficiency_eta']==protocol['eta'] and r['energy_offset_ev']==protocol['energy_offset_ev']
  with np.load(f/'matrices.npz') as a:h=a['h'];s=a['s'];eg=float(a['ground_energy'])
  with np.load(f/'eigenstates.npz') as a:e=a['energies'];v=a['ci']
@@ -33,7 +37,7 @@ def eigen_check(n,w):
  independent=None
  if n==protocol['baseline_frontiers'][0] and w==baseline_w:
   sp=s[1:,1:]-np.outer(s[1:,0],s[0,1:])/s[0,0];hp=h[1:,1:]-np.outer(h[1:,0],p)-np.outer(p,h[0,1:])+h[0,0]*np.outer(p,p);independent=float(np.max(abs(eigh(hp,sp,eigvals_only=True)[:len(e)]-e)));assert independent<1e-9
- return dict(N=n,W=w,basis_size=r['basis_size'],roots=len(e),projected_residual_hartree=er,metric_orthonormality_error=ortho,ground_overlap=ground,energy_reconstruction_error_ev=energy,oscillator_reconstruction_error=ferr,independent_dense_energy_error_hartree=independent,metric_certificate=r['metric_positive_definiteness_certificate'],target_coverage=r['target_coverage'])
+ return dict(N=n,W=w,basis_size=r['basis_size'],roots=len(e),projected_residual_hartree=er,metric_orthonormality_error=ortho,ground_overlap=ground,energy_reconstruction_error_ev=energy,oscillator_reconstruction_error=ferr,independent_dense_energy_error_hartree=independent,metric_certificate=metric_certificate(s,1+2*len(r['retained_ROKS_ordinals'])),target_coverage=r['target_coverage'])
 def tracking(n1,w1,n2,w2):
  r1=read(n1,w1);r2=read(n2,w2);base=1+2*len(r1['retained_ROKS_ordinals']);lookup={json.dumps(x,sort_keys=True):j+base for j,x in enumerate(r2['auxiliary_records'])};mapping=list(range(base))+[lookup[json.dumps(x,sort_keys=True)] for x in r1['auxiliary_records']]
  with np.load(folder(n1,w1)/'matrices.npz') as z:h1=z['h'];s1=z['s'];eg1=float(z['ground_energy'])

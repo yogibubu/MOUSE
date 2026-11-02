@@ -1,0 +1,6 @@
+{
+  "molecule": "Beta_carotene",
+  "certified_baseline_matrix_sha256": "d00074f3bb4b5351f848cf88057747a8bf3888454e9510223187725481de38c7",
+  "checksum_source": "results/pigments/MANIFEST.json; immutable prior qualification",
+  "scope": "Replay general audit against already completed one-target pigment; no new electronic calculation"
+}

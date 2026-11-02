@@ -17,7 +17,7 @@ assessment=json.loads((HERE/f'{prefix}_assessment.json').read_text());ns=assessm
 for name in [args.protocol,f'{prefix}_convergence.json',f'{prefix}_assessment.json','pigment_spectral_references.json'] :copy(HERE/name,name)
 for script in ['complete_pigment_cid_validation.py','audit_pigment_cid_validation.py','collect_pigment_cid_validation.py','prepare_pigment_screening.py','run_pigment_cid.py','run_pigment_roks.py','pigment_block_matmul.py','pigment_reference_embedding.py','pigment_compact_reference.py']:copy(HERE/script,'qualified_sources/'+script)
 for p in (BASE/'source/packages/matrix-gfn2/src/matrix_gfn2').glob('*.py'):
- if p.name.startswith('_nosi') or p.name in ['_quadrature_xc.py','_roks_matrix_free.py']:copy(p,'qualified_sources/matrix_gfn2/'+p.name)
+ copy(p,'qualified_sources/matrix_gfn2/'+p.name)
 model=HERE/f'pigment_models/{NAME}';copy(model/'manifest.json','frozen_model_manifest.json');copy(model/'quadrature/manifest.json','frozen_quadrature_manifest.json')
 for i in assessment['convergence']['protocol'].get('ROKS_ordinals',[x['ordinal'] for x in json.loads((HERE/f'pigment_roks/{NAME}/result.json').read_text())['states']]):
  for name in ['certificate.json','checkpoint.npz']:copy(HERE/f'pigment_roks/{NAME}/state_{i}/{name}',f'roks/state_{i}/{name}')
@@ -33,6 +33,10 @@ for w in sorted(set([baseline_w,fixed_w]+ns)):
  f=HERE/(f'pigment_screening/{NAME}' if w==5 else f'pigment_screening_expansion/{NAME}/frontier_{w}')
  for name in ['certificate.json','gap_diagnostic.json']:copy(f/name,f'screening/W{w}/'+name)
 for p in HERE.glob(prefix+'*.log'):copy(p,'logs/'+p.stem+'.txt')
+for control in protocol.get('saved_generality_controls',[]):
+ for p in HERE.glob(control+'*.json'):copy(p,'generality_control/'+p.name)
+ control_log=HERE/(control+'.log')
+ if control_log.exists():copy(control_log,'generality_control/'+control+'.txt')
 (out/'large_artifacts.json').write_text(json.dumps(inventory,indent=2)+'\n')
 files={str(p.relative_to(out)):digest(p) for p in sorted(out.rglob('*')) if p.is_file() and p.name!='artifact_manifest.json'}
 (out/'artifact_manifest.json').write_text(json.dumps(dict(host=socket.getfqdn(),file_count=len(files),sha256=files),indent=2)+'\n');print('ARCHIVED',len(files),'files',flush=True)

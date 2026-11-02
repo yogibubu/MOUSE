@@ -43,5 +43,8 @@
     160,
     320
   ],
-  "wait_for_existing_baseline": true
+  "wait_for_existing_baseline": true,
+  "saved_generality_controls": [
+    "beta_cid_general_driver_control"
+  ]
 }

@@ -31,3 +31,10 @@ all computed root energies/intensities, configuration records, scalar journals,
 source snapshots and the four ROKS checkpoints are archived for review. This
 workflow establishes numerical properties of the prepared vertical model; it
 makes no new nuclear-gradient/Hessian or blind-accuracy claim.
+
+The same audit is also replayed against the completed beta-carotene spectra,
+which have one optimized ROKS target rather than four. Legacy baseline matrices
+without scalar identity journals are accepted only when their exact checksum
+matches an independently archived certificate supplied in the control protocol.
+All other CI windows must pass their orbital/model/screening journal identity.
+The positive-metric certificate is recomputed from the actual saved metric.
