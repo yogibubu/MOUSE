@@ -33,6 +33,7 @@ restored=CappedQMComponent(b,SimpleNamespace(_calculator=c),folder)
 repeat=restored.evaluate(xyz)
 assert abs(result.energy_hartree-repeat.energy_hartree)<1e-9
 assert repeat.execution['response_model']=='nosi_50_50_screened_even_cid'
+assert repeat.execution.get('static_self_energy_subtraction',False)==m.manifest.get('static_self_energy_subtraction',False)
 assert repeat.execution['spin_squared']==0 and step.execution['state_assignment_overlap']>.99
-report=dict(host=socket.getfqdn(),wall_seconds=time.monotonic()-start,cold_start_energy=result.energy_hartree,restart_error=abs(result.energy_hartree-repeat.energy_hartree),trial_overlap=step.execution['state_assignment_overlap'],trial_does_not_advance_accepted=True,spin_squared=0,new_SCC_calls=0,DFT_imports=0,selected_electronic_state=1,model_sha256=m.fingerprint)
+report=dict(static_self_energy_subtraction=repeat.execution.get('static_self_energy_subtraction',False),host=socket.getfqdn(),wall_seconds=time.monotonic()-start,cold_start_energy=result.energy_hartree,restart_error=abs(result.energy_hartree-repeat.energy_hartree),trial_overlap=step.execution['state_assignment_overlap'],trial_does_not_advance_accepted=True,spin_squared=0,new_SCC_calls=0,DFT_imports=0,selected_electronic_state=1,model_sha256=m.fingerprint)
 (folder/'validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2),flush=True)

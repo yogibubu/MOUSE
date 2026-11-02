@@ -28,7 +28,7 @@ def evaluate_nosi_component(component,coordinates,compute_hessian):
     from .scan import PointEvaluationResult
     b=component.backend;model=component._nosi_model;previous=None if component.reference is None else component.reference[0]
     properties=('energy','gradient','hessian') if compute_hessian else ('energy','gradient')
-    result=model.evaluate(component.calculator._calculator,coordinates,properties=properties,reference_result=previous)
+    result=model.evaluate(component.calculator._calculator,coordinates,properties=properties,reference_result=previous,hessian_workers=max(1,int(b.processors)))
     candidates=model.apoc_states(result);selected=candidates[b.electronic_state-1];state=result.states[b.electronic_state-1];score=state.overlap
     if previous is not None:
         cross=component._cross_overlap(_orbital_state(model,previous),_orbital_state(model,result))
@@ -36,7 +36,7 @@ def evaluate_nosi_component(component,coordinates,compute_hessian):
         if selected.state_id!=b.electronic_state:raise ValueError('NOSI coherent state identity changed')
         score=match.overlap
     if score<b.state_tracking_minimum_overlap or state.margin<b.state_tracking_ambiguity_margin:raise ValueError('NOSI state continuity is not certified')
-    return PointEvaluationResult(0,0.,energy_hartree=state.energy_hartree,gradient_hartree_per_bohr=state.gradient_hartree_per_bohr.ravel(),hessian_hartree_per_bohr2=state.hessian_hartree_per_bohr2,backend_coordinates_angstrom=np.asarray(coordinates),scf_state=(result,selected),source='native prepared spin-pure OO-CID 50/50',execution=dict(response_model='nosi_50_50_screened_even_cid' if model.extended else 'nosi_50_50_selected_cid',prepared_model_schema=model.manifest['schema'],experimental=True,selected_electronic_state=b.electronic_state,gradient_electronic_state=b.electronic_state,weights=[.5,.5],lambda_exchange=.9,energy_offset_ev=0.,ground_scc_evaluations=0,tda_evaluations=0,orbital_residual=result.maximum_stationary_residual,state_assignment_overlap=score,state_assignment_margin=state.margin,spin_squared=selected.spin_squared,model_fingerprint=model.fingerprint))
+    return PointEvaluationResult(0,0.,energy_hartree=state.energy_hartree,gradient_hartree_per_bohr=state.gradient_hartree_per_bohr.ravel(),hessian_hartree_per_bohr2=state.hessian_hartree_per_bohr2,backend_coordinates_angstrom=np.asarray(coordinates),scf_state=(result,selected),source='native prepared spin-pure OO-CID 50/50',execution=dict(response_model='nosi_50_50_screened_even_cid' if model.extended else 'nosi_50_50_selected_cid',prepared_model_schema=model.manifest['schema'],static_self_energy_subtraction=bool(model.manifest.get('static_self_energy_subtraction',False)),experimental=True,selected_electronic_state=b.electronic_state,gradient_electronic_state=b.electronic_state,weights=[.5,.5],lambda_exchange=.9,energy_offset_ev=0.,ground_scc_evaluations=0,tda_evaluations=0,orbital_residual=result.maximum_stationary_residual,state_assignment_overlap=score,state_assignment_margin=state.margin,spin_squared=selected.spin_squared,model_fingerprint=model.fingerprint))
 
 
 def persist_nosi(component,result):

@@ -132,10 +132,11 @@ class PreparedNOSIModel:
             path=(self.root/name).resolve()
             if not path.is_relative_to(self.root) or _sha(path)!=digest:raise ValueError('NOSI input checksum mismatch')
 
-    def evaluate(self,calculator,coordinates_angstrom,*,properties=('energy','gradient'),reference_result=None):
+    def evaluate(self,calculator,coordinates_angstrom,*,properties=('energy','gradient'),reference_result=None,hessian_workers=1):
         self.validate_files();properties=tuple(properties)
         if not properties or set(properties)-{'energy','gradient','hessian'}:raise ValueError('invalid NOSI properties')
         derivatives=bool(set(properties)&{'gradient','hessian'});hessian='hessian' in properties
+        if type(hessian_workers) is not int or hessian_workers<1:raise ValueError('positive integer analytic Hessian worker count required')
         xyz=np.asarray(coordinates_angstrom,dtype=float)
         if xyz.shape!=self.anchor.coordinates_bohr.shape or not np.all(np.isfinite(xyz)):raise ValueError('invalid NOSI coordinates')
         context=prepare_gfn2_deltascf(calculator,xyz,orbital_reference=self.anchor,spin_reference=self.response);s=context.state.overlap;u=context.charge_correction.transport.u
@@ -174,10 +175,15 @@ class PreparedNOSIModel:
             for i,root in enumerate(roots):gradients[i]=projected_eigen_jet(h,sjet,int(root)).a.copy().reshape(xyz.shape)
         if hessian:
             matrices=[np.empty((xyz.size,xyz.size)) for _ in roots]
-            for column,direction in enumerate(np.eye(xyz.size)):
-                hh,ss,ee=response.matrices(direction)
-                if subtract:hh=subtracted_matrix_jet(hh,ss,ee,np.arange(2*len(states)))
-                for i,root in enumerate(roots):matrices[i][:,column]=projected_eigen_jet(hh,ss,int(root)).ab
+            if hessian_workers>1:
+                from ._nosi_parallel import columns
+                for column,values in columns(self,calculator,xyz,ground,states,multipliers,roots,hessian_workers):
+                    for i,matrix in enumerate(matrices):matrix[:,column]=values[:,i]
+            else:
+                for column,direction in enumerate(np.eye(xyz.size)):
+                    hh,ss,ee=response.matrices(direction)
+                    if subtract:hh=subtracted_matrix_jet(hh,ss,ee,np.arange(2*len(states)))
+                    for i,root in enumerate(roots):matrices[i][:,column]=projected_eigen_jet(hh,ss,int(root)).ab
             for i,matrix in enumerate(matrices):
                 if np.max(abs(matrix-matrix.T))>2e-6:raise ValueError('NOSI Hessian symmetry validation failed')
                 hessians[i]=.5*(matrix+matrix.T)
