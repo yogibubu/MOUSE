@@ -20,3 +20,9 @@ def test_preconditioned_block_roots_match_dense_generalized_reference():
  e,c,certificate=solve_full(h,s,4,energy_shift=0.,algorithm='lobpcg')
  np.testing.assert_allclose(e,eigh(h,s,eigvals_only=True)[:4],atol=1e-10)
  assert certificate['maximum_residual_hartree']<1e-8
+
+def test_davidson_handles_rank_deficient_low_rank_hamiltonian_update():
+ rng=np.random.default_rng(853);n=260;a=rng.normal(size=(n,n))*.01;s=a@a.T+np.eye(n);h=np.diag(np.linspace(.05,2,n));before,z=eigh(h,s);v=rng.normal(size=(n,2))*.03;updated=h+v@v.T
+ e,c,certificate=solve_full(updated,s,12,energy_shift=0.,algorithm='davidson',initial=z[:,:30],block_workers=2)
+ np.testing.assert_allclose(e,eigh(updated,s,eigvals_only=True)[:12],atol=1e-10)
+ assert certificate['maximum_residual_hartree']<1e-8

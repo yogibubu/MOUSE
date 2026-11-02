@@ -59,14 +59,18 @@ def projector_population(metric,indices,ci):
     solved=factor.solve(cross);solved+=np.outer(v,(u@solved)/denominator)
     return np.sum(cross*solved,axis=0)
 
-def solve_full(h,metric,roots,*,energy_shift=None,algorithm='arpack',initial=None):
+def solve_full(h,metric,roots,*,energy_shift=None,algorithm='arpack',initial=None,block_workers=1):
     """Solve the same full CI pencil, including its interacting ground state."""
     n=len(h);k=min(int(roots),n)
     if k<1:raise ValueError('positive number of full CI roots required')
-    if algorithm not in ('arpack','lobpcg'):raise ValueError('unknown full CI eigensolver')
+    if algorithm not in ('arpack','lobpcg','davidson'):raise ValueError('unknown full CI eigensolver')
     shift=float(h[0,0]/metric[0,0]) if energy_shift is None else float(energy_shift)
     if k>=n-1 or (algorithm=='lobpcg' and n<5*k):
         energies,z=eigh(h,metric,subset_by_index=[0,k-1]);method='Dense full generalized eigensolve'
+    elif algorithm=='davidson':
+        from ._nosi_davidson import lowest
+        energies,z,iteration_certificate=lowest(h,metric,k,shift,initial,block_workers=block_workers)
+        method='Rank-revealing generalized Davidson with full CI residual'
     elif algorithm=='lobpcg':
         sparse=csc_matrix(metric)
         action=LinearOperator((n,n),matvec=lambda x:h@x-shift*(sparse@x),matmat=lambda x:h@x-shift*(sparse@x),dtype=float)
@@ -89,4 +93,6 @@ def solve_full(h,metric,roots,*,energy_shift=None,algorithm='arpack',initial=Non
         certificate['block_solver_fallback_residual_hartree']=error
         return energies,z,certificate
     if max(error,orthogonal)>1e-8:raise ValueError(('full CI residual qualification failed',error,orthogonal))
-    return energies,z,dict(method=method,roots=k,maximum_residual_hartree=error,maximum_metric_orthonormality_error=orthogonal,configurations_discarded=0)
+    certificate=dict(method=method,roots=k,maximum_residual_hartree=error,maximum_metric_orthonormality_error=orthogonal,configurations_discarded=0)
+    if algorithm=='davidson' and k<n-1:certificate.update(iteration_certificate)
+    return energies,z,certificate
