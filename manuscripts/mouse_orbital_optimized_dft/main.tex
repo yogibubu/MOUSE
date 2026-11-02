@@ -28,18 +28,20 @@ excitation-energy offset. Spin-pure optimized singlets couple to selected
 double excitations through a prepared static screened interaction with one
 calibrated bath efficiency, $\eta=0.60$. A spectral-block construction treats
 native orbitals whose full-DFT weight is fragmented over several poles.
-On 26 exposed development states in 24 molecules, the resulting candidate
-gives 0.198 eV mean absolute error and 0.446 eV maximum error. Twelve
-$\pi\pi^*$ states give 0.216 eV MAE, compared with 1.514 eV for a matched
+Zero-frequency self-energy matching preserves the primary static response
+when explicit auxiliary configurations are added. On 26 exposed development
+states in 24 molecules, this candidate gives 0.183 eV mean absolute error
+and 0.478 eV maximum error. Twelve
+$\pi\pi^*$ states give 0.209 eV MAE, compared with 1.514 eV for a matched
 TDA control on the same corrected native GFN2 orbitals. For fourteen
-$n\pi^*$ states, the respective MAEs are 0.183 and 0.168 eV.
+$n\pi^*$ states, the respective MAEs are 0.160 and 0.168 eV.
 The spectral-block amendment was developed after pyrrole scoring;
 these results are not blind validation. Complete analytic response includes
 orbital stationarity, spin recoupling, the configuration metric, the moving
 ground projector and state-eigenvector response. The prepared MOUSE/LINK
 surface follows coherent singlets without a runtime TDA solve, new SCC call
 or DFT-backend import. Independent scalar-energy checks verify the analytic
-derivatives; ethylene's full Hessian takes 10.68 s in one two-thread run.
+derivatives; ethylene's full Hessian takes 9.82 s in one two-thread run.
 Earlier-model minimum and frequency comparisons are identified separately.
 A larger carotene vertical example is calculated and pigment structures are
 prepared; these remain excluded from accuracy claims.
@@ -253,6 +255,7 @@ in the Supporting Information and are not attributed to this final model.
 \input{closing_validation_discussion.tex}
 \input{ethylene_repair_discussion.tex}
 \input{spectral_block_discussion.tex}
+\input{static_subtraction_discussion.tex}
 
 The next scientific assessment should test the calibrated correction on
 independent molecules, additional CT and Rydberg states, corrected-model
@@ -265,15 +268,16 @@ MOUSE provides a semiempirical orbital-optimized route with explicit spin
 polarization, spin-pure singlet CSFs, and analytic nuclear gradients and
 Hessians. Ground-program Fock, energy and derivative primitives are reused
 through constrained electronic saddle optimization and implicit response.
-The current candidate combines a spectral-block orbital reference and
-selected screened double excitations with fixed F/Q weights of 50/50,
+The current candidate combines a spectral-block orbital reference,
+selected screened double excitations and zero-frequency self-energy
+matching with fixed F/Q weights of 50/50,
 exchange-response scale 0.9 and one calibrated bath efficiency,
 $\eta=0.60$. No excitation-energy offset is fitted. Across 26 exposed
-development states in 24 molecules it gives 0.198 eV MAE and 0.446 eV
-maximum error. The twelve $\pi\pi^*$ states give 0.216 eV MAE, compared
+development states in 24 molecules it gives 0.183 eV MAE and 0.478 eV
+maximum error. The twelve $\pi\pi^*$ states give 0.209 eV MAE, compared
 with 1.514 eV for TDA on the same corrected native GFN2 orbitals. For the
-fourteen $n\pi^*$ states, TDA retains the smaller mean error, 0.168 versus
-0.183 eV. These results establish an improvement on this finite
+fourteen $n\pi^*$ states, the corresponding values are 0.160 and
+0.168 eV. These results establish an improvement on this finite
 development ledger, rather than a universal correction of either family.
 
 The prepared surface retains coherent APOC state following and accepted-only
@@ -281,7 +285,7 @@ LINK restarts without a runtime TDA solve, new SCC call or DFT-backend
 import. Complete implicit response differentiates the anchored energy,
 the moving ground projector and the state-interaction eigensystem.
 Independent energy checks support the analytic derivatives; the current
-ethylene full Hessian takes 10.68 s in one two-thread run. Molecular minima
+ethylene full Hessian takes 9.82 s in one two-thread run. Molecular minima
 and physical frequency comparisons from earlier model generations remain
 separate from this corrected candidate's derivative qualifications.
 
@@ -289,11 +293,13 @@ Matrix-free orbital stationarity and exact frozen-quadrature XC correction
 extend the numerical implementation to larger native valence spaces. The
 carotene configuration expansion keeps a weak first singlet below the
 absorbing manifold without parameter adjustment. The matched 13+13
-frontier uses 14,535 CSFs and gives a weak first gap of 1.950 eV and
-its dominant third-root intensity at 2.478 eV. Two consecutive frontier
-increments are below 0.0054 eV; an independent fixed-Hamiltonian check
-is stable within 0.0021 eV. Collective target-space tracking follows the
-absorbing subspace through mixing. Pigment predictions remain excluded from the accuracy
+frontier uses 14,535 CSFs. The unsubtracted model passes both frontier
+tests; static matching retains a weak first gap at 2.244 eV and a dominant
+fourth-root absorption at 3.031 eV. The two lowest chlorophyllide gaps
+become 2.019 and 2.226 eV and pass the two-increment 0.02 eV checks.
+Higher roots and complete target coverage remain under assessment.
+Collective target-space tracking follows absorbing subspaces through
+mixing. Pigment predictions remain excluded from the accuracy
 ledger, and their nuclear derivatives are not yet qualified. Full pair
 storage and DFT-reference preparation remain significant costs. Independent
 frozen-label validation, corrected-model equilibrium structures, broader

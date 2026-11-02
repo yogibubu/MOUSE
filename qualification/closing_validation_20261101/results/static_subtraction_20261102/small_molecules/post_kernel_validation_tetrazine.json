@@ -1,0 +1,30 @@
+{
+  "cohort": "post_kernel_validation",
+  "molecule": "tetrazine",
+  "status": "solved",
+  "model_sha256": "cecede6fcccdda25315ccab424b044bfab790b9bfbb874769c83614e19b76553",
+  "states": [
+    {
+      "id": "V003",
+      "native_gap_ev": 2.549080690992237,
+      "candidate_gap_ev": 2.5490806909923074,
+      "overlap": 0.9999999999999996,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 170,
+    "complement_minimum_eigenvalue_hartree": 0.22395690701735876,
+    "maximum_inverse_relative_residual": 2.62662553570157e-11,
+    "inverse_iterations": [
+      16,
+      14
+    ],
+    "counterterm_asymmetry_hartree": 2.765684703946647e-27,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 4.458224624977447
+}

@@ -1,0 +1,7 @@
+{
+  "cohort": "extra_npi",
+  "molecule": "pyrazine",
+  "status": "rejected",
+  "reason": "ValueError(('complementary static inverse did not converge', 0, 0, 1.0))",
+  "wall_seconds": 4.929638458008412
+}

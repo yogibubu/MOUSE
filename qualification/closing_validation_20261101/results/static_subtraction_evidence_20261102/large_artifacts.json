@@ -1,0 +1,434 @@
+[
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent_challenge/Furofuran/arrays.npz",
+    "bytes": 9937414,
+    "sha256": "c12284f4ce40b0eeb5c34f1b60d7db60f484beeb3578b71e8068cbbab3bf5e1d",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent_challenge/Furofuran/response.npz",
+    "bytes": 6777729,
+    "sha256": "75079334389cee7c0300a5c03bd6dec45fa54bbdcbd22a8a43ee3476e5f2fe89",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent_challenge/Furofuran/template.npz",
+    "bytes": 52426,
+    "sha256": "2446cde30c82d77d2bcc6aef94016f99f370b07799104893c45060269cf54ee4",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/closing_blind/Butadiene/arrays.npz",
+    "bytes": 1349468,
+    "sha256": "fcc9ac2a34519a71bfb2bc96da804ad0b9df857783a43a45c1e182badb4d5c19",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/closing_blind/Butadiene/response.npz",
+    "bytes": 899296,
+    "sha256": "87a41511655f04b4c0772a38b758cd42d4fea8e4b480a6f4744aef280247572b",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/closing_blind/Butadiene/template.npz",
+    "bytes": 25754,
+    "sha256": "a7de87a0048e428e2f08da82f368e1f2f343051f9be0b52d8a0fc8d3d748c243",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/closing_blind/Ethylene/arrays.npz",
+    "bytes": 91761,
+    "sha256": "62d7391adcb78fc10a1b8ffaf393ae5cd183f6b7067388a42cba1f1fd5b05100",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/closing_blind/Ethylene/response.npz",
+    "bytes": 59370,
+    "sha256": "e67e2379be2c2cc177a9f037aeb250fe67adca57efd210c34591b16e9f6299a6",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/closing_blind/Ethylene/template.npz",
+    "bytes": 13344,
+    "sha256": "7886e79a2aab7193599b12f8e83200005047856097491c78474bf19606527a6a",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/closing_blind/Formaldehyde/arrays.npz",
+    "bytes": 42958,
+    "sha256": "b77357e1cd8695647beb16c48f8d3a0971ab9fcd5b55c8c344fe0d299f6061aa",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/closing_blind/Formaldehyde/response.npz",
+    "bytes": 32718,
+    "sha256": "468962e85562999da2b0159902d1c4afe18ab81e7db70f6fe1acd48406e7f906",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/closing_blind/Formaldehyde/template.npz",
+    "bytes": 12547,
+    "sha256": "de8442f3f2fa2e3dc0f0562a73a4330eaa0a81a7d27a920052e0908897ee7211",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_pi_eta060/Pyrrole/arrays.npz",
+    "bytes": 2219812,
+    "sha256": "25cb7c21e5f1c44b1d230cdef63973958d874e6fdb29fc82fa4eb7187e3605ac",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_pi_eta060/Pyrrole/response.npz",
+    "bytes": 1468546,
+    "sha256": "afa3ab2c0efa37363d0e2f277ce46506f4c71104aa4cc53eb8e82ec029e0bed4",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_pi_eta060/Pyrrole/template.npz",
+    "bytes": 30480,
+    "sha256": "3b5d43164fd629167d960a1e8922a9570b591fd1b89a86a55a91467483cf9721",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_pi_eta060/Cyclopentadiene/arrays.npz",
+    "bytes": 2821785,
+    "sha256": "901acf2fd51c39f67980e1c9190a860fa1b9fa43a12d9bd42c31f9e267a40f1d",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_pi_eta060/Cyclopentadiene/response.npz",
+    "bytes": 1625505,
+    "sha256": "ef86f1a028ae396802507ccfae25d1d1d2d6e7c02600cbef6064d4c3eb8d3c86",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_pi_eta060/Cyclopentadiene/template.npz",
+    "bytes": 31710,
+    "sha256": "987cd3e620fb362f3d28ba045cf21f2aafb458f8cc6926384a3fc801b242df95",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_pi_eta060/Cyclopropene/arrays.npz",
+    "bytes": 360539,
+    "sha256": "601f42770a67834a7919acb6178481296c9961561c8eb5e9317087f87523ce2c",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_pi_eta060/Cyclopropene/response.npz",
+    "bytes": 205058,
+    "sha256": "34bd3de985670a971a7a326ffb7da2301b6210c07db55bed6fd2cf85bd42c31f",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_pi_eta060/Cyclopropene/template.npz",
+    "bytes": 17675,
+    "sha256": "a26af04d1820fda4bc97a2dfe593c2d30a07350546060e83957e6946fa357638",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/post_kernel_validation/acrolein/arrays.npz",
+    "bytes": 926184,
+    "sha256": "1ffee5d732fa0bf74c9343b43335a2903db03844ba115abfcfa29f7fd46db17c",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/post_kernel_validation/acrolein/response.npz",
+    "bytes": 639454,
+    "sha256": "c7540d2edaee80c462f8c381a375316b884564f66240114f375863d3598cfcc0",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/post_kernel_validation/acrolein/template.npz",
+    "bytes": 25452,
+    "sha256": "f578f8a8829c2b84643f519ec84ab015b4fdf79ca003ddee5d5d884063b5032b",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/post_kernel_validation/tetrazine/arrays.npz",
+    "bytes": 2585676,
+    "sha256": "601a2088f3ea4431bcc5d29b5394ddf2746f65d2fe5d3318cd26b6bfa9698b51",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/post_kernel_validation/tetrazine/response.npz",
+    "bytes": 1676016,
+    "sha256": "ecde8ca387b501c0fb7ae2f650f93db405c3e57ddc8914f5d6226251a6f6b397",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/post_kernel_validation/tetrazine/template.npz",
+    "bytes": 29649,
+    "sha256": "1b9460634da8070577fba40715d45c6ee71c4d8e6317bcd23518c1c2cbbf004a",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent/Hexatriene/arrays.npz",
+    "bytes": 6244782,
+    "sha256": "da98766b285249a607fdbf8473e88edf7f0e5e2ff4e655c675df765fc05612dd",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent/Hexatriene/response.npz",
+    "bytes": 4245482,
+    "sha256": "ef320dd46e150b180d8d8c6f9330a1b7be6801f5ae51b926553bd4383b43d04e",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent/Hexatriene/template.npz",
+    "bytes": 42894,
+    "sha256": "3beabde34254e1a31e547a11e8709729d36259c1d5f005444cdd4548341648de",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent/Benzoxadiazole/arrays.npz",
+    "bytes": 15220700,
+    "sha256": "8435daffc5fb2b8437a1444fb12a4e1004660702144c08a0408e2c902f1ab7fa",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent/Benzoxadiazole/response.npz",
+    "bytes": 9714378,
+    "sha256": "f56dc73f7deef52ae8d61c8a7d3c35875dc5d6260334bb5e2eee88635b8552e2",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent/Benzoxadiazole/template.npz",
+    "bytes": 62823,
+    "sha256": "dce9266498c44dd1b23e182dfe5807b1c99818858206845bf5359205554019f6",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent/Criegee_Intermediate/arrays.npz",
+    "bytes": 205725,
+    "sha256": "19604bde690468c2711d66e6ddf9ec880a67b9df7f70bd1202791686f5e8ccf2",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent/Criegee_Intermediate/response.npz",
+    "bytes": 139587,
+    "sha256": "7edb76a8b6a2a6390e64bdfac2752988d9933e10cd8080298bd81e91c03366b2",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/independent/Criegee_Intermediate/template.npz",
+    "bytes": 16752,
+    "sha256": "d7b7d37c0f393891ea0ddcdb142fb91525823332301383f382b6384e20cf774f",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/last_two/uracil/arrays.npz",
+    "bytes": 10000751,
+    "sha256": "301fe52ca31d0371e5ff92f26bf768866d71d4a6966eb0ed31da60d4c6db4fdd",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/last_two/uracil/response.npz",
+    "bytes": 6621928,
+    "sha256": "548c6aab5ec4fb0b79df085d62905c48f8c315e29104612bb33efb1e6d29ec1a",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/last_two/uracil/template.npz",
+    "bytes": 62471,
+    "sha256": "217dc4a2173005a21638fb164baf7674c902023abb6c0864935306b8e95dd5ba",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/last_two/Furan/arrays.npz",
+    "bytes": 1880381,
+    "sha256": "7b317896dd7fdba3046724948cf9746b5be009a7f24da165e4a5eac2de6b6911",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/last_two/Furan/response.npz",
+    "bytes": 1290310,
+    "sha256": "7b17ef688ad5de6b1959b4bc6c692d0bf209c1d62633fb3af3066b677d9f0314",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/last_two/Furan/template.npz",
+    "bytes": 29188,
+    "sha256": "98c7287f7ca9aa3dbf0ad9b8d9351ea94083c5cda430fd2dcb8a97fd44349fa0",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_three/pyranone/arrays.npz",
+    "bytes": 6131221,
+    "sha256": "2668e80325651a62c7d6ea54159e65d9c8884a4a5c4afdadd53797579a7f6fe6",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_three/pyranone/response.npz",
+    "bytes": 3994793,
+    "sha256": "eba9df584add12899b11ad8c9995ef09f6dec4f469e71ccee4ce280455b369c2",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_three/pyranone/template.npz",
+    "bytes": 44567,
+    "sha256": "3e1cf6dee92ebc5438e4ea3adab3a43cda4231dc31b4246ca1a92804042d3e6b",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_three/cyclopentadienone/arrays.npz",
+    "bytes": 3584149,
+    "sha256": "581262dbea656aa18ca319e8419d1e41c24562ac1f7a70997b0486e4b770a55b",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_three/cyclopentadienone/response.npz",
+    "bytes": 2352524,
+    "sha256": "164a57d60ac2e1ea851a9d2ac71e826422a5946aa35bf85097f16f2d9550bf39",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_three/cyclopentadienone/template.npz",
+    "bytes": 36109,
+    "sha256": "bf3258b1a65c200f2a96c59b59decd6431048926feed11ad8691f93a4adcc672",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_three/pyrimidine/arrays.npz",
+    "bytes": 3522444,
+    "sha256": "63e20cea728e3bcade47b985830398f31c76e7cb9bb552a552fc345de285711d",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_three/pyrimidine/response.npz",
+    "bytes": 2245586,
+    "sha256": "3b6ce32eb2f395763164824b78d1609829838dfa54123807da8bdf9d3665a4ef",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/additional_three/pyrimidine/template.npz",
+    "bytes": 36799,
+    "sha256": "e67f256e788221ce641c4a17a726389207e2c70236982d6afd6515e948f6677b",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/prospective_cisd/acetone/arrays.npz",
+    "bytes": 1353117,
+    "sha256": "3eb651110bdde4ff1b7caba2f3a4b99a3f06dc5b30d2b4dca5b6d2873ee4441c",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/prospective_cisd/acetone/response.npz",
+    "bytes": 751181,
+    "sha256": "95d08d12d2c9b02aba72d47bbd6e4196c8593b5774323e1b6acb470b52567a99",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/prospective_cisd/acetone/template.npz",
+    "bytes": 24704,
+    "sha256": "cadfc2800d0f5887a047d140e6c09e045bbdb1fbd614ace1627bde3adfdbd699",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/prospective_cisd/glyoxal/arrays.npz",
+    "bytes": 589365,
+    "sha256": "f8eb557db0ed71a688e59cdd66b254f6e4d9a6573843fa93d1f92bc5b5587a21",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/prospective_cisd/glyoxal/response.npz",
+    "bytes": 405923,
+    "sha256": "d7b72dfaa937a69fcfde90b00a1a9e03afa9887defd037aafd40fc0c248b7707",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/prospective_cisd/glyoxal/template.npz",
+    "bytes": 19969,
+    "sha256": "4e4ce100b73859474fd20d43bad2f8e49e6d5797abcdc8e59160a1a5ac5d0590",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/extra_npi/pyrazine/arrays.npz",
+    "bytes": 3515946,
+    "sha256": "0a94f65a81a0a3a04230f438450dffde6741f5a2c96321a409cd4cf52534bec5",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/extra_npi/pyrazine/response.npz",
+    "bytes": 2271663,
+    "sha256": "a1fc517b8e3475b443b259e849bad08fa04d0b2fb0dd67d6b5a28ee96ca39149",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/extra_npi/pyrazine/template.npz",
+    "bytes": 33114,
+    "sha256": "0409ee20551f549c94651bb2531df92c75836d6c8e39e70e08e15809dcd59030",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/extra_npi/formamide/arrays.npz",
+    "bytes": 274018,
+    "sha256": "10e6ee43e587a7b490314378084ce3f86c367a57661addadbb31515e9b55b147",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/extra_npi/formamide/response.npz",
+    "bytes": 187944,
+    "sha256": "6fbc6bf95a23501237685bb6b755c551658b11052b5359b631ac37dd512ca45e",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/extra_npi/formamide/template.npz",
+    "bytes": 18335,
+    "sha256": "b882fddc189946f325a345bf5af52a0e70c8e095e9a2f75856ff85f95be1c31c",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/extra_npi/acetaldehyde/arrays.npz",
+    "bytes": 382890,
+    "sha256": "838a0d7cfc8a6be423c8b62f132d37972b4d053daf19668f6781efb11fd78c5b",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/extra_npi/acetaldehyde/response.npz",
+    "bytes": 223875,
+    "sha256": "cf9c21c3fa7d62e60d1c2b6e83d36db282dd5b05e439963cf206874b22b79af4",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/extra_npi/acetaldehyde/template.npz",
+    "bytes": 19098,
+    "sha256": "2a3537c2847449c162fcd708f7040ebdae6c8951815a0746aa3dafae3682a22b",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/cid_prospective/maleimide/arrays.npz",
+    "bytes": 5431496,
+    "sha256": "566b2fabd6445b1733fbb75858ea39b0fb1e9a26c23b0e6862c3bd1b4e56bc0f",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/cid_prospective/maleimide/response.npz",
+    "bytes": 3522256,
+    "sha256": "54a129918849943ee80501dd67f0fb2c2c35cdeb103608921e6c318cb6f0c615",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/cid_prospective/maleimide/template.npz",
+    "bytes": 42822,
+    "sha256": "28172ae55db28aacf6553d17cb598e3e6807cc8034a52d4c5042626645b9ef94",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/cid_prospective/nitrosomethane/arrays.npz",
+    "bytes": 289597,
+    "sha256": "c49c4f435a7aa759ac369f786d43b369419302f7e177d33d1783424e811ccc20",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/cid_prospective/nitrosomethane/response.npz",
+    "bytes": 171270,
+    "sha256": "c46ed948767e88ec8e1317edb18f1807fdd81e5a9f29d24ced3bd77a2853505d",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/static_subtraction_models/cid_prospective/nitrosomethane/template.npz",
+    "bytes": 17878,
+    "sha256": "69c0ad11bab8e917d398337af5a3f07f0b30903644a3ec50a937765d1ce59244",
+    "retained_on_remote": true
+  }
+]

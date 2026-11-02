@@ -1,0 +1,122 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "frontier": 15,
+  "screening_frontier": 15,
+  "source_matrices_sha256": "3865e00351b346d22f7422e59bfee9b6942c93e446995e47adf0155c4b4eb02b",
+  "states": [
+    {
+      "root": 1,
+      "excitation_ev": 2.0275029340327535
+    },
+    {
+      "root": 2,
+      "excitation_ev": 2.238137970609402
+    },
+    {
+      "root": 3,
+      "excitation_ev": 3.0769089935774665
+    },
+    {
+      "root": 4,
+      "excitation_ev": 3.1570026199540644
+    },
+    {
+      "root": 5,
+      "excitation_ev": 3.192830866545394
+    },
+    {
+      "root": 6,
+      "excitation_ev": 3.2719527240082305
+    },
+    {
+      "root": 7,
+      "excitation_ev": 3.382028247743038
+    },
+    {
+      "root": 8,
+      "excitation_ev": 3.496456110327296
+    },
+    {
+      "root": 9,
+      "excitation_ev": 3.6762666111113242
+    },
+    {
+      "root": 10,
+      "excitation_ev": 3.7320113946363445
+    },
+    {
+      "root": 11,
+      "excitation_ev": 3.8437105776218656
+    },
+    {
+      "root": 12,
+      "excitation_ev": 3.903292091725022
+    },
+    {
+      "root": 13,
+      "excitation_ev": 4.021284895533801
+    },
+    {
+      "root": 14,
+      "excitation_ev": 4.090714790214278
+    },
+    {
+      "root": 15,
+      "excitation_ev": 4.188014503713217
+    },
+    {
+      "root": 16,
+      "excitation_ev": 4.2554509750815726
+    },
+    {
+      "root": 17,
+      "excitation_ev": 4.314758359785217
+    },
+    {
+      "root": 18,
+      "excitation_ev": 4.427453855561792
+    },
+    {
+      "root": 19,
+      "excitation_ev": 4.436148769635075
+    },
+    {
+      "root": 20,
+      "excitation_ev": 4.488872952107659
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 8,
+    "complement_dimension": 25645,
+    "complement_minimum_eigenvalue_hartree": 0.0034299707257242082,
+    "maximum_inverse_relative_residual": 9.325048150719948e-11,
+    "inverse_iterations": [
+      31,
+      31,
+      31,
+      31,
+      31,
+      31,
+      31,
+      31
+    ],
+    "counterterm_asymmetry_hartree": 3.2359705193218957e-13,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false,
+    "reused_from": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/chlorophyllide_static_subtraction_N15_W15.json",
+    "legacy_eigenpair_replay_residual_hartree": 9.899234324512788e-11
+  },
+  "eigensolver_certificate": {
+    "method": "Rank-revealing generalized Davidson with full CI residual",
+    "roots": 20,
+    "maximum_residual_hartree": 8.451943085439323e-11,
+    "maximum_metric_orthonormality_error": 8.680906090549787e-14,
+    "configurations_discarded": 0,
+    "iterations": 36,
+    "restarts": 4,
+    "largest_search_space": 160
+  },
+  "wall_seconds": 402.85764395899605,
+  "scope": "Experimental energy-only static-subtraction diagnostic; no oscillator-strength or nuclear-derivative qualification; not promoted to production"
+}

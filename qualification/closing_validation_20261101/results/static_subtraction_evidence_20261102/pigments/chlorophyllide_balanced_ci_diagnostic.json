@@ -1,0 +1,47 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "frontier": 16,
+  "screening_frontier": 16,
+  "screening_mode": "coherent_transitions",
+  "states": [
+    {
+      "root": 1,
+      "excitation_ev": 3.463530827265795
+    },
+    {
+      "root": 2,
+      "excitation_ev": 3.6318090519634705
+    },
+    {
+      "root": 3,
+      "excitation_ev": 4.631255808429289
+    },
+    {
+      "root": 4,
+      "excitation_ev": 4.73137081773207
+    },
+    {
+      "root": 5,
+      "excitation_ev": 5.278790858479732
+    },
+    {
+      "root": 6,
+      "excitation_ev": 5.344309009717169
+    },
+    {
+      "root": 7,
+      "excitation_ev": 5.437351414133732
+    }
+  ],
+  "computed_ground_correlation_ev": -2.206821192982192,
+  "native_ground_weight": 0.8764977568921979,
+  "certificate": {
+    "method": "ARPACK full CI with exact sparse metric inverse",
+    "roots": 8,
+    "maximum_residual_hartree": 2.3638923082262927e-12,
+    "maximum_metric_orthonormality_error": 6.439293542825908e-15,
+    "configurations_discarded": 0
+  },
+  "wall_seconds": 29.089342874998692,
+  "scope": "Balanced full-CI energy diagnostic only; transition moments and nuclear derivatives not yet qualified; no empirical energy offset"
+}

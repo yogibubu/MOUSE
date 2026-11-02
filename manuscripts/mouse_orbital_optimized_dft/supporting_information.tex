@@ -394,7 +394,7 @@ the fourth target was already converged. These are orbital-stationarity
 checks, not nuclear-Hessian or correlated-spectrum qualifications.}
 \end{figure}
 
-The final implementation passes 25 algebra, solver, spin, phase and
+The orbital-stationarity implementation passes 25 algebra, solver, spin, phase and
 restart tests, twelve small-molecule root-recovery controls and the
 complete ethylene analytic-Hessian regression. An independent derivative
 audit at a stalled chlorophyllide checkpoint compares the full analytic
@@ -407,5 +407,63 @@ is used by their prepared-model evaluation. Full certificates, checkpoint
 identities and the duplicate-root rejection are archived in
 \path{qualification/closing_validation_20261101/results/chlorophyllide_stagnation_20261102/}.
 The pigment adapter remains vertical and orbital-response only.
+
+\clearpage
+\section{Static self-energy matching: current candidate qualification}
+The opt-in manifest field \texttt{static\_self\_energy\_subtraction}
+selects the static-matched candidate described in the main text. The
+primary space contains the optimized singlets and their paired partners;
+the complete canonical auxiliary complement is retained. The counterterm
+uses the inverse of the full interacting complementary block, whose
+positivity and inverse residual are checked. No excitation-energy offset
+or additional fitted coefficient is introduced. The 50/50 weights,
+$\lambda=0.9$ and $\eta=0.60$ are unchanged.
+
+All 24 public models reproduce the independently assembled energies for
+26 states and pass coherent-singlet spin and accepted-restart checks.
+Their aggregate errors are reported in Table~\ref{tab:staticmatching}.
+All labels had been exposed before developing this amendment. These
+results do not constitute blind validation.
+\input{tables/static_subtraction_summary.tex}
+
+The complete analytic nuclear response differentiates the inverse,
+ground projector, metric orthogonalization and ground-state energy.
+Ethylene and furan provide independent controls of this response. Furan
+has a nonzero static correction of approximately 0.755 eV, so its check
+also exercises the new counterterm derivatives. Centered scalar-energy
+Richardson differences are used only to validate the analytic arrays.
+\begin{table}[htbp]\centering
+\caption{Current static-matched Hessian qualification on MAC-STUDIO.
+Errors are maximum independent directional gradient and curvature
+errors. Times include the prepared public-API call, excluding reference
+preparation.}\label{tab:staticderivatives}
+\begin{tabular}{lrrrr}
+\toprule
+Molecule & Gradient / Ha bohr$^{-1}$ & Curvature / Ha bohr$^{-2}$ & Serial / s & Parallel / s\\
+\midrule
+Ethylene & $1.86\times10^{-11}$ & $3.07\times10^{-8}$ & 9.82 & 6.10 (4 workers)\\
+Furan & $1.18\times10^{-10}$ & $6.50\times10^{-8}$ & 1386.40 & 297.18 (8 workers)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For both molecules the parallel and serial energy, gradient and complete
+Hessian arrays agree exactly. Worker processes reuse the prepared native
+state, converged excited orbitals and multipliers. No worker launches a
+new SCC, TDA or DFT calculation. LINK uses its existing processor budget
+for this optional analytic column parallelism. Cold start, accepted
+restart and displaced-trial rollback are checked with static matching
+enabled. The earlier-model Hessian certificates elsewhere in this SI
+remain evidence for those model generations, not additional current-model
+qualifications.
+
+For chlorophyllide the lowest two static-matched gaps meet the 0.02 eV
+two-increment criterion over matched frontiers 14, 15 and 16, with a
+separate fixed-screening control. At frontier 16, retaining twenty roots
+recovers the native target subspace with minimum coverage 0.527, above
+the predeclared 0.49 threshold. Coverage is fragmented over ten roots.
+This algebraic target-coverage check does not establish frontier
+convergence of the higher spectrum. Pigment nuclear derivatives and
+independent experimental accuracy are not qualified by these tests.
 
 \end{document}

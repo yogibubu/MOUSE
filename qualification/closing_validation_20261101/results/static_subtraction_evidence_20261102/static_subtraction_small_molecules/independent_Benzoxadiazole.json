@@ -1,0 +1,30 @@
+{
+  "cohort": "independent",
+  "molecule": "Benzoxadiazole",
+  "status": "solved",
+  "model_sha256": "5dde796ac31f6356d4e1d27ba0341264b731656a4fb875e812fa2d542018936a",
+  "states": [
+    {
+      "id": "I004",
+      "native_gap_ev": 4.390494364833362,
+      "candidate_gap_ev": 4.7809689057279225,
+      "overlap": 0.999951732323189,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 170,
+    "complement_minimum_eigenvalue_hartree": 0.3018591208558634,
+    "maximum_inverse_relative_residual": 9.903031035608592e-11,
+    "inverse_iterations": [
+      14,
+      15
+    ],
+    "counterterm_asymmetry_hartree": 3.4573385002231165e-22,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 6.855973083002027
+}

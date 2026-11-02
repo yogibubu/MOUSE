@@ -1,0 +1,39 @@
+{
+  "cohort": "independent",
+  "molecule": "Criegee_Intermediate",
+  "status": "solved",
+  "model_sha256": "131fef52ab72f57a8a3c81c5b42ae01f91b08b4c56a3a8a371105a2ffed4e44e",
+  "states": [
+    {
+      "id": "I001",
+      "native_gap_ev": 1.9804699855950103,
+      "candidate_gap_ev": 1.9917149754638572,
+      "overlap": 0.9999999998530041,
+      "root": 1
+    },
+    {
+      "id": "I002",
+      "native_gap_ev": 3.9951367234309694,
+      "candidate_gap_ev": 4.19347922877979,
+      "overlap": 0.9999248951685203,
+      "root": 2
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 4,
+    "complement_dimension": 173,
+    "complement_minimum_eigenvalue_hartree": 0.45553466976950024,
+    "maximum_inverse_relative_residual": 4.5502326189376936e-11,
+    "inverse_iterations": [
+      4,
+      14,
+      14,
+      14
+    ],
+    "counterterm_asymmetry_hartree": 9.121783189902644e-14,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 4.020898833987303
+}

@@ -1,0 +1,30 @@
+{
+  "cohort": "prospective_cisd",
+  "molecule": "acetone",
+  "status": "solved",
+  "model_sha256": "9847dbc07195c03566486ba19938f037167aa9150eb42dffbe724bc3ac71f09b",
+  "states": [
+    {
+      "id": "V001",
+      "native_gap_ev": 4.370861850103897,
+      "candidate_gap_ev": 4.37227511977917,
+      "overlap": 0.9999999999998513,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 172,
+    "complement_minimum_eigenvalue_hartree": 0.6032874524002445,
+    "maximum_inverse_relative_residual": 6.947422210808574e-11,
+    "inverse_iterations": [
+      2,
+      11
+    ],
+    "counterterm_asymmetry_hartree": 1.5813730504409727e-19,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 4.30148287495831
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/qualify_subtracted_observables.py", line 33, in <module>
+    ci=np.vstack((-projection@zci,zci));moment=ci.T@transition;osc=(2/3)*e*np.sum(moment**2,axis=1);amplitudes=native@ci;selected,coverage=select_target_subspace(amplitudes,minimum_coverage=.49)
+                                                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_target_subspace.py", line 28, in select_target_subspace
+    raise ValueError(f'unresolved target subspace: coverage {coverage}, required {minimum_coverage}')
+ValueError: unresolved target subspace: coverage 0.4432477716678713, required 0.49

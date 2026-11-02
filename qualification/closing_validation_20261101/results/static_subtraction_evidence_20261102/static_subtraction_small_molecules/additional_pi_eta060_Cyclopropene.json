@@ -1,0 +1,30 @@
+{
+  "cohort": "additional_pi_eta060",
+  "molecule": "Cyclopropene",
+  "status": "solved",
+  "model_sha256": "efc3c0ee040eee94656e97cc03fce0fbb7a24aebd254ef77e246a6170e48dd74",
+  "states": [
+    {
+      "id": "P001",
+      "native_gap_ev": 6.7406475508728985,
+      "candidate_gap_ev": 7.037115625583247,
+      "overlap": 0.9999975506264345,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 174,
+    "complement_minimum_eigenvalue_hartree": 0.5353689220524155,
+    "maximum_inverse_relative_residual": 6.449173680873369e-11,
+    "inverse_iterations": [
+      11,
+      12
+    ],
+    "counterterm_asymmetry_hartree": 2.8954329711114222e-24,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 3.5335238330299035
+}

@@ -1,0 +1,30 @@
+{
+  "cohort": "post_kernel_validation",
+  "molecule": "acrolein",
+  "status": "solved",
+  "model_sha256": "4c353eb8e3333225ccbb229f93eebffd07e82ea744346b1a4c0891551bc4fe64",
+  "states": [
+    {
+      "id": "V004",
+      "native_gap_ev": 3.368584900021374,
+      "candidate_gap_ev": 3.6717497179129786,
+      "overlap": 0.9999372885230345,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 172,
+    "complement_minimum_eigenvalue_hartree": 0.3278441260266728,
+    "maximum_inverse_relative_residual": 3.574016236338353e-11,
+    "inverse_iterations": [
+      4,
+      15
+    ],
+    "counterterm_asymmetry_hartree": 3.0218957469518332e-18,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 3.9476240419899113
+}

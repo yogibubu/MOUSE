@@ -1,0 +1,30 @@
+{
+  "cohort": "independent",
+  "molecule": "Hexatriene",
+  "status": "solved",
+  "model_sha256": "7ec51a89243bf8f2c30745c7a92bf35a143fde42fcf2b80a3d3b601502561242",
+  "states": [
+    {
+      "id": "I005",
+      "native_gap_ev": 4.954973530392958,
+      "candidate_gap_ev": 5.230145066888749,
+      "overlap": 0.999952629600185,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 168,
+    "complement_minimum_eigenvalue_hartree": 0.24526362202509536,
+    "maximum_inverse_relative_residual": 5.6115283372025095e-11,
+    "inverse_iterations": [
+      16,
+      17
+    ],
+    "counterterm_asymmetry_hartree": 1.1919982280968438e-17,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 5.113027124956716
+}

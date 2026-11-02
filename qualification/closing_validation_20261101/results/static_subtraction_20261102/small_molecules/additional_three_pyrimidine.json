@@ -1,0 +1,30 @@
+{
+  "cohort": "additional_three",
+  "molecule": "pyrimidine",
+  "status": "solved",
+  "model_sha256": "68e0e8f9848adfb4a90be09ebbed457fb2b6f7b8e6b761d4a7d765f96c2e1b11",
+  "states": [
+    {
+      "id": "V007",
+      "native_gap_ev": 4.354903244451238,
+      "candidate_gap_ev": 4.3549032444512425,
+      "overlap": 1.0,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 168,
+    "complement_minimum_eigenvalue_hartree": 0.3943424039968481,
+    "maximum_inverse_relative_residual": 4.412426332730704e-11,
+    "inverse_iterations": [
+      14,
+      13
+    ],
+    "counterterm_asymmetry_hartree": 8.967992637682056e-27,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 5.010269624995999
+}

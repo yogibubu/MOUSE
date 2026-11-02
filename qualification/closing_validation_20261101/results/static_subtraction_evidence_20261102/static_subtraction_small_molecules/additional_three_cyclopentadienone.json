@@ -1,0 +1,30 @@
+{
+  "cohort": "additional_three",
+  "molecule": "cyclopentadienone",
+  "status": "solved",
+  "model_sha256": "2794d56c639c4274c348401ae6d4cc2d0b5bd61a7af3db471449fb6e2069b983",
+  "states": [
+    {
+      "id": "V008",
+      "native_gap_ev": 2.9711096485060247,
+      "candidate_gap_ev": 2.9859719807867937,
+      "overlap": 0.9999999977066047,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 172,
+    "complement_minimum_eigenvalue_hartree": 0.2342540930906138,
+    "maximum_inverse_relative_residual": 9.950783764247975e-11,
+    "inverse_iterations": [
+      2,
+      13
+    ],
+    "counterterm_asymmetry_hartree": 2.6811398210434875e-18,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 4.937250499962829
+}

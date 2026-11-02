@@ -1,0 +1,78 @@
+{
+  "protocol": {
+    "molecule": "Beta_carotene",
+    "artifact_prefix": "beta_transition_cid",
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lambda_exchange": 0.9,
+    "eta": 0.6,
+    "energy_offset_ev": 0,
+    "energy_tolerance_ev": 0.02,
+    "successive_increments_required": 2,
+    "roots": [
+      1,
+      2,
+      3
+    ],
+    "baseline_frontiers": [
+      2
+    ],
+    "baseline_screening_frontier": 5,
+    "fixed_screening_frontier": 16,
+    "screening_mode": "coherent_transitions",
+    "case_modes": {
+      "N2_W5": "legacy_sectors"
+    },
+    "extra_evidence_files": [
+      "coherent_transition_screening_protocol.json"
+    ],
+    "scope": "General projector correction; no pigment-specific parameters or excitation-energy fitting. Prior product-sector results are preserved as a separate model generation.",
+    "certified_baseline_matrix_sha256": "d00074f3bb4b5351f848cf88057747a8bf3888454e9510223187725481de38c7"
+  },
+  "host": "mac-2.homenet.telecomitalia.it",
+  "windows": [
+    11,
+    12,
+    13
+  ],
+  "coherent_results": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_11/frontier_11",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_12/frontier_12",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_13/frontier_13"
+  ],
+  "fixed_results": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_16/frontier_11",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_16/frontier_12",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_16/frontier_13"
+  ],
+  "coherent_increments_ev": [
+    [
+      -0.002948298191459253,
+      -0.004899313368982305,
+      -0.002812248566826714
+    ],
+    [
+      -0.003278814689650744,
+      -0.005257112655029594,
+      -0.003095506669633874
+    ]
+  ],
+  "fixed_Hamiltonian_increments_ev": [
+    [
+      -0.0008974215942074704,
+      -0.00100015964792588,
+      -0.0018090353597939313
+    ],
+    [
+      -0.001076326714407827,
+      -0.0013285434650600614,
+      -0.002046159307701245
+    ]
+  ],
+  "coherent_converged": true,
+  "fixed_Hamiltonian_converged": true,
+  "screening_mode": "coherent_transitions",
+  "parameters_retuned": false
+}

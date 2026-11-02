@@ -1,0 +1,27 @@
+PRIMARY 2 COMPLEMENT 14532
+SUBTRACTION {'definition': 'Exact zero-frequency self-energy subtraction', 'primary_dimension': 2, 'complement_dimension': 14532, 'complement_minimum_eigenvalue_hartree': 0.08645911448170873, 'maximum_inverse_relative_residual': 7.360100366542428e-11, 'inverse_iterations': [29, 31], 'counterterm_asymmetry_hartree': 1.752694262511026e-13, 'energy_offset_ev': 0.0, 'diagonal_complement_approximation': False}
+/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_selected_roots.py:77: UserWarning: Failed at iteration 0 with accuracies [0.00671023 0.0284462  0.00857611 0.00911257 0.00518826 0.00032046
+ 0.00762743 0.00341836]
+ not reaching the requested tolerance 1e-10.
+  values,z=lobpcg(action,guess,B=sparse,M=preconditioner,largest=False,tol=1e-10,maxiter=500)
+/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_selected_roots.py:77: UserWarning: Exited at iteration 0 with accuracies 
+[0.00671023 0.0284462  0.00857611 0.00911257 0.00518826 0.00032046
+ 0.00762743 0.00341836]
+not reaching the requested tolerance 1e-10.
+Use iteration 0 instead with accuracy 
+0.008674951340042867.
+
+  values,z=lobpcg(action,guess,B=sparse,M=preconditioner,largest=False,tol=1e-10,maxiter=500)
+/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_selected_roots.py:77: UserWarning: Exited postprocessing with accuracies 
+[0.00671023 0.0284462  0.00857611 0.00911257 0.00518826 0.00032046
+ 0.00762743 0.00341836]
+not reaching the requested tolerance 1e-10.
+  values,z=lobpcg(action,guess,B=sparse,M=preconditioner,largest=False,tol=1e-10,maxiter=500)
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/check_static_subtraction.py", line 32, in <module>
+    e,c,eigen_certificate=solve_full(hp,sp,8,energy_shift=0.,algorithm=a.eigensolver,initial=guess)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_nosi_selected_roots.py", line 87, in solve_full
+    if max(error,orthogonal)>1e-8:raise ValueError(('full CI residual qualification failed',error,orthogonal))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: ('full CI residual qualification failed', 0.02844620225799155, 7.771561172376096e-15)

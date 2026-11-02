@@ -1,0 +1,82 @@
+{
+  "protocol": {
+    "molecule": "Chlorophyllide_a",
+    "artifact_prefix": "chlorophyllide_transition_cid",
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "lambda_exchange": 0.9,
+    "eta": 0.6,
+    "energy_offset_ev": 0,
+    "energy_tolerance_ev": 0.02,
+    "successive_increments_required": 2,
+    "roots": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "baseline_frontiers": [
+      2
+    ],
+    "baseline_screening_frontier": 5,
+    "fixed_screening_frontier": 16,
+    "screening_mode": "coherent_transitions",
+    "case_modes": {
+      "N2_W5": "legacy_sectors"
+    },
+    "extra_evidence_files": [
+      "coherent_transition_screening_protocol.json"
+    ],
+    "scope": "General projector correction; no pigment-specific parameters or excitation-energy fitting. Prior product-sector results are preserved as a separate model generation."
+  },
+  "host": "mac-2.homenet.telecomitalia.it",
+  "windows": [
+    14,
+    15,
+    16
+  ],
+  "coherent_results": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Chlorophyllide_a/screening_14/frontier_14",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Chlorophyllide_a/screening_15/frontier_15",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Chlorophyllide_a/screening_16/frontier_16"
+  ],
+  "fixed_results": [
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Chlorophyllide_a/screening_16/frontier_14",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Chlorophyllide_a/screening_16/frontier_15",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Chlorophyllide_a/screening_16/frontier_16"
+  ],
+  "coherent_increments_ev": [
+    [
+      -0.055794841304200204,
+      -0.05034102403592433,
+      -0.06257276585663751,
+      -0.060638559521586366
+    ],
+    [
+      -0.03008036316634466,
+      -0.04198620231916572,
+      -0.03327043395034712,
+      -0.042599869037872384
+    ]
+  ],
+  "fixed_Hamiltonian_increments_ev": [
+    [
+      -0.043685506169917065,
+      -0.03920169145177144,
+      -0.04771993695907906,
+      -0.04903463303572275
+    ],
+    [
+      -0.02466659719612685,
+      -0.03501094368066626,
+      -0.025243816332105595,
+      -0.03551790818187772
+    ]
+  ],
+  "coherent_converged": false,
+  "fixed_Hamiltonian_converged": false,
+  "screening_mode": "coherent_transitions",
+  "parameters_retuned": false
+}

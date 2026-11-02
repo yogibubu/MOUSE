@@ -1,0 +1,30 @@
+{
+  "cohort": "additional_three",
+  "molecule": "pyranone",
+  "status": "solved",
+  "model_sha256": "02eb02c21c2097a4a7a5b304b5235e0a8bd5c1a2302df01ff27c5a90929d8a9a",
+  "states": [
+    {
+      "id": "V009",
+      "native_gap_ev": 4.181183426028983,
+      "candidate_gap_ev": 4.206520439497168,
+      "overlap": 0.9999999864657279,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 172,
+    "complement_minimum_eigenvalue_hartree": 0.32504374717688134,
+    "maximum_inverse_relative_residual": 4.5839090478900776e-11,
+    "inverse_iterations": [
+      2,
+      14
+    ],
+    "counterterm_asymmetry_hartree": 2.48276523602971e-18,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 5.858429333020467
+}

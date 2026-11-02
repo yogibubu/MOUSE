@@ -1,0 +1,30 @@
+{
+  "cohort": "last_two",
+  "molecule": "Furan",
+  "status": "solved",
+  "model_sha256": "d99de2ce1edbe0991d3a6c9637beddabc3a71e183495ef31df56a854bdc1ad62",
+  "states": [
+    {
+      "id": "V010",
+      "native_gap_ev": 6.083516579919881,
+      "candidate_gap_ev": 6.838902023402484,
+      "overlap": 0.9987466213692999,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 168,
+    "complement_minimum_eigenvalue_hartree": 0.3619713070320889,
+    "maximum_inverse_relative_residual": 9.306726011507167e-11,
+    "inverse_iterations": [
+      11,
+      11
+    ],
+    "counterterm_asymmetry_hartree": 5.046310591616532e-14,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 4.172925458988175
+}

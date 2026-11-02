@@ -1,0 +1,44 @@
+[
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid/Beta_carotene/matrices.npz",
+    "bytes": 4356,
+    "sha256": "d00074f3bb4b5351f848cf88057747a8bf3888454e9510223187725481de38c7",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_11/frontier_11/matrices.npz",
+    "bytes": 900720900,
+    "sha256": "bef4de1b3d086da8f397e80092c01105ad9b53c0c03d6a77bb1e91c0a1150c55",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_12/frontier_12/matrices.npz",
+    "bytes": 1792676356,
+    "sha256": "5c2da9afa54b7a973d76264232333d6ebec0e3e99dc3248c29bb276a4fefc7de",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_13/frontier_13/matrices.npz",
+    "bytes": 3380260444,
+    "sha256": "0198fc4501c723799f3ec72cb885d517acf0cd3db51b22e4cc1311f2795c83c1",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_16/frontier_11/matrices.npz",
+    "bytes": 900720900,
+    "sha256": "7bdf60a351e2b5e753b85c5576039770241622b758584da8d9426b057ce52268",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_16/frontier_12/matrices.npz",
+    "bytes": 1792676356,
+    "sha256": "067bad263b3724e021d9684979ee50286eb4ec0b1a13f2f83c54305ea18ed594",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_transition/Beta_carotene/screening_16/frontier_13/matrices.npz",
+    "bytes": 3380260444,
+    "sha256": "9aa71cec0741ea1db935c067b2de2aca9ad776ab333f6bf93e9a711a21273fe0",
+    "retained_on_remote": true
+  }
+]

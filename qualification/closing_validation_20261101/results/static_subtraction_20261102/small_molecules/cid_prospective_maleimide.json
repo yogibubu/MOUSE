@@ -1,0 +1,30 @@
+{
+  "cohort": "cid_prospective",
+  "molecule": "maleimide",
+  "status": "solved",
+  "model_sha256": "3e04e1a03580d1013c3d4a85acd5d238b594977308563f58005c1157df4d7583",
+  "states": [
+    {
+      "id": "V006",
+      "native_gap_ev": 3.994415160740314,
+      "candidate_gap_ev": 4.030395510163347,
+      "overlap": 0.9999999655413262,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 172,
+    "complement_minimum_eigenvalue_hartree": 0.31976910484588134,
+    "maximum_inverse_relative_residual": 5.372293422096697e-11,
+    "inverse_iterations": [
+      2,
+      15
+    ],
+    "counterterm_asymmetry_hartree": 6.047655117553665e-18,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 5.843364291999023
+}

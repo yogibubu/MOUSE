@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid/Chlorophyllide_a/matrices.npz",
+    "bytes": 5940,
+    "sha256": "adf0042711d0661b66e070cb8c992842b73fd9343a41c473ee5aa9831175c991",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_expansion/Chlorophyllide_a/frontier_3/matrices.npz",
+    "bytes": 54580,
+    "sha256": "1518ec7a36169d25ad4cbd1e11534f010cae8751477406208ccee522173776cd",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_expansion/Chlorophyllide_a/frontier_4/matrices.npz",
+    "bytes": 390132,
+    "sha256": "ad47b32c841c5b614c2ab46a3b21bdc394d696fcffa095ef0bf26bb8751d6d42",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_expansion/Chlorophyllide_a/frontier_5/matrices.npz",
+    "bytes": 2005812,
+    "sha256": "c28bb5c4365fd01bbd383e16ce2048e3f8c258ba1f19a6c51ba9dbb1b21f21f3",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_expansion/Chlorophyllide_a/screening_14/frontier_14/matrices.npz",
+    "bytes": 6087745468,
+    "sha256": "6561eb37a7abc26914f2e87748399dc0bde34ab8d3330147666e4b7affac042c",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_expansion/Chlorophyllide_a/screening_15/frontier_15/matrices.npz",
+    "bytes": 10530044348,
+    "sha256": "fdc8465d3e46e5378bc314b873ef4c171c50c798b08b4f6449f5f64784d61f1b",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_expansion/Chlorophyllide_a/screening_16/frontier_16/matrices.npz",
+    "bytes": 17589126268,
+    "sha256": "3405a8dfc798f4a5746cc446cc139de5b322ad3c61899ce22ff23a08143d7628",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_expansion/Chlorophyllide_a/screening_16/frontier_14/matrices.npz",
+    "bytes": 6087745468,
+    "sha256": "e70e9c57dfc0504aa4be72e1c24776743fa4a2fc082b7b0e0539e009a6e29c2a",
+    "retained_on_remote": true
+  },
+  {
+    "path": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_cid_expansion/Chlorophyllide_a/screening_16/frontier_15/matrices.npz",
+    "bytes": 10530044348,
+    "sha256": "2d790bedd97e69137d1bc4c705ba9a3cf752f69a7ca7a9a64c1079c9b0c44130",
+    "retained_on_remote": true
+  }
+]

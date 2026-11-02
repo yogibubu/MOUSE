@@ -1,0 +1,22 @@
+{
+  "schema": "mouse.pigment.vertical_quadrature.v1",
+  "molecule": "Beta_carotene",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "sha256": {
+    "state.npz": "fda2dcfed5595dd8de13d2e2dcdb6a704416d8271128912b4c057dc94469479d",
+    "response.npz": "9412a7b6618f1999e7b8f89fd0465b533baac103c685771ca9fdceb655146827",
+    "xc_charge.npy": "9cbb7584721fcd2876344ee8efb8f2c31b4d528ca5b4417ce54e932017db62e2",
+    "xc_spin.npy": "9793ccd71c29effc475c94e0a2420154003fe252f176b270232dfb49f53e7b49"
+  },
+  "quadrature_manifest_sha256": "0c871a69cac908cd3670191fa131dfc4248be46f9a5e42ad3873199580afe01e",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "bath_efficiency_eta": 0.6,
+  "energy_offset_ev": 0,
+  "exact_frozen_XC_residual": true,
+  "RI_XC_role": "Newton linearization only; exact frozen-quadrature energy and residual correction",
+  "scope": "Vertical ROKS; nuclear derivative adapter not yet qualified on pigments"
+}

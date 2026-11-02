@@ -1,0 +1,7 @@
+{
+  "cohort": "post_kernel_validation",
+  "molecule": "tetrazine",
+  "status": "rejected",
+  "reason": "ValueError(('complementary static inverse did not converge', 0, 0, 1.0))",
+  "wall_seconds": 4.150710291985888
+}

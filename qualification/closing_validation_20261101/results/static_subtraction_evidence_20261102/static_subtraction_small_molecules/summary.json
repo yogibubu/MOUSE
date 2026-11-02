@@ -1,0 +1,747 @@
+{
+  "scope": "Experimental energy-only diagnostic; all rejected cases retained; no production promotion",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "rows": [
+    {
+      "cohort": "additional_pi_eta060",
+      "molecule": "Cyclopentadiene",
+      "status": "solved",
+      "model_sha256": "2e6d28c7d47d83505934718c0e4515c05dc05aff66b21f5a92b48cc91b0945ef",
+      "states": [
+        {
+          "id": "P002",
+          "native_gap_ev": 5.491656729843997,
+          "candidate_gap_ev": 5.6266742709750215,
+          "overlap": 0.9999994541904708,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 168,
+        "complement_minimum_eigenvalue_hartree": 0.4025573079199843,
+        "maximum_inverse_relative_residual": 3.13264098665703e-11,
+        "inverse_iterations": [
+          11,
+          12
+        ],
+        "counterterm_asymmetry_hartree": 1.6064490125539018e-22,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 4.691641334036831
+    },
+    {
+      "cohort": "additional_pi_eta060",
+      "molecule": "Cyclopropene",
+      "status": "solved",
+      "model_sha256": "efc3c0ee040eee94656e97cc03fce0fbb7a24aebd254ef77e246a6170e48dd74",
+      "states": [
+        {
+          "id": "P001",
+          "native_gap_ev": 6.7406475508728985,
+          "candidate_gap_ev": 7.037115625583247,
+          "overlap": 0.9999975506264345,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 174,
+        "complement_minimum_eigenvalue_hartree": 0.5353689220524155,
+        "maximum_inverse_relative_residual": 6.449173680873369e-11,
+        "inverse_iterations": [
+          11,
+          12
+        ],
+        "counterterm_asymmetry_hartree": 2.8954329711114222e-24,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 3.5335238330299035
+    },
+    {
+      "cohort": "additional_pi_eta060",
+      "molecule": "Pyrrole",
+      "status": "solved",
+      "model_sha256": "073718e9243dd5b403eafb7872bb4fbae46b6a6992adc1ab5d7a095ab9899a9f",
+      "states": [
+        {
+          "id": "P003",
+          "native_gap_ev": 6.301527298778016,
+          "candidate_gap_ev": 6.566589091879959,
+          "overlap": 0.999968265594451,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 168,
+        "complement_minimum_eigenvalue_hartree": 0.44417930406403994,
+        "maximum_inverse_relative_residual": 5.4690718206909706e-11,
+        "inverse_iterations": [
+          11,
+          12
+        ],
+        "counterterm_asymmetry_hartree": 8.198144364960615e-23,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 4.370105249981862
+    },
+    {
+      "cohort": "additional_three",
+      "molecule": "cyclopentadienone",
+      "status": "solved",
+      "model_sha256": "2794d56c639c4274c348401ae6d4cc2d0b5bd61a7af3db471449fb6e2069b983",
+      "states": [
+        {
+          "id": "V008",
+          "native_gap_ev": 2.9711096485060247,
+          "candidate_gap_ev": 2.9859719807867937,
+          "overlap": 0.9999999977066047,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 172,
+        "complement_minimum_eigenvalue_hartree": 0.2342540930906138,
+        "maximum_inverse_relative_residual": 9.950783764247975e-11,
+        "inverse_iterations": [
+          2,
+          13
+        ],
+        "counterterm_asymmetry_hartree": 2.6811398210434875e-18,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 4.937250499962829
+    },
+    {
+      "cohort": "additional_three",
+      "molecule": "pyranone",
+      "status": "solved",
+      "model_sha256": "02eb02c21c2097a4a7a5b304b5235e0a8bd5c1a2302df01ff27c5a90929d8a9a",
+      "states": [
+        {
+          "id": "V009",
+          "native_gap_ev": 4.181183426028983,
+          "candidate_gap_ev": 4.206520439497168,
+          "overlap": 0.9999999864657279,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 172,
+        "complement_minimum_eigenvalue_hartree": 0.32504374717688134,
+        "maximum_inverse_relative_residual": 4.5839090478900776e-11,
+        "inverse_iterations": [
+          2,
+          14
+        ],
+        "counterterm_asymmetry_hartree": 2.48276523602971e-18,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 5.858429333020467
+    },
+    {
+      "cohort": "additional_three",
+      "molecule": "pyrimidine",
+      "status": "solved",
+      "model_sha256": "68e0e8f9848adfb4a90be09ebbed457fb2b6f7b8e6b761d4a7d765f96c2e1b11",
+      "states": [
+        {
+          "id": "V007",
+          "native_gap_ev": 4.354903244451238,
+          "candidate_gap_ev": 4.3549032444512425,
+          "overlap": 1.0,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 168,
+        "complement_minimum_eigenvalue_hartree": 0.3943424039968481,
+        "maximum_inverse_relative_residual": 4.412426332730704e-11,
+        "inverse_iterations": [
+          14,
+          13
+        ],
+        "counterterm_asymmetry_hartree": 8.967992637682056e-27,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 5.010269624995999
+    },
+    {
+      "cohort": "cid_prospective",
+      "molecule": "maleimide",
+      "status": "solved",
+      "model_sha256": "3e04e1a03580d1013c3d4a85acd5d238b594977308563f58005c1157df4d7583",
+      "states": [
+        {
+          "id": "V006",
+          "native_gap_ev": 3.994415160740314,
+          "candidate_gap_ev": 4.030395510163347,
+          "overlap": 0.9999999655413262,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 172,
+        "complement_minimum_eigenvalue_hartree": 0.31976910484588134,
+        "maximum_inverse_relative_residual": 5.372293422096697e-11,
+        "inverse_iterations": [
+          2,
+          15
+        ],
+        "counterterm_asymmetry_hartree": 6.047655117553665e-18,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 5.843364291999023
+    },
+    {
+      "cohort": "cid_prospective",
+      "molecule": "nitrosomethane",
+      "status": "solved",
+      "model_sha256": "45dfeda759b811b4d85b1f9645d8d4abe0753b24b1bdd63bf025e8f02ff6d7bc",
+      "states": [
+        {
+          "id": "V005",
+          "native_gap_ev": 2.1397158553960036,
+          "candidate_gap_ev": 2.143669256629092,
+          "overlap": 0.9999999999933669,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 172,
+        "complement_minimum_eigenvalue_hartree": 0.4658004293103242,
+        "maximum_inverse_relative_residual": 9.738434537753632e-11,
+        "inverse_iterations": [
+          4,
+          13
+        ],
+        "counterterm_asymmetry_hartree": 8.700045333471882e-19,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 3.863697624998167
+    },
+    {
+      "cohort": "closing_blind",
+      "molecule": "Butadiene",
+      "status": "solved",
+      "model_sha256": "ac86c7171723616f56e8412ad0cd8ec1be479603ae4d97182aaf5a66ad6148af",
+      "states": [
+        {
+          "id": "B003",
+          "native_gap_ev": 6.204273598569231,
+          "candidate_gap_ev": 6.28676055503187,
+          "overlap": 0.9999992909111779,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 168,
+        "complement_minimum_eigenvalue_hartree": 0.4149269185728285,
+        "maximum_inverse_relative_residual": 6.724741789192171e-11,
+        "inverse_iterations": [
+          13,
+          13
+        ],
+        "counterterm_asymmetry_hartree": 6.032709010056208e-20,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 4.125436250003986
+    },
+    {
+      "cohort": "closing_blind",
+      "molecule": "Ethylene",
+      "status": "solved",
+      "model_sha256": "6a718b598aa4fa183b8fc2a6895f869f2cc9421c44267ab6ac13aa069f59d43a",
+      "states": [
+        {
+          "id": "B002",
+          "native_gap_ev": 8.205293952547452,
+          "candidate_gap_ev": 8.20529395254748,
+          "overlap": 1.0000000000000002,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 9,
+        "complement_minimum_eigenvalue_hartree": 0.5308690386636006,
+        "maximum_inverse_relative_residual": 4.299650336468288e-11,
+        "inverse_iterations": [
+          6,
+          5
+        ],
+        "counterterm_asymmetry_hartree": 2.3441032613521476e-28,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 0.045250500028487295
+    },
+    {
+      "cohort": "closing_blind",
+      "molecule": "Formaldehyde",
+      "status": "solved",
+      "model_sha256": "e58e511cb6be735e4d059a6c1865da8056bcbb4af186296ed28ec588d5b4cbcf",
+      "states": [
+        {
+          "id": "B001",
+          "native_gap_ev": 3.6357419267029973,
+          "candidate_gap_ev": 3.7044429014643505,
+          "overlap": 0.9999998214924131,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 9,
+        "complement_minimum_eigenvalue_hartree": 0.502441407629494,
+        "maximum_inverse_relative_residual": 8.902000911609368e-17,
+        "inverse_iterations": [
+          2,
+          3
+        ],
+        "counterterm_asymmetry_hartree": 1.1322045849474937e-20,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 0.03970408299937844
+    },
+    {
+      "cohort": "extra_npi",
+      "molecule": "acetaldehyde",
+      "status": "solved",
+      "model_sha256": "38723b0538d0d2643adf8bcae7d103347fe47c334b69daa98cbb77e786e70613",
+      "states": [
+        {
+          "id": "N001",
+          "native_gap_ev": 4.233525012225797,
+          "candidate_gap_ev": 4.235675243075109,
+          "overlap": 0.9999999999975108,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 172,
+        "complement_minimum_eigenvalue_hartree": 0.6264330371396659,
+        "maximum_inverse_relative_residual": 4.134856932070845e-11,
+        "inverse_iterations": [
+          4,
+          13
+        ],
+        "counterterm_asymmetry_hartree": 3.137254952348202e-20,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 3.8007982920389622
+    },
+    {
+      "cohort": "extra_npi",
+      "molecule": "formamide",
+      "status": "solved",
+      "model_sha256": "2831a5d54ea1db582841074cc09f401a376b3c50674f0ac9c6bf22f6fe701c4e",
+      "states": [
+        {
+          "id": "N002",
+          "native_gap_ev": 5.347908436445918,
+          "candidate_gap_ev": 5.36359739196708,
+          "overlap": 0.9999999983001515,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 174,
+        "complement_minimum_eigenvalue_hartree": 0.573581671000601,
+        "maximum_inverse_relative_residual": 4.7237033417081606e-11,
+        "inverse_iterations": [
+          4,
+          14
+        ],
+        "counterterm_asymmetry_hartree": 3.524898929697595e-20,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 3.678354582982138
+    },
+    {
+      "cohort": "extra_npi",
+      "molecule": "pyrazine",
+      "status": "solved",
+      "model_sha256": "ea23642fde12deb283491d57dfdbe167deec0a20241137a00498df840fe5beb0",
+      "states": [
+        {
+          "id": "N003",
+          "native_gap_ev": 4.136896993786332,
+          "candidate_gap_ev": 4.136896993786343,
+          "overlap": 1.0000000000000004,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 172,
+        "complement_minimum_eigenvalue_hartree": 0.361095379687789,
+        "maximum_inverse_relative_residual": 8.849456331303176e-11,
+        "inverse_iterations": [
+          13,
+          12
+        ],
+        "counterterm_asymmetry_hartree": 1.064212804188406e-26,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 4.919510042003822
+    },
+    {
+      "cohort": "independent",
+      "molecule": "Benzoxadiazole",
+      "status": "solved",
+      "model_sha256": "5dde796ac31f6356d4e1d27ba0341264b731656a4fb875e812fa2d542018936a",
+      "states": [
+        {
+          "id": "I004",
+          "native_gap_ev": 4.390494364833362,
+          "candidate_gap_ev": 4.7809689057279225,
+          "overlap": 0.999951732323189,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 170,
+        "complement_minimum_eigenvalue_hartree": 0.3018591208558634,
+        "maximum_inverse_relative_residual": 9.903031035608592e-11,
+        "inverse_iterations": [
+          14,
+          15
+        ],
+        "counterterm_asymmetry_hartree": 3.4573385002231165e-22,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 6.855973083002027
+    },
+    {
+      "cohort": "independent",
+      "molecule": "Criegee_Intermediate",
+      "status": "solved",
+      "model_sha256": "131fef52ab72f57a8a3c81c5b42ae01f91b08b4c56a3a8a371105a2ffed4e44e",
+      "states": [
+        {
+          "id": "I001",
+          "native_gap_ev": 1.9804699855950103,
+          "candidate_gap_ev": 1.9917149754638572,
+          "overlap": 0.9999999998530041,
+          "root": 1
+        },
+        {
+          "id": "I002",
+          "native_gap_ev": 3.9951367234309694,
+          "candidate_gap_ev": 4.19347922877979,
+          "overlap": 0.9999248951685203,
+          "root": 2
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 4,
+        "complement_dimension": 173,
+        "complement_minimum_eigenvalue_hartree": 0.45553466976950024,
+        "maximum_inverse_relative_residual": 4.5502326189376936e-11,
+        "inverse_iterations": [
+          4,
+          14,
+          14,
+          14
+        ],
+        "counterterm_asymmetry_hartree": 9.121783189902644e-14,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 4.020898833987303
+    },
+    {
+      "cohort": "independent",
+      "molecule": "Hexatriene",
+      "status": "solved",
+      "model_sha256": "7ec51a89243bf8f2c30745c7a92bf35a143fde42fcf2b80a3d3b601502561242",
+      "states": [
+        {
+          "id": "I005",
+          "native_gap_ev": 4.954973530392958,
+          "candidate_gap_ev": 5.230145066888749,
+          "overlap": 0.999952629600185,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 168,
+        "complement_minimum_eigenvalue_hartree": 0.24526362202509536,
+        "maximum_inverse_relative_residual": 5.6115283372025095e-11,
+        "inverse_iterations": [
+          16,
+          17
+        ],
+        "counterterm_asymmetry_hartree": 1.1919982280968438e-17,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 5.113027124956716
+    },
+    {
+      "cohort": "independent_challenge",
+      "molecule": "Furofuran",
+      "status": "solved",
+      "model_sha256": "03ab50c1a255a601131a3e627f2d3b3bf1dd00679c6e98af7a81b80ca3cdb30a",
+      "states": [
+        {
+          "id": "C001",
+          "native_gap_ev": 5.362588440185545,
+          "candidate_gap_ev": 5.5929472688366575,
+          "overlap": 0.9999917518923428,
+          "root": 1
+        },
+        {
+          "id": "C002",
+          "native_gap_ev": 5.609636153411915,
+          "candidate_gap_ev": 6.085346026321311,
+          "overlap": 0.998578211749482,
+          "root": 2
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 4,
+        "complement_dimension": 167,
+        "complement_minimum_eigenvalue_hartree": 0.3086968588848972,
+        "maximum_inverse_relative_residual": 4.561018596006867e-11,
+        "inverse_iterations": [
+          13,
+          14,
+          14,
+          14
+        ],
+        "counterterm_asymmetry_hartree": 5.968316119098205e-14,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 7.30386849999195
+    },
+    {
+      "cohort": "last_two",
+      "molecule": "Furan",
+      "status": "solved",
+      "model_sha256": "d99de2ce1edbe0991d3a6c9637beddabc3a71e183495ef31df56a854bdc1ad62",
+      "states": [
+        {
+          "id": "V010",
+          "native_gap_ev": 6.083516579919881,
+          "candidate_gap_ev": 6.838902023402484,
+          "overlap": 0.9987466213692999,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 168,
+        "complement_minimum_eigenvalue_hartree": 0.3619713070320889,
+        "maximum_inverse_relative_residual": 9.306726011507167e-11,
+        "inverse_iterations": [
+          11,
+          11
+        ],
+        "counterterm_asymmetry_hartree": 5.046310591616532e-14,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 4.172925458988175
+    },
+    {
+      "cohort": "last_two",
+      "molecule": "uracil",
+      "status": "solved",
+      "model_sha256": "3020a5cf531d09b3be933678c53b9e28bc8740c4ee49b14b6fa9b233bbdb04ec",
+      "states": [
+        {
+          "id": "V011",
+          "native_gap_ev": 5.103112493777525,
+          "candidate_gap_ev": 5.5651116353438805,
+          "overlap": 0.9993578234802157,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 172,
+        "complement_minimum_eigenvalue_hartree": 0.38462499143535317,
+        "maximum_inverse_relative_residual": 8.354643164427197e-11,
+        "inverse_iterations": [
+          15,
+          14
+        ],
+        "counterterm_asymmetry_hartree": 6.607041302952865e-14,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 6.637805500009563
+    },
+    {
+      "cohort": "post_kernel_validation",
+      "molecule": "acrolein",
+      "status": "solved",
+      "model_sha256": "4c353eb8e3333225ccbb229f93eebffd07e82ea744346b1a4c0891551bc4fe64",
+      "states": [
+        {
+          "id": "V004",
+          "native_gap_ev": 3.368584900021374,
+          "candidate_gap_ev": 3.6717497179129786,
+          "overlap": 0.9999372885230345,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 172,
+        "complement_minimum_eigenvalue_hartree": 0.3278441260266728,
+        "maximum_inverse_relative_residual": 3.574016236338353e-11,
+        "inverse_iterations": [
+          4,
+          15
+        ],
+        "counterterm_asymmetry_hartree": 3.0218957469518332e-18,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 3.9476240419899113
+    },
+    {
+      "cohort": "post_kernel_validation",
+      "molecule": "tetrazine",
+      "status": "solved",
+      "model_sha256": "cecede6fcccdda25315ccab424b044bfab790b9bfbb874769c83614e19b76553",
+      "states": [
+        {
+          "id": "V003",
+          "native_gap_ev": 2.549080690992237,
+          "candidate_gap_ev": 2.5490806909923074,
+          "overlap": 0.9999999999999996,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 170,
+        "complement_minimum_eigenvalue_hartree": 0.22395690701735876,
+        "maximum_inverse_relative_residual": 2.62662553570157e-11,
+        "inverse_iterations": [
+          16,
+          14
+        ],
+        "counterterm_asymmetry_hartree": 2.765684703946647e-27,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 4.458224624977447
+    },
+    {
+      "cohort": "prospective_cisd",
+      "molecule": "acetone",
+      "status": "solved",
+      "model_sha256": "9847dbc07195c03566486ba19938f037167aa9150eb42dffbe724bc3ac71f09b",
+      "states": [
+        {
+          "id": "V001",
+          "native_gap_ev": 4.370861850103897,
+          "candidate_gap_ev": 4.37227511977917,
+          "overlap": 0.9999999999998513,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 172,
+        "complement_minimum_eigenvalue_hartree": 0.6032874524002445,
+        "maximum_inverse_relative_residual": 6.947422210808574e-11,
+        "inverse_iterations": [
+          2,
+          11
+        ],
+        "counterterm_asymmetry_hartree": 1.5813730504409727e-19,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 4.30148287495831
+    },
+    {
+      "cohort": "prospective_cisd",
+      "molecule": "glyoxal",
+      "status": "solved",
+      "model_sha256": "343c621a126a80f2471b5e6fcb26838dca41eba533a0094b56be27d3af5e3f27",
+      "states": [
+        {
+          "id": "V002",
+          "native_gap_ev": 3.1222098510234195,
+          "candidate_gap_ev": 3.1222098510232414,
+          "overlap": 1.0,
+          "root": 1
+        }
+      ],
+      "subtraction_certificate": {
+        "definition": "Exact zero-frequency self-energy subtraction",
+        "primary_dimension": 2,
+        "complement_dimension": 168,
+        "complement_minimum_eigenvalue_hartree": 0.25241850142098604,
+        "maximum_inverse_relative_residual": 6.384809106207774e-11,
+        "inverse_iterations": [
+          18,
+          17
+        ],
+        "counterterm_asymmetry_hartree": 2.1956909149483925e-25,
+        "energy_offset_ev": 0.0,
+        "diagonal_complement_approximation": false
+      },
+      "wall_seconds": 3.9547027079970576
+    }
+  ],
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_solves": 0
+}

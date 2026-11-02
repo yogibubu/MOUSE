@@ -1,0 +1,30 @@
+{
+  "cohort": "cid_prospective",
+  "molecule": "nitrosomethane",
+  "status": "solved",
+  "model_sha256": "45dfeda759b811b4d85b1f9645d8d4abe0753b24b1bdd63bf025e8f02ff6d7bc",
+  "states": [
+    {
+      "id": "V005",
+      "native_gap_ev": 2.1397158553960036,
+      "candidate_gap_ev": 2.143669256629092,
+      "overlap": 0.9999999999933669,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 172,
+    "complement_minimum_eigenvalue_hartree": 0.4658004293103242,
+    "maximum_inverse_relative_residual": 9.738434537753632e-11,
+    "inverse_iterations": [
+      4,
+      13
+    ],
+    "counterterm_asymmetry_hartree": 8.700045333471882e-19,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 3.863697624998167
+}

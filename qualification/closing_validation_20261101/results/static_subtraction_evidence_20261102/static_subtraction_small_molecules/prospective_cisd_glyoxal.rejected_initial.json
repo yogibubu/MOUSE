@@ -1,0 +1,7 @@
+{
+  "cohort": "prospective_cisd",
+  "molecule": "glyoxal",
+  "status": "rejected",
+  "reason": "ValueError(('complementary static inverse did not converge', 0, 0, 1.0))",
+  "wall_seconds": 3.9276582499733195
+}

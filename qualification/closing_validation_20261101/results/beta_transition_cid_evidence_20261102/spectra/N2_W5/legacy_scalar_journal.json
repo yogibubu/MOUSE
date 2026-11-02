@@ -1,0 +1,5 @@
+{
+  "scalar_journal_available": false,
+  "independently_certified_matrix_sha256": "d00074f3bb4b5351f848cf88057747a8bf3888454e9510223187725481de38c7",
+  "scope": "Legacy baseline; matrix identity and independently replayed matrix audit replace unavailable construction journal"
+}

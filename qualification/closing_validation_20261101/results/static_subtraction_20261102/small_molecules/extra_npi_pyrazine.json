@@ -1,0 +1,30 @@
+{
+  "cohort": "extra_npi",
+  "molecule": "pyrazine",
+  "status": "solved",
+  "model_sha256": "ea23642fde12deb283491d57dfdbe167deec0a20241137a00498df840fe5beb0",
+  "states": [
+    {
+      "id": "N003",
+      "native_gap_ev": 4.136896993786332,
+      "candidate_gap_ev": 4.136896993786343,
+      "overlap": 1.0000000000000004,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 172,
+    "complement_minimum_eigenvalue_hartree": 0.361095379687789,
+    "maximum_inverse_relative_residual": 8.849456331303176e-11,
+    "inverse_iterations": [
+      13,
+      12
+    ],
+    "counterterm_asymmetry_hartree": 1.064212804188406e-26,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 4.919510042003822
+}

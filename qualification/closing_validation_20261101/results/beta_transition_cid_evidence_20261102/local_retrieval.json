@@ -1,0 +1,26 @@
+{
+  "verified_files": 208,
+  "remote_only_files": [
+    "logs/beta_transition_cid_N11_W11.txt",
+    "logs/beta_transition_cid_N11_W16.txt",
+    "logs/beta_transition_cid_N12_W12.txt",
+    "logs/beta_transition_cid_N12_W16.txt",
+    "logs/beta_transition_cid_N13_W13.txt",
+    "logs/beta_transition_cid_N13_W16.txt",
+    "logs/beta_transition_cid_assessment_pipeline.txt",
+    "logs/beta_transition_cid_audit.txt",
+    "logs/beta_transition_cid_collection.txt",
+    "logs/beta_transition_cid_screening_W11.txt",
+    "logs/beta_transition_cid_screening_W12.txt",
+    "logs/beta_transition_cid_screening_W13.txt",
+    "logs/beta_transition_cid_screening_W16.txt",
+    "spectra/N11_W11/scalar_elements.json",
+    "spectra/N11_W16/scalar_elements.json",
+    "spectra/N12_W12/scalar_elements.json",
+    "spectra/N12_W16/scalar_elements.json",
+    "spectra/N13_W13/scalar_elements.json",
+    "spectra/N13_W16/scalar_elements.json"
+  ],
+  "remote_archive": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/beta_transition_cid_evidence_20261102",
+  "all_retrieved_hashes_match": true
+}

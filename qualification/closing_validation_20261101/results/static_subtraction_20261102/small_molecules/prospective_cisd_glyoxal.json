@@ -1,0 +1,30 @@
+{
+  "cohort": "prospective_cisd",
+  "molecule": "glyoxal",
+  "status": "solved",
+  "model_sha256": "343c621a126a80f2471b5e6fcb26838dca41eba533a0094b56be27d3af5e3f27",
+  "states": [
+    {
+      "id": "V002",
+      "native_gap_ev": 3.1222098510234195,
+      "candidate_gap_ev": 3.1222098510232414,
+      "overlap": 1.0,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 168,
+    "complement_minimum_eigenvalue_hartree": 0.25241850142098604,
+    "maximum_inverse_relative_residual": 6.384809106207774e-11,
+    "inverse_iterations": [
+      18,
+      17
+    ],
+    "counterterm_asymmetry_hartree": 2.1956909149483925e-25,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 3.9547027079970576
+}

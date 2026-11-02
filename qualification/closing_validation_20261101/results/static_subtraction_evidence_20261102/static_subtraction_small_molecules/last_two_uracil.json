@@ -1,0 +1,30 @@
+{
+  "cohort": "last_two",
+  "molecule": "uracil",
+  "status": "solved",
+  "model_sha256": "3020a5cf531d09b3be933678c53b9e28bc8740c4ee49b14b6fa9b233bbdb04ec",
+  "states": [
+    {
+      "id": "V011",
+      "native_gap_ev": 5.103112493777525,
+      "candidate_gap_ev": 5.5651116353438805,
+      "overlap": 0.9993578234802157,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 172,
+    "complement_minimum_eigenvalue_hartree": 0.38462499143535317,
+    "maximum_inverse_relative_residual": 8.354643164427197e-11,
+    "inverse_iterations": [
+      15,
+      14
+    ],
+    "counterterm_asymmetry_hartree": 6.607041302952865e-14,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 6.637805500009563
+}

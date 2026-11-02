@@ -1,0 +1,30 @@
+{
+  "cohort": "closing_blind",
+  "molecule": "Ethylene",
+  "status": "solved",
+  "model_sha256": "6a718b598aa4fa183b8fc2a6895f869f2cc9421c44267ab6ac13aa069f59d43a",
+  "states": [
+    {
+      "id": "B002",
+      "native_gap_ev": 8.205293952547452,
+      "candidate_gap_ev": 8.20529395254748,
+      "overlap": 1.0000000000000002,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 9,
+    "complement_minimum_eigenvalue_hartree": 0.5308690386636006,
+    "maximum_inverse_relative_residual": 4.299650336468288e-11,
+    "inverse_iterations": [
+      6,
+      5
+    ],
+    "counterterm_asymmetry_hartree": 2.3441032613521476e-28,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 0.045250500028487295
+}

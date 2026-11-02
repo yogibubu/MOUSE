@@ -1,0 +1,71 @@
+PRIMARY 8 COMPLEMENT 33147
+SUBTRACTION {'definition': 'Exact zero-frequency self-energy subtraction', 'primary_dimension': 8, 'complement_dimension': 33147, 'complement_minimum_eigenvalue_hartree': 0.003320807606422992, 'maximum_inverse_relative_residual': 9.742027289258511e-11, 'inverse_iterations': [32, 32, 31, 32, 32, 32, 32, 32], 'counterterm_asymmetry_hartree': 3.2258143909964093e-13, 'energy_offset_ev': 0.0, 'diagonal_complement_approximation': False}
+{
+  "molecule": "Chlorophyllide_a",
+  "frontier": 16,
+  "screening_frontier": 16,
+  "source_matrices_sha256": "30ce0db204203331bd3afcbd0964f3d85617cd1c884b8f1c1cac0b9d72d34666",
+  "states": [
+    {
+      "root": 1,
+      "excitation_ev": 2.0186410398040135
+    },
+    {
+      "root": 2,
+      "excitation_ev": 2.2264602059754717
+    },
+    {
+      "root": 3,
+      "excitation_ev": 3.045715513955358
+    },
+    {
+      "root": 4,
+      "excitation_ev": 3.111213387734074
+    },
+    {
+      "root": 5,
+      "excitation_ev": 3.166363339628088
+    },
+    {
+      "root": 6,
+      "excitation_ev": 3.228918239952561
+    },
+    {
+      "root": 7,
+      "excitation_ev": 3.354805980445497
+    },
+    {
+      "root": 8,
+      "excitation_ev": 3.462679401883955
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 8,
+    "complement_dimension": 33147,
+    "complement_minimum_eigenvalue_hartree": 0.003320807606422992,
+    "maximum_inverse_relative_residual": 9.742027289258511e-11,
+    "inverse_iterations": [
+      32,
+      32,
+      31,
+      32,
+      32,
+      32,
+      32,
+      32
+    ],
+    "counterterm_asymmetry_hartree": 3.2258143909964093e-13,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "eigensolver_certificate": {
+    "method": "Block LOBPCG with full generalized metric and diagonal preconditioner",
+    "roots": 8,
+    "maximum_residual_hartree": 9.88673618646416e-11,
+    "maximum_metric_orthonormality_error": 9.880984919163893e-15,
+    "configurations_discarded": 0
+  },
+  "wall_seconds": 521.4759987089783,
+  "scope": "Experimental energy-only static-subtraction diagnostic; no oscillator-strength or nuclear-derivative qualification; not promoted to production"
+}

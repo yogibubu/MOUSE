@@ -1,0 +1,7 @@
+{
+  "cohort": "additional_three",
+  "molecule": "pyrimidine",
+  "status": "rejected",
+  "reason": "ValueError(('complementary static inverse did not converge', 0, 0, 1.0))",
+  "wall_seconds": 4.755687000055332
+}

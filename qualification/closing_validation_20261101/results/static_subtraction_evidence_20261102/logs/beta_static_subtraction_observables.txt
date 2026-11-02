@@ -1,0 +1,119 @@
+{
+  "molecule": "Beta_carotene",
+  "frontier": 13,
+  "screening_frontier": 13,
+  "states": [
+    {
+      "root": 1,
+      "excitation_ev": 2.2441688361472463,
+      "oscillator_strength": 0.00015823249000797876,
+      "transition_dipole_au": [
+        -0.05361639880221702,
+        0.00129749805829279,
+        0.0012411431644777197
+      ],
+      "native_frontier_subspace_weight": 0.0005281712889508942,
+      "selected": false
+    },
+    {
+      "root": 2,
+      "excitation_ev": 2.352920679229515,
+      "oscillator_strength": 0.0060750116530562375,
+      "transition_dipole_au": [
+        0.3235762003421675,
+        -0.02506267660026359,
+        -0.0074847717144885745
+      ],
+      "native_frontier_subspace_weight": 0.0018624168463313995,
+      "selected": false
+    },
+    {
+      "root": 3,
+      "excitation_ev": 2.874618302764632,
+      "oscillator_strength": 0.004605880257151555,
+      "transition_dipole_au": [
+        -0.24986682848121378,
+        -0.045517305283645636,
+        0.02990378071908298
+      ],
+      "native_frontier_subspace_weight": 0.0008083068499467445,
+      "selected": false
+    },
+    {
+      "root": 4,
+      "excitation_ev": 3.0313874409607053,
+      "oscillator_strength": 5.00033050286971,
+      "transition_dipole_au": [
+        8.155897795285275,
+        0.6331405962445831,
+        -0.6395333935080035
+      ],
+      "native_frontier_subspace_weight": 0.5797110784530496,
+      "selected": true
+    },
+    {
+      "root": 5,
+      "excitation_ev": 3.2300179241554723,
+      "oscillator_strength": 1.0514327138532875,
+      "transition_dipole_au": [
+        -3.5805312427298017,
+        -0.6108994509769753,
+        0.3055146058731303
+      ],
+      "native_frontier_subspace_weight": 0.11148990393809625,
+      "selected": false
+    },
+    {
+      "root": 6,
+      "excitation_ev": 3.4180324254670054,
+      "oscillator_strength": 0.0034045108963624976,
+      "transition_dipole_au": [
+        0.11000474831043093,
+        -0.15778893006291952,
+        0.06047494006382674
+      ],
+      "native_frontier_subspace_weight": 0.000155114911229536,
+      "selected": false
+    },
+    {
+      "root": 7,
+      "excitation_ev": 3.4920489694875463,
+      "oscillator_strength": 0.0012112263222916833,
+      "transition_dipole_au": [
+        0.009693523257695666,
+        -0.1079067934138353,
+        0.04919014456448288
+      ],
+      "native_frontier_subspace_weight": 1.9882550571688816e-05,
+      "selected": false
+    },
+    {
+      "root": 8,
+      "excitation_ev": 3.649153592261393,
+      "oscillator_strength": 0.004767423780931379,
+      "transition_dipole_au": [
+        -0.030183950771133533,
+        -0.21015643541021728,
+        0.09082142087677189
+      ],
+      "native_frontier_subspace_weight": 1.461424305007556e-06,
+      "selected": false
+    }
+  ],
+  "target_coverage": {
+    "minimum_target_coverage": 0.5797110784530496,
+    "required_target_coverage": 0.49,
+    "target_rank": 1,
+    "retained_roots": 1,
+    "fragmented": false,
+    "complete_target_coverage": 0.6945763362624813
+  },
+  "original_spectrum_transition_replay_error_au": 0.0,
+  "original_native_projector_replay_error": 0.0,
+  "spin_squared": 0.0,
+  "spin_scope": "Every basis CSF is a coherent spin singlet",
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_solves": 0,
+  "scope": "Exact fixed-native-ground CSF transition operators for experimental static-matched Hamiltonian; no correlated-ground or pigment nuclear-derivative claim"
+}

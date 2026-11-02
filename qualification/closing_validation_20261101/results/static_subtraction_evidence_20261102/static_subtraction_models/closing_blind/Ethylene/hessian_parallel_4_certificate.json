@@ -1,0 +1,24 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "model": "963f34260956d742f7755d51366aa70a0389d8773291395abdced271da248e19",
+  "static_self_energy_subtraction": true,
+  "energy_max_error_ev": 2.842170943040401e-14,
+  "spin_squared": [
+    0.0
+  ],
+  "restart_error_hartree": 5.329070518200751e-15,
+  "public_API_seconds": 6.099569332960527,
+  "complete_analytic_Hessian": true,
+  "hessian_workers": 4,
+  "serial_matrix_comparison": {
+    "energy_max_error_hartree": 0.0,
+    "gradient_max_error_hartree_per_bohr": 0.0,
+    "Hessian_max_error_hartree_per_bohr2": 0.0
+  },
+  "independent_directional_energy_validation": [],
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_solves": 0,
+  "finite_differences_in_production": false,
+  "scope": "Frozen anchored molecular model; no pigment nuclear derivative qualification"
+}

@@ -1,0 +1,7 @@
+{
+  "cohort": "closing_blind",
+  "molecule": "Ethylene",
+  "status": "rejected",
+  "reason": "ValueError(('complementary static inverse did not converge', 0, 0, 1.0))",
+  "wall_seconds": 0.041757708007935435
+}

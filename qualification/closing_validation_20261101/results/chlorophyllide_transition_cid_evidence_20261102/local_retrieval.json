@@ -1,0 +1,21 @@
+{
+  "verified_files": 209,
+  "remote_only_files": [
+    "logs/chlorophyllide_transition_cid_N14_W14.txt",
+    "logs/chlorophyllide_transition_cid_N14_W16.txt",
+    "logs/chlorophyllide_transition_cid_N15_W15.txt",
+    "logs/chlorophyllide_transition_cid_N15_W16.txt",
+    "logs/chlorophyllide_transition_cid_N16_W16.txt",
+    "logs/chlorophyllide_transition_cid_assessment_pipeline.txt",
+    "logs/chlorophyllide_transition_cid_audit.txt",
+    "logs/chlorophyllide_transition_cid_collection.txt",
+    "spectra/N14_W14/scalar_elements.json",
+    "spectra/N14_W16/scalar_elements.json",
+    "spectra/N15_W15/scalar_elements.json",
+    "spectra/N15_W16/scalar_elements.json",
+    "spectra/N16_W16/scalar_elements.json",
+    "spectra/N2_W5/scalar_elements.json"
+  ],
+  "remote_archive": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/chlorophyllide_transition_cid_evidence_20261102",
+  "all_retrieved_hashes_match": true
+}

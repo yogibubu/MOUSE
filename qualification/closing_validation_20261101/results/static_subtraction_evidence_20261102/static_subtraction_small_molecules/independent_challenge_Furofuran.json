@@ -1,0 +1,39 @@
+{
+  "cohort": "independent_challenge",
+  "molecule": "Furofuran",
+  "status": "solved",
+  "model_sha256": "03ab50c1a255a601131a3e627f2d3b3bf1dd00679c6e98af7a81b80ca3cdb30a",
+  "states": [
+    {
+      "id": "C001",
+      "native_gap_ev": 5.362588440185545,
+      "candidate_gap_ev": 5.5929472688366575,
+      "overlap": 0.9999917518923428,
+      "root": 1
+    },
+    {
+      "id": "C002",
+      "native_gap_ev": 5.609636153411915,
+      "candidate_gap_ev": 6.085346026321311,
+      "overlap": 0.998578211749482,
+      "root": 2
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 4,
+    "complement_dimension": 167,
+    "complement_minimum_eigenvalue_hartree": 0.3086968588848972,
+    "maximum_inverse_relative_residual": 4.561018596006867e-11,
+    "inverse_iterations": [
+      13,
+      14,
+      14,
+      14
+    ],
+    "counterterm_asymmetry_hartree": 5.968316119098205e-14,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 7.30386849999195
+}

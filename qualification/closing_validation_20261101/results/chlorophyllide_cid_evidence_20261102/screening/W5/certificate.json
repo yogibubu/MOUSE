@@ -1,0 +1,26 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "molecule": "Chlorophyllide_a",
+  "wall_seconds": 79.43536183401011,
+  "bath_efficiency_eta": 0.6,
+  "eta_retuned": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "auxbasis": "def2-universal-jkfit",
+  "auxiliary_functions": 4042,
+  "native_orbitals": 219,
+  "bath_virtuals": 1062,
+  "minimum_native_gap": 0.15603430690393147,
+  "minimum_bath_gap": 0.2513796018177879,
+  "positive_dielectric_by_construction": true,
+  "retained_active_hole_rank": 9,
+  "retained_active_particle_rank": 9,
+  "active_frontier": 5,
+  "unchanged_bath_vertices_reused": false,
+  "CI_selection": "Explicit spin-singlet rank-two frontier; no excitation labels in screening",
+  "reference_energies_read": false
+}

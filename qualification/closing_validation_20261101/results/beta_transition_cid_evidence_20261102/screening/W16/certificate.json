@@ -1,0 +1,48 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "molecule": "Beta_carotene",
+  "wall_seconds": 41.60673133400269,
+  "bath_efficiency_eta": 0.6,
+  "eta_retuned": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "offset_ev": 0,
+  "auxbasis": "def2-universal-jkfit",
+  "auxiliary_functions": 4008,
+  "native_orbitals": 216,
+  "bath_virtuals": 1162,
+  "minimum_native_gap": 0.17879568556608513,
+  "minimum_bath_gap": 0.24805156355194224,
+  "positive_dielectric_by_construction": true,
+  "retained_active_hole_rank": 6,
+  "retained_active_particle_rank": 6,
+  "CI_selection": "Frozen original two-occupied/two-virtual frontier; even-sector augmentation only if nuclear reflection is certified",
+  "reference_energies_read": false,
+  "active_frontier": 16,
+  "screening_mode": "coherent_transitions",
+  "active_exclusion": {
+    "canonical_directions": 255,
+    "coherent_extra_directions": 1,
+    "total_excluded_directions": 256,
+    "constraint_relative_residual": 3.253967453911254e-17,
+    "coherent_singular_values": [
+      2.3411055282427347,
+      3.5209011004314793e-28
+    ],
+    "positive_polarization_by_Gram_construction": true
+  },
+  "quadratic_form_errors": [
+    1.6653345369377348e-16,
+    9.71445146547012e-17,
+    1.3877787807814457e-16
+  ],
+  "definition": "Exact positive constrained native resolvent in actual canonical-single plus optimized-CSF one-body transition span; no Cartesian product of hole and particle spans",
+  "bath_vertices_reused": true,
+  "native_functional_changed": false,
+  "parameters_retuned": false,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0
+}

@@ -1,0 +1,30 @@
+{
+  "cohort": "extra_npi",
+  "molecule": "formamide",
+  "status": "solved",
+  "model_sha256": "2831a5d54ea1db582841074cc09f401a376b3c50674f0ac9c6bf22f6fe701c4e",
+  "states": [
+    {
+      "id": "N002",
+      "native_gap_ev": 5.347908436445918,
+      "candidate_gap_ev": 5.36359739196708,
+      "overlap": 0.9999999983001515,
+      "root": 1
+    }
+  ],
+  "subtraction_certificate": {
+    "definition": "Exact zero-frequency self-energy subtraction",
+    "primary_dimension": 2,
+    "complement_dimension": 174,
+    "complement_minimum_eigenvalue_hartree": 0.573581671000601,
+    "maximum_inverse_relative_residual": 4.7237033417081606e-11,
+    "inverse_iterations": [
+      4,
+      14
+    ],
+    "counterterm_asymmetry_hartree": 3.524898929697595e-20,
+    "energy_offset_ev": 0.0,
+    "diagonal_complement_approximation": false
+  },
+  "wall_seconds": 3.678354582982138
+}

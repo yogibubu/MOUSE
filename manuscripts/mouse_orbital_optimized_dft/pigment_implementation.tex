@@ -184,3 +184,24 @@ the pigment extension is not pooled with the 26-state exposed accuracy ledger.
 The new projector is checked against the direct constrained inverse and under
 unitary changes of its active basis. Screening and all CI matrices are frozen
 within each fixed-interaction convergence sequence.
+
+The canonical accelerator also supports two-word, 128-bit spin-orbital
+masks. Fermionic parity includes both words, and the sparse
+determinant-to-CSF transform is contracted during Slater--Condon assembly.
+This avoids allocating the dense determinant Hamiltonian when extending
+beyond 32 active spatial orbitals. Tests cross the 64-bit boundary and
+compare with arbitrary-precision occupation algebra. The common-core
+cofactor accelerator supports up to 32 active electrons per spin without
+changing its determinant polynomial. Native functional diagonals and
+four-spin blocks from a smaller completed frontier are reused after model,
+orbital and record-identity checks; screened couplings are recomputed when
+the screening partition changes.
+
+For the static-matched candidate, an optional generalized block Davidson
+solver reuses the stored CI subspace. Rank-revealing metric orthogonalization
+handles the dependent residual directions produced by a low-rank Hamiltonian
+update. Only redundant search directions are removed; all configurations
+and matrix elements remain in the operator. Row-block matrix products can
+share the immutable Hamiltonian across workers. Every returned root must
+pass the full generalized residual and metric-normalization tests. This
+algorithm changes the numerical search, rather than the physical model.

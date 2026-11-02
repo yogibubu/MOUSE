@@ -1,0 +1,32 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "artifact_prefix": "chlorophyllide_transition_cid",
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "eta": 0.6,
+  "energy_offset_ev": 0,
+  "energy_tolerance_ev": 0.02,
+  "successive_increments_required": 2,
+  "roots": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "baseline_frontiers": [
+    2
+  ],
+  "baseline_screening_frontier": 5,
+  "fixed_screening_frontier": 16,
+  "screening_mode": "coherent_transitions",
+  "case_modes": {
+    "N2_W5": "legacy_sectors"
+  },
+  "extra_evidence_files": [
+    "coherent_transition_screening_protocol.json"
+  ],
+  "scope": "General projector correction; no pigment-specific parameters or excitation-energy fitting. Prior product-sector results are preserved as a separate model generation."
+}
