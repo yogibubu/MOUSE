@@ -1,0 +1,75 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref,natbib}
+\usepackage{siunitx}
+\newcommand{\Eh}{E_h}
+\newcommand{\bohr}{\mathrm{bohr}}
+\graphicspath{{../mouse_orbital_optimized_dft/figures/}}
+\title{Orbital-Optimized DFT for Excited States in MOUSE:$\Delta$SCF, Spin-Pure ROKS, and Analytic Nuclear Response}
+\author{Vincenzo Barone}
+\date{Draft companion manuscript --- 2 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a full-integral DFT implementation of state-specific excited-state
+optimization in MOUSE. Fixed-occupation unrestricted $\Delta$SCF and a
+common-orbital two-open-orbital ROKS construction are implemented on top of
+the ground-state PySCF machinery. The ROKS energy is the multiplet combination
+$E_S=2E_M-E_T$ evaluated with common spatial orbitals, giving a coherent
+spin-pure singlet representation. Orbital stationarity is solved with a
+residual trust-region algorithm and its coupled response is differentiated
+analytically through molecular gradients and Hessians, including moving-grid
+XC terms. The present draft establishes the implementation and derivative
+qualification; chemical accuracy, broad transferability, and a complete
+comparison with ORCA MOM/GMF and native PySCF MOM remain future work.
+\end{abstract}
+
+\section{Scope and motivation}
+Response methods such as TDA and TD-DFT describe many excited states from a
+ground-state reference. State-specific orbital optimization instead obtains an
+excitation from the difference between stationary electronic energies and can
+reuse the energy and derivative infrastructure of a ground-state program.
+Levi's direct-optimization and saddle-search work motivates treating an
+excited state as a stationary point, often a saddle, rather than as a fragile
+SCF fixed point. The present work develops that idea as a general full-DFT
+backend, separate from the semiempirical OO-CID model reported elsewhere.
+
+\section{Theory}
+For a fixed non-Aufbau occupation, unrestricted $\Delta$SCF optimizes the
+spin orbitals directly and may remain spin contaminated. For a two-open-
+orbital singlet, MOUSE uses common spatial orbitals and evaluates
+\begin{equation}
+ E_S[\mathbf C]=2E_M[\mathbf C]-E_T[\mathbf C],
+\end{equation}
+where mixed and triplet components share the same orbitals. The resulting
+two-determinant CSF has $\langle S^2\rangle=0$ by construction, while the
+DFT multiplet-sum energy remains an approximate functional expression.
+
+\section{Implementation}
+The implementation is a PySCF extension with fixed occupations, state
+following, orbital continuation, and optional freeze-and-release preparation.
+The final solve releases all nonredundant orbital rotations. The residual
+Jacobian is treated as nonsymmetric away from stationarity; its exact adjoint
+drives a small residual trust-region step. Range-separated exact integrals
+are cached when memory permits, with an exact native fallback.
+
+\input{../mouse_orbital_optimized_dft/dft_backend.tex}
+
+\section{Qualification and current limitations}
+The qualified scope is all-electron, full-integral molecular HF and LDA/GGA,
+including global and range-separated hybrids, with analytic moving-grid
+response. Density fitting, solvent, relativistic, meta-GGA and ECP Hessians
+are outside the present qualification. The tests establish derivative
+consistency and solver robustness; they do not yet establish a general
+accuracy advantage over MOM, ORCA, PySCF, TDA, or other response methods.
+
+\section{Outlook}
+The next stage will compare identical roots and functionals across MOUSE,
+ORCA and native PySCF, add GMF/saddle-following benchmarks, and evaluate
+excited-state geometries, frequencies, CT and Rydberg states on a frozen
+independent set.
+
+\bibliographystyle{unsrtnat}
+\bibliography{../mouse_orbital_optimized_dft/references}
+\end{document}
