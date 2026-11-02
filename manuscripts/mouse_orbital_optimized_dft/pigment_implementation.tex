@@ -104,7 +104,9 @@ zero second cofactors bypass their pair-tensor contraction. Canonical columns
 with a common retained bra are evaluated in batches with the same determinant
 cofactors and spin coefficients. Their active/null pair features remain outer
 products: the auxiliary factors are transformed along the two orbital indices
-before contraction, avoiding a flattened dense feature transform. Coulomb
+before contraction, avoiding a flattened dense feature transform. Division-free prefix/suffix
+products form the first and second spectral cofactors while retaining
+multiple zero singular values. Coulomb
 feature contractions use the existing auxiliary factors of the same
 screened interaction, with no additional fitting or truncation. The canonical
 determinant-to-CSF transformation uses its exact sparse coefficients

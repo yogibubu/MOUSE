@@ -32,3 +32,13 @@ def test_fixed_bra_batches_preserve_spin_recoupling_and_fallback():
  np.testing.assert_allclose(engine.elements(bra,kets,batch_size=2),expected,atol=1e-11,rtol=1e-11)
  fallback=[(1.,(y[:,[1,2,3]],y[:,[1,2,3]]))]
  np.testing.assert_allclose(engine.elements(fallback,kets),[ham.csf(fallback,ket) for ket in kets],atol=1e-11,rtol=1e-11)
+
+
+def test_prefix_cofactors_preserve_multiple_null_and_underflow_sectors():
+ from matrix_gfn2._nosi_fixed_bra import spectral_cofactors
+ from matrix_gfn2._nosi_slater import cofactors
+ rng=np.random.default_rng(298)
+ for a in [rng.normal(size=(4,4)),np.diag([1.,2.,0.,0.]),np.diag([1.,1.,1e-200,1e-200])]:
+  actual=spectral_cofactors(a);expected=cofactors(a)
+  for x,y in zip(actual,expected):np.testing.assert_allclose(x,y,atol=2e-12,rtol=2e-12)
+ assert spectral_cofactors(np.diag([1.,1.,1e-200,1e-200]))[1][2,2,3,3]==1.

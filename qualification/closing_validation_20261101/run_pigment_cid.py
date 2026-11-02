@@ -170,8 +170,8 @@ def run(name,frontier=2,screening_frontier=5,roots=None,refresh_observables=Fals
  write(out/'result.json',report);print(json.dumps(report,indent=2),flush=True)
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--wait-for-screening',action='store_true');p.add_argument('--frontier',type=int,choices=range(2,17),default=2);p.add_argument('--refresh-observables',action='store_true');p.add_argument('--roots',type=int);p.add_argument('--checkpoint-batch-size',type=int,default=512);p.add_argument('--screening-mode',choices=['legacy_sectors','coherent_transitions'],default='legacy_sectors');p.add_argument('--screening-frontier',type=int,default=5);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--wait-for-screening',action='store_true');p.add_argument('--frontier',type=int,choices=range(2,17),default=2);p.add_argument('--refresh-observables',action='store_true');p.add_argument('--roots',type=int);p.add_argument('--threads',type=int,default=8);p.add_argument('--checkpoint-batch-size',type=int,default=512);p.add_argument('--screening-mode',choices=['legacy_sectors','coherent_transitions'],default='legacy_sectors');p.add_argument('--screening-frontier',type=int,default=5);a=p.parse_args()
  while not (screening_path(a.name,a.screening_frontier,a.screening_mode)/'certificate.json').exists():
   if not a.wait_for_screening:raise RuntimeError('Screening incomplete')
   time.sleep(20)
- with threadpool_limits(8):run(a.name,a.frontier,a.screening_frontier,a.roots,a.refresh_observables,a.checkpoint_batch_size,a.screening_mode)
+ with threadpool_limits(a.threads):run(a.name,a.frontier,a.screening_frontier,a.roots,a.refresh_observables,a.checkpoint_batch_size,a.screening_mode)

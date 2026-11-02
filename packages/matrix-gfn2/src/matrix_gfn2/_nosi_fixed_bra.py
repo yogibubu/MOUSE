@@ -13,10 +13,15 @@ from ._nosi_slater import determinant
 def spectral_cofactors(matrix):
     """First/second determinant derivatives without inverse singular values."""
     n=len(matrix);u,s,vh=np.linalg.svd(matrix);phase=determinant(u)*determinant(vh)
-    first_weights=np.array([np.prod(np.delete(s,i)) for i in range(n)])
+    # Division-free prefix/suffix products preserve multiple zero singular
+    # values while avoiding one Python allocation/product for every pair.
+    prefix=np.r_[1.,np.cumprod(s)];suffix=np.r_[np.cumprod(s[::-1])[::-1],1.]
+    first_weights=prefix[:-1]*suffix[1:]
     weights=np.zeros((n,n))
-    for i in range(n):
-        for j in range(i):weights[i,j]=weights[j,i]=np.prod(np.delete(s,[i,j]))
+    for i in range(n-1):
+        middle=np.r_[1.,np.cumprod(s[i+1:n-1])]
+        weights[i,i+1:]=prefix[i]*middle*suffix[i+2:]
+    weights+=weights.T
     feature=np.einsum('ia,ja->aij',u,vh.T).reshape(n,n*n)
     term=(feature.T@weights@feature).reshape((n,)*4)
     return phase*(u*first_weights)@vh,phase*(term-term.swapaxes(1,3))

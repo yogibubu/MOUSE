@@ -1,5 +1,6 @@
 """Constrain native screening by the actual explicit singlet transition space."""
 from run_pigment_cid import *
+import fcntl
 from scipy.linalg import cho_factor,cho_solve
 from pigment_block_matmul import product
 from matrix_gfn2._nosi_slater import transition_density
@@ -49,5 +50,8 @@ def run(name,frontier):
  report=dict(prior);report.update(host=socket.getfqdn(),active_frontier=frontier,screening_mode='coherent_transitions',active_exclusion=details,quadratic_form_errors=errors,wall_seconds=time.monotonic()-start,definition='Exact positive constrained native resolvent in actual canonical-single plus optimized-CSF one-body transition span; no Cartesian product of hole and particle spans',bath_vertices_reused=True,native_functional_changed=False,parameters_retuned=False,DFT_imports=0,new_SCC_calls=0);write(out/'certificate.json',report);print(json.dumps(report,indent=2),flush=True)
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--frontier',type=int,required=True);a=p.parse_args()
- with threadpool_limits(8):run(a.name,a.frontier)
+ p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--frontier',type=int,required=True);p.add_argument('--threads',type=int,default=8);a=p.parse_args()
+ lockdir=screening_path(a.name,a.frontier,'coherent_transitions');lockdir.mkdir(parents=True,exist_ok=True)
+ with (lockdir/'.build.lock').open('a') as lock:
+  fcntl.flock(lock,fcntl.LOCK_EX)
+  with threadpool_limits(a.threads):run(a.name,a.frontier)

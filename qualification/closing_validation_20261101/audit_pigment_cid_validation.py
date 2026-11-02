@@ -3,23 +3,25 @@ from run_pigment_cid import *
 from scipy.optimize import linear_sum_assignment
 parser=argparse.ArgumentParser();parser.add_argument('--protocol',required=True);args=parser.parse_args()
 protocol=json.loads((HERE/args.protocol).read_text());NAME=protocol['molecule'];prefix=protocol['artifact_prefix'];fixed_w=protocol['fixed_screening_frontier'];baseline_w=protocol['baseline_screening_frontier'];root_ids=np.array(protocol['roots'])-1;root_count=len(root_ids)
+def case_mode(n,w):return protocol.get('case_modes',{}).get(f'N{n}_W{w}',protocol.get('screening_mode','legacy_sectors'))
 def folder(n,w):
+ if case_mode(n,w)=='coherent_transitions':return HERE/'pigment_cid_transition'/NAME/f'screening_{w}'/f'frontier_{n}'
  return HERE/('pigment_cid/'+NAME if n==2 and w==5 else f'pigment_cid_expansion/{NAME}/'+('' if w==5 else f'screening_{w}/')+f'frontier_{n}')
 def read(n,w):return json.loads((folder(n,w)/'result.json').read_text())
-def screen_check(w):
- f=screening_path(NAME,w);d=np.load(f/'dielectric_polarization.npy');bn=np.load(f/'native_polarization.npy',mmap_mode='r');bb=np.load(f/'bath_polarization.npy',mmap_mode='r');lp=np.load(f/'lp.npy',mmap_mode='r');weighted=np.load(f/'weighted_lp.npy',mmap_mode='r');screen=np.load(f/'screened_pair.npy',mmap_mode='r');rng=np.random.default_rng(184+w);qe=re=we=0.
+def screen_check(w,mode):
+ f=screening_path(NAME,w,mode);d=np.load(f/'dielectric_polarization.npy');bn=np.load(f/'native_polarization.npy',mmap_mode='r');bb=np.load(f/'bath_polarization.npy',mmap_mode='r');lp=np.load(f/'lp.npy',mmap_mode='r');weighted=np.load(f/'weighted_lp.npy',mmap_mode='r');screen=np.load(f/'screened_pair.npy',mmap_mode='r');rng=np.random.default_rng(184+w);qe=re=we=0.
  for _ in range(3):
   v=rng.normal(size=len(d));v/=np.linalg.norm(v);expected=float(np.sum((v@bn)**2)+.6*np.sum((v@bb)**2));qe=max(qe,abs(float(v@d@v)-expected)/max(1.,abs(expected)))
   j=int(rng.integers(lp.shape[1]));re=max(re,float(np.linalg.norm(d@weighted[:,j]+weighted[:,j]-lp[:,j])/np.linalg.norm(lp[:,j])));we=max(we,float(np.max(abs(lp[:,j]@weighted-screen[j]))))
  assert max(qe,re,we)<1e-9
- return dict(W=w,quadratic_form_relative_error=qe,dielectric_solve_relative_residual=re,factorized_screened_row_max_error=we)
+ return dict(W=w,screening_mode=mode,quadratic_form_relative_error=qe,dielectric_solve_relative_residual=re,factorized_screened_row_max_error=we)
 def eigen_check(n,w):
  f=folder(n,w);r=read(n,w)
  model_hash=hashlib.sha256((HERE/f'pigment_models/{NAME}/manifest.json').read_bytes()).hexdigest();assert r['model_sha256']==model_hash
  coefficients=[]
  for ordinal in r['retained_ROKS_ordinals']:
   with np.load(HERE/f'pigment_roks/{NAME}/state_{ordinal}/checkpoint.npz') as saved:coefficients.append(saved['coefficients'].copy())
- expected=hashlib.sha256((HERE/f'pigment_models/{NAME}/manifest.json').read_bytes()+(screening_path(NAME,w)/'certificate.json').read_bytes()+np.asarray(coefficients).tobytes()+json.dumps(r['auxiliary_records'],sort_keys=True).encode()).hexdigest()
+ expected=hashlib.sha256((HERE/f'pigment_models/{NAME}/manifest.json').read_bytes()+(screening_path(NAME,w,case_mode(n,w))/'certificate.json').read_bytes()+np.asarray(coefficients).tobytes()+json.dumps(r['auxiliary_records'],sort_keys=True).encode()).hexdigest()
  journal=f/'scalar_elements.json'
  if journal.exists():assert json.loads(journal.read_text())['identity']==expected,'CI checkpoint identity changed'
  else:
@@ -54,6 +56,6 @@ with threadpool_limits(4):
  for key in ['molecule','weights','lambda_exchange','eta','energy_offset_ev','energy_tolerance_ev','successive_increments_required','roots','fixed_screening_frontier']:
   assert convergence['protocol'][key]==protocol[key],('Frozen numerical protocol changed',key)
  convergence['protocol_at_execution']=convergence['protocol'];convergence['protocol']=protocol
- ns=convergence['windows'];pairs=[(protocol['baseline_frontiers'][0],baseline_w)]+[(n,n) for n in ns]+[(n,fixed_w) for n in ns];checks=[eigen_check(n,w) for n,w in dict.fromkeys(pairs)];screens=[screen_check(w) for w in sorted(set([baseline_w,fixed_w]+ns))];tracks=[tracking(a,a,b,b) for a,b in zip(ns,ns[1:])]+[tracking(a,fixed_w,b,fixed_w) for a,b in zip(ns,ns[1:])]
+ ns=convergence['windows'];pairs=[(protocol['baseline_frontiers'][0],baseline_w)]+[(n,n) for n in ns]+[(n,fixed_w) for n in ns];checks=[eigen_check(n,w) for n,w in dict.fromkeys(pairs)];screens=[screen_check(w,mode) for w,mode in sorted(set((w,case_mode(n,w)) for n,w in pairs))];tracks=[tracking(a,a,b,b) for a,b in zip(ns,ns[1:])]+[tracking(a,fixed_w,b,fixed_w) for a,b in zip(ns,ns[1:])]
  result=dict(convergence=convergence,eigenstate_checks=checks,screening_checks=screens,root_tracking=tracks,coherent_final_states=read(ns[-1],ns[-1])['states'],coherent_selected_states=read(ns[-1],ns[-1])['selected_states'],all_algebra_checks_passed=True,energy_converged=convergence['coherent_converged'] and convergence['fixed_Hamiltonian_converged'],scope='Numerical fixed-model vertical validation; independent molecular accuracy and pigment nuclear derivatives not established',host=socket.getfqdn())
  write(HERE/f'{prefix}_assessment.json',result);print(json.dumps(result,indent=2),flush=True)
