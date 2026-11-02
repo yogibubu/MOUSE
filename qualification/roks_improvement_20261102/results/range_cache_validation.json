@@ -1,0 +1,42 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "cases": [
+    {
+      "functional": "CAM-B3LYP",
+      "maximum_JK_error": 2.220446049250313e-15,
+      "errors": {
+        "energy": 0.0,
+        "gradient": 5.134781488891349e-16,
+        "Jacobian_action": 7.993605777301127e-15
+      },
+      "cache": {
+        "Fock_builds": 2,
+        "response_builds": 2,
+        "Jacobian_actions": 1,
+        "range_integral_builds": 3,
+        "range_integral_hits": 5,
+        "range_integral_bytes": 9744
+      },
+      "zero_budget_native_fallback": true
+    },
+    {
+      "functional": "WB97X",
+      "maximum_JK_error": 2.220446049250313e-15,
+      "errors": {
+        "energy": 2.842170943040401e-14,
+        "gradient": 1.2663481374630692e-15,
+        "Jacobian_action": 7.105427357601002e-15
+      },
+      "cache": {
+        "Fock_builds": 2,
+        "response_builds": 2,
+        "Jacobian_actions": 1,
+        "range_integral_builds": 2,
+        "range_integral_hits": 6,
+        "range_integral_bytes": 6496
+      },
+      "zero_budget_native_fallback": true
+    }
+  ],
+  "integral_screening_or_truncation": false
+}

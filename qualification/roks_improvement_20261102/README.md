@@ -43,9 +43,35 @@ spherical aug-cc-pVDZ calculation basis before SCF. Previously completed ground
 references in that basis are reused. Acetaldehyde/WB97X qualifies after this
 projection (4.180430613 eV, orbital residual 6.98e-12).
 
-The `vertical/` archive is a timestamped partial campaign snapshot. Only a
+The `vertical/` archive now contains the complete 18-calculation campaign. Only a
 `result.json` denotes a stationary, state-qualified prediction; alternative and
 unfinished accepted checkpoints are retained for provenance, never scored.
-`functional_comparison.json` leaves aggregate MAEs and the globally selected
-functional unset until all required pilot cases are present. Failed early driver
+`functional_comparison.json` reports all four pilot and two confirmation
+states for each functional, selecting WB97X by pilot MAE alone. Failed early driver
 attempts concern the AO/projection contract and are preserved in remote logs.
+
+Final numerical/accuracy qualification
+--------------------------------------
+The final linear tolerance is 0.1 times the unchanged nonlinear tolerance;
+`results/final_solver_linear_tolerance/` retains the repeated 6/6 recovery checks.
+`results/range_cache_validation.json` compares native/cached exact J/K, orbital
+energies, residuals and Jacobian actions, including native fallback at zero cache
+budget. `results/range_cache_response_regression.json` preserves the complete
+CAM-B3LYP analytic Hessian within 3.1e-13 Ha/bohr^2. The independent WB97X water
+checks, both before and after cache activation, are in `results/WB97X*_response/`.
+Cached WB97X independent gradient/Hessian-vector errors are 1.67e-9 and 1.95e-9.
+
+`results/range_cache_benchmark.json` uses identical qualified butadiene/WB97X
+orbitals, two threads and alternating native/cached orbital actions. Median
+action time decreases from 3.921 to 1.675 seconds (2.34x); setup is included
+separately and 460,660,368 integral bytes are cached. This is one action benchmark
+under concurrent host load, not a total-run/TDA comparison or memory scaling study.
+
+All 18 calculations satisfy the same residual and frozen-target identity criteria.
+WB97X reduces pilot MAE from PBE0's 0.715 to 0.547 eV and confirmation MAE from
+0.295 to 0.109 eV. Its furan error is 1.121 eV (PBE0: 0.626 eV); improvement is
+not uniform. No global pi-pi accuracy cure or blind validation is established.
+The functional choice remains a candidate for independent testing; the separate
+semiempirical ledger and its parameters are unchanged. The figure and standalone
+scorer reproduce the complete results. Logs preserve initial driver errors and
+checkpoint/continuation attempts. Production code contains no molecular branches.

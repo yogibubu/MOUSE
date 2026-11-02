@@ -71,18 +71,20 @@ with threadpool_limits(2):
  checkpoint=folder/'accepted.npz';seed=initial;resume=checkpoint if checkpoint.exists() else None
  # A preserved unfinished checkpoint can switch to a qualified continuation
  # seed; completed roots above are immutable and are never recalculated.
+ saved_status=None
  if resume is not None:
   with np.load(resume) as z:details=json.loads(str(z['metadata']))
-  if (details.get('solver_certificate') or {}).get('status')!='converged':
-   for source_functional in ['WB97X','CAM-B3LYP','PBE0']:
-    if source_functional==a.functional:continue
-    other=folder.parent/source_functional
-    if not (other/'result.json').exists():continue
-    seed_path=other/'qualified.npz' if (other/'qualified.npz').exists() else other/'accepted.npz'
-    with np.load(seed_path) as z:seed=z['coefficients'].copy()
-    write(folder/'continuation_seed.json',dict(source_functional=source_functional,sha256=digest(seed_path),preserved_checkpoint=str(resume)))
-    checkpoint=folder/('continued_'+source_functional+'.npz');resume=checkpoint if checkpoint.exists() else None
-    break
+  saved_status=(details.get('solver_certificate') or {}).get('status')
+ if saved_status!='converged':
+  for source_functional in ['WB97X','CAM-B3LYP','PBE0']:
+   if source_functional==a.functional:continue
+   other=folder.parent/source_functional
+   if not (other/'result.json').exists():continue
+   seed_path=other/'qualified.npz' if (other/'qualified.npz').exists() else other/'accepted.npz'
+   with np.load(seed_path) as z:seed=z['coefficients'].copy()
+   write(folder/'continuation_seed.json',dict(source_functional=source_functional,sha256=digest(seed_path),preserved_checkpoint=str(resume) if resume else None))
+   checkpoint=folder/('continued_'+source_functional+'.npz');resume=checkpoint if checkpoint.exists() else None
+   break
  result=optimize_roks(excited,seed,occ,reference_coefficients=initial,ground_energy_hartree=energy0,
     orbital_tolerance=1e-8,maximum_iterations=120,maximum_step=.3,minimum_reference_overlap=.1,
     restart=resume,checkpoint=checkpoint,strict=False)

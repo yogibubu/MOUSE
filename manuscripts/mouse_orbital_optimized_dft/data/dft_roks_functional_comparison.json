@@ -1,0 +1,213 @@
+{
+  "label_exposure": "Historically exposed, not blind",
+  "basis_limitation": "aug-cc-pVDZ calculations vs QUEST TBE/AVTZ targets",
+  "rows": [
+    {
+      "id": "B001",
+      "name": "Formaldehyde",
+      "role": "pilot",
+      "functional": "PBE0",
+      "reference_ev": 3.966,
+      "prediction_ev": 3.628420977630314,
+      "error_ev": -0.3375790223696864
+    },
+    {
+      "id": "B001",
+      "name": "Formaldehyde",
+      "role": "pilot",
+      "functional": "CAM-B3LYP",
+      "reference_ev": 3.966,
+      "prediction_ev": 3.680242902509783,
+      "error_ev": -0.28575709749021705
+    },
+    {
+      "id": "B001",
+      "name": "Formaldehyde",
+      "role": "pilot",
+      "functional": "WB97X",
+      "reference_ev": 3.966,
+      "prediction_ev": 3.811303470748543,
+      "error_ev": -0.15469652925145727
+    },
+    {
+      "id": "B002",
+      "name": "Ethylene",
+      "role": "pilot",
+      "functional": "PBE0",
+      "reference_ev": 7.897,
+      "prediction_ev": 7.08740644592997,
+      "error_ev": -0.8095935540700303
+    },
+    {
+      "id": "B002",
+      "name": "Ethylene",
+      "role": "pilot",
+      "functional": "CAM-B3LYP",
+      "reference_ev": 7.897,
+      "prediction_ev": 7.161574273829456,
+      "error_ev": -0.7354257261705444
+    },
+    {
+      "id": "B002",
+      "name": "Ethylene",
+      "role": "pilot",
+      "functional": "WB97X",
+      "reference_ev": 7.897,
+      "prediction_ev": 7.4208731872387625,
+      "error_ev": -0.4761268127612377
+    },
+    {
+      "id": "B003",
+      "name": "Butadiene",
+      "role": "pilot",
+      "functional": "PBE0",
+      "reference_ev": 6.222,
+      "prediction_ev": 5.133817178946353,
+      "error_ev": -1.088182821053647
+    },
+    {
+      "id": "B003",
+      "name": "Butadiene",
+      "role": "pilot",
+      "functional": "CAM-B3LYP",
+      "reference_ev": 6.222,
+      "prediction_ev": 5.458237322694455,
+      "error_ev": -0.7637626773055457
+    },
+    {
+      "id": "B003",
+      "name": "Butadiene",
+      "role": "pilot",
+      "functional": "WB97X",
+      "reference_ev": 6.222,
+      "prediction_ev": 5.785168854355635,
+      "error_ev": -0.43683114564436565
+    },
+    {
+      "id": "V010",
+      "name": "Furan",
+      "role": "pilot",
+      "functional": "PBE0",
+      "reference_ev": 6.53,
+      "prediction_ev": 7.156436022450936,
+      "error_ev": 0.6264360224509353
+    },
+    {
+      "id": "V010",
+      "name": "Furan",
+      "role": "pilot",
+      "functional": "CAM-B3LYP",
+      "reference_ev": 6.53,
+      "prediction_ev": 7.385585851674907,
+      "error_ev": 0.8555858516749071
+    },
+    {
+      "id": "V010",
+      "name": "Furan",
+      "role": "pilot",
+      "functional": "WB97X",
+      "reference_ev": 6.53,
+      "prediction_ev": 7.6505823005617755,
+      "error_ev": 1.1205823005617752
+    },
+    {
+      "id": "N001",
+      "name": "acetaldehyde",
+      "role": "confirmation",
+      "functional": "PBE0",
+      "reference_ev": 4.304,
+      "prediction_ev": 4.005079926464389,
+      "error_ev": -0.29892007353561123
+    },
+    {
+      "id": "N001",
+      "name": "acetaldehyde",
+      "role": "confirmation",
+      "functional": "CAM-B3LYP",
+      "reference_ev": 4.304,
+      "prediction_ev": 4.069144290384194,
+      "error_ev": -0.2348557096158066
+    },
+    {
+      "id": "N001",
+      "name": "acetaldehyde",
+      "role": "confirmation",
+      "functional": "WB97X",
+      "reference_ev": 4.304,
+      "prediction_ev": 4.180430612794424,
+      "error_ev": -0.12356938720557586
+    },
+    {
+      "id": "V001",
+      "name": "acetone",
+      "role": "confirmation",
+      "functional": "PBE0",
+      "reference_ev": 4.468,
+      "prediction_ev": 4.1769234076275215,
+      "error_ev": -0.2910765923724785
+    },
+    {
+      "id": "V001",
+      "name": "acetone",
+      "role": "confirmation",
+      "functional": "CAM-B3LYP",
+      "reference_ev": 4.468,
+      "prediction_ev": 4.261118076477972,
+      "error_ev": -0.20688192352202783
+    },
+    {
+      "id": "V001",
+      "name": "acetone",
+      "role": "confirmation",
+      "functional": "WB97X",
+      "reference_ev": 4.468,
+      "prediction_ev": 4.372648122008155,
+      "error_ev": -0.09535187799184541
+    }
+  ],
+  "summary": {
+    "pilot": {
+      "PBE0": {
+        "completed": 4,
+        "expected": 4,
+        "MAE_ev": 0.7154478549860748,
+        "maximum_error_ev": 1.088182821053647
+      },
+      "CAM-B3LYP": {
+        "completed": 4,
+        "expected": 4,
+        "MAE_ev": 0.6601328381603035,
+        "maximum_error_ev": 0.8555858516749071
+      },
+      "WB97X": {
+        "completed": 4,
+        "expected": 4,
+        "MAE_ev": 0.547059197054709,
+        "maximum_error_ev": 1.1205823005617752
+      }
+    },
+    "confirmation": {
+      "PBE0": {
+        "completed": 2,
+        "expected": 2,
+        "MAE_ev": 0.2949983329540449,
+        "maximum_error_ev": 0.29892007353561123
+      },
+      "CAM-B3LYP": {
+        "completed": 2,
+        "expected": 2,
+        "MAE_ev": 0.22086881656891721,
+        "maximum_error_ev": 0.2348557096158066
+      },
+      "WB97X": {
+        "completed": 2,
+        "expected": 2,
+        "MAE_ev": 0.10946063259871064,
+        "maximum_error_ev": 0.12356938720557586
+      }
+    }
+  },
+  "selected_global_functional": "WB97X",
+  "offset_ev": 0.0,
+  "energy_based_root_selection": false
+}

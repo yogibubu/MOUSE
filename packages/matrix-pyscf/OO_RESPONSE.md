@@ -121,3 +121,14 @@ small molecules with three perturbations each; recovery can reuse a previously
 stationary target. It tests numerical recovery, not discovery of six new states,
 spectral accuracy, or superiority to MOM. Functional comparisons are a separate
 historically exposed pilot and must not be described as blind validation.
+
+Range-separated hybrids additionally reuse exact packed AO ERIs at each omega.
+Mixed and triplet components share these density-independent integrals. The
+cache is capped at one quarter of the configured mean-field memory budget;
+unsupported/custom dispatch or insufficient budget uses the native exact J/K
+path. No integral truncation or density fitting is introduced. The cache is
+local to one orbital surface and its molecular geometry. Solver certificates
+report allocated integral bytes, builds and hits. GMRES also uses an absolute
+linear residual target of 0.1 times the nonlinear orbital tolerance, preventing
+unnecessary oversolving near a stationary state; the final nonlinear residual
+criterion is unchanged.

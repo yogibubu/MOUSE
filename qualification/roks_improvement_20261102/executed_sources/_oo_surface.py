@@ -1,11 +1,12 @@
 """Common analytic orbital surface for determinant and multiplet-sum DFT."""
+from types import MethodType
 import numpy as np
 from scipy.linalg import expm
 
 
 class OrbitalSurface:
     def __init__(self, mean_field, coefficients, occupations, common=False):
-        self.statistics=dict(Fock_builds=0,response_builds=0,Jacobian_actions=0)
+        self.statistics=dict(Fock_builds=0,response_builds=0,Jacobian_actions=0,range_integral_builds=0,range_integral_hits=0,range_integral_bytes=0)
         self.common=common
         self.c=np.asarray(coefficients,dtype=float)
         self.occupations=np.asarray(occupations,dtype=float)
@@ -23,6 +24,8 @@ class OrbitalSurface:
                 triplet.grids.coords=None;triplet.grids.weights=None;triplet.small_rho_cutoff=0.
             t=np.array([np.maximum(*occupations),np.minimum(*occupations)])
             self.components=[(2.,mixed,self.occupations),(-1.,triplet,t)]
+        self._range_integrals={}
+        for weight,component,occ in self.components:self._cache_range_exchange(component)
         n=self.c.shape[-1];left,right=np.triu_indices(n,1)
         if common:
             labels=np.vstack([o for w,m,o in self.components]);keep=np.any(labels[:,left]!=labels[:,right],axis=0)
@@ -30,6 +33,34 @@ class OrbitalSurface:
         else:
             self.pairs=[(left[o[left]!=o[right]],right[o[left]!=o[right]]) for o in occupations]
         self.dimension=sum(len(i) for i,j in self.pairs)
+
+    def _cache_range_exchange(self,component):
+        """Reuse exact range-separated AO ERIs within a bounded memory budget.
+
+        Native PySCF caches full Coulomb ERIs but rebuilds range-separated ERIs
+        on each Krylov action. The density-independent integrals can be shared
+        by mixed/triplet components without changing any J/K contraction.
+        """
+        from pyscf.scf.hf import dot_eri_dm
+        native=type(component).get_jk;owner_mol=component.mol
+        n=owner_mol.nao_nr();pairs=n*(n+1)//2;needed=8*pairs*(pairs+1)//2
+        budget=max(0.,float(component.max_memory))*1e6*.25
+        if not getattr(component,'xc',None) or needed>budget or 'get_jk' in component.__dict__:return
+        cache=self._range_integrals;statistics=self.statistics
+        def get_jk(instance,mol=None,dm=None,hermi=1,with_j=True,with_k=True,omega=None):
+            target=instance.mol if mol is None else mol
+            if not omega or target is not owner_mol:
+                return native(instance,mol,dm,hermi,with_j,with_k,omega)
+            key=float(omega)
+            if key not in cache:
+                if sum(value.nbytes for value in cache.values())+needed>budget:
+                    return native(instance,mol,dm,hermi,with_j,with_k,omega)
+                with target.with_range_coulomb(key):cache[key]=target.intor('int2e',aosym='s8')
+                statistics['range_integral_builds']+=1
+                statistics['range_integral_bytes']+=cache[key].nbytes
+            else:statistics['range_integral_hits']+=1
+            return dot_eri_dm(cache[key],instance.make_rdm1() if dm is None else dm,hermi,with_j,with_k)
+        component.get_jk=MethodType(get_jk,component)
 
     def spin_coefficients(self,c):
         return np.array([c,c]) if self.common else c

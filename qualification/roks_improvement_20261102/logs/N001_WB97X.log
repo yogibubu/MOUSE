@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-roks-improvement-20261102/vertical.py", line 48, in <module>
+    dm=(ground_c*ground_o)@ground_c.T;f=mf.get_hcore()+mf.get_veff(dm=dm);sao=mf.get_ovlp();r=f@dm@sao-sao@dm@f
+                                                       ^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/rks.py", line 81, in get_veff
+    n, exc, vxc = ni.nr_rks(mol, ks.grids, ks.xc, dm, max_memory=max_memory)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 1152, in nr_rks
+    for i, ao, mask, wv in block_loop(ao_deriv):
+                           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 1131, in block_loop
+    rho = make_rho(i, ao, mask, xctype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 2992, in make_rho
+    return self.eval_rho(mol, ao, dms[idm], sindex, xctype, hermi,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 170, in eval_rho
+    c0 = _dot_ao_dm(mol, ao[0], dm, non0tab, shls_slice, ao_loc)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 711, in _dot_ao_dm
+    return lib.dot(dm.T, ao.T).T
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/numpy_helper.py", line 921, in dot
+    return ddot(a, b, alpha, c, beta)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/numpy_helper.py", line 841, in ddot
+    assert (k == b.shape[0])
+            ^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-roks-improvement-20261102/vertical.py", line 68, in <module>
+    v/=norm;other=null_space(v[None,:]);rotation=np.column_stack([other,v]) if last else np.column_stack([v,other]);transformed.append(block@rotation)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py", line 669, in column_stack
+    return _nx.concatenate(arrays, 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 4 dimension(s) and the array at index 1 has 3 dimension(s)
+REUSE N001 WB97X
+REUSE N001 WB97X
+REUSE N001 WB97X

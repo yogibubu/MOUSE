@@ -551,4 +551,25 @@ at most $2.4\times10^{-13}$ Ha/bohr$^2$. Certificates and the exact baseline
 sources (commit \texttt{33ff162}) are archived under
 \path{qualification/roks_improvement_20261102/}.
 
+
+The final solver additionally avoids oversolving the Krylov equation: its
+absolute linear residual target is one tenth of the requested nonlinear
+orbital tolerance, without relaxing final stationarity. Exact packed
+range-separated AO integrals are shared by the mixed and triplet components,
+with a cache cap of one quarter of the configured mean-field memory budget;
+the native exact path is retained when this budget is insufficient.
+Cached versus native J/K errors are below $2.3\times10^{-15}$ on the small
+operator tests. At a qualified butadiene/$\omega$B97X/aug-cc-pVDZ point,
+three alternating paired orbital-action timings give medians of 3.921 s
+(native) and 1.675 s (cached), with a maximum action difference of
+$1.4\times10^{-11}$ and 461 MB of cached range integrals. This 2.34-fold
+action speedup excludes the rest of a molecular calculation and is not an
+end-to-end or TDA timing comparison. The complete CAM-B3LYP nuclear Hessian
+changes by less than $3.1\times10^{-13}$ Ha/bohr$^2$ under integral reuse.
+An additional independent water/$\omega$B97X/STO-3G test gives a gradient
+error of $1.7\times10^{-9}$ Ha/bohr and a Hessian--vector error of
+$2.0\times10^{-9}$ Ha/bohr$^2$, including moving grids and common-orbital
+response; its spin-raising norm and coherent-overlap error are zero.
+
+\input{dft_roks_accuracy}
 \end{document}

@@ -1,0 +1,46 @@
+{
+  "id": "V010",
+  "cohort": "subspace_last_two",
+  "name": "Furan",
+  "role": "pilot",
+  "family": "pi_pi",
+  "functional": "CAM-B3LYP",
+  "basis": "aug-cc-pVDZ",
+  "excitation_ev": 7.385585851674907,
+  "energy_hartree": -229.66431845740436,
+  "ground_energy_hartree": -229.93573373132352,
+  "spin_squared": 0.0,
+  "orbital_residual": 1.0757018149495923e-10,
+  "iterations": 1,
+  "reference_overlap": 0.9413862381698432,
+  "hole_overlap": 0.9904402915031703,
+  "particle_overlap": 0.9617782109378359,
+  "target_sector_projection": [
+    0.999877904806809,
+    0.9998204637564413
+  ],
+  "solver": {
+    "status": "converged",
+    "solver": "trust",
+    "trust_radius": 0.3,
+    "Fock_builds": 4,
+    "response_builds": 4,
+    "Jacobian_actions": 31,
+    "range_integral_builds": 1,
+    "range_integral_hits": 65,
+    "range_integral_bytes": 526840208
+  },
+  "new_ground_SCF_calls": 0,
+  "archived_ground_reused": false,
+  "target_excitation_labels_read": false,
+  "source_sha256": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_last_two/references/Furan/reference.npz": "169455a60e621e588043819faa510a2650a21742edd99cf144a349c320c1e25f",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_last_two/predictions/Furan/native_ground.npz": "0e47b9610a990e79150053f8a230ceb20e4c64d26c2c928d90b1a5243ed56be0",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_last_two/predictions/Furan/native_transition_V010.npz": "ea9344483315d1fd7b5d3a394751c4529c25d6914ac2e22eab126072b29e94a9",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_last_two/predictions/Furan/full_response/anchor/embedding.npz": "dde62789bea36f225a3b0235b1b01b910aa3faa8115fd3b9b4f8a67f758ae13a",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_last_two/references/Furan/backend.chk": "1839f2193c9b3f6ff4728b4b536bfe282274c752ff32a102f06f53c8f426d377"
+  },
+  "cartesian_AO_reference": false,
+  "cartesian_AO_calculation": false,
+  "seconds": 59.157097165996674
+}

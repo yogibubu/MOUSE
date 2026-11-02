@@ -1,0 +1,5 @@
+{"id": "N001", "functional": "WB97X", "returncode": 0}
+{"id": "N001", "functional": "PBE0", "returncode": 0}
+{"id": "N001", "functional": "CAM-B3LYP", "returncode": 0}
+{"id": "V001", "functional": "WB97X", "returncode": -15}
+{"id": "V001", "functional": "PBE0", "returncode": 0}

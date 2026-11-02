@@ -1,0 +1,12 @@
+{
+  "curvature": {
+    "index": 0,
+    "near_zero_modes": 0,
+    "minimum_eigenvalue_hartree": 0.1388064008523966,
+    "threshold_hartree": 1e-06,
+    "Jacobian_asymmetry": 6.369872069105199e-12,
+    "method": "Complete orbital tangent diagonalization"
+  },
+  "wrong_index_rejected": true,
+  "restart_iterations": 0
+}

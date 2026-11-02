@@ -1,0 +1,9 @@
+{"id": "B001", "functional": "CAM-B3LYP", "returncode": 0}
+{"id": "B002", "functional": "CAM-B3LYP", "returncode": 0}
+{"id": "B002", "functional": "WB97X", "returncode": 0}
+{"id": "B001", "functional": "WB97X", "returncode": 0}
+{"id": "B001", "functional": "PBE0", "returncode": 0}
+{"id": "B002", "functional": "PBE0", "returncode": 0}
+{"id": "B003", "functional": "CAM-B3LYP", "returncode": 0}
+{"id": "B003", "functional": "WB97X", "returncode": 0}
+{"id": "B003", "functional": "PBE0", "returncode": 0}

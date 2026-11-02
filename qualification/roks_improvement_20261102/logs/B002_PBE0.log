@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-roks-improvement-20261102/vertical.py", line 54, in <module>
+    checkpoint=folder/'accepted.npz';result=optimize_roks(excited,initial,occ,ground_energy_hartree=energy0,
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-pyscf/src/matrix_pyscf/roks.py", line 159, in optimize_roks
+    if strict and not result.converged:raise PySCFROKSConvergenceError(result)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+matrix_pyscf.roks.PySCFROKSConvergenceError: ROKS not certified: residual 4.070e-02; status=trust_region_exhausted
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-roks-improvement-20261102/vertical.py", line 66, in <module>
+    if min(hscore,pscore)<.7:raise RuntimeError(('frozen valence orbital identity lost',hscore,pscore))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: ('frozen valence orbital identity lost', 0.9975406935586804, 0.45518630882891614)
+REUSE B002 PBE0
+REUSE B002 PBE0
+REUSE B002 PBE0

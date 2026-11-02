@@ -92,8 +92,12 @@ def solve(surface,c,reference_overlap,*,tolerance,max_iterations,max_step,min_re
             preconditioner=LinearOperator(operator.shape,matvec=lambda v:v/denominator,dtype=float)
             forcing=min(.1,max(1e-7,.02*np.sqrt(residual)))
         else:preconditioner=None;forcing=1e-5
-        newton,info=gmres(operator,-g,M=preconditioner,rtol=forcing,atol=0.,restart=min(60,len(g)),maxiter=8)
-        linear_diagnostics=dict(linear_solver_info=int(info),linear_relative_residual=float(np.linalg.norm(action(newton)+g)/np.linalg.norm(g)))
+        # An absolute linear residual below one tenth of the requested nonlinear
+        # tolerance avoids oversolving a nearly stationary electronic state.
+        # Final acceptance still uses the unchanged full nonlinear residual.
+        linear_atol=.1*tolerance if solver=='trust' else 0.
+        newton,info=gmres(operator,-g,M=preconditioner,rtol=forcing,atol=linear_atol,restart=min(60,len(g)),maxiter=8)
+        linear_diagnostics=dict(linear_absolute_tolerance=linear_atol,linear_solver_info=int(info),linear_relative_residual=float(np.linalg.norm(action(newton)+g)/np.linalg.norm(g)))
         accepted=False
         if solver=='newton':
             for direction in [newton,-action(g)]:

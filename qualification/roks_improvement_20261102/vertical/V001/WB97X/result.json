@@ -1,0 +1,46 @@
+{
+  "id": "V001",
+  "cohort": "subspace_prospective_cisd",
+  "name": "acetone",
+  "role": "confirmation",
+  "family": "n_pi",
+  "functional": "WB97X",
+  "basis": "aug-cc-pVDZ",
+  "excitation_ev": 4.372648122008155,
+  "energy_hartree": -192.96722138561853,
+  "ground_energy_hartree": -193.12791324021498,
+  "spin_squared": 0.0,
+  "orbital_residual": 2.4185313370383895e-10,
+  "iterations": 3,
+  "reference_overlap": 0.7581552548021084,
+  "hole_overlap": 0.9855229225919846,
+  "particle_overlap": 0.772461749325267,
+  "target_sector_projection": [
+    0.9996997811041953,
+    0.9981926450561333
+  ],
+  "solver": {
+    "status": "converged",
+    "solver": "trust",
+    "trust_radius": 0.3,
+    "Fock_builds": 8,
+    "response_builds": 8,
+    "Jacobian_actions": 42,
+    "range_integral_builds": 1,
+    "range_integral_hits": 91,
+    "range_integral_bytes": 460660368
+  },
+  "new_ground_SCF_calls": 0,
+  "archived_ground_reused": false,
+  "target_excitation_labels_read": false,
+  "source_sha256": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/references/acetone/reference.npz": "0de36aeb5fb47d755a3660cb28f239b5f4ead7e769d0869ffdd22a7219aae852",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/predictions/acetone/native_ground.npz": "93bc60625690c352f67bee3be37616a1bfdb99d12a9e1098d19a4140d7f3622d",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/predictions/acetone/native_transition_V001.npz": "3df4d70dd211c4efaceebd1f6c5628b4d1e3cb765cab4a2562662fc2e89ccf41",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/predictions/acetone/full_response/anchor/embedding.npz": "2fafc33591f57a4cc1ac42135f191d13008e2cd57f10e9df3f3a8a999581cf52",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/references/acetone/backend.chk": "949ac501094ce053f916c57efb14d8ccdab36551d7ec49d314ad3e0be4202ac3"
+  },
+  "cartesian_AO_reference": true,
+  "cartesian_AO_calculation": false,
+  "seconds": 74.90799229196273
+}

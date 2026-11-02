@@ -1,0 +1,41 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "cases": [
+    {
+      "case": "water_CAM-B3LYP_roks",
+      "orbital_iterations": 0,
+      "gradient_error": 2.0071962903080382e-16,
+      "complete_Hessian_error": 3.0655235410014637e-13,
+      "translation_sum_rule_error": 3.3110181263396044e-12,
+      "prepared_energy_gradient_Hessian_seconds": 6.034758125024382,
+      "response": {
+        "orbital_residual": 3.151869092877999e-12,
+        "surface": "Common-orbital multiplet sum",
+        "off_diagonal_energy_weighted_density": true,
+        "finite_differences_in_production": false,
+        "orbital_response_maximum_residual": 4.491354734373746e-12,
+        "raw_Hessian_asymmetry": 2.726120828013568e-13,
+        "coupled_common_response": true,
+        "grid_response": [
+          {
+            "required": true,
+            "scheme": "Analytic moving Becke partition, AO derivatives through order 3, LibXC vxc/fxc",
+            "points": 21952,
+            "finite_differences": false
+          },
+          {
+            "required": true,
+            "scheme": "Analytic moving Becke partition, AO derivatives through order 3, LibXC vxc/fxc",
+            "points": 21952,
+            "finite_differences": false
+          }
+        ]
+      }
+    }
+  ],
+  "zero_rotation_atom_Hessian_max": 4.440892098500626e-16,
+  "meta_GGA_Hessian_rejected": true,
+  "ground_SCF_calls": 0,
+  "TDA_calls": 0,
+  "finite_differences_in_production": false
+}

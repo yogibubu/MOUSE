@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-roks-improvement-20261102/vertical.py", line 26, in <module>
+    with np.load(paths[2]) as z:target=z['amplitude']
+         ^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/predictions/Formaldehyde/native_transition_B001.npz'
+{"id": "B001", "cohort": "closing_blind", "name": "Formaldehyde", "role": "pilot", "family": "n_pi", "functional": "CAM-B3LYP", "basis": "aug-cc-pVDZ", "excitation_ev": 3.680242902509783, "energy_hartree": -114.33430292027731, "ground_energy_hartree": -114.46954935238631, "spin_squared": 0.0, "orbital_residual": 7.833221918329691e-13, "iterations": 5, "reference_overlap": 0.9153176202937043, "hole_overlap": 0.9872222472556321, "particle_overlap": 0.9281579362974226, "target_sector_projection": [0.9878049237611412, 0.9996812837641392], "solver": {"status": "converged", "solver": "trust", "trust_radius": 0.3, "Fock_builds": 12, "response_builds": 12, "Jacobian_actions": 85}, "new_ground_SCF_calls": 0, "archived_ground_reused": true, "target_excitation_labels_read": false, "source_sha256": {"/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/references/Formaldehyde/reference.npz": "c3fcba446d446c8089c9aa3c038a9fc4425dd502ae0f8d453ce6ee8ac34b137e", "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/predictions/Formaldehyde/native_ground.npz": "004499732d67a3cfe02561cfda949c57f8a92a7d8e94f601249a899207fce907", "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/disentangled_bath_spectral_block_reference_eta_0.600000/closing_blind/Formaldehyde/arrays.npz": "b77357e1cd8695647beb16c48f8d3a0971ab9fcd5b55c8c344fe0d299f6061aa", "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/closing_blind/predictions/Formaldehyde/full_response/anchor/embedding.npz": "7e0c295b72da605ed61ecb59ed5752aa184d42ac2ca50d177c2e83d3beefdad8"}, "seconds": 21.27508420799859}
+REUSE B001 CAM-B3LYP
+REUSE B001 CAM-B3LYP
+REUSE B001 CAM-B3LYP

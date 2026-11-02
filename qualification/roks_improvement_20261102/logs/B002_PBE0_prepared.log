@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-roks-improvement-20261102/vertical.py", line 77, in <module>
+    if min(hscore,pscore)<.7:raise RuntimeError(('frozen valence orbital identity lost after closed-orbital preparation',hscore,pscore))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: ('frozen valence orbital identity lost after closed-orbital preparation', 0.9975406936241533, 0.45518630634295676)

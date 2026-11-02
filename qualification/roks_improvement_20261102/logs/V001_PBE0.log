@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-roks-improvement-20261102/vertical.py", line 48, in <module>
+    dm=(ground_c*ground_o)@ground_c.T;f=mf.get_hcore()+mf.get_veff(dm=dm);sao=mf.get_ovlp();r=f@dm@sao-sao@dm@f
+                                                       ^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/rks.py", line 81, in get_veff
+    n, exc, vxc = ni.nr_rks(mol, ks.grids, ks.xc, dm, max_memory=max_memory)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 1152, in nr_rks
+    for i, ao, mask, wv in block_loop(ao_deriv):
+                           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 1131, in block_loop
+    rho = make_rho(i, ao, mask, xctype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 2992, in make_rho
+    return self.eval_rho(mol, ao, dms[idm], sindex, xctype, hermi,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 170, in eval_rho
+    c0 = _dot_ao_dm(mol, ao[0], dm, non0tab, shls_slice, ao_loc)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/dft/numint.py", line 711, in _dot_ao_dm
+    return lib.dot(dm.T, ao.T).T
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/numpy_helper.py", line 921, in dot
+    return ddot(a, b, alpha, c, beta)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/numpy_helper.py", line 841, in ddot
+    assert (k == b.shape[0])
+            ^^^^^^^^^^^^^^^
+AssertionError
+{"id": "V001", "cohort": "subspace_prospective_cisd", "name": "acetone", "role": "confirmation", "family": "n_pi", "functional": "PBE0", "basis": "aug-cc-pVDZ", "excitation_ev": 4.1769234076275215, "energy_hartree": -192.79916896632267, "ground_energy_hartree": -192.9526680703326, "spin_squared": 0.0, "orbital_residual": 1.059318946580387e-09, "iterations": 5, "reference_overlap": 0.7767872113576891, "hole_overlap": 0.9878844644145032, "particle_overlap": 0.7894289128528779, "target_sector_projection": [0.9995435294622798, 0.9987233956550204], "solver": {"status": "converged", "solver": "trust", "trust_radius": 0.3, "Fock_builds": 12, "response_builds": 12, "Jacobian_actions": 93}, "new_ground_SCF_calls": 1, "archived_ground_reused": false, "target_excitation_labels_read": false, "source_sha256": {"/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/references/acetone/reference.npz": "0de36aeb5fb47d755a3660cb28f239b5f4ead7e769d0869ffdd22a7219aae852", "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/predictions/acetone/native_ground.npz": "93bc60625690c352f67bee3be37616a1bfdb99d12a9e1098d19a4140d7f3622d", "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/predictions/acetone/native_transition_V001.npz": "3df4d70dd211c4efaceebd1f6c5628b4d1e3cb765cab4a2562662fc2e89ccf41", "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/predictions/acetone/full_response/anchor/embedding.npz": "2fafc33591f57a4cc1ac42135f191d13008e2cd57f10e9df3f3a8a999581cf52", "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-cam-response-20261101/data/subspace_prospective_cisd/references/acetone/backend.chk": "949ac501094ce053f916c57efb14d8ccdab36551d7ec49d314ad3e0be4202ac3"}, "cartesian_AO_reference": true, "cartesian_AO_calculation": false, "seconds": 107.3219526669709}
+REUSE V001 PBE0
+REUSE V001 PBE0
