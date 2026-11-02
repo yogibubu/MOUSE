@@ -1,4 +1,4 @@
-"""Minimal two-state EVB evaluator with analytic first derivatives."""
+"""Two-state EVB evaluator with analytic first and second derivatives."""
 
 from __future__ import annotations
 
@@ -15,6 +15,7 @@ class EVBEvaluation:
     gradient: np.ndarray
     state_weights: np.ndarray
     gap: float
+    hessian: np.ndarray | None = None
 
 
 def evaluate_two_state_evb(
@@ -22,8 +23,16 @@ def evaluate_two_state_evb(
     gradients: tuple[np.ndarray, np.ndarray] | np.ndarray,
     coupling: float,
     coupling_gradient: np.ndarray | None = None,
+    hessians: tuple[np.ndarray, np.ndarray] | np.ndarray | None = None,
+    coupling_hessian: np.ndarray | None = None,
 ) -> EVBEvaluation:
-    """Evaluate the lower eigenvalue of a two-state diabatic Hamiltonian."""
+    """Evaluate the lower eigenvalue of a two-state diabatic Hamiltonian.
+
+    Supplying diabatic Hessians requests the analytic adiabatic Hessian.  The
+    coupling Hessian defaults to zero only when the coupling gradient is also
+    absent; otherwise it must be supplied explicitly so a kinetic saddle is
+    never certified from an incomplete second derivative.
+    """
 
     diagonal = np.asarray(energies, dtype=float).reshape(-1)
     if diagonal.shape != (2,) or not np.all(np.isfinite(diagonal)):
@@ -39,13 +48,65 @@ def evaluate_two_state_evb(
     coefficients = vectors[:, 0]
     weights = coefficients * coefficients
     gap = float(values[1] - values[0])
-    gradient = weights[0] * grad[0] + weights[1] * grad[1]
+    dimension = grad.shape[1]
+    coupling_first = np.zeros(dimension, dtype=float)
     if coupling_gradient is not None:
         derivative = np.asarray(coupling_gradient, dtype=float).reshape(-1)
-        if derivative.shape != (grad.shape[1],) or not np.all(np.isfinite(derivative)):
+        if derivative.shape != (dimension,) or not np.all(np.isfinite(derivative)):
             raise ValueError("EVB coupling gradient has invalid shape or values")
-        gradient = gradient + 2.0 * coefficients[0] * coefficients[1] * derivative
-    return EVBEvaluation(float(values[0]), gradient, weights, gap)
+        coupling_first = derivative
+
+    mean_first = 0.5 * (grad[0] + grad[1])
+    delta = 0.5 * (diagonal[0] - diagonal[1])
+    delta_first = 0.5 * (grad[0] - grad[1])
+    radius = float(np.hypot(delta, coupling))
+    if radius <= np.finfo(float).eps:
+        raise ValueError("EVB adiabatic derivatives are undefined at an exact uncoupled crossing")
+    numerator_first = delta * delta_first + coupling * coupling_first
+    gradient = mean_first - numerator_first / radius
+
+    hessian = None
+    if hessians is not None:
+        second = np.asarray(hessians, dtype=float)
+        if second.shape != (2, dimension, dimension) or not np.all(np.isfinite(second)):
+            raise ValueError("EVB Hessians must have shape (2, n, n) and be finite")
+        if not np.allclose(second, np.swapaxes(second, 1, 2), rtol=1.0e-11, atol=1.0e-13):
+            raise ValueError("EVB diabatic Hessians must be symmetric")
+        if coupling_hessian is None:
+            if coupling_gradient is not None:
+                raise ValueError(
+                    "EVB coupling Hessian is required when a coupling gradient is supplied"
+                )
+            coupling_second = np.zeros((dimension, dimension), dtype=float)
+        else:
+            coupling_second = np.asarray(coupling_hessian, dtype=float)
+            if (
+                coupling_second.shape != (dimension, dimension)
+                or not np.all(np.isfinite(coupling_second))
+                or not np.allclose(
+                    coupling_second,
+                    coupling_second.T,
+                    rtol=1.0e-11,
+                    atol=1.0e-13,
+                )
+            ):
+                raise ValueError("EVB coupling Hessian must be finite and symmetric")
+        mean_second = 0.5 * (second[0] + second[1])
+        delta_second = 0.5 * (second[0] - second[1])
+        radius_second_numerator = (
+            np.outer(delta_first, delta_first)
+            + delta * delta_second
+            + np.outer(coupling_first, coupling_first)
+            + coupling * coupling_second
+        )
+        radius_hessian = (
+            radius_second_numerator / radius
+            - np.outer(numerator_first, numerator_first) / radius**3
+        )
+        hessian = mean_second - radius_hessian
+        hessian = 0.5 * (hessian + hessian.T)
+
+    return EVBEvaluation(float(values[0]), gradient, weights, gap, hessian)
 
 
 def evaluate_two_state_evb_request(
@@ -54,10 +115,19 @@ def evaluate_two_state_evb_request(
     gradients: tuple[np.ndarray, np.ndarray] | np.ndarray,
     coupling: float,
     coupling_gradient: np.ndarray | None = None,
+    hessians: tuple[np.ndarray, np.ndarray] | np.ndarray | None = None,
+    coupling_hessian: np.ndarray | None = None,
 ) -> EVBEvaluation:
     """Evaluate EVB only when the explicit representation/gate contract is present."""
 
     if request.provider != "EVB":
         raise ValueError("EVB evaluator requires provider='EVB'")
     validate_basin_transition(request)
-    return evaluate_two_state_evb(energies, gradients, coupling, coupling_gradient)
+    return evaluate_two_state_evb(
+        energies,
+        gradients,
+        coupling,
+        coupling_gradient,
+        hessians,
+        coupling_hessian,
+    )

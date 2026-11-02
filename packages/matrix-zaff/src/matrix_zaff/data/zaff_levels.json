@@ -1,11 +1,11 @@
 {
   "schema": "matrix.zaff.level_manifest.v1",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "radial_form_contract": {
     "all_levels": "one permanent inverse-distance stretch family from ZAFF0 onward",
     "ZAFF0": "translate the synthon-interpolated MM3 Morse prior once to De[1-(r0/r)^p]^2 with p=alpha*r0, preserving r0, De and k2",
-    "ZAFF1_to_ZAFF3": "update r0 and p and add asymptotically vanishing inverse-distance corrections and couplings without replacing the base function",
-    "legacy": "old serialized Morse fields remain readable but are not emitted by the v6 compiler"
+    "legacy": "old serialized Morse fields remain readable but are not emitted by the v6 compiler",
+    "ZAFF1_to_ZAFF4": "update r0 and p and add asymptotically vanishing inverse-distance corrections and couplings without replacing the base function"
   },
   "electronic_reference": {
     "owner": "ORACLE",
@@ -166,11 +166,49 @@
         "Hessian",
         "displaced Hessians, gradients or equivalent anharmonic training data"
       ]
+    },
+    {
+      "id": "ZAFF4",
+      "aliases": [
+        "Z4",
+        "ZAFF-rank-complete",
+        "zaff-rank-complete"
+      ],
+      "extends": "ZAFF3",
+      "geometry": "rank-complete observed cubic and quartic response in native asymptotically correct ZAFF forms",
+      "active_terms": [
+        "all ZAFF3 terms",
+        "rank-completing native mixed products supported by actual cubic and quartic observations",
+        "observed terms involving four distinct primitive coordinates",
+        "all defining-bond switches and the immutable ZAFF2 harmonic jet"
+      ],
+      "missing_data_policy": "unobserved mixed derivatives remain explicit coverage gaps and are never converted to zero measurements",
+      "promotion_policy": "qualified ZAFF3 parent, recorded observation and selected ranks, independent QM E/G/H, LAM-domain and asymptotic gates",
+      "reduction_policy": "regularization uses calibration data only; independent holdouts are acceptance gates; pruning requires refit and complete gate repetition",
+      "parameter_owner": "ARCHITECT",
+      "required_qm_derivatives": [
+        "qualified ZAFF3 parent",
+        "rank-completing cubic and quartic observations",
+        "independent energy, gradient and Hessian validation data"
+      ]
     }
   ],
   "hydrogen_bond_contract": {
     "ordinary_contact": "directional nonbonded term with C2 radial switch and angular envelope",
     "transferable_hydrogen": "automatic ORACLE promotion to redundant bicoordinated covalent domain",
     "double_counting": "the ordinary hydrogen-bond term is excluded after promotion"
+  },
+  "downstream_consumers": {
+    "LINK_SENTINEL": "PES exploration, conformer and stationary-point search, optimization and dynamics",
+    "TRINITY": "vibrational spectroscopy, large-amplitude motion and thermochemistry",
+    "LOCK": "rovibrational Hamiltonians, property surfaces and spectral refinement",
+    "KINETICS": "transition-state theory, RRKM, tunneling, densities of states and rates"
+  },
+  "reactive_extension": {
+    "single_topology": "ZAFF supports bond cleavage, bicoordinated-H proton transfer, periodic torsions and LAMs with analytic E/G/H",
+    "topology_change": "couple independently certified ZAFF basin fields with a real symmetric EVB Hamiltonian",
+    "coupling": "smooth analytic coupling localized to the crossing region and vanishing in every basin asymptote",
+    "certification": "analytic E/G/H, parent recovery, stationary points, endpoint connectivity, symmetry, independent reaction-path domain and asymptotic gates",
+    "ownership": "EVB is a reactive container above ZAFF artifacts and is not a sixth ZAFF level"
   }
 }
