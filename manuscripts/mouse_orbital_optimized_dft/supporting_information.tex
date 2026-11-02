@@ -467,7 +467,15 @@ convergence of the higher spectrum. Pigment nuclear derivatives and
 independent experimental accuracy are not qualified by these tests.
 
 \clearpage
-\section{Full-DFT ROKS and unrestricted analytic nuclear response}
+\section{Deferred full-DFT companion implementation}
+The full-integral PySCF DeltaSCF/ROKS implementation and its analytic
+nuclear-response qualification are intentionally deferred to a separate
+companion manuscript. They are not part of the semiempirical model,
+accuracy ledger, timing analysis, or claims made here. The source and
+qualification archive are retained in the repository for reproducibility
+and future comparison with ORCA and native PySCF implementations.
+
+\iffalse
 The separate full-integral PySCF adapter uses native HF/DFT energies
 and kernels, without semiempirical scaling or an excitation shift.
 Unrestricted $\Delta$SCF and common-orbital $2E_M-E_T$ ROKS have distinct
@@ -523,7 +531,10 @@ are not qualified. Sources, certificates, arrays and checkpoints are in
 These tests on two molecules establish derivative consistency, not
 chemical accuracy or a speed advantage over MOM.
 
+\fi
 
+
+\iffalse
 \subsection{ROKS residual trust-region qualification}
 The moving-frame orbital residual Jacobian is generally nonsymmetric away
 from stationarity. Its exact adjoint agrees with an explicitly assembled
@@ -571,5 +582,5 @@ error of $1.7\times10^{-9}$ Ha/bohr and a Hessian--vector error of
 $2.0\times10^{-9}$ Ha/bohr$^2$, including moving grids and common-orbital
 response; its spin-raising norm and coherent-overlap error are zero.
 
-\input{dft_roks_accuracy}
+\fi
 \end{document}
