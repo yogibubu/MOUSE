@@ -1,0 +1,53 @@
+{
+  "scope": "Derivative implementation only, six checks on two molecules, no accuracy benchmark",
+  "rows": [
+    {
+      "molecule": "water",
+      "method": "HF",
+      "kind": "roks",
+      "basis": "sto-3g",
+      "gradient_error": 1.9403385564942255e-09,
+      "Hessian_vector_error": 2.4243220764219586e-07
+    },
+    {
+      "molecule": "water",
+      "method": "PBE0",
+      "kind": "roks",
+      "basis": "sto-3g",
+      "gradient_error": 3.967196954772493e-09,
+      "Hessian_vector_error": 1.8460495909700114e-09
+    },
+    {
+      "molecule": "formaldehyde",
+      "method": "PBE0",
+      "kind": "roks",
+      "basis": "6-31g",
+      "gradient_error": 7.130923306702952e-09,
+      "Hessian_vector_error": 5.016359181340968e-09
+    },
+    {
+      "molecule": "water",
+      "method": "CAM-B3LYP",
+      "kind": "roks",
+      "basis": "sto-3g",
+      "gradient_error": 9.152849693438991e-10,
+      "Hessian_vector_error": 5.214634279937513e-10
+    },
+    {
+      "molecule": "water",
+      "method": "LDA,VWN",
+      "kind": "roks",
+      "basis": "sto-3g",
+      "gradient_error": 3.2214166750810236e-09,
+      "Hessian_vector_error": 4.016460506198194e-10
+    },
+    {
+      "molecule": "water",
+      "method": "PBE0",
+      "kind": "deltascf",
+      "basis": "sto-3g",
+      "gradient_error": 3.312463948967892e-10,
+      "Hessian_vector_error": 3.1747793283187775e-09
+    }
+  ]
+}

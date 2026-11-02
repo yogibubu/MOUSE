@@ -1,0 +1,16 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "Python": "3.12.13",
+  "PySCF": "2.14.0",
+  "SciPy": "1.18.0",
+  "NumPy": "2.3.5",
+  "independent_cases": 6,
+  "ROKS_cases": 5,
+  "unrestricted_DeltaSCF_cases": 1,
+  "molecules": 2,
+  "finite_differences_in_production": false,
+  "maximum_DFT_Hessian_vector_error": 5.016359181340968e-09,
+  "maximum_complete_cache_Hessian_error": 2.379599641999022e-13,
+  "maximum_translation_sum_rule_error": 1.3442682297165609e-11,
+  "spin_scope": "ROKS CSF is spin pure; functional energy is approximate common-orbital multiplet sum; DeltaSCF determinant remains spin contaminated"
+}

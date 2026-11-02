@@ -1,0 +1,23 @@
+\subsection{Full-DFT implementation of the orbital response}
+A separate reference implementation reuses molecular UHF/UKS energies,
+Fock matrices and analytic density-response kernels from PySCF.\cite{sun2020pyscf}
+Its unrestricted $\Delta$SCF and common-orbital ROKS solvers keep integer
+occupations fixed and solve orbital stationarity with Newton--Krylov
+steps, retaining negative curvature. They require no TDA calculation or
+MOM occupation reassignment. The ROKS wavefunction is a coherent pure
+singlet; its $2E_M-E_T$ functional energy is evaluated with common spatial
+orbitals and remains an approximation. Neither an energy offset nor the
+semiempirical kernel parameters enter this full-DFT implementation.
+
+The nuclear response includes the complete noncanonical energy-weighted
+density and one coupled common-orbital ROKS CP equation. Analytic moving
+Becke-grid derivatives, Gaussian AO derivatives through third order and
+LibXC vxc/fxc supply the XC contribution to the Hessian. Independent
+checks on water and formaldehyde cover HF, LDA, PBE0 and CAM-B3LYP; the
+DFT Hessian--vector errors are below $5.1\times10^{-9}$ Ha/bohr$^2$.
+The SI reports the separate numerical certificates. These small-basis
+checks validate implementation, rather than spectral accuracy or a
+speed advantage over MOM. They do not extend the semiempirical
+26-state accuracy ledger. Reusing spin-density/AO products accelerates
+the grid chain rule without changing the complete Hessians by more than
+$2.4\times10^{-13}$ Ha/bohr$^2$ in these checks.

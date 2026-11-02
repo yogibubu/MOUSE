@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-dft-roks-response-20261102/validate.py", line 57, in <module>
+    score=singlet_csf_overlap(exported,exported,mf.get_ovlp());assert abs(abs(score)-1)<1e-10
+                                                                          ^^^^^^^^^^
+TypeError: bad operand type for abs(): 'tuple'

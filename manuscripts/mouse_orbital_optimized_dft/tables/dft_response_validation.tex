@@ -1,0 +1,15 @@
+\begin{table}[htbp]\centering\small
+\caption{Full-DFT derivative qualification. Maximum independent directional gradient and Hessian--vector errors are in Ha/bohr and Ha/bohr$^2$, respectively. All states are initialized by an alpha HOMO--LUMO promotion.}\label{tab:dftresponse}
+\begin{tabular}{llllrr}
+\toprule
+Molecule & Method & Surface & Basis & Gradient & Hessian--vector\\
+\midrule
+Water & HF & ROKS & sto-3g & $1.94\times10^{-9}$ & $2.42\times10^{-7}$\\
+Water & PBE0 & ROKS & sto-3g & $3.97\times10^{-9}$ & $1.85\times10^{-9}$\\
+Formaldehyde & PBE0 & ROKS & 6-31g & $7.13\times10^{-9}$ & $5.02\times10^{-9}$\\
+Water & CAM-B3LYP & ROKS & sto-3g & $9.15\times10^{-10}$ & $5.21\times10^{-10}$\\
+Water & LDA,VWN & ROKS & sto-3g & $3.22\times10^{-9}$ & $4.02\times10^{-10}$\\
+Water & PBE0 & $\Delta$SCF & sto-3g & $3.31\times10^{-10}$ & $3.17\times10^{-9}$\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -50,13 +50,13 @@ Implemented:
   requires actual cross-AO overlaps supplied through the existing APOC API.
 - Resumable nonconvergence via `PySCFDeltaSCFConvergenceError.result`.
 
-The current implementation is unrestricted DeltaSCF. A broken-symmetry Ms=0
-result is **not a spin-pure singlet**. Multiplet-sum ROKS and its coupled nuclear
-response, analytic nuclear Hessians and automatic LINK dispatch are subsequent
-work; this adapter does not expose them. Solvent, nonlocal-correlation functionals,
-relativistic response, symmetry constraints and smearing are rejected rather than
-silently evaluated with an incomplete orbital response. ECP-based APOC export is
-also rejected.
+Unrestricted DeltaSCF and common-orbital ROKS are separate APIs. A
+broken-symmetry Ms=0 DeltaSCF determinant is not a spin-pure singlet; the ROKS
+API constructs a two-determinant singlet CSF. Solvent, nonlocal-correlation
+functionals, relativistic response, symmetry constraints and smearing are
+rejected rather than evaluated with an incomplete orbital response. ECP-based
+APOC export is also rejected. Automatic LINK dispatch for this new DFT backend
+is not part of these public orbital APIs.
 
 First remote checks use PySCF 2.14.0: water/STO-3G with HF and PBE0, plus
 formaldehyde/6-31G with PBE0. Formaldehyde reaches a stationary point with one
@@ -64,3 +64,31 @@ negative orbital mode. Water reaches the same determinant energy as PySCF MOM;
 this is a numerical equivalence check, not evidence of better accuracy or speed.
 Independent scalar-energy differences validate nuclear gradients. All numerical
 certificates and executable drivers are in `qualification/dft_oo_20261102`.
+
+## Common-orbital ROKS and analytic nuclear Hessians
+
+`optimize_roks(excited, ground.mo_coeff, occupations, include_hessian=True)`
+optimizes the common-orbital functional `2 E_M - E_T`. It constructs a coherent
+two-determinant singlet with S²=0 and exports that CSF to APOC. The mixed and
+triplet determinant energies are evaluated at the **same** spatial orbitals.
+Their independently relaxed UKS energies are not combined.
+
+Both `optimize_roks` and `optimize_deltascf` now accept `include_hessian=True`.
+The returned `hessian_hartree_per_bohr2` is the complete Cartesian matrix,
+including orbital relaxation. `response_certificate` records the orbital CP
+residual, raw Hessian asymmetry and grid-derivative scope. A full analytic
+Hessian request also returns the gradient.
+
+The nuclear response differentiates the complete noncanonical energy-weighted
+AO density. ROKS uses one coupled common-orbital CP equation. Moving Becke-grid
+weights are differentiated through second order; Gaussian AO derivatives through
+third order and LibXC vxc/fxc give the XC chain rule. No displaced geometry is
+used in production. The derivation is in [OO_RESPONSE.md](OO_RESPONSE.md).
+
+The initial Hessian implementation supports molecular all-electron UHF and
+LDA/GGA UKS, including global and range-separated hybrids. It uses full
+integrals and the original Becke partition with standard Becke/Treutler radius
+adjustment. Density fitting, meta-GGA Hessians, other partitions, solvent and
+relativistic response require separate extensions and are rejected. Results are
+not an exact DFT spin-projection formula; spin purity refers to the constructed
+CSF, while its multiplet-sum energy remains an approximate functional model.

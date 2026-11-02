@@ -1,8 +1,7 @@
 """Fixed-occupation unrestricted OO-DFT using analytic PySCF response.
 
 The optimizer solves orbital stationarity, retaining negative curvature. It
-never diagonalizes the Fock matrix to reassign occupations. This first adapter
-supports real molecular UHF/UKS determinants, not spin-projected ROKS energies.
+never diagonalizes the Fock matrix to reassign occupations. The separate ROKS adapter constructs common-orbital singlets.
 """
 from __future__ import annotations
 
@@ -70,6 +69,8 @@ class PySCFDeltaSCFResult:
     gradient_hartree_per_bohr: np.ndarray | None
     model_fingerprint: str
     history: tuple[dict, ...]
+    hessian_hartree_per_bohr2: np.ndarray | None = None
+    response_certificate: dict | None = None
 
     @property
     def excitation_energy_hartree(self):
@@ -109,7 +110,7 @@ class PySCFDeltaSCFConvergenceError(RuntimeError):
 def optimize_deltascf(mean_field, coefficients, occupations, *, ground_energy_hartree=None,
                       reference_coefficients=None, restart=None, checkpoint=None,
                       maximum_iterations=80, orbital_tolerance=1e-7, maximum_step=.2,
-                      minimum_reference_overlap=.1, include_gradient=False, strict=True):
+                      minimum_reference_overlap=.1, include_gradient=False, include_hessian=False, strict=True):
     """Find a stationary determinant using the ground-state UHF/UKS backend.
 
     ``coefficients`` has shape (2, nao, nmo); explicit binary spin occupations
@@ -121,7 +122,8 @@ def optimize_deltascf(mean_field, coefficients, occupations, *, ground_energy_ha
     Only a fresh molecular UHF/UKS object without solvent, NLC, smearing or
     symmetry constraints is supported. Supply a separately converged ground
     energy when an excitation energy is wanted. Nuclear gradients are exposed
-    only after orbital convergence; nuclear Hessians are not yet exposed.
+    only after orbital convergence. ``include_hessian`` adds the analytic coupled
+    nuclear response for full-integral HF and LDA/GGA (including hybrid) DFT.
     """
     from pyscf import scf
     from pyscf.soscf.newton_ah import gen_g_hop_uhf
@@ -132,6 +134,10 @@ def optimize_deltascf(mean_field, coefficients, occupations, *, ground_energy_ha
     if (getattr(mf, 'with_solvent', None) is not None or getattr(mf, 'nlc', '')
             or getattr(mf, 'sigma', 0) or getattr(mf, 'with_x2c', None) is not None):
         raise NotImplementedError('solvent, NLC, smearing and relativistic OO-DFT response are not qualified')
+    if include_hessian:
+        from ._oo_nuclear import validate_hessian_model
+        validate_hessian_model(mf)
+        orbital_tolerance=min(orbital_tolerance,1e-10)
     c = np.asarray(coefficients); occ = np.asarray(occupations)
     if np.iscomplexobj(c):
         raise ValueError('OO-DFT currently requires real orbitals')
@@ -224,5 +230,13 @@ def optimize_deltascf(mean_field, coefficients, occupations, *, ground_energy_ha
         gradient=np.asarray(derivative.kernel(mo_energy=mo_energy,mo_coeff=canonical,mo_occ=occ))
         from dataclasses import replace
         result=replace(result,gradient_hartree_per_bohr=gradient)
+    if converged and include_hessian:
+        from dataclasses import replace
+        from ._oo_surface import OrbitalSurface
+        from ._oo_nuclear import nuclear_response
+        if getattr(mf,'with_df',None) is not None:
+            raise NotImplementedError('density-fitted OO nuclear Hessian not qualified')
+        gradient,hessian,certificate=nuclear_response(OrbitalSurface(mf,c,occ),c,hessian=True)
+        result=replace(result,gradient_hartree_per_bohr=gradient,hessian_hartree_per_bohr2=hessian,response_certificate=certificate)
     if strict and not converged:raise PySCFDeltaSCFConvergenceError(result)
     return result

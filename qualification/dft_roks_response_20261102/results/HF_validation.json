@@ -1,0 +1,46 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "method": "HF",
+  "basis": "sto-3g",
+  "molecule": "water",
+  "energy_hartree": -74.51017753455258,
+  "excitation_ev": 12.323644855594132,
+  "spin_squared": 0.0,
+  "iterations": 0,
+  "residual": 9.70655998032484e-13,
+  "checks": [
+    {
+      "gradient_error": 1.9403385564942255e-09,
+      "Hessian_vector_error": 2.4243220764219586e-07
+    },
+    {
+      "gradient_error": 2.9605951254119986e-10,
+      "Hessian_vector_error": 2.1438542270982494e-09
+    }
+  ],
+  "orbital_action_error": 4.901163086490357e-10,
+  "APOC_CSF_self_overlap": [
+    0.9999999999999984,
+    1.0
+  ],
+  "restart_iterations": 0,
+  "response": {
+    "orbital_residual": 9.70655998032484e-13,
+    "surface": "Common-orbital multiplet sum",
+    "off_diagonal_energy_weighted_density": true,
+    "finite_differences_in_production": false,
+    "orbital_response_maximum_residual": 4.851894472707337e-12,
+    "raw_Hessian_asymmetry": 1.1084466677857563e-12,
+    "coupled_common_response": true,
+    "grid_response": [
+      {
+        "required": false
+      },
+      {
+        "required": false
+      }
+    ]
+  },
+  "seconds": 0.2964593750075437,
+  "energy_scope": "Common-orbital 2 E_M - E_T functional approximation, not exact DFT spin projection"
+}

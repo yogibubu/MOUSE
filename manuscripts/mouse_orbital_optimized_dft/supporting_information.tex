@@ -466,4 +466,61 @@ This algebraic target-coverage check does not establish frontier
 convergence of the higher spectrum. Pigment nuclear derivatives and
 independent experimental accuracy are not qualified by these tests.
 
+\clearpage
+\section{Full-DFT ROKS and unrestricted analytic nuclear response}
+The separate full-integral PySCF adapter uses native HF/DFT energies
+and kernels, without semiempirical scaling or an excitation shift.
+Unrestricted $\Delta$SCF and common-orbital $2E_M-E_T$ ROKS have distinct
+wavefunction descriptors. ROKS constructs a coherent singlet;
+independent fermionic spin-raising operations give zero norm.
+Its mixed auxiliary determinant is not a pure singlet.
+
+For $E=\sum_t w_tE_t[D_t]$, stationarity gives the total symmetric
+energy-weighted AO density
+\begin{equation}
+ W=\operatorname{sym}\sum_{t\sigma}w_tS^{-1}F_{t\sigma}D_{t\sigma}.
+\end{equation}
+Its off-diagonal multipliers are retained. The common-orbital gradient
+Jacobian $J$ and nuclear mixed derivative $B_y$ give the single CP
+equation $JK_y=-B_y$. This is not a difference between two independent
+UKS response solutions. With $C_y=C[K_y-C^\dagger S_yC/2]$, the full
+nuclear Hessian is
+\begin{equation}
+ H_{xy}=\sum_t w_t\left[E_{t,xy}|_D+
+ \sum_\sigma\operatorname{Tr}(F_{t\sigma,x}|_DD_{t\sigma,y})\right]
+ -\operatorname{Tr}(WS_{xy})-\operatorname{Tr}(W_yS_x).
+\end{equation}
+The response differentiates $S^{-1}$ and the complete $W$. The native
+fixed-density nuclear derivatives are combined with an analytic
+moving-minus-fixed Becke-grid XC correction. Second-order forward
+partition-weight derivatives, AO derivatives through third order and
+LibXC vxc/fxc retain both grid motion and orbital response. No displaced
+geometry or finite-difference step enters this production Hessian.
+
+\input{tables/dft_response_validation.tex}
+
+All numerical tests ran on the verified MAC-STUDIO using PySCF 2.14.0.
+Hessian--vector checks use Richardson differences of independently
+reconverged analytic gradients at $4\times10^{-5}$ and
+$2\times10^{-5}$ bohr. Water/HF has a soft orbital response and requires
+these small steps. Nuclear directional gradients are also checked
+against scalar energies. The unrestricted water/PBE0 determinant has
+$\langle S^2\rangle=1.0070$ and is not a pure singlet. The five ROKS
+checks have $S^2=0$ by construction, with independent spin-operator
+checks for the additional functional/molecule cases.
+
+All six cached full Hessians reproduce the independently checked arrays
+within $2.4\times10^{-13}$ Ha/bohr$^2$; the maximum translation sum-rule
+residual is $1.4\times10^{-11}$ Ha/bohr$^2$. Accepted restart requires
+no orbital iteration. A zero-rotation one-AO hydrogen determinant
+checks an additional limit. Unsupported meta-GGA Hessians are rejected
+before electronic iterations. The qualified scope is all-electron,
+full-integral molecular HF and LDA/GGA, including global and
+range-separated hybrids, with the original Becke partition and supported
+radius adjustments. Density fitting, solvent and relativistic response
+are not qualified. Sources, certificates, arrays and checkpoints are in
+\path{qualification/dft_roks_response_20261102/}.
+These tests on two molecules establish derivative consistency, not
+chemical accuracy or a speed advantage over MOM.
+
 \end{document}

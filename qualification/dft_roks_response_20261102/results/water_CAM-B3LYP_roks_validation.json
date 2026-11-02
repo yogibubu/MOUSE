@@ -1,0 +1,40 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "molecule": "water",
+  "method": "CAM-B3LYP",
+  "basis": "sto-3g",
+  "kind": "roks",
+  "energy_hartree": -74.84847835560035,
+  "excitation_ev": 11.73577795719592,
+  "residual": 3.151869092877999e-12,
+  "iterations": 3,
+  "spin_squared": 0.0,
+  "gradient_error": 9.152849693438991e-10,
+  "Hessian_vector_error": 5.214634279937513e-10,
+  "spin_raising_norm_squared": 0.0,
+  "coherent_overlap_error": 0.0,
+  "response": {
+    "orbital_residual": 3.151869092877999e-12,
+    "surface": "Common-orbital multiplet sum",
+    "off_diagonal_energy_weighted_density": true,
+    "finite_differences_in_production": false,
+    "orbital_response_maximum_residual": 4.495434011516264e-12,
+    "raw_Hessian_asymmetry": 3.399524806623602e-13,
+    "coupled_common_response": true,
+    "grid_response": [
+      {
+        "required": true,
+        "scheme": "Analytic moving Becke partition, AO derivatives through order 3, LibXC vxc/fxc",
+        "points": 21952,
+        "finite_differences": false
+      },
+      {
+        "required": true,
+        "scheme": "Analytic moving Becke partition, AO derivatives through order 3, LibXC vxc/fxc",
+        "points": 21952,
+        "finite_differences": false
+      }
+    ]
+  },
+  "seconds": 17.942498916992918
+}
