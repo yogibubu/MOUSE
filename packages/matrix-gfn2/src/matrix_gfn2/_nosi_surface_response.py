@@ -121,6 +121,12 @@ class MatrixResponse:
                     value=self._spin_pair(q[i],q[j],direction);four=four+value[...,None,None]*self.spin_map[i,j]
             four=four+charge[...,None,None]*np.eye(2);diagonal.extend([four[0,0],four[1,1]])
             four_overrides.append((len(basis)-2,four))
+        # Retained nonorthogonal CSFs repeatedly use the same transition
+        # densities. Batch their exact tensor actions before scalar assembly.
+        if self.nr==0 and self.fixed_bra is not None:
+            scalar_basis=[[(weight,(a.v,b.v)) for weight,(a,b) in csf] for csf in basis[:self.nbase]]
+            self.scalar.prefetch_csf_pairs((scalar_basis[i],scalar_basis[j])
+                for i in range(self.nbase) for j in range(i+1) if (i,j) not in self.scalar_elements)
         size=len(basis);metric=Jet.constant(np.zeros((size,size)),self.nr);hf=Jet.constant(np.zeros((size,size)),self.nr)
         if self.canonical_block is not None:
             metric.v[self.nbase:,self.nbase:]=self.canonical_block[0]

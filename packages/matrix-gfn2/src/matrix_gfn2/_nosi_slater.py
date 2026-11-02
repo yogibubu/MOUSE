@@ -31,14 +31,43 @@ def schur(a,b):
 
 class Hamiltonian:
     def __init__(self,h,eri):
-        self.h=h;self.eri=eri;n=len(h);self.j=eri.reshape(n*n,n*n);self.k=eri.transpose(1,2,3,0).reshape(n*n,n*n);self.jk=self.j-self.k;self._contractions={}
+        self.h=h;self.eri=eri;n=len(h);self.j=eri.reshape(n*n,n*n);self.k=eri.transpose(1,2,3,0).reshape(n*n,n*n);self.jk=self.j-self.k;self._contractions={};self._contraction_limit=128
+    def prefetch_csf_pairs(self,pairs):
+        """Prepare exact contractions for a supplied iterable of scalar CSF pairs."""
+        densities=[]
+        for bra,ket in pairs:
+            for unused,a in bra:
+                for unused,b in ket:
+                    for x,y in zip(a,b):densities.extend(schur(x,y)[2:4])
+        self.prefetch_densities(densities)
+
+    def prefetch_densities(self,densities,*,batch_size=16,cache_limit=512):
+        """Batch exact pair-tensor actions for repeatedly used Schur densities.
+
+        This changes only memory access: dense matrix products replace
+        independent matrix-vector products on the same integral tensor.
+        """
+        if batch_size<1 or cache_limit<1:raise ValueError('positive contraction cache sizes required')
+        unique={}
+        for p in densities:
+            p=np.ascontiguousarray(p)
+            if np.any(p):unique[sha256(p.tobytes()).digest()]=p.ravel()
+        self._contraction_limit=max(self._contraction_limit,cache_limit)
+        for exchange,matrix in [(False,self.j),(True,self.jk)]:
+            pending=[(key,p) for key,p in unique.items() if (exchange,key) not in self._contractions]
+            for start in range(0,len(pending),batch_size):
+                block=pending[start:start+batch_size];fields=np.array([p for key,p in block])@matrix
+                for (key,p),field in zip(block,fields):
+                    if len(self._contractions)>=self._contraction_limit:self._contractions.pop(next(iter(self._contractions)))
+                    self._contractions[exchange,key]=field.copy()
+
     def _bilinear(self,p,q,exchange):
         # Schur null blocks often give exactly zero transition densities.
         # Avoid reading the complete pair tensor for these exact zero terms.
         if not np.any(p) or not np.any(q):return 0.
         key=(bool(exchange),sha256(np.ascontiguousarray(p).tobytes()).digest())
         if key not in self._contractions:
-            if len(self._contractions)>=128:self._contractions.pop(next(iter(self._contractions)))
+            if len(self._contractions)>=self._contraction_limit:self._contractions.pop(next(iter(self._contractions)))
             self._contractions[key]=p.ravel()@(self.jk if exchange else self.j)
         return float(self._contractions[key]@q.ravel())
     def coulomb(self,p,q):return self._bilinear(p,q,False)
@@ -49,7 +78,7 @@ class Hamiltonian:
             _,d,r,q,l,v,second=p[spin];other=p[1-spin][1]
             one=d*np.trace(self.h@r)+np.trace(self.h@q)
             two=.5*d*self.same(r,r)+self.same(r,q)
-            if l.shape[1]:
+            if np.any(second):
                 pairs=cached_einsum('pi,qj->ijpq',v,l).reshape(l.shape[1]**2,-1)
                 tensor=(pairs@self.j@pairs.T).reshape(second.shape);two+=.5*float(np.sum(second*tensor))
             total+=other*(one+two)

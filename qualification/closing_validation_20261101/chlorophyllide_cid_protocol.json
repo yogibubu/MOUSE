@@ -46,5 +46,10 @@
   "wait_for_existing_baseline": true,
   "saved_generality_controls": [
     "beta_cid_general_driver_control"
+  ],
+  "extra_evidence_files": [
+    "chlorophyllide_cid_contraction_batch.json",
+    "chlorophyllide_cid_rescreen_batch.json",
+    "chlorophyllide_cid_batch_tests.json"
   ]
 }

@@ -15,7 +15,7 @@ def digest(p):
  return h.hexdigest()
 assessment=json.loads((HERE/f'{prefix}_assessment.json').read_text());ns=assessment['convergence']['windows'];inventory=[]
 for name in [args.protocol,f'{prefix}_convergence.json',f'{prefix}_assessment.json','pigment_spectral_references.json'] :copy(HERE/name,name)
-for script in ['complete_pigment_cid_validation.py','audit_pigment_cid_validation.py','collect_pigment_cid_validation.py','prepare_pigment_screening.py','run_pigment_cid.py','run_pigment_roks.py','pigment_block_matmul.py','pigment_reference_embedding.py','pigment_compact_reference.py']:copy(HERE/script,'qualified_sources/'+script)
+for script in ['complete_pigment_cid_validation.py','audit_pigment_cid_validation.py','collect_pigment_cid_validation.py','prepare_pigment_screening.py','run_pigment_cid.py','run_pigment_roks.py','pigment_block_matmul.py','pigment_reference_embedding.py','pigment_compact_reference.py','qualify_pigment_rescreen.py','validate_cid_contraction_batch.py','test_slater_contraction_batch.py','test_pigment_phase.py']:copy(HERE/script,'qualified_sources/'+script)
 for p in (BASE/'source/packages/matrix-gfn2/src/matrix_gfn2').glob('*.py'):
  copy(p,'qualified_sources/matrix_gfn2/'+p.name)
 model=HERE/f'pigment_models/{NAME}';copy(model/'manifest.json','frozen_model_manifest.json');copy(model/'quadrature/manifest.json','frozen_quadrature_manifest.json')
@@ -37,6 +37,7 @@ for control in protocol.get('saved_generality_controls',[]):
  for p in HERE.glob(control+'*.json'):copy(p,'generality_control/'+p.name)
  control_log=HERE/(control+'.log')
  if control_log.exists():copy(control_log,'generality_control/'+control+'.txt')
+for name in protocol.get('extra_evidence_files',[]):copy(HERE/name,'controls/'+name)
 (out/'large_artifacts.json').write_text(json.dumps(inventory,indent=2)+'\n')
 files={str(p.relative_to(out)):digest(p) for p in sorted(out.rglob('*')) if p.is_file() and p.name!='artifact_manifest.json'}
 (out/'artifact_manifest.json').write_text(json.dumps(dict(host=socket.getfqdn(),file_count=len(files),sha256=files),indent=2)+'\n');print('ARCHIVED',len(files),'files',flush=True)

@@ -18,6 +18,8 @@ def reassemble(y,basis,records,nbase,h,w,parent_h,parent_s,*,elements,checkpoint
     error=float(np.max(abs(cs-parent_s[nbase:,nbase:])))
     if error>1e-10:raise ValueError(('rescreening changed canonical metric',error))
     scalar=Hamiltonian(h,w);scalar.coulomb_factors=coulomb_factors;fixed=FixedBraCSF(scalar,y[:,core],y[:,active]);raw=np.zeros_like(parent_h);raw[nbase:,nbase:]=ch
+    scalar.prefetch_csf_pairs((basis[i],basis[j]) for i in range(nbase)
+                             for j in range(i+1) if (i,j) not in elements)
     for i in range(len(basis)):
         for j in range(min(i+1,nbase)):
             if (i,j) not in elements:

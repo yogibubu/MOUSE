@@ -1,0 +1,17 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "host": "mac-2.homenet.telecomitalia.it",
+  "retained_CSFs": 9,
+  "scalar_pairs": 45,
+  "maximum_Hamiltonian_error_hartree": 1.8189894035458565e-12,
+  "maximum_overlap_error": 0.0,
+  "batched_contraction_wall_seconds": 2.763407875027042,
+  "total_wall_seconds": 8.353093584009912,
+  "SCF_calls": 0,
+  "DFT_imports": 0,
+  "approximation_changed": false,
+  "source_sha256": {
+    "matrix_gfn2._nosi_slater": "06183545122ef5a87b3deeee3179bf1245afd5ed0bd221ae3f26a21b44b68334",
+    "matrix_gfn2._nosi_surface_response": "1bfec8e171d265d0670b4ea0550417d0611bace071f4e49ab0c05685228655a3"
+  }
+}

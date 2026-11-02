@@ -98,7 +98,9 @@ four-index molecular-orbital transformation: the common closed-shell core
 is contracted first and only the active integral block is transformed.
 Fixed-bra Schur contractions reuse the common core in nonorthogonal
 couplings; repeated identical canonical occupations reuse their exact
-cofactors and pair contractions through a bounded cache. Coulomb
+cofactors and pair contractions through a bounded cache. Retained-CSF
+transition-density actions are batched into exact matrix products; identically
+zero second cofactors bypass their pair-tensor contraction. Coulomb
 feature contractions use the existing auxiliary factors of the same
 screened interaction, with no additional fitting or truncation. The canonical
 determinant-to-CSF transformation uses its exact sparse coefficients
@@ -128,7 +130,10 @@ Hamiltonian. Phase tests cover even and odd occupations and direct
 overlaps with the stored metric. Identical native diagonal and four-spin
 functional values can be reused when only the screened interaction
 changes; an independent matrix reconstruction agrees within
-$2.0\times10^{-11}$ Ha. Positive definiteness is certified by a Gershgorin lower bound or by
+$2.0\times10^{-11}$ Ha for the archived carotene block and
+$1.1\times10^{-10}$ Ha for chlorophyllide. The 45 retained-CSF scalar
+elements of chlorophyllide reproduce the unbatched journal within
+$1.9\times10^{-12}$ Ha. Positive definiteness is certified by a Gershgorin lower bound or by
 eliminating the sparse canonical block and testing its small border
 Schur complement. A smallest-eigenvalue calculation remains the fallback.
 
