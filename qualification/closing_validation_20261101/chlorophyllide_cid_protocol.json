@@ -1,0 +1,47 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "frozen_before_CID_results": "2026-11-02",
+  "reference_geometry_changed": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "lambda_exchange": 0.9,
+  "eta": 0.6,
+  "energy_offset_ev": 0,
+  "ROKS_targets": "All four distinct certified roots, unchanged checkpoints",
+  "CI_space": "Complete spin-singlet frontier configurations through excitation rank two, plus optimized ROKS and paired CSFs",
+  "baseline": "N=2, W=5; expand N=3,4,5 at fixed W=5",
+  "coherent_sequence": "W=N, N=5 through at most 16; two consecutive increments below 0.02 eV for the lowest four roots",
+  "energy_tolerance_ev": 0.02,
+  "successive_increments_required": 2,
+  "roots": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "fixed_Hamiltonian_check": "Repeat last three CI windows at fixed W=16; same two-increment energy criterion",
+  "screening_check": "Three random quadratic forms, dielectric solve residuals and factorized screened rows, errors below 1e-9",
+  "identity_and_optical_checks": "All root intensities, native-target projector coverage >=0.49 in every direction, metric-overlap tracking and principal angles for lowest-four subspace; report optical changes separately",
+  "eigensolver_checks": "Projected CI residual and metric orthonormality below 1e-8, positive projected metric, ground orthogonality and nonnegative oscillator strengths",
+  "scope": "Numerical validation of fixed rank-two vertical model on source geometry. Experimental solution maxima provide context only. No blind accuracy or pigment nuclear-Hessian claim.",
+  "artifact_prefix": "chlorophyllide_cid",
+  "baseline_frontiers": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "baseline_screening_frontier": 5,
+  "maximum_frontier": 16,
+  "fixed_screening_frontier": 16,
+  "initial_eigensolver_roots": 40,
+  "eigensolver_root_limits": [
+    40,
+    80,
+    160,
+    320
+  ],
+  "wait_for_existing_baseline": true
+}
