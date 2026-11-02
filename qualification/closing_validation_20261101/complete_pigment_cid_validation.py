@@ -51,7 +51,8 @@ coherent=[baseline[-1]];windows=[baseline_ns[-1]]
 for n in range(baseline_ns[-1]+1,protocol['maximum_frontier']+1):
  coherent.append(calc(n,n));windows.append(n);save(dict(phase='coherent',windows=windows,increments_ev=increments(coherent),coherent_passed=passed(coherent)))
  if passed(coherent):break
-if not passed(coherent):raise RuntimeError('Coherent convergence threshold not reached within frozen frontier limit')
+# A failed coherent threshold must not suppress the independent fixed-H audit.
+# Preserve the failure explicitly and finish the frozen diagnostic protocol.
 fixed=[calc(n,fixed_w) for n in windows[-(protocol['successive_increments_required']+1):]]
 result=dict(protocol=protocol,host=socket.getfqdn(),windows=windows[-history_count:],coherent_results=[str(folder(n,n)) for n in windows[-history_count:]],fixed_results=[str(folder(n,fixed_w)) for n in windows[-history_count:]],coherent_increments_ev=increments(coherent[-history_count:]),fixed_Hamiltonian_increments_ev=increments(fixed),coherent_converged=passed(coherent),fixed_Hamiltonian_converged=passed(fixed),numerical_audit_pending=True)
 save(result);(HERE/f'{prefix}_convergence.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2),flush=True)
