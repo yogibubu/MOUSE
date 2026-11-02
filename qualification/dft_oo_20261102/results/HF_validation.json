@@ -1,0 +1,15 @@
+{
+  "method": "HF",
+  "energy_hartree": -74.5501504496244,
+  "excitation_ev": 11.235926424196915,
+  "residual": 3.1780201604133827e-09,
+  "iterations": 3,
+  "spin_squared": 1.0262446665087133,
+  "target_overlap": 0.9842952135823377,
+  "orbital_Hessian_action_error": 1.2814832528462716e-10,
+  "nuclear_gradient_error": 2.581375069254932e-08,
+  "restart_energy_error": 0.0,
+  "MOM_converged": true,
+  "MOM_energy_hartree": -74.5501504496237,
+  "seconds": 0.03927062504226342
+}

@@ -1,0 +1,37 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "finite_differences_in_production": false,
+  "TDA_calls": 0,
+  "cases": [
+    {
+      "method": "HF",
+      "energy_hartree": -74.5501504496244,
+      "excitation_ev": 11.235926424196915,
+      "residual": 3.1780201604133827e-09,
+      "iterations": 3,
+      "spin_squared": 1.0262446665087133,
+      "target_overlap": 0.9842952135823377,
+      "orbital_Hessian_action_error": 1.2814832528462716e-10,
+      "nuclear_gradient_error": 2.581375069254932e-08,
+      "restart_energy_error": 0.0,
+      "MOM_converged": true,
+      "MOM_energy_hartree": -74.5501504496237,
+      "seconds": 0.03927062504226342
+    },
+    {
+      "method": "PBE0",
+      "energy_hartree": -74.83636583583511,
+      "excitation_ev": 11.139525067286204,
+      "residual": 3.680683812250587e-11,
+      "iterations": 3,
+      "spin_squared": 1.0070294404140196,
+      "target_overlap": 0.9890466803970211,
+      "orbital_Hessian_action_error": 9.096012831832923e-11,
+      "nuclear_gradient_error": 3.2827969231874476e-09,
+      "restart_energy_error": 0.0,
+      "MOM_converged": true,
+      "MOM_energy_hartree": -74.8363658358342,
+      "seconds": 0.3300102079520002
+    }
+  ]
+}

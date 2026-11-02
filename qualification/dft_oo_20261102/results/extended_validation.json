@@ -1,0 +1,19 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "molecule": "formaldehyde",
+  "basis": "6-31g",
+  "xc": "PBE0",
+  "energy_hartree": -114.20424952972243,
+  "excitation_ev": 3.323809496028743,
+  "iterations": 4,
+  "residual": 2.041431518458797e-12,
+  "spin_squared": 1.0101664255926632,
+  "nuclear_gradient_error": 2.003074150991324e-08,
+  "negative_orbital_modes": 1,
+  "minimum_orbital_Hessian_eigenvalue": -0.12193016192331374,
+  "APOC_self_overlap": 1.0,
+  "wrong_functional_restart_rejected": true,
+  "nuclear_Hessian_implemented": false,
+  "spin_pure_singlet": false,
+  "finite_differences_in_production": false
+}

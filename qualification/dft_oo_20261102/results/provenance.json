@@ -1,0 +1,20 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "python": "3.12.13",
+  "pyscf": "2.14.0",
+  "scipy": "1.18.0",
+  "numpy": "2.3.5",
+  "public_API_import_verified": true,
+  "sha256": {
+    "HF_checkpoint.npz": "b9634261865ab9fd53ab8d1bf922fb30f5eadd20fea3bf245632cf135cf3ee1a",
+    "HF_validation.json": "041679f1122f45f9e83f5b14aefb73ea3945bd34d610e018ac08c1b07c5afee4",
+    "deltascf.py": "9781d26472f13efa0bdff77b2833d77b6e8b96ca0bfc522c1f6b11f78d1bafe9",
+    "PBE0_checkpoint.npz": "d2018c20b2558197544c88618868069f96d4fe61796b098e541203d59400285b",
+    "formaldehyde_checkpoint.npz": "e636d581ffc13312fbc4ef57a70736d528d1683bec293cf3a11f0a1a104e91f0",
+    "validate.py": "17500c4538e02a53b5566d72709cc965558db41e7504f334d599f14ff3b56d4e",
+    "validation.json": "e03c0247d9a80084cdd4b1921f3ecd7fed802a8da4e6aaa843c52eade7f85884",
+    "extended_validation.json": "f0e0f40d7398b79d6eac70cd40dba99dfa137413ea82679f3092d88638d0bd1d",
+    "PBE0_validation.json": "b7e439741dc344b4f7850fd8aea8547b9dfdc20ac49a65e91cc2f9aeecd7e748",
+    "validate_extended.py": "41e80f71a3c1456a1c3e1a050248a0486a828171931604401c6af2265bb72350"
+  }
+}

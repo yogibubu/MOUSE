@@ -1,0 +1,10 @@
+{
+  "public_API": "matrix_pyscf.deltascf",
+  "restart_orbital_iterations": 0,
+  "energy_error_hartree": 0.0,
+  "complex_reference_rejected": true,
+  "zero_iteration_limit_rejected": true,
+  "ground_SCF_calls": 0,
+  "TDA_calls": 0,
+  "host": "mac-2.homenet.telecomitalia.it"
+}

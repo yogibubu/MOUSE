@@ -1,5 +1,6 @@
 """PySCF launch and structured-output adapters for MATRIX."""
 
+from .deltascf import PySCFDeltaSCFResult, PySCFDeltaSCFConvergenceError, optimize_deltascf
 from .dispersion import PySCFDispersionContract, resolve_pyscf_dispersion_contract
 from .jobs import PYSCF_EXECUTABLE, PYSCF_SPEC, pyscf_job_status, run_pyscf_job
 from .parsers import (
@@ -25,6 +26,9 @@ from .resident import PySCFResidentCalculator, PySCFResidentEvaluation
 from .hessian import PySCFHessianEvaluation, pyscf_cartesian_hessian
 
 __all__ = [
+    "PySCFDeltaSCFResult",
+    "PySCFDeltaSCFConvergenceError",
+    "optimize_deltascf",
     "PYSCF_EXECUTABLE",
     "PYSCF_OUTPUT_FORMAT",
     "PYSCF_RESULT_PREFIX",
