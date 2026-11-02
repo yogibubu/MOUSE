@@ -27,7 +27,13 @@ for n,w in dict.fromkeys(folders):
  f=HERE/(f'pigment_cid/{NAME}' if n==2 and w==5 else f'pigment_cid_expansion/{NAME}/'+('' if w==5 else f'screening_{w}/')+f'frontier_{n}')
  if case_mode(n,w)=='coherent_transitions':f=HERE/f'pigment_cid_transition/{NAME}/screening_{w}/frontier_{n}'
  dst=f'spectra/N{n}_W{w}'
- for name in ['result.json','scalar_elements.json']:copy(f/name,dst+'/'+name)
+ copy(f/'result.json',dst+'/result.json')
+ if (f/'scalar_elements.json').exists():copy(f/'scalar_elements.json',dst+'/scalar_elements.json')
+ else:
+  expected=protocol.get('certified_baseline_matrix_sha256')
+  if n not in protocol['baseline_frontiers'] or expected is None or digest(f/'matrices.npz')!=expected:
+   raise ValueError('missing scalar journal without an independently certified baseline matrix')
+  (out/dst/'legacy_scalar_journal.json').write_text(json.dumps(dict(scalar_journal_available=False,independently_certified_matrix_sha256=expected,scope='Legacy baseline; matrix identity and independently replayed matrix audit replace unavailable construction journal'),indent=2)+'\n')
  with np.load(f/'eigenstates.npz') as a:np.savez_compressed(out/dst/'eigenvectors.npz',energies=a['energies'],ci=a['ci'],transition_dipoles=a['transition_dipoles'])
  copy(f/'observables_phase_corrected.npz',dst+'/observables_phase_corrected.npz')
  p=f/'matrices.npz';inventory.append(dict(path=str(p),bytes=p.stat().st_size,sha256=digest(p),retained_on_remote=True))

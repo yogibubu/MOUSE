@@ -12,7 +12,7 @@ from ._nosi_configurations import basis as configuration_basis,common_core_and_a
 from ._nosi_canonical import block as canonical_block
 
 class MatrixResponse:
-    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True,auxiliary_records=None,scalar_elements=None,scalar_checkpoint=None,fixed_bra=False,coulomb_factors=None):
+    def __init__(self,context,reference,ground_coefficients,state_coefficients,multipliers,canonical_frame,labels,h,eri,*,derivatives=True,auxiliary_records=None,scalar_elements=None,scalar_checkpoint=None,fixed_bra=False,coulomb_factors=None,native_diagonals=None,native_four_blocks=None):
         if derivatives and getattr(context,'vertical_only',False):raise NotImplementedError('this quadrature adapter supports vertical energies only')
         self.context=context;self.s=context.state;self.reference=reference;self.no=context.state.electron_count//2
         self.nr=context.state.coordinates_bohr.size if derivatives else 0;self.labels=list(labels)
@@ -20,6 +20,9 @@ class MatrixResponse:
         self.auxiliary_records=auxiliary_records
         self.scalar_elements={} if scalar_elements is None else scalar_elements
         self.scalar_checkpoint=scalar_checkpoint
+        self.native_diagonals={} if native_diagonals is None else native_diagonals
+        self.native_four_blocks={} if native_four_blocks is None else native_four_blocks
+        if derivatives and (self.native_diagonals or self.native_four_blocks):raise ValueError('scalar native cache cannot replace nuclear response')
         self.scalar=Hamiltonian(self.h,self.w);self.scalar.coulomb_factors=coulomb_factors;self.constant_elements={};self.spin_map=np.zeros((4,4,2,2))
         self.fixed_bra=None;self.canonical_block=None
         for i in range(4):
@@ -51,16 +54,20 @@ class MatrixResponse:
     def _spin_pair(self,left,right,direction):
         if hasattr(self.context,'spin_pair_bilinear'):return self.context.spin_pair_bilinear(left,right,direction)
         return contract('i,ij,j->',left,self.reference.pair_spin_hartree,right)
+    def _native(self,index,c,occupation,direction):
+        if index in self.native_diagonals:return Jet.constant(self.native_diagonals[index],self.nr)
+        return self.energy.evaluate(c,occupation,direction)
     def matrices(self,direction):
         direction=np.asarray(direction).ravel();_,s,_,_,u=self.ground.engine.geometry(direction);root=square_root_jet(s)
         cg=self.ground.coefficient(direction);cs=[state.coefficient(direction) for state in self.states]
         yg=u.T@root@cg;ys=[u.T@root@c for c in cs]
-        basis=[closed(yg,list(range(self.no)))];diagonal=[self.energy.evaluate(cg,self.ground.occupations,direction)]
+        basis=[closed(yg,list(range(self.no)))];diagonal=[self._native(0,cg,self.ground.occupations,direction)]
         for c,y,state in zip(cs,ys,self.states):
-            basis.append(opened(y,self.no));diagonal.append(2*self.energy.evaluate(c,state.occupations,direction)-self.energy.evaluate(c,state.triplet,direction))
+            basis.append(opened(y,self.no))
+            diagonal.append(Jet.constant(self.native_diagonals[len(diagonal)],self.nr) if len(diagonal) in self.native_diagonals else 2*self.energy.evaluate(c,state.occupations,direction)-self.energy.evaluate(c,state.triplet,direction))
         occ=self.ground.occupations.copy();occ[:,0]=0;occ[:,self.no]=1
         for c,y in zip(cs,ys):
-            basis.append(closed(y,list(range(1,self.no))+[self.no]));diagonal.append(self.energy.evaluate(c,occ,direction))
+            basis.append(closed(y,list(range(1,self.no))+[self.no]));diagonal.append(self._native(len(diagonal),c,occ,direction))
         y=Jet.constant(self.ycanonical,self.nr);c=inverse(root)@u@y;core=list(range(self.no-2))
         four_overrides=[]
         if self.auxiliary_records is not None:
@@ -68,13 +75,15 @@ class MatrixResponse:
             pending=None;q_cache={};pair_cache={}
             for i,record in enumerate(self.auxiliary_records):
                 occupation=np.zeros_like(self.ground.occupations);core=record['closed'];sites=record.get('open',[]);occupation[:,core]=1
-                if record['kind']=='closed':diagonal.append(self.energy.evaluate(c,occupation,direction))
+                if record['kind']=='closed':diagonal.append(self._native(len(diagonal),c,occupation,direction))
                 elif record['kind']=='open':
                     occupation[0,sites[0]]=1;occupation[1,sites[1]]=1
                     triplet=np.zeros_like(occupation);triplet[:,core]=1;triplet[0,sites]=1
-                    diagonal.append(2*self.energy.evaluate(c,occupation,direction)-self.energy.evaluate(c,triplet,direction))
+                    diagonal.append(Jet.constant(self.native_diagonals[len(diagonal)],self.nr) if len(diagonal) in self.native_diagonals else 2*self.energy.evaluate(c,occupation,direction)-self.energy.evaluate(c,triplet,direction))
                 else:
-                    if record['component']==0:
+                    if record['component']==0 and self.nbase+i in self.native_four_blocks:
+                        pending=Jet.constant(self.native_four_blocks[self.nbase+i],self.nr);four_overrides.append((self.nbase+i,pending))
+                    elif record['component']==0:
                         occupation[:,sites]=.5;charge=self.energy.evaluate(c,occupation,direction);q=[]
                         for site in sites:
                             if site not in q_cache:

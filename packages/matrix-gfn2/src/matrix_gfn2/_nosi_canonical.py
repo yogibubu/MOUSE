@@ -76,6 +76,12 @@ def block(basis,canonical,h,eri,core,active,*,records=None,compiled=True):
  if compiled and ns<=64:
   from ._nosi_canonical_kernel import matrix as compiled_matrix
   hd=compiled_matrix(masks,np.array([occupied[k] for k in masks]),hs,g)
+ if compiled and 64<ns<=128:
+  from ._nosi_canonical_kernel import contracted_matrix
+  contracted=contracted_matrix(masks,np.array([occupied[k] for k in masks]),hs,g,transform)
+  if contracted is not None:
+   metric=(transform.T@transform).toarray()
+   return metric,contracted+ec*metric,dict(compiled_integer_kernel=True,determinants=nd,csfs=len(terms),active_orbitals=na,closed_core_orbitals=len(core),mask_bits=128,dense_determinant_matrix_allocated=False)
  accelerated=hd is not None
  if hd is None:
   hd=np.zeros((nd,nd))
