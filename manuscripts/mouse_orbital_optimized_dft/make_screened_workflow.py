@@ -5,7 +5,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch,FancyArrowPatch
 P=Path(__file__).resolve().parent
-fig,ax=plt.subplots(figsize=(8,3.1));ax.set(xlim=(0,10),ylim=(0,4));ax.axis('off')
+fig,ax=plt.subplots(figsize=(8,3.1));ax.set(xlim=(0,10),ylim=(-.18,4));ax.axis('off')
 def box(x,y,w,h,text,color):
  ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=.08,rounding_size=.08',facecolor=color,edgecolor='#8097a5',lw=.9));ax.text(x+w/2,y+h/2,text,ha='center',va='center',fontsize=8.5,color='#143347')
 def arrow(a,b):ax.add_patch(FancyArrowPatch(a,b,arrowstyle='-|>',mutation_scale=11,lw=1,color='#476875'))

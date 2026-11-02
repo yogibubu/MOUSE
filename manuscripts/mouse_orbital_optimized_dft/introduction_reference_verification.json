@@ -1,0 +1,21 @@
+{
+  "checked_date": "2026-11-02",
+  "purpose": "New Introduction references supporting QM/QM prime, maximum-overlap DeltaSCF and orbital-optimized DFT motivation",
+  "sources": [
+    {
+      "key": "oniom2015",
+      "doi": "10.1021/cr5004419",
+      "primary_source": "https://pubs.acs.org/doi/10.1021/cr5004419"
+    },
+    {
+      "key": "mom2008",
+      "doi": "10.1021/jp801738f",
+      "primary_source": "https://researchportalplus.anu.edu.au/en/publications/self-consistent-field-calculations-of-excited-states-using-the-ma/"
+    },
+    {
+      "key": "hait2021",
+      "doi": "10.1021/acs.jpclett.1c00744",
+      "primary_source": "https://arxiv.org/abs/2103.04573"
+    }
+  ]
+}
