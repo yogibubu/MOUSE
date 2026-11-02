@@ -137,17 +137,17 @@ def gaussian_job_status(workdir: Path) -> GaussianJobStatus:
     log_path = select_latest_log(workdir)
     pid = _read_pid(workdir / PID_FILE)
     running = pid is not None and _pid_is_running(pid)
-    normal = gaussian_completed_normally(log_path)
+    normal_marker = gaussian_completed_normally(log_path)
     error = gaussian_has_error_termination(log_path)
     if error:
         status = "failed"
         message = "Gaussian error termination detected"
-    elif normal:
-        status = "completed"
-        message = "Gaussian normal termination detected"
     elif running:
         status = "running"
         message = f"Gaussian process appears to be running (pid={pid})"
+    elif normal_marker:
+        status = "completed"
+        message = "Gaussian normal termination detected"
     elif log_path.exists():
         status = "unknown"
         message = f"Gaussian log exists without termination marker: {log_path.name}"
@@ -162,7 +162,11 @@ def gaussian_job_status(workdir: Path) -> GaussianJobStatus:
         input_path=input_path,
         log_path=log_path,
         status=status,
-        normal_termination=normal,
+        # A multi-stage Gaussian/GDV execution can append a normal-termination
+        # marker for a completed optimization before starting the requested
+        # frequency stage in the same log.  The job is complete only after the
+        # launcher process exits.
+        normal_termination=normal_marker and not running,
         error_termination=error,
         pid=pid,
         message=message,
