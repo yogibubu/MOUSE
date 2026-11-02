@@ -17,6 +17,24 @@ until the smallest eigenvalue of their projector in the fixed target space
 reaches 0.49. This keeps the original coverage threshold, protects each
 target direction and is invariant to unitary rotations of the target basis.
 
+A direct-energy initialization precedes the final KKT search when a
+residual-norm minimization stagnates. The promoted open orbitals are
+first held fixed while L-BFGS relaxes the remaining orbitals. Analytic
+exponential-map pullbacks provide the optimization gradient. Ground
+orthogonality is enforced through an augmented Lagrangian,
+$E_{\rm ROKS}-\mu o+\kappa o^2/2$, with multiplier updates
+$\mu\leftarrow\mu-\kappa o$. This is a numerical constraint objective;
+the penalty is excluded from reported energies. All nonredundant
+rotations are subsequently released and the original full-functional
+KKT equations determine convergence. This freeze-and-release sequence
+is motivated by the direct-optimization strategy of Levi and
+co-workers.\cite{freeze2026} A second converged root is distinguished
+from an existing solution by its coherent singlet overlap. If two
+frontier promotions collapse onto the same root, a new initial hole
+is chosen as the orthogonal complement of the converged hole within
+the same frozen native frontier block. This changes the initial guess,
+not the energy model or the final stationarity equations.
+
 The large-system XC response is evaluated on its full frozen quadrature.
 A density-fitted approximation preconditions the Newton linear system.
 When its step fails the full-response inexact-Newton tolerance, flexible
@@ -31,10 +49,16 @@ reduction are still evaluated explicitly. For
 large Newton steps, a residual-minimizing trust subspace contains the
 Newton and full-response squared-residual descent directions, augmented
 by directions retained from the auxiliary Krylov solve. Twice-applied
-orthogonalization removes redundant directions. The small constrained
-least-squares problem bounds the orbital rotation while optimizing the
-scalar ground-constraint multiplier jointly. The auxiliary response
-proposes the enlarged-subspace step; its predicted reduction is then
+orthogonalization removes redundant directions. When retraction is enabled, every orbital basis direction is first
+projected to satisfy $\mathbf j^{\mathsf T}\delta\boldsymbol\theta=0$.
+The small constrained least-squares problem bounds the orbital rotation;
+the unrestricted multiplier is eliminated exactly by projection in the
+residual space. A thin singular-value decomposition of the response
+images solves the trust problem directly. Normal equations would square
+the condition number and could discard physically relevant soft modes.
+The predicted reduction therefore describes the same tangent step that
+the subsequent geometric retraction executes. The auxiliary response can
+propose an enlarged-subspace step; its predicted reduction is then
 recomputed with the full quadrature action, and acceptance requires an
 actual decrease of the full functional residual. The trust radius adapts
 to the ratio of actual and predicted squared-residual reduction. This

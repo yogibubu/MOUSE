@@ -1,0 +1,60 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "complete": true,
+  "rows": [
+    {
+      "state": 1,
+      "residual": 6.17408651060105e-14,
+      "ground_overlap": -1.63189823253176e-14,
+      "native_frontier_fidelity": 0.9782342915772175,
+      "energy_hartree": -125.31137045023833,
+      "energy_error_hartree": 2.842170943040401e-14,
+      "optimization_iterations": 0
+    },
+    {
+      "state": 2,
+      "residual": 5.527845953803443e-14,
+      "ground_overlap": 1.3516609946689487e-14,
+      "native_frontier_fidelity": 0.9824881934289811,
+      "energy_hartree": -125.31629605310665,
+      "energy_error_hartree": 2.842170943040401e-14,
+      "optimization_iterations": 0
+    },
+    {
+      "state": 3,
+      "residual": 3.933086155823603e-12,
+      "ground_overlap": -4.0158861642195915e-15,
+      "native_frontier_fidelity": 0.9879786481375018,
+      "energy_hartree": -125.29330410398282,
+      "energy_error_hartree": 5.684341886080802e-14,
+      "optimization_iterations": 0
+    },
+    {
+      "state": 4,
+      "residual": 3.492817928693119e-11,
+      "ground_overlap": 5.946606761510367e-13,
+      "native_frontier_fidelity": 0.9893349161409412,
+      "energy_hartree": -125.28200280890039,
+      "energy_error_hartree": 5.684341886080802e-14,
+      "optimization_iterations": 0
+    }
+  ],
+  "metric_eigenvalues": [
+    0.6881732599090093,
+    0.8361391724645054,
+    1.0667007247227938,
+    1.4089868429038077
+  ],
+  "source_sha256_at_import": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/source/packages/matrix-gfn2/src/matrix_gfn2/_roks_matrix_free.py": "2af8eaf123624aa88598bb82a335dcbb8920d509dc1684bfaa4db2d595cef865",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/run_pigment_roks.py": "65fbdf93d9b675f9382e90b28fe73393663e5e3d677d0cec388f056cff22bd2c",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/run_pigment_energy_escape.py": "4ff68eef16b18bf5283901fc9808bac0d4b8a1c72632b6eebabbf8ab981187f7",
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/finalize_pigment_roks.py": "07b142d8a17fa498c613bf87cf62a50d6c586ec5ebc61b55c8a4dd4b210c53cf"
+  },
+  "original_KKT_verified_without_retraction_or_multiplier_adjustment": true,
+  "DFT_imports": 0,
+  "new_SCC_calls": 0,
+  "TDA_solves": 0,
+  "wall_seconds_verification": 103.11424762499519,
+  "pigment_derivative_scope": "Vertical energies and orbital response only; no pigment nuclear-Hessian qualification"
+}

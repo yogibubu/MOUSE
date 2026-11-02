@@ -1,0 +1,23 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "state": 1,
+  "hole": 112,
+  "particle": 113,
+  "row": {
+    "iteration": 1,
+    "trust_radius": 0.000390625,
+    "energy_hartree": -125.27435583995015,
+    "residual": 0.0018588805192902166,
+    "residual_l2": 0.0021685629398628926,
+    "ground_overlap": -1.6406461537817662e-16,
+    "fidelity": 0.2539016225061403,
+    "multiplier": 0.007684257055066968,
+    "previous_step_model_ratio": 0.4021763891000197,
+    "previous_accepted_fraction": 0.001953125,
+    "previous_actual_residual_reduction": 4.34843538604855e-12,
+    "previous_predicted_residual_reduction": 1.0812259257136827e-11,
+    "Krylov_iterations": 53,
+    "Krylov_info": 0,
+    "linear_relative_residual": 0.015593398608479405
+  }
+}

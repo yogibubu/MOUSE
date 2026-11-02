@@ -1,0 +1,6 @@
+{
+  "target": 2,
+  "pid": 93511,
+  "solver": "Full-response residual trust subspace with recycled Krylov directions",
+  "unchanged_energy_model": true
+}

@@ -57,3 +57,28 @@ def test_moving_frame_kkt_connection_away_from_stationarity():
   assert np.max(abs(hv-connection-expected))<1e-12
  # Its skew connection annihilates the residual: J*r == J.T*r.
  rotation=matrix.copy();assert np.max(abs(rotation@matrix-matrix@rotation))==0.
+
+
+def test_trust_search_enforces_the_retraction_tangent_not_a_soft_penalty():
+ rng=np.random.default_rng(9);n=5;j=np.array([1.,0.,0.,0.]);h=rng.normal(size=(n-1,n-1));h=.5*(h+h.T);a=np.zeros((n,n));a[:-1,:-1]=h;a[:-1,-1]=-j;a[-1,:-1]=-j
+ residual=np.r_[0.,rng.normal(size=n-2),0.];newton=np.linalg.solve(a,-residual);radius=.07
+ step,report=residual_subspace_step(residual,newton,lambda v:a@v,radius,directions=np.eye(n),constraint=j)
+ assert abs(j@step[:-1])<1e-13
+ assert np.linalg.norm(step[:-1])<=radius*(1+1e-10)
+ # Independent constrained reference: eliminate the normal orbital and the
+ # freely optimized multiplier, then solve the remaining trust problem.
+ b=h[1:,1:];r=residual[1:-1]
+ def solution(shift):return np.linalg.solve(b.T@b+shift*np.eye(n-2),-b.T@r)
+ shift=brentq(lambda x:np.linalg.norm(solution(x))-radius,1e-12,1e5,xtol=1e-12)
+ assert np.linalg.norm(step[1:-1]-solution(shift))<1e-9
+ actual=residual+a@step;assert abs(actual[0])<1e-12
+ # The predicted norm now describes the same tangent step that retraction executes.
+ assert abs(np.linalg.norm(actual)-np.linalg.norm(r+b@step[1:-1]))<1e-12
+
+
+def test_trust_svd_does_not_drop_a_soft_mode_when_the_normal_matrix_is_squared():
+ a=np.diag([1e-9,1.,2.,3.]);residual=np.array([1e-3,0.,0.,0.]);newton=np.linalg.solve(a,-residual)
+ step,report=residual_subspace_step(residual,newton,lambda x:a@x,.2,directions=np.eye(4))
+ assert abs(step[0]+.2)<1e-10
+ assert np.linalg.norm(step[1:])<1e-12
+ assert report['trust_regularization']>0

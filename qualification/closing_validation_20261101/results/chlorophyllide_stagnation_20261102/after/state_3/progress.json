@@ -1,0 +1,20 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "state": 3,
+  "row": {
+    "stage": "full KKT polishing",
+    "iteration": 11,
+    "trust_radius": 0.4,
+    "energy_hartree": -125.29330410398276,
+    "residual": 3.95208640612735e-12,
+    "residual_l2": 4.0685725753951474e-11,
+    "ground_overlap": -2.1942470794186598e-16,
+    "fidelity": 0.9879786481375014,
+    "multiplier": 0.0026227117087780707,
+    "previous_step_model_ratio": 0.9999999990482336,
+    "previous_accepted_fraction": 1.0,
+    "previous_actual_residual_reduction": 1.737148071146096e-12,
+    "previous_predicted_residual_reduction": 1.7371480727994552e-12
+  },
+  "adopted_from": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_roks_variants/freeze_open_orthogonal_native4/Chlorophyllide_a/state_3"
+}

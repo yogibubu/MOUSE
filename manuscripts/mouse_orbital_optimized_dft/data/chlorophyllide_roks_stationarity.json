@@ -1,0 +1,35 @@
+{
+  "model_sha256": "ed0e67b2b98d21bc47122439f447a28f9c9114c4bb5110b1832402196d10764c",
+  "roots": [
+    {
+      "target": 1,
+      "energy_ev": 2.849751800211009,
+      "residual": 1.70522333176777e-14,
+      "ground_overlap": -9.85672540357997e-15,
+      "frontier_fidelity": 0.9782342915772169
+    },
+    {
+      "target": 2,
+      "energy_ev": 2.7157193180681904,
+      "residual": 4.515925171719035e-14,
+      "ground_overlap": 1.1006382385161667e-14,
+      "frontier_fidelity": 0.9824881934289812
+    },
+    {
+      "target": 3,
+      "energy_ev": 3.3413621262257394,
+      "residual": 3.95208640612735e-12,
+      "ground_overlap": -2.1942470794186598e-16,
+      "frontier_fidelity": 0.9879786481375014
+    },
+    {
+      "target": 4,
+      "energy_ev": 3.648886031790607,
+      "residual": 3.492740902380595e-11,
+      "ground_overlap": 5.919597389042522e-13,
+      "frontier_fidelity": 0.9893349161409413
+    }
+  ],
+  "minimum_CSF_metric_eigenvalue": 0.6881732599090107,
+  "scope": "Full functional ROKS orbital stationarity; final screened-CID spectrum and pigment nuclear Hessian are separate qualifications"
+}

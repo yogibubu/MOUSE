@@ -1,0 +1,85 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "rows": [
+    {
+      "context": "native_RI",
+      "h": 0.0001,
+      "residual_norm": 0.0012310875737139503,
+      "energy_derivative_error": 1.2869473802606946e-10,
+      "Jacobian_relative_error": 4.1217728915312225e-08,
+      "Jacobian_max_error": 4.749794325215051e-10,
+      "merit_derivative_actual": 3.8914237433469845e-06,
+      "merit_derivative_predicted": 3.8914225757111316e-06,
+      "fock_errors": [
+        {
+          "max_error": 5.482879011919906e-10,
+          "relative_error": 1.0353181770559186e-08
+        },
+        {
+          "max_error": 5.575181913353155e-10,
+          "relative_error": 1.0937218826338206e-08
+        }
+      ]
+    },
+    {
+      "context": "native_RI",
+      "h": 2e-05,
+      "residual_norm": 0.0012310875737139503,
+      "energy_derivative_error": 4.1291183233010953e-10,
+      "Jacobian_relative_error": 1.1071204631866497e-08,
+      "Jacobian_max_error": 9.814086652723542e-11,
+      "merit_derivative_actual": 3.891422617801473e-06,
+      "merit_derivative_predicted": 3.8914225757111316e-06,
+      "fock_errors": [
+        {
+          "max_error": 8.231281541787316e-11,
+          "relative_error": 3.2491517413750823e-09
+        },
+        {
+          "max_error": 8.144533485132666e-11,
+          "relative_error": 3.399092852843557e-09
+        }
+      ]
+    },
+    {
+      "context": "full",
+      "h": 0.0001,
+      "residual_norm": 0.001225460822229723,
+      "energy_derivative_error": 1.5490923084213182e-10,
+      "Jacobian_relative_error": 4.1137840486589944e-08,
+      "Jacobian_max_error": 4.762916784063764e-10,
+      "merit_derivative_actual": 3.606192095402545e-06,
+      "merit_derivative_predicted": 3.6061909247532334e-06,
+      "fock_errors": [
+        {
+          "max_error": 5.482651554977735e-10,
+          "relative_error": 1.0351367739939772e-08
+        },
+        {
+          "max_error": 5.573388695001569e-10,
+          "relative_error": 1.0936439926671043e-08
+        }
+      ]
+    },
+    {
+      "context": "full",
+      "h": 2e-05,
+      "residual_norm": 0.001225460822229723,
+      "energy_derivative_error": 8.65451966602232e-10,
+      "Jacobian_relative_error": 1.1038760433736747e-08,
+      "Jacobian_max_error": 1.0010365756804585e-10,
+      "merit_derivative_actual": 3.6061909736684497e-06,
+      "merit_derivative_predicted": 3.6061909247532334e-06,
+      "fock_errors": [
+        {
+          "max_error": 8.190954772085979e-11,
+          "relative_error": 3.263330470893214e-09
+        },
+        {
+          "max_error": 8.330990237948033e-11,
+          "relative_error": 3.4211437817543185e-09
+        }
+      ]
+    }
+  ]
+}

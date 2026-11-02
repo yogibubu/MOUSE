@@ -13,45 +13,52 @@ from ._nosi_orthogonality import ground_overlap_jet, prepare_ground_overlap_acti
 from ._nosi_refine import normalize
 
 
-def residual_subspace_step(residual,newton,action,radius,*,directions=(),gradient_action=None):
-    """Minimize the linearized residual in an augmented Newton trust subspace.
+def residual_subspace_step(residual,newton,action,radius,*,directions=(),gradient_action=None,constraint=None):
+    """Solve the tangent residual trust problem without normal equations.
 
-    The covariant KKT action gives the gradient of the squared residual
-    norm. The moving-frame form has the same action on the residual
-    because its skew connection annihilates that vector. Only the orbital part is radius constrained; the scalar
-    Lagrange multiplier is optimized jointly. Optional Krylov directions
-    enlarge the Newton/Cauchy basis without forming a dense Jacobian.
-    No stationary equation or energy parameter is modified.
+    The multiplier is eliminated exactly. A thin SVD preserves soft modes
+    that a relative cutoff on the squared normal matrix would discard.
     """
     gradient=(action if gradient_action is None else gradient_action)(residual)
-    candidates=[newton,-gradient,*directions];basis=[]
-    for vector in candidates:
-        value=np.asarray(vector,dtype=float).copy();norm=np.linalg.norm(value)
+    basis=[];normal2=0. if constraint is None else float(constraint@constraint)
+    for vector in [newton,-gradient,*directions]:
+        value=np.asarray(vector[:-1],dtype=float).copy()
+        if normal2>1e-26:value-=constraint*float(constraint@value)/normal2
+        norm=np.linalg.norm(value)
         if norm<1e-30:continue
         value/=norm
         for unused in range(2):
             for previous in basis:value-=previous*float(previous@value)
         norm=np.linalg.norm(value)
         if norm>1e-10:basis.append(value/norm)
-    q=np.column_stack(basis) if basis else np.empty((len(residual),0))
-    if not q.shape[1]:raise RuntimeError('empty residual trust subspace')
-    b=np.column_stack([action(v) for v in q.T]);h=b.T@b;rhs=-b.T@residual;metric=q[:-1].T@q[:-1]
-    def candidate(shift):return np.linalg.lstsq(h+shift*metric,rhs,rcond=1e-14)[0]
+    q=np.column_stack(basis) if basis else np.empty((len(residual)-1,0))
+    multiplier=np.zeros(len(residual));multiplier[-1]=1.;column=action(multiplier);column2=float(column@column)
+    def project(value):
+        return value-column[:,None]*(column@value)[None,:]/column2 if value.ndim==2 else value-column*float(column@value)/column2
+    b=np.column_stack([action(np.r_[v,0.]) for v in q.T]) if basis else np.empty((len(residual),0))
+    reduced=project(b) if column2>1e-30 else b;rhs=project(residual) if column2>1e-30 else residual
+    u,singular,vh=np.linalg.svd(reduced,full_matrices=False);coeff=u.T@rhs
+    def candidate(shift):
+        keep=singular>1e-14*max(float(singular[0]) if len(singular) else 0.,1e-300) if shift==0 else np.ones(len(singular),dtype=bool)
+        denominator=singular**2+shift
+        factors=np.divide(singular*coeff,denominator,out=np.zeros_like(singular),where=keep&(denominator>0))
+        return -vh.T@factors
     y=candidate(0.);shift=0.
-    if np.linalg.norm(q[:-1]@y)>radius:
-        lo=0.;hi=max(float(np.linalg.norm(h)),1e-12)
+    if np.linalg.norm(y)>radius:
+        lo=0.;hi=max(float(singular[0]**2),1e-12)
         for unused in range(80):
-            if np.linalg.norm(q[:-1]@candidate(hi))<=radius:break
+            if np.linalg.norm(candidate(hi))<=radius:break
             hi*=2
         else:raise RuntimeError('unbounded orbital trust subproblem')
-        for unused in range(60):
+        for unused in range(80):
             mid=.5*(lo+hi)
-            if np.linalg.norm(q[:-1]@candidate(mid))>radius:lo=mid
+            if np.linalg.norm(candidate(mid))>radius:lo=mid
             else:hi=mid
         shift=hi;y=candidate(shift)
-    step=q@y
-    return step,dict(trust_subspace_rank=q.shape[1],trust_regularization=shift,
-                     predicted_relative_residual=float(np.linalg.norm(residual+b@y)/np.linalg.norm(residual)))
+    multiplier_step=-float(column@(residual+b@y))/column2 if column2>1e-30 else 0.
+    step=np.r_[q@y,multiplier_step];predicted=residual+b@y+column*multiplier_step
+    return step,dict(trust_subspace_rank=q.shape[1]+int(column2>1e-30),trust_regularization=shift,
+        trust_factorization='thin SVD with exact multiplier elimination',predicted_relative_residual=float(np.linalg.norm(predicted)/np.linalg.norm(residual)))
 
 
 def retract_ground_overlap(coefficients,ground,overlap,occupations,left,right,*,tolerance=1e-12):
@@ -80,7 +87,7 @@ def retract_ground_overlap(coefficients,ground,overlap,occupations,left,right,*,
 def solve(context, coefficients, ground, transition, multiplier=0., *,
           tolerance=1e-10, maximum_iterations=80, maximum_step=.2, checkpoint=None, linearization_context=None,
           local_state_following=False, krylov='gmres',exact_refinement=False,residual_trust_region=False,
-          trust_krylov_dimension=0,retract_constraint=False,moving_frame_jacobian=False,initial_trust_radius=None):
+          trust_krylov_dimension=0,retract_constraint=False,moving_frame_jacobian=False,initial_trust_radius=None,refine_before_trust=False):
     if moving_frame_jacobian and krylov!='gmres':raise ValueError('moving-frame Jacobian requires GMRES')
     if not 0<=trust_krylov_dimension<=64:raise ValueError('invalid trust Krylov dimension')
     c=normalize(coefficients,context.state.overlap);n=len(c);no=context.state.electron_count//2
@@ -162,7 +169,7 @@ def solve(context, coefficients, ground, transition, multiplier=0., *,
                 x=vector[:-1];result=roks_residual_action(c,components,exact_kernel,context.polarization,left,right,x)
                 if constraint is not None:result-=mu*constraint(x)[1]
                 return np.r_[result-vector[-1]*j,-j@x]-(connection(vector) if moving_frame_jacobian else 0.)
-            if residual_trust_region and np.linalg.norm(step[:-1])>radius:
+            if residual_trust_region and np.linalg.norm(step[:-1])>radius and not refine_before_trust:
                 row['full_refinement_skipped_for_trust_step']=True
             else:
                 # Flexible right-preconditioned GMRES: the auxiliary Hessian
@@ -187,10 +194,14 @@ def solve(context, coefficients, ground, transition, multiplier=0., *,
         full_action=exact_action if exact_refinement and linearization_context is not None else action
         if residual_trust_region and norm>radius:
             proposal_action=action if trust_krylov_dimension and linearization_context is not None else full_action
-            step,trust_report=residual_subspace_step(residual,step,proposal_action,radius,directions=search_directions[:trust_krylov_dimension],gradient_action=full_action);row.update(trust_report);row['trust_radius']=radius;row['trust_proposal_uses_auxiliary_response']=proposal_action is action and linearization_context is not None;norm=np.linalg.norm(step[:-1])
+            step,trust_report=residual_subspace_step(residual,step,proposal_action,radius,directions=search_directions[:trust_krylov_dimension],gradient_action=full_action,constraint=j if retract_constraint else None);row.update(trust_report);row['trust_radius']=radius;row['trust_proposal_uses_auxiliary_response']=proposal_action is action and linearization_context is not None;norm=np.linalg.norm(step[:-1])
+        if retract_constraint and j@j>1e-26:
+            step[:-1]-=j*float(j@step[:-1]/(j@j));norm=np.linalg.norm(step[:-1]);row['tangent_constraint_directional_overlap']=float(j@step[:-1])
         row['step_scale']=min(1.,radius/max(norm,1e-300))
         step*=row['step_scale']
         image=full_action(step) if residual_trust_region else None
+        if image is not None and retract_constraint and j@j>1e-26:
+            adjustment=float(j@(residual[:-1]+image[:-1])/(j@j));step[-1]+=adjustment;image[:-1]-=adjustment*j
         if image is not None:row['full_predicted_relative_residual']=float(np.linalg.norm(residual+image)/np.linalg.norm(residual))
         if checkpoint is not None:checkpoint(c,mu,row)
         accepted=False

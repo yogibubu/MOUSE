@@ -1,0 +1,14 @@
+{
+  "molecule": "Chlorophyllide_a",
+  "state": 3,
+  "hole": 112,
+  "particle": 114,
+  "row": {
+    "iteration": 2,
+    "energy_hartree": -125.29109111073777,
+    "residual": 0.0032002041685066204,
+    "ground_overlap": 0.00031646259903194654,
+    "fidelity": 0.9748865243150044,
+    "multiplier": -0.030171725137058285
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "complete": true,
+  "model_sha256": "ed0e67b2b98d21bc47122439f447a28f9c9114c4bb5110b1832402196d10764c",
+  "residual_tolerance": 1e-10,
+  "states": [
+    {
+      "ordinal": 1,
+      "energy_ev": 2.849751800211009,
+      "residual": 1.70522333176777e-14,
+      "fidelity": 0.9782342915772169,
+      "source": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_roks/Chlorophyllide_a/state_1"
+    },
+    {
+      "ordinal": 2,
+      "energy_ev": 2.7157193180681904,
+      "residual": 4.515925171719035e-14,
+      "fidelity": 0.9824881934289812,
+      "source": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_roks/Chlorophyllide_a/state_2"
+    },
+    {
+      "ordinal": 3,
+      "energy_ev": 3.3413621262257394,
+      "residual": 3.95208640612735e-12,
+      "fidelity": 0.9879786481375014,
+      "source": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_roks/Chlorophyllide_a/state_3"
+    },
+    {
+      "ordinal": 4,
+      "energy_ev": 3.648886031790607,
+      "residual": 3.492740902380595e-11,
+      "fidelity": 0.9893349161409413,
+      "source": "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_roks/Chlorophyllide_a/state_4"
+    }
+  ],
+  "CSF_metric": [
+    [
+      1.0000000000001175,
+      0.22241063075480177,
+      0.037200971650007304,
+      -0.016573596867653733
+    ],
+    [
+      0.22241063075480177,
+      1.000000000000033,
+      0.24353219421922973,
+      0.10393716249892535
+    ],
+    [
+      0.037200971650007304,
+      0.24353219421922973,
+      0.9999999999999561,
+      0.16329974600266403
+    ],
+    [
+      -0.016573596867653733,
+      0.10393716249892535,
+      0.16329974600266403,
+      1.0000000000000098
+    ]
+  ],
+  "CSF_metric_eigenvalues": [
+    0.6881732599090107,
+    0.8361391724645036,
+    1.066700724722795,
+    1.4089868429038068
+  ],
+  "rejected_duplicate_candidates": {
+    "/Users/vincenzobarone/MOUSE-oo-response-20261101/oracle/MOUSE-closing-validation-20261101/pigment_roks_variants/freeze_open_native/Chlorophyllide_a/state_3": {
+      "reason": "duplicate spin-pure CSF",
+      "overlaps": [
+        {
+          "reference": 4,
+          "overlap": -1.0000000000000733
+        },
+        {
+          "reference": 1,
+          "overlap": 0.01657359690587367
+        },
+        {
+          "reference": 2,
+          "overlap": -0.10393716253361021
+        }
+      ]
+    }
+  },
+  "audit_wall_seconds": 441.1804660409689
+}

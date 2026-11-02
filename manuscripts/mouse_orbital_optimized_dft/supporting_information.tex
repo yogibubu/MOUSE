@@ -354,4 +354,58 @@ auxiliary-factor row errors below $3.3\times10^{-18}$. These algebraic
 controls and the frontier convergence tests address different errors;
 neither is an experimental accuracy validation.
 
+
+\clearpage
+\section{Chlorophyllide orbital stationarity and root identity}
+The prepared chlorophyllide a model is unchanged: F/Q weights 50/50,
+exchange scale $\lambda=0.9$, bath efficiency $\eta=0.60$, and zero
+energy offset. The initial residual-norm search stagnated away from a
+root. The successful initialization minimizes the original ROKS energy
+with an augmented-Lagrangian ground-overlap constraint; the penalty
+is used only by the optimizer and is absent from reported energies.
+For the freeze-and-release cases the two promoted open orbitals remain
+fixed during the first relaxation. Analytic exponential-map pullbacks
+supply the L-BFGS gradient. Releasing all nonredundant rotations is
+followed by the full analytic KKT Newton search. The trust basis is
+projected onto the ground-constraint tangent, and a thin SVD avoids
+squaring the response condition number.
+
+A converged candidate from the third native promotion initially duplicated
+the fourth root. The coherent singlet overlap detects this identity
+($|S|=1$). A new initial hole is its orthogonal complement in the same
+two-dimensional native occupied frontier block. The final search imposes
+no such excited-state orthogonality constraint. The four retained singlets
+are independent: their overlap eigenvalues are 0.688173, 0.836139,
+1.066701 and 1.408987. All ground overlaps satisfy the original tolerance;
+Table~\ref{tab:chlorophyllideroks} reports the complete residuals.
+The already converged fourth target is reused unchanged.
+
+\input{tables/chlorophyllide_roks_stationarity.tex}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{figures/chlorophyllide_roks_convergence.pdf}
+\caption{Removal of chlorophyllide ROKS stagnation on the unchanged energy
+surface. (A) Direct-energy initialization of target 2 and final full KKT
+polishing. The residual includes ground overlap and need not decrease
+monotonically during initialization. The orange curve is the original
+ROKS energy relative to its final value, excluding the numerical constraint
+penalty. (B) The four initialization targets before correction and after
+certification. The dashed line is the $10^{-10}$ residual tolerance;
+the fourth target was already converged. These are orbital-stationarity
+checks, not nuclear-Hessian or correlated-spectrum qualifications.}
+\end{figure}
+
+The final implementation passes 25 algebra, solver, spin, phase and
+restart tests, twelve small-molecule root-recovery controls and the
+complete ethylene analytic-Hessian regression. An independent derivative
+audit at a stalled chlorophyllide checkpoint compares the full analytic
+moving-frame Jacobian with centered differences for validation only;
+relative errors are below $4.2\times10^{-8}$ and decrease with the step.
+No finite difference enters the production optimizer. The final four
+stored roots are independently rechecked without orbital iterations,
+retraction or multiplier adjustment. No new SCC, TDA or DFT calculation
+is used by their prepared-model evaluation. Full certificates, checkpoint
+identities and the duplicate-root rejection are archived in
+\path{qualification/closing_validation_20261101/results/chlorophyllide_stagnation_20261102/}.
+The pigment adapter remains vertical and orbital-response only.
+
 \end{document}
