@@ -1,0 +1,37 @@
+{
+  "case": "formaldehyde_0.8",
+  "molecule": "formaldehyde",
+  "perturbation_norm": 0.8,
+  "results": [
+    {
+      "solver": "baseline",
+      "converged": false,
+      "correct_root": false,
+      "CSF_overlap": 0.10169667023540119,
+      "energy_hartree": -114.06580490471518,
+      "residual": 0.20267874327580954,
+      "iterations": 19,
+      "counts": {
+        "Fock_builds": 108,
+        "response_builds": 108,
+        "Jacobian_actions": 1755
+      },
+      "seconds": 39.49582124996232
+    },
+    {
+      "solver": "trust",
+      "converged": true,
+      "correct_root": true,
+      "CSF_overlap": 1.0000000000000124,
+      "energy_hartree": -114.19425472477678,
+      "residual": 7.62815564837524e-11,
+      "iterations": 8,
+      "counts": {
+        "Fock_builds": 18,
+        "response_builds": 18,
+        "Jacobian_actions": 130
+      },
+      "seconds": 3.418157375010196
+    }
+  ]
+}

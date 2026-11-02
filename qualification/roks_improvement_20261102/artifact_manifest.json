@@ -1,0 +1,32 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "baseline_commit": "33ff162",
+  "files": {
+    "README.md": "5b024e945718c4d4a7515c8261cc3b144b20247cb4484f05f21d868452759989",
+    "baseline_sources/_oo_surface.py": "9f0da60f96a0cf6a35463b878cb24f9b457a2ae846bf06270f0f7c7c9b6ee5e5",
+    "baseline_sources/roks.py": "0b00c3d55bf2c811835a37599cb16b6ff8ad86669bc6807ccfad7eb607367f9e",
+    "executed_sources/_oo_surface.py": "fe2c7a8fcb4a4443bfd70514a95e0fdd8d7433bf8411d83990fd6cc189251a7f",
+    "executed_sources/_roks_optimizer.py": "191d52b050dc9fcfe85fb5d47b88d6213359d68909f54d35dd42a8a25002d7de",
+    "executed_sources/roks.py": "9cadafea607ea47cabf8601aeed24e044efbc4487acaaeac6d440e721c2f6137",
+    "protocol.json": "42c895859372d4247aec439e986e170f31de41897e4d92e13fa229ff63a21fb7",
+    "replay_response.py": "0a11bfa351e79413cf5361d40433ecbfe0c62a5785443c733b2f83d5160d381f",
+    "results/final_solver/formaldehyde_0.15_retained_target_solver.json": "4f0c560adcd99effbcf71fb1393b8fdfb7dc0016fcaa439b517a653f849100ae",
+    "results/final_solver/formaldehyde_0.45_retained_target_solver.json": "f128f3ce87153feeb16eff9131c0903d1d06cf329a3b90b2dc96ef78235363b3",
+    "results/final_solver/formaldehyde_0.8_retained_target_solver.json": "6c07e92872b1dfc921cf97cedf47c96779c8d692c8974451196946b65f21aefa",
+    "results/final_solver/formaldehyde_accepted.npz": "a5a172850d67041915f288da8781036c3a1f54e7fa3d8deb914c5c258d70e500",
+    "results/final_solver/formaldehyde_curvature.json": "f85e02181c5e54cb2366e3eccd312241b58509b9aa00c8a61e092d8bf01479c6",
+    "results/final_solver/solver_validation.json": "792bd18937fed26c87ef7a95f9d8af70f462c0658e932c78db5df5fb7fa7cf10",
+    "results/final_solver/water_0.15_retained_target_solver.json": "02b47a0693b9ec2d119061330b4af276f384d44b55c92e177a54c063290d82ec",
+    "results/final_solver/water_0.45_retained_target_solver.json": "9337105afb8fb4ff4cea68197f51fc5159f5a0e8b2313ac8cf616b23385fa9e9",
+    "results/final_solver/water_0.8_retained_target_solver.json": "80179173b7dc97e0c88fa769d54ba3674984a094c70888e733bc3a50878fa4e4",
+    "results/final_solver/water_accepted.npz": "5d7116deb5ce19af261c2b007b6fcc11bf7179ad06e0c68f4cbf681ebcf5ced4",
+    "results/final_solver/water_curvature.json": "91dfe518eac3ebd21b81738dbbe8f9bb2f21a1f225b24a3ea115af81ffb6be09",
+    "results/operators.json": "0c8f4673e89f516206096678bcc4cbd4cc2d481ff8b083bd4061b2a37dceeb32",
+    "results/response_regression.json": "e4036d25109738c98ececdc055d913398275dd9323af6e61a8086f96bb49f935",
+    "run_vertical.py": "1f6c9b2984233e859229334be495e3f9658f3f4f0a4692e09db47a8606826936",
+    "validate_final_solver.py": "d4dfd6fbcc7749683d33ed1dcc2256d624fb56ededec75dbb9906b31ed0453fd",
+    "validate_operators.py": "12016c8f088874aa63a3a970ed2950950ab8390d42f2c727e76749404489a08c",
+    "validate_solver.py": "5ba72ec4dbea91ffb79f5d9911985f5856b11c9fbbb362f2cc406efaa510455a",
+    "vertical.py": "3d3513c30769ba658a3f15a065af385b927f1a64b1f1b7f9131847ce3862ce36"
+  }
+}

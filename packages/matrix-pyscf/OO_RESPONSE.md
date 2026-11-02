@@ -81,3 +81,43 @@ Executable remote checks and complete numerical certificates are archived under
 `qualification/dft_roks_response_20261102`. They compare analytic Hessian–vector
 products with Richardson-extrapolated differences of independently reconverged
 analytic gradients. Finite differences are confined to those validation drivers.
+
+## ROKS stationarity search and retained state
+
+The moving orbital frame makes the residual Jacobian J nonsymmetric away from
+stationarity. If Q is the orbital multiplier matrix and K(v) the antisymmetric
+rotation, the connection correction is the selected antisymmetric part of
+`K(v) Q - Q K(v)`. Consequently `J^T v = J v + connection(v)` and the symmetric
+energy curvature is `J v + connection(v)/2`. The adjoint is used only for the
+numerical residual search; the physical CP equation still uses J.
+
+The default ROKS solver minimizes the full linearized residual inside a trust
+ball using the span of a preconditioned Newton direction, `-J^T g`, and the
+previous accepted direction. A thin SVD solves this small least-squares problem.
+No orbital coordinates are removed from the energy or response. Actual versus
+predicted residual reduction controls acceptance and the radius. Rejected trial
+energies and Focks do not build XC response kernels; an accepted evaluation is
+reused. GMRES uses a signed orbital-gap diagonal, so negative curvature is not
+replaced by positive curvature.
+
+`reference_coefficients` separates the physical target from a perturbed initial
+guess. Step and target CSF overlaps guard continuity; neither proves a state
+assignment. When the solver stalls, `freeze_and_release=True` prepares the
+closed/virtual sector at fixed open orbitals and then releases the complete
+orbital tangent. `initialize_closed_orbitals=True` requests this preparation
+before a search without discarding a restart. These steps change initialization
+only. A target must still be checked by orbital/transition character.
+
+`certify_index=True` counts negative stationary orbital modes. For large tangents
+an adaptive matrix-free lowest-eigenvalue prefix is expanded until a positive
+boundary is found. `target_saddle_index` rejects a different index; it does not
+steer the search toward the requested index. Checkpoints retain accepted
+orbitals, immutable target, solver status, trust radius and iteration history.
+A stalled tiny radius is reset on restart. Energy fingerprints remain unchanged.
+
+Remote certificates in `qualification/roks_improvement_20261102` include an exact
+adjoint comparison and perturbed retained-target recovery. The latter uses two
+small molecules with three perturbations each; recovery can reuse a previously
+stationary target. It tests numerical recovery, not discovery of six new states,
+spectral accuracy, or superiority to MOM. Functional comparisons are a separate
+historically exposed pilot and must not be described as blind validation.

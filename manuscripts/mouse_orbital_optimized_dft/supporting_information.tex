@@ -523,4 +523,32 @@ are not qualified. Sources, certificates, arrays and checkpoints are in
 These tests on two molecules establish derivative consistency, not
 chemical accuracy or a speed advantage over MOM.
 
+
+\subsection{ROKS residual trust-region qualification}
+The moving-frame orbital residual Jacobian is generally nonsymmetric away
+from stationarity. Its exact adjoint agrees with an explicitly assembled
+transpose to $5.7\times10^{-14}$; the independently differentiated residual
+action agrees to $2.4\times10^{-8}$. The solver uses this adjoint in a
+small residual trust-region search while retaining the full physical orbital
+space. Accepted evaluations are reused, and rejected trials omit response
+construction. Frozen-open-orbital preparation is an initialization step only:
+all nonredundant rotations enter final stationarity and nuclear response.
+
+At three perturbation norms (0.15, 0.45, 0.80), water/STO-3G and
+formaldehyde/6-31G PBE0 give six controlled recovery trials. Both solvers
+receive the same archived stationary target for overlap checks. The original
+Newton solver recovers three of six targets; the revised solver, including
+its recovery initialization, recovers six. This is a retained-target recovery
+test on two molecules, not a six-state accuracy benchmark. In particular,
+the hardest water trial uses 102 recorded iterations including recovery and
+can reuse the stationary target: no universal speed advantage is inferred.
+For the three trials solved correctly by both algorithms, Fock/response
+build counts decrease from 18, 18, 26 to 10, 10, 14, respectively.
+Wrong requested orbital saddle indices and inconsistent restart references
+are rejected. A replay of the six previously qualified analytic derivative
+cases changes no gradient entries and changes complete nuclear Hessians by
+at most $2.4\times10^{-13}$ Ha/bohr$^2$. Certificates and the exact baseline
+sources (commit \texttt{33ff162}) are archived under
+\path{qualification/roks_improvement_20261102/}.
+
 \end{document}

@@ -27,6 +27,7 @@ class PySCFROKSResult:
     gradient_hartree_per_bohr: np.ndarray|None=None
     hessian_hartree_per_bohr2: np.ndarray|None=None
     response_certificate: dict|None=None
+    solver_certificate: dict|None=None
 
     def __post_init__(self):
         c=np.asarray(self.common_coefficients);o=np.asarray(self.occupations);s=np.asarray(self.overlap)
@@ -54,7 +55,8 @@ class PySCFROKSResult:
         with temporary.open('wb') as stream:
             np.savez_compressed(stream,coefficients=self.common_coefficients,occupations=self.occupations,
                 reference_coefficients=self.reference_coefficients,metadata=json.dumps(dict(fingerprint=self.model_fingerprint,
-                    ground_energy_hartree=self.ground_energy_hartree,energy_hartree=self.energy_hartree)))
+                    ground_energy_hartree=self.ground_energy_hartree,energy_hartree=self.energy_hartree,
+                    solver_certificate=self.solver_certificate,history=self.history)))
         temporary.replace(path)
 
     def to_apoc(self,mean_field,state_id=1):
@@ -81,23 +83,40 @@ def _model(mf,occ):return hashlib.sha256(('common-orbital multiplet-sum ROKS|'+_
 class PySCFROKSConvergenceError(RuntimeError):
     def __init__(self,result):
         self.result=result
-        super().__init__(f'ROKS not stationary: residual {result.orbital_residual:.3e}')
+        super().__init__(f'ROKS not certified: residual {result.orbital_residual:.3e}; '
+                         f"status={(result.solver_certificate or {}).get('status','not converged')}")
 
 
 def optimize_roks(mean_field,coefficients,occupations,*,ground_energy_hartree=None,
                   restart=None,checkpoint=None,maximum_iterations=80,orbital_tolerance=1e-8,
                   maximum_step=.2,minimum_reference_overlap=.1,include_gradient=False,
-                  include_hessian=False,strict=True):
+                  include_hessian=False,strict=True,orbital_solver='trust',
+                  initial_trust_radius=None,minimum_step_overlap=.8,
+                  certify_index=False,target_saddle_index=None,index_threshold=1e-6,
+                  reference_coefficients=None,freeze_and_release=True,initialize_closed_orbitals=False):
     """Optimize 2 E_M - E_T with common orbitals; construct its singlet CSF.
 
     Input is a full real AO-metric orthonormal spatial orbital matrix and two
     binary occupations with one alpha-only and one beta-only orbital. The
     input mean field is molecular UHF/UKS, Ms=0, without symmetry, solvent or
     density fitting. Numerical parameters are unchanged across the components.
+
+    The default residual trust solver uses the exact moving-frame Jacobian and
+    its adjoint. ``reference_coefficients`` retains a target independently of
+    the initial guess; a restart must match this target. Recovery temporarily
+    freezes the two open orbitals, then releases every nonredundant rotation.
+    It changes initialization only, never the energy or the final response.
+    ``initialize_closed_orbitals`` applies this preparation before the first
+    search, without replacing an accepted restart.
+    ``certify_index`` counts negative stationary orbital modes; specifying
+    ``target_saddle_index`` additionally rejects a mismatched root. Neither
+    curvature nor overlap alone establishes the spectroscopic state identity.
+    Accepted checkpoints include solver diagnostics and iteration history.
+    ``orbital_solver='newton'`` retains a clipped Newton comparison path.
     """
     from pyscf import scf
     from ._oo_surface import OrbitalSurface
-    from scipy.sparse.linalg import LinearOperator,gmres
+    from ._roks_optimizer import solve,curvature_certificate,relax_closed_orbitals
     mf=mean_field;c=np.asarray(coefficients);occ=np.asarray(occupations)
     if (not isinstance(mf,scf.uhf.UHF) or mf.mol.spin!=0 or mf.mol.symmetry
         or np.iscomplexobj(c) or c.shape!=(mf.mol.nao_nr(),mf.mol.nao_nr())
@@ -105,7 +124,11 @@ def optimize_roks(mean_field,coefficients,occupations,*,ground_energy_hartree=No
         or not np.array_equal(occ.sum(axis=1),mf.mol.nelec)
         or np.count_nonzero(occ[0]-occ[1]==1)!=1 or np.count_nonzero(occ[1]-occ[0]==1)!=1
         or maximum_iterations<1 or orbital_tolerance<=0 or maximum_step<=0
-        or not 0<=minimum_reference_overlap<=1):raise ValueError('invalid common-orbital ROKS model or occupations')
+        or not 0<=minimum_reference_overlap<=1 or not 0<=minimum_step_overlap<=1
+        or orbital_solver not in ('trust','newton') or index_threshold<=0
+        or (initial_trust_radius is not None and (not np.isfinite(initial_trust_radius) or initial_trust_radius<=0))
+        or (target_saddle_index is not None and (isinstance(target_saddle_index,(bool,np.bool_))
+            or not isinstance(target_saddle_index,(int,np.integer)) or target_saddle_index<0))):raise ValueError('invalid common-orbital ROKS model or occupations')
     if (getattr(mf,'with_df',None) is not None or getattr(mf,'with_solvent',None) is not None
         or getattr(mf,'with_x2c',None) is not None or getattr(mf,'sigma',0) or getattr(mf,'disp',None)
         or getattr(mf,'nlc','')):raise NotImplementedError('ROKS optional response model is not qualified')
@@ -114,7 +137,9 @@ def optimize_roks(mean_field,coefficients,occupations,*,ground_energy_hartree=No
         from ._oo_nuclear import validate_hessian_model
         validate_hessian_model(mf)
         orbital_tolerance=min(orbital_tolerance,1e-10)
-    identity=_model(mf,occ);c=np.array(c,dtype=float,copy=True);reference=c.copy()
+    identity=_model(mf,occ);c=np.array(c,dtype=float,copy=True)
+    if reference_coefficients is not None and np.iscomplexobj(reference_coefficients):raise ValueError('ROKS reference orbitals must be real')
+    reference=c.copy() if reference_coefficients is None else np.array(reference_coefficients,dtype=float,copy=True)
     if restart is not None:
         with np.load(restart,allow_pickle=False) as data:
             metadata=json.loads(str(data['metadata']))
@@ -124,30 +149,56 @@ def optimize_roks(mean_field,coefficients,occupations,*,ground_energy_hartree=No
     s=mf.get_ovlp()
     for a in [c,reference]:
         if a.shape!=c.shape or not np.all(np.isfinite(a)) or not np.allclose(a.T@s@a,np.eye(len(a)),atol=1e-8,rtol=0):raise ValueError('ROKS orbitals are not orthonormal')
-    surface=OrbitalSurface(mf,c,occ,common=True);history=[]
-    for iteration in range(maximum_iterations+1):
-        energy,g,action,*unused=surface.evaluate(c);residual=float(np.max(abs(g)))
-        overlap=_singlet_overlap(reference,c,occ,s)
-        if overlap<minimum_reference_overlap:raise ValueError('ROKS target-overlap guard rejected the state')
-        history.append(dict(iteration=iteration,energy_hartree=energy,orbital_residual=residual,reference_overlap=overlap))
-        result=PySCFROKSResult(c.copy(),occ.copy(),reference.copy(),energy,ground_energy_hartree,residual,
-                             residual<orbital_tolerance,iteration,overlap,identity,tuple(history),s.copy())
-        if checkpoint is not None:result.save_checkpoint(checkpoint)
-        if result.converged or iteration==maximum_iterations:break
-        operator=LinearOperator((len(g),len(g)),matvec=action,dtype=float)
-        step,info=gmres(operator,-g,rtol=1e-5,atol=0.,restart=min(60,len(g)),maxiter=8)
-        accepted=False
-        for direction in [step,-action(g)]:
-            norm=np.linalg.norm(direction)
-            if not np.isfinite(norm) or norm<1e-16:continue
-            direction=direction*min(1.,maximum_step/norm)
-            for fraction in [1.,.5,.25,.125,.0625,.03125]:
-                trial=surface.rotate(c,fraction*direction)
-                if _singlet_overlap(reference,trial,occ,s)<minimum_reference_overlap:continue
-                trial_g=surface.evaluate(trial)[1]
-                if np.linalg.norm(trial_g)<(1-1e-4*fraction)*np.linalg.norm(g):c=trial;accepted=True;break
-            if accepted:break
-        if not accepted:break
+    if restart is not None and reference_coefficients is not None:
+        if _singlet_overlap(np.asarray(reference_coefficients),reference,occ,s)<1-1e-8:
+            raise ValueError('ROKS restart target reference mismatch')
+    surface=OrbitalSurface(mf,c,occ,common=True)
+    saved_certificate=metadata.get('solver_certificate') if restart is not None else None
+    if initial_trust_radius is None and saved_certificate and saved_certificate.get('solver')==orbital_solver:
+        if saved_certificate.get('status') in ('converged','iterating','maximum_iterations'):
+            initial_trust_radius=saved_certificate.get('trust_radius')
+            if initial_trust_radius is not None and initial_trust_radius<1e-6*maximum_step:initial_trust_radius=.5*maximum_step
+        else:initial_trust_radius=.5*maximum_step
+    def make_result(c,data,history,certificate):
+        energy,g,*unused=data;residual=float(np.max(abs(g)));score=_singlet_overlap(reference,c,occ,s)
+        return PySCFROKSResult(c.copy(),occ.copy(),reference.copy(),energy,ground_energy_hartree,residual,
+            certificate['status']=='converged',len(history)-1,score,identity,history,s.copy(),solver_certificate=certificate)
+    def save(c,data,history,certificate):
+        if checkpoint is not None:make_result(c,data,history,certificate).save_checkpoint(checkpoint)
+    initialization_history=()
+    if initialize_closed_orbitals and restart is None:
+        c,initialization_history=relax_closed_orbitals(surface,c,max_step=maximum_step,callback=save)
+    c,data,history,certificate=solve(surface,c,lambda x:_singlet_overlap(reference,x,occ,s),
+        tolerance=orbital_tolerance,max_iterations=maximum_iterations,max_step=maximum_step,
+        min_reference_overlap=minimum_reference_overlap,min_step_overlap=minimum_step_overlap,
+        step_overlap=lambda a,b:_singlet_overlap(a,b,occ,s),callback=save,
+        initial_radius=initial_trust_radius,solver=orbital_solver)
+    if certificate['status']!='converged' and freeze_and_release and orbital_solver=='trust':
+        previous_history=history;previous_status=certificate['status']
+        def phased_save(c,data,rows,details):
+            combined=previous_history+tuple(dict(row,iteration=len(previous_history)+i) for i,row in enumerate(rows))
+            save(c,data,combined,details)
+        seed,frozen_history=relax_closed_orbitals(surface,reference.copy(),max_step=maximum_step,callback=phased_save)
+        previous_history=history+tuple(dict(row,iteration=len(history)+i) for i,row in enumerate(frozen_history))
+        c,data,recovered,certificate=solve(surface,seed,lambda x:_singlet_overlap(reference,x,occ,s),
+            tolerance=orbital_tolerance,max_iterations=maximum_iterations,max_step=maximum_step,
+            min_reference_overlap=minimum_reference_overlap,min_step_overlap=minimum_step_overlap,
+            step_overlap=lambda a,b:_singlet_overlap(a,b,occ,s),callback=phased_save,
+            initial_radius=.5*maximum_step,solver=orbital_solver)
+        history=previous_history+tuple(dict(row,iteration=len(previous_history)+i,phase='released_orbitals') for i,row in enumerate(recovered))
+        certificate['initialization_recovery']=dict(previous_status=previous_status,
+            frozen_iterations=len(frozen_history)-1,final_space='All nonredundant rotations released')
+    if certificate['status']=='converged' and (certify_index or target_saddle_index is not None):
+        curvature=curvature_certificate(data[2],surface.dimension,index_threshold)
+        certificate['curvature']=curvature
+        if target_saddle_index is not None and curvature['index']!=target_saddle_index:
+            certificate['status']='saddle_index_mismatch'
+            certificate['requested_saddle_index']=int(target_saddle_index)
+    if initialization_history:
+        certificate['closed_orbital_preparation_iterations']=len(initialization_history)-1
+        history=initialization_history+tuple(dict(row,iteration=len(initialization_history)+i) for i,row in enumerate(history))
+    result=make_result(c,data,history,certificate)
+    if checkpoint is not None:result.save_checkpoint(checkpoint)
     if strict and not result.converged:raise PySCFROKSConvergenceError(result)
     if result.converged and (include_gradient or include_hessian):
         from ._oo_nuclear import nuclear_response

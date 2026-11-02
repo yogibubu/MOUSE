@@ -28,7 +28,7 @@
   "analytic_hessian_molecules": 2,
   "analytic_hessian_states": 2,
   "main_pages": 25,
-  "supporting_information_pages": 41,
+  "supporting_information_pages": 42,
   "main_figures": 9,
   "figures": 29,
   "references": 42,
@@ -336,7 +336,7 @@
     "final_validation_discussion.tex": "9bc4f4d3f8ff0864fab846a423821549ab1b06242a2e6d8ae7833f2cc7faefd3",
     "frontier_cisd_discussion.tex": "ab1f46de62d109d2b860d76b28fc8f8073291041c288001582495917642fc85e",
     "literature_metadata.json": "63e1338fd93331f64f868c3aba11ebd7940c7555a71a9d1af9b5ef18887f559a",
-    "main.pdf": "642c851fac94bae31f0a026f4db29a046b90095c5ab1eab6d7414c578b3e4e4c",
+    "main.pdf": "97c8901f41ba6144cd6c4013f73c741524b1f94f5071a06fa374bdcf58a1cb54",
     "main.tex": "e7ad1d30d42c35a91d676b54a7d519d3845cf1f61014c33e24313333121b0d2b",
     "make_anchor_rank_assets.py": "b4c8b26d447d4e90768d64f3edca7a3ab5ab316844acc5db0acb70804fe6ed78",
     "make_carotene_ordering_assets.py": "d23ae88e2ba38049350f0f59fd03c0d103dad217a881af56335eaba6e06a09e8",
@@ -367,8 +367,8 @@
     "selected_cid_discussion.tex": "6bccf578f3c70eba5c030f0689d0b682bd2cc8b083db6dbc7fcf55a33ea80b22",
     "spectral_block_discussion.tex": "d7c81000bf582bd70b569913434286d7160ca688b28456028e6200367b9f498f",
     "spectral_block_table.tex": "4bbdfdae6f23b7311bf6ae873346504f4894bcd60809c5890b50958a3f357d8a",
-    "supporting_information.pdf": "47285cfe7ad4d4b51fd9ad779a1475a7438d1d1ee5219922a951751ee51bd70d",
-    "supporting_information.tex": "bc022f106161ec1b3e4ca64697ee5efcccf78c1fefb57484d048e7068a120fce",
+    "supporting_information.pdf": "dc569573ac5c756167e233ff71ec3b369ee4399034a3489490cc25658181f4c7",
+    "supporting_information.tex": "e2f9d1a2b51c76b29392be2a414534c45e32ff22253af3103d9e84568c817032",
     "tables/actual_anchor_rank.tex": "af980a4682e49ef64097e21c23dc28f54f9c9e1c1e25c8cfbda6cf7664e8b02b",
     "tables/all_stda.tex": "3965c9048506d38d090906bf0c7b80955beed283ef6ee8c30ff72b03e6404eab",
     "tables/all_vertical.tex": "d93c2573b983a4bb8f7624dd4a44b6b6d5a2479db7fa51d77f16debd5ebf4504",
@@ -433,7 +433,7 @@
     "data/chlorophyllide_transition_cid_validation.json": "7b84f092bf9643ab7aca157162a57cb6a4c12489f6b85ea4364282de4bc50e0d",
     "data/static_subtraction_summary.json": "04dac710920becd44fae26e9bba540a5576071edf76ab971d560e5cbcf58f51e",
     "make_dft_response_table.py": "cc0a79767047c55cc61af00e2a5aee5b01079bb1e508e56895e7d671a9ea6058",
-    "dft_backend.tex": "cd0e8e9ae0d5c0e5def53a362d92487159be07e92019431ee57c05f08f233007",
+    "dft_backend.tex": "b6c394421c1420a563f2d62d9eb66d63610c91a8994478a287c3346616746f53",
     "tables/dft_response_validation.tex": "c9c354f9630df6beb940bcf30af46946aceec0314d45669d5f569be99cd25a54",
     "data/dft_response_validation.json": "b159cb123464b790a25a2c5c725982eacb84f5e540f69c7ea59c58a17dd93a2b"
   },
@@ -703,5 +703,17 @@
     "scope": "Separate full-DFT implementation checks; not added to semiempirical accuracy statistics",
     "archive": "qualification/dft_roks_response_20261102/results/artifact_manifest.json"
   },
-  "full_DFT_response_visual_review": "Main page 22 and SI page 41 rendered and visually inspected, no overflow or orphan page, 2026-11-02"
+  "full_DFT_response_visual_review": "Main page 22 and SI page 41 rendered and visually inspected, no overflow or orphan page, 2026-11-02",
+  "ROKS_trust_region_qualification": {
+    "host": "mac-2.homenet.telecomitalia.it",
+    "retained_target_cases": 6,
+    "molecules": 2,
+    "baseline_correct": 3,
+    "revised_correct": 6,
+    "exact_adjoint_error": 5.684341886080802e-14,
+    "maximum_complete_Hessian_change": 2.379599641999022e-13,
+    "scope": "Known stationary targets, numerical recovery; not spectral accuracy or MOM benchmark",
+    "archive": "qualification/roks_improvement_20261102/artifact_manifest.json"
+  },
+  "ROKS_solver_visual_review": "Main pages 22 and 25, SI page 42 rendered and inspected; no overflow; main25/SI42 pages"
 }

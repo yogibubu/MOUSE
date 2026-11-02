@@ -92,3 +92,12 @@ adjustment. Density fitting, meta-GGA Hessians, other partitions, solvent and
 relativistic response require separate extensions and are rejected. Results are
 not an exact DFT spin-projection formula; spin purity refers to the constructed
 CSF, while its multiplet-sum energy remains an approximate functional model.
+
+ROKS now defaults to a residual trust-region solver with the exact Jacobian
+adjoint, signed preconditioning, accepted-evaluation reuse and optional
+freeze-and-release initialization. Pass `reference_coefficients=target` when the
+initial guess differs from the state to retain. `certify_index=True` records the
+stationary orbital saddle index; `target_saddle_index=k` rejects a different
+index. This is a certificate, not index-following optimization. Checkpoints save
+the iteration history and may resume without repeating the ground-state SCF.
+See [OO_RESPONSE.md](OO_RESPONSE.md) for the numerical method and validation scope.

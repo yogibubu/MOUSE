@@ -1,0 +1,37 @@
+{
+  "case": "water_0.45",
+  "molecule": "water",
+  "perturbation_norm": 0.45,
+  "results": [
+    {
+      "solver": "baseline",
+      "converged": false,
+      "correct_root": false,
+      "CSF_overlap": 0.10120504440451417,
+      "energy_hartree": -74.68561960007331,
+      "residual": 0.4332153050531665,
+      "iterations": 14,
+      "counts": {
+        "Fock_builds": 90,
+        "response_builds": 90,
+        "Jacobian_actions": 255
+      },
+      "seconds": 1.6359327500103973
+    },
+    {
+      "solver": "trust",
+      "converged": true,
+      "correct_root": true,
+      "CSF_overlap": 1.0000000000000013,
+      "energy_hartree": -74.81203351032876,
+      "residual": 3.190195870099431e-11,
+      "iterations": 7,
+      "counts": {
+        "Fock_builds": 16,
+        "response_builds": 16,
+        "Jacobian_actions": 125
+      },
+      "seconds": 0.5617658749688417
+    }
+  ]
+}

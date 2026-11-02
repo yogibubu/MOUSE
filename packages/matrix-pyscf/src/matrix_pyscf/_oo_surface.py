@@ -5,6 +5,7 @@ from scipy.linalg import expm
 
 class OrbitalSurface:
     def __init__(self, mean_field, coefficients, occupations, common=False):
+        self.statistics=dict(Fock_builds=0,response_builds=0,Jacobian_actions=0)
         self.common=common
         self.c=np.asarray(coefficients,dtype=float)
         self.occupations=np.asarray(occupations,dtype=float)
@@ -69,19 +70,53 @@ class OrbitalSurface:
             total.append(value)
         return np.concatenate(total)
 
-    def evaluate(self,c):
+    def evaluate(self,c,*,linearize=True):
         cs=self.spin_coefficients(c);energy=0.;focks=[];kernels=[];densities=[]
         for weight,mf,occ in self.components:
             mf.mo_coeff=cs;mf.mo_occ=occ
             dm=np.array([(a*o)@a.T for a,o in zip(cs,occ)])
             v=mf.get_veff(dm=dm);f=np.asarray(mf.get_hcore())+v
             energy+=weight*float(mf.energy_tot(dm=dm,vhf=v));focks.append(f);densities.append(dm)
-            kernels.append(mf.gen_response(cs,occ,hermi=1,with_nlc=False))
+            self.statistics["Fock_builds"]+=1
         gradient=self.residual(c,focks)
+        data=(energy,gradient,None,focks,None,densities)
+        return self.linearize(c,data) if linearize else data
+
+    def linearize(self,c,data):
+        energy,gradient,unused,focks,unused_kernels,densities=data
+        cs=self.spin_coefficients(c);kernels=[]
+        for weight,mf,occ in self.components:
+            mf.mo_coeff=cs;mf.mo_occ=occ
+            kernels.append(mf.gen_response(cs,occ,hermi=1,with_nlc=False))
+            self.statistics['response_builds']+=1
+        q=[];diagonal=[]
+        for channel,(left,right) in enumerate(self.pairs):
+            matrix=np.zeros((c.shape[-1],c.shape[-1]));d=np.zeros(len(left))
+            for (weight,mf,occ),f in zip(self.components,focks):
+                for spin in range(2):
+                    if not self.common and channel!=spin:continue
+                    mo=cs[spin].T@f[spin]@cs[spin]
+                    matrix+=2*weight*mo*occ[spin][None,:]
+                    d+=2*weight*(occ[spin,right]-occ[spin,left])*(np.diag(mo)[left]-np.diag(mo)[right])
+            q.append(matrix);diagonal.append(d)
         def action(vector):
+            self.statistics['Jacobian_actions']+=1
             dc=c@self.rotation(vector);dcs=self.spin_coefficients(dc);changes=[]
             for (weight,mf,occ),kernel in zip(self.components,kernels):
                 dp=np.array([(a*o)@b.T for a,b,o in zip(dcs,cs,occ)]);dp+=dp.transpose(0,2,1)
                 changes.append(kernel(dp))
             return self.residual_derivative(c,focks,dc,changes)
+        def connection(vector):
+            rotations=self.rotation(vector)
+            if self.common:rotations=[rotations]
+            values=[]
+            for k,matrix,(left,right) in zip(rotations,q,self.pairs):
+                commutator=k@matrix-matrix@k
+                values.append(commutator[left,right]-commutator[right,left])
+            return np.concatenate(values)
+        # The moving-frame Jacobian is not symmetric away from stationarity.
+        # Its skew part is fixed by the orbital-gradient connection.
+        action.adjoint=lambda vector:action(vector)+connection(vector)
+        action.symmetric=lambda vector:action(vector)+.5*connection(vector)
+        action.preconditioner_diagonal=np.concatenate(diagonal)
         return energy,gradient,action,focks,kernels,densities

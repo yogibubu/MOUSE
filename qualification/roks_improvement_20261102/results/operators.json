@@ -1,0 +1,10 @@
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "exact_adjoint_error": 5.684341886080802e-14,
+  "moving_frame_FD_error": 2.3228885481785255e-08,
+  "nonstationary_Jacobian_asymmetry": 0.7726188431788911,
+  "trust_radius": 0.03,
+  "step_norm": 0.029999999999999995,
+  "predicted_residual_reduction": 0.7177943218095457,
+  "trial_evaluation_response_builds": 0
+}

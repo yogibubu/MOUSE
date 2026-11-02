@@ -1,0 +1,65 @@
+{
+  "schema": "mouse.roks-improvement.v1",
+  "frozen_utc": "2026-11-02T17:20:17.420339+00:00",
+  "basis": "aug-cc-pVDZ",
+  "grids_level": 3,
+  "functionals": [
+    "PBE0",
+    "CAM-B3LYP",
+    "WB97X"
+  ],
+  "weights": "ROKS 2 E_M - E_T, common orbitals",
+  "energy_offset_ev": 0,
+  "semiempirical_scaling": false,
+  "assignment": "Leading singular vectors of frozen native valence transition lifted into full DFT AO basis; occupied/virtual projection only, no target-energy matching",
+  "selection": "One global functional, rank by mean absolute error over pilot four; confirm on two reserved carbonyl states, no parameter fitting or state-dependent functional",
+  "exposure": "All reference labels historically exposed; this is method selection on an exposed subset, not blind validation",
+  "compute_host": "MAC-STUDIO",
+  "cases": [
+    {
+      "id": "B001",
+      "cohort": "closing_blind",
+      "name": "Formaldehyde",
+      "role": "pilot",
+      "family": "n_pi"
+    },
+    {
+      "id": "B002",
+      "cohort": "closing_blind",
+      "name": "Ethylene",
+      "role": "pilot",
+      "family": "pi_pi"
+    },
+    {
+      "id": "B003",
+      "cohort": "closing_blind",
+      "name": "Butadiene",
+      "role": "pilot",
+      "family": "pi_pi"
+    },
+    {
+      "id": "V010",
+      "cohort": "subspace_last_two",
+      "name": "Furan",
+      "role": "pilot",
+      "family": "pi_pi"
+    },
+    {
+      "id": "N001",
+      "cohort": "subspace_extra_npi",
+      "name": "acetaldehyde",
+      "role": "confirmation",
+      "family": "n_pi"
+    },
+    {
+      "id": "V001",
+      "cohort": "subspace_prospective_cisd",
+      "name": "acetone",
+      "role": "confirmation",
+      "family": "n_pi"
+    }
+  ],
+  "missing_transition_fallback": "Leading occupied/virtual transition of the already frozen semiempirical ROKS seed, from prepared arrays; no excitation energy read",
+  "global_CSF_overlap_floor": 0.1,
+  "final_active_orbital_overlap_floor": 0.7
+}
