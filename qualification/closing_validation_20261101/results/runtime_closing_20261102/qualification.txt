@@ -1,0 +1,440 @@
+QUALIFY validate_fixed_bra.py
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "rows": [
+    {
+      "orbitals": 8,
+      "occupied_per_spin": 4,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 1.1546319456101628e-14,
+      "cases": 12,
+      "occupation_cache_hits": 8,
+      "occupation_cache_misses": 18,
+      "wall_seconds": 0.005477416969370097
+    },
+    {
+      "orbitals": 8,
+      "occupied_per_spin": 4,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 4.218847493575595e-15,
+      "cases": 12,
+      "occupation_cache_hits": 14,
+      "occupation_cache_misses": 12,
+      "wall_seconds": 0.004563709022477269
+    },
+    {
+      "orbitals": 12,
+      "occupied_per_spin": 6,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 1.1102230246251565e-14,
+      "cases": 12,
+      "occupation_cache_hits": 3,
+      "occupation_cache_misses": 23,
+      "wall_seconds": 0.006244415999390185
+    },
+    {
+      "orbitals": 12,
+      "occupied_per_spin": 6,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 3.6415315207705135e-14,
+      "cases": 12,
+      "occupation_cache_hits": 6,
+      "occupation_cache_misses": 20,
+      "wall_seconds": 0.005681249953340739
+    },
+    {
+      "orbitals": 8,
+      "occupied_per_spin": 4,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 1.2212453270876722e-15,
+      "cases": 12,
+      "occupation_cache_hits": 10,
+      "occupation_cache_misses": 16,
+      "wall_seconds": 0.00457637500949204
+    },
+    {
+      "orbitals": 8,
+      "occupied_per_spin": 4,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 1.021405182655144e-14,
+      "cases": 12,
+      "occupation_cache_hits": 14,
+      "occupation_cache_misses": 12,
+      "wall_seconds": 0.004208666039630771
+    },
+    {
+      "orbitals": 12,
+      "occupied_per_spin": 6,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 1.1379786002407855e-15,
+      "cases": 12,
+      "occupation_cache_hits": 4,
+      "occupation_cache_misses": 22,
+      "wall_seconds": 0.00600350002059713
+    },
+    {
+      "orbitals": 12,
+      "occupied_per_spin": 6,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 2.498001805406602e-16,
+      "cases": 12,
+      "occupation_cache_hits": 4,
+      "occupation_cache_misses": 22,
+      "wall_seconds": 0.0058673329767771065
+    },
+    {
+      "orbitals": 14,
+      "occupied_per_spin": 7,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 2.4424906541753444e-15,
+      "cases": 12,
+      "occupation_cache_hits": 2,
+      "occupation_cache_misses": 24,
+      "wall_seconds": 0.00661583396140486
+    },
+    {
+      "orbitals": 14,
+      "occupied_per_spin": 7,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 4.440892098500626e-15,
+      "cases": 12,
+      "occupation_cache_hits": 4,
+      "occupation_cache_misses": 22,
+      "wall_seconds": 0.005730167031288147
+    },
+    {
+      "orbitals": 16,
+      "occupied_per_spin": 8,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 9.325873406851315e-15,
+      "cases": 12,
+      "occupation_cache_hits": 3,
+      "occupation_cache_misses": 23,
+      "wall_seconds": 0.006721667014062405
+    },
+    {
+      "orbitals": 16,
+      "occupied_per_spin": 8,
+      "common_core": 2,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 9.059419880941277e-14,
+      "cases": 12,
+      "occupation_cache_hits": 3,
+      "occupation_cache_misses": 23,
+      "wall_seconds": 0.006491833017207682
+    },
+    {
+      "orbitals": 16,
+      "occupied_per_spin": 8,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 2.5673907444456745e-16,
+      "cases": 12,
+      "occupation_cache_hits": 2,
+      "occupation_cache_misses": 24,
+      "wall_seconds": 0.005898792005609721
+    },
+    {
+      "orbitals": 16,
+      "occupied_per_spin": 8,
+      "common_core": 2,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 4.218847493575595e-15,
+      "cases": 12,
+      "occupation_cache_hits": 3,
+      "occupation_cache_misses": 23,
+      "wall_seconds": 0.006061499996576458
+    },
+    {
+      "orbitals": 18,
+      "occupied_per_spin": 14,
+      "common_core": 1,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 8.396061623727746e-16,
+      "cases": 12,
+      "occupation_cache_hits": 3,
+      "occupation_cache_misses": 23,
+      "wall_seconds": 0.011807792005129158
+    },
+    {
+      "orbitals": 18,
+      "occupied_per_spin": 14,
+      "common_core": 1,
+      "general_Hermitian_tensor": true,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 2.7478019859472624e-15,
+      "cases": 12,
+      "occupation_cache_hits": 2,
+      "occupation_cache_misses": 24,
+      "wall_seconds": 0.011738832981791347
+    },
+    {
+      "orbitals": 20,
+      "occupied_per_spin": 17,
+      "common_core": 1,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": false,
+      "maximum_overlap_or_energy_error": 3.979039320256561e-13,
+      "cases": 12,
+      "occupation_cache_hits": 2,
+      "occupation_cache_misses": 24,
+      "wall_seconds": 0.018637333007063717
+    },
+    {
+      "orbitals": 20,
+      "occupied_per_spin": 17,
+      "common_core": 1,
+      "general_Hermitian_tensor": false,
+      "identical_alpha_beta": true,
+      "maximum_overlap_or_energy_error": 1.021405182655144e-14,
+      "cases": 12,
+      "occupation_cache_hits": 4,
+      "occupation_cache_misses": 22,
+      "wall_seconds": 0.016823084035422653
+    }
+  ],
+  "cofactor_max_error": 1.8189894035458565e-12,
+  "orbital_truncation": false,
+  "density_truncation": false,
+  "integral_truncation": false
+}
+QUALIFY validate_pigment_solver_primitives.py
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "d_harmonic_rotation_error": 5.329070518200751e-15,
+  "d_frame_first_error": 6.538561359015205e-12,
+  "d_frame_second_error": 9.297419353848646e-08,
+  "d_frame_curvature_contraction_error": 5.551115123125783e-17,
+  "orbital_Jacobian_action_max_error": 8.881784197001252e-16,
+  "fused_ROKS_action_max_error": 1.7763568394002505e-15,
+  "ground_constraint_action_max_error": 1.1102230246251565e-16,
+  "finite_differences": "frame derivative validation only; no production differences"
+}
+QUALIFY validate_matrix_free_roks.py
+Ethylene gmres 7.105427357601002e-15 1.8419766169574913e-14
+Pyrrole gmres 0.0 7.810067688366541e-14
+Ethylene minres 7.105427357601002e-15 5.685173027279231e-15
+Pyrrole minres 7.105427357601002e-15 6.34492458573277e-14
+Ethylene minres 5.329070518200751e-15 3.0214546142826038e-15
+Pyrrole minres 5.329070518200751e-15 7.394085344003543e-13
+Ethylene minres 5.329070518200751e-15 2.2833476443837165e-12
+Pyrrole minres 1.0658141036401503e-14 7.832547585214471e-16
+Ethylene minres 7.105427357601002e-15 3.4232211762252593e-13
+Pyrrole minres 1.7763568394002505e-14 1.1348105998056235e-13
+Ethylene gmres 7.105427357601002e-15 7.010378839195001e-15
+Pyrrole gmres 7.105427357601002e-15 3.229452173973062e-13
+QUALIFY validate_density_pair_chart.py
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "energy_error_hartree": 0.0,
+  "gradient_max_error": 3.608224830031759e-16,
+  "Hessian_max_error": 1.1102230246251565e-15,
+  "complete_pair_features": 78,
+  "orbitals_discarded": 0,
+  "chart_condition": 6.921905016176252
+}
+QUALIFY validate_exact_quadrature.py
+/Users/vincenzobarone/.venvs/matrix/lib/python3.12/site-packages/pyscf/lib/misc.py:203: UserWarning: OpenMP is not available. Setting omp_threads to 2 has no effects.
+  warnings.warn('OpenMP is not available. '
+Ethylene auxiliary XC quadrature 1 / 2
+Ethylene auxiliary XC quadrature 2 / 2
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "molecule": "Ethylene",
+  "errors": [
+    {
+      "energy": 1.7763568394002505e-15,
+      "energy_only": 8.881784197001252e-16,
+      "Fock": 1.6653345369377348e-16,
+      "charge_response": 8.881784197001252e-16,
+      "spin_response": 2.4424906541753444e-15
+    },
+    {
+      "energy": 0.0,
+      "energy_only": 1.7763568394002505e-15,
+      "Fock": 1.6653345369377348e-16,
+      "charge_response": 9.992007221626409e-16,
+      "spin_response": 1.3322676295501878e-15
+    },
+    {
+      "energy": 8.881784197001252e-16,
+      "energy_only": 0.0,
+      "Fock": 1.1102230246251565e-16,
+      "charge_response": 1.1102230246251565e-15,
+      "spin_response": 1.5543122344752192e-15
+    },
+    {
+      "energy": 8.881784197001252e-16,
+      "energy_only": 1.7763568394002505e-15,
+      "Fock": 1.3877787807814457e-16,
+      "charge_response": 8.881784197001252e-16,
+      "spin_response": 1.1102230246251565e-15
+    }
+  ],
+  "registered_span_energy_max_error": 8.881784197001252e-16,
+  "spin_pure_CI_matrix_max_error": 3.552713678800501e-15,
+  "fixed_bra_CI_matrix_max_error": 3.552713678800501e-15,
+  "RI_preconditioned_solver": {
+    "converged": true,
+    "history": [
+      {
+        "iteration": 0,
+        "trust_radius": 0.2,
+        "energy_hartree": -5.7760516079972035,
+        "residual": 0.004808533514391727,
+        "residual_l2": 0.012034633337937412,
+        "ground_overlap": -0.0011609564659715342,
+        "fidelity": 0.9999984991294174,
+        "multiplier": -3.0077924950499947e-15,
+        "Krylov_iterations": 7,
+        "Krylov_info": 0,
+        "linear_relative_residual": 0.01486845002011299,
+        "full_Hessian_outer_iterations": 0,
+        "full_Hessian_actions": 1,
+        "full_linear_relative_residual": 0.014907688340991624,
+        "unscaled_step_norm": 0.0034202705408564217,
+        "step_scale": 1.0,
+        "accepted_fraction": 1.0,
+        "accepted_residual_ratio": 0.014737417147573465
+      },
+      {
+        "iteration": 1,
+        "trust_radius": 0.2,
+        "energy_hartree": -5.776067843235576,
+        "residual": 9.736348270956684e-05,
+        "residual_l2": 0.0001773594117192781,
+        "ground_overlap": 5.138340089649719e-06,
+        "fidelity": 0.9999999629492974,
+        "multiplier": -4.931823878729731e-06,
+        "Krylov_iterations": 14,
+        "Krylov_info": 0,
+        "linear_relative_residual": 0.005536627774643958,
+        "full_Hessian_outer_iterations": 0,
+        "full_Hessian_actions": 1,
+        "full_linear_relative_residual": 0.005505809519708606,
+        "unscaled_step_norm": 0.0002908198286563346,
+        "step_scale": 1.0,
+        "accepted_fraction": 1.0,
+        "accepted_residual_ratio": 0.005497149332926966
+      },
+      {
+        "iteration": 2,
+        "trust_radius": 0.2,
+        "energy_hartree": -5.776067852972995,
+        "residual": 3.2251446213166326e-07,
+        "residual_l2": 9.749711718209487e-07,
+        "ground_overlap": -1.5959894516584356e-07,
+        "fidelity": 0.9999999999991026,
+        "multiplier": 1.7406621755395818e-07,
+        "Krylov_iterations": 17,
+        "Krylov_info": 0,
+        "linear_relative_residual": 0.0001792826282027072,
+        "full_Hessian_outer_iterations": 1,
+        "full_Hessian_actions": 2,
+        "full_linear_relative_residual": 1.1128728913679145e-06,
+        "unscaled_step_norm": 1.4519394301843992e-06,
+        "step_scale": 1.0,
+        "accepted_fraction": 1.0,
+        "accepted_residual_ratio": 1.2482577572878317e-06
+      },
+      {
+        "iteration": 3,
+        "trust_radius": 0.2,
+        "energy_hartree": -5.7760678529732825,
+        "residual": 7.071486733586317e-13,
+        "residual_l2": 1.2170153283575066e-12,
+        "ground_overlap": 4.649901841053778e-14,
+        "fidelity": 1.0,
+        "multiplier": 1.863417565784232e-13
+      }
+    ],
+    "energy_hartree": -5.7760678529732825,
+    "residual": 7.071486733586317e-13,
+    "ground_overlap": 4.649901841053778e-14,
+    "fidelity": 1.0,
+    "retained_transition_rank": 1,
+    "state_following": "anchor transition subspace",
+    "krylov": "gmres",
+    "complete_orbital_rotations": 46,
+    "dense_orbital_Jacobian_allocated": false,
+    "full_functional_residual": true,
+    "auxiliary_linearization": true,
+    "trust_krylov_dimension": 0,
+    "ground_constraint_retracted": false,
+    "moving_frame_Jacobian": false
+  },
+  "RI_diagnostic": {
+    "auxbasis": "def2-universal-jkfit",
+    "auxiliary_functions": 222,
+    "native_pair_features": 78,
+    "direct_curvatures": [
+      [
+        -0.014510923148249843,
+        -0.012936461171090463,
+        -0.011730790683689252
+      ],
+      [
+        -0.011211064997581871,
+        -0.010229912996498974,
+        -0.009214196205163942
+      ]
+    ],
+    "fitted_curvatures": [
+      [
+        -0.014524680058368886,
+        -0.012948493942227928,
+        -0.011732947213069007
+      ],
+      [
+        -0.011209973964439252,
+        -0.0102286414620766,
+        -0.009203291689613612
+      ]
+    ],
+    "maximum_curvature_error_hartree": 1.3756910119042814e-05,
+    "required_tolerance_hartree": 1e-05,
+    "energy_labels_read": false,
+    "approximation": "RI-V response density with exact charge/dipole/quadrupole constraints; full embedded density used for f_xc"
+  },
+  "RI_role": "preconditioner only; full quadrature restores exact XC energy and residual",
+  "nuclear_derivatives_supported": false,
+  "nuclear_gradient_rejection_verified": true
+}
+....................................                                     [100%]
+36 passed in 1.11s
+{
+  "host": "mac-2.homenet.telecomitalia.it",
+  "Slater_cache_max_error": 0.0,
+  "affected_regressions_passed": true,
+  "pytest_status": 0,
+  "pytest_tests": 36,
+  "wall_seconds": 41.28445170796476,
+  "nuclear_Hessian_regression": "Complete ethylene analytic Hessian; equivalent complete density chart",
+  "pigment_derivative_scope": "Vertical energy and orbital response only"
+}

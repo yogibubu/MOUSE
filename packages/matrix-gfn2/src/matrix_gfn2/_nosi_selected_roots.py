@@ -58,3 +58,21 @@ def projector_population(metric,indices,ci):
     cross=(metric[indices]-np.outer(metric[indices,0]/metric[0,0],metric[0]))@ci
     solved=factor.solve(cross);solved+=np.outer(v,(u@solved)/denominator)
     return np.sum(cross*solved,axis=0)
+
+def solve_full(h,metric,roots,*,energy_shift=None):
+    """Solve the same full CI pencil, including its interacting ground state."""
+    n=len(h);k=min(int(roots),n)
+    if k<1:raise ValueError('positive number of full CI roots required')
+    shift=float(h[0,0]/metric[0,0]) if energy_shift is None else float(energy_shift)
+    if k>=n-1:
+        energies,z=eigh(h,metric,subset_by_index=[0,k-1]);method='Dense full generalized eigensolve'
+    else:
+        sparse=csc_matrix(metric);factor=splu(sparse)
+        m=LinearOperator((n,n),matvec=lambda x:sparse@x,dtype=float)
+        mi=LinearOperator((n,n),matvec=factor.solve,dtype=float)
+        action=LinearOperator((n,n),matvec=lambda x:h@x-shift*(sparse@x),dtype=float)
+        values,z=eigsh(action,k=k,M=m,Minv=mi,which='SA',tol=1e-11,ncv=min(n,max(2*k+1,100)),v0=np.random.default_rng(715).normal(size=n),maxiter=10000)
+        order=np.argsort(values);z=z[:,order];energies=values[order]+shift;method='ARPACK full CI with exact sparse metric inverse'
+    residual=h@z-(metric@z)*energies;error=float(np.max(np.linalg.norm(residual,axis=0)));orthogonal=float(np.max(abs(z.T@metric@z-np.eye(k))))
+    if max(error,orthogonal)>1e-8:raise ValueError(('full CI residual qualification failed',error,orthogonal))
+    return energies,z,dict(method=method,roots=k,maximum_residual_hartree=error,maximum_metric_orthonormality_error=orthogonal,configurations_discarded=0)

@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-02",
+  "status": "Experimental diagnostic; not promoted to production",
+  "motivation": "Avoid adding a static correlation response already represented by native density-functional diagonals",
+  "primary_space": "Ground-projected optimized ROKS singlets and their paired partners; identical membership at every canonical frontier",
+  "complement": "Every remaining canonical rank-two singlet, metric-orthogonalized to the primary space",
+  "counterterm": "V D^-1 V.T in the primary block, with the complete interacting complementary excitation Hamiltonian D",
+  "invariant": "The primary zero-frequency Schur complement equals the original native primary Hamiltonian",
+  "energy_offset_ev": 0,
+  "parameters_fitted": false,
+  "weights": [0.5, 0.5],
+  "lambda_exchange": 0.9,
+  "eta": 0.6,
+  "qualification_required": [
+    "Positive complementary excitation Hamiltonian",
+    "Exact static inverse and generalized eigenpair residuals",
+    "Two consecutive frontier increments below 0.02 eV",
+    "Independent fixed-screening sequence",
+    "Carotene state ordering retained",
+    "Small-molecule accuracy revalidation before production promotion",
+    "Transition operator and complete nuclear response before derivative claims"
+  ],
+  "scope": "Energy-only candidate. The subtraction principle is borrowed from extended-response theory, not claimed as a proven molecular OO-DFT correction.",
+  "primary_sources": [
+    {"doi": "10.1103/PhysRevC.88.054301", "url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.88.054301", "role": "Zero-frequency subtraction and stability in extended response"},
+    {"doi": "10.1103/PhysRevC.92.034303", "url": "https://arxiv.org/abs/1506.05975", "role": "Double counting and cutoff dependence in subtracted second RPA"},
+    {"doi": "10.1063/1.479866", "url": "https://doi.org/10.1063/1.479866", "role": "Established need to control correlation double counting in DFT/MRCI; its empirical damping is not used here"}
+  ]
+}
