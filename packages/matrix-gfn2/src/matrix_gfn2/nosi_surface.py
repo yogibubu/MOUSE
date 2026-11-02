@@ -152,8 +152,13 @@ class PreparedNOSIModel:
             q=np.outer(ground[:,:self.no].T@s@c[:,0],ground[:,self.no:].T@s@c[:,self.no]);norm=np.linalg.norm(q)
             if norm<1e-8:raise ValueError('lost retained NOSI orbital character')
             c,mu,energy,residual,_=refine_roks(context,self.arrays['eri'],c,ground,q/norm,multipliers[i]);states[i]=c;multipliers[i]=mu;residuals.append(residual)
+        subtract=self.manifest.get('static_self_energy_subtraction',False)
+        if type(subtract) is not bool:raise ValueError('static self-energy subtraction selector must be boolean')
+        if subtract:
+            from ._nosi_static_subtraction import subtracted_matrix_jet
         response=MatrixResponse(context,self.response,ground,states,multipliers,self.arrays['auxiliary_frame'],self.labels,self.arrays['h'],self.arrays['eri'],derivatives=derivatives,auxiliary_records=self.auxiliary_records)
         zero=np.zeros(xyz.size if derivatives else 0);h,sjet,egjet=response.matrices(zero)
+        if subtract:h=subtracted_matrix_jet(h,sjet,egjet,np.arange(2*len(states)))
         p=np.eye(len(self.labels))[:,1:];p[0]-=sjet.v[0,1:]/sjet.v[0,0];sp=p.T@sjet.v@p
         if np.linalg.eigvalsh(sp).min()<1e-8:raise ValueError('unresolved NOSI metric linear dependence')
         energies,z=eigh(p.T@h.v@p,sp);ci=p@z
@@ -170,7 +175,8 @@ class PreparedNOSIModel:
         if hessian:
             matrices=[np.empty((xyz.size,xyz.size)) for _ in roots]
             for column,direction in enumerate(np.eye(xyz.size)):
-                hh,ss,_=response.matrices(direction)
+                hh,ss,ee=response.matrices(direction)
+                if subtract:hh=subtracted_matrix_jet(hh,ss,ee,np.arange(2*len(states)))
                 for i,root in enumerate(roots):matrices[i][:,column]=projected_eigen_jet(hh,ss,int(root)).ab
             for i,matrix in enumerate(matrices):
                 if np.max(abs(matrix-matrix.T))>2e-6:raise ValueError('NOSI Hessian symmetry validation failed')

@@ -47,7 +47,7 @@ def static_subtraction(h, metric, primary, *, tolerance=1e-10):
     for i,rhs in enumerate(v):
         count=[0]
         def callback(z):count[0]+=1
-        solution[:,i],info=cg(d,rhs,M=preconditioner,rtol=tolerance,atol=tolerance*1e-3,maxiter=3000,callback=callback)
+        solution[:,i],info=cg(d,rhs,M=preconditioner,rtol=tolerance,atol=0.,maxiter=3000,callback=callback)
         error=float(np.linalg.norm(action(solution[:,i])-rhs)/max(np.linalg.norm(rhs),1e-15))
         if info or error>10*tolerance:raise ValueError(('complementary static inverse did not converge',i,info,error))
         residuals.append(error);iterations.append(count[0])
@@ -55,3 +55,37 @@ def static_subtraction(h, metric, primary, *, tolerance=1e-10):
     if asymmetry>100*tolerance:raise ValueError(('asymmetric static counterterm',asymmetry))
     r=np.empty((len(h),len(p)));r[p]=np.eye(len(p));r[q]=x.T
     return r,delta,dict(definition='Exact zero-frequency self-energy subtraction',primary_dimension=len(p),complement_dimension=len(q),complement_minimum_eigenvalue_hartree=smallest,maximum_inverse_relative_residual=max(residuals),inverse_iterations=iterations,counterterm_asymmetry_hartree=asymmetry,energy_offset_ev=0.,diagonal_complement_approximation=False)
+
+
+def subtracted_matrix_jet(h, metric, ground_energy, primary):
+    """Analytic first/second response of the same subtracted energy surface.
+
+    ``h`` and ``metric`` include the native ground CSF at index zero.
+    ``primary`` indexes the remaining, ground-projected configurations.
+    All ground projection, metric orthogonalization and inverse-response
+    derivatives are propagated; the counterterm is not frozen in geometry.
+    This dense routine is intended for molecular derivative qualification.
+    """
+    from ._mixed_jet import MixedJet as Jet
+    from ._nosi_mixed import inverse
+    size=len(h.v)-1;p=np.asarray(primary,dtype=int)
+    if p.ndim!=1 or not len(p) or len(np.unique(p))!=len(p) or np.any(p<0) or np.any(p>=size):
+        raise ValueError('distinct primary indices inside the projected pencil required')
+    q=np.setdiff1d(np.arange(size),p)
+    if not len(q):return h
+    projection=Jet.constant(np.eye(size+1)[:,1:],h.n)
+    projection[0]=projection[0]-metric[0,1:]/metric[0,0]
+    sp=projection.T@metric@projection
+    hp=projection.T@(h-ground_energy*metric)@projection
+    spp=sp[np.ix_(p,p)]
+    if np.linalg.eigvalsh(spp.v)[0]<=0:raise ValueError('nonpositive primary metric')
+    x=inverse(spp)@sp[np.ix_(p,q)]
+    a=hp[np.ix_(p,p)];b=hp[np.ix_(p,q)]
+    v=b-a@x
+    d=hp[np.ix_(q,q)]-b.T@x-x.T@b+x.T@a@x
+    if np.linalg.eigvalsh(d.v)[0]<=0:raise ValueError('static subtraction requires positive complementary excitation Hamiltonian')
+    delta=v@inverse(d)@v.T
+    r=Jet.constant(np.zeros((size,len(p))),h.n);r[p]=np.eye(len(p));r[q]=x.T
+    result=h+Jet.constant(np.zeros_like(h.v),h.n)
+    result[1:,1:]=result[1:,1:]+r@delta@r.T
+    return result

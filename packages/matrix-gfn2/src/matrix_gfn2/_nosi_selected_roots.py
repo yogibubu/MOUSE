@@ -59,7 +59,7 @@ def projector_population(metric,indices,ci):
     solved=factor.solve(cross);solved+=np.outer(v,(u@solved)/denominator)
     return np.sum(cross*solved,axis=0)
 
-def solve_full(h,metric,roots,*,energy_shift=None,algorithm='arpack'):
+def solve_full(h,metric,roots,*,energy_shift=None,algorithm='arpack',initial=None):
     """Solve the same full CI pencil, including its interacting ground state."""
     n=len(h);k=min(int(roots),n)
     if k<1:raise ValueError('positive number of full CI roots required')
@@ -71,8 +71,10 @@ def solve_full(h,metric,roots,*,energy_shift=None,algorithm='arpack'):
         sparse=csc_matrix(metric)
         action=LinearOperator((n,n),matvec=lambda x:h@x-shift*(sparse@x),matmat=lambda x:h@x-shift*(sparse@x),dtype=float)
         diagonal=np.maximum(abs(np.diag(h)-shift*np.diag(metric)),1e-6)
-        preconditioner=LinearOperator((n,n),matvec=lambda x:x/diagonal,matmat=lambda x:x/diagonal[:,None],dtype=float)
-        values,z=lobpcg(action,np.random.default_rng(715).normal(size=(n,k)),B=sparse,M=preconditioner,largest=False,tol=1e-10,maxiter=500)
+        preconditioner=LinearOperator((n,n),matvec=lambda x:x/diagonal.reshape((n,)+(1,)*(x.ndim-1)),matmat=lambda x:x/diagonal[:,None],dtype=float)
+        guess=np.random.default_rng(715).normal(size=(n,k)) if initial is None else np.asarray(initial,dtype=float)
+        if guess.shape!=(n,k):raise ValueError('initial CI subspace has incompatible dimensions')
+        values,z=lobpcg(action,guess,B=sparse,M=preconditioner,largest=False,tol=1e-10,maxiter=500)
         order=np.argsort(values);z=z[:,order];energies=values[order]+shift;method='Block LOBPCG with full generalized metric and diagonal preconditioner'
     else:
         sparse=csc_matrix(metric);factor=splu(sparse)
@@ -82,5 +84,9 @@ def solve_full(h,metric,roots,*,energy_shift=None,algorithm='arpack'):
         values,z=eigsh(action,k=k,M=m,Minv=mi,which='SA',tol=1e-11,ncv=min(n,max(2*k+1,100)),v0=np.random.default_rng(715).normal(size=n),maxiter=10000)
         order=np.argsort(values);z=z[:,order];energies=values[order]+shift;method='ARPACK full CI with exact sparse metric inverse'
     residual=h@z-(metric@z)*energies;error=float(np.max(np.linalg.norm(residual,axis=0)));orthogonal=float(np.max(abs(z.T@metric@z-np.eye(k))))
+    if algorithm=='lobpcg' and max(error,orthogonal)>1e-8:
+        energies,z,certificate=solve_full(h,metric,roots,energy_shift=shift,algorithm='arpack')
+        certificate['block_solver_fallback_residual_hartree']=error
+        return energies,z,certificate
     if max(error,orthogonal)>1e-8:raise ValueError(('full CI residual qualification failed',error,orthogonal))
     return energies,z,dict(method=method,roots=k,maximum_residual_hartree=error,maximum_metric_orthonormality_error=orthogonal,configurations_discarded=0)
