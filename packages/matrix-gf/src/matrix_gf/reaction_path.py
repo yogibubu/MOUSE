@@ -10,7 +10,6 @@ orthogonal to a relaxed reaction path.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from itertools import product
 from typing import Callable
 
 import numpy as np
@@ -72,6 +71,7 @@ def harmonic_path_channel_overlap(
     *,
     maximum_quanta: int = 1,
     active_modes: np.ndarray | None = None,
+    coordinate_frame_kind: str = "orthonormal",
 ) -> np.ndarray:
     """Return exact overlaps of local harmonic product states.
 
@@ -79,7 +79,10 @@ def harmonic_path_channel_overlap(
     square transported frames.  Their polar overlap supplies the orthogonal
     Duschinsky map, while the local frequencies determine the Gaussian widths.
     The result contains every product state whose total excitation does not
-    exceed ``maximum_quanta``.
+    exceed ``maximum_quanta``. With ``coordinate_frame_kind='linear'``, square
+    nonsingular frames map oscillator coordinates to physical coordinates.
+    Their inverse maps, determinants and displaced centers are retained;
+    no polar rotation is substituted for the supplied Gaussian functions.
     """
     left_frequency = np.asarray(left.frequencies_cm, dtype=float)
     right_frequency = np.asarray(right.frequencies_cm, dtype=float)
@@ -100,20 +103,39 @@ def harmonic_path_channel_overlap(
             or np.any(left_frequency <= 0.0) or np.any(right_frequency <= 0.0)
             or left_center.shape != (left_frame.shape[0],)
             or right_center.shape != (right_frame.shape[0],)
+            or not all(np.all(np.isfinite(value)) for value in
+                       (left_frequency, right_frequency, left_frame, right_frame,
+                        left_center, right_center))
             or left.kinetic_coefficient_cm <= 0.0
             or not np.isclose(left.kinetic_coefficient_cm, right.kinetic_coefficient_cm)):
         raise ValueError("harmonic path-channel bases are incompatible")
-    raw_map = left_frame.T @ right_frame
-    u_matrix, _singular, vh = np.linalg.svd(raw_map)
-    duschinsky = u_matrix @ vh
     alpha_left = left_frequency / (2.0 * left.kinetic_coefficient_cm)
     alpha_right = right_frequency / (2.0 * right.kinetic_coefficient_cm)
-    precision_left = np.diag(alpha_left)
-    precision_right = duschinsky @ np.diag(alpha_right) @ duschinsky.T
+    if coordinate_frame_kind == "orthonormal":
+        raw_map = left_frame.T @ right_frame
+        u_matrix, _singular, vh = np.linalg.svd(raw_map)
+        duschinsky = u_matrix @ vh
+        precision_left = np.diag(alpha_left)
+        precision_right = duschinsky @ np.diag(alpha_right) @ duschinsky.T
+        center_left = left_frame.T @ left_center
+        center_right = left_frame.T @ right_center
+        rows_left = np.diag(np.sqrt(2.0 * alpha_left))
+        rows_right = np.diag(np.sqrt(2.0 * alpha_right)) @ duschinsky.T
+    elif coordinate_frame_kind == "linear":
+        dimension = len(left_frequency)
+        if left_frame.shape != (dimension, dimension) or right_frame.shape != (dimension, dimension):
+            raise ValueError("linear Gaussian frames must be square")
+        inverse_left = np.linalg.inv(left_frame)
+        inverse_right = np.linalg.inv(right_frame)
+        precision_left = inverse_left.T @ np.diag(alpha_left) @ inverse_left
+        precision_right = inverse_right.T @ np.diag(alpha_right) @ inverse_right
+        center_left, center_right = left_center, right_center
+        rows_left = np.diag(np.sqrt(2.0 * alpha_left)) @ inverse_left
+        rows_right = np.diag(np.sqrt(2.0 * alpha_right)) @ inverse_right
+    else:
+        raise ValueError("coordinate frame kind must be orthonormal or linear")
     total = precision_left + precision_right
     covariance = np.linalg.inv(total)
-    center_left = left_frame.T @ left_center
-    center_right = left_frame.T @ right_center
     linear = precision_left @ center_left + precision_right @ center_right
     mean = covariance @ linear
     dimension = len(left_frequency)
@@ -129,8 +151,6 @@ def harmonic_path_channel_overlap(
         - linear @ covariance @ linear
     )
     ground = float(np.exp(log_ground + displacement_exponent))
-    rows_left = np.diag(np.sqrt(2.0 * alpha_left))
-    rows_right = np.diag(np.sqrt(2.0 * alpha_right)) @ duschinsky.T
     if maximum_quanta < 0:
         raise ValueError("maximum_quanta must be nonnegative")
     active = (np.arange(dimension, dtype=int) if active_modes is None
@@ -178,6 +198,7 @@ def harmonic_path_channel_overlap(
         return result
 
     forms = np.vstack((rows_left[active], rows_right[active]))
+    form_covariance = forms @ covariance @ forms.T
     form_means = np.concatenate((
         rows_left[active] @ (mean - center_left),
         rows_right[active] @ (mean - center_right),
@@ -190,7 +211,7 @@ def harmonic_path_channel_overlap(
         first, rest = indices[0], indices[1:]
         value = form_means[first] * gaussian_moment(rest)
         value += float(sum(
-            forms[first] @ covariance @ forms[partner]
+            form_covariance[first, partner]
             * gaussian_moment(rest[:index] + rest[index + 1:])
             for index, partner in enumerate(rest)
         ))
@@ -232,12 +253,14 @@ def harmonic_product_occupations(mode_count: int, maximum_quanta: int) -> np.nda
     if mode_count == 0:
         return np.zeros((1, 0), dtype=int)
     states = []
+    def append_block(prefix: tuple[int, ...], remaining: int) -> None:
+        if len(prefix) == mode_count - 1:
+            states.append(prefix + (remaining,))
+            return
+        for value in range(remaining, -1, -1):
+            append_block(prefix + (value,), remaining - value)
     for total in range(maximum_quanta + 1):
-        block = [
-            values for values in product(range(total + 1), repeat=mode_count)
-            if sum(values) == total
-        ]
-        states.extend(sorted(block, reverse=True))
+        append_block((), total)
     return np.asarray(states, dtype=int)
 
 
