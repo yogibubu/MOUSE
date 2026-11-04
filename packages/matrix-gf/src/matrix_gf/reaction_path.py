@@ -72,6 +72,8 @@ def harmonic_path_channel_overlap(
     maximum_quanta: int = 1,
     active_modes: np.ndarray | None = None,
     coordinate_frame_kind: str = "orthonormal",
+    left_occupations: np.ndarray | None = None,
+    right_occupations: np.ndarray | None = None,
 ) -> np.ndarray:
     """Return exact overlaps of local harmonic product states.
 
@@ -83,6 +85,9 @@ def harmonic_path_channel_overlap(
     nonsingular frames map oscillator coordinates to physical coordinates.
     Their inverse maps, determinants and displaced centers are retained;
     no polar rotation is substituted for the supplied Gaussian functions.
+    Explicit left/right occupation rows select the same canonical harmonic
+    products without constructing the unused full overlap matrix; columns
+    refer to ``active_modes`` and their total quanta may not exceed the cap.
     """
     left_frequency = np.asarray(left.frequencies_cm, dtype=float)
     right_frequency = np.asarray(right.frequencies_cm, dtype=float)
@@ -159,9 +164,21 @@ def harmonic_path_channel_overlap(
             or np.any(active < 0) or np.any(active >= dimension)):
         raise ValueError("active harmonic-channel modes are invalid")
 
-    occupations = harmonic_product_occupations(len(active), maximum_quanta)
+    def occupation_rows(rows):
+        if rows is None:
+            return harmonic_product_occupations(len(active), maximum_quanta)
+        rows = np.asarray(rows)
+        if (rows.ndim != 2 or rows.shape[1] != len(active) or not len(rows)
+                or not np.isfinite(rows).all() or np.any(rows < 0)
+                or not np.equal(rows, np.floor(rows)).all()
+                or np.any(rows.sum(axis=1) > maximum_quanta)
+                or len({tuple(row) for row in rows}) != len(rows)):
+            raise ValueError("Invalid explicit harmonic occupation rows")
+        return rows.astype(int)
+    occupations_left = occupation_rows(left_occupations)
+    occupations_right = occupation_rows(right_occupations)
 
-    def polynomials(offset: int) -> list[dict[tuple[int, ...], float]]:
+    def polynomials(offset: int, occupations: np.ndarray) -> list[dict[tuple[int, ...], float]]:
         one_mode = []
         for local_mode in range(len(active)):
             form = offset + local_mode
@@ -218,8 +235,8 @@ def harmonic_path_channel_overlap(
         moment_cache[indices] = value
         return value
 
-    left_polynomials = polynomials(0)
-    right_polynomials = polynomials(len(active))
+    left_polynomials = polynomials(0, occupations_left)
+    right_polynomials = polynomials(len(active), occupations_right)
     left_monomials = sorted(
         set().union(*(terms.keys() for terms in left_polynomials)),
         key=lambda keys: (len(keys), keys),
