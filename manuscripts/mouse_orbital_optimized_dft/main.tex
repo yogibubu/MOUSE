@@ -16,7 +16,7 @@
 \newcommand{\Eh}{\ensuremath{E_{\mathrm h}}}
 \title{Semiempirical Orbital-Optimized DFT in MOUSE:\\Spin-Pure Excited-State Surfaces with Analytic Gradients and Hessians}
 \author{Vincenzo Barone\\\small Consorzio Interuniversitario Nazionale per la Scienza e Tecnologia dei Materiali}
-\date{Working manuscript, 2 November 2026}
+\date{5 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -48,6 +48,9 @@ prepared; these remain excluded from accuracy claims.
 Independent transferability, equilibrium-structure and complete-cost
 benchmarks remain necessary.
 \end{abstract}
+\noindent\textbf{Keywords:} orbital-optimized DFT; semiempirical quantum
+chemistry; excited states; spin-pure ROKS; analytic gradients; analytic
+Hessians; DeltaSCF; MOUSE.
 
 \section{Introduction}
 The photophysics of large molecular systems depends on both electronic structure and the nuclear configurations in which an excitation occurs. Conjugated chromophores, pigment assemblies and molecular environments require calculations over conformational and solvent ensembles, while excited-state relaxation and vibrational spectroscopy require energies, forces and curvatures on the same electronic surface. The practical cost is therefore the cost of a molecular investigation, including sampling and derivatives. Semiempirical quantum methods are attractive in this setting because a compact orbital representation and a parameterized energy can retain an explicit description of charge redistribution while making repeated electronic calculations accessible. Their central purpose is to extend the size and configurational range of quantum-mechanical modeling at an accuracy appropriate to the observable.
@@ -341,6 +344,30 @@ convergence audit is in \texttt{cc1a5c2}, with complete evidence in
 compute host with checksummed receipts and compact low-state exports.
 A permanent public dataset identifier
 has not yet been assigned.
+
+\section*{Author contributions}
+V.B. conceived the method, developed the implementation and validation
+protocol, analyzed the results, and wrote the manuscript and Supporting
+Information.
+
+\section*{Conflict of interest}
+The author declares no conflict of interest.
+
+\section*{Data availability}
+All source code, input geometries, machine-readable data, figures and
+qualification records needed to reproduce the reported calculations are
+included in the MOUSE repository and identified by the commit and archive
+paths given above. Large pigment checkpoints are retained on the verified
+compute host with checksummed receipts; a public dataset DOI will be added
+before publication.
+
+\section*{Graphical abstract}
+\begin{center}
+\includegraphics[width=0.82\linewidth]{figures/method_workflow.pdf}
+\end{center}
+\noindent\emph{TOC text:} A prepared DFT-informed semiempirical surface
+combines spin-pure orbital optimization, coherent state interaction and
+analytic nuclear response for repeated excited-state calculations.
 
 \setlength{\bibsep}{2pt}
 \bibliographystyle{unsrtnat}
