@@ -205,6 +205,7 @@ def harmonic_path_channel_overlap(
     coordinate_frame_kind: str = "orthonormal",
     left_occupations: np.ndarray | None = None,
     right_occupations: np.ndarray | None = None,
+    moment_representation: str = "hermite",
 ) -> np.ndarray:
     """Return exact overlaps of local harmonic product states.
 
@@ -219,6 +220,8 @@ def harmonic_path_channel_overlap(
     Explicit left/right occupation rows select the same canonical harmonic
     products without constructing the unused full overlap matrix; columns
     refer to ``active_modes`` and their total quanta may not exceed the cap.
+    Direct Hermite moments reuse the same exact Gaussian recurrence; the
+    polynomial representation is retained for numerical cross-checks.
     """
     product = harmonic_path_gaussian_product(
         left,right,coordinate_frame_kind=coordinate_frame_kind,
@@ -291,6 +294,67 @@ def harmonic_path_channel_overlap(
         rows_left[active] @ (mean - center_left),
         rows_right[active] @ (mean - center_right),
     ))
+    if moment_representation not in ("hermite", "polynomial"):
+        raise ValueError("Moment representation must be hermite or polynomial")
+    if moment_representation == "hermite":
+        # The normalized Hermite generating function is exp(t*x-t*t/2).
+        # Its Gaussian expectation has the same Wick recurrence with C-I.
+        # Contract Hermite words directly instead of expanding each into raw
+        # monomials and then applying two dense coefficient matrices.
+        contraction = form_covariance - np.eye(len(form_means))
+        # Evaluate the same Wick recurrence by left occupation rows, batching
+        # all right occupations in NumPy. Downward closures are algebraic
+        # intermediates only; no oscillator states are added to the request.
+        def downward_closure(request):
+            rows = {tuple(int(n) for n in row) for row in request}
+            pending = list(rows)
+            while pending:
+                row = pending.pop()
+                for axis, count in enumerate(row):
+                    if count:
+                        lower = row[:axis] + (count-1,) + row[axis+1:]
+                        if lower not in rows:rows.add(lower);pending.append(lower)
+            ordered = sorted(rows, key=lambda row: (sum(row), row))
+            return np.asarray(ordered, dtype=int), {row:i for i,row in enumerate(ordered)}
+        left_rows, left_lookup = downward_closure(occupations_left)
+        right_rows, right_lookup = downward_closure(occupations_right)
+        nactive = len(active)
+        right_lower = np.zeros((nactive,len(right_rows)),dtype=int)
+        right_factors = np.sqrt(right_rows.T)
+        for axis in range(nactive):
+            for j,row in enumerate(right_rows):
+                if row[axis]:
+                    lower=row.copy();lower[axis]-=1
+                    right_lower[axis,j]=right_lookup[tuple(lower)]
+        values=np.zeros((len(left_rows),len(right_rows)))
+        zero=(0,)*nactive;left_zero=left_lookup[zero];right_zero=right_lookup[zero]
+        values[left_zero,right_zero]=1.
+        # Right-only moments start the left-row recurrence.
+        for j,row in enumerate(right_rows):
+            axes=np.flatnonzero(row)
+            if not len(axes):continue
+            axis=int(axes[0]);lower=row.copy();lower[axis]-=1
+            previous=right_lookup[tuple(lower)]
+            value=form_means[nactive+axis]*values[left_zero,previous]
+            for other in np.flatnonzero(lower):
+                lower2=lower.copy();lower2[other]-=1
+                value+=contraction[nactive+axis,nactive+other]*np.sqrt(float(lower[other]))*values[left_zero,right_lookup[tuple(lower2)]]
+            values[left_zero,j]=value/np.sqrt(float(row[axis]))
+        for i,row in enumerate(left_rows):
+            axes=np.flatnonzero(row)
+            if not len(axes):continue
+            axis=int(axes[0]);lower=row.copy();lower[axis]-=1
+            previous=left_lookup[tuple(lower)]
+            value=form_means[axis]*values[previous].copy()
+            for other in np.flatnonzero(lower):
+                lower2=lower.copy();lower2[other]-=1
+                value+=contraction[axis,other]*np.sqrt(float(lower[other]))*values[left_lookup[tuple(lower2)]]
+            for other in range(nactive):
+                value+=contraction[axis,nactive+other]*right_factors[other]*values[previous,right_lower[other]]
+            values[i]=value/np.sqrt(float(row[axis]))
+        li=[left_lookup[tuple(row)] for row in occupations_left]
+        ri=[right_lookup[tuple(row)] for row in occupations_right]
+        return ground*values[np.ix_(li,ri)]
     gaussian_moment = _gaussian_moment_evaluator(form_means,form_covariance)
 
     left_polynomials = polynomials(0, occupations_left)
