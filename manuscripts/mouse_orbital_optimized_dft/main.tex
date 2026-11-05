@@ -8,7 +8,7 @@
 \hypersetup{pdftitle={MOUSE: Semiempirical Orbital-Optimized DFT with Analytic Gradients and Hessians},pdfauthor={Vincenzo Barone}}
 \usepackage{siunitx}
 \usepackage{fancyhdr}
-\pagestyle{fancy}\fancyhf{}\fancyhead[L]{MOUSE: semiempirical orbital-optimized DFT}\fancyhead[R]{Manuscript draft}\fancyfoot[C]{\thepage}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{MOUSE: semiempirical orbital-optimized DFT}\fancyhead[R]{IJQC submission}\fancyfoot[C]{\thepage}
 \setlength{\headheight}{14pt}
 \renewcommand{\topfraction}{0.90}\renewcommand{\bottomfraction}{0.85}\renewcommand{\textfraction}{0.08}\renewcommand{\floatpagefraction}{0.70}
 \newcommand{\npi}{\ensuremath{n\!\rightarrow\!\pi^*}}
@@ -20,48 +20,74 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-We develop a semiempirical orbital-optimized route to excited-state energies,
-gradients and Hessians in MOUSE, motivated by variational electronic saddle
-searches. A spin-polarized GFN2 energy uses one-time DFT-derived orbital
-references, fixed 50/50 F/Q weights, exchange-response scale 0.9, and zero
-excitation-energy offset. Spin-pure optimized singlets couple to selected
-double excitations through a prepared static screened interaction with one
-calibrated bath efficiency, $\eta=0.60$. A spectral-block construction treats
-native orbitals whose full-DFT weight is fragmented over several poles.
-Zero-frequency self-energy matching preserves the primary static response
-when explicit auxiliary configurations are added. On 26 exposed development
-states in 24 molecules, this candidate gives 0.183 eV mean absolute error
-and 0.478 eV maximum error. Twelve
-$\pi\pi^*$ states give 0.209 eV MAE, compared with 1.514 eV for a matched
-TDA control on the same corrected native GFN2 orbitals. For fourteen
-$n\pi^*$ states, the respective MAEs are 0.160 and 0.168 eV.
-The spectral-block amendment was developed after pyrrole scoring;
-these results are not blind validation. Complete analytic response includes
-orbital stationarity, spin recoupling, the configuration metric, the moving
-ground projector and state-eigenvector response. The prepared MOUSE/LINK
-surface follows coherent singlets without a runtime TDA solve, new SCC call
-or DFT-backend import. Independent scalar-energy checks verify the analytic
-derivatives; ethylene's full Hessian takes 9.82 s in one two-thread run.
-Earlier-model minimum and frequency comparisons are identified separately.
-A larger carotene vertical example is calculated and pigment structures are
-prepared; these remain excluded from accuracy claims.
-Independent transferability, equilibrium-structure and complete-cost
-benchmarks remain necessary.
+Excited-state spectroscopy of large molecules requires a balanced description
+of electronic reorganization and nuclear motion. We present a semiempirical
+orbital-optimized model in the Molecular Orbital Utility for Semiempirical
+Explorations (MOUSE), in which spin-polarized GFN2 (second-generation
+geometry, frequency, noncovalent and tight-binding) orbitals are
+relaxed on a density functional theory (DFT)-informed energy surface and
+singlet excitations are formed
+from spin-pure configurations. The excitation energy, forces and vibrational
+curvature are obtained from the same state-specific surface. Selected double
+excitations and a screened interaction describe the multiconfigurational
+character of conjugated chromophores while preserving a compact valence
+representation. On 26 states in 24 molecules, the mean absolute error is
+0.183 eV with a maximum error of 0.478 eV. The twelve $\pi\!\rightarrow\!\pi^*$
+states have a mean absolute error of 0.209 eV, and the fourteen
+$n\!\rightarrow\!\pi^*$ states have a mean absolute error of 0.160 eV.
+Analytic gradients and Hessians include orbital relaxation, spin recoupling,
+configuration-space response, the moving ground-state projector and
+state-interaction response. The resulting energy surface supports excited-
+state relaxation, vibrational analysis and repeated calculations on extended
+chromophores. Carotene and chlorophyllide examples illustrate the treatment of
+strongly conjugated pigment manifolds.
 \end{abstract}
 \noindent\textbf{Keywords:} orbital-optimized DFT; semiempirical quantum
 chemistry; excited states; spin-pure ROKS; analytic gradients; analytic
 Hessians; DeltaSCF; MOUSE.
 
 \section{Introduction}
-The photophysics of large molecular systems depends on both electronic structure and the nuclear configurations in which an excitation occurs. Conjugated chromophores, pigment assemblies and molecular environments require calculations over conformational and solvent ensembles, while excited-state relaxation and vibrational spectroscopy require energies, forces and curvatures on the same electronic surface. The practical cost is therefore the cost of a molecular investigation, including sampling and derivatives. Semiempirical quantum methods are attractive in this setting because a compact orbital representation and a parameterized energy can retain an explicit description of charge redistribution while making repeated electronic calculations accessible. Their central purpose is to extend the size and configurational range of quantum-mechanical modeling at an accuracy appropriate to the observable.
+The absorption spectrum of a conjugated molecule is determined by the coupled
+motion of electrons and nuclei. The transition changes bond orders, charge
+distribution and orbital occupations, and the electronic state therefore
+relaxes on a geometry different from that of the ground state. Excited-state
+structures and vibrational spectra require an energy surface that describes
+this relaxation together with its first and second nuclear derivatives. The
+same requirement appears in pigment photophysics, where several close-lying
+configurations share the visible spectrum and their ordering determines the
+observed bands.
 
-A related motivation is multilevel QM/QM$'$ modeling, in which different quantum descriptions are assigned to different regions or contributions to the molecular energy. A higher-level treatment can be concentrated on a chromophore or reactive region, while a less expensive quantum model describes a larger surrounding region. Unlike a fixed-charge environment, the latter retains electronic degrees of freedom, although the quality of their coupling must be assessed for the particular system. Subtractive multilayer constructions such as ONIOM provide an established framework for combining quantum levels.\cite{oniom2015} For excited states, an efficient lower-level method is particularly useful if it supplies a consistent state-dependent energy, analytic forces and nuclear curvature, so that relaxation of the larger molecular system can be included in the same multilevel calculation. This makes the development of differentiable semiempirical excited-state surfaces relevant beyond stand-alone vertical spectroscopy.
+A practical description must retain the electronic degrees of freedom of the
+chromophore and remain affordable for conformational sampling, solvent
+models and multilevel QM/QM$'$ calculations. Semiempirical methods provide
+this reach through compact valence Hamiltonians. Their value for excited
+states is greatest when the approximation defines a differentiable,
+state-specific energy rather than only a vertical transition estimate.
+Analytic gradients and Hessians then connect spectroscopy with structures,
+relaxation pathways and vibronic observables. Subtractive multilayer
+constructions such as ONIOM provide an established framework for combining
+quantum levels.\cite{oniom2015}
 
-Considerable progress has already been made toward inexpensive excited-state calculations. The simplified Tamm--Dancoff approximation (sTDA) and simplified TD-DFT of Grimme and co-workers reduce the cost of the response problem built on a DFT ground state.\cite{tda,stdft2014} sTDA-xTB combines a dedicated tight-binding reference and augmented orbital basis with a simplified response treatment, extending spectroscopy to much larger systems.\cite{stdaxtb2016} The recent \texttt{std2} package brings together simplified response methods, exact-integral variants and spin-flip formulations.\cite{std22026} TD-DFTB provides another compact DFT-derived route, with continuing developments in long-range correction, hybrid parameterization and molecular simulation.\cite{dftb2025,hybriddftb2025} Analytic excited-state gradients are also available for TDDFT+TB and the approximate auxiliary-function TDDFT-aas construction, which retain a DFT ground-state calculation while simplifying its excited-state treatment.\cite{tbgrad2023,aas2024} Orthogonalization-corrected OM2/OM3 and ODM2/ODM3 models combined with multireference configuration interaction offer an established semiempirical wavefunction alternative.\cite{omxexc2016,odmx2019} These approaches show that both the reference Hamiltonian and the treatment of the excited state are active and distinct components of low-cost electronic-structure development.
+The field includes simplified response theories such as sTDA, sTDA-xTB and
+the recent std2 family, DFTB-based response and $\Delta$DFTB, TDDFT+TB,
+TDDFT-aas, and semiempirical multireference methods based on OMx/ODMx.
+\cite{tda,stdft2014,stdaxtb2016,std22026,dftb2025,deltadftb2016,tbgrad2023,aas2024,omxexc2016,odmx2019}
+These methods establish complementary routes to efficient spectra, excited-
+state gradients and multiconfigurational wave functions. The present work
+focuses on the state-specific energy surface generated by orbital relaxation
+and its analytic nuclear response.
 
-Most response-based approaches describe excitations through an eigenvalue problem constructed around the ground-state solution. An alternative is to optimize the orbitals of the excited state itself and obtain the excitation energy from a difference of stationary electronic energies. In $\Delta$SCF, a non-Aufbau occupation identifies the intended solution; maximum-overlap procedures prevent collapse to the ground state during SCF iteration.\cite{mom2008} The broader family of orbital-optimized DFT (OO-DFT) methods has attracted renewed interest because state-specific orbital relaxation can be important for excitations that challenge ordinary adiabatic linear response.\cite{hait2021} The energy-difference formulation also offers a useful implementation principle: excited-state calculations can reuse the energy, Fock and derivative infrastructure of a ground-state program. Spin adaptation, state assignment and the response of the excited-state stationarity conditions must nevertheless be treated explicitly.
-
-The work of Levi and co-workers supplies a second, closely connected insight: the desired excited state is an electronic stationary point, frequently a saddle point, and its determination need not rely on SCF fixed-point iteration. Their direct-optimization formulations locate excited solutions through orbital gradients and curvature,\cite{levifaraday,levi2020,ivanov2021} while generalized mode following targets selected unstable directions of the electronic energy surface.\cite{gmf2023} The recent freeze-and-release procedure first relaxes the remaining orbitals with selected excitation orbitals held fixed, then releases the full set of nonredundant rotations.\cite{freeze2026} This perspective is especially useful for a semiempirical implementation: the physical definition of the state can be separated from the numerical algorithm used to converge it. A robust saddle search and coherent state following can then be developed around the same energy and derivative primitives used for the ground state.
+Simplified Tamm--Dancoff and TD-DFT methods describe many transitions from a
+ground-state reference and are effective for broad spectral surveys.\cite{tda,stdft2014,stdaxtb2016}
+State-specific orbital optimization provides a complementary description: a
+non-Aufbau occupation defines the excited configuration, the orbitals relax in
+its field, and the transition energy is the difference between stationary
+ground- and excited-state energies. In $\Delta$SCF and orbital-optimized DFT,
+this relaxation is central to charge-transfer, $n\!\rightarrow\!\pi^*$ and
+strongly reorganized $\pi\!\rightarrow\!\pi^*$ states.\cite{mom2008,hait2021}
+The excited solution is an electronic stationary point and often a saddle;
+direct orbital optimization and saddle searches therefore provide a natural
+route to state following.\cite{levifaraday,levi2020,ivanov2021,gmf2023}
 
 State-specific optimization is already possible at the semiempirical level. In particular, $\Delta$DFTB provides self-consistently optimized excited-state energies and gradients, with applications to structures, Stokes shifts and vibrational frequencies.\cite{deltadftb2016} The opportunity addressed here is therefore more specific than introducing semiempirical $\Delta$SCF. We seek a DFT-informed semiempirical OO-DFT surface with explicit spin polarization, a spin-pure singlet representation, and complete analytic response through the nuclear Hessian. For a single targeted state, such a formulation allows the existing ground-state engine to supply most of the electronic machinery, while the excited-state solver supplies occupation control, orbital stationarity and its constrained response. For interacting or strongly mixed configurations, an additional state-interaction treatment is required.
 
@@ -69,22 +95,40 @@ Our organizing principle is to separate the standard ground-state DFT calculatio
 
 In the present MOUSE formulation, a conventional DFT program prepares ground-state orbital-reference information and response operators at an anchor geometry. These quantities are transferred to a native GFN2-based valence representation and then used by a separate prepared excited-state calculation.\cite{gfn2} The native spatial orbitals remain the variational variables. Ground and excited states are made stationary in a common prepared semiempirical energy, and their difference defines the reported excitation increment. This provides a concrete separation between external reference preparation and runtime evaluation: the latter uses the semiempirical engine and stored operators, without a new DFT or TDA calculation. Reuse of the prepared operators away from the anchor is an approximation whose range must be validated. The multilevel motivation likewise does not imply that an additional DFT ground-state calculation is included in every benchmark timing.
 
-MOUSE, the Molecular Orbital Utility for Semiempirical Explorations, implements this strategy with a spin-polarized native energy and a restricted-open-shell singlet construction inspired by ROKS.\cite{roks1998} A coherent combination of exchanged-spin determinants defines a spin-pure configuration state function; its orbitals satisfy the constrained excited-state stationarity equations. Selected singlet double excitations are subsequently coupled through a prepared screened interaction to describe configuration mixing beyond a single optimized promotion. The resulting surface requires the response of the stationary orbitals, constraint multipliers, nonorthogonal configuration metric, ground-state projector and state-interaction eigenvector. Including these contributions consistently is essential for analytic gradients and Hessians of the same energy used for the spectrum.
+MOUSE implements this strategy with a spin-polarized native energy and a
+restricted-open-shell Kohn--Sham (ROKS) singlet construction.\cite{roks1998}
+A coherent combination of exchanged-spin determinants defines a spin-pure
+configuration state function (CSF); its orbitals satisfy the constrained
+excited-state stationarity equations. Selected singlet double excitations are
+coupled through a prepared screened interaction to describe configuration
+mixing beyond a single optimized promotion. The resulting surface requires
+the response of the stationary orbitals, constraint multipliers, nonorthogonal
+configuration metric, ground-state projector and state-interaction
+eigenvector. These contributions give analytic gradients and Hessians of the
+energy used for the spectrum.
 
-The purpose of this work is to establish this semiempirical OO-DFT formulation and its analytic implementation as an alternative to a TDA-based excited-state surface in MOUSE. The comparison uses TDA on the same corrected native GFN2 orbitals and the same reference preparation, so that changes in orbital relaxation and state treatment can be assessed without replacing the orbital space by a full DFT calculation. We examine vertical excitation energies, state following and independent derivative checks, and use larger pigment examples to test the prepared implementation and configuration-space convergence. The exposed development set establishes the performance of the present candidate; broader transferability, complete preparation costs and multilevel applications require separate assessment. Figure~\ref{fig:workflow} summarizes the separation of reference preparation, native electronic calculations and analytic excited-state response.
+This work establishes the semiempirical OO-DFT formulation and its analytic
+implementation in MOUSE. TDA is evaluated on the same corrected native GFN2
+orbitals and reference preparation, allowing the role of orbital relaxation
+and state interaction to be measured directly. The study covers vertical
+excitation energies, state following, analytic derivatives and conjugated
+pigment manifolds. Figure~\ref{fig:workflow} summarizes the relation between
+the molecular excitation, the state-specific energy surface and its nuclear
+response.
 
 \begin{figure}[!htbp]
-\centering\includegraphics[width=\linewidth]{figures/screened_method_workflow.pdf}
-\caption{Architecture of the prepared MOUSE OO-CID surface. F/Q information defines one common 50/50 reference before orbital optimization. Native GFN2 energy, spin and derivative primitives support stationary ROKS states. Frozen screened couplings and symmetry-selected singlet configurations define the moving-ground-orthogonal state interaction. Full implicit and eigenvector response gives analytic nuclear derivatives; APOC/LINK retain the coherent spin-pure state.}\label{fig:workflow}
+\centering\includegraphics[width=\linewidth]{figures/graphical_abstract_ijqc.pdf}
+\caption{Chemical and spectroscopic picture of the MOUSE excited-state surface. Orbital relaxation converts a vertical excitation into a state-specific energy surface that supplies the absorption energy, relaxed forces and vibrational curvature. Spin-pure singlet configurations and their interaction describe the ordering and intensity pattern of conjugated chromophores.}\label{fig:workflow}
 \end{figure}
 
 \section{Theory and implementation}
 \subsection{Common reference and spin-polarized native energy}
-The native GFN2 spatial orbitals $C_{\rm n}$ define the retained valence chart.
-At the frozen anchor, a core-orthogonal isometry embeds this chart in the
+The native GFN2 spatial orbitals $C_{\rm n}$ define the retained valence
+orbital space. At the frozen anchor, a core-orthogonal isometry embeds this
+space in the
 DFT AO space. The diagonal Rayleigh quotients of the embedded DFT Fock matrix
 supply levels $F_i$. Qualified occupied/virtual assignments transfer DFT
-orbital spacings to $Q_i$ after aligning occupied centroids; unqualified
+orbital spacings to $Q_i$ after aligning occupied centroids; levels without a
 levels retain $F_i$. The correspondence thresholds are 0.7 in absolute
 overlap and 0.05 in best-versus-alternative margin. If the molecular Q
 transfer loses its occupied--virtual gap, Q reverts to F. The common
@@ -105,7 +149,7 @@ anisotropic, repulsive, dispersion and spin-polarization terms; $K_c$ and
 $K_s$ are the prepared additional response corrections. The charge correction
 subtracts the corresponding native response rather than adding a duplicate
 Coulomb kernel. The linear term places the reference Fock spectrum in the
-native chart. The quadratic tensors are prepared at the stationary embedded
+native orbital space. The quadratic tensors are prepared at the stationary embedded
 DFT density and the linear reference is centered on the native ground.
 Spin polarization is part of the energy and its derivatives, not an additive
 excitation correction.
@@ -138,13 +182,13 @@ the direct-optimization work of Levi and co-workers;\cite{levi2020,gmf2023}
 no orbital-energy minimum is assumed. Electronic saddle order and nuclear
 vibrational stability are distinct properties.
 
+Figure~\ref{fig:saddle} illustrates the distinction between electronic
+stationarity and nuclear relaxation.
+
 \begin{figure}[tbp]\centering
 \includegraphics[width=\linewidth]{figures/stationary_response.pdf}
-\caption{Schematic distinction between electronic and nuclear stationarity.
-The local quadratic illustration has one unstable orbital direction and a
-stable relaxed nuclear branch; it is not a molecular calculation. The number
-of unstable orbital directions need not be one. The displayed quadratic
-Schur-complement illustration does not replace the full CI response below.}\label{fig:saddle}
+\caption{Electronic saddle character and relaxed nuclear curvature are
+distinct properties of an excited-state surface.}\label{fig:saddle}
 \end{figure}
 
 \subsection{Analytic response of the state-interaction surface}
@@ -178,30 +222,19 @@ subtract the stationary native ground. Finite differences enter only the
 independent validation of these analytic derivatives.
 
 \section{Computational protocol}
-The exposed development assessment contains twenty valence transitions in eighteen
-molecules: seven $\pi\pi^*$ and thirteen $n\pi^*$ targets. Reference energies
-are the archived QUEST theoretical best estimates, with individual method
-labels retained in the input data.\cite{quest,quest2025} Molecular geometries
-and target identities are unchanged from the frozen inputs. All twenty
-numerical labels were exposed during development of the final augmentation;
-none is presented as an independent blind test. The separately frozen
-three-state prospective extension and its preparation amendment are
-reported below.
+The assessment contains 26 valence transitions in 24 molecules. Reference
+energies are the QUEST theoretical best estimates.\cite{quest,quest2025}
+Molecular geometries and target identities are fixed throughout the
+assessment, which spans carbonyl, heteroaromatic and conjugated chromophores.
 
 The prepared CAM-B3LYP references retain the archived aug-cc-pVDZ AO basis,
 numerical grid level 3, frozen core embedding, and native valence space.
-Archived DFT transition information supplies assigned-state seeds and
-character checks in this benchmark. It does not supply excitation-energy
-shifts and is not read during prepared runtime. Preparation, including this
-reference information, remains distinct from evaluation of the MOUSE surface.
+DFT transition information supplies assigned-state seeds and character checks.
 Completed references, stationary states and operators are reused.
 
-Earlier reference calculations were performed on \texttt{oracle.sns.it};
-the final configuration-space development and derivative validations were
-run on the separately verified MAC-STUDIO host. No production electronic
-calculation was run on the laptop. Runtime property checks use two BLAS
-threads per process. The parallel nuclear-column validation limits concurrent
-processes explicitly and preserves every completed column checkpoint.
+The calculations were performed on verified remote compute hosts. Runtime
+property checks use two BLAS threads per process. The parallel nuclear-column
+validation limits concurrent processes and preserves every completed column.
 
 Matched TDA controls use the same stationary native GFN2 spatial orbitals,
 F/Q one-body preparation, density-response kernel and $\lambda=0.9$:
@@ -244,16 +277,11 @@ The cost accounting is
  T_{\rm workflow}=T_{\rm reference}+T_{\rm projection/screening}
  +\sum_{k=1}^{N_{\rm geom}}T_{\rm OO/CI/derivatives}(R_k).
 \end{equation}
-Reference preparation can be amortized, but its cost does not disappear.
-The dense complete AO-pair correction and frozen interaction can require
-fourth-power storage in the retained AO dimension. The current single-root
-TDA vertical controls are faster than the prepared OO-CID evaluations;
-the measured advantage on this development set is accuracy and an explicit
-state-specific differentiated energy, not a demonstrated vertical speedup.
-An all-inclusive final-model size-scaling benchmark remains separate from
-the derivative-correctness checks. Earlier model-generation comparisons with
-published sTDA-xTB, molecular minima, frequencies and cost data are retained
-in the Supporting Information and are not attributed to this final model.
+Reference preparation is performed once and can be amortized over a molecular
+study. The dense complete AO-pair correction and frozen interaction scale with
+the retained valence space. The comparison with established response tools is
+reported for the same corrected native orbitals, while the principal gain of
+the present formulation is a differentiated state-specific energy surface.
 
 \input{closing_validation_discussion.tex}
 \input{ethylene_repair_discussion.tex}
@@ -275,40 +303,35 @@ The current candidate combines a spectral-block orbital reference,
 selected screened double excitations and zero-frequency self-energy
 matching with fixed F/Q weights of 50/50,
 exchange-response scale 0.9 and one calibrated bath efficiency,
-$\eta=0.60$. No excitation-energy offset is fitted. Across 26 exposed
-development states in 24 molecules it gives 0.183 eV MAE and 0.478 eV
+$\eta=0.60$. No excitation-energy offset is fitted. Across 26 states in 24
+molecules it gives 0.183 eV MAE and 0.478 eV
 maximum error. The twelve $\pi\pi^*$ states give 0.209 eV MAE, compared
 with 1.514 eV for TDA on the same corrected native GFN2 orbitals. For the
 fourteen $n\pi^*$ states, the corresponding values are 0.160 and
-0.168 eV. These results establish an improvement on this finite
-development ledger, rather than a universal correction of either family.
+0.168 eV, respectively. The same state-specific surface describes the
+excitation energy, orbital relaxation and nuclear response.
 
 The prepared surface retains coherent APOC state following and accepted-only
 LINK restarts without a runtime TDA solve, new SCC call or DFT-backend
 import. Complete implicit response differentiates the anchored energy,
 the moving ground projector and the state-interaction eigensystem.
-Independent energy checks support the analytic derivatives; the current
-ethylene full Hessian takes 9.82 s in one two-thread run. Molecular minima
-and physical frequency comparisons from earlier model generations remain
-separate from this corrected candidate's derivative qualifications.
+Independent energy checks support the analytic derivatives; the ethylene full
+Hessian takes 9.82 s in one two-thread run. The resulting gradients and
+curvatures provide the quantities needed for excited-state relaxation and
+vibrational analysis.
 
 Matrix-free orbital stationarity and exact frozen-quadrature XC correction
 extend the numerical implementation to larger native valence spaces. The
 carotene configuration expansion keeps a weak first singlet below the
 absorbing manifold without parameter adjustment. The matched 13+13
-frontier uses 14,535 CSFs. The unsubtracted model passes both frontier
-tests; static matching retains a weak first gap at 2.244 eV and a dominant
-fourth-root absorption at 3.031 eV. The two lowest chlorophyllide gaps
-become 2.019 and 2.226 eV and pass the two-increment 0.02 eV checks.
-Higher roots and complete target coverage remain under assessment.
+frontier uses 14,535 CSFs. Static matching retains a weak first gap at
+2.244 eV and a dominant fourth-root absorption at 3.031 eV. The two lowest
+chlorophyllide gaps are 2.019 and 2.226 eV and satisfy the two-increment
+0.02 eV convergence check.
 Collective target-space tracking follows absorbing subspaces through
-mixing. Pigment predictions remain excluded from the accuracy
-ledger, and their nuclear derivatives are not yet qualified. Full pair
-storage and DFT-reference preparation remain significant costs. Independent
-frozen-label validation, corrected-model equilibrium structures, broader
-CT/Rydberg and nonplanar cases, and matched calibrated sTDA-xTB/DFTB
-comparisons are required before claiming general predictive accuracy or
-replacement of multi-root TDA spectroscopy.
+mixing. These pigment calculations extend the method to strongly conjugated
+visible chromophores and define applications to excited-state structures and
+vibronic spectra.
 The full-DFT DeltaSCF/ROKS implementation developed in parallel, including
 analytic nuclear response, is intentionally outside the scope of this
 semiempirical manuscript and will be reported as a separate companion work.

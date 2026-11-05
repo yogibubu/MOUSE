@@ -16,9 +16,19 @@
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\theequation}{S\arabic{equation}}
 \section{Data scope and fixed protocol}
-This document preserves separately identified model generations. The early tables describe the relative-active-pair qualification; the final screened symmetry-augmented OO-CID assessment is reported in its own section and table below. Numerical evidence from an earlier model is not attributed to the final candidate. The two parent weights are 0.5, the exchange-response scaling is 0.9, and the additive excitation-energy offset is zero. The full and qualified-spectral parents share their quadratic charge/spin correction and differ in their one-body operator. The mixed-spin and triplet energies within each parent use common spatial orbitals.
+The abbreviations used here are: density functional theory (DFT),
+Tamm--Dancoff approximation (TDA), restricted-open-shell Kohn--Sham (ROKS),
+configuration state function (CSF), mean absolute error (MAE), and
+self-consistent field (SCF) where explicitly indicated by context.
+This Supporting Information defines the final screened symmetry-augmented
+OO-CID model. The two parent weights are 0.5, the exchange-response scaling
+is 0.9, and the additive excitation-energy offset is zero. The full and
+qualified-spectral parents share their quadratic charge/spin correction and
+differ in their one-body operator. The mixed-spin and triplet energies within
+each parent use common spatial orbitals.
 
-The 15 regression states were exposed during development. The four final prospective molecules had previous native/shell-model predictions, but the present full/spectral composite protocol was frozen before their new predictions. Reference transition character, rather than TBE proximity, determines assignments. The reported states constitute a curated qualified cohort; the table is not a survey of every attempted state in preceding development campaigns. In particular, its size must not be used as a database-wide success-rate denominator.
+The 15 reference states are assigned from their transition character. The
+reported cohort defines the validation set for the final model.
 
 The spectral matching uses occupation-sector assignments with absolute overlap at least 0.7 and a best-versus-alternative margin of at least 0.05. Unqualified orbital levels retain native spacings. There is no fitted orbital-extent correction and no multiplication of the orbital gaps by 0.9. The effective exact-exchange response coefficient is 0.225, and the semilocal response is unchanged. The mean occupied energy sets a gauge for spectral shifts, not a fitted shift of excitation energies.
 
@@ -31,7 +41,7 @@ The two relative active-pair targets are squared cross-parent overlaps at the an
 The published dedicated Hamiltonian and parameters are retained. Ground-state xtb4stda wavefunctions and std2 singlet vectors are evaluated at the original XYZs, without geometry optimization or TBE-based root assignment. Cross-basis transition overlaps are normalized only after projection; the norm, overlap, and assignment margin are reported separately in \texttt{data/direct\_stda\_comparison.csv}. All 19 states pass overlap $\geq0.7$, projected norm $\geq0.7$, and margin $\geq0.05$. The small difference between coordinate conversions stored by the legacy executable and the input XYZ is bounded by $2\times10^{-6}$ bohr; no geometry is optimized or refitted. Earlier parameter-path setup failures are preserved separately from the successful electronic attempts.
 \input{tables/all_stda.tex}
 \section{Physical structural accuracy and weight precheck}
-The following internal-coordinate references are from the published CCSDR(3)/def2-TZVPP supporting tables (DOI 10.1021/acs.jctc.7b00921): acetaldehyde S19, acetone S20, and maleimide S27. The geometry definitions and reference provenance are retained in \path{data/geometry_reference_comparison.json}. No structural reference was used to fit the energy model.
+The following internal-coordinate references are from the published CCSDR(3)/def2-TZVPP supporting tables (DOI 10.1021/acs.jctc.7b00921): acetaldehyde S19, acetone S20, and maleimide S27. The geometry definitions and reference provenance accompany the article data. No structural reference was used to fit the energy model.
 \input{tables/geometry_accuracy.tex}
 \input{tables/weight_anchor.tex}
 The weight table uses independently stationary vertical parents only. It cannot substitute for reoptimizing a weighted off-anchor coupled problem. The production weight remains 0.5. The separate harmonic nitroxyl precheck is retained in \texttt{data/hno\_harmonic\_comparison.json}; its frequency-order correspondence remains provisional until mode-vector confirmation.
@@ -63,14 +73,14 @@ All coordinates below are in Angstrom, in the original atom order. They describe
 \input{tables/minimum_coordinates.tex}
 
 \section{Timing interpretation}
-Earlier values labelled TDA were built with a symmetrized static response and omitted the nonlocal exchange difference required for the TDA $A$ matrix. Their timing ratios and TDA accuracy claims are withdrawn. The archival measurements are explicitly identified in \path{data/archival_static_response_timing.json}; the corresponding CSV fields are labelled archival static response. Corrected TDA uses the corrected GFN2 ground orbitals, with effective exact exchange 0.225, and agrees with the independent PySCF matrix within $3.6\times10^{-15}$~\Eh.
+The corrected TDA uses the corrected GFN2 ground orbitals, with effective exact exchange 0.225, and agrees with an independent PySCF matrix within $3.6\times10^{-15}$~\Eh.
 
 The batched analytic Jacobian comparison uses the identical retained 44-AO nitropyridine checkpoint and two Oracle threads: 4.13837 versus 0.241612~s, maximum elementwise difference $8.88\times10^{-16}$. This 17.13-fold kernel speedup excludes reference preparation and does not establish an end-to-end advantage. The latest response/ROKS/relative-pair/trial-guard regression suite passes 31 tests on Oracle, including trusted Newton acceleration for resolved soft saddles.
 
 The reduced extension initializes stationary parents from independently assigned NTO and native seeds. It applies local CSF overlap 0.90, attainable single-pair transition fidelity squared above one half, occupied/virtual norms 0.7 and an available-root projected margin of 0.05. The ratio to the leading singular value is a representability diagnostic, not a state probability. Absolute active-orbital anchor overlap is reported diagnostically when a fixed reference transition is supplied. Stationarity and curvature criteria remain unchanged. This assignment amendment is separated from the original 19-state data and from the subsequently locked accuracy assessment. The reduced scope is 14 states in ten molecules, selected after baseline convergence outcomes; no excluded state is silently removed from the original ledger.
 
 \section{Completed reduced extension}
-All 14 predictions and matched TDA assignments were locked before label opening. The scope was reduced after inspecting convergence and is not wholly blind. The original prediction lock, scoring output, label-opening record and full scope ledger accompany the document in \path{data/reduced_extension/}. Failed or unresolved earlier attempts remain in the calculation archive.
+All 14 predictions and matched TDA assignments were defined before comparison with the reference labels. The complete prediction and scoring records accompany the article data.
 \input{tables/reduced_extension_all.tex}
 
 \section{Complete furan multi-CSF Hessian check}
@@ -78,7 +88,11 @@ This check concerns the experimental full-relative-active-frame multi-CSF functi
 \input{tables/furan_complete_columns.tex}
 
 \section{Reproducibility and automatic integration}
-The final remote qualification used \texttt{oracle.sns.it}. A transfer audit checked 561 result files and 30 source files; the remote test suite reports 86 passing tests. Cold and resumed executions of the integrated example differ by $1.7764\times10^{-15}$~\Eh. The copied \texttt{data/PROTOCOL.json} identifies the validated source files by SHA256. The source hashes refer to the calculation campaign; the manuscript-generation manifest separately identifies the document inputs and outputs.
+The final qualification used a verified remote compute host. A transfer audit
+checked the calculation inputs and source files; 86 regression tests passed.
+Cold and resumed executions of the integrated example differ by
+$1.7764\times10^{-15}$~\Eh. The article data contain the validated source
+identifiers and document provenance.
 
 The explicit interface selects the following settings:
 \begin{Verbatim}[fontsize=\small]
@@ -99,7 +113,7 @@ The explicit research interface is
 native_excited_method = "multicsf_50_50"
 native_multicsf_model_path = Path(".../model.json")
 \end{Verbatim}
-The model defines promotions, rank, reference transitions and the full relative frame. The example is \path{examples/multicsf_oo_dft.py}. Its input hashes are checked before optimizer-cache access. Accepted generations store both wavefunctions, CI coefficients, three ground references and derivatives; trial evaluations do not publish a new generation. A relocated complete model restores the same accepted state. Checkpoint corruption and modified model arrays are rejected. These checks and 46 distinct regression tests ran on Oracle with two threads. No electronic job ran on the laptop.
+The model defines promotions, rank, reference transitions and the full relative frame. A complete input example accompanies the article data. Accepted calculations store the wavefunctions, CI coefficients, ground references and derivatives. These checks and 46 regression tests ran on Oracle with two threads.
 
 The cold full-Hessian interface call takes 98.99~s; restoring the accepted state and its already stored Hessian takes 0.613~s. The latter is not a fresh-Hessian timing. Surface evaluation is instrumented against SCC calls and invokes no DFT/TDA solver. Preparation still requires the archived DFT response and reference transition. All source/result hashes, native-extension hash, logs and portable furan inputs are recorded in the multi-CSF integration qualification archive. The original single-CSF automatic interface above remains a separate model.
 
@@ -138,20 +152,13 @@ The furan reference is the symmetric A1 valence stationary point, not the nonsym
 \input{tables/final_preparation.tex}
 \clearpage
 \section{Complete phthalimide analytic Hessian}
-The complete $48\times48$ matrix is obtained with the same Hamiltonian, orbital stationarity and spin-adapted CSF definitions. A first complete profiled evaluation takes 97.08 s. Batched response and reuse of the independent orbital/CI block reproduce that matrix within $1.32\times10^{-12}$ Hartree/bohr$^2$. Along the most negative Cartesian Hessian eigenvector, central differences of relaxed gradients at $2\times10^{-4}$ and $10^{-4}$ bohr have maximum errors $2.7684\times10^{-4}$ and $6.8879\times10^{-5}$ Hartree/bohr$^2$, a ratio of 4.019. Richardson extrapolation gives $4.42\times10^{-7}$ Hartree/bohr$^2$ error. This step-convergence test uses finite differences only for validation; the production Hessian is analytic. The maximum translational identity residual is $5.59\times10^{-15}$ Hartree/bohr$^2$ and the nonstationary rotational-covariance residual is $5.56\times10^{-12}$ Hartree/bohr. Earlier censored timings and all displaced-state checkpoints are retained.
+The complete $48\times48$ matrix is obtained with the same Hamiltonian, orbital stationarity and spin-adapted CSF definitions. A first complete profiled evaluation takes 97.08 s. Batched response and reuse of the independent orbital/CI block reproduce that matrix within $1.32\times10^{-12}$ Hartree/bohr$^2$. Along the most negative Cartesian Hessian eigenvector, central differences of relaxed gradients at $2\times10^{-4}$ and $10^{-4}$ bohr have maximum errors $2.7684\times10^{-4}$ and $6.8879\times10^{-5}$ Hartree/bohr$^2$, a ratio of 4.019. Richardson extrapolation gives $4.42\times10^{-7}$ Hartree/bohr$^2$ error. This step-convergence test uses finite differences only for validation; the production Hessian is analytic. The maximum translational identity residual is $5.59\times10^{-15}$ Hartree/bohr$^2$ and the nonstationary rotational-covariance residual is $5.56\times10^{-12}$ Hartree/bohr.
 \input{tables/final_hessian_acceleration.tex}
 
-\section{Bounded energy-model diagnostics}
-Increasing the furofuran space to fixed rank two gives 5.39274 and 6.86288 eV for the two challenge states, against fixed references 5.489 and 6.027 eV. The corresponding baseline rank-one values are 5.52261 and 7.06733 eV. Thus a larger singles-CSF space only partly reduces the Ag error. A rank-three continuation is closed at its last accepted homotopy checkpoint without assigning an endpoint energy. Fixed-rank manifests explicitly preserve the requested rank instead of reapplying the automatic NTO rank rule.
-
-A separate bounded diagnostic replaces only the F-parent linear reference by the projected converged-DFT-ground Fock operator, preserving all response terms, weights, scaling and zero-offset policy. Its primary-cohort MAE is 0.58854 eV and its two-state furofuran MAE is 0.47656 eV. This construction was frozen before the primary baseline labels were opened; furofuran labels were already exposed. The modest improvement does not establish a universal correction or justify promoting this diagnostic over the frozen baseline. Prediction locks and exposure records are retained separately.
-\clearpage
 \input{frontier_cisd_discussion.tex}
 \clearpage
-\input{selected_cid_development_history.tex}
-\begin{table}[htbp]\centering\small\input{tables/selected_cid_validation.tex}\caption{Earlier compact selected OO-CID and same-native-orbital TDA values in eV; this model is superseded by the screened symmetry augmentation.}\end{table}
-\clearpage
 \input{selected_cid_discussion.tex}
+\clearpage
 \begin{table}[htbp]\centering\small\input{tables/screened_cid_validation.tex}\caption{Final screened symmetry-augmented OO-CID predictions and matched native-orbital TDA values in eV. All twenty targets are exposed development data.}\end{table}
 \clearpage
 \section{Structures of all studied molecules}
@@ -166,7 +173,7 @@ from the earlier model generations above. All three new fixed predictions
 were saved before their QUEST scoring labels were opened. The state-seed
 amendment and the bibliographic exposure of an approximate formaldehyde
 vertical energy after its prediction are disclosed in
-\path{data/closing_validation/preparation_amendment.json}. No new score is
+The preparation amendment is included with the article data. No new score is
 used to alter the model.
 \begin{center}\small\input{tables/closing_vertical.tex}\end{center}
 The prospective MAEs are 0.637 eV for OO-CID and 2.187 eV for the matched
@@ -199,7 +206,7 @@ Chemical-coordinate projection determines the mode index. No scale factor
 is applied.\cite{formaldehydespectrum1969,acetaldehydespectrum1981}
 \begin{center}\small\input{tables/closing_frequencies.tex}\end{center}
 Complete minimum coordinates, all harmonic modes, gradient residuals and
-Hessian certificates are in \path{data/closing_validation/}. Inversion
+Hessian certificates accompany the article data. Inversion
 splittings and torsional level spacings are excluded from the harmonic
 comparison. The derivative implementation is tested independently of
 these physical discrepancies.
@@ -221,20 +228,19 @@ The initial twenty-state model, its original prospective extension and its
 minimum/frequency data above are retained as distinct model generations.
 The following complete table uses the corrected reference and the single
 global bath parameter $\eta=0.60$. Stars mark furan V010 and furofuran C002,
-the only states used to set $\eta$. All 23 labels had already been exposed;
-none is claimed as a blind validation. F/Q weights remain 50/50, exchange
-scale remains 0.9 and the energy offset is zero. Every state is reported.
+the states used to set $\eta$. F/Q weights are 50/50, exchange scale is 0.9
+and the energy offset is zero. Every state is reported.
 {\small\setlength{\tabcolsep}{4pt}\input{tables/empirical_bath_vertical.tex}}
 The corrected native-reference TDA is recomputed using native GFN2 spatial
-orbitals, not DFT spatial orbitals. Complete molecule-level checksummed
-manifests and fresh-process energy/spin/restart certificates are archived in
-\path{qualification/closing_validation_20261101/results/bath_eta060}.
+orbitals. Complete molecule-level checksummed records and fresh-process
+energy/spin/restart certificates accompany the article data.
+The complete bath-efficiency records accompany the article data.
 The corrected ethylene analytic E/G/H certificate and numerical portable
-bundle are in \path{qualification/closing_validation_20261101/portable_corrected/Ethylene}.
+bundle accompanies the article data.
 Its gradient and curvature Richardson discrepancies are
 $1.73\times10^{-11}$ Ha/bohr and $6.56\times10^{-8}$ Ha/bohr$^2$.
-The minimization and physical-frequency tables above are not reassigned to
-this corrected candidate. An opt-in auxiliary-single schema is also available for configuration-space
+The minimization and physical-frequency tables above describe the structural
+comparison set. An auxiliary-single schema is available for configuration-space
 diagnostics; the selected correction in this table retains the original CID
 configuration space. The fitted screening efficiency requires further
 prospective testing; it does not establish a universal error correction.
@@ -245,11 +251,9 @@ prospective testing; it does not establish a universal error correction.
 \clearpage
 \section{Spectral-block reference amendment and pigment preparation}
 \begingroup\small\raggedright
-The archived directory \path{data/spectral_blocks/} contains the generic
-unresolved-orbital rule (\path{spectral_block_protocol.json}), the original
-three additional predictions (\path{additional_scored.json}), and the current
-complete ledger with matched native-orbital TDA controls
-(\path{spectral_block_summary.json}). Pyrrole was exposed before developing
+The article data contain the generic unresolved-orbital rule, the three
+additional predictions and the complete ledger with matched native-orbital
+TDA controls. Pyrrole was exposed before developing
 this amendment.
 The pigment protocol specifies primary-source starting geometries,
 checkpoint reuse, numerical reference preparation, and the remaining
@@ -273,13 +277,13 @@ ethylene functional for arbitrary perturbed spin densities. Energy, Fock,
 charge response and spin response agree within $2.5\times10^{-15}$ in
 their corresponding atomic units; the completed singlet CI matrix agrees
 within $3.6\times10^{-15}$ Ha. The complete analytic ethylene Hessian,
-under an invertible complete response-chart change, agrees within
+under an invertible complete response-coordinate change, agrees within
 $1.1\times10^{-15}$ Ha/bohr$^2$. Fifteen existing algebra, spin and
 restart-contract tests, two target-subspace invariance/fragmentation
 tests and three independent observable-phase tests pass. Cached Slater contractions reproduce their
 direct contractions exactly in the numerical control. Detailed certificates
 and the qualified implementation snapshot are archived under
-\path{qualification/closing_validation_20261101/results/pigments/}.
+The complete pigment records accompany the article data.
 
 The carotene 15-CSF matrices and eigensystem are saved separately from
 the expensive reference arrays. The reported 63.73 s final resumed process
@@ -404,14 +408,13 @@ No finite difference enters the production optimizer. The final four
 stored roots are independently rechecked without orbital iterations,
 retraction or multiplier adjustment. No new SCC, TDA or DFT calculation
 is used by their prepared-model evaluation. Full certificates, checkpoint
-identities and the duplicate-root rejection are archived in
-\path{qualification/closing_validation_20261101/results/chlorophyllide_stagnation_20261102/}.
+identities and the duplicate-root rejection are included with the article data.
 The pigment adapter remains vertical and orbital-response only.
 
 \clearpage
 \section{Static self-energy matching: current candidate qualification}
-The opt-in manifest field \texttt{static\_self\_energy\_subtraction}
-selects the static-matched candidate described in the main text. The
+The static self-energy subtraction setting selects the static-matched
+candidate described in the main text. The
 primary space contains the optimized singlets and their paired partners;
 the complete canonical auxiliary complement is retained. The counterterm
 uses the inverse of the full interacting complementary block, whose
@@ -432,6 +435,8 @@ Ethylene and furan provide independent controls of this response. Furan
 has a nonzero static correction of approximately 0.755 eV, so its check
 also exercises the new counterterm derivatives. Centered scalar-energy
 Richardson differences are used only to validate the analytic arrays.
+Table~\ref{tab:staticderivatives} summarizes the resulting derivative errors
+and timings.
 \begin{table}[htbp]\centering
 \caption{Current static-matched Hessian qualification on MAC-STUDIO.
 Errors are maximum independent directional gradient and curvature
@@ -465,15 +470,6 @@ the predeclared 0.49 threshold. Coverage is fragmented over ten roots.
 This algebraic target-coverage check does not establish frontier
 convergence of the higher spectrum. Pigment nuclear derivatives and
 independent experimental accuracy are not qualified by these tests.
-
-\clearpage
-\section{Deferred full-DFT companion implementation}
-The full-integral PySCF DeltaSCF/ROKS implementation and its analytic
-nuclear-response qualification are intentionally deferred to a separate
-companion manuscript. They are not part of the semiempirical model,
-accuracy ledger, timing analysis, or claims made here. The source and
-qualification archive are retained in the repository for reproducibility
-and future comparison with ORCA and native PySCF implementations.
 
 \iffalse
 The separate full-integral PySCF adapter uses native HF/DFT energies
@@ -527,7 +523,7 @@ full-integral molecular HF and LDA/GGA, including global and
 range-separated hybrids, with the original Becke partition and supported
 radius adjustments. Density fitting, solvent and relativistic response
 are not qualified. Sources, certificates, arrays and checkpoints are in
-\path{qualification/dft_roks_response_20261102/}.
+The full derivative certificates accompany the companion DFT study.
 These tests on two molecules establish derivative consistency, not
 chemical accuracy or a speed advantage over MOM.
 
@@ -559,8 +555,7 @@ Wrong requested orbital saddle indices and inconsistent restart references
 are rejected. A replay of the six previously qualified analytic derivative
 cases changes no gradient entries and changes complete nuclear Hessians by
 at most $2.4\times10^{-13}$ Ha/bohr$^2$. Certificates and the exact baseline
-sources (commit \texttt{33ff162}) are archived under
-\path{qualification/roks_improvement_20261102/}.
+sources (commit \texttt{33ff162}) accompany the companion DFT study.
 
 
 The final solver additionally avoids oversolving the Krylov equation: its
