@@ -65,30 +65,64 @@ class HarmonicPathChannelBasis:
     center: np.ndarray | None = None
 
 
-def harmonic_path_channel_overlap(
+def _gaussian_moment_evaluator(mean: np.ndarray, covariance: np.ndarray):
+    """Shared exact noncentral moment recurrence used by harmonic overlaps."""
+    moment_cache: dict[tuple[int, ...], float] = {(): 1.0}
+    def moment(indices: tuple[int, ...]) -> float:
+        if indices in moment_cache:
+            return moment_cache[indices]
+        first, rest = indices[0], indices[1:]
+        value = mean[first] * moment(rest)
+        value += float(sum(
+            covariance[first, partner] * moment(rest[:index] + rest[index + 1:])
+            for index, partner in enumerate(rest)
+        ))
+        moment_cache[indices] = value
+        return value
+    return moment
+
+
+@dataclass(frozen=True)
+class HarmonicPathGaussianProduct:
+    """Exact normalized ground-function product in the supplied common frame.
+
+    In a linear frame coordinates are physical: no polar map or Gaussian
+    renormalization replaces the original functions. Polynomial exponents
+    passed to moments are integration powers, not a new oscillator basis.
+    """
+    overlap: float
+    mean: np.ndarray
+    covariance: np.ndarray
+    left_precision: np.ndarray
+    right_precision: np.ndarray
+    left_center: np.ndarray
+    right_center: np.ndarray
+    left_hermite_rows: np.ndarray
+    right_hermite_rows: np.ndarray
+    coordinate_frame_kind: str
+
+    def moments(self, powers: np.ndarray, *, origin: np.ndarray | None = None) -> np.ndarray:
+        """Integrate monomials through degree four against both ground functions."""
+        powers=np.asarray(powers);dimension=len(self.mean)
+        origin=np.zeros(dimension) if origin is None else np.asarray(origin,float)
+        if (powers.ndim!=2 or powers.shape[1]!=dimension or not len(powers)
+                or powers.dtype.kind not in 'iu' or np.any(powers<0)
+                or np.any(powers.sum(axis=1)>4) or len(powers)>100000
+                or origin.shape!=(dimension,) or not np.isfinite(origin).all()):
+            raise ValueError("Finite physical origins and bounded polynomial powers through degree four required")
+        moment=_gaussian_moment_evaluator(self.mean-origin,self.covariance)
+        return self.overlap*np.array([
+            moment(tuple(np.repeat(np.arange(dimension),row))) for row in powers
+        ])
+
+
+def harmonic_path_gaussian_product(
     left: HarmonicPathChannelBasis,
     right: HarmonicPathChannelBasis,
     *,
-    maximum_quanta: int = 1,
-    active_modes: np.ndarray | None = None,
-    coordinate_frame_kind: str = "orthonormal",
-    left_occupations: np.ndarray | None = None,
-    right_occupations: np.ndarray | None = None,
-) -> np.ndarray:
-    """Return exact overlaps of local harmonic product states.
-
-    The coordinate frames may be rectangular Cartesian transverse bases or
-    square transported frames.  Their polar overlap supplies the orthogonal
-    Duschinsky map, while the local frequencies determine the Gaussian widths.
-    The result contains every product state whose total excitation does not
-    exceed ``maximum_quanta``. With ``coordinate_frame_kind='linear'``, square
-    nonsingular frames map oscillator coordinates to physical coordinates.
-    Their inverse maps, determinants and displaced centers are retained;
-    no polar rotation is substituted for the supplied Gaussian functions.
-    Explicit left/right occupation rows select the same canonical harmonic
-    products without constructing the unused full overlap matrix; columns
-    refer to ``active_modes`` and their total quanta may not exceed the cap.
-    """
+    coordinate_frame_kind: str = "linear",
+) -> HarmonicPathGaussianProduct:
+    """Expose the same Gaussian product used by exact channel overlaps."""
     left_frequency = np.asarray(left.frequencies_cm, dtype=float)
     right_frequency = np.asarray(right.frequencies_cm, dtype=float)
     left_frame = np.asarray(left.coordinate_frame, dtype=float)
@@ -156,6 +190,43 @@ def harmonic_path_channel_overlap(
         - linear @ covariance @ linear
     )
     ground = float(np.exp(log_ground + displacement_exponent))
+    return HarmonicPathGaussianProduct(
+        ground,mean,covariance,precision_left,precision_right,center_left,
+        center_right,rows_left,rows_right,coordinate_frame_kind,
+    )
+
+
+def harmonic_path_channel_overlap(
+    left: HarmonicPathChannelBasis,
+    right: HarmonicPathChannelBasis,
+    *,
+    maximum_quanta: int = 1,
+    active_modes: np.ndarray | None = None,
+    coordinate_frame_kind: str = "orthonormal",
+    left_occupations: np.ndarray | None = None,
+    right_occupations: np.ndarray | None = None,
+) -> np.ndarray:
+    """Return exact overlaps of local harmonic product states.
+
+    The coordinate frames may be rectangular Cartesian transverse bases or
+    square transported frames.  Their polar overlap supplies the orthogonal
+    Duschinsky map, while the local frequencies determine the Gaussian widths.
+    The result contains every product state whose total excitation does not
+    exceed ``maximum_quanta``. With ``coordinate_frame_kind='linear'``, square
+    nonsingular frames map oscillator coordinates to physical coordinates.
+    Their inverse maps, determinants and displaced centers are retained;
+    no polar rotation is substituted for the supplied Gaussian functions.
+    Explicit left/right occupation rows select the same canonical harmonic
+    products without constructing the unused full overlap matrix; columns
+    refer to ``active_modes`` and their total quanta may not exceed the cap.
+    """
+    product = harmonic_path_gaussian_product(
+        left,right,coordinate_frame_kind=coordinate_frame_kind,
+    )
+    mean,covariance,ground=product.mean,product.covariance,product.overlap
+    center_left,center_right=product.left_center,product.right_center
+    rows_left,rows_right=product.left_hermite_rows,product.right_hermite_rows
+    dimension=len(mean)
     if maximum_quanta < 0:
         raise ValueError("maximum_quanta must be nonnegative")
     active = (np.arange(dimension, dtype=int) if active_modes is None
@@ -220,20 +291,7 @@ def harmonic_path_channel_overlap(
         rows_left[active] @ (mean - center_left),
         rows_right[active] @ (mean - center_right),
     ))
-    moment_cache: dict[tuple[int, ...], float] = {(): 1.0}
-
-    def gaussian_moment(indices: tuple[int, ...]) -> float:
-        if indices in moment_cache:
-            return moment_cache[indices]
-        first, rest = indices[0], indices[1:]
-        value = form_means[first] * gaussian_moment(rest)
-        value += float(sum(
-            form_covariance[first, partner]
-            * gaussian_moment(rest[:index] + rest[index + 1:])
-            for index, partner in enumerate(rest)
-        ))
-        moment_cache[indices] = value
-        return value
+    gaussian_moment = _gaussian_moment_evaluator(form_means,form_covariance)
 
     left_polynomials = polynomials(0, occupations_left)
     right_polynomials = polynomials(len(active), occupations_right)
