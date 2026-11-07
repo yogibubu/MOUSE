@@ -17,7 +17,7 @@ The analogous cyclopentadiene descent does reach a minimum of the frozen upper A
 
 \begin{figure}[!htbp]
 \centering\includegraphics[width=\linewidth]{figures/furan_physical_validation.pdf}
-\caption{Furan comparison at the symmetric A1 valence stationary point. EOM-CCSD data are from Tables V and VI of Ref.~\citenum{furan2003}. In-plane mode correspondence uses symmetry and frequency ordering. Imaginary model modes are shown explicitly; no unpublished reference frequencies are assigned to them.}\label{fig:furanphysical}
+\caption{Furan comparison at the symmetric A1 valence stationary point. EOM-CCSD data are taken from the structure and frequency tables of Ref.~\citenum{furan2003}. In-plane mode correspondence uses symmetry and frequency ordering. Imaginary model modes are shown explicitly; no unpublished reference frequencies are assigned to them.}\label{fig:furanphysical}
 \end{figure}
 
 The same analytic implementation now completes the full $48\times48$ phthalimide Hessian. Batched response and orbital-block reuse reproduce the first complete calculation, which still rebuilt the duplicate orbital block, within $1.32\times10^{-12}$~\Eh/bohr$^2$. A controlled two-step relaxed-gradient difference has quadratic step convergence and agrees after extrapolation within $4.42\times10^{-7}$~\Eh/bohr$^2$. Translation and nonstationary rotation identities also pass. No finite-difference Hessian enters production.
