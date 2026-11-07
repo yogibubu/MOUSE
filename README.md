@@ -12,6 +12,11 @@ mandatory internal Python dependencies. Installation needs no private
 repository and no MATRIX checkout. The original `matrix_*` Python module
 names are retained so that published calculation scripts remain usable.
 
+The public standalone release contains runtime source, examples and compact
+metadata only. Qualification campaigns, checkpoints, raw numerical matrices,
+manuscript build trees and submission archives remain outside this repository
+and are not required to install or run MOUSE.
+
 ## Install from source
 
 Use Python 3.11–3.13 and a C++17 compiler. macOS uses the system Accelerate

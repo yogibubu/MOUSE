@@ -8,3 +8,9 @@ dist/
 *.pyd
 .DS_Store
 example-output/
+
+# Qualification campaigns and publication archives stay outside the public
+# standalone distribution. Keep only the small qualification index tracked.
+qualification/*
+!qualification/README.md
+manuscripts/
