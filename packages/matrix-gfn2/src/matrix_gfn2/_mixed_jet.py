@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 import numpy as np
+from ._einsum_cached import einsum as cached_einsum
 from math import erf
 
 
@@ -199,7 +200,7 @@ def contract(expression, *values):
     values = [reference.coerce(x) for x in values]
 
     def term(replacements):
-        return np.einsum(
+        return cached_einsum(
             expression, *(replacements.get(i, x.v) for i, x in enumerate(values)), optimize=True
         )
 
@@ -213,25 +214,35 @@ def contract(expression, *values):
 
     def derivative_term(replacements):
         batched = [axis + label if i in replacements else label for i, label in enumerate(labels)]
-        return np.einsum(
+        return cached_einsum(
             ",".join(batched) + "->" + axis + output,
             *(replacements.get(i, x.v) for i, x in enumerate(values)), optimize=True,
         )
 
-    tangent = sum(term({i: x.b}) for i, x in enumerate(values))
-    first = sum(derivative_term({i: x.a}) for i, x in enumerate(values))
-    mixed = sum(derivative_term({i: x.ab}) for i, x in enumerate(values))
+    # Frozen operators and canonical auxiliary orbitals have exactly zero
+    # derivative fields. Omit those algebraic zero terms without a tolerance.
+    active_first=[i for i,x in enumerate(values) if np.any(x.a)]
+    active_tangent=[i for i,x in enumerate(values) if np.any(x.b)]
+    active_mixed=[i for i,x in enumerate(values) if np.any(x.ab)]
+    tangent=np.zeros_like(value)
+    first=np.zeros((reference.n,*np.shape(value)))
+    mixed=np.zeros_like(first)
+    for i in active_tangent:tangent+=term({i:values[i].b})
+    for i in active_first:first+=derivative_term({i:values[i].a})
+    for i in active_mixed:mixed+=derivative_term({i:values[i].ab})
     # Only one operand carries the coordinate axis in each cross term;
     # the other is the single directional derivative.
-    for i, x in enumerate(values):
-        for j, y in enumerate(values):
+    for i in active_first:
+        x=values[i]
+        for j in active_tangent:
+            y=values[j]
             if i == j:
                 continue
             batched = labels.copy()
             batched[i] = axis + batched[i]
             operands = [z.v for z in values]
             operands[i], operands[j] = x.a, y.b
-            mixed += np.einsum(
+            mixed += cached_einsum(
                 ",".join(batched) + "->" + axis + output, *operands, optimize=True
             )
     return MixedJet(value, first, tangent, mixed)

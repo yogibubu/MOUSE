@@ -1,4 +1,4 @@
-"""Permanent, read-only definition of the ZAFF0/ZAFF1/ZAFF2/ZAFF3 hierarchy."""
+"""Permanent, read-only definition of the ZAFF0/ZAFF1/ZAFF2/ZAFF3/ZAFF4 hierarchy."""
 
 from __future__ import annotations
 
@@ -22,11 +22,13 @@ def zaff_level_manifest() -> dict[str, Any]:
     if payload.get("schema") != ZAFF_LEVEL_MANIFEST_SCHEMA:
         raise ValueError("unsupported ZAFF level manifest")
     levels = payload.get("levels")
-    if not isinstance(levels, list) or [item.get("id") for item in levels] != [
-        "ZAFF0", "ZAFF1", "ZAFF2", "ZAFF3"
-    ]:
-        raise ValueError("ZAFF hierarchy must define ZAFF0, ZAFF1, ZAFF2 and ZAFF3 in order")
-    if [item.get("extends") for item in levels] != [None, "ZAFF0", "ZAFF1", "ZAFF2"]:
+    expected_ids = ["ZAFF0", "ZAFF1", "ZAFF2", "ZAFF3", "ZAFF4"]
+    expected_parents = [None, "ZAFF0", "ZAFF1", "ZAFF2", "ZAFF3"]
+    if not isinstance(levels, list) or [item.get("id") for item in levels] != expected_ids:
+        raise ValueError(
+            "ZAFF hierarchy must define ZAFF0, ZAFF1, ZAFF2, ZAFF3 and ZAFF4 in order"
+        )
+    if [item.get("extends") for item in levels] != expected_parents:
         raise ValueError("ZAFF level inheritance is inconsistent")
     typing = payload.get("synthon_typing", {})
     fields = tuple(typing.get("descriptor_fields", ()))

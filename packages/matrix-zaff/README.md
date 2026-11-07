@@ -99,22 +99,49 @@ the analytic evaluator remains the numerical reference. Pair lists retain the
 short-range schedule and point-charge construction retains the Laplace FMM
 route.
 
-The permanent hierarchy is stored in `data/zaff_levels.json`: ZAFF0 is the
-rigid exploration projection; ZAFF1 is the fitted physical diagonal field with
-only dissociating geminal X-H stretch couplings; ZAFF2 restores the complete
-ARCHITECT harmonic field and uses Morse stretches with dissociation energies
-from the ZAFF library; ZAFF3 adds fitted inverse-distance, cosine and Fourier
-terms and validated couplings through fourth order. These native variables
-encode dissociation, bounded angles and periodicity, so the fourth-order field
-needs substantially fewer mixed couplings than a QFF in Cartesian normal
-modes. Ordinary hydrogen bonds use a C2 radial switch and angular envelope;
-an ORACLE-promoted transferable hydrogen instead belongs to a bicoordinated
-covalent domain and its ordinary hydrogen-bond term is excluded. GFN-FF elemental, charge, coordination, bond
-order and ring rules initialize the seed; validated ring terms remain part of
-the primitive field and SMITH supplies their SONIC view. The legacy aliases
-Z0/Z1/Z2/Z3, ZAFF-fast, ZAFF-flex and ZAFF-full remain accepted aliases.
-Those coefficients are compiled onto immutable four-synthon keys, so runtime
+The permanent hierarchy is stored in `data/zaff_levels.json`.  It is one
+chemical model at five certified resolutions:
+
+- **ZAFF0** is the transferable field for inexpensive exploration.  Its
+  library Morse priors are translated once to the permanent generalized
+  inverse-power stretch, preserving equilibrium distance, dissociation energy
+  and harmonic curvature.
+- **ZAFF1** adds a reference geometry and total or declared partial Hessian to
+  obtain the smallest Pareto-optimal diagonal field, together with every
+  dissociating coupling between geminal X--H stretches.
+- **ZAFF2** reproduces the complete QM harmonic response with native
+  inverse-distance stretches, bounded angles, periodic torsions and switched
+  couplings.
+- **ZAFF3** adds the complete acquired local anharmonic response and scanned
+  large-amplitude-motion valleys.
+- **ZAFF4** completes the observed cubic and quartic rank, including supported
+  mixed terms involving four distinct primitive coordinates.  Missing
+  observations remain recorded coverage gaps rather than zero derivatives.
+
+Every level retains the same all-pair Gaussian electrostatics, Exp-PE van der
+Waals field, chemical catalog, switches and asymptotic constraints.  The native
+variables encode dissociation, bounded angles and periodicity, so a
+spectroscopic field can require far fewer mixed couplings than a quartic force
+field in Cartesian normal modes.  Ordinary hydrogen bonds use a C2 radial
+switch and angular envelope.  An ORACLE-promoted transferable hydrogen instead
+belongs to a redundant bicoordinated covalent domain, and its ordinary
+hydrogen-bond term is excluded.  GFN-FF elemental, charge, coordination, bond
+order and ring rules initialize the transferable torsional prior; validated
+ring terms remain part of the primitive field and SMITH supplies their ESALC-I
+view.  Legacy names remain readable at the input boundary, while every new
+artifact is written with its explicit ZAFF0--ZAFF4 level and hierarchy version.
+The coefficients are compiled onto immutable four-synthon keys, so runtime
 evaluation never reapplies separate charge or coordination corrections.
+
+LINK and SENTINEL consume certified fields for potential-energy-surface
+exploration and stationary-point work; TRINITY uses their analytic derivatives
+for spectroscopy, large-amplitude motion and thermochemistry; LOCK builds
+rovibrational Hamiltonians and spectral refinements; and KINETICS evaluates
+transition-state, RRKM, tunneling and rate models.  A single ZAFF field already
+supports bond cleavage and proton transfer within one perceived topology.
+Reactions that form a bond absent from that topology are represented by a real
+symmetric EVB matrix of independently certified basin fields.  EVB is a
+reactive container above ZAFF and is not a sixth hierarchy level.
 
 ## Planar explicit--continuum interfaces
 

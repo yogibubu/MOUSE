@@ -1635,6 +1635,7 @@ class GFN2Calculator:
         energy_only: bool = False,
         nn_properties_only: bool = False,
         _mps_retry: bool = False,
+        temperature_homotopy: bool = True,
     ) -> GFN2Result | float:
         total_started = perf_counter()
         self.last_accelerator_report = None
@@ -2586,10 +2587,12 @@ class GFN2Calculator:
         ):
             native_input_density = density
             native_temperature = _annealed_scf_temperature(
-                self.temperature_kelvin, 1, density_builder.frontier_gap_hartree
+                self.temperature_kelvin, 1, density_builder.frontier_gap_hartree,
+                enabled=temperature_homotopy,
             )
             native_final_temperature = _annealed_scf_temperature(
-                self.temperature_kelvin, 13, density_builder.frontier_gap_hartree
+                self.temperature_kelvin, 13, density_builder.frontier_gap_hartree,
+                enabled=temperature_homotopy,
             )
             (
                 native_certified,
@@ -2701,7 +2704,7 @@ class GFN2Calculator:
             density_builder.temperature_kelvin = _annealed_scf_temperature(
                 self.temperature_kelvin,
                 iteration,
-                density_builder.frontier_gap_hartree,
+                density_builder.frontier_gap_hartree,enabled=temperature_homotopy,
             )
             if native_scf_fused:
                 fock, _ = native_state(density)
@@ -2874,7 +2877,7 @@ class GFN2Calculator:
                 == _annealed_scf_temperature(
                     self.temperature_kelvin,
                     max(iteration, 13),
-                    density_builder.frontier_gap_hartree,
+                    density_builder.frontier_gap_hartree,enabled=temperature_homotopy,
                 )
             ):
                 if density_build.solver == "occupied-refinement":
@@ -2942,7 +2945,7 @@ class GFN2Calculator:
                 compute_bond_orders=compute_bond_orders, density_policy=density_policy,
                 retain_orbitals=retain_orbitals, collect_telemetry=collect_telemetry,
                 energy_only=energy_only, nn_properties_only=nn_properties_only,
-                _mps_retry=True,
+                _mps_retry=True,temperature_homotopy=temperature_homotopy,
             )
             self.last_accelerator_report = report
             if not isinstance(retry, float) and retry.telemetry is not None:
@@ -2964,6 +2967,13 @@ class GFN2Calculator:
             coefficients = density_build.orbital_coefficients
             if symmetry_adapter is not None:
                 self._symmetry_reference_coefficients = coefficients.copy()
+        elif symmetry_adapter is None and direct_generalized:
+            # The direct path deliberately keeps an identity placeholder for
+            # S^-1/2. It cannot be used by the orthogonalized fallback, including
+            # on an unconverged SCC exit that must retain a valid eigensystem.
+            energies, coefficients = solve_generalized_symmetric_direct(
+                effective_fock,overlap,
+            )
         elif symmetry_adapter is None:
             energies, coefficients = solve_generalized_symmetric(
                 effective_fock,
@@ -4188,8 +4198,12 @@ class GFN2Calculator:
             )
         else:
             anisotropic_parameters = nn_state.anisotropic_parameters(coordination)
-        anisotropic_geometry = prepare_anisotropic_geometry(
-            coordinates, anisotropic_parameters
+        anisotropic_geometry = (
+            prepare_anisotropic_geometry_sparse(
+                coordinates, anisotropic_parameters, cutoff_bohr=64.0
+            )
+            if len(coordinates) >= 64 and nn_state is None
+            else prepare_anisotropic_geometry(coordinates, anisotropic_parameters)
         )
         d4_parameters = self._d4_parameters
         if len(coordinates) >= 64 and nn_state is None:
@@ -4197,14 +4211,14 @@ class GFN2Calculator:
                 coordinates,
                 _covalent_radii()[self._atomic_number_array - 1],
                 self._electronegativities,
-                cutoff_bohr=24.0,
+                cutoff_bohr=40.0,
             )
             d4_prepared = prepare_d4_geometry_sparse(
                 coordinates,
                 d4_cn,
                 self._d4_models,
                 d4_parameters,
-                cutoff_bohr=24.0,
+                cutoff_bohr=50.0,
             )
         else:
             d4_cn = _d4_coordination(
@@ -8238,7 +8252,10 @@ class GFN2Calculator:
         retain_orbitals: bool = False,
         retain_local_projectors: bool = False,
         collect_telemetry: bool = True,
+        temperature_homotopy: bool = True,
     ) -> GFN2Result:
+        if not isinstance(temperature_homotopy,(bool,np.bool_)):
+            raise ValueError('temperature_homotopy must be boolean')
         if compute_cm5:
             raise ValueError(
                 "MATRIX-GFN2 does not compute CM5: use its variational "
@@ -8312,6 +8329,7 @@ class GFN2Calculator:
             bool(retain_orbitals),
             bool(retain_local_projectors),
             bool(collect_telemetry),
+            bool(temperature_homotopy),
         )
         # Geometry optimizers and property pipelines occasionally request the
         # same point twice (for example after a rejected line-search step).
@@ -8470,6 +8488,8 @@ class GFN2Calculator:
                     single_point_options["collect_telemetry"] = False
                 if retain_orbitals:
                     single_point_options["retain_orbitals"] = True
+                if not temperature_homotopy:
+                    single_point_options["temperature_homotopy"]=False
                 result = self._single_point(coordinates, **single_point_options)
             else:
                 single_point_options = {
@@ -8481,6 +8501,8 @@ class GFN2Calculator:
                     single_point_options["collect_telemetry"] = False
                 if retain_orbitals:
                     single_point_options["retain_orbitals"] = True
+                if not temperature_homotopy:
+                    single_point_options["temperature_homotopy"]=False
                 result = self._single_point(coordinates, **single_point_options)
         if not result.converged:
             raise RuntimeError("MATRIX-GFN2 ISCF did not converge")
@@ -9402,6 +9424,7 @@ def _annealed_scf_temperature(
     target_kelvin: float,
     iteration: int,
     frontier_gap_hartree: float,
+    *, enabled: bool = True,
 ) -> float:
     """Return a short electronic-temperature homotopy ending at the target.
 
@@ -9419,6 +9442,8 @@ def _annealed_scf_temperature(
     gap = float(frontier_gap_hartree)
     if np.isnan(gap) or gap < 0.0:
         raise ValueError("frontier gap must be nonnegative")
+    if not enabled:
+        return target
     # A gap above 0.01 Eh (~0.27 eV) makes 300 K fractionality negligible.
     # Use the idempotent zero-temperature density in that regime.  Only
     # genuinely small-gap systems pay for electronic-temperature homotopy.

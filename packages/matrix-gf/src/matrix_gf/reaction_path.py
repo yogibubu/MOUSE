@@ -10,7 +10,6 @@ orthogonal to a relaxed reaction path.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from itertools import product
 from typing import Callable
 
 import numpy as np
@@ -66,21 +65,64 @@ class HarmonicPathChannelBasis:
     center: np.ndarray | None = None
 
 
-def harmonic_path_channel_overlap(
+def _gaussian_moment_evaluator(mean: np.ndarray, covariance: np.ndarray):
+    """Shared exact noncentral moment recurrence used by harmonic overlaps."""
+    moment_cache: dict[tuple[int, ...], float] = {(): 1.0}
+    def moment(indices: tuple[int, ...]) -> float:
+        if indices in moment_cache:
+            return moment_cache[indices]
+        first, rest = indices[0], indices[1:]
+        value = mean[first] * moment(rest)
+        value += float(sum(
+            covariance[first, partner] * moment(rest[:index] + rest[index + 1:])
+            for index, partner in enumerate(rest)
+        ))
+        moment_cache[indices] = value
+        return value
+    return moment
+
+
+@dataclass(frozen=True)
+class HarmonicPathGaussianProduct:
+    """Exact normalized ground-function product in the supplied common frame.
+
+    In a linear frame coordinates are physical: no polar map or Gaussian
+    renormalization replaces the original functions. Polynomial exponents
+    passed to moments are integration powers, not a new oscillator basis.
+    """
+    overlap: float
+    mean: np.ndarray
+    covariance: np.ndarray
+    left_precision: np.ndarray
+    right_precision: np.ndarray
+    left_center: np.ndarray
+    right_center: np.ndarray
+    left_hermite_rows: np.ndarray
+    right_hermite_rows: np.ndarray
+    coordinate_frame_kind: str
+
+    def moments(self, powers: np.ndarray, *, origin: np.ndarray | None = None) -> np.ndarray:
+        """Integrate monomials through degree four against both ground functions."""
+        powers=np.asarray(powers);dimension=len(self.mean)
+        origin=np.zeros(dimension) if origin is None else np.asarray(origin,float)
+        if (powers.ndim!=2 or powers.shape[1]!=dimension or not len(powers)
+                or powers.dtype.kind not in 'iu' or np.any(powers<0)
+                or np.any(powers.sum(axis=1)>4) or len(powers)>100000
+                or origin.shape!=(dimension,) or not np.isfinite(origin).all()):
+            raise ValueError("Finite physical origins and bounded polynomial powers through degree four required")
+        moment=_gaussian_moment_evaluator(self.mean-origin,self.covariance)
+        return self.overlap*np.array([
+            moment(tuple(np.repeat(np.arange(dimension),row))) for row in powers
+        ])
+
+
+def harmonic_path_gaussian_product(
     left: HarmonicPathChannelBasis,
     right: HarmonicPathChannelBasis,
     *,
-    maximum_quanta: int = 1,
-    active_modes: np.ndarray | None = None,
-) -> np.ndarray:
-    """Return exact overlaps of local harmonic product states.
-
-    The coordinate frames may be rectangular Cartesian transverse bases or
-    square transported frames.  Their polar overlap supplies the orthogonal
-    Duschinsky map, while the local frequencies determine the Gaussian widths.
-    The result contains every product state whose total excitation does not
-    exceed ``maximum_quanta``.
-    """
+    coordinate_frame_kind: str = "linear",
+) -> HarmonicPathGaussianProduct:
+    """Expose the same Gaussian product used by exact channel overlaps."""
     left_frequency = np.asarray(left.frequencies_cm, dtype=float)
     right_frequency = np.asarray(right.frequencies_cm, dtype=float)
     left_frame = np.asarray(left.coordinate_frame, dtype=float)
@@ -100,20 +142,39 @@ def harmonic_path_channel_overlap(
             or np.any(left_frequency <= 0.0) or np.any(right_frequency <= 0.0)
             or left_center.shape != (left_frame.shape[0],)
             or right_center.shape != (right_frame.shape[0],)
+            or not all(np.all(np.isfinite(value)) for value in
+                       (left_frequency, right_frequency, left_frame, right_frame,
+                        left_center, right_center))
             or left.kinetic_coefficient_cm <= 0.0
             or not np.isclose(left.kinetic_coefficient_cm, right.kinetic_coefficient_cm)):
         raise ValueError("harmonic path-channel bases are incompatible")
-    raw_map = left_frame.T @ right_frame
-    u_matrix, _singular, vh = np.linalg.svd(raw_map)
-    duschinsky = u_matrix @ vh
     alpha_left = left_frequency / (2.0 * left.kinetic_coefficient_cm)
     alpha_right = right_frequency / (2.0 * right.kinetic_coefficient_cm)
-    precision_left = np.diag(alpha_left)
-    precision_right = duschinsky @ np.diag(alpha_right) @ duschinsky.T
+    if coordinate_frame_kind == "orthonormal":
+        raw_map = left_frame.T @ right_frame
+        u_matrix, _singular, vh = np.linalg.svd(raw_map)
+        duschinsky = u_matrix @ vh
+        precision_left = np.diag(alpha_left)
+        precision_right = duschinsky @ np.diag(alpha_right) @ duschinsky.T
+        center_left = left_frame.T @ left_center
+        center_right = left_frame.T @ right_center
+        rows_left = np.diag(np.sqrt(2.0 * alpha_left))
+        rows_right = np.diag(np.sqrt(2.0 * alpha_right)) @ duschinsky.T
+    elif coordinate_frame_kind == "linear":
+        dimension = len(left_frequency)
+        if left_frame.shape != (dimension, dimension) or right_frame.shape != (dimension, dimension):
+            raise ValueError("linear Gaussian frames must be square")
+        inverse_left = np.linalg.inv(left_frame)
+        inverse_right = np.linalg.inv(right_frame)
+        precision_left = inverse_left.T @ np.diag(alpha_left) @ inverse_left
+        precision_right = inverse_right.T @ np.diag(alpha_right) @ inverse_right
+        center_left, center_right = left_center, right_center
+        rows_left = np.diag(np.sqrt(2.0 * alpha_left)) @ inverse_left
+        rows_right = np.diag(np.sqrt(2.0 * alpha_right)) @ inverse_right
+    else:
+        raise ValueError("coordinate frame kind must be orthonormal or linear")
     total = precision_left + precision_right
     covariance = np.linalg.inv(total)
-    center_left = left_frame.T @ left_center
-    center_right = left_frame.T @ right_center
     linear = precision_left @ center_left + precision_right @ center_right
     mean = covariance @ linear
     dimension = len(left_frequency)
@@ -129,8 +190,46 @@ def harmonic_path_channel_overlap(
         - linear @ covariance @ linear
     )
     ground = float(np.exp(log_ground + displacement_exponent))
-    rows_left = np.diag(np.sqrt(2.0 * alpha_left))
-    rows_right = np.diag(np.sqrt(2.0 * alpha_right)) @ duschinsky.T
+    return HarmonicPathGaussianProduct(
+        ground,mean,covariance,precision_left,precision_right,center_left,
+        center_right,rows_left,rows_right,coordinate_frame_kind,
+    )
+
+
+def harmonic_path_channel_overlap(
+    left: HarmonicPathChannelBasis,
+    right: HarmonicPathChannelBasis,
+    *,
+    maximum_quanta: int = 1,
+    active_modes: np.ndarray | None = None,
+    coordinate_frame_kind: str = "orthonormal",
+    left_occupations: np.ndarray | None = None,
+    right_occupations: np.ndarray | None = None,
+    moment_representation: str = "hermite",
+) -> np.ndarray:
+    """Return exact overlaps of local harmonic product states.
+
+    The coordinate frames may be rectangular Cartesian transverse bases or
+    square transported frames.  Their polar overlap supplies the orthogonal
+    Duschinsky map, while the local frequencies determine the Gaussian widths.
+    The result contains every product state whose total excitation does not
+    exceed ``maximum_quanta``. With ``coordinate_frame_kind='linear'``, square
+    nonsingular frames map oscillator coordinates to physical coordinates.
+    Their inverse maps, determinants and displaced centers are retained;
+    no polar rotation is substituted for the supplied Gaussian functions.
+    Explicit left/right occupation rows select the same canonical harmonic
+    products without constructing the unused full overlap matrix; columns
+    refer to ``active_modes`` and their total quanta may not exceed the cap.
+    Direct Hermite moments reuse the same exact Gaussian recurrence; the
+    polynomial representation is retained for numerical cross-checks.
+    """
+    product = harmonic_path_gaussian_product(
+        left,right,coordinate_frame_kind=coordinate_frame_kind,
+    )
+    mean,covariance,ground=product.mean,product.covariance,product.overlap
+    center_left,center_right=product.left_center,product.right_center
+    rows_left,rows_right=product.left_hermite_rows,product.right_hermite_rows
+    dimension=len(mean)
     if maximum_quanta < 0:
         raise ValueError("maximum_quanta must be nonnegative")
     active = (np.arange(dimension, dtype=int) if active_modes is None
@@ -139,9 +238,21 @@ def harmonic_path_channel_overlap(
             or np.any(active < 0) or np.any(active >= dimension)):
         raise ValueError("active harmonic-channel modes are invalid")
 
-    occupations = harmonic_product_occupations(len(active), maximum_quanta)
+    def occupation_rows(rows):
+        if rows is None:
+            return harmonic_product_occupations(len(active), maximum_quanta)
+        rows = np.asarray(rows)
+        if (rows.ndim != 2 or rows.shape[1] != len(active) or not len(rows)
+                or not np.isfinite(rows).all() or np.any(rows < 0)
+                or not np.equal(rows, np.floor(rows)).all()
+                or np.any(rows.sum(axis=1) > maximum_quanta)
+                or len({tuple(row) for row in rows}) != len(rows)):
+            raise ValueError("Invalid explicit harmonic occupation rows")
+        return rows.astype(int)
+    occupations_left = occupation_rows(left_occupations)
+    occupations_right = occupation_rows(right_occupations)
 
-    def polynomials(offset: int) -> list[dict[tuple[int, ...], float]]:
+    def polynomials(offset: int, occupations: np.ndarray) -> list[dict[tuple[int, ...], float]]:
         one_mode = []
         for local_mode in range(len(active)):
             form = offset + local_mode
@@ -178,27 +289,76 @@ def harmonic_path_channel_overlap(
         return result
 
     forms = np.vstack((rows_left[active], rows_right[active]))
+    form_covariance = forms @ covariance @ forms.T
     form_means = np.concatenate((
         rows_left[active] @ (mean - center_left),
         rows_right[active] @ (mean - center_right),
     ))
-    moment_cache: dict[tuple[int, ...], float] = {(): 1.0}
+    if moment_representation not in ("hermite", "polynomial"):
+        raise ValueError("Moment representation must be hermite or polynomial")
+    if moment_representation == "hermite":
+        # The normalized Hermite generating function is exp(t*x-t*t/2).
+        # Its Gaussian expectation has the same Wick recurrence with C-I.
+        # Contract Hermite words directly instead of expanding each into raw
+        # monomials and then applying two dense coefficient matrices.
+        contraction = form_covariance - np.eye(len(form_means))
+        # Evaluate the same Wick recurrence by left occupation rows, batching
+        # all right occupations in NumPy. Downward closures are algebraic
+        # intermediates only; no oscillator states are added to the request.
+        def downward_closure(request):
+            rows = {tuple(int(n) for n in row) for row in request}
+            pending = list(rows)
+            while pending:
+                row = pending.pop()
+                for axis, count in enumerate(row):
+                    if count:
+                        lower = row[:axis] + (count-1,) + row[axis+1:]
+                        if lower not in rows:rows.add(lower);pending.append(lower)
+            ordered = sorted(rows, key=lambda row: (sum(row), row))
+            return np.asarray(ordered, dtype=int), {row:i for i,row in enumerate(ordered)}
+        left_rows, left_lookup = downward_closure(occupations_left)
+        right_rows, right_lookup = downward_closure(occupations_right)
+        nactive = len(active)
+        right_lower = np.zeros((nactive,len(right_rows)),dtype=int)
+        right_factors = np.sqrt(right_rows.T)
+        for axis in range(nactive):
+            for j,row in enumerate(right_rows):
+                if row[axis]:
+                    lower=row.copy();lower[axis]-=1
+                    right_lower[axis,j]=right_lookup[tuple(lower)]
+        values=np.zeros((len(left_rows),len(right_rows)))
+        zero=(0,)*nactive;left_zero=left_lookup[zero];right_zero=right_lookup[zero]
+        values[left_zero,right_zero]=1.
+        # Right-only moments start the left-row recurrence.
+        for j,row in enumerate(right_rows):
+            axes=np.flatnonzero(row)
+            if not len(axes):continue
+            axis=int(axes[0]);lower=row.copy();lower[axis]-=1
+            previous=right_lookup[tuple(lower)]
+            value=form_means[nactive+axis]*values[left_zero,previous]
+            for other in np.flatnonzero(lower):
+                lower2=lower.copy();lower2[other]-=1
+                value+=contraction[nactive+axis,nactive+other]*np.sqrt(float(lower[other]))*values[left_zero,right_lookup[tuple(lower2)]]
+            values[left_zero,j]=value/np.sqrt(float(row[axis]))
+        for i,row in enumerate(left_rows):
+            axes=np.flatnonzero(row)
+            if not len(axes):continue
+            axis=int(axes[0]);lower=row.copy();lower[axis]-=1
+            previous=left_lookup[tuple(lower)]
+            value=form_means[axis]*values[previous].copy()
+            for other in np.flatnonzero(lower):
+                lower2=lower.copy();lower2[other]-=1
+                value+=contraction[axis,other]*np.sqrt(float(lower[other]))*values[left_lookup[tuple(lower2)]]
+            for other in range(nactive):
+                value+=contraction[axis,nactive+other]*right_factors[other]*values[previous,right_lower[other]]
+            values[i]=value/np.sqrt(float(row[axis]))
+        li=[left_lookup[tuple(row)] for row in occupations_left]
+        ri=[right_lookup[tuple(row)] for row in occupations_right]
+        return ground*values[np.ix_(li,ri)]
+    gaussian_moment = _gaussian_moment_evaluator(form_means,form_covariance)
 
-    def gaussian_moment(indices: tuple[int, ...]) -> float:
-        if indices in moment_cache:
-            return moment_cache[indices]
-        first, rest = indices[0], indices[1:]
-        value = form_means[first] * gaussian_moment(rest)
-        value += float(sum(
-            forms[first] @ covariance @ forms[partner]
-            * gaussian_moment(rest[:index] + rest[index + 1:])
-            for index, partner in enumerate(rest)
-        ))
-        moment_cache[indices] = value
-        return value
-
-    left_polynomials = polynomials(0)
-    right_polynomials = polynomials(len(active))
+    left_polynomials = polynomials(0, occupations_left)
+    right_polynomials = polynomials(len(active), occupations_right)
     left_monomials = sorted(
         set().union(*(terms.keys() for terms in left_polynomials)),
         key=lambda keys: (len(keys), keys),
@@ -232,12 +392,14 @@ def harmonic_product_occupations(mode_count: int, maximum_quanta: int) -> np.nda
     if mode_count == 0:
         return np.zeros((1, 0), dtype=int)
     states = []
+    def append_block(prefix: tuple[int, ...], remaining: int) -> None:
+        if len(prefix) == mode_count - 1:
+            states.append(prefix + (remaining,))
+            return
+        for value in range(remaining, -1, -1):
+            append_block(prefix + (value,), remaining - value)
     for total in range(maximum_quanta + 1):
-        block = [
-            values for values in product(range(total + 1), repeat=mode_count)
-            if sum(values) == total
-        ]
-        states.extend(sorted(block, reverse=True))
+        append_block((), total)
     return np.asarray(states, dtype=int)
 
 

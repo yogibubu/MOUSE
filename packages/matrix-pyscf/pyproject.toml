@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-runtime = ["pyscf>=2.6"]
+runtime = ["pyscf>=2.6", "scipy>=1.12"]
 dispersion = ["pyscf>=2.6", "dftd3>=1.5"]
 
 [tool.setuptools.packages.find]

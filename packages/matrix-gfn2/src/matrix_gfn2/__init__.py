@@ -843,3 +843,98 @@ __all__ = [
     "truncate_symmetric_matrix",
     "assert_rigid_motion_invariance",
 ]
+
+from .deltascf import (
+    DeltaSCFResult, DeltaSCFConvergenceError, run_deltascf, evaluate_gfn2_deltascf,
+)
+__all__ += ["DeltaSCFResult", "DeltaSCFConvergenceError", "run_deltascf", "evaluate_gfn2_deltascf"]
+
+from .spin_polarization import ShellSpinPolarization, SPIN_PARAMETER_SHA256
+__all__ += ["ShellSpinPolarization", "SPIN_PARAMETER_SHA256"]
+from .spin_reference import FrozenSpinReference,FrozenResponseReference
+__all__ += ['FrozenSpinReference','FrozenResponseReference']
+from .anchored_roks import (FrozenROKSAnchor,AnchoredROKSResult,evaluate_anchored_roks,
+    evaluate_anchored_roks_analytic_hessian,save_anchored_roks_point,load_anchored_roks_point)
+from .anchored_roks import save_frozen_roks_anchor,load_frozen_roks_anchor
+__all__ += ['FrozenROKSAnchor','AnchoredROKSResult','evaluate_anchored_roks',
+    'evaluate_anchored_roks_analytic_hessian','save_anchored_roks_point','load_anchored_roks_point',
+    'save_frozen_roks_anchor','load_frozen_roks_anchor']
+
+from .roks import ROKSSingletResult, ROKSConvergenceError, run_roks_singlet, evaluate_gfn2_roks_singlet
+__all__ += ['ROKSSingletResult', 'ROKSConvergenceError', 'run_roks_singlet', 'evaluate_gfn2_roks_singlet']
+
+from .deltascf_derivatives import DeltaSCFHessian, evaluate_gfn2_deltascf_hessian
+__all__ += ['DeltaSCFHessian', 'evaluate_gfn2_deltascf_hessian']
+
+from .deltascf_analytic_hessian import AnalyticDeltaSCFHessian, evaluate_gfn2_deltascf_analytic_hessian
+__all__ += ['AnalyticDeltaSCFHessian', 'evaluate_gfn2_deltascf_analytic_hessian']
+
+from .roks import spin_adapt_gfn2_singlet
+__all__ += ["spin_adapt_gfn2_singlet"]
+
+from .hybrid_spectrum import (
+    GapCorrectionJet, MatchedOrbitalSpectrum, HybridExcitationEnergy,
+    OccupiedExtentScaling, with_occupied_extent_scaling,
+    match_orbital_spectrum, replace_tda_reference_gaps,
+    compose_hybrid_excitation, correct_roks_excitation,
+)
+__all__ += ["GapCorrectionJet", "MatchedOrbitalSpectrum", "HybridExcitationEnergy",
+            "OccupiedExtentScaling", "with_occupied_extent_scaling",
+            "match_orbital_spectrum", "replace_tda_reference_gaps",
+            "compose_hybrid_excitation", "correct_roks_excitation"]
+
+from .spin_reference import FrozenTensorResponseReference,save_response_reference,load_response_reference
+__all__ += ['FrozenTensorResponseReference','save_response_reference','load_response_reference']
+
+from .spin_reference import FrozenFockResponseReference
+__all__ += ['FrozenFockResponseReference']
+
+from .nonlocal_response import (FrozenNonlocalResponseReference,
+    save_nonlocal_response_reference,load_nonlocal_response_reference)
+__all__ += ['FrozenNonlocalResponseReference','save_nonlocal_response_reference','load_nonlocal_response_reference']
+
+from .composite_roks import (CompositeROKSResult,CompositeROKSHessian,combine_roks_results,
+    evaluate_composite_roks,evaluate_composite_roks_analytic_hessian)
+__all__ += ['CompositeROKSResult','CompositeROKSHessian','combine_roks_results',
+    'evaluate_composite_roks','evaluate_composite_roks_analytic_hessian']
+
+from .restricted_ground import (RestrictedGroundResult, evaluate_restricted_ground,
+    restricted_ground_analytic_hessian)
+from .ground_referenced_roks import (GroundReferencedROKSResult, GroundReferencedROKSHessian,
+    reference_roks_to_native_ground, ground_referenced_roks_analytic_hessian)
+__all__ += ['RestrictedGroundResult','evaluate_restricted_ground','restricted_ground_analytic_hessian',
+    'GroundReferencedROKSResult','GroundReferencedROKSHessian',
+    'reference_roks_to_native_ground','ground_referenced_roks_analytic_hessian']
+
+from .local_frame_response import FrozenLocalFrameResponseReference, covalent_frame_clusters
+__all__ += ['FrozenLocalFrameResponseReference','covalent_frame_clusters']
+
+from .shared_pair_roks import (SharedPairROKSResult,SharedPairROKSHessian,
+    evaluate_shared_pair_roks,evaluate_shared_pair_roks_analytic_hessian)
+__all__ += ['SharedPairROKSResult','SharedPairROKSHessian',
+    'evaluate_shared_pair_roks','evaluate_shared_pair_roks_analytic_hessian']
+
+from .relative_pair_roks import (RelativePairROKSResult, RelativePairROKSHessian, evaluate_relative_pair_roks,
+    evaluate_relative_pair_roks_analytic_hessian,relative_active_targets,
+    save_relative_pair_roks,load_relative_pair_roks)
+__all__ += ['RelativePairROKSResult','RelativePairROKSHessian','evaluate_relative_pair_roks',
+    'evaluate_relative_pair_roks_analytic_hessian','relative_active_targets',
+    'save_relative_pair_roks','load_relative_pair_roks']
+
+from .roks_continuation import (ROKSContinuationState, ROKSStateFollowingError,
+                                continue_roks_one_body_response)
+__all__ += ['ROKSContinuationState', 'ROKSStateFollowingError',
+            'continue_roks_one_body_response']
+
+from .roks_tracking import assigned_transition_orbitals
+__all__ += ['assigned_transition_orbitals']
+
+from .multicsf_surface import (MultiCSFModel,MultiCSFSurfaceResult,effective_transition_rank,
+    write_multicsf_model,evaluate_multicsf_surface,save_multicsf_result,load_multicsf_result)
+__all__ += ['MultiCSFModel','MultiCSFSurfaceResult','effective_transition_rank',
+    'write_multicsf_model','evaluate_multicsf_surface','save_multicsf_result','load_multicsf_result']
+
+from .nosi_surface import (PreparedNOSIModel,NOSIStateResult,NOSISurfaceResult,
+                           save_nosi_result,load_nosi_result)
+__all__ += ['PreparedNOSIModel','NOSIStateResult','NOSISurfaceResult',
+            'save_nosi_result','load_nosi_result']

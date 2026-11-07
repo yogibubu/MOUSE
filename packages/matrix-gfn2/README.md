@@ -552,3 +552,84 @@ within `1.85e-8 Eh/bohr`. Complete analytic Hessian checks are in
 reconverged stationary adjoints, full matrices against gradient differences,
 reciprocity, translations, rotations, and guards against displaced-SCF or
 numerical-derivative fallback. Reference fixtures are in `tests/fixtures/nn_xtb_water_*`.
+
+## Experimental spin-pure multi-CSF OO-DFT
+
+`MultiCSFModel` loads a portable `model.json` directory with checked response,
+ERI, orbital and ground-state files. `evaluate_multicsf_surface` returns the
+excited total energy, analytic nuclear gradient and optional analytic Hessian.
+The energy combines two parents with fixed weights 1/2 and restores the native
+S0 reference while subtracting the two corrected S0 energies. CI eigenvector,
+orbital, metric, frame, product-chart and spectator-gauge response are included.
+
+The active rank is frozen at preparation as the nearest integer to the inverse
+purity of normalized reference NTO weights. A systematic development calculation
+may instead pass `active_rank=2` (integer 1--4) to `write_multicsf_model`; the
+manifest then records `explicit_fixed_rank` and the loader preserves it. This
+changes the CSF space and must be identified separately from a frozen-rank test.
+Bare Slater–Condon couplings define
+a different approximate functional from single-CSF ROKS; diagonal response
+lambda remains 0.9 and no energy offset is added. The full active cross-parent
+overlap matrix is preserved. This option remains a research candidate, not a
+new default or a universal accuracy claim. Its current preparation protocol
+needs fixed DFT reference transitions, in addition to ground-state information.
+
+All 27 furan Hessian columns agree with reoptimized finite differences within
+2.29e-8 Ha/bohr². Two displaced-geometry parent-mean columns were also checked.
+These are numerical derivative tests, not physical frequency validation.
+
+The complete 33-column cyclopentadiene check agrees within 1.30e-7 Ha/bohr².
+At its symmetry-broken A1 minimum, all 27 vibrational frequencies are positive;
+a soft-mode gradient difference verifies the analytic Hessian action within
+1.33e-10 Ha/bohr². A separate symmetric furan stationary-point comparison uses
+published EOM-CCSD structure and in-plane frequencies. These physical tests and
+the frozen molecular cohorts are packaged with the manuscript; they do not
+establish universal accuracy or an energy-only speed advantage over TDA.
+
+For continuous paths, the Python surface API provides explicit local coherent
+CSF following. The Hamiltonian, energy, Gram constraints and full-CSF overlap
+guards are unchanged. Coordinates are in angstrom, returned gradients in
+Hartree/bohr and Hessians in Hartree/bohr². Given a compatible calculator `calc`:
+
+```python
+from matrix_gfn2 import (
+    MultiCSFModel, evaluate_multicsf_surface,
+    save_multicsf_result, load_multicsf_result,
+)
+
+model = MultiCSFModel("prepared/model.json")
+state = evaluate_multicsf_surface(
+    calc, model.xyz, model, follow_previous_csf=True,
+)
+next_state = evaluate_multicsf_surface(
+    calc, next_coordinates_angstrom, model,
+    reference_result=state, follow_previous_csf=True, compute_hessian=True,
+)
+checkpoint = save_multicsf_result("accepted_step", next_state, model)
+restored = load_multicsf_result(checkpoint, model, calc)
+```
+
+Every continuation from `restored` must explicitly retain
+`follow_previous_csf=True`. Passing that restart to the default fixed-transition
+policy raises an error. Default vertical assignment and LINK integration retain
+the fixed reference transition policy. Local path following is not an independent
+reference-state assignment certificate. Preparation still needs DFT ground and
+transition information; prepared surface evaluations do not run DFT, SCC or TDA.
+
+The orbital frame solver bounds actual common/private rotation coordinates,
+whitens their metric, and solves a residual trust problem when a guarded Newton
+step is unavailable. A finite SVD fallback retains the same rank cutoff.
+Numerical continuation can interpolate F to the original Q endpoint; it does
+not alter lambda or the final 50/50 energy. Executed source hashes, 46 final
+core/LINK/APOC regressions, two surface contract tests, and the four-gate
+campaign are retained in `qualification/final_validation_20261031`.
+
+Nuclear response now contracts the feature field before differentiating the
+transported operators. Charge/spin moments are differentiated through a pulled
+back density matrix, and the second frame jet is contracted with its adjoint.
+Global and covalent local frames retain the same derivatives. This avoids
+coordinate-by-feature-by-AO-pair tensors. Kernel applications are batched, and
+multi-CSF nuclear response reuses its independently assembled orbital/CI Hessian
+instead of rebuilding an unused orbital block. No numerical Hessian, response
+term omission, energy-model change or relaxed tolerance is introduced. A complete
+48-by-48 Phthalimide analytic Hessian is retained in the final qualification.
